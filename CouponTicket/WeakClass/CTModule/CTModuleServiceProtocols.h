@@ -1,0 +1,20 @@
+//
+//  CTModuleServiceProtocols.pch
+//  CouponTicket
+//
+//  Created by dengchenglin on 2019/1/19.
+//  Copyright © 2019年 Danke. All rights reserved.
+//
+
+#ifndef CTModuleServiceProtocols_h
+#define CTModuleServiceProtocols_h
+
+#import "CTMineServiceProtocol.h"
+#import "CTMemberServiceProtocol.h"
+#import "CTRecommendServiceProtocol.h"
+#import "CTSearchTicketServiceProtocol.h"
+#import "CTHomeServiceProtocol.h"
+#import "CTMainServiceProtocol.h"
+#import "CTLoginServiceProtocol.h"
+
+#endif /* CTModuleServiceProtocols_h */

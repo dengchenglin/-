@@ -8,15 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
+#import "CLModuleServiceProtocol.h"
+
 @interface CLModuleManager : NSObject
 
 + (instancetype)shareInstance;
 
 + (void)registerModuleServiceForClass:(Class)moduleServiceClass protocol:(Protocol *)moduleServiceProtocol;
 
-+ (Class)moduleServiceForProtocol:(Protocol *)moduleServiceProtocol;
-
-+ (id)moduleServiceInstanceForProtocol:(Protocol *)moduleServiceProtocol;
++ (id<CLModuleServiceProtocol>)moduleServiceInstanceForProtocol:(Protocol *)moduleServiceProtocol;
 
 
 @end

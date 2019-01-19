@@ -7,22 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		322453AD21F2BE1100471059 /* CTMainService.m in Sources */ = {isa = PBXBuildFile; fileRef = 322453AC21F2BE1100471059 /* CTMainService.m */; };
+		322453B121F2BE4600471059 /* CTHomeService.m in Sources */ = {isa = PBXBuildFile; fileRef = 322453B021F2BE4600471059 /* CTHomeService.m */; };
+		322453B521F2BE6F00471059 /* CTSearchTicketService.m in Sources */ = {isa = PBXBuildFile; fileRef = 322453B421F2BE6F00471059 /* CTSearchTicketService.m */; };
+		322453B921F2BE8A00471059 /* CTRecommendService.m in Sources */ = {isa = PBXBuildFile; fileRef = 322453B821F2BE8A00471059 /* CTRecommendService.m */; };
+		322453BD21F2BEA300471059 /* CTMemberService.m in Sources */ = {isa = PBXBuildFile; fileRef = 322453BC21F2BEA300471059 /* CTMemberService.m */; };
+		322453C121F2BEBC00471059 /* CTMineService.m in Sources */ = {isa = PBXBuildFile; fileRef = 322453C021F2BEBC00471059 /* CTMineService.m */; };
+		322453C621F2BED600471059 /* CTLoginService.m in Sources */ = {isa = PBXBuildFile; fileRef = 322453C521F2BED600471059 /* CTLoginService.m */; };
+		322453D621F2BFC200471059 /* CTBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 322453CC21F2BFC200471059 /* CTBaseViewController.m */; };
+		322453D721F2BFC200471059 /* CTViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 322453CF21F2BFC200471059 /* CTViewModel.m */; };
+		322453D821F2BFC200471059 /* CTTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 322453D321F2BFC200471059 /* CTTableView.m */; };
+		322453D921F2BFC200471059 /* CTView.m in Sources */ = {isa = PBXBuildFile; fileRef = 322453D521F2BFC200471059 /* CTView.m */; };
+		322453E921F2C3EC00471059 /* CTModuleManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 322453E821F2C3EC00471059 /* CTModuleManager.m */; };
+		322453EC21F2C7F000471059 /* CTNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 322453EB21F2C7F000471059 /* CTNavigationController.m */; };
+		322453F021F2CF1100471059 /* CTAppConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 322453EF21F2CF1100471059 /* CTAppConfig.m */; };
+		322453F421F2D3F700471059 /* CTHomeNavBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 322453F321F2D3F700471059 /* CTHomeNavBar.m */; };
+		322453F621F2D60300471059 /* CTHomeNavBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 322453F521F2D60300471059 /* CTHomeNavBar.xib */; };
 		325D3B5521F1DDF400465B91 /* CTSearchTicketViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 325D3B5421F1DDF400465B91 /* CTSearchTicketViewController.m */; };
-		325D3B5821F1DE0600465B91 /* CTReconmendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 325D3B5721F1DE0600465B91 /* CTReconmendViewController.m */; };
-		325D3B5B21F1DE1200465B91 /* CTMemverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 325D3B5A21F1DE1200465B91 /* CTMemverViewController.m */; };
+		325D3B5821F1DE0600465B91 /* CTRecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 325D3B5721F1DE0600465B91 /* CTRecommendViewController.m */; };
+		325D3B5B21F1DE1200465B91 /* CTMemberViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 325D3B5A21F1DE1200465B91 /* CTMemberViewController.m */; };
 		325D3B5E21F1DE2F00465B91 /* CTMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 325D3B5D21F1DE2F00465B91 /* CTMineViewController.m */; };
 		325D3B6121F1DE3700465B91 /* CTLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 325D3B6021F1DE3700465B91 /* CTLoginViewController.m */; };
 		325D3B7121F1E64900465B91 /* CTTabBarModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 325D3B7021F1E64900465B91 /* CTTabBarModel.m */; };
 		325D3B7421F1E67200465B91 /* CTMainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 325D3B7321F1E67200465B91 /* CTMainController.m */; };
 		325D3B7721F1E68500465B91 /* CTTabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 325D3B7621F1E68500465B91 /* CTTabBarItem.m */; };
-		325D3B7A21F1E6B300465B91 /* CTView.m in Sources */ = {isa = PBXBuildFile; fileRef = 325D3B7921F1E6B300465B91 /* CTView.m */; };
-		325D3B7D21F1E6BC00465B91 /* CTTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 325D3B7C21F1E6BC00465B91 /* CTTableView.m */; };
 		32BE600521EDC5E100BA52EF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 32BE600421EDC5E100BA52EF /* AppDelegate.m */; };
 		32BE600D21EDC5E500BA52EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32BE600C21EDC5E500BA52EF /* Assets.xcassets */; };
 		32BE601021EDC5E500BA52EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32BE600E21EDC5E500BA52EF /* LaunchScreen.storyboard */; };
 		32BE601321EDC5E500BA52EF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 32BE601221EDC5E500BA52EF /* main.m */; };
 		32BE601D21EDC5E500BA52EF /* CouponTicketTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 32BE601C21EDC5E500BA52EF /* CouponTicketTests.m */; };
-		32BE602E21EDCF5000BA52EF /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 32BE602D21EDCF4F00BA52EF /* Info.plist */; };
 		32BE60E821EDCFA600BA52EF /* Aspects.m in Sources */ = {isa = PBXBuildFile; fileRef = 32BE603221EDCFA500BA52EF /* Aspects.m */; };
 		32BE60E921EDCFA600BA52EF /* CLModuleManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 32BE603721EDCFA500BA52EF /* CLModuleManager.m */; };
 		32BE60EA21EDCFA600BA52EF /* CLNetworkConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 32BE603B21EDCFA500BA52EF /* CLNetworkConfig.m */; };
@@ -96,9 +109,23 @@
 		32BE613121EDCFA600BA52EF /* NSDate+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 32BE60E421EDCFA600BA52EF /* NSDate+Extension.m */; };
 		32BE613221EDCFA600BA52EF /* WSDatePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 32BE60E621EDCFA600BA52EF /* WSDatePickerView.m */; };
 		32BE613321EDCFA600BA52EF /* WSDatePickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32BE60E721EDCFA600BA52EF /* WSDatePickerView.xib */; };
-		32BE614321EDDAF800BA52EF /* CTViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 32BE614221EDDAF800BA52EF /* CTViewModel.m */; };
-		32BE614721EDDB6500BA52EF /* CTBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32BE614621EDDB6500BA52EF /* CTBaseViewController.m */; };
 		32BE614B21EDDBBB00BA52EF /* CTHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32BE614A21EDDBBB00BA52EF /* CTHomeViewController.m */; };
+		32E7EE4921F2F0D500191789 /* LMSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 32E7EE4821F2F0D500191789 /* LMSegmentedControl.m */; };
+		32E7EE4E21F2F2FD00191789 /* CTMainCategoryControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 32E7EE4D21F2F2FD00191789 /* CTMainCategoryControl.m */; };
+		32E7EE5221F2F70700191789 /* CTHomeViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 32E7EE5121F2F70700191789 /* CTHomeViewModel.m */; };
+		32E7EE5521F2F7E700191789 /* CTHomeTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 32E7EE5421F2F7E700191789 /* CTHomeTopView.m */; };
+		32E7EE5721F3013B00191789 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 32E7EE5621F3013B00191789 /* Info.plist */; };
+		32E7EE5B21F3024D00191789 /* UIPageControlManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 32E7EE5A21F3024D00191789 /* UIPageControlManager.m */; };
+		32E7EE5E21F3066700191789 /* CTHomePageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32E7EE5D21F3066700191789 /* CTHomePageController.m */; };
+		32E7EE6121F30AB500191789 /* CTBaseListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32E7EE6021F30AB500191789 /* CTBaseListViewController.m */; };
+		32E7EE6421F30BAE00191789 /* CTHomeCatoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32E7EE6321F30BAE00191789 /* CTHomeCatoryViewController.m */; };
+		32E7EE6721F3263B00191789 /* CTHomeBannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 32E7EE6621F3263B00191789 /* CTHomeBannerView.m */; };
+		32E7EE6A21F32CC700191789 /* CTHomeAdvertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 32E7EE6921F32CC700191789 /* CTHomeAdvertView.m */; };
+		32E7EE6D21F32CE700191789 /* CTHomeNavView.m in Sources */ = {isa = PBXBuildFile; fileRef = 32E7EE6C21F32CE700191789 /* CTHomeNavView.m */; };
+		32E7EE6F21F32E9800191789 /* CTHomeNavView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32E7EE6E21F32E9800191789 /* CTHomeNavView.xib */; };
+		32E7EE7221F331E500191789 /* CTHomeSalesView.m in Sources */ = {isa = PBXBuildFile; fileRef = 32E7EE7121F331E500191789 /* CTHomeSalesView.m */; };
+		32E7EE7521F3320900191789 /* CTSalesItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 32E7EE7421F3320900191789 /* CTSalesItem.m */; };
+		32E7EE7721F3321400191789 /* CTSalesItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32E7EE7621F3321400191789 /* CTSalesItem.xib */; };
 		AAE7F6FFBF4288319E9610C9 /* libPods-CouponTicket.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F51AA050F5801C0FBDEE117 /* libPods-CouponTicket.a */; };
 /* End PBXBuildFile section */
 
@@ -113,17 +140,58 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		322453AB21F2BE1100471059 /* CTMainService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTMainService.h; sourceTree = "<group>"; };
+		322453AC21F2BE1100471059 /* CTMainService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTMainService.m; sourceTree = "<group>"; };
+		322453AF21F2BE4600471059 /* CTHomeService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTHomeService.h; sourceTree = "<group>"; };
+		322453B021F2BE4600471059 /* CTHomeService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTHomeService.m; sourceTree = "<group>"; };
+		322453B321F2BE6F00471059 /* CTSearchTicketService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTSearchTicketService.h; sourceTree = "<group>"; };
+		322453B421F2BE6F00471059 /* CTSearchTicketService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTSearchTicketService.m; sourceTree = "<group>"; };
+		322453B721F2BE8A00471059 /* CTRecommendService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTRecommendService.h; sourceTree = "<group>"; };
+		322453B821F2BE8A00471059 /* CTRecommendService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTRecommendService.m; sourceTree = "<group>"; };
+		322453BB21F2BEA300471059 /* CTMemberService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTMemberService.h; sourceTree = "<group>"; };
+		322453BC21F2BEA300471059 /* CTMemberService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTMemberService.m; sourceTree = "<group>"; };
+		322453BF21F2BEBC00471059 /* CTMineService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTMineService.h; sourceTree = "<group>"; };
+		322453C021F2BEBC00471059 /* CTMineService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTMineService.m; sourceTree = "<group>"; };
+		322453C421F2BED600471059 /* CTLoginService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTLoginService.h; sourceTree = "<group>"; };
+		322453C521F2BED600471059 /* CTLoginService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTLoginService.m; sourceTree = "<group>"; };
+		322453CA21F2BFC200471059 /* CTBaseControllerProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTBaseControllerProtocol.h; sourceTree = "<group>"; };
+		322453CB21F2BFC200471059 /* CTBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTBaseViewController.h; sourceTree = "<group>"; };
+		322453CC21F2BFC200471059 /* CTBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTBaseViewController.m; sourceTree = "<group>"; };
+		322453CE21F2BFC200471059 /* CTViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTViewModel.h; sourceTree = "<group>"; };
+		322453CF21F2BFC200471059 /* CTViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTViewModel.m; sourceTree = "<group>"; };
+		322453D021F2BFC200471059 /* CTViewModelProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTViewModelProtocol.h; sourceTree = "<group>"; };
+		322453D221F2BFC200471059 /* CTTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTTableView.h; sourceTree = "<group>"; };
+		322453D321F2BFC200471059 /* CTTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTTableView.m; sourceTree = "<group>"; };
+		322453D421F2BFC200471059 /* CTView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTView.h; sourceTree = "<group>"; };
+		322453D521F2BFC200471059 /* CTView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTView.m; sourceTree = "<group>"; };
+		322453DE21F2C07D00471059 /* CTLoginServiceProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTLoginServiceProtocol.h; sourceTree = "<group>"; };
+		322453DF21F2C07E00471059 /* CTMainServiceProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTMainServiceProtocol.h; sourceTree = "<group>"; };
+		322453E021F2C08C00471059 /* CTHomeServiceProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTHomeServiceProtocol.h; sourceTree = "<group>"; };
+		322453E121F2C09A00471059 /* CTSearchTicketServiceProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTSearchTicketServiceProtocol.h; sourceTree = "<group>"; };
+		322453E221F2C0A800471059 /* CTRecommendServiceProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTRecommendServiceProtocol.h; sourceTree = "<group>"; };
+		322453E321F2C0B600471059 /* CTMemberServiceProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTMemberServiceProtocol.h; sourceTree = "<group>"; };
+		322453E421F2C0BD00471059 /* CTMineServiceProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTMineServiceProtocol.h; sourceTree = "<group>"; };
+		322453E521F2C25200471059 /* CTModuleServiceProtocols.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTModuleServiceProtocols.h; sourceTree = "<group>"; };
+		322453E621F2C35600471059 /* CTModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTModule.h; sourceTree = "<group>"; };
+		322453E721F2C3EC00471059 /* CTModuleManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTModuleManager.h; sourceTree = "<group>"; };
+		322453E821F2C3EC00471059 /* CTModuleManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTModuleManager.m; sourceTree = "<group>"; };
+		322453EA21F2C7F000471059 /* CTNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTNavigationController.h; sourceTree = "<group>"; };
+		322453EB21F2C7F000471059 /* CTNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTNavigationController.m; sourceTree = "<group>"; };
+		322453EE21F2CF1100471059 /* CTAppConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTAppConfig.h; sourceTree = "<group>"; };
+		322453EF21F2CF1100471059 /* CTAppConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTAppConfig.m; sourceTree = "<group>"; };
+		322453F221F2D3F700471059 /* CTHomeNavBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTHomeNavBar.h; sourceTree = "<group>"; };
+		322453F321F2D3F700471059 /* CTHomeNavBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTHomeNavBar.m; sourceTree = "<group>"; };
+		322453F521F2D60300471059 /* CTHomeNavBar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CTHomeNavBar.xib; sourceTree = "<group>"; };
 		325D3B5321F1DDF400465B91 /* CTSearchTicketViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTSearchTicketViewController.h; sourceTree = "<group>"; };
 		325D3B5421F1DDF400465B91 /* CTSearchTicketViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTSearchTicketViewController.m; sourceTree = "<group>"; };
-		325D3B5621F1DE0600465B91 /* CTReconmendViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTReconmendViewController.h; sourceTree = "<group>"; };
-		325D3B5721F1DE0600465B91 /* CTReconmendViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTReconmendViewController.m; sourceTree = "<group>"; };
-		325D3B5921F1DE1200465B91 /* CTMemverViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTMemverViewController.h; sourceTree = "<group>"; };
-		325D3B5A21F1DE1200465B91 /* CTMemverViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTMemverViewController.m; sourceTree = "<group>"; };
+		325D3B5621F1DE0600465B91 /* CTRecommendViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTRecommendViewController.h; sourceTree = "<group>"; };
+		325D3B5721F1DE0600465B91 /* CTRecommendViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTRecommendViewController.m; sourceTree = "<group>"; };
+		325D3B5921F1DE1200465B91 /* CTMemberViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTMemberViewController.h; sourceTree = "<group>"; };
+		325D3B5A21F1DE1200465B91 /* CTMemberViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTMemberViewController.m; sourceTree = "<group>"; };
 		325D3B5C21F1DE2F00465B91 /* CTMineViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTMineViewController.h; sourceTree = "<group>"; };
 		325D3B5D21F1DE2F00465B91 /* CTMineViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTMineViewController.m; sourceTree = "<group>"; };
 		325D3B5F21F1DE3700465B91 /* CTLoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTLoginViewController.h; sourceTree = "<group>"; };
 		325D3B6021F1DE3700465B91 /* CTLoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTLoginViewController.m; sourceTree = "<group>"; };
-		325D3B6921F1E41800465B91 /* CTBaseControllerProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTBaseControllerProtocol.h; sourceTree = "<group>"; };
 		325D3B6B21F1E59500465B91 /* CTMarco.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTMarco.h; sourceTree = "<group>"; };
 		325D3B6F21F1E64900465B91 /* CTTabBarModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTTabBarModel.h; sourceTree = "<group>"; };
 		325D3B7021F1E64900465B91 /* CTTabBarModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTTabBarModel.m; sourceTree = "<group>"; };
@@ -131,10 +199,6 @@
 		325D3B7321F1E67200465B91 /* CTMainController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTMainController.m; sourceTree = "<group>"; };
 		325D3B7521F1E68500465B91 /* CTTabBarItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTTabBarItem.h; sourceTree = "<group>"; };
 		325D3B7621F1E68500465B91 /* CTTabBarItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTTabBarItem.m; sourceTree = "<group>"; };
-		325D3B7821F1E6B300465B91 /* CTView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTView.h; sourceTree = "<group>"; };
-		325D3B7921F1E6B300465B91 /* CTView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTView.m; sourceTree = "<group>"; };
-		325D3B7B21F1E6BC00465B91 /* CTTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTTableView.h; sourceTree = "<group>"; };
-		325D3B7C21F1E6BC00465B91 /* CTTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTTableView.m; sourceTree = "<group>"; };
 		32BE600021EDC5E100BA52EF /* CouponTicket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CouponTicket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		32BE600321EDC5E100BA52EF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		32BE600421EDC5E100BA52EF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -144,7 +208,6 @@
 		32BE601821EDC5E500BA52EF /* CouponTicketTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CouponTicketTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		32BE601C21EDC5E500BA52EF /* CouponTicketTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CouponTicketTests.m; sourceTree = "<group>"; };
 		32BE601E21EDC5E500BA52EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		32BE602D21EDCF4F00BA52EF /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		32BE603121EDCFA500BA52EF /* Aspects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Aspects.h; sourceTree = "<group>"; };
 		32BE603221EDCFA500BA52EF /* Aspects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Aspects.m; sourceTree = "<group>"; };
 		32BE603421EDCFA500BA52EF /* CLModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLModule.h; sourceTree = "<group>"; };
@@ -301,13 +364,37 @@
 		32BE60E621EDCFA600BA52EF /* WSDatePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSDatePickerView.m; sourceTree = "<group>"; };
 		32BE60E721EDCFA600BA52EF /* WSDatePickerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WSDatePickerView.xib; sourceTree = "<group>"; };
 		32BE613421EDD04A00BA52EF /* CTPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTPrefixHeader.pch; sourceTree = "<group>"; };
-		32BE614121EDDAF800BA52EF /* CTViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTViewModel.h; sourceTree = "<group>"; };
-		32BE614221EDDAF800BA52EF /* CTViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTViewModel.m; sourceTree = "<group>"; };
-		32BE614421EDDB3300BA52EF /* CTViewModelProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTViewModelProtocol.h; sourceTree = "<group>"; };
-		32BE614521EDDB6500BA52EF /* CTBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTBaseViewController.h; sourceTree = "<group>"; };
-		32BE614621EDDB6500BA52EF /* CTBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTBaseViewController.m; sourceTree = "<group>"; };
 		32BE614921EDDBBB00BA52EF /* CTHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTHomeViewController.h; sourceTree = "<group>"; };
 		32BE614A21EDDBBB00BA52EF /* CTHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTHomeViewController.m; sourceTree = "<group>"; };
+		32E7EE4721F2F0D500191789 /* LMSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMSegmentedControl.h; sourceTree = "<group>"; };
+		32E7EE4821F2F0D500191789 /* LMSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMSegmentedControl.m; sourceTree = "<group>"; };
+		32E7EE4C21F2F2FD00191789 /* CTMainCategoryControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTMainCategoryControl.h; sourceTree = "<group>"; };
+		32E7EE4D21F2F2FD00191789 /* CTMainCategoryControl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTMainCategoryControl.m; sourceTree = "<group>"; };
+		32E7EE5021F2F70700191789 /* CTHomeViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTHomeViewModel.h; sourceTree = "<group>"; };
+		32E7EE5121F2F70700191789 /* CTHomeViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTHomeViewModel.m; sourceTree = "<group>"; };
+		32E7EE5321F2F7E700191789 /* CTHomeTopView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTHomeTopView.h; sourceTree = "<group>"; };
+		32E7EE5421F2F7E700191789 /* CTHomeTopView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTHomeTopView.m; sourceTree = "<group>"; };
+		32E7EE5621F3013B00191789 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		32E7EE5921F3024D00191789 /* UIPageControlManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIPageControlManager.h; sourceTree = "<group>"; };
+		32E7EE5A21F3024D00191789 /* UIPageControlManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIPageControlManager.m; sourceTree = "<group>"; };
+		32E7EE5C21F3066700191789 /* CTHomePageController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTHomePageController.h; sourceTree = "<group>"; };
+		32E7EE5D21F3066700191789 /* CTHomePageController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTHomePageController.m; sourceTree = "<group>"; };
+		32E7EE5F21F30AB500191789 /* CTBaseListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTBaseListViewController.h; sourceTree = "<group>"; };
+		32E7EE6021F30AB500191789 /* CTBaseListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTBaseListViewController.m; sourceTree = "<group>"; };
+		32E7EE6221F30BAE00191789 /* CTHomeCatoryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTHomeCatoryViewController.h; sourceTree = "<group>"; };
+		32E7EE6321F30BAE00191789 /* CTHomeCatoryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTHomeCatoryViewController.m; sourceTree = "<group>"; };
+		32E7EE6521F3263B00191789 /* CTHomeBannerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTHomeBannerView.h; sourceTree = "<group>"; };
+		32E7EE6621F3263B00191789 /* CTHomeBannerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTHomeBannerView.m; sourceTree = "<group>"; };
+		32E7EE6821F32CC700191789 /* CTHomeAdvertView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTHomeAdvertView.h; sourceTree = "<group>"; };
+		32E7EE6921F32CC700191789 /* CTHomeAdvertView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTHomeAdvertView.m; sourceTree = "<group>"; };
+		32E7EE6B21F32CE700191789 /* CTHomeNavView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTHomeNavView.h; sourceTree = "<group>"; };
+		32E7EE6C21F32CE700191789 /* CTHomeNavView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTHomeNavView.m; sourceTree = "<group>"; };
+		32E7EE6E21F32E9800191789 /* CTHomeNavView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CTHomeNavView.xib; sourceTree = "<group>"; };
+		32E7EE7021F331E500191789 /* CTHomeSalesView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTHomeSalesView.h; sourceTree = "<group>"; };
+		32E7EE7121F331E500191789 /* CTHomeSalesView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTHomeSalesView.m; sourceTree = "<group>"; };
+		32E7EE7321F3320900191789 /* CTSalesItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTSalesItem.h; sourceTree = "<group>"; };
+		32E7EE7421F3320900191789 /* CTSalesItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTSalesItem.m; sourceTree = "<group>"; };
+		32E7EE7621F3321400191789 /* CTSalesItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CTSalesItem.xib; sourceTree = "<group>"; };
 		6AA14B2C43C4DB99B1D60D47 /* Pods-CouponTicket.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CouponTicket.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CouponTicket/Pods-CouponTicket.debug.xcconfig"; sourceTree = "<group>"; };
 		7665215356141A688CE2B40E /* Pods-CouponTicket.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CouponTicket.release.xcconfig"; path = "Pods/Target Support Files/Pods-CouponTicket/Pods-CouponTicket.release.xcconfig"; sourceTree = "<group>"; };
 		9F51AA050F5801C0FBDEE117 /* libPods-CouponTicket.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CouponTicket.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -332,9 +419,188 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		322453AA21F2BDF900471059 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				322453AB21F2BE1100471059 /* CTMainService.h */,
+				322453AC21F2BE1100471059 /* CTMainService.m */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		322453AE21F2BE3900471059 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				322453AF21F2BE4600471059 /* CTHomeService.h */,
+				322453B021F2BE4600471059 /* CTHomeService.m */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		322453B221F2BE4F00471059 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				322453B321F2BE6F00471059 /* CTSearchTicketService.h */,
+				322453B421F2BE6F00471059 /* CTSearchTicketService.m */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		322453B621F2BE7400471059 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				322453B721F2BE8A00471059 /* CTRecommendService.h */,
+				322453B821F2BE8A00471059 /* CTRecommendService.m */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		322453BA21F2BE8D00471059 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				322453BB21F2BEA300471059 /* CTMemberService.h */,
+				322453BC21F2BEA300471059 /* CTMemberService.m */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		322453BE21F2BEAD00471059 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				322453BF21F2BEBC00471059 /* CTMineService.h */,
+				322453C021F2BEBC00471059 /* CTMineService.m */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		322453C221F2BEBF00471059 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				322453C421F2BED600471059 /* CTLoginService.h */,
+				322453C521F2BED600471059 /* CTLoginService.m */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		322453C721F2BEF800471059 /* WeakClass */ = {
+			isa = PBXGroup;
+			children = (
+				32E7EE4B21F2F1D400191789 /* CTViews */,
+				322453ED21F2CEF600471059 /* CTConfig */,
+				322453DA21F2BFD500471059 /* CTModule */,
+				322453C821F2BFC200471059 /* CTBaseClass */,
+			);
+			path = WeakClass;
+			sourceTree = "<group>";
+		};
+		322453C821F2BFC200471059 /* CTBaseClass */ = {
+			isa = PBXGroup;
+			children = (
+				322453C921F2BFC200471059 /* CTViewControllers */,
+				322453CD21F2BFC200471059 /* CTViewModels */,
+				322453D121F2BFC200471059 /* CTViews */,
+			);
+			path = CTBaseClass;
+			sourceTree = "<group>";
+		};
+		322453C921F2BFC200471059 /* CTViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				322453CA21F2BFC200471059 /* CTBaseControllerProtocol.h */,
+				322453CB21F2BFC200471059 /* CTBaseViewController.h */,
+				322453CC21F2BFC200471059 /* CTBaseViewController.m */,
+				322453EA21F2C7F000471059 /* CTNavigationController.h */,
+				322453EB21F2C7F000471059 /* CTNavigationController.m */,
+				32E7EE5F21F30AB500191789 /* CTBaseListViewController.h */,
+				32E7EE6021F30AB500191789 /* CTBaseListViewController.m */,
+			);
+			path = CTViewControllers;
+			sourceTree = "<group>";
+		};
+		322453CD21F2BFC200471059 /* CTViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				322453CE21F2BFC200471059 /* CTViewModel.h */,
+				322453CF21F2BFC200471059 /* CTViewModel.m */,
+				322453D021F2BFC200471059 /* CTViewModelProtocol.h */,
+			);
+			path = CTViewModels;
+			sourceTree = "<group>";
+		};
+		322453D121F2BFC200471059 /* CTViews */ = {
+			isa = PBXGroup;
+			children = (
+				322453D221F2BFC200471059 /* CTTableView.h */,
+				322453D321F2BFC200471059 /* CTTableView.m */,
+				322453D421F2BFC200471059 /* CTView.h */,
+				322453D521F2BFC200471059 /* CTView.m */,
+			);
+			path = CTViews;
+			sourceTree = "<group>";
+		};
+		322453DA21F2BFD500471059 /* CTModule */ = {
+			isa = PBXGroup;
+			children = (
+				322453E621F2C35600471059 /* CTModule.h */,
+				322453E521F2C25200471059 /* CTModuleServiceProtocols.h */,
+				322453E721F2C3EC00471059 /* CTModuleManager.h */,
+				322453E821F2C3EC00471059 /* CTModuleManager.m */,
+				322453DB21F2C00A00471059 /* CTModuleServices */,
+			);
+			path = CTModule;
+			sourceTree = "<group>";
+		};
+		322453DB21F2C00A00471059 /* CTModuleServices */ = {
+			isa = PBXGroup;
+			children = (
+				322453DE21F2C07D00471059 /* CTLoginServiceProtocol.h */,
+				322453DF21F2C07E00471059 /* CTMainServiceProtocol.h */,
+				322453E021F2C08C00471059 /* CTHomeServiceProtocol.h */,
+				322453E121F2C09A00471059 /* CTSearchTicketServiceProtocol.h */,
+				322453E221F2C0A800471059 /* CTRecommendServiceProtocol.h */,
+				322453E321F2C0B600471059 /* CTMemberServiceProtocol.h */,
+				322453E421F2C0BD00471059 /* CTMineServiceProtocol.h */,
+			);
+			path = CTModuleServices;
+			sourceTree = "<group>";
+		};
+		322453ED21F2CEF600471059 /* CTConfig */ = {
+			isa = PBXGroup;
+			children = (
+				322453EE21F2CF1100471059 /* CTAppConfig.h */,
+				322453EF21F2CF1100471059 /* CTAppConfig.m */,
+			);
+			path = CTConfig;
+			sourceTree = "<group>";
+		};
+		322453F121F2D3D500471059 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				322453F221F2D3F700471059 /* CTHomeNavBar.h */,
+				322453F321F2D3F700471059 /* CTHomeNavBar.m */,
+				322453F521F2D60300471059 /* CTHomeNavBar.xib */,
+				32E7EE5321F2F7E700191789 /* CTHomeTopView.h */,
+				32E7EE5421F2F7E700191789 /* CTHomeTopView.m */,
+				32E7EE6521F3263B00191789 /* CTHomeBannerView.h */,
+				32E7EE6621F3263B00191789 /* CTHomeBannerView.m */,
+				32E7EE6821F32CC700191789 /* CTHomeAdvertView.h */,
+				32E7EE6921F32CC700191789 /* CTHomeAdvertView.m */,
+				32E7EE6B21F32CE700191789 /* CTHomeNavView.h */,
+				32E7EE6C21F32CE700191789 /* CTHomeNavView.m */,
+				32E7EE6E21F32E9800191789 /* CTHomeNavView.xib */,
+				32E7EE7021F331E500191789 /* CTHomeSalesView.h */,
+				32E7EE7121F331E500191789 /* CTHomeSalesView.m */,
+				32E7EE7321F3320900191789 /* CTSalesItem.h */,
+				32E7EE7421F3320900191789 /* CTSalesItem.m */,
+				32E7EE7621F3321400191789 /* CTSalesItem.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		325D3B4C21F1DC6D00465B91 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				322453C221F2BEBF00471059 /* Service */,
 				325D3B5221F1DDB700465B91 /* ViewControllers */,
 			);
 			path = Login;
@@ -352,8 +618,8 @@
 		325D3B4F21F1DDAC00465B91 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				325D3B5621F1DE0600465B91 /* CTReconmendViewController.h */,
-				325D3B5721F1DE0600465B91 /* CTReconmendViewController.m */,
+				325D3B5621F1DE0600465B91 /* CTRecommendViewController.h */,
+				325D3B5721F1DE0600465B91 /* CTRecommendViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -361,8 +627,8 @@
 		325D3B5021F1DDAF00465B91 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				325D3B5921F1DE1200465B91 /* CTMemverViewController.h */,
-				325D3B5A21F1DE1200465B91 /* CTMemverViewController.m */,
+				325D3B5921F1DE1200465B91 /* CTMemberViewController.h */,
+				325D3B5A21F1DE1200465B91 /* CTMemberViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -445,6 +711,7 @@
 			children = (
 				32BE602C21EDCEFE00BA52EF /* Main */,
 				32BE602B21EDCEAF00BA52EF /* Classes */,
+				322453C721F2BEF800471059 /* WeakClass */,
 				325D3B6A21F1E53600465B91 /* CTConfigs */,
 				32BE602A21EDCEA200BA52EF /* Common */,
 				32BE602821EDCE7500BA52EF /* SystemConfigs */,
@@ -474,7 +741,7 @@
 			isa = PBXGroup;
 			children = (
 				32BE600E21EDC5E500BA52EF /* LaunchScreen.storyboard */,
-				32BE602D21EDCF4F00BA52EF /* Info.plist */,
+				32E7EE5621F3013B00191789 /* Info.plist */,
 				32BE613421EDD04A00BA52EF /* CTPrefixHeader.pch */,
 			);
 			path = SystemConfigs;
@@ -495,7 +762,6 @@
 		32BE602B21EDCEAF00BA52EF /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				32BE613C21EDDAC100BA52EF /* BaseClass */,
 				32BE613B21EDDA7700BA52EF /* ComponentClasses */,
 			);
 			path = Classes;
@@ -741,6 +1007,8 @@
 		32BE60BB21EDCFA600BA52EF /* UICustom */ = {
 			isa = PBXGroup;
 			children = (
+				32E7EE5821F3024D00191789 /* UIPageControlManager */,
+				32E7EE4A21F2F0D800191789 /* LMSegmentedControl */,
 				32BE60BC21EDCFA600BA52EF /* AddressPickerView */,
 				32BE60C121EDCFA600BA52EF /* CLPayPasswordView */,
 				32BE60C421EDCFA600BA52EF /* CLTextField */,
@@ -848,6 +1116,7 @@
 		32BE613521EDD23B00BA52EF /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				322453AA21F2BDF900471059 /* Service */,
 				325D3B6E21F1E61600465B91 /* Models */,
 				325D3B6D21F1E61000465B91 /* Views */,
 				325D3B6C21F1E60300465B91 /* ViewControllers */,
@@ -858,6 +1127,9 @@
 		32BE613621EDD24600BA52EF /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				32E7EE4F21F2F6F500191789 /* ViewModels */,
+				322453F121F2D3D500471059 /* Views */,
+				322453AE21F2BE3900471059 /* Service */,
 				32BE614821EDDBA300BA52EF /* ViewControllers */,
 			);
 			path = Home;
@@ -866,6 +1138,7 @@
 		32BE613721EDD25000BA52EF /* SearchTicket */ = {
 			isa = PBXGroup;
 			children = (
+				322453B221F2BE4F00471059 /* Service */,
 				325D3B4E21F1DDA100465B91 /* ViewControllers */,
 			);
 			path = SearchTicket;
@@ -874,6 +1147,7 @@
 		32BE613821EDD2AC00BA52EF /* Recommend */ = {
 			isa = PBXGroup;
 			children = (
+				322453B621F2BE7400471059 /* Service */,
 				325D3B4F21F1DDAC00465B91 /* ViewControllers */,
 			);
 			path = Recommend;
@@ -882,6 +1156,7 @@
 		32BE613921EDD2C500BA52EF /* Member */ = {
 			isa = PBXGroup;
 			children = (
+				322453BA21F2BE8D00471059 /* Service */,
 				325D3B5021F1DDAF00465B91 /* ViewControllers */,
 			);
 			path = Member;
@@ -890,6 +1165,7 @@
 		32BE613A21EDD2CD00BA52EF /* Mine */ = {
 			isa = PBXGroup;
 			children = (
+				322453BE21F2BEAD00471059 /* Service */,
 				325D3B5121F1DDB400465B91 /* ViewControllers */,
 			);
 			path = Mine;
@@ -909,54 +1185,53 @@
 			path = ComponentClasses;
 			sourceTree = "<group>";
 		};
-		32BE613C21EDDAC100BA52EF /* BaseClass */ = {
+		32BE614821EDDBA300BA52EF /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				32BE614021EDDAE100BA52EF /* CTViews */,
-				32BE613F21EDDADB00BA52EF /* CTViewModels */,
-				32BE613D21EDDACF00BA52EF /* CTViewControllers */,
+				32E7EE5C21F3066700191789 /* CTHomePageController.h */,
+				32E7EE5D21F3066700191789 /* CTHomePageController.m */,
+				32BE614921EDDBBB00BA52EF /* CTHomeViewController.h */,
+				32BE614A21EDDBBB00BA52EF /* CTHomeViewController.m */,
+				32E7EE6221F30BAE00191789 /* CTHomeCatoryViewController.h */,
+				32E7EE6321F30BAE00191789 /* CTHomeCatoryViewController.m */,
 			);
-			path = BaseClass;
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
-		32BE613D21EDDACF00BA52EF /* CTViewControllers */ = {
+		32E7EE4A21F2F0D800191789 /* LMSegmentedControl */ = {
 			isa = PBXGroup;
 			children = (
-				32BE614521EDDB6500BA52EF /* CTBaseViewController.h */,
-				32BE614621EDDB6500BA52EF /* CTBaseViewController.m */,
-				325D3B6921F1E41800465B91 /* CTBaseControllerProtocol.h */,
+				32E7EE4721F2F0D500191789 /* LMSegmentedControl.h */,
+				32E7EE4821F2F0D500191789 /* LMSegmentedControl.m */,
 			);
-			path = CTViewControllers;
+			path = LMSegmentedControl;
 			sourceTree = "<group>";
 		};
-		32BE613F21EDDADB00BA52EF /* CTViewModels */ = {
+		32E7EE4B21F2F1D400191789 /* CTViews */ = {
 			isa = PBXGroup;
 			children = (
-				32BE614121EDDAF800BA52EF /* CTViewModel.h */,
-				32BE614221EDDAF800BA52EF /* CTViewModel.m */,
-				32BE614421EDDB3300BA52EF /* CTViewModelProtocol.h */,
-			);
-			path = CTViewModels;
-			sourceTree = "<group>";
-		};
-		32BE614021EDDAE100BA52EF /* CTViews */ = {
-			isa = PBXGroup;
-			children = (
-				325D3B7821F1E6B300465B91 /* CTView.h */,
-				325D3B7921F1E6B300465B91 /* CTView.m */,
-				325D3B7B21F1E6BC00465B91 /* CTTableView.h */,
-				325D3B7C21F1E6BC00465B91 /* CTTableView.m */,
+				32E7EE4C21F2F2FD00191789 /* CTMainCategoryControl.h */,
+				32E7EE4D21F2F2FD00191789 /* CTMainCategoryControl.m */,
 			);
 			path = CTViews;
 			sourceTree = "<group>";
 		};
-		32BE614821EDDBA300BA52EF /* ViewControllers */ = {
+		32E7EE4F21F2F6F500191789 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				32BE614921EDDBBB00BA52EF /* CTHomeViewController.h */,
-				32BE614A21EDDBBB00BA52EF /* CTHomeViewController.m */,
+				32E7EE5021F2F70700191789 /* CTHomeViewModel.h */,
+				32E7EE5121F2F70700191789 /* CTHomeViewModel.m */,
 			);
-			path = ViewControllers;
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		32E7EE5821F3024D00191789 /* UIPageControlManager */ = {
+			isa = PBXGroup;
+			children = (
+				32E7EE5921F3024D00191789 /* UIPageControlManager.h */,
+				32E7EE5A21F3024D00191789 /* UIPageControlManager.m */,
+			);
+			path = UIPageControlManager;
 			sourceTree = "<group>";
 		};
 		81B790F6F60DCAA925C30A30 /* Pods */ = {
@@ -1061,9 +1336,12 @@
 			files = (
 				32BE601021EDC5E500BA52EF /* LaunchScreen.storyboard in Resources */,
 				32BE612321EDCFA600BA52EF /* area.plist in Resources */,
+				32E7EE5721F3013B00191789 /* Info.plist in Resources */,
 				32BE600D21EDC5E500BA52EF /* Assets.xcassets in Resources */,
-				32BE602E21EDCF5000BA52EF /* Info.plist in Resources */,
 				32BE613321EDCFA600BA52EF /* WSDatePickerView.xib in Resources */,
+				32E7EE6F21F32E9800191789 /* CTHomeNavView.xib in Resources */,
+				32E7EE7721F3321400191789 /* CTSalesItem.xib in Resources */,
+				322453F621F2D60300471059 /* CTHomeNavBar.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1136,47 +1414,56 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32E7EE7521F3320900191789 /* CTSalesItem.m in Sources */,
 				32BE614B21EDDBBB00BA52EF /* CTHomeViewController.m in Sources */,
-				32BE614721EDDB6500BA52EF /* CTBaseViewController.m in Sources */,
 				32BE610B21EDCFA600BA52EF /* UIView+Helper.m in Sources */,
+				32E7EE4E21F2F2FD00191789 /* CTMainCategoryControl.m in Sources */,
 				32BE611D21EDCFA600BA52EF /* NSObject+YYAdd.m in Sources */,
 				32BE610D21EDCFA600BA52EF /* DateUtil.m in Sources */,
+				32E7EE5521F2F7E700191789 /* CTHomeTopView.m in Sources */,
 				32BE60FD21EDCFA600BA52EF /* SDBrowserImageView.m in Sources */,
-				325D3B5B21F1DE1200465B91 /* CTMemverViewController.m in Sources */,
+				325D3B5B21F1DE1200465B91 /* CTMemberViewController.m in Sources */,
 				32BE60F021EDCFA600BA52EF /* CLRefreshConfig.m in Sources */,
 				32BE610421EDCFA600BA52EF /* UIButton+Helper.m in Sources */,
 				32BE610A21EDCFA600BA52EF /* UITextView+ZWPlaceHolder.m in Sources */,
 				32BE610721EDCFA600BA52EF /* UINavigationBar+handle.m in Sources */,
 				32BE60E921EDCFA600BA52EF /* CLModuleManager.m in Sources */,
 				32BE611621EDCFA600BA52EF /* RegalurUtil.m in Sources */,
+				32E7EE6721F3263B00191789 /* CTHomeBannerView.m in Sources */,
 				32BE60EB21EDCFA600BA52EF /* CLNetworkEngine.m in Sources */,
 				32BE610121EDCFA600BA52EF /* UIView+Layout.m in Sources */,
 				32BE611221EDCFA600BA52EF /* NSDictionary+Category.m in Sources */,
 				32BE611E21EDCFA600BA52EF /* NSObject+YYModels.m in Sources */,
 				32BE610E21EDCFA600BA52EF /* FileUtil.m in Sources */,
 				32BE60F521EDCFA600BA52EF /* CLRefreshCurveFooter.m in Sources */,
+				322453C121F2BEBC00471059 /* CTMineService.m in Sources */,
 				325D3B6121F1DE3700465B91 /* CTLoginViewController.m in Sources */,
 				32BE60EE21EDCFA600BA52EF /* CLTaskRequest.m in Sources */,
 				32BE610C21EDCFA600BA52EF /* UIViewController+Helper.m in Sources */,
 				32BE60EA21EDCFA600BA52EF /* CLNetworkConfig.m in Sources */,
 				32BE60F321EDCFA600BA52EF /* CLRefreshHeader.m in Sources */,
+				32E7EE6121F30AB500191789 /* CTBaseListViewController.m in Sources */,
 				32BE60EC21EDCFA600BA52EF /* CLNetworkManager.m in Sources */,
 				32BE601321EDC5E500BA52EF /* main.m in Sources */,
 				32BE60FE21EDCFA600BA52EF /* SDPhotoBrowser.m in Sources */,
 				32BE612021EDCFA600BA52EF /* UIView+YYAdd.m in Sources */,
 				32BE60F621EDCFA600BA52EF /* CLRefreshCurveHeader.m in Sources */,
 				32BE611A21EDCFA600BA52EF /* UIUtil.m in Sources */,
+				322453E921F2C3EC00471059 /* CTModuleManager.m in Sources */,
 				32BE612F21EDCFA600BA52EF /* SelVideoPlayer.m in Sources */,
 				32BE60F121EDCFA600BA52EF /* CLRefreshFactory.m in Sources */,
 				32BE60F421EDCFA600BA52EF /* CLRefreshManager.m in Sources */,
+				32E7EE5B21F3024D00191789 /* UIPageControlManager.m in Sources */,
 				325D3B5E21F1DE2F00465B91 /* CTMineViewController.m in Sources */,
 				32BE612821EDCFA600BA52EF /* GCPickerView.m in Sources */,
 				32BE610F21EDCFA600BA52EF /* NSArray+Category.m in Sources */,
 				32BE611721EDCFA600BA52EF /* UIButton+Create.m in Sources */,
+				322453C621F2BED600471059 /* CTLoginService.m in Sources */,
 				32BE600521EDC5E100BA52EF /* AppDelegate.m in Sources */,
 				32BE60ED21EDCFA600BA52EF /* CLRequest.m in Sources */,
 				32BE60FC21EDCFA600BA52EF /* PassWordTool.m in Sources */,
-				32BE614321EDDAF800BA52EF /* CTViewModel.m in Sources */,
+				32E7EE6A21F32CC700191789 /* CTHomeAdvertView.m in Sources */,
+				32E7EE6421F30BAE00191789 /* CTHomeCatoryViewController.m in Sources */,
 				32BE610821EDCFA600BA52EF /* UITextField+Helper.m in Sources */,
 				32BE60F821EDCFA600BA52EF /* CLRefreshNulMoreView.m in Sources */,
 				32BE60F721EDCFA600BA52EF /* CLRefreshCurveLayer.m in Sources */,
@@ -1184,29 +1471,39 @@
 				32BE612C21EDCFA600BA52EF /* SelPlayerConfiguration.m in Sources */,
 				32BE611821EDCFA600BA52EF /* UIColor+HexString.m in Sources */,
 				32BE613121EDCFA600BA52EF /* NSDate+Extension.m in Sources */,
+				322453D721F2BFC200471059 /* CTViewModel.m in Sources */,
 				32BE612D21EDCFA600BA52EF /* UIViewController+PlayerRotation.m in Sources */,
 				32BE60F921EDCFA600BA52EF /* UIScrollView+CLRefresh.m in Sources */,
 				32BE610621EDCFA600BA52EF /* UILabel+Helper.m in Sources */,
+				322453F421F2D3F700471059 /* CTHomeNavBar.m in Sources */,
 				32BE611021EDCFA600BA52EF /* NSArray+Log.m in Sources */,
 				32BE611C21EDCFA600BA52EF /* CALayer+YYAdd.m in Sources */,
 				32BE612121EDCFA600BA52EF /* YYCGUtilities.m in Sources */,
+				32E7EE4921F2F0D500191789 /* LMSegmentedControl.m in Sources */,
 				32BE611121EDCFA600BA52EF /* NSData+Category.m in Sources */,
+				32E7EE6D21F32CE700191789 /* CTHomeNavView.m in Sources */,
 				32BE611421EDCFA600BA52EF /* NSString+Category.m in Sources */,
 				32BE610521EDCFA600BA52EF /* UIImageView+Helper.m in Sources */,
 				32BE610321EDCFA600BA52EF /* UIActionSheet+Category.m in Sources */,
 				32BE60FB21EDCFA600BA52EF /* KeychainTool.m in Sources */,
+				322453B121F2BE4600471059 /* CTHomeService.m in Sources */,
+				322453D621F2BFC200471059 /* CTBaseViewController.m in Sources */,
 				32BE611F21EDCFA600BA52EF /* NSTimer+YYAdd.m in Sources */,
 				32BE610021EDCFA600BA52EF /* TZPhotoPreviewCell.m in Sources */,
+				322453AD21F2BE1100471059 /* CTMainService.m in Sources */,
 				32BE60EF21EDCFA600BA52EF /* CLURLRequest.m in Sources */,
 				32BE612E21EDCFA600BA52EF /* SelPlaybackControls.m in Sources */,
 				32BE612221EDCFA600BA52EF /* AddressPickerView.m in Sources */,
-				325D3B7D21F1E6BC00465B91 /* CTTableView.m in Sources */,
+				322453BD21F2BEA300471059 /* CTMemberService.m in Sources */,
 				32BE60F221EDCFA600BA52EF /* CLRefreshFooter.m in Sources */,
 				32BE612421EDCFA600BA52EF /* CLPayPasswordView.m in Sources */,
 				32BE612621EDCFA600BA52EF /* CLTextView.m in Sources */,
+				32E7EE5221F2F70700191789 /* CTHomeViewModel.m in Sources */,
 				32BE613221EDCFA600BA52EF /* WSDatePickerView.m in Sources */,
+				322453B921F2BE8A00471059 /* CTRecommendService.m in Sources */,
+				32E7EE5E21F3066700191789 /* CTHomePageController.m in Sources */,
 				32BE612721EDCFA600BA52EF /* CLTimerButton.m in Sources */,
-				325D3B7A21F1E6B300465B91 /* CTView.m in Sources */,
+				322453EC21F2C7F000471059 /* CTNavigationController.m in Sources */,
 				32BE613021EDCFA600BA52EF /* SelVideoSlider.m in Sources */,
 				325D3B7121F1E64900465B91 /* CTTabBarModel.m in Sources */,
 				325D3B5521F1DDF400465B91 /* CTSearchTicketViewController.m in Sources */,
@@ -1215,12 +1512,17 @@
 				32BE610921EDCFA600BA52EF /* UITextView+Helper.m in Sources */,
 				32BE60FF21EDCFA600BA52EF /* SDWaitingView.m in Sources */,
 				32BE610221EDCFA600BA52EF /* MBProgressHUD+Helper.m in Sources */,
-				325D3B5821F1DE0600465B91 /* CTReconmendViewController.m in Sources */,
+				325D3B5821F1DE0600465B91 /* CTRecommendViewController.m in Sources */,
+				322453F021F2CF1100471059 /* CTAppConfig.m in Sources */,
 				32BE60E821EDCFA600BA52EF /* Aspects.m in Sources */,
 				325D3B7421F1E67200465B91 /* CTMainController.m in Sources */,
 				32BE60FA21EDCFA600BA52EF /* ImagePicker.m in Sources */,
 				32BE611321EDCFA600BA52EF /* NSDictionary+Log.m in Sources */,
 				32BE611921EDCFA600BA52EF /* UIImage+Category.m in Sources */,
+				322453D921F2BFC200471059 /* CTView.m in Sources */,
+				322453B521F2BE6F00471059 /* CTSearchTicketService.m in Sources */,
+				32E7EE7221F331E500191789 /* CTHomeSalesView.m in Sources */,
+				322453D821F2BFC200471059 /* CTTableView.m in Sources */,
 				325D3B7721F1E68500465B91 /* CTTabBarItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

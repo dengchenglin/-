@@ -58,7 +58,7 @@
 /*颜色*/
 #define RGBAColor(r,g,b,a) [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:a]
 #define RGBColor(r,g,b) [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:1.0]
-
+#define HexColor(hexString)  [UIColor colorWithHexString:hexString]
 /*字体*/
 #define FONT_PFRG_SIZE(s) [UIFont systemFontOfSize:s]
 
@@ -106,7 +106,7 @@ return instance;\
 }\
 
 
-#define CLLoadMainBundle(owner,nibName) [[NSBundle mainBundle]loadNibNamed:nibName owner:owner options:nil][0]
+
 
 #define NSMainBundleName(class) [[NSBundle mainBundle]loadNibNamed:NSStringFromClass(class) owner:self options:nil][0]
 

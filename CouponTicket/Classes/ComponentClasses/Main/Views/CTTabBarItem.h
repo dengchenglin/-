@@ -10,4 +10,14 @@
 
 @interface CTTabBarItem : UIView
 
+@property (nonatomic, copy)   UIImage *image;
+
+@property (nonatomic, copy)   UIImage *selectedImage;
+
+@property (nonatomic, copy)   NSString *title;
+
+@property (nonatomic, assign) BOOL selected;
+
+- (void)addTapGestureRecognizerWithBlock:(void(^)(id sender))block;
+
 @end

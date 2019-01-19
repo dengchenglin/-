@@ -40,13 +40,20 @@
     [[CLModuleManager shareInstance]registerModuleServiceForClass:moduleServiceClass protocol:moduleServiceProtocol];
 }
 
-+ (Class)moduleServiceForProtocol:(Protocol *)moduleServiceProtocol{
-    return [[CLModuleManager shareInstance]moduleServiceForProtocol:moduleServiceProtocol];
+
++ (id<CLModuleServiceProtocol>)moduleServiceInstanceForProtocol:(Protocol *)moduleServiceProtocol{
+    return [[CLModuleManager shareInstance]moduleServiceInstanceForProtocol:moduleServiceProtocol];
 }
 
-+ (id)moduleServiceInstanceForProtocol:(Protocol *)moduleServiceProtocol{
-    Class class = [[CLModuleManager shareInstance]moduleServiceForProtocol:moduleServiceProtocol];
-    return [[class alloc]init];
+- (id<CLModuleServiceProtocol>)moduleServiceInstanceForProtocol:(Protocol *)moduleServiceProtocol{
+    if(!moduleServiceProtocol)return nil;
+    NSString *moduleServiceProtocolName = NSStringFromProtocol(moduleServiceProtocol);
+    id service = self.moduleServices[moduleServiceProtocolName];
+    if(!service){
+        NSLog(@"%@",[NSString stringWithFormat:@"%@ does not been registed", moduleServiceProtocolName]);
+        @throw [NSException exceptionWithName:NSInternalInconsistencyException reason:nil userInfo:nil];
+    }
+    return service;
 }
 
 
@@ -55,23 +62,12 @@
     NSString *moduleServiceProtocolName = NSStringFromProtocol(moduleServiceProtocol);
     if(!self.moduleServices[moduleServiceProtocolName]){
         [_moduleServiceLock lock];
-        [self.moduleServices setValue:moduleServiceClass forKey:moduleServiceProtocolName];
+        id service = [[moduleServiceClass alloc]init];
+        [self.moduleServices setValue:service forKey:moduleServiceProtocolName];
         [_moduleServiceLock unlock];
         return;
     }
     NSLog(@"waring: %@",[NSString stringWithFormat:@"%@ already been registed. each module should ideally correspond to only one service.", moduleServiceProtocolName]);
-}
-
-- (Class)moduleServiceForProtocol:(Protocol *)moduleServiceProtocol{
-    if(!moduleServiceProtocol)return nil;
-    NSString *moduleServiceProtocolName = NSStringFromProtocol(moduleServiceProtocol);
-    Class class = self.moduleServices[moduleServiceProtocolName];
-    if(!class){
-        NSLog(@"%@",[NSString stringWithFormat:@"%@ does not been registed", moduleServiceProtocolName]);
-        @throw [NSException exceptionWithName:NSInternalInconsistencyException reason:nil userInfo:nil];
-   
-    }
-    return class;
 }
 
 @end

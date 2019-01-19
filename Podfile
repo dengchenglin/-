@@ -17,5 +17,6 @@ target 'CouponTicket' do
   pod 'ZLPhotoBrowser',     '~>2.7.6'
   pod 'Qiniu',              '~> 7.2'
   pod 'JPush',              '~>3.1.0'
-  #pod 'FDFullscreenPopGesture', '1.1'
+  pod 'SDCycleScrollView',   '~>1.75'
+  pod 'FDFullscreenPopGesture', '~>1.1'
 end

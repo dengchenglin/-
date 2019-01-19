@@ -12,10 +12,10 @@
 
 @optional
 
-+ (_Nonnull id)module;
+- (_Nonnull id)module;
 
-+ (UIViewController * _Nonnull)rootViewController;
+- (UIViewController * _Nonnull)rootViewController;
 
-+ (Class)rootClass;
+- (Class)rootClass;
 
 @end
