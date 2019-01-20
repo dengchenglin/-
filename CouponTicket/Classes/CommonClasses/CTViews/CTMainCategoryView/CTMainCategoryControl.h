@@ -10,9 +10,13 @@
 
 #import "LMSegmentedControl.h"
 
+#import "CTMainCategoryView.h"
+
 @interface CTMainCategoryControl : UIView
 
 @property (nonatomic, strong) LMSegmentedControl *segmentedControl;
+
+@property (nonatomic, strong) CTMainCategoryView *categoryView;
 
 @property (nonatomic, strong) UIButton *unfoldButton;
 

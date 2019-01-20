@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CTHomeSalesView">
+            <rect key="frame" x="0.0" y="0.0" width="434" height="354"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gWJ-QW-1D9">
+                    <rect key="frame" x="0.0" y="0.0" width="434" height="80"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pic_title_1" translatesAutoresizingMaskIntoConstraints="NO" id="Ruv-Oi-cG4">
+                            <rect key="frame" x="100.5" y="15" width="233" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="233" id="DKP-hT-Jj0"/>
+                                <constraint firstAttribute="height" constant="30" id="Q3y-Ih-sGE"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="21:45秒后更新" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dST-mK-Bch">
+                            <rect key="frame" x="177" y="45" width="81" height="14.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <color key="textColor" red="0.81176470588235294" green="0.81176470588235294" blue="0.81176470588235294" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_next_gray" translatesAutoresizingMaskIntoConstraints="NO" id="9LK-ax-d2U">
+                            <rect key="frame" x="396" y="15" width="30" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="Stm-gu-ax3"/>
+                                <constraint firstAttribute="width" constant="30" id="u61-iC-VCQ"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="80" id="4ov-Ih-6lY"/>
+                        <constraint firstItem="Ruv-Oi-cG4" firstAttribute="centerY" secondItem="gWJ-QW-1D9" secondAttribute="centerY" constant="-10" id="FHf-Vp-LfB"/>
+                        <constraint firstItem="Ruv-Oi-cG4" firstAttribute="centerX" secondItem="gWJ-QW-1D9" secondAttribute="centerX" id="FdC-eV-lkw"/>
+                        <constraint firstItem="dST-mK-Bch" firstAttribute="top" secondItem="Ruv-Oi-cG4" secondAttribute="bottom" id="TKw-4b-zOE"/>
+                        <constraint firstItem="9LK-ax-d2U" firstAttribute="centerY" secondItem="Ruv-Oi-cG4" secondAttribute="centerY" id="aPL-wU-f09"/>
+                        <constraint firstItem="dST-mK-Bch" firstAttribute="centerX" secondItem="gWJ-QW-1D9" secondAttribute="centerX" id="bad-7j-utc"/>
+                        <constraint firstAttribute="trailing" secondItem="9LK-ax-d2U" secondAttribute="trailing" constant="8" id="ogS-qe-mPd"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e9B-Ts-NMf">
+                    <rect key="frame" x="0.0" y="80" width="434" height="274"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="gWJ-QW-1D9" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="CAt-24-dCF"/>
+                <constraint firstAttribute="trailing" secondItem="e9B-Ts-NMf" secondAttribute="trailing" id="CFb-u0-4cv"/>
+                <constraint firstItem="e9B-Ts-NMf" firstAttribute="top" secondItem="gWJ-QW-1D9" secondAttribute="bottom" id="GqP-4V-wOO"/>
+                <constraint firstAttribute="bottom" secondItem="e9B-Ts-NMf" secondAttribute="bottom" id="Lg8-NB-IU8"/>
+                <constraint firstItem="e9B-Ts-NMf" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Pei-xG-oaV"/>
+                <constraint firstItem="gWJ-QW-1D9" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Xoe-t9-bXY"/>
+                <constraint firstAttribute="trailing" secondItem="gWJ-QW-1D9" secondAttribute="trailing" id="zOL-DN-TFm"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="goodsView" destination="e9B-Ts-NMf" id="1Mt-OY-MDE"/>
+                <outlet property="titleheadView" destination="gWJ-QW-1D9" id="EZg-YL-qA6"/>
+            </connections>
+            <point key="canvasLocation" x="131" y="11"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_next_gray" width="6" height="9"/>
+        <image name="pic_title_1" width="225" height="19"/>
+    </resources>
+</document>

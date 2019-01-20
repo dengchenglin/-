@@ -8,14 +8,36 @@
 
 #import "CTHomeSalesView.h"
 
+#import "CTSalesItem.h"
+
 @implementation CTHomeSalesView
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
+- (void)awakeFromNib{
+    [super awakeFromNib];
+    [self reloadView];
 }
-*/
+
+- (void)reloadView{
+    UIView *leftView;
+    for(int i = 0;i < 3;i ++){
+        CTSalesItem *item = NSMainBundleName(CTSalesItem.class);
+        [self addSubview:item];
+        [item mas_makeConstraints:^(MASConstraintMaker *make) {
+            if(leftView){
+                make.left.mas_equalTo(leftView.mas_right);
+                make.width.mas_equalTo(leftView.mas_width);
+            }
+            else{
+                make.left.mas_equalTo(0);
+            }
+            if(i == 2){
+                make.right.mas_equalTo(0);
+            }
+            make.top.mas_equalTo(self.titleheadView.mas_bottom);
+            make.bottom.mas_equalTo(0);
+        }];
+        leftView = item;
+    }
+}
 
 @end

@@ -12,7 +12,7 @@
 
 - (void)awakeFromNib{
     [super awakeFromNib];
-    UIImageView *searchLogo = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 30, 30)];
+    UIImageView *searchLogo = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 40, 30)];
     searchLogo.contentMode = UIViewContentModeCenter;
     searchLogo.image = [UIImage imageNamed:@"ic_home_search"];
     _searchTextField.leftView = searchLogo;

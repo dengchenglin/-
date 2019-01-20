@@ -14,6 +14,8 @@
 
 @implementation CTHomeCatoryViewController
 
+@synthesize bounds = _bounds;
+
 - (void)setUpUI{
     self.hideSystemNavBarWhenAppear = YES;
 }

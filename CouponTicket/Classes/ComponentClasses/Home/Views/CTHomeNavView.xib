@@ -21,32 +21,35 @@
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ive-4u-EEs">
                             <rect key="frame" x="8" y="8" width="114.5" height="114.5"/>
+                            <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="ive-4u-EEs" secondAttribute="height" multiplier="1:1" id="HvV-Cb-0WJ"/>
                             </constraints>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xJa-6g-yZW">
                             <rect key="frame" x="130.5" y="8" width="114" height="114.5"/>
+                            <color key="backgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="xJa-6g-yZW" secondAttribute="height" multiplier="1:1" id="73u-N3-cbU"/>
                             </constraints>
-                            <state key="normal" title="Button"/>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gDJ-JE-que">
                             <rect key="frame" x="252.5" y="8" width="114.5" height="114.5"/>
+                            <color key="backgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="gDJ-JE-que" secondAttribute="height" multiplier="1:1" id="v8q-us-nBd"/>
                             </constraints>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7FG-ti-30O">
                             <rect key="frame" x="8" y="130.5" width="175.5" height="103.5"/>
+                            <color key="backgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="7FG-ti-30O" secondAttribute="height" multiplier="175:103" id="WMd-kr-YRo"/>
                             </constraints>
-                            <state key="normal" title="Button"/>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c3f-id-MAn">
                             <rect key="frame" x="191.5" y="130.5" width="175.5" height="103.5"/>
+                            <color key="backgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="c3f-id-MAn" secondAttribute="height" multiplier="175:103" id="zB1-33-PBq"/>
                             </constraints>
@@ -89,7 +92,7 @@
                 <outlet property="item4" destination="7FG-ti-30O" id="Dk6-fh-ZwX"/>
                 <outlet property="item5" destination="c3f-id-MAn" id="tK5-xQ-tAn"/>
             </connections>
-            <point key="canvasLocation" x="161" y="-515"/>
+            <point key="canvasLocation" x="-527" y="-549"/>
         </view>
     </objects>
 </document>

@@ -8,6 +8,8 @@
 
 #import "CTBaseListViewController.h"
 
-@interface CTHomeCatoryViewController : CTBaseListViewController
+#import "CTPageControllerProtocol.h"
+
+@interface CTHomeCatoryViewController : CTBaseListViewController<CTPageControllerProtocol>
 
 @end

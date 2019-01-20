@@ -12,6 +12,13 @@
 
 ViewInstance(setUp)
 
+- (CTMainCategoryView *)categoryView{
+    if(!_categoryView){
+        _categoryView = [[CTMainCategoryView alloc]init];
+    }
+    return _categoryView;
+}
+
 - (void)setUp{
     [self setUpUI];
     [self autoLayout];
@@ -31,6 +38,7 @@ ViewInstance(setUp)
     
     _unfoldButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [_unfoldButton setImage:[UIImage imageNamed:@"ic_down_white"] forState:UIControlStateNormal];
+    _unfoldButton.hidden = YES;
     [self addSubview:_unfoldButton];
 }
 
@@ -49,13 +57,38 @@ ViewInstance(setUp)
     @weakify(self)
     [self.unfoldButton touchUpInsideSubscribeNext:^(id x) {
         @strongify(self)
-        
+        [self showAllCategoryView];
     }];
+}
+
+- (void)showAllCategoryView{
+    if(!self.categoryView.superview){
+        UIViewController *vc = [UIUtil getCurrentViewController];
+        [vc.view addSubview:self.categoryView];
+        [self.categoryView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.mas_equalTo(self.mas_top);
+            make.right.left.mas_equalTo(0);
+            make.height.mas_equalTo(CTMainCategoryHeadViewHeight);
+        }];
+       //[self.categoryView show];
+        
+    }
+    else{
+        [self.categoryView hide];
+    }
+    
 }
 
 - (void)setTitles:(NSArray<NSString *> *)titles{
     _titles = [titles copy];
     self.segmentedControl.titles = _titles;
+    _unfoldButton.hidden = NO;
+    _categoryView.categoryModels = [_titles map:^id(NSInteger index, id element) {
+        CTCategoryModel *model = [CTCategoryModel new];
+        model.title = element;
+        return model;
+    }];
 }
+
 
 @end

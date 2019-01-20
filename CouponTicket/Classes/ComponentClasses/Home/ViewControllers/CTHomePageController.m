@@ -18,6 +18,8 @@
 
 #import "CTHomeCatoryViewController.h"
 
+#import "CTMainCategoryView.h"
+
 @interface CTHomePageController ()<UIPageControlManagerDataSoure,UIPageControlManagerDelegate,LMSegmentedControlDelegate>
 
 @property (nonatomic, strong) CTHomeTopView *topView;
@@ -77,6 +79,15 @@
     }];
 }
 
+- (void)setUpEvent{
+    @weakify(self)
+    [self.topView.navBar.messageButton touchUpInsideSubscribeNext:^(id x) {
+        @strongify(self)
+    
+    }];
+}
+
+
 - (void)request{
     [NSTimer scheduledTimerWithTimeInterval:1.0 block:^(NSTimer *timer) {
          [self reloadData:nil];
@@ -93,12 +104,16 @@
         }
         else{
             vc = [[CTHomeCatoryViewController alloc]init];
+            
         }
+        ((id<CTPageControllerProtocol>)vc).bounds = self.pageControlManager.pageViewControllerFrame;
         [self.viewControllers addObject:vc];
     }
     
     self.topView.categoryControl.titles = _viewModel.category_titles;
     [self.pageControlManager reloadData];
+
+
 }
 
 

@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface CTHomeSalesView : UIView
+@property (weak, nonatomic) IBOutlet UIView *titleheadView;
+@property (weak, nonatomic) IBOutlet UIView *goodsView;
 
 @end
