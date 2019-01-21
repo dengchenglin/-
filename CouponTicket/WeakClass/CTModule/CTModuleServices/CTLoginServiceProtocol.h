@@ -12,4 +12,6 @@
 
 @protocol CTLoginServiceProtocol <NSObject,CLModuleServiceProtocol>
 
+- (void)showLoginFormViewController:(UIViewController *)viewController callback:(void(^)(BOOL logined))callback;
+
 @end

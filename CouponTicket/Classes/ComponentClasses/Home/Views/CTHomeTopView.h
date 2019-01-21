@@ -18,4 +18,8 @@
 
 @property (nonatomic, strong) CTMainCategoryControl *categoryControl;
 
+@property (nonatomic, copy) NSArray <CTCategoryModel *>*categoryModels;
+
+@property (nonatomic, copy) void(^clickCategoryBlock)(NSInteger index);
+
 @end

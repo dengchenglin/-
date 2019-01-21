@@ -20,7 +20,7 @@
 - (void)reloadView{
     UIView *leftView;
     for(int i = 0;i < 3;i ++){
-        CTSalesItem *item = NSMainBundleName(CTSalesItem.class);
+        CTSalesItem *item = NSMainBundleClass(CTSalesItem.class);
         [self addSubview:item];
         [item mas_makeConstraints:^(MASConstraintMaker *make) {
             if(leftView){

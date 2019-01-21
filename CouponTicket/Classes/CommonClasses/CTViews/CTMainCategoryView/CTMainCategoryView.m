@@ -8,24 +8,18 @@
 
 #import "CTMainCategoryView.h"
 
-#define CTMainCategoryHeadViewHeight 44
+#define CTMainCategoryMaxLineCount 4
 
-@implementation CTMainCategoryHeadView
+#define CTMainCategoryMaxRowCount 3
 
-- (void)awakeFromNib{
-    [super awakeFromNib];
-    _closeButton.imageEdgeInsets = UIEdgeInsetsMake(3, 3, 3, 3 );
-}
+#define CTMainCategoryItemHeight 110
 
-@end
 @implementation CTMainCategoryItem
 
 @end
 
 
 @interface CTMainCategoryView()
-
-@property (nonatomic, strong) CTMainCategoryHeadView*headView;
 
 @property (nonatomic, strong) UIScrollView *scrollView;
 
@@ -35,6 +29,14 @@
 
 @implementation CTMainCategoryView
 
++ (CGFloat)heightForCategoryCount:(NSInteger)count{
+    NSInteger maxCount = CTMainCategoryMaxLineCount * CTMainCategoryMaxRowCount;
+    NSInteger accountCount = count>maxCount?maxCount:maxCount;
+    NSInteger row = (accountCount + CTMainCategoryMaxLineCount - 1)/CTMainCategoryMaxLineCount;
+    CGFloat height = row * CTMainCategoryItemHeight;
+    return height;
+}
+
 ViewInstance(setUp)
 
 - (void)setUp{
@@ -43,81 +45,41 @@ ViewInstance(setUp)
     [self setUpEvent];
 }
 - (void)setUpUI{
-    self.clipsToBounds = YES;
     _scrollView = [[UIScrollView alloc]init];
     _scrollView.backgroundColor = [UIColor whiteColor];
     _scrollView.showsVerticalScrollIndicator = NO;
     _scrollView.showsHorizontalScrollIndicator = NO;
     _scrollView.pagingEnabled = YES;
     [self addSubview:_scrollView];
-    
-    _headView = NSMainBundleName(CTMainCategoryHeadView.class);
-    [self addSubview:_headView];
+
 }
 - (void)autoLayout{
-    
-    [_headView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.top.right.mas_equalTo(0);
-        make.height.mas_equalTo(CTMainCategoryHeadViewHeight);
-    }];
     [_scrollView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.right.mas_equalTo(0);
-        make.top.mas_equalTo(CTMainCategoryHeadViewHeight);
+        make.edges.mas_equalTo(UIEdgeInsetsZero);
     }];
 }
 
 - (void)setUpEvent{
-    @weakify(self)
-    [self.headView.closeButton touchUpInsideSubscribeNext:^(id x) {
-        @strongify(self)
-        [self show];
-    }];
-}
-
-
-- (void)show{
-    if(!_categoryModels.count)return;
-    [UIView animateWithDuration:0.5 animations:^{
-        [self.scrollView mas_updateConstraints:^(MASConstraintMaker *make) {
-            make.top.mas_equalTo(CTMainCategoryHeadViewHeight);
-        }];
-        [self layoutIfNeeded];
-    }];
 
 }
-- (void)hide{
-    if(!_categoryModels.count)return;
-    [self.scrollView mas_updateConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(CTMainCategoryHeadViewHeight - self.contentHeight);
-    }];
-    [self removeFromSuperview];
-   
-}
+
 
 - (void)setCategoryModels:(NSArray<CTCategoryModel *> *)categoryModels{
     _categoryModels = [categoryModels copy];
     [_scrollView removeAllSubViews];
-    CGFloat lineCount = 4;
-    CGFloat itemHeight = 105;
+    CGFloat lineCount = CTMainCategoryMaxLineCount;
+    CGFloat itemHeight = CTMainCategoryItemHeight;
     CGFloat itemWidth = SCREEN_WIDTH/lineCount;
-    
-    NSInteger count = _categoryModels.count>12?12:_categoryModels.count;
-    NSInteger row = (count + lineCount - 1)/lineCount;
-    CGFloat height = row * itemHeight;
+    CGFloat height = [self.class heightForCategoryCount:_categoryModels.count];
     self.contentHeight = height;
-    [self mas_updateConstraints:^(MASConstraintMaker *make) {
-        make.height.mas_equalTo(CTMainCategoryHeadViewHeight + height);
-    }];
     [self.scrollView mas_updateConstraints:^(MASConstraintMaker *make) {
         make.height.mas_equalTo(height);
-        make.top.mas_equalTo(CTMainCategoryHeadViewHeight - height);
     }];
     [self layoutIfNeeded];
     
-    
     NSInteger group = (_categoryModels.count + 11)/12;
     UIView *leftContainerView;
-    for(int i = 0;i < group;i ++){
+    for(int i = 0,k = 0;i < group;i ++){
         UIView *containerView = [UIView new];
         [_scrollView addSubview:containerView];
         
@@ -139,34 +101,28 @@ ViewInstance(setUp)
         leftContainerView = containerView;
         
         NSInteger count = _categoryModels.count - 12 * i;
-        __block UIView *leftItem;
-        __block UIView *topItem;
-        for(int j = 0;j < count;j ++){
-            CTMainCategoryItem *item = NSMainBundleName(CTMainCategoryItem.class);
+        for(int j = 0;j < count;j ++,k++){
+            CTMainCategoryItem *item = NSMainBundleClass(CTMainCategoryItem.class);
+            item.tag = 100 + k;
+            item.titleLabel.text = _categoryModels[k].title;
+            [item.goodImageView ct_setImageWithImg:_categoryModels[k].img];
             [containerView addSubview:item];
+            
+            CGFloat left = (j%4) * itemWidth;
+            CGFloat top = (j/4) * itemHeight;
             [item mas_makeConstraints:^(MASConstraintMaker *make) {
-                if(leftItem){
-                    make.left.mas_equalTo(leftItem.mas_right);
-                }
-                else{
-                    make.left.mas_equalTo(0);
-                }
-                if(topItem){
-                    make.top.mas_equalTo(topItem.mas_bottom);
-                }
-                else{
-                    make.top.mas_equalTo(0);
-                }
-                if((j + 1)%4 == 0){
-                    topItem = item;
-                    leftItem = nil;
-                }
-                else{
-                    leftItem = item;
-                }
-                
+                make.left.mas_equalTo(left);
+                make.top.mas_equalTo(top);
                 make.width.mas_equalTo(itemWidth);
                 make.height.mas_equalTo(itemHeight);
+            }];
+            
+            @weakify(self)
+            [item addActionWithBlock:^(UIView *target) {
+                @strongify(self)
+                if(self.clickItemBlock){
+                    self.clickItemBlock(target.tag - 100);
+                }
             }];
         }
     }

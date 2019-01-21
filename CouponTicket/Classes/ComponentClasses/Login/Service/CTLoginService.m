@@ -18,4 +18,9 @@ CL_EXPORT_MODULE(CTLoginServiceProtocol)
     return [CTLoginViewController new];
 }
 
+- (void)showLoginFormViewController:(UIViewController *)viewController callback:(void(^)(BOOL logined))callback{
+    [CTLoginViewController showLoginFormViewController:viewController callback:callback];
+}
+
+
 @end

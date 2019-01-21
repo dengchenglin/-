@@ -33,9 +33,12 @@
 #import "UIImage+Category.h"
 #import "UITextField+Helper.h"
 #import "UITextView+Helper.h"
+#import "UITableView+Helper.h"
 
 
 //弱业务通用功能
 #import "CTModule.h"
 #import "CTMarco.h"
+#import "UIImageView+CTHelper.h"
+#import "CTAppManager.h"
 #endif /* CTPrefixHeader_pch */

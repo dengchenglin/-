@@ -16,10 +16,8 @@
 
 @property (nonatomic, strong) LMSegmentedControl *segmentedControl;
 
-@property (nonatomic, strong) CTMainCategoryView *categoryView;
-
 @property (nonatomic, strong) UIButton *unfoldButton;
 
-@property (nonatomic, copy) NSArray <NSString *>*titles;
+@property (nonatomic, copy) NSArray <CTCategoryModel *>*categoryModels;
 
 @end

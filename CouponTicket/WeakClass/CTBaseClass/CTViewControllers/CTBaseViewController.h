@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+#import "CTNavigationController.h"
+
 #import "CTBaseControllerProtocol.h"
 
 @interface CTBaseViewController : UIViewController<CTBaseControllerProtocol>

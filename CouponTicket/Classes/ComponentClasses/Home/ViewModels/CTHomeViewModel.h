@@ -8,9 +8,11 @@
 
 #import "CTViewModel.h"
 
+#import "CTCategoryModel.h"
+
 @interface CTHomeViewModel : CTViewModel
 
-@property (nonatomic, copy) NSArray <NSString *>*category_titles;
+@property (nonatomic, copy) NSArray <CTCategoryModel *>*categoryModels;
 
 @property (nonatomic, copy) NSArray <NSString *> *banner_imgs;
 

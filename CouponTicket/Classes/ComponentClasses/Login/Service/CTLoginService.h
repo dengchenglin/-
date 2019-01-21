@@ -12,4 +12,5 @@
 
 @interface CTLoginService : NSObject<CTLoginServiceProtocol>
 
+
 @end

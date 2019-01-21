@@ -10,4 +10,6 @@
 
 @interface CTLoginViewController : CTBaseViewController
 
++ (void)showLoginFormViewController:(UIViewController *)viewController callback:(void(^)(BOOL logined))callback;
+
 @end

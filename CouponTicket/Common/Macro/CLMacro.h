@@ -108,7 +108,9 @@ return instance;\
 
 
 
-#define NSMainBundleName(class) [[NSBundle mainBundle]loadNibNamed:NSStringFromClass(class) owner:self options:nil][0]
+#define NSMainBundleClass(class) [[NSBundle mainBundle]loadNibNamed:NSStringFromClass(class) owner:self options:nil][0]
+
+#define NSMainBundleName(name) [[NSBundle mainBundle]loadNibNamed:name owner:self options:nil][0]
 
 //view的初始化
 #define ViewInstance(setUpName) \

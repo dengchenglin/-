@@ -8,7 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-@interface CTViewModel : NSObject
+#import "CTViewModelProtocol.h"
+
+@interface CTViewModel : NSObject<CTViewModelProtocol>
 
 
 @end

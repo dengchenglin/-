@@ -105,6 +105,7 @@
     [super viewDidLoad];
     self.extendedLayoutIncludesOpaqueBars = YES;
     self.automaticallyAdjustsScrollViewInsets = NO;
+    [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor colorWithHexString:@"#141414"],NSFontAttributeName:CTCoarseFont(22)}];
     if([self.navigationController.viewControllers indexOfObject:self] > 0){
         self.edgesForExtendedLayout = UIRectEdgeBottom;
     }
@@ -134,7 +135,7 @@
 - (void)setLeftDefaultItem{
     UIButton * backBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [backBtn setFrame:CGRectMake(0, 0, 40, 30)];
-    [backBtn setImage:[UIImage imageNamed:@"ic_navbar_return"] forState:UIControlStateNormal];
+    [backBtn setImage:[UIImage imageNamed:@"ic_return"] forState:UIControlStateNormal];
     backBtn.imageView.contentMode = UIViewContentModeCenter;
     [backBtn setTitleColor:RGBColor(102, 102, 102) forState:UIControlStateNormal];
     backBtn.titleLabel.font = FONT_PFRG_SIZE(15);

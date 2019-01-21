@@ -20,7 +20,7 @@
 
 #import "CTMainCategoryView.h"
 
-@interface CTHomePageController ()<UIPageControlManagerDataSoure,UIPageControlManagerDelegate,LMSegmentedControlDelegate>
+@interface CTHomePageController ()<UIPageControlManagerDataSoure,UIPageControlManagerDelegate>
 
 @property (nonatomic, strong) CTHomeTopView *topView;
 
@@ -49,7 +49,7 @@
 - (CTHomeTopView *)topView{
     if(!_topView){
         _topView = [[CTHomeTopView alloc]init];
-        _topView.categoryControl.segmentedControl.delegate = self;
+
     }
     return _topView;
 }
@@ -85,6 +85,10 @@
         @strongify(self)
     
     }];
+    [self.topView setClickCategoryBlock:^(NSInteger index) {
+        @strongify(self)
+        [self.pageControlManager scrollPageToIndex:index];
+    }];
 }
 
 
@@ -96,8 +100,11 @@
 }
 
 - (void)reloadData:(id)data{
-    self.viewModel.category_titles = @[@"今日精选",@"女装",@"母婴儿童",@"内衣",@"居家",@"男装",@"女装"];
-    for(int i = 0;i < self.viewModel.category_titles.count;i ++){
+
+    NSArray <CTCategoryModel *>*models = [CTCategoryModel yy_modelsWithDatas:[self testCategory]];
+    self.viewModel.categoryModels = models;
+    
+    for(int i = 0;i < self.viewModel.categoryModels.count;i ++){
         UIViewController *vc;
         if(i == 0){
             vc = [[CTHomeViewController alloc]init];
@@ -110,7 +117,7 @@
         [self.viewControllers addObject:vc];
     }
     
-    self.topView.categoryControl.titles = _viewModel.category_titles;
+    self.topView.categoryModels = _viewModel.categoryModels;
     [self.pageControlManager reloadData];
 
 
@@ -127,13 +134,10 @@
 }
 
 
-#pragma mark - LMSegmentedControlDelegate
 
-- (void)segmentedControl:(LMSegmentedControl *)segmentedControl didSelectedInbdex:(NSUInteger)index{
-    [self.pageControlManager scrollPageToIndex:index];
+
+- (NSArray *)testCategory{
+
+    return @[@{@"title":@"今日精选"},@{@"title":@"女装"},@{@"title":@"母婴儿童"},@{@"title":@"内衣"},@{@"title":@"居家"},@{@"title":@"男装"},@{@"title":@"女装"},@{@"title":@"内裤"},@{@"title":@"电器"},@{@"title":@"酒水"},@{@"title":@"玩具"}];
 }
-
-
-
-
 @end

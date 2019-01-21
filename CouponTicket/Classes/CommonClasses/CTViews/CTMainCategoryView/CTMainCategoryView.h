@@ -10,14 +10,6 @@
 
 #import "CTCategoryModel.h"
 
-
-#define CTMainCategoryHeadViewHeight 44
-
-@interface CTMainCategoryHeadView :UIView
-@property (weak, nonatomic) IBOutlet UIButton *closeButton;
-
-@end
-
 @interface CTMainCategoryItem:UIView
 
 @property (weak, nonatomic) IBOutlet UIImageView *goodImageView;
@@ -29,7 +21,9 @@
 @interface CTMainCategoryView : UIView
 
 @property (nonatomic, copy) NSArray <CTCategoryModel *> *categoryModels;
-- (void)show;
-- (void)hide;
+
+@property (nonatomic, copy) void(^clickItemBlock)(NSInteger index);
+
++ (CGFloat)heightForCategoryCount:(NSInteger)count;
 
 @end
