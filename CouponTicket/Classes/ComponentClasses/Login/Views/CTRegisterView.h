@@ -12,5 +12,6 @@
 @property (weak, nonatomic) IBOutlet UITextField *inviteCodeTfd;
 @property (weak, nonatomic) IBOutlet UITextField *phoneTfd;
 @property (weak, nonatomic) IBOutlet CTCanValidButton *nextButton;
+@property (weak, nonatomic) IBOutlet UIButton *scanButton;
 
 @end

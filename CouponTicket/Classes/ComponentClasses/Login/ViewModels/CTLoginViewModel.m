@@ -12,7 +12,7 @@
 
 - (void)initialize{
     //账号和密码不能为空
-    self.validAccountLoginSignal = [RACSignal combineLatest:@[RACObserve(self, account),RACObserve(self, password)] reduce:^(NSString *account,NSString *password){
+    self.validLoginSignal = [RACSignal combineLatest:@[RACObserve(self, account),RACObserve(self, password)] reduce:^(NSString *account,NSString *password){
         return @(account.wipSpace.length && password.wipSpace.length);
     }];
 }

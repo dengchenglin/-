@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		240E188D21F5F1FC004A4BCB /* CTRegisterViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 240E188C21F5F1FC004A4BCB /* CTRegisterViewModel.m */; };
+		240E189121F5F4C6004A4BCB /* CTLoginBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 240E189021F5F4C6004A4BCB /* CTLoginBaseViewController.m */; };
+		240E189421F5F7D4004A4BCB /* CTGetCodeViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 240E189321F5F7D4004A4BCB /* CTGetCodeViewModel.m */; };
+		240E189A21F5FA39004A4BCB /* CTForgetPsdView.m in Sources */ = {isa = PBXBuildFile; fileRef = 240E189921F5FA39004A4BCB /* CTForgetPsdView.m */; };
+		240E189C21F5FA45004A4BCB /* CTForgetPsdView_.xib in Resources */ = {isa = PBXBuildFile; fileRef = 240E189B21F5FA45004A4BCB /* CTForgetPsdView_.xib */; };
+		240E18A021F5FAC6004A4BCB /* CTForgetpsdViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 240E189F21F5FAC6004A4BCB /* CTForgetpsdViewModel.m */; };
+		240E18A321F5FB0D004A4BCB /* CTSetPasswordViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 240E18A221F5FB0D004A4BCB /* CTSetPasswordViewModel.m */; };
 		245CAE5421F42E8000496052 /* CTMainCategoryControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 245CAE4E21F42E8000496052 /* CTMainCategoryControl.m */; };
 		245CAE5521F42E8000496052 /* CTMainCategoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 245CAE4F21F42E8000496052 /* CTMainCategoryView.m */; };
 		245CAE5621F42E8000496052 /* CTMainCategoryHeadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 245CAE5221F42E8000496052 /* CTMainCategoryHeadView.xib */; };
@@ -170,6 +177,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		240E188B21F5F1FC004A4BCB /* CTRegisterViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTRegisterViewModel.h; sourceTree = "<group>"; };
+		240E188C21F5F1FC004A4BCB /* CTRegisterViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTRegisterViewModel.m; sourceTree = "<group>"; };
+		240E188F21F5F4C6004A4BCB /* CTLoginBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTLoginBaseViewController.h; sourceTree = "<group>"; };
+		240E189021F5F4C6004A4BCB /* CTLoginBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTLoginBaseViewController.m; sourceTree = "<group>"; };
+		240E189221F5F7D4004A4BCB /* CTGetCodeViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTGetCodeViewModel.h; sourceTree = "<group>"; };
+		240E189321F5F7D4004A4BCB /* CTGetCodeViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTGetCodeViewModel.m; sourceTree = "<group>"; };
+		240E189821F5FA39004A4BCB /* CTForgetPsdView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTForgetPsdView.h; sourceTree = "<group>"; };
+		240E189921F5FA39004A4BCB /* CTForgetPsdView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTForgetPsdView.m; sourceTree = "<group>"; };
+		240E189B21F5FA45004A4BCB /* CTForgetPsdView_.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CTForgetPsdView_.xib; sourceTree = "<group>"; };
+		240E189E21F5FAC6004A4BCB /* CTForgetpsdViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTForgetpsdViewModel.h; sourceTree = "<group>"; };
+		240E189F21F5FAC6004A4BCB /* CTForgetpsdViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTForgetpsdViewModel.m; sourceTree = "<group>"; };
+		240E18A121F5FB0D004A4BCB /* CTSetPasswordViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTSetPasswordViewModel.h; sourceTree = "<group>"; };
+		240E18A221F5FB0D004A4BCB /* CTSetPasswordViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTSetPasswordViewModel.m; sourceTree = "<group>"; };
 		245CAE4E21F42E8000496052 /* CTMainCategoryControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTMainCategoryControl.m; sourceTree = "<group>"; };
 		245CAE4F21F42E8000496052 /* CTMainCategoryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTMainCategoryView.m; sourceTree = "<group>"; };
 		245CAE5021F42E8000496052 /* CTMainCategoryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTMainCategoryView.h; sourceTree = "<group>"; };
@@ -769,6 +789,8 @@
 		325D3B5221F1DDB700465B91 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				240E188F21F5F4C6004A4BCB /* CTLoginBaseViewController.h */,
+				240E189021F5F4C6004A4BCB /* CTLoginBaseViewController.m */,
 				325D3B5F21F1DE3700465B91 /* CTLoginViewController.h */,
 				325D3B6021F1DE3700465B91 /* CTLoginViewController.m */,
 				326525E221F5CDB200B63DD7 /* CTRegisterViewController.h */,
@@ -860,6 +882,9 @@
 				326525F121F5CEF600B63DD7 /* CTRegisterView.h */,
 				326525F221F5CEF600B63DD7 /* CTRegisterView.m */,
 				326525F421F5CF0200B63DD7 /* CTRegisterView_.xib */,
+				240E189821F5FA39004A4BCB /* CTForgetPsdView.h */,
+				240E189921F5FA39004A4BCB /* CTForgetPsdView.m */,
+				240E189B21F5FA45004A4BCB /* CTForgetPsdView_.xib */,
 				326525F621F5CF5000B63DD7 /* CTGetCodeView.h */,
 				326525F721F5CF5000B63DD7 /* CTGetCodeView.m */,
 				326525F921F5CF5800B63DD7 /* CTGetCodeView_.xib */,
@@ -875,6 +900,14 @@
 			children = (
 				326525DC21F5C60B00B63DD7 /* CTLoginViewModel.h */,
 				326525DD21F5C60B00B63DD7 /* CTLoginViewModel.m */,
+				240E188B21F5F1FC004A4BCB /* CTRegisterViewModel.h */,
+				240E188C21F5F1FC004A4BCB /* CTRegisterViewModel.m */,
+				240E189221F5F7D4004A4BCB /* CTGetCodeViewModel.h */,
+				240E189321F5F7D4004A4BCB /* CTGetCodeViewModel.m */,
+				240E189E21F5FAC6004A4BCB /* CTForgetpsdViewModel.h */,
+				240E189F21F5FAC6004A4BCB /* CTForgetpsdViewModel.m */,
+				240E18A121F5FB0D004A4BCB /* CTSetPasswordViewModel.h */,
+				240E18A221F5FB0D004A4BCB /* CTSetPasswordViewModel.m */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -1531,6 +1564,7 @@
 				24FF625D21F40F0B00488860 /* CTHomeSalesView.xib in Resources */,
 				326525FA21F5CF5800B63DD7 /* CTGetCodeView_.xib in Resources */,
 				326525DA21F5B53900B63DD7 /* CTLoginView_.xib in Resources */,
+				240E189C21F5FA45004A4BCB /* CTForgetPsdView_.xib in Resources */,
 				326525FF21F5CF8100B63DD7 /* CTSetPasswordView_.xib in Resources */,
 				326525CC21F5A2DA00B63DD7 /* CTGoodListCell.xib in Resources */,
 				326525C721F595D300B63DD7 /* CTGoodListView.xib in Resources */,
@@ -1643,6 +1677,7 @@
 				325D3B6121F1DE3700465B91 /* CTLoginViewController.m in Sources */,
 				32BE60EE21EDCFA600BA52EF /* CLTaskRequest.m in Sources */,
 				32BE610C21EDCFA600BA52EF /* UIViewController+Helper.m in Sources */,
+				240E18A021F5FAC6004A4BCB /* CTForgetpsdViewModel.m in Sources */,
 				32BE60EA21EDCFA600BA52EF /* CLNetworkConfig.m in Sources */,
 				32BE60F321EDCFA600BA52EF /* CLRefreshHeader.m in Sources */,
 				326525ED21F5CE7F00B63DD7 /* CTGetCodeViewController.m in Sources */,
@@ -1680,6 +1715,7 @@
 				32BE612C21EDCFA600BA52EF /* SelPlayerConfiguration.m in Sources */,
 				32BE611821EDCFA600BA52EF /* UIColor+HexString.m in Sources */,
 				32BE613121EDCFA600BA52EF /* NSDate+Extension.m in Sources */,
+				240E189121F5F4C6004A4BCB /* CTLoginBaseViewController.m in Sources */,
 				326525C121F57BE900B63DD7 /* UIImageView+CTHelper.m in Sources */,
 				322453D721F2BFC200471059 /* CTViewModel.m in Sources */,
 				32BE612D21EDCFA600BA52EF /* UIViewController+PlayerRotation.m in Sources */,
@@ -1693,6 +1729,7 @@
 				32E7EE4921F2F0D500191789 /* LMSegmentedControl.m in Sources */,
 				32BE611121EDCFA600BA52EF /* NSData+Category.m in Sources */,
 				32E7EE6D21F32CE700191789 /* CTHomeNavView.m in Sources */,
+				240E189421F5F7D4004A4BCB /* CTGetCodeViewModel.m in Sources */,
 				32BE611421EDCFA600BA52EF /* NSString+Category.m in Sources */,
 				32BE610521EDCFA600BA52EF /* UIImageView+Helper.m in Sources */,
 				32BE610321EDCFA600BA52EF /* UIActionSheet+Category.m in Sources */,
@@ -1724,9 +1761,11 @@
 				325D3B7121F1E64900465B91 /* CTTabBarModel.m in Sources */,
 				325D3B5521F1DDF400465B91 /* CTSearchTicketViewController.m in Sources */,
 				32BE612521EDCFA600BA52EF /* CLTextField.m in Sources */,
+				240E188D21F5F1FC004A4BCB /* CTRegisterViewModel.m in Sources */,
 				32BE611B21EDCFA600BA52EF /* UIView+Category.m in Sources */,
 				32BE610921EDCFA600BA52EF /* UITextView+Helper.m in Sources */,
 				32BE60FF21EDCFA600BA52EF /* SDWaitingView.m in Sources */,
+				240E189A21F5FA39004A4BCB /* CTForgetPsdView.m in Sources */,
 				326525DE21F5C60B00B63DD7 /* CTLoginViewModel.m in Sources */,
 				32BE610221EDCFA600BA52EF /* MBProgressHUD+Helper.m in Sources */,
 				325D3B5821F1DE0600465B91 /* CTRecommendViewController.m in Sources */,
@@ -1740,6 +1779,7 @@
 				322453D921F2BFC200471059 /* CTView.m in Sources */,
 				322453B521F2BE6F00471059 /* CTSearchTicketService.m in Sources */,
 				32E7EE7221F331E500191789 /* CTHomeSalesView.m in Sources */,
+				240E18A321F5FB0D004A4BCB /* CTSetPasswordViewModel.m in Sources */,
 				322453D821F2BFC200471059 /* CTTableView.m in Sources */,
 				325D3B7721F1E68500465B91 /* CTTabBarItem.m in Sources */,
 			);

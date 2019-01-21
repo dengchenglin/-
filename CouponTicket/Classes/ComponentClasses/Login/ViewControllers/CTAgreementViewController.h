@@ -6,8 +6,8 @@
 //  Copyright © 2019年 Danke. All rights reserved.
 //
 
-#import "CTBaseViewController.h"
+#import "CTLoginBaseViewController.h"
 
-@interface CTAgreementViewController : CTBaseViewController
+@interface CTAgreementViewController : CTLoginBaseViewController
 
 @end

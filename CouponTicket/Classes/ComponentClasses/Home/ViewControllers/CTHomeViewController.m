@@ -88,7 +88,7 @@
 
 - (CTHomeNewestHeadView *)newestHeadView{
     if(!_newestHeadView){
-        _newestHeadView = NSMainBundleName(CTHomeNewestHeadView.class);
+        _newestHeadView = NSMainBundleClass(CTHomeNewestHeadView.class);
     }
     return _newestHeadView;
 }

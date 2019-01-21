@@ -31,7 +31,7 @@
                                     <rect key="frame" x="0.0" y="23" width="323" height="49"/>
                                     <color key="textColor" red="0.078431372550000003" green="0.078431372550000003" blue="0.078431372550000003" alpha="1" colorSpace="calibratedRGB"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                    <textInputTraits key="textInputTraits"/>
+                                    <textInputTraits key="textInputTraits" keyboardType="alphabet"/>
                                 </textField>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0Hd-dX-6s9">
                                     <rect key="frame" x="0.0" y="71" width="323" height="1"/>
@@ -46,6 +46,7 @@
                                         <constraint firstAttribute="height" constant="30" id="EdT-SD-P7Y"/>
                                         <constraint firstAttribute="width" constant="30" id="aek-CF-VUs"/>
                                     </constraints>
+                                    <state key="normal" image="ic_rachscan"/>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -89,7 +90,7 @@
                                     <rect key="frame" x="0.0" y="23" width="323" height="49"/>
                                     <color key="textColor" red="0.078431372550000003" green="0.078431372550000003" blue="0.078431372550000003" alpha="1" colorSpace="calibratedRGB"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                    <textInputTraits key="textInputTraits"/>
+                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                 </textField>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Qd1-AT-Jgr">
                                     <rect key="frame" x="0.0" y="71" width="323" height="1"/>
@@ -154,8 +155,12 @@
                 <outlet property="inviteCodeTfd" destination="e7a-6t-1j4" id="ZqK-xt-Urb"/>
                 <outlet property="nextButton" destination="mut-wb-L2Z" id="ihQ-V6-tWz"/>
                 <outlet property="phoneTfd" destination="l5T-0l-kOJ" id="wIY-zC-Kl4"/>
+                <outlet property="scanButton" destination="zpW-AU-gjv" id="lE6-X0-iKl"/>
             </connections>
-            <point key="canvasLocation" x="-140" y="105"/>
+            <point key="canvasLocation" x="261" y="131"/>
         </view>
     </objects>
+    <resources>
+        <image name="ic_rachscan" width="23" height="21"/>
+    </resources>
 </document>

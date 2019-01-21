@@ -12,6 +12,12 @@
 
 #import "CTLoginView.h"
 
+#import "CTRegisterViewController.h"
+
+#import "CTForgetViewController.h"
+
+#import "CTAgreementViewController.h"
+
 @interface CTLoginViewController ()
 
 @property (nonatomic, strong) CTLoginView *loginView;
@@ -61,7 +67,7 @@
 - (void)bindViewModel{
     RAC(self.viewModel,account) = self.loginView.accountTfd.rac_textSignal;
     RAC(self.viewModel,password) = self.loginView.passwordTfd.rac_textSignal;
-    RAC(self.loginView.loginButton,enabled) = self.viewModel.validAccountLoginSignal;
+    RAC(self.loginView.loginButton,enabled) = self.viewModel.validLoginSignal;
 }
 
 - (void)setUpEvent
@@ -70,17 +76,22 @@
     //登录
     [self.loginView.loginButton touchUpInsideSubscribeNext:^(id x) {
         @strongify(self)
-        
+        if(![self.viewModel.account validateMobile]){
+            [MBProgressHUD showMBProgressHudWithTitle:@"手机格式不正确"];
+            return ;
+        }
     }];
     //注册
     [self.loginView.registerButton touchUpInsideSubscribeNext:^(id x) {
         @strongify(self)
-        
+        CTRegisterViewController *vc = [CTRegisterViewController new];
+        [self.navigationController pushViewController:vc animated:YES];
     }];
     //忘记密码
     [self.loginView.forgetButton touchUpInsideSubscribeNext:^(id x) {
         @strongify(self)
-        
+        CTForgetViewController *vc = [CTForgetViewController new];
+        [self.navigationController pushViewController:vc animated:YES];
     }];
     //qq登录
     [self.loginView.qqButton touchUpInsideSubscribeNext:^(id x) {
@@ -95,7 +106,8 @@
     //同意协议
     [self.loginView.agreementButton touchUpInsideSubscribeNext:^(id x) {
         @strongify(self)
-        
+        CTAgreementViewController *vc = [CTAgreementViewController new];
+        [self.navigationController pushViewController:vc animated:YES];
     }];
     
 }

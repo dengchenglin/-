@@ -14,6 +14,6 @@
 
 @property (nonatomic, copy) NSString *password;
 
-@property (nonatomic, strong) RACSignal *validAccountLoginSignal;
+@property (nonatomic, strong) RACSignal *validLoginSignal;
 
 @end

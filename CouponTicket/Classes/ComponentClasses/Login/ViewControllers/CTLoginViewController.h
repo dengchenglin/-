@@ -6,9 +6,9 @@
 //  Copyright © 2019年 Danke. All rights reserved.
 //
 
-#import "CTBaseViewController.h"
+#import "CTLoginBaseViewController.h"
 
-@interface CTLoginViewController : CTBaseViewController
+@interface CTLoginViewController : CTLoginBaseViewController
 
 + (void)showLoginFormViewController:(UIViewController *)viewController callback:(void(^)(BOOL logined))callback;
 

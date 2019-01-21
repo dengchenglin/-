@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+#import "CLTimerButton.h"
+
+#import "CTCanValidButton.h"
+
 @interface CTGetCodeView : UIView
+@property (weak, nonatomic) IBOutlet UITextField *phoneTfd;
+@property (weak, nonatomic) IBOutlet UITextField *codeTfd;
+@property (weak, nonatomic) IBOutlet CLTimerButton *getCodeButton;
+@property (weak, nonatomic) IBOutlet CTCanValidButton *nextButton;
 
 @end

@@ -8,30 +8,72 @@
 
 #import "CTGetCodeViewController.h"
 
+#import "CTSetPasswordViewController.h"
+
+#import "CTGetCodeView.h"
+
+#import "CTGetCodeViewModel.h"
+
 @interface CTGetCodeViewController ()
+
+@property (nonatomic, strong) CTGetCodeView *getCodeView;
+
+@property (nonatomic, strong) CTGetCodeViewModel *viewModel;
 
 @end
 
 @implementation CTGetCodeViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
+- (CTGetCodeView *)getCodeView{
+    if(!_getCodeView){
+        _getCodeView = NSMainBundleName(@"CTGetCodeView_");
+    }
+    return _getCodeView;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (CTGetCodeViewModel *)viewModel{
+    if(!_viewModel){
+        _viewModel = [CTGetCodeViewModel new];
+    }
+    return _viewModel;
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)setUpUI{
+    self.title = GetEventTitleStr(_eventKind);
+    [self.view addSubview:self.getCodeView];
 }
-*/
+
+- (void)reloadView{
+    self.getCodeView.phoneTfd.text = self.mobile;
+}
+
+- (void)autoLayout{
+    [self.getCodeView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.mas_equalTo(UIEdgeInsetsZero);
+    }];
+}
+
+- (void)setUpEvent{
+    @weakify(self)
+    //获取验证码
+    [self.getCodeView.getCodeButton touchUpInsideSubscribeNext:^(id x) {
+        @strongify(self)
+    }];
+    [self.getCodeView.nextButton touchUpInsideSubscribeNext:^(id x) {
+        @strongify(self)
+        CTSetPasswordViewController *vc = [CTSetPasswordViewController new];
+        vc.eventKind = self.eventKind;
+        vc.mobile = self.mobile;
+        [self.navigationController pushViewController:vc animated:YES];
+    }];
+    
+}
+
+- (void)bindViewModel{
+    RAC(self.viewModel,code) = self.getCodeView.codeTfd.rac_textSignal;
+    RAC(self.viewModel,mobile) = self.getCodeView.phoneTfd.cl_textSignal;
+    RAC(self.getCodeView.nextButton,enabled) = self.viewModel.validNextSignal;
+}
+
 
 @end

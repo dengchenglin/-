@@ -8,30 +8,65 @@
 
 #import "CTForgetViewController.h"
 
+#import "CTForgetpsdViewModel.h"
+
+#import "CTForgetPsdView.h"
+
+#import "CTGetCodeViewController.h"
+
 @interface CTForgetViewController ()
+
+@property (nonatomic, strong) CTForgetPsdView *forgetPsdView;
+
+@property (nonatomic, strong) CTForgetpsdViewModel *viewModel;
 
 @end
 
 @implementation CTForgetViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
+- (CTForgetPsdView *)forgetPsdView{
+    if(!_forgetPsdView){
+        _forgetPsdView = NSMainBundleName(@"CTForgetPsdView_");
+    }
+    return _forgetPsdView;
+}
+- (CTForgetpsdViewModel *)viewModel{
+    if(!_viewModel){
+        _viewModel = [CTForgetpsdViewModel new];
+    }
+    return _viewModel;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)setUpUI{
+    self.title = @"找回密码";
+    [self.view addSubview:self.forgetPsdView];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)autoLayout{
+    [self.forgetPsdView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.mas_equalTo(UIEdgeInsetsZero);
+    }];
 }
-*/
 
+- (void)setUpEvent{
+    @weakify(self)
+    //获取验证码
+    [self.forgetPsdView.nextButton touchUpInsideSubscribeNext:^(id x) {
+        @strongify(self)
+        if(![self.viewModel.mobile validateMobile]){
+            [MBProgressHUD showMBProgressHudWithTitle:@"手机格式不正确"];
+            return ;
+        }
+        CTGetCodeViewController *vc = [CTGetCodeViewController new];;
+        vc.mobile = self.viewModel.mobile;
+        vc.eventKind = CTEventKindForgetpsd;
+        [self.navigationController pushViewController:vc animated:YES];
+    }];
+}
+
+
+- (void)bindViewModel{
+    RAC(self.viewModel,mobile) = self.forgetPsdView.mobileTfd.rac_textSignal;
+    RAC(self.forgetPsdView.nextButton,enabled) = self.viewModel.validNextSignal;
+}
 @end
