@@ -16,5 +16,8 @@
 #import "CTHomeServiceProtocol.h"
 #import "CTMainServiceProtocol.h"
 #import "CTLoginServiceProtocol.h"
-
+#import "CTMessageServiceProtocol.h"
+#import "CTShareServiceProtocol.h"
+#import "CTSearchServiceProtocol.h"
+#import "CTGoodListServiceProtocol.h"
 #endif /* CTModuleServiceProtocols_h */

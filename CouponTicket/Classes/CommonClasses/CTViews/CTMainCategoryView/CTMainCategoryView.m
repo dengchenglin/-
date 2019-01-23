@@ -12,7 +12,7 @@
 
 #define CTMainCategoryMaxRowCount 3
 
-#define CTMainCategoryItemHeight 110
+#define CTMainCategoryItemHeight 109
 
 @implementation CTMainCategoryItem
 
@@ -31,7 +31,7 @@
 
 + (CGFloat)heightForCategoryCount:(NSInteger)count{
     NSInteger maxCount = CTMainCategoryMaxLineCount * CTMainCategoryMaxRowCount;
-    NSInteger accountCount = count>maxCount?maxCount:maxCount;
+    NSInteger accountCount = count>maxCount?maxCount:count;
     NSInteger row = (accountCount + CTMainCategoryMaxLineCount - 1)/CTMainCategoryMaxLineCount;
     CGFloat height = row * CTMainCategoryItemHeight;
     return height;

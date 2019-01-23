@@ -20,6 +20,10 @@
              @"ct_mine":[self mineService],
              @"ct_member":[self memberService],
              @"ct_recommend":[self recommendService],
+             @"ct_share":[self shareService],
+             @"ct_message":[self shareService],
+             @"ct_search":[self searchService],
+             @"ct_good_list":[self goodListService]
           };
 }
 
@@ -57,4 +61,20 @@
     return [CLModuleManager moduleServiceInstanceForProtocol:@protocol(CTMemberServiceProtocol)];
 }
 
++ (id)shareService{
+     return [CLModuleManager moduleServiceInstanceForProtocol:@protocol(CTShareServiceProtocol)];
+}
+
++ (id)messageService{
+     return [CLModuleManager moduleServiceInstanceForProtocol:@protocol(CTMessageServiceProtocol)];
+}
+
+
++ (id)searchService{
+    return [CLModuleManager moduleServiceInstanceForProtocol:@protocol(CTSearchServiceProtocol)];
+}
+
++ (id)goodListService{
+     return [CLModuleManager moduleServiceInstanceForProtocol:@protocol(CTGoodListServiceProtocol)];
+}
 @end

@@ -13,5 +13,5 @@
 @property (weak, nonatomic) IBOutlet UIButton *scanButton;
 @property (weak, nonatomic) IBOutlet UITextField *searchTextField;
 @property (weak, nonatomic) IBOutlet UIButton *messageButton;
-
+@property (nonatomic, copy) void (^clickSearchBarBlock)(void);
 @end

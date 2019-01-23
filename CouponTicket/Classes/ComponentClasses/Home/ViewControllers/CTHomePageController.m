@@ -81,14 +81,29 @@
 
 - (void)setUpEvent{
     @weakify(self)
+    //消息
     [self.topView.navBar.messageButton touchUpInsideSubscribeNext:^(id x) {
         @strongify(self)
     
     }];
+    //二维码邀请页面
+    [self.topView.navBar.scanButton touchUpInsideSubscribeNext:^(id x) {
+        @strongify(self)
+        UIViewController *shareVc = [[CTModuleManager shareService]rootViewController];
+        [self.navigationController pushViewController:shareVc animated:YES];
+    }];
+    //搜索
+    [self.topView.navBar setClickSearchBarBlock:^{
+        @strongify(self)
+        UIViewController *searchVc = [[CTModuleManager searchService]rootViewController];
+        [self.navigationController pushViewController:searchVc animated:YES];
+    }];
+    //点击了分类
     [self.topView setClickCategoryBlock:^(NSInteger index) {
         @strongify(self)
         [self.pageControlManager scrollPageToIndex:index];
     }];
+    //
 }
 
 
@@ -113,7 +128,7 @@
             vc = [[CTHomeCatoryViewController alloc]init];
             
         }
-        ((id<CTPageControllerProtocol>)vc).bounds = self.pageControlManager.pageViewControllerFrame;
+        ((id<CTPageControllerProtocol>)vc).bounds = CGRectMake(0, 0, self.pageControlManager.pageViewControllerFrame.size.width, self.pageControlManager.pageViewControllerFrame.size.height);
         [self.viewControllers addObject:vc];
     }
     

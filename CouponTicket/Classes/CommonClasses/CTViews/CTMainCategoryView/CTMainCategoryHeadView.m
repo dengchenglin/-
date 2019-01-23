@@ -12,7 +12,6 @@
 
 - (void)awakeFromNib{
     [super awakeFromNib];
-    _closeButton.imageEdgeInsets = UIEdgeInsetsMake(3, 3, 3, 3 );
 }
 
 @end

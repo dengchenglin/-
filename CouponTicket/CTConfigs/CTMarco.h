@@ -16,7 +16,7 @@
 #define CTNavTitleColor   RGBColor(51,51,51)
 #define CTBackGroundColor [UIColor whiteColor]
 #define CTBackGroundGrayColor [UIColor colorWithHexString:@"#F6F6F6"]
-#define CTColor HexColor(@"#6FBA27")
+#define CTColor RGBColor(255,97,36)
 #define CTTextColor  RGBColor(51,51,51)
 #define CTLightGrayColor RGBColor(220,220,220)
 #define CTEnterButtonColor RGBColor(255,97,36)

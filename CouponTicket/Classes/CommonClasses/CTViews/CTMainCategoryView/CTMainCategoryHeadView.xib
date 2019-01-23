@@ -25,7 +25,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Og4-uP-1n3">
-                            <rect key="frame" x="295" y="66" width="30" height="30"/>
+                            <rect key="frame" x="300" y="66" width="30" height="30"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="30" id="6ip-yD-jc8"/>
                                 <constraint firstAttribute="width" constant="30" id="8MO-a6-xYt"/>
@@ -39,7 +39,7 @@
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="vgd-yW-TGS" firstAttribute="centerX" secondItem="ATb-Zs-OSd" secondAttribute="centerX" id="RMV-VH-zaD"/>
-                        <constraint firstAttribute="trailing" secondItem="Og4-uP-1n3" secondAttribute="trailing" constant="15" id="Vds-8H-5vZ"/>
+                        <constraint firstAttribute="trailing" secondItem="Og4-uP-1n3" secondAttribute="trailing" constant="10" id="Vds-8H-5vZ"/>
                         <constraint firstItem="vgd-yW-TGS" firstAttribute="centerY" secondItem="ATb-Zs-OSd" secondAttribute="centerY" id="cUC-gx-m5y"/>
                         <constraint firstItem="Og4-uP-1n3" firstAttribute="centerY" secondItem="ATb-Zs-OSd" secondAttribute="centerY" id="qoO-UK-gi7"/>
                     </constraints>
@@ -60,6 +60,6 @@
         </view>
     </objects>
     <resources>
-        <image name="ic_popup_close" width="18" height="18"/>
+        <image name="ic_popup_close" width="12" height="12"/>
     </resources>
 </document>

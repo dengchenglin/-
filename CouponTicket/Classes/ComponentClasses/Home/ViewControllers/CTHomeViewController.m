@@ -48,7 +48,8 @@
 
 - (UITableView *)tableView{
     if(!_tableView){
-        _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, self.bounds.size.height) style:UITableViewStyleGrouped];
+        _tableView = [[UITableView alloc]initWithFrame:self.bounds style:UITableViewStyleGrouped];
+        _tableView.backgroundColor = RGBColor(245, 245, 245);
         _tableView.delegate = self;
         _tableView.dataSource = self;
         [_tableView registerNibWithClass:CTGoodListCell.class];
@@ -116,7 +117,7 @@
 - (void)setUpUI{
     self.hideSystemNavBarWhenAppear = YES;
     [self.view addSubview:self.tableView];
-    self.tableView.backgroundColor = RGBColor(245, 245, 245);
+  
 }
 
 - (void)autoLayout{
@@ -164,7 +165,7 @@
     return 5;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 156;
+    return 114;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     CTGoodListCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(CTGoodListCell.class)];

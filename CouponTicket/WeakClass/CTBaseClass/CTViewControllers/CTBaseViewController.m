@@ -105,9 +105,11 @@
     [super viewDidLoad];
     self.extendedLayoutIncludesOpaqueBars = YES;
     self.automaticallyAdjustsScrollViewInsets = NO;
+    self.view.backgroundColor = [UIColor whiteColor];
     [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor colorWithHexString:@"#141414"],NSFontAttributeName:CTCoarseFont(22)}];
     if([self.navigationController.viewControllers indexOfObject:self] > 0){
         self.edgesForExtendedLayout = UIRectEdgeBottom;
+      
     }
     else{
         self.edgesForExtendedLayout = UIRectEdgeNone;

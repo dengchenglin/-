@@ -13,7 +13,7 @@ target 'CouponTicket' do
   pod 'UITableView+FDTemplateLayoutCell','~>1.6'
   pod 'PLeakSniffer',       '~>0.1.0'
   pod 'GPUImage',           '~>0.1.7'
-  pod 'FLEX',               '~>2.4.0'
+  #pod 'FLEX',               '~>2.4.0'
   pod 'ZLPhotoBrowser',     '~>2.7.6'
   pod 'Qiniu',              '~> 7.2'
   pod 'JPush',              '~>3.1.0'

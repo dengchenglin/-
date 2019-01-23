@@ -28,7 +28,7 @@
                         </button>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="搜索宝贝名称或粘贴淘宝标题" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yDx-dw-NTY">
                             <rect key="frame" x="55" y="7" width="335" height="30"/>
-                            <color key="backgroundColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="0.19506632633391588" colorSpace="calibratedRGB"/>
+                            <color key="backgroundColor" red="1" green="0.59607843137254901" blue="0.38823529411764707" alpha="0.70406592153284675" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="30" id="ZHm-9n-AS2"/>
                             </constraints>
@@ -40,6 +40,9 @@
                                     <integer key="value" value="2"/>
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
+                            <connections>
+                                <outlet property="delegate" destination="qwH-H7-N6u" id="eZy-zV-fP8"/>
+                            </connections>
                         </textField>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fkd-1c-avZ">
                             <rect key="frame" x="405" y="7" width="30" height="30"/>

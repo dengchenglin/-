@@ -29,4 +29,11 @@
 
 + (id<CTMemberServiceProtocol>)memberService;
 
++ (id<CTShareServiceProtocol>)shareService;
+
++ (id<CTMessageServiceProtocol>)messageService;
+
++ (id<CTSearchServiceProtocol>)searchService;
+
++ (id<CTGoodListServiceProtocol>)goodListService;
 @end

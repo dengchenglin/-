@@ -8,6 +8,10 @@
 
 #import "CTHomeNavBar.h"
 
+@interface CTHomeNavBar()<UITextFieldDelegate>
+
+@end
+
 @implementation CTHomeNavBar
 
 - (void)awakeFromNib{
@@ -23,6 +27,13 @@
  
     _searchTextField.attributedPlaceholder = att;
     
+}
+
+- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField{
+    if(self.clickSearchBarBlock){
+        self.clickSearchBarBlock();
+    }
+    return NO;
 }
 
 @end
