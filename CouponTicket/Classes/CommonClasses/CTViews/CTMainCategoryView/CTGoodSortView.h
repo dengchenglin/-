@@ -8,12 +8,20 @@
 
 #import <UIKit/UIKit.h>
 
+#import "CTGoodDefine.h"
+
 @interface CTGoodSortView : UIView
 
 @property (nonatomic, copy) UIColor *normalColor;
 
 @property (nonatomic, copy) UIColor *selectedColor;
 
+@property (nonatomic, copy) UIColor *upDownNormalColor;
+
+@property (nonatomic, copy) UIColor *upDownSelectedColor;
+
 @property (nonatomic, assign) BOOL showSilder;
+
+@property (nonatomic, copy) void (^clickBlock)(CTGoodSortType type);
 
 @end

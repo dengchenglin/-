@@ -134,7 +134,6 @@
     [self.salesView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(self.navView.mas_bottom).offset(10);
         make.left.right.mas_equalTo(0);
-        //make.height.mas_equalTo(260);
     }];
     [self.newestHeadView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(self.salesView.mas_bottom).offset(10);
@@ -142,7 +141,44 @@
         make.height.mas_equalTo(50);
         make.bottom.mas_equalTo(0);
     }];
+
     
+}
+
+- (void)setUpEvent{
+    @weakify(self)
+    [self.navView.item1 touchUpInsideSubscribeNext:^(id x) {
+        @strongify(self)
+        UIViewController *vc = [[CTModuleManager goodListService]nineListViewController];
+        [self.navigationController pushViewController:vc animated:YES];
+    }];
+    [self.navView.item2 touchUpInsideSubscribeNext:^(id x) {
+        @strongify(self)
+        UIViewController *vc = [[CTModuleManager goodListService]goodListViewControllerWithCategoryId:nil];
+        [self.navigationController pushViewController:vc animated:YES];
+    }];
+    [self.navView.item3 touchUpInsideSubscribeNext:^(id x) {
+        @strongify(self)
+        UIViewController *vc = [[CTModuleManager goodListService]goodListViewControllerWithCategoryId:nil];
+        [self.navigationController pushViewController:vc animated:YES];
+    }];
+    [self.navView.item4 touchUpInsideSubscribeNext:^(id x) {
+        @strongify(self)
+        UIViewController *vc = [[CTModuleManager goodListService]goodListViewControllerWithCategoryId:nil];
+        [self.navigationController pushViewController:vc animated:YES];
+    }];
+    [self.navView.item5 touchUpInsideSubscribeNext:^(id x) {
+        @strongify(self)
+        UIViewController *vc = [[CTModuleManager goodListService]goodListViewControllerWithCategoryId:nil];
+        [self.navigationController pushViewController:vc animated:YES];
+    }];
+    
+    //销量榜
+    [self.salesView.titleheadView addActionWithBlock:^(id target) {
+        @strongify(self)
+        UIViewController *vc = [[CTModuleManager goodListService]hotsalesViewController];
+        [self.navigationController pushViewController:vc animated:YES];
+    }];
 }
 
 - (void)request{

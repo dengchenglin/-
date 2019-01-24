@@ -22,8 +22,14 @@
 
 @property (nonatomic, copy) UIColor *selectedColor;
 
-@property (nonatomic, assign) CTUpSortStatus defaultStatus;
+@property (nonatomic, copy) UIColor *upDownNormalColor;
+
+@property (nonatomic, copy) UIColor *upDownSelectedColor;
+
+@property (nonatomic, assign) CTSortStatus defaultStatus;
 
 @property (nonatomic, copy) void (^clickBlock)(CTSortButton *target);
+
+@property (nonatomic, assign) CTSortStatus status;
 
 @end

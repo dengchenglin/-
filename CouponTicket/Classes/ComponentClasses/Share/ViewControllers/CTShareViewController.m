@@ -27,6 +27,7 @@
 
 - (void)setUpUI{
     self.title = @"邀请码";
+    self.navigationBarStyle = CTNavigationBarWhite;
     [self.view addSubview:self.shareView];
 }
 

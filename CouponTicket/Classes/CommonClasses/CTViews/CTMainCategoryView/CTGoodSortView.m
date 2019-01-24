@@ -25,6 +25,8 @@ ViewInstance(setUp)
     _titles = @[@"综合",@"销量",@"最新",@"券额",@"价格"];
     _normalColor = RGBColor(153, 153, 153);
     _selectedColor = CTColor;
+    _upDownNormalColor = RGBColor(153, 153, 153);
+    _upDownSelectedColor = CTColor;
     [self setUpUI];
 }
 - (void)setUpUI{
@@ -44,6 +46,8 @@ ViewInstance(setUp)
         button.tag = 100 + i;
         button.normalColor = _normalColor;
         button.selectedColor = _selectedColor;
+        button.upDownNormalColor = _upDownNormalColor;
+        button.upDownSelectedColor = _upDownSelectedColor;
         button.title = _titles[i];
         [self addSubview:button];
         [button mas_updateConstraints:^(MASConstraintMaker *make) {
@@ -71,9 +75,35 @@ ViewInstance(setUp)
                 }
                 else{
                     b.selected = NO;
+                    b.status = CTSortStatusNormal;
                 }
             }
-            [self reloadSildWithIndex:target.tag - 100];
+            [self reloadSildWithIndex:target.tag - 100 animated:YES];
+            
+            CTGoodSortType type;
+            if(self.clickBlock){
+                switch (target.tag) {
+                    case 100:
+                        type = CTGoodSortComprehensive;
+                        break;
+                    case 101:
+                        type = CTGoodSortSales;
+                        break;
+                    case 102:
+                        type = CTGoodSortNewest;
+                        break;
+                    case 103:
+                        type = (target.status == CTSortStatusUp?CTGoodSortDiscountUp:CTGoodSortDiscountDown);
+                        break;
+                    case 104:
+                        type = (target.status == CTSortStatusUp?CTGoodSortPriceUp:CTGoodSortPriceDown);
+                        break;
+                    default:
+                        type = CTGoodSortComprehensive;
+                        break;
+                }
+                self.clickBlock(type);
+            }
         }];
     }
     
@@ -84,29 +114,56 @@ ViewInstance(setUp)
     //券额默认降序
     CTSortButton *button3 = [self viewWithTag:103];
     button3.sorted = YES;
-    button3.defaultStatus = CTUpSortStatusDown;
+    button3.defaultStatus = CTSortStatusDown;
     //价格默认升序
     CTSortButton *button4 = [self viewWithTag:104];
     button4.sorted = YES;
-    button4.defaultStatus = CTUpSortStatusUp;
+    button4.defaultStatus = CTSortStatusUp;
     
-    [self reloadSildWithIndex:0];
+    [self reloadSildWithIndex:0 animated:NO];
 }
 
 - (void)setShowSilder:(BOOL)showSilder{
     _showSilder = showSilder;
     _sildImageView.hidden = !_sildImageView;
 }
+- (void)setNormalColor:(UIColor *)normalColor{
+    _normalColor = normalColor;
+    [self reloadView];
+}
+- (void)setSelectedColor:(UIColor *)selectedColor{
+    _selectedColor = selectedColor;
+    [self reloadView];
+}
+- (void)setUpDownNormalColor:(UIColor *)upDownNormalColor{
+    _upDownNormalColor = upDownNormalColor;
+    [self reloadView];
+}
+- (void)setUpDownSelectedColor:(UIColor *)upDownSelectedColor{
+    _upDownSelectedColor = upDownSelectedColor;
+    [self reloadView];
+}
+- (void)reloadView{
+    for(int i = 0; i < _titles.count;i ++){
+        CTSortButton *button = [self viewWithTag:100 + i];
+        button.selectedColor = _selectedColor;
+        button.normalColor = _normalColor;
+        button.upDownSelectedColor = _upDownSelectedColor;
+        button.upDownNormalColor = _upDownNormalColor;
+    }
+}
 
-- (void)reloadSildWithIndex:(NSInteger)index{
+- (void)reloadSildWithIndex:(NSInteger)index animated:(BOOL)animated{
     CGFloat elemnetWidth = SCREEN_WIDTH/_titles.count;
     CGFloat left = index * elemnetWidth + elemnetWidth/2 - 31;
     [self.sildImageView mas_updateConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(left);
     }];
-    [UIView animateWithDuration:0.3 animations:^{
-        [self layoutIfNeeded];
-    }];
+    if(animated){
+        [UIView animateWithDuration:0.3 animations:^{
+            [self layoutIfNeeded];
+        }];
+    }
 }
 
 

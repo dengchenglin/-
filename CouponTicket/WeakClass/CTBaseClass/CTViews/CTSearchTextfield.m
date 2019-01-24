@@ -19,7 +19,7 @@ ViewInstance(setUp)
     self.leftView = searchLogo;
     self.leftViewMode = UITextFieldViewModeAlways;
     self.placeholder = @"搜索宝贝名称或粘贴淘宝标题";
-    
+    self.clearButtonMode = UITextFieldViewModeAlways;
 }
 
 - (CGRect)leftViewRectForBounds:(CGRect)bounds{

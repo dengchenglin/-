@@ -75,7 +75,6 @@ ViewInstance(setUp)
     [self.scrollView mas_updateConstraints:^(MASConstraintMaker *make) {
         make.height.mas_equalTo(height);
     }];
-    [self layoutIfNeeded];
     
     NSInteger group = (_categoryModels.count + 11)/12;
     UIView *leftContainerView;

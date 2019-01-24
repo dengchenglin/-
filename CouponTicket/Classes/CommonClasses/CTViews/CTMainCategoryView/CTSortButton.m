@@ -16,11 +16,24 @@
 @property (weak, nonatomic) IBOutlet UIView *upDownControlView;
 
 @property (nonatomic, strong) CTUpDownControl *upDownControl;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *upDownControlWidth;
 
 @end
 
 
 @implementation CTSortButton
+@synthesize status = _status;
+
+- (CTSortStatus)status{
+    return self.upDownControl.status;
+}
+
+- (void)setStatus:(CTSortStatus)status{
+    _status = status;
+    self.upDownControl.status = _status;
+}
+
+
 
 - (void)awakeFromNib{
     [super awakeFromNib];
@@ -36,18 +49,18 @@
     [self addActionWithBlock:^(id target) {
         @strongify(self)
         if(self.selected){
-            if(self.upDownControl.status == CTUpSortStatusNormal){
+            if(self.upDownControl.status == CTSortStatusNormal){
                 self.upDownControl.status = self.defaultStatus;
             }
-            else if (self.upDownControl.status == CTUpSortStatusUp){
-                self.upDownControl.status = CTUpSortStatusDown;
+            else if (self.upDownControl.status == CTSortStatusUp){
+                self.upDownControl.status = CTSortStatusDown;
             }
-            else if (self.upDownControl.status == CTUpSortStatusDown){
-                self.upDownControl.status = CTUpSortStatusUp;
+            else if (self.upDownControl.status == CTSortStatusDown){
+                self.upDownControl.status = CTSortStatusUp;
             }
         }
         else{
-            if(self.upDownControl.status == CTUpSortStatusNormal){
+            if(self.upDownControl.status == CTSortStatusNormal){
                 self.upDownControl.status = self.defaultStatus;
             }
         }
@@ -65,15 +78,12 @@
 - (void)setSorted:(BOOL)sorted{
     _sorted = sorted;
     if(_sorted){
-        [self.upDownControlView mas_updateConstraints:^(MASConstraintMaker *make) {
-            make.width.mas_equalTo(10);
-        }];
-       
+        self.upDownControlWidth.constant = 10;
+        [self layoutIfNeeded];
     }
     else{
-        [self.upDownControlView mas_updateConstraints:^(MASConstraintMaker *make) {
-            make.width.mas_equalTo(0);
-        }];
+        self.upDownControlWidth.constant = 0;
+        [self layoutIfNeeded];
     }
 }
 
@@ -92,6 +102,16 @@
     [self reloadView];
 }
 
+- (void)setUpDownNormalColor:(UIColor *)upDownNormalColor{
+    _upDownNormalColor = upDownNormalColor;
+    [self reloadView];
+}
+- (void)setUpDownSelectedColor:(UIColor *)upDownSelectedColor{
+    _upDownSelectedColor = upDownSelectedColor;
+    [self reloadView];
+}
+
+//后期优化成异步调用
 - (void)reloadView{
     if(_selected){
         _titleLabel.textColor = _selectedColor;
@@ -99,6 +119,8 @@
     else{
         _titleLabel.textColor = _normalColor;
     }
+    _upDownControl.normalColor = _upDownNormalColor;
+    _upDownControl.selectedColor = _upDownSelectedColor;
 }
 
 @end

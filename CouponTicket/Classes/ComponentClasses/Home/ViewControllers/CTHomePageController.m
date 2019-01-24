@@ -35,10 +35,6 @@
 
 @implementation CTHomePageController
 
-- (UIStatusBarStyle)preferredStatusBarStyle{
-    return UIStatusBarStyleLightContent;
-}
-
 - (NSMutableArray <UIViewController *>*)viewControllers{
     if(!_viewControllers){
         _viewControllers = [NSMutableArray array];
@@ -84,7 +80,8 @@
     //消息
     [self.topView.navBar.messageButton touchUpInsideSubscribeNext:^(id x) {
         @strongify(self)
-    
+        UIViewController *messageVc = [[CTModuleManager messageService]rootViewController];
+        [self.navigationController pushViewController:messageVc animated:YES];
     }];
     //二维码邀请页面
     [self.topView.navBar.scanButton touchUpInsideSubscribeNext:^(id x) {

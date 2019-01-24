@@ -184,16 +184,16 @@ ViewInstance(setUp)
             @weakify(self)
             [headView.clearButton touchUpInsideSubscribeNext:^(id x) {
                 @strongify(self)
-                UIActionSheet *sheet = [[UIActionSheet alloc]initWithTitle:@"是否删除搜索历史？" delegate:nil cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@"删除", nil];
-                [sheet setBlock:^(NSUInteger buttonIndex) {
+                UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"是否删除搜索历史？" message:nil delegate:nil cancelButtonTitle:@"取消" otherButtonTitles:@"删除", nil];
+                [[alertView rac_buttonClickedSignal] subscribeNext:^(NSNumber * _Nullable x) {
                     @strongify(self)
-                    if(buttonIndex == 1){
+                    if(x.integerValue == 1){
                         if(self.clearHistoryBlock){
                             self.clearHistoryBlock();
                         }
                     }
                 }];
-                [sheet showInView:[UIApplication sharedApplication].keyWindow];
+                [alertView show];
             
             }];
             return headView;

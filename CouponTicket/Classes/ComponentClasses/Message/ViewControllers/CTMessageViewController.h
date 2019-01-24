@@ -6,8 +6,10 @@
 //  Copyright © 2019年 Danke. All rights reserved.
 //
 
-#import "CTBaseViewController.h"
+#import "CTBaseListViewController.h"
 
-@interface CTMessageViewController : CTBaseViewController
+@interface CTMessageViewController : CTBaseListViewController
+
+
 
 @end

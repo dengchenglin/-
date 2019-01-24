@@ -36,4 +36,6 @@
 + (id<CTSearchServiceProtocol>)searchService;
 
 + (id<CTGoodListServiceProtocol>)goodListService;
+
++ (id<CTWebServiceProtocol>)webService;
 @end

@@ -8,10 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-#import "CTGoodListView.h"
+#import "CTGoodListView_.h"
 
 @interface CTGoodListCell : UITableViewCell
 
-@property (nonatomic, strong) CTGoodListView *containerView;
+@property (nonatomic, strong) CTGoodListView_ *containerView;
 
 @end

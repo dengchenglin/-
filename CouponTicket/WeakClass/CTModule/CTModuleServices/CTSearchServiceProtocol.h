@@ -12,4 +12,6 @@
 
 @protocol CTSearchServiceProtocol <NSObject,CLModuleServiceProtocol>
 
+- (UIViewController *)goodResultViewController:(UIViewController *)viewController keyword:(NSString *)keyword;
+
 @end

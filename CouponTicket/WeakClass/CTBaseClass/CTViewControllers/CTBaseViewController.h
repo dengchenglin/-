@@ -12,6 +12,11 @@
 
 #import "CTBaseControllerProtocol.h"
 
+typedef NS_ENUM(NSInteger,CTNavigationBarStyle) {
+    CTNavigationBarRed,
+    CTNavigationBarWhite
+};
+
 @interface CTBaseViewController : UIViewController<CTBaseControllerProtocol>
 
 @property (nonatomic, strong, readonly) UIScrollView *scrollView;
@@ -27,6 +32,8 @@
 @property (nonatomic, assign) BOOL showBackItem;
 
 @property (nonatomic, assign) BOOL didAppear;
+
+@property (nonatomic, assign) CTNavigationBarStyle navigationBarStyle;
 
 - (void)setLeftDefaultItem;
 

@@ -22,6 +22,21 @@
 		24FF625D21F40F0B00488860 /* CTHomeSalesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24FF625C21F40F0B00488860 /* CTHomeSalesView.xib */; };
 		24FF626021F41D1000488860 /* CTHomeNewestHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 24FF625F21F41D1000488860 /* CTHomeNewestHeadView.m */; };
 		24FF626221F41D1700488860 /* CTHomeNewestHeadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24FF626121F41D1700488860 /* CTHomeNewestHeadView.xib */; };
+		3220EA1421F95E59004E0422 /* CTMessageTypeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3220EA1321F95E59004E0422 /* CTMessageTypeView.m */; };
+		3220EA1621F95E8F004E0422 /* CTMessageTypeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3220EA1521F95E8F004E0422 /* CTMessageTypeView.xib */; };
+		3220EA1A21F9679B004E0422 /* CTMessageListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3220EA1821F9679B004E0422 /* CTMessageListCell.m */; };
+		3220EA1B21F9679B004E0422 /* CTMessageListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3220EA1921F9679B004E0422 /* CTMessageListCell.xib */; };
+		3220EA2121F98622004E0422 /* CTMessageListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3220EA2021F98622004E0422 /* CTMessageListViewController.m */; };
+		3220EA2721F989A6004E0422 /* CTWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3220EA2621F989A6004E0422 /* CTWebViewController.m */; };
+		3220EA2B21F98C6D004E0422 /* CTWebService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3220EA2A21F98C6D004E0422 /* CTWebService.m */; };
+		3220EA2E21F99A20004E0422 /* CTPageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3220EA2D21F99A20004E0422 /* CTPageController.m */; };
+		3220EA3721F9AD01004E0422 /* CTNineNineListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3220EA3621F9AD01004E0422 /* CTNineNineListViewController.m */; };
+		3220EA3B21F9BF9C004E0422 /* CTGoodDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3220EA3A21F9BF9C004E0422 /* CTGoodDetailViewController.m */; };
+		3220EA3F21F9C2D3004E0422 /* CThotSalesListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3220EA3E21F9C2D3004E0422 /* CThotSalesListViewController.m */; };
+		3220EA4221F9C2F9004E0422 /* CTHotSalesNoticeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3220EA4121F9C2F9004E0422 /* CTHotSalesNoticeView.m */; };
+		3220EA4421F9C343004E0422 /* CTHotSalesNoticeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3220EA4321F9C343004E0422 /* CTHotSalesNoticeView.xib */; };
+		3220EA4821F9C570004E0422 /* CTGoodListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3220EA4721F9C570004E0422 /* CTGoodListViewController.m */; };
+		3220EA4B21F9C99B004E0422 /* CTGoodResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3220EA4A21F9C99B004E0422 /* CTGoodResultViewController.m */; };
 		322453AD21F2BE1100471059 /* CTMainService.m in Sources */ = {isa = PBXBuildFile; fileRef = 322453AC21F2BE1100471059 /* CTMainService.m */; };
 		322453B121F2BE4600471059 /* CTHomeService.m in Sources */ = {isa = PBXBuildFile; fileRef = 322453B021F2BE4600471059 /* CTHomeService.m */; };
 		322453B521F2BE6F00471059 /* CTSearchTicketService.m in Sources */ = {isa = PBXBuildFile; fileRef = 322453B421F2BE6F00471059 /* CTSearchTicketService.m */; };
@@ -40,7 +55,6 @@
 		322453F621F2D60300471059 /* CTHomeNavBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 322453F521F2D60300471059 /* CTHomeNavBar.xib */; };
 		324C3D9421F84C9900536DA8 /* UIActionSheet+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 324C3D9221F84C9800536DA8 /* UIActionSheet+Category.m */; };
 		324C3D9D21F84FB200536DA8 /* CTGoodSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 324C3D9C21F84FB200536DA8 /* CTGoodSearchViewController.m */; };
-		324C3DA421F8535D00536DA8 /* CTGoodListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 324C3DA321F8535D00536DA8 /* CTGoodListViewController.m */; };
 		324C3DA721F854B000536DA8 /* CTGoodService.m in Sources */ = {isa = PBXBuildFile; fileRef = 324C3DA621F854B000536DA8 /* CTGoodService.m */; };
 		325D3B5521F1DDF400465B91 /* CTSearchTicketViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 325D3B5421F1DDF400465B91 /* CTSearchTicketViewController.m */; };
 		325D3B5821F1DE0600465B91 /* CTRecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 325D3B5721F1DE0600465B91 /* CTRecommendViewController.m */; };
@@ -52,8 +66,8 @@
 		325D3B7721F1E68500465B91 /* CTTabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 325D3B7621F1E68500465B91 /* CTTabBarItem.m */; };
 		326525BD21F5652700B63DD7 /* CTMainCategoryHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 326525BC21F5652700B63DD7 /* CTMainCategoryHeadView.m */; };
 		326525C121F57BE900B63DD7 /* UIImageView+CTHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 326525C021F57BE900B63DD7 /* UIImageView+CTHelper.m */; };
-		326525C521F595CB00B63DD7 /* CTGoodListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 326525C421F595CB00B63DD7 /* CTGoodListView.m */; };
-		326525C721F595D300B63DD7 /* CTGoodListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 326525C621F595D300B63DD7 /* CTGoodListView.xib */; };
+		326525C521F595CB00B63DD7 /* CTGoodListView_.m in Sources */ = {isa = PBXBuildFile; fileRef = 326525C421F595CB00B63DD7 /* CTGoodListView_.m */; };
+		326525C721F595D300B63DD7 /* CTGoodListView_.xib in Resources */ = {isa = PBXBuildFile; fileRef = 326525C621F595D300B63DD7 /* CTGoodListView_.xib */; };
 		326525CB21F5A2DA00B63DD7 /* CTGoodListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 326525C921F5A2DA00B63DD7 /* CTGoodListCell.m */; };
 		326525CC21F5A2DA00B63DD7 /* CTGoodListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 326525CA21F5A2DA00B63DD7 /* CTGoodListCell.xib */; };
 		326525CF21F5A40500B63DD7 /* UITableView+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 326525CE21F5A40500B63DD7 /* UITableView+Helper.m */; };
@@ -235,6 +249,35 @@
 		24FF625F21F41D1000488860 /* CTHomeNewestHeadView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTHomeNewestHeadView.m; sourceTree = "<group>"; };
 		24FF626121F41D1700488860 /* CTHomeNewestHeadView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CTHomeNewestHeadView.xib; sourceTree = "<group>"; };
 		24FF626321F425ED00488860 /* CTPageControllerProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTPageControllerProtocol.h; sourceTree = "<group>"; };
+		3220EA1221F95E59004E0422 /* CTMessageTypeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTMessageTypeView.h; sourceTree = "<group>"; };
+		3220EA1321F95E59004E0422 /* CTMessageTypeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTMessageTypeView.m; sourceTree = "<group>"; };
+		3220EA1521F95E8F004E0422 /* CTMessageTypeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CTMessageTypeView.xib; sourceTree = "<group>"; };
+		3220EA1721F9679B004E0422 /* CTMessageListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTMessageListCell.h; sourceTree = "<group>"; };
+		3220EA1821F9679B004E0422 /* CTMessageListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTMessageListCell.m; sourceTree = "<group>"; };
+		3220EA1921F9679B004E0422 /* CTMessageListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CTMessageListCell.xib; sourceTree = "<group>"; };
+		3220EA1F21F98622004E0422 /* CTMessageListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTMessageListViewController.h; sourceTree = "<group>"; };
+		3220EA2021F98622004E0422 /* CTMessageListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTMessageListViewController.m; sourceTree = "<group>"; };
+		3220EA2321F988DC004E0422 /* CTWebServiceProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTWebServiceProtocol.h; sourceTree = "<group>"; };
+		3220EA2521F989A6004E0422 /* CTWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTWebViewController.h; sourceTree = "<group>"; };
+		3220EA2621F989A6004E0422 /* CTWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTWebViewController.m; sourceTree = "<group>"; };
+		3220EA2921F98C6D004E0422 /* CTWebService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTWebService.h; sourceTree = "<group>"; };
+		3220EA2A21F98C6D004E0422 /* CTWebService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTWebService.m; sourceTree = "<group>"; };
+		3220EA2C21F99A20004E0422 /* CTPageController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTPageController.h; sourceTree = "<group>"; };
+		3220EA2D21F99A20004E0422 /* CTPageController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTPageController.m; sourceTree = "<group>"; };
+		3220EA3321F9A08D004E0422 /* CTGoodDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTGoodDefine.h; sourceTree = "<group>"; };
+		3220EA3521F9AD00004E0422 /* CTNineNineListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTNineNineListViewController.h; sourceTree = "<group>"; };
+		3220EA3621F9AD01004E0422 /* CTNineNineListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTNineNineListViewController.m; sourceTree = "<group>"; };
+		3220EA3921F9BF9C004E0422 /* CTGoodDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTGoodDetailViewController.h; sourceTree = "<group>"; };
+		3220EA3A21F9BF9C004E0422 /* CTGoodDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTGoodDetailViewController.m; sourceTree = "<group>"; };
+		3220EA3D21F9C2D3004E0422 /* CThotSalesListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CThotSalesListViewController.h; sourceTree = "<group>"; };
+		3220EA3E21F9C2D3004E0422 /* CThotSalesListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CThotSalesListViewController.m; sourceTree = "<group>"; };
+		3220EA4021F9C2F9004E0422 /* CTHotSalesNoticeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTHotSalesNoticeView.h; sourceTree = "<group>"; };
+		3220EA4121F9C2F9004E0422 /* CTHotSalesNoticeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTHotSalesNoticeView.m; sourceTree = "<group>"; };
+		3220EA4321F9C343004E0422 /* CTHotSalesNoticeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CTHotSalesNoticeView.xib; sourceTree = "<group>"; };
+		3220EA4621F9C570004E0422 /* CTGoodListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTGoodListViewController.h; sourceTree = "<group>"; };
+		3220EA4721F9C570004E0422 /* CTGoodListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTGoodListViewController.m; sourceTree = "<group>"; };
+		3220EA4921F9C99B004E0422 /* CTGoodResultViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTGoodResultViewController.h; sourceTree = "<group>"; };
+		3220EA4A21F9C99B004E0422 /* CTGoodResultViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTGoodResultViewController.m; sourceTree = "<group>"; };
 		322453AB21F2BE1100471059 /* CTMainService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTMainService.h; sourceTree = "<group>"; };
 		322453AC21F2BE1100471059 /* CTMainService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTMainService.m; sourceTree = "<group>"; };
 		322453AF21F2BE4600471059 /* CTHomeService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTHomeService.h; sourceTree = "<group>"; };
@@ -281,8 +324,6 @@
 		324C3D9321F84C9900536DA8 /* UIActionSheet+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIActionSheet+Category.h"; sourceTree = "<group>"; };
 		324C3D9B21F84FB200536DA8 /* CTGoodSearchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTGoodSearchViewController.h; sourceTree = "<group>"; };
 		324C3D9C21F84FB200536DA8 /* CTGoodSearchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTGoodSearchViewController.m; sourceTree = "<group>"; };
-		324C3DA221F8535D00536DA8 /* CTGoodListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTGoodListViewController.h; sourceTree = "<group>"; };
-		324C3DA321F8535D00536DA8 /* CTGoodListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTGoodListViewController.m; sourceTree = "<group>"; };
 		324C3DA521F854B000536DA8 /* CTGoodService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTGoodService.h; sourceTree = "<group>"; };
 		324C3DA621F854B000536DA8 /* CTGoodService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTGoodService.m; sourceTree = "<group>"; };
 		324C3DA821F854E800536DA8 /* CTGoodListServiceProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTGoodListServiceProtocol.h; sourceTree = "<group>"; };
@@ -307,9 +348,9 @@
 		326525BC21F5652700B63DD7 /* CTMainCategoryHeadView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTMainCategoryHeadView.m; sourceTree = "<group>"; };
 		326525BF21F57BE900B63DD7 /* UIImageView+CTHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+CTHelper.h"; sourceTree = "<group>"; };
 		326525C021F57BE900B63DD7 /* UIImageView+CTHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+CTHelper.m"; sourceTree = "<group>"; };
-		326525C321F595CB00B63DD7 /* CTGoodListView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTGoodListView.h; sourceTree = "<group>"; };
-		326525C421F595CB00B63DD7 /* CTGoodListView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTGoodListView.m; sourceTree = "<group>"; };
-		326525C621F595D300B63DD7 /* CTGoodListView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CTGoodListView.xib; sourceTree = "<group>"; };
+		326525C321F595CB00B63DD7 /* CTGoodListView_.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTGoodListView_.h; sourceTree = "<group>"; };
+		326525C421F595CB00B63DD7 /* CTGoodListView_.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTGoodListView_.m; sourceTree = "<group>"; };
+		326525C621F595D300B63DD7 /* CTGoodListView_.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CTGoodListView_.xib; sourceTree = "<group>"; };
 		326525C821F5A2DA00B63DD7 /* CTGoodListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTGoodListCell.h; sourceTree = "<group>"; };
 		326525C921F5A2DA00B63DD7 /* CTGoodListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTGoodListCell.m; sourceTree = "<group>"; };
 		326525CA21F5A2DA00B63DD7 /* CTGoodListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CTGoodListCell.xib; sourceTree = "<group>"; };
@@ -614,6 +655,7 @@
 		245CAE4B21F42E6900496052 /* CommonClasses */ = {
 			isa = PBXGroup;
 			children = (
+				3220EA3221F9A045004E0422 /* CTGoodDefine */,
 				245CAE4C21F42E8000496052 /* CTViews */,
 			);
 			path = CommonClasses;
@@ -652,6 +694,93 @@
 				32CA558421F6F23A00145E31 /* CTSortButton.xib */,
 			);
 			path = CTMainCategoryView;
+			sourceTree = "<group>";
+		};
+		3220EA1121F95E22004E0422 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3220EA1221F95E59004E0422 /* CTMessageTypeView.h */,
+				3220EA1321F95E59004E0422 /* CTMessageTypeView.m */,
+				3220EA1521F95E8F004E0422 /* CTMessageTypeView.xib */,
+				3220EA1721F9679B004E0422 /* CTMessageListCell.h */,
+				3220EA1821F9679B004E0422 /* CTMessageListCell.m */,
+				3220EA1921F9679B004E0422 /* CTMessageListCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		3220EA2221F98867004E0422 /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				3220EA2821F98C56004E0422 /* Service */,
+				3220EA2421F9898B004E0422 /* ViewController */,
+			);
+			path = WebView;
+			sourceTree = "<group>";
+		};
+		3220EA2421F9898B004E0422 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				3220EA2521F989A6004E0422 /* CTWebViewController.h */,
+				3220EA2621F989A6004E0422 /* CTWebViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		3220EA2821F98C56004E0422 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				3220EA2921F98C6D004E0422 /* CTWebService.h */,
+				3220EA2A21F98C6D004E0422 /* CTWebService.m */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		3220EA3221F9A045004E0422 /* CTGoodDefine */ = {
+			isa = PBXGroup;
+			children = (
+				3220EA3321F9A08D004E0422 /* CTGoodDefine.h */,
+			);
+			path = CTGoodDefine;
+			sourceTree = "<group>";
+		};
+		3220EA3421F9ACE0004E0422 /* NineNine */ = {
+			isa = PBXGroup;
+			children = (
+				3220EA3521F9AD00004E0422 /* CTNineNineListViewController.h */,
+				3220EA3621F9AD01004E0422 /* CTNineNineListViewController.m */,
+			);
+			path = NineNine;
+			sourceTree = "<group>";
+		};
+		3220EA3821F9BDF3004E0422 /* GoodDetail */ = {
+			isa = PBXGroup;
+			children = (
+				3220EA3921F9BF9C004E0422 /* CTGoodDetailViewController.h */,
+				3220EA3A21F9BF9C004E0422 /* CTGoodDetailViewController.m */,
+			);
+			path = GoodDetail;
+			sourceTree = "<group>";
+		};
+		3220EA3C21F9C2A2004E0422 /* HotSales */ = {
+			isa = PBXGroup;
+			children = (
+				3220EA3D21F9C2D3004E0422 /* CThotSalesListViewController.h */,
+				3220EA3E21F9C2D3004E0422 /* CThotSalesListViewController.m */,
+				3220EA4021F9C2F9004E0422 /* CTHotSalesNoticeView.h */,
+				3220EA4121F9C2F9004E0422 /* CTHotSalesNoticeView.m */,
+				3220EA4321F9C343004E0422 /* CTHotSalesNoticeView.xib */,
+			);
+			path = HotSales;
+			sourceTree = "<group>";
+		};
+		3220EA4521F9C550004E0422 /* GoodList */ = {
+			isa = PBXGroup;
+			children = (
+				3220EA4621F9C570004E0422 /* CTGoodListViewController.h */,
+				3220EA4721F9C570004E0422 /* CTGoodListViewController.m */,
+			);
+			path = GoodList;
 			sourceTree = "<group>";
 		};
 		322453AA21F2BDF900471059 /* Service */ = {
@@ -749,6 +878,8 @@
 				322453EB21F2C7F000471059 /* CTNavigationController.m */,
 				32E7EE5F21F30AB500191789 /* CTBaseListViewController.h */,
 				32E7EE6021F30AB500191789 /* CTBaseListViewController.m */,
+				3220EA2C21F99A20004E0422 /* CTPageController.h */,
+				3220EA2D21F99A20004E0422 /* CTPageController.m */,
 			);
 			path = CTViewControllers;
 			sourceTree = "<group>";
@@ -806,6 +937,7 @@
 				32CA555721F6AE7900145E31 /* CTMessageServiceProtocol.h */,
 				32CA558621F7122A00145E31 /* CTSearchServiceProtocol.h */,
 				324C3DA821F854E800536DA8 /* CTGoodListServiceProtocol.h */,
+				3220EA2321F988DC004E0422 /* CTWebServiceProtocol.h */,
 			);
 			path = CTModuleServices;
 			sourceTree = "<group>";
@@ -850,7 +982,6 @@
 		324C3D9E21F851D800536DA8 /* GoodList */ = {
 			isa = PBXGroup;
 			children = (
-				324C3DA121F851F900536DA8 /* Views */,
 				324C3DA021F851F400536DA8 /* Service */,
 				324C3D9F21F851EE00536DA8 /* ViewControllers */,
 			);
@@ -860,8 +991,10 @@
 		324C3D9F21F851EE00536DA8 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				324C3DA221F8535D00536DA8 /* CTGoodListViewController.h */,
-				324C3DA321F8535D00536DA8 /* CTGoodListViewController.m */,
+				3220EA4521F9C550004E0422 /* GoodList */,
+				3220EA3C21F9C2A2004E0422 /* HotSales */,
+				3220EA3821F9BDF3004E0422 /* GoodDetail */,
+				3220EA3421F9ACE0004E0422 /* NineNine */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -873,13 +1006,6 @@
 				324C3DA621F854B000536DA8 /* CTGoodService.m */,
 			);
 			path = Service;
-			sourceTree = "<group>";
-		};
-		324C3DA121F851F900536DA8 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		325D3B4C21F1DC6D00465B91 /* Login */ = {
@@ -997,9 +1123,9 @@
 		326525C221F595AB00B63DD7 /* CTGoodListView */ = {
 			isa = PBXGroup;
 			children = (
-				326525C321F595CB00B63DD7 /* CTGoodListView.h */,
-				326525C421F595CB00B63DD7 /* CTGoodListView.m */,
-				326525C621F595D300B63DD7 /* CTGoodListView.xib */,
+				326525C321F595CB00B63DD7 /* CTGoodListView_.h */,
+				326525C421F595CB00B63DD7 /* CTGoodListView_.m */,
+				326525C621F595D300B63DD7 /* CTGoodListView_.xib */,
 				326525C821F5A2DA00B63DD7 /* CTGoodListCell.h */,
 				326525C921F5A2DA00B63DD7 /* CTGoodListCell.m */,
 				326525CA21F5A2DA00B63DD7 /* CTGoodListCell.xib */,
@@ -1547,6 +1673,7 @@
 		32BE613B21EDDA7700BA52EF /* ComponentClasses */ = {
 			isa = PBXGroup;
 			children = (
+				3220EA2221F98867004E0422 /* WebView */,
 				324C3D9E21F851D800536DA8 /* GoodList */,
 				32CA558721F7128D00145E31 /* Search */,
 				32CA555121F6ACBF00145E31 /* Message */,
@@ -1598,6 +1725,7 @@
 		32CA555121F6ACBF00145E31 /* Message */ = {
 			isa = PBXGroup;
 			children = (
+				3220EA1121F95E22004E0422 /* Views */,
 				32CA555C21F6B08900145E31 /* Service */,
 				32CA555B21F6B08200145E31 /* ViewControllers */,
 			);
@@ -1618,6 +1746,8 @@
 			children = (
 				32CA555D21F6B0DA00145E31 /* CTMessageViewController.h */,
 				32CA555E21F6B0DA00145E31 /* CTMessageViewController.m */,
+				3220EA1F21F98622004E0422 /* CTMessageListViewController.h */,
+				3220EA2021F98622004E0422 /* CTMessageListViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -1678,6 +1808,8 @@
 				32CA558C21F712C800145E31 /* CTSearchViewController.m */,
 				324C3D9B21F84FB200536DA8 /* CTGoodSearchViewController.h */,
 				324C3D9C21F84FB200536DA8 /* CTGoodSearchViewController.m */,
+				3220EA4921F9C99B004E0422 /* CTGoodResultViewController.h */,
+				3220EA4A21F9C99B004E0422 /* CTGoodResultViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -1846,6 +1978,7 @@
 				32BE612321EDCFA600BA52EF /* area.plist in Resources */,
 				24FF626221F41D1700488860 /* CTHomeNewestHeadView.xib in Resources */,
 				32E7EE5721F3013B00191789 /* Info.plist in Resources */,
+				3220EA1621F95E8F004E0422 /* CTMessageTypeView.xib in Resources */,
 				245CAE5721F42E8000496052 /* CTMainCategoryItem.xib in Resources */,
 				32CA556821F6B6DB00145E31 /* CTShareView_.xib in Resources */,
 				32BE600D21EDC5E500BA52EF /* Assets.xcassets in Resources */,
@@ -1856,10 +1989,12 @@
 				32CA55A021F7181600145E31 /* CTHistoryKeywordHeadView.xib in Resources */,
 				32CA558521F6F23A00145E31 /* CTSortButton.xib in Resources */,
 				240E189C21F5FA45004A4BCB /* CTForgetPsdView_.xib in Resources */,
+				3220EA1B21F9679B004E0422 /* CTMessageListCell.xib in Resources */,
 				326525FF21F5CF8100B63DD7 /* CTSetPasswordView_.xib in Resources */,
 				32CA55A221F7183200145E31 /* CTHotKeywordHeadView.xib in Resources */,
+				3220EA4421F9C343004E0422 /* CTHotSalesNoticeView.xib in Resources */,
 				326525CC21F5A2DA00B63DD7 /* CTGoodListCell.xib in Resources */,
-				326525C721F595D300B63DD7 /* CTGoodListView.xib in Resources */,
+				326525C721F595D300B63DD7 /* CTGoodListView_.xib in Resources */,
 				326525F521F5CF0200B63DD7 /* CTRegisterView_.xib in Resources */,
 				32CA558021F6F10900145E31 /* CTUpDownControl.xib in Resources */,
 				32CA557021F6C22600145E31 /* LMNoDataView.xib in Resources */,
@@ -1944,6 +2079,7 @@
 				32E7EE7521F3320900191789 /* CTSalesItem.m in Sources */,
 				32BE614B21EDDBBB00BA52EF /* CTHomeViewController.m in Sources */,
 				32BE610B21EDCFA600BA52EF /* UIView+Helper.m in Sources */,
+				3220EA4B21F9C99B004E0422 /* CTGoodResultViewController.m in Sources */,
 				326525D821F5B53000B63DD7 /* CTLoginView.m in Sources */,
 				32BE611D21EDCFA600BA52EF /* NSObject+YYAdd.m in Sources */,
 				32BE610D21EDCFA600BA52EF /* DateUtil.m in Sources */,
@@ -1968,6 +2104,7 @@
 				32BE60EB21EDCFA600BA52EF /* CLNetworkEngine.m in Sources */,
 				32BE610121EDCFA600BA52EF /* UIView+Layout.m in Sources */,
 				32BE611221EDCFA600BA52EF /* NSDictionary+Category.m in Sources */,
+				3220EA4821F9C570004E0422 /* CTGoodListViewController.m in Sources */,
 				32BE611E21EDCFA600BA52EF /* NSObject+YYModels.m in Sources */,
 				32BE610E21EDCFA600BA52EF /* FileUtil.m in Sources */,
 				32CA557E21F6F0FA00145E31 /* CTUpDownControl.m in Sources */,
@@ -1988,17 +2125,20 @@
 				32BE60EC21EDCFA600BA52EF /* CLNetworkManager.m in Sources */,
 				32BE601321EDC5E500BA52EF /* main.m in Sources */,
 				32BE60FE21EDCFA600BA52EF /* SDPhotoBrowser.m in Sources */,
+				3220EA2B21F98C6D004E0422 /* CTWebService.m in Sources */,
 				32BE612021EDCFA600BA52EF /* UIView+YYAdd.m in Sources */,
 				32CA556621F6B4F700145E31 /* CTShareView.m in Sources */,
 				245CAE5421F42E8000496052 /* CTMainCategoryControl.m in Sources */,
 				32CA55A621F71D6900145E31 /* CTHistoryKeywordCell.m in Sources */,
+				3220EA2E21F99A20004E0422 /* CTPageController.m in Sources */,
 				32BE60F621EDCFA600BA52EF /* CLRefreshCurveHeader.m in Sources */,
 				32BE611A21EDCFA600BA52EF /* UIUtil.m in Sources */,
 				322453E921F2C3EC00471059 /* CTModuleManager.m in Sources */,
 				32CA559E21F7180000145E31 /* CTHistoryKeywordHeadView.m in Sources */,
+				3220EA1A21F9679B004E0422 /* CTMessageListCell.m in Sources */,
 				245CAE5521F42E8000496052 /* CTMainCategoryView.m in Sources */,
 				24FF626021F41D1000488860 /* CTHomeNewestHeadView.m in Sources */,
-				326525C521F595CB00B63DD7 /* CTGoodListView.m in Sources */,
+				326525C521F595CB00B63DD7 /* CTGoodListView_.m in Sources */,
 				32BE612F21EDCFA600BA52EF /* SelVideoPlayer.m in Sources */,
 				32BE60F121EDCFA600BA52EF /* CLRefreshFactory.m in Sources */,
 				32BE60F421EDCFA600BA52EF /* CLRefreshManager.m in Sources */,
@@ -2009,6 +2149,7 @@
 				32CA558D21F712C800145E31 /* CTSearchViewController.m in Sources */,
 				32BE610F21EDCFA600BA52EF /* NSArray+Category.m in Sources */,
 				32BE611721EDCFA600BA52EF /* UIButton+Create.m in Sources */,
+				3220EA2121F98622004E0422 /* CTMessageListViewController.m in Sources */,
 				322453C621F2BED600471059 /* CTLoginService.m in Sources */,
 				32BE600521EDC5E100BA52EF /* AppDelegate.m in Sources */,
 				32BE60ED21EDCFA600BA52EF /* CLRequest.m in Sources */,
@@ -2031,6 +2172,7 @@
 				32BE610621EDCFA600BA52EF /* UILabel+Helper.m in Sources */,
 				322453F421F2D3F700471059 /* CTHomeNavBar.m in Sources */,
 				32BE611021EDCFA600BA52EF /* NSArray+Log.m in Sources */,
+				3220EA3721F9AD01004E0422 /* CTNineNineListViewController.m in Sources */,
 				326525CB21F5A2DA00B63DD7 /* CTGoodListCell.m in Sources */,
 				32BE611C21EDCFA600BA52EF /* CALayer+YYAdd.m in Sources */,
 				32BE612121EDCFA600BA52EF /* YYCGUtilities.m in Sources */,
@@ -2050,9 +2192,11 @@
 				322453AD21F2BE1100471059 /* CTMainService.m in Sources */,
 				32BE60EF21EDCFA600BA52EF /* CLURLRequest.m in Sources */,
 				32BE612E21EDCFA600BA52EF /* SelPlaybackControls.m in Sources */,
+				3220EA2721F989A6004E0422 /* CTWebViewController.m in Sources */,
 				324C3DA721F854B000536DA8 /* CTGoodService.m in Sources */,
 				32BE612221EDCFA600BA52EF /* AddressPickerView.m in Sources */,
 				32CA559021F712D900145E31 /* CTSearchService.m in Sources */,
+				3220EA3F21F9C2D3004E0422 /* CThotSalesListViewController.m in Sources */,
 				322453BD21F2BEA300471059 /* CTMemberService.m in Sources */,
 				324C3D9D21F84FB200536DA8 /* CTGoodSearchViewController.m in Sources */,
 				32BE60F221EDCFA600BA52EF /* CLRefreshFooter.m in Sources */,
@@ -2076,7 +2220,10 @@
 				240E188D21F5F1FC004A4BCB /* CTRegisterViewModel.m in Sources */,
 				32BE611B21EDCFA600BA52EF /* UIView+Category.m in Sources */,
 				32BE610921EDCFA600BA52EF /* UITextView+Helper.m in Sources */,
+				3220EA1421F95E59004E0422 /* CTMessageTypeView.m in Sources */,
 				32BE60FF21EDCFA600BA52EF /* SDWaitingView.m in Sources */,
+				3220EA4221F9C2F9004E0422 /* CTHotSalesNoticeView.m in Sources */,
+				3220EA3B21F9BF9C004E0422 /* CTGoodDetailViewController.m in Sources */,
 				240E189A21F5FA39004A4BCB /* CTForgetPsdView.m in Sources */,
 				326525DE21F5C60B00B63DD7 /* CTLoginViewModel.m in Sources */,
 				32BE610221EDCFA600BA52EF /* MBProgressHUD+Helper.m in Sources */,
@@ -2098,7 +2245,6 @@
 				322453D821F2BFC200471059 /* CTTableView.m in Sources */,
 				324C3D9421F84C9900536DA8 /* UIActionSheet+Category.m in Sources */,
 				32CA557621F6E75F00145E31 /* CTGoodSortView.m in Sources */,
-				324C3DA421F8535D00536DA8 /* CTGoodListViewController.m in Sources */,
 				325D3B7721F1E68500465B91 /* CTTabBarItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2252,6 +2398,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9ZJ3RLKNS9;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/CouponTicket/SystemConfigs/CTPrefixHeader.pch";
+				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = NO;
 				INFOPLIST_FILE = "$(SRCROOT)/CouponTicket/SystemConfigs/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2272,6 +2419,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9ZJ3RLKNS9;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/CouponTicket/SystemConfigs/CTPrefixHeader.pch";
+				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = NO;
 				INFOPLIST_FILE = "$(SRCROOT)/CouponTicket/SystemConfigs/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

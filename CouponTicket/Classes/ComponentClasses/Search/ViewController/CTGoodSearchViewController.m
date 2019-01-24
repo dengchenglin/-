@@ -18,8 +18,10 @@
 @implementation CTGoodSearchViewController
 
 - (void)setUpUI{
+    [super setUpUI];
     self.dataTableView.delegate = self;
     self.dataTableView.dataSource = self;
+    self.dataTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self.dataTableView registerNibWithClass:CTGoodListCell.class];
 }
 
@@ -38,6 +40,10 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     CTGoodListCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(CTGoodListCell.class)];
     return cell;
+}
+
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView{
+    [self.view endEditing:YES];
 }
 
 @end

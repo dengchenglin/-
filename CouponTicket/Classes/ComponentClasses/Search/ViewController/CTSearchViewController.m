@@ -49,6 +49,7 @@
 
 - (void)setUpUI{
     self.title = @"搜索";
+    self.navigationBarStyle = CTNavigationBarWhite;
     [self.view addSubview:self.dataTableView];
     [self.view addSubview:self.previewView];
     [self.view addSubview:self.searchBar];

@@ -53,8 +53,9 @@
             <connections>
                 <outlet property="titleLabel" destination="uEs-g8-TqJ" id="XhD-GD-ub2"/>
                 <outlet property="upDownControlView" destination="X11-8f-mHx" id="6Af-Ca-pSc"/>
+                <outlet property="upDownControlWidth" destination="F6b-UV-rTd" id="8zF-nn-E9d"/>
             </connections>
-            <point key="canvasLocation" x="-37.5" y="294.5"/>
+            <point key="canvasLocation" x="-317" y="279"/>
         </view>
     </objects>
 </document>

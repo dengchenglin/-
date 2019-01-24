@@ -8,6 +8,18 @@
 
 #import "CTBaseViewController.h"
 
-@interface CTBaseListViewController : CTBaseViewController
+#import "CTTableView.h"
 
+@interface CTBaseListViewController : CTBaseViewController
+@property (nonatomic, strong) CTTableView *tableView;
+
+@property (nonatomic, assign) NSUInteger pageIndex;
+
+@property (nonatomic, assign) NSUInteger pageSize;
+
+@property (nonatomic, assign) BOOL isLoadMore;
+
+@property (nonatomic, strong) NSMutableArray *dataSoures;
+
+//- (void)analysisAndReloadWithData:(id)data listKey:(NSString *)listKey error:(LMNetError)error modelClass:(Class)modelClass viewModelClass:(Class <LMViewModelProtocol>)viewModelClass;
 @end

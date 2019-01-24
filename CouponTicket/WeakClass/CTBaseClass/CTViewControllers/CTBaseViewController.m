@@ -16,7 +16,6 @@
 
 @implementation CTBaseViewController
 
-
 + (instancetype)allocWithZone:(struct _NSZone *)zone{
     CTBaseViewController *viewController = [super allocWithZone:zone];
     [viewController initialize];
@@ -37,6 +36,12 @@
     
     return viewController;
 }
+
+
+- (UIStatusBarStyle)preferredStatusBarStyle{
+    return _navigationBarStyle==CTNavigationBarRed?UIStatusBarStyleLightContent:UIStatusBarStyleDefault;
+}
+
 
 - (UIView *)autoLayoutContainerView{
     if(!_autoLayoutContainerView){
@@ -99,6 +104,27 @@
         [self.navigationController.navigationBar setShadowImage:[UIImage imageWithColor:RGBColor(240, 240, 240)]];
     }
 }
+- (void)setNavigationBarStyle:(CTNavigationBarStyle)navigationBarStyle{
+    _navigationBarStyle = navigationBarStyle;
+    if(_navigationBarStyle == CTNavigationBarRed){
+        [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"pic_nav_bg"] forBarMetrics:UIBarMetricsDefault];
+        [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor],NSFontAttributeName:CTCoarseFont(20)}];
+        UIButton *backButton = self.navigationItem.leftBarButtonItem.customView;
+        if(backButton){
+            UIImage *newImage = [[UIImage imageNamed:@"ic_return"] imageWithColor:[UIColor whiteColor]];
+            [backButton setImage:newImage forState:UIControlStateNormal];
+        }
+    }
+    else if(_navigationBarStyle == CTNavigationBarWhite){
+         [self.navigationController.navigationBar setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
+        [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor colorWithHexString:@"#141414"],NSFontAttributeName:CTCoarseFont(20)}];
+        UIButton *backButton = self.navigationItem.leftBarButtonItem.customView;
+        if(backButton){
+            UIImage *newImage = [UIImage imageNamed:@"ic_return"];
+            [backButton setImage:newImage forState:UIControlStateNormal];
+        }
+    }
+}
 
 
 - (void)viewDidLoad{
@@ -125,7 +151,7 @@
     
     [self.navigationController setNavigationBarHidden:_hideSystemNavBarWhenAppear animated:YES];
     self.hideNavBarBottomLine = _hideNavBarBottomLine;
-    
+    self.navigationBarStyle = _navigationBarStyle;
 }
 
 - (void)viewDidAppear:(BOOL)animated{

@@ -27,7 +27,7 @@
 ViewInstance(setUp)
 
 - (void)setUp{
-    _status = CTUpSortStatusNormal;
+    _status = CTSortStatusNormal;
     _normalColor = RGBColor(153, 153, 153);
     _selectedColor = CTColor;
     _originUpImage = [UIImage imageNamed:@"ic_nav_up_gray"];
@@ -40,7 +40,7 @@ ViewInstance(setUp)
     _selectedDownImage = [_originDownImage imageWithColor:_selectedColor];
 }
 
-- (void)setStatus:(CTUpSortStatus)status{
+- (void)setStatus:(CTSortStatus)status{
     _status = status;
     [self reloadView];
 }
@@ -58,17 +58,23 @@ ViewInstance(setUp)
     [self reloadView];
 }
 - (void)reloadView{
-    if(_status == CTUpSortStatusNormal){
+    if(_status == CTSortStatusNormal){
         _upImageView.image = _normalUpImage;
         _downImageView.image = _normalDownImage;
+        _upImageView.hidden = NO;
+        _downImageView.hidden = NO;
     }
-    else if (_status == CTUpSortStatusUp){
+    else if (_status == CTSortStatusUp){
         _upImageView.image = _selectedUpImage;
         _downImageView.image = _normalDownImage;
+        _upImageView.hidden = NO;
+        _downImageView.hidden = YES;
     }
-    else if (_status == CTUpSortStatusDown){
+    else if (_status == CTSortStatusDown){
         _upImageView.image = _normalUpImage;
         _downImageView.image = _selectedDownImage;
+        _upImageView.hidden = YES;
+        _downImageView.hidden = NO;
     }
 }
 

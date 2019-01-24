@@ -18,8 +18,6 @@
 
 @interface CTHomeCatoryViewController ()<UITableViewDelegate,UITableViewDataSource>
 
-@property (nonatomic, strong) UITableView *tableView;
-
 @property (nonatomic, strong) CTMainCategoryView *categoryView;
 
 @property (nonatomic, strong) CTGoodSortView *sortView;
@@ -33,19 +31,7 @@
 @implementation CTHomeCatoryViewController
 
 @synthesize bounds = _bounds;
-
-- (UITableView *)tableView{
-    if(!_tableView){
-        _tableView = [[UITableView alloc]initWithFrame:self.bounds style:UITableViewStyleGrouped];
-        _tableView.backgroundColor = RGBColor(245, 245, 245);
-        _tableView.delegate = self;
-        _tableView.dataSource = self;
-        [_tableView registerNibWithClass:CTGoodListCell.class];
-        _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-        [self.view addSubview:_tableView];
-    }
-    return _tableView;
-}
+@synthesize tableView = _tableView;
 
 - (CTMainCategoryView *)categoryView{
     if(!_categoryView){
@@ -61,6 +47,24 @@
         _sortView.backgroundColor = [UIColor whiteColor];
     }
     return _sortView;
+}
+
+
+- (CTTableView *)tableView{
+    if(!_tableView){
+        _tableView = [[CTTableView alloc]initWithFrame:CGRectZero style:UITableViewStyleGrouped];
+        _tableView.dataSource = self;
+        _tableView.delegate = self;
+        [_tableView setTableFooterView:[[UIView alloc] initWithFrame:CGRectZero]];
+        [self.view addSubview:_tableView];
+        [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.edges.mas_equalTo(UIEdgeInsetsZero);
+        }];
+        if (@available(iOS 11.0, *)) {
+            _tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+        }
+    }
+    return _tableView;
 }
 
 - (UIView *)headView{
@@ -96,14 +100,18 @@
     return _viewModel;
 }
 
+
 - (void)setUpUI{
     self.hideSystemNavBarWhenAppear = YES;
+    self.tableView.backgroundColor = RGBColor(245, 245, 245);
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    [self.tableView registerNibWithClass:CTGoodListCell.class];
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
 }
 
 - (void)request{
-    [NSTimer scheduledTimerWithTimeInterval:1.0 block:^(NSTimer *timer) {
-        [self reloadData:nil];
-    } repeats:NO];
+    [self reloadData:nil];
 }
 
 - (void)reloadData:(id)data{

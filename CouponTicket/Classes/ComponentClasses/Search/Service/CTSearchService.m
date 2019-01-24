@@ -10,12 +10,22 @@
 
 #import "CTSearchViewController.h"
 
+#import "CTGoodSearchViewController.h"
+
+#import "CTGoodResultViewController.h"
+
 @implementation CTSearchService
 
 CL_EXPORT_MODULE(CTSearchServiceProtocol)
 
 - (UIViewController *)rootViewController{
-    return [CTSearchViewController new];
+    return [CTGoodSearchViewController new];
+}
+
+- (UIViewController *)goodResultViewController:(UIViewController *)viewController keyword:(NSString *)keyword{
+    CTGoodResultViewController *vc = [CTGoodResultViewController new];
+    vc.keyword = keyword;
+    return vc;
 }
 
 @end

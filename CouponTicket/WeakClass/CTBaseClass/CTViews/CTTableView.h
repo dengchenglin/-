@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CTTableView : UIView
+@interface CTTableView : UITableView
+
+- (void)registerNibWithClass:(Class)_class;
+//优化算高
+- (__kindof UITableViewCell *)cellForIdentigier:(NSString *)identifier;
+
 
 @end

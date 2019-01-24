@@ -23,7 +23,8 @@
              @"ct_share":[self shareService],
              @"ct_message":[self shareService],
              @"ct_search":[self searchService],
-             @"ct_good_list":[self goodListService]
+             @"ct_good_list":[self goodListService],
+             @"ct_web":[self webService]
           };
 }
 
@@ -76,5 +77,8 @@
 
 + (id)goodListService{
      return [CLModuleManager moduleServiceInstanceForProtocol:@protocol(CTGoodListServiceProtocol)];
+}
++ (id)webService{
+      return [CLModuleManager moduleServiceInstanceForProtocol:@protocol(CTWebServiceProtocol)];
 }
 @end

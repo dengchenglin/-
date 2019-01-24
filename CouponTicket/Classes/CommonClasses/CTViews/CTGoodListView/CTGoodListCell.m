@@ -12,7 +12,7 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    _containerView = NSMainBundleClass(CTGoodListView.class);
+    _containerView = NSMainBundleClass(CTGoodListView_.class);
     [self.contentView addSubview:_containerView];
     [_containerView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.top.mas_equalTo(0);
