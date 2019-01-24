@@ -62,7 +62,6 @@
     self.pageControlManager = [[UIPageControlManager alloc]initWithViewController:self];
     self.pageControlManager.delegate = self;
     self.pageControlManager.datasoure = self;
-    
     [self.view addSubview:self.topView];
 }
 

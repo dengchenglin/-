@@ -15,7 +15,38 @@
 
 static const int WillPopKey;
 
+static const int IsPopKey;
+
 @implementation UIViewController (Helper)
+
++ (void)load{
+    [self swizzleInstanceMethod:@selector(viewWillDisappear:) with:@selector(cl_viewWillDisappear:)];
+    [self swizzleInstanceMethod:@selector(viewDidAppear:) with:@selector(cl_viewDidAppear:)];
+}
+
+- (void)setIsPop:(BOOL)isPop{
+    objc_setAssociatedObject(self, &IsPopKey, @(isPop), OBJC_ASSOCIATION_COPY_NONATOMIC);
+}
+
+- (BOOL)isPop{
+    return [objc_getAssociatedObject(self, &IsPopKey) boolValue];
+}
+
+- (void)cl_viewWillDisappear:(BOOL)animated{
+    [self cl_viewWillDisappear:animated];
+    if(self.navigationController.viewControllers.count > 1){
+        self.isPop = YES;
+    }
+    else{
+        self.isPop = NO;
+    }
+}
+
+- (void)cl_viewDidAppear:(BOOL)animated{
+    [self cl_viewDidAppear:animated];
+    self.isPop = NO;
+}
+
 
 - (void)setWillPop:(BOOL)willPop{
      objc_setAssociatedObject(self, &WillPopKey, @(willPop), OBJC_ASSOCIATION_COPY_NONATOMIC);

@@ -148,11 +148,11 @@
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    
-    [self.navigationController setNavigationBarHidden:_hideSystemNavBarWhenAppear animated:YES];
+    [self.navigationController setNavigationBarHidden:_hideSystemNavBarWhenAppear animated:self.isPop?YES:NO];
     self.hideNavBarBottomLine = _hideNavBarBottomLine;
     self.navigationBarStyle = _navigationBarStyle;
 }
+
 
 - (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];

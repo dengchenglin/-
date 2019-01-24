@@ -16,6 +16,8 @@
 
 @property (nonatomic, assign) BOOL willPop;
 
+@property (nonatomic, assign) BOOL isPop;//在视图显示时判断是否是pop回来的
+
 @end
 
 

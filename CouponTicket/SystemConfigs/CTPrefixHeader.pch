@@ -34,6 +34,7 @@
 #import "UITextField+Helper.h"
 #import "UITextView+Helper.h"
 #import "UITableView+Helper.h"
+#import "UIViewController+Helper.h"
 
 
 //弱业务通用功能

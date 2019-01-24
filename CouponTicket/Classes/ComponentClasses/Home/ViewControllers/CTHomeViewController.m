@@ -117,7 +117,6 @@
 - (void)setUpUI{
     self.hideSystemNavBarWhenAppear = YES;
     [self.view addSubview:self.tableView];
-  
 }
 
 - (void)autoLayout{
@@ -196,6 +195,9 @@
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
     return 0.0001;
+}
+- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
+    return [UIView new];
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return 5;

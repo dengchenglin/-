@@ -16,6 +16,8 @@
 
 @implementation CTSearchTicketViewController
 
+- (void)setUpUI{
 
+}
 
 @end
