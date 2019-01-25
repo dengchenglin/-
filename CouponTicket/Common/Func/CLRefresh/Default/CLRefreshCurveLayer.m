@@ -27,7 +27,7 @@
     CGFloat radius = self.bounds.size.width/2;
     UIBezierPath *path = [UIBezierPath bezierPathWithArcCenter:CGPointMake(radius, radius) radius:radius - 3 startAngle:- M_PI_4 endAngle:-M_PI_4 + (2 * M_PI - M_PI/8)* _progress clockwise:YES];
     path.lineWidth = 1.5;
-    [[UIColor colorWithRed:111/255.0f green:186/255.0f blue:39/255.0f alpha:1] setStroke];
+    [[UIColor colorWithRed:255/255.0f green:97/255.0f blue:36/255.0f alpha:1] setStroke];
     CGContextSetLineCap(context, kCGLineCapRound);
 
     [path stroke];

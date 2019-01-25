@@ -91,8 +91,8 @@
                     [self setSelectedIndex:selectedIndex];
                 }
             }];
+             return ;
         }
-        return ;
     }
     [super setSelectedIndex:selectedIndex];
     [self.tabBarItems enumerateObjectsUsingBlock:^(CTTabBarItem * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {

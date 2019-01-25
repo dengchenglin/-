@@ -19,7 +19,7 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pic_bg_share" translatesAutoresizingMaskIntoConstraints="NO" id="IrH-mV-0Jj">
                     <rect key="frame" x="0.0" y="0.0" width="378" height="716"/>
                 </imageView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yxv-WB-ZLM">
+                <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yxv-WB-ZLM">
                     <rect key="frame" x="20" y="642" width="338" height="46"/>
                     <color key="backgroundColor" red="1" green="0.7803921568627451" blue="0.14901960784313725" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>

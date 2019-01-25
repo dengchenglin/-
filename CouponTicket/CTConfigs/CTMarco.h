@@ -18,7 +18,7 @@
 #define CTBackGroundGrayColor [UIColor colorWithHexString:@"#F6F6F6"]
 #define CTColor RGBColor(255,97,36)
 #define CTTextColor  RGBColor(51,51,51)
-#define CTLightGrayColor RGBColor(220,220,220)
+#define CTLightGrayColor RGBColor(245,245,245)
 #define CTEnterButtonColor RGBColor(255,97,36)
 
 #define CTCoarseFont(s) [UIFont fontWithName:(IOS_9?@"PingFangSC-Semibold":@"Heiti SC") size:s]

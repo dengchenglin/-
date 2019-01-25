@@ -14,11 +14,6 @@
 
 #define CTMainCategoryItemHeight 109
 
-@implementation CTMainCategoryItem
-
-@end
-
-
 @interface CTMainCategoryView()
 
 @property (nonatomic, strong) UIScrollView *scrollView;

@@ -10,13 +10,7 @@
 
 #import "CTCategoryModel.h"
 
-@interface CTMainCategoryItem:UIView
-
-@property (weak, nonatomic) IBOutlet UIImageView *goodImageView;
-
-@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
-
-@end
+#import "CTMainCategoryItem.h"
 
 @interface CTMainCategoryView : UIView
 

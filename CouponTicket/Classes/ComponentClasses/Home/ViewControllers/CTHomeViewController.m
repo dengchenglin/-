@@ -210,6 +210,12 @@
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    UIViewController *vc = [[CTModuleManager goodListService]goodDetailViewControllerWithGoodId:nil];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+
 - (NSArray *)banner_imgs{
     return @[@"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1547901093459&di=e3274b8819e9a976a7fc692844282dca&imgtype=0&src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F01b266571dd33b32f875a3996d817b.jpg%402o.jpg",@"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1547901093118&di=cfe5a572f0a28601dccdaa857c6be7d2&imgtype=0&src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F019a0558be22d6a801219c77d0578a.jpg%402o.jpg",@"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1547901093460&di=2fc7833f73723faae1d70656c473e8c1&imgtype=0&src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F0111ee55440a300000019ae9c33662.jpg",@"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1547901093460&di=3bd463e5cccc5e67de8606206da7538d&imgtype=0&src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F01a39258eddb07a8012049ef53b617.jpg%401280w_1l_2o_100sh.jpg",@"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1547901093460&di=3435b65b6d3eda3610999f68501a5f27&imgtype=0&src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F01481559841b3da801215603a36220.jpg%402o.jpg"];
 }

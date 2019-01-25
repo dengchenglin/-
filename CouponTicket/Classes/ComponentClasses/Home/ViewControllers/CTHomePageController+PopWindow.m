@@ -12,9 +12,9 @@
 
 #import "CTPasteCheckPopView.h"
 
-#define CTPasteTextChangeCountKey @"CTPasteTextChangeCountKey"
-
 #import "CTGoodResultViewController.h"
+
+#import "UIPasteboard+Helper.h"
 
 @implementation CTHomePageController (PopWindow)
 
@@ -24,18 +24,16 @@
 
 - (void)ct_viewWillAppear:(BOOL)animated{
     [self ct_viewWillAppear:animated];
-    
-    NSInteger lastChangeCount = [[[NSUserDefaults standardUserDefaults] objectForKey:CTPasteTextChangeCountKey] integerValue];
+
     UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
     //如果有重新粘贴 就会弹出
-    if(pasteboard.changeCount != lastChangeCount && pasteboard.string.length != 0){
+    if(pasteboard._newestString.length){
         [CTPasteCheckPopView showPopViewWithText:pasteboard.string callback:^(NSInteger buttonIndex) {
             if(buttonIndex == 1){
-                UIViewController *vc = [[CTModuleManager searchService] goodResultViewControllerWithKeyword:pasteboard.string];
+                UIViewController *vc = [[CTModuleManager searchService] goodResultViewControllerWithKeyword:pasteboard._newestString];
                 [self.navigationController pushViewController:vc animated:YES];
             }
         }];
-        [[NSUserDefaults standardUserDefaults]setValue:@(pasteboard.changeCount) forKey:CTPasteTextChangeCountKey];
     }
 
 }

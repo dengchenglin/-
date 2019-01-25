@@ -13,7 +13,7 @@
 SINGLETON_FOR_CLASS_IMP(CTAppManager)
 
 + (BOOL)logined{
-    return NO;
+    return YES;
 }
 
 @end

@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface CTAppManager : NSObject
+
 SINGLETON_FOR_CLASS_DEF
 
 + (BOOL)logined;

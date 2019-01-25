@@ -42,4 +42,5 @@
 #import "CTMarco.h"
 #import "UIImageView+CTHelper.h"
 #import "CTAppManager.h"
+#import "CTMemberManager.h"
 #endif /* CTPrefixHeader_pch */
