@@ -32,6 +32,7 @@ ViewInstance(setUp)
 - (CGRect)textRectForBounds:(CGRect)bounds{
     CGRect rect = [super textRectForBounds:bounds];
     rect.origin.x += 8;
+    rect.size.width -= 10;
     return rect;
 }
 - (CGRect)editingRectForBounds:(CGRect)bounds{

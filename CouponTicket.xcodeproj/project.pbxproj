@@ -7,6 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2405AED421FC0CA1000E5081 /* CTMemberTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2405AED321FC0CA1000E5081 /* CTMemberTitleView.m */; };
+		2405AED621FC0CAD000E5081 /* CTMemberTitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2405AED521FC0CAD000E5081 /* CTMemberTitleView.xib */; };
+		2405AEDA21FC0E20000E5081 /* CTMemberEquityItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2405AED921FC0E20000E5081 /* CTMemberEquityItem.m */; };
+		2405AEDD21FC0E34000E5081 /* CTMemberEquityView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2405AEDC21FC0E34000E5081 /* CTMemberEquityView.m */; };
+		2405AEDF21FC0E3C000E5081 /* CTMemberEquityItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2405AEDE21FC0E3C000E5081 /* CTMemberEquityItem.xib */; };
+		2405AEE421FC1885000E5081 /* CTMemberPrivilegeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2405AEE321FC1885000E5081 /* CTMemberPrivilegeView.m */; };
+		2405AEE821FC18D9000E5081 /* CTMemberPrivilegeItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2405AEE721FC18D9000E5081 /* CTMemberPrivilegeItem.m */; };
+		2405AEEA21FC18E3000E5081 /* CTMemberPrivilegeItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2405AEE921FC18E3000E5081 /* CTMemberPrivilegeItem.xib */; };
+		2405AEEE21FC22A6000E5081 /* CTMemberUpgradeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2405AEED21FC22A6000E5081 /* CTMemberUpgradeView.m */; };
+		2405AEF321FC22EB000E5081 /* CTMemberUpgradeContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2405AEF221FC22EB000E5081 /* CTMemberUpgradeContainerView.m */; };
+		2405AEF521FC22F7000E5081 /* CTMemberUpgradeContainerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2405AEF421FC22F7000E5081 /* CTMemberUpgradeContainerView.xib */; };
+		2405AEF921FC2DFD000E5081 /* CTMemberChoicenessView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2405AEF821FC2DFD000E5081 /* CTMemberChoicenessView.m */; };
+		2405AEFE21FC2FB8000E5081 /* CTMemberChoicenessCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2405AEFD21FC2FB8000E5081 /* CTMemberChoicenessCell.xib */; };
+		2405AF0121FC3166000E5081 /* CTMemberChoicenessCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2405AF0021FC3166000E5081 /* CTMemberChoicenessCell.m */; };
+		2405AF0521FC35ED000E5081 /* CTMemberStrategyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2405AF0421FC35ED000E5081 /* CTMemberStrategyView.m */; };
+		2405AF0B21FC3678000E5081 /* CTMemberStrategyItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2405AF0A21FC3678000E5081 /* CTMemberStrategyItem.m */; };
+		2405AF0D21FC3681000E5081 /* CTMemberStrategyItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2405AF0C21FC3681000E5081 /* CTMemberStrategyItem.xib */; };
 		240E188D21F5F1FC004A4BCB /* CTRegisterViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 240E188C21F5F1FC004A4BCB /* CTRegisterViewModel.m */; };
 		240E189121F5F4C6004A4BCB /* CTLoginBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 240E189021F5F4C6004A4BCB /* CTLoginBaseViewController.m */; };
 		240E189421F5F7D4004A4BCB /* CTGetCodeViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 240E189321F5F7D4004A4BCB /* CTGetCodeViewModel.m */; };
@@ -243,6 +260,34 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2405AED221FC0CA1000E5081 /* CTMemberTitleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTMemberTitleView.h; sourceTree = "<group>"; };
+		2405AED321FC0CA1000E5081 /* CTMemberTitleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTMemberTitleView.m; sourceTree = "<group>"; };
+		2405AED521FC0CAD000E5081 /* CTMemberTitleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CTMemberTitleView.xib; sourceTree = "<group>"; };
+		2405AED821FC0E20000E5081 /* CTMemberEquityItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTMemberEquityItem.h; sourceTree = "<group>"; };
+		2405AED921FC0E20000E5081 /* CTMemberEquityItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTMemberEquityItem.m; sourceTree = "<group>"; };
+		2405AEDB21FC0E34000E5081 /* CTMemberEquityView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTMemberEquityView.h; sourceTree = "<group>"; };
+		2405AEDC21FC0E34000E5081 /* CTMemberEquityView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTMemberEquityView.m; sourceTree = "<group>"; };
+		2405AEDE21FC0E3C000E5081 /* CTMemberEquityItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CTMemberEquityItem.xib; sourceTree = "<group>"; };
+		2405AEE221FC1885000E5081 /* CTMemberPrivilegeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTMemberPrivilegeView.h; sourceTree = "<group>"; };
+		2405AEE321FC1885000E5081 /* CTMemberPrivilegeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTMemberPrivilegeView.m; sourceTree = "<group>"; };
+		2405AEE621FC18D9000E5081 /* CTMemberPrivilegeItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTMemberPrivilegeItem.h; sourceTree = "<group>"; };
+		2405AEE721FC18D9000E5081 /* CTMemberPrivilegeItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTMemberPrivilegeItem.m; sourceTree = "<group>"; };
+		2405AEE921FC18E3000E5081 /* CTMemberPrivilegeItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CTMemberPrivilegeItem.xib; sourceTree = "<group>"; };
+		2405AEEC21FC22A6000E5081 /* CTMemberUpgradeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTMemberUpgradeView.h; sourceTree = "<group>"; };
+		2405AEED21FC22A6000E5081 /* CTMemberUpgradeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTMemberUpgradeView.m; sourceTree = "<group>"; };
+		2405AEF121FC22EB000E5081 /* CTMemberUpgradeContainerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTMemberUpgradeContainerView.h; sourceTree = "<group>"; };
+		2405AEF221FC22EB000E5081 /* CTMemberUpgradeContainerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTMemberUpgradeContainerView.m; sourceTree = "<group>"; };
+		2405AEF421FC22F7000E5081 /* CTMemberUpgradeContainerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CTMemberUpgradeContainerView.xib; sourceTree = "<group>"; };
+		2405AEF721FC2DFD000E5081 /* CTMemberChoicenessView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTMemberChoicenessView.h; sourceTree = "<group>"; };
+		2405AEF821FC2DFD000E5081 /* CTMemberChoicenessView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTMemberChoicenessView.m; sourceTree = "<group>"; };
+		2405AEFD21FC2FB8000E5081 /* CTMemberChoicenessCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CTMemberChoicenessCell.xib; sourceTree = "<group>"; };
+		2405AEFF21FC3166000E5081 /* CTMemberChoicenessCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTMemberChoicenessCell.h; sourceTree = "<group>"; };
+		2405AF0021FC3166000E5081 /* CTMemberChoicenessCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTMemberChoicenessCell.m; sourceTree = "<group>"; };
+		2405AF0321FC35ED000E5081 /* CTMemberStrategyView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTMemberStrategyView.h; sourceTree = "<group>"; };
+		2405AF0421FC35ED000E5081 /* CTMemberStrategyView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTMemberStrategyView.m; sourceTree = "<group>"; };
+		2405AF0921FC3678000E5081 /* CTMemberStrategyItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTMemberStrategyItem.h; sourceTree = "<group>"; };
+		2405AF0A21FC3678000E5081 /* CTMemberStrategyItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTMemberStrategyItem.m; sourceTree = "<group>"; };
+		2405AF0C21FC3681000E5081 /* CTMemberStrategyItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CTMemberStrategyItem.xib; sourceTree = "<group>"; };
 		240E188B21F5F1FC004A4BCB /* CTRegisterViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTRegisterViewModel.h; sourceTree = "<group>"; };
 		240E188C21F5F1FC004A4BCB /* CTRegisterViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTRegisterViewModel.m; sourceTree = "<group>"; };
 		240E188F21F5F4C6004A4BCB /* CTLoginBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTLoginBaseViewController.h; sourceTree = "<group>"; };
@@ -706,6 +751,66 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2405AED721FC0DF5000E5081 /* equity */ = {
+			isa = PBXGroup;
+			children = (
+				2405AED821FC0E20000E5081 /* CTMemberEquityItem.h */,
+				2405AED921FC0E20000E5081 /* CTMemberEquityItem.m */,
+				2405AEDE21FC0E3C000E5081 /* CTMemberEquityItem.xib */,
+				2405AEDB21FC0E34000E5081 /* CTMemberEquityView.h */,
+				2405AEDC21FC0E34000E5081 /* CTMemberEquityView.m */,
+			);
+			path = equity;
+			sourceTree = "<group>";
+		};
+		2405AEE021FC1859000E5081 /* privilege */ = {
+			isa = PBXGroup;
+			children = (
+				2405AEE221FC1885000E5081 /* CTMemberPrivilegeView.h */,
+				2405AEE321FC1885000E5081 /* CTMemberPrivilegeView.m */,
+				2405AEE621FC18D9000E5081 /* CTMemberPrivilegeItem.h */,
+				2405AEE721FC18D9000E5081 /* CTMemberPrivilegeItem.m */,
+				2405AEE921FC18E3000E5081 /* CTMemberPrivilegeItem.xib */,
+			);
+			path = privilege;
+			sourceTree = "<group>";
+		};
+		2405AEEB21FC2288000E5081 /* upgrade */ = {
+			isa = PBXGroup;
+			children = (
+				2405AEEC21FC22A6000E5081 /* CTMemberUpgradeView.h */,
+				2405AEED21FC22A6000E5081 /* CTMemberUpgradeView.m */,
+				2405AEF121FC22EB000E5081 /* CTMemberUpgradeContainerView.h */,
+				2405AEF221FC22EB000E5081 /* CTMemberUpgradeContainerView.m */,
+				2405AEF421FC22F7000E5081 /* CTMemberUpgradeContainerView.xib */,
+			);
+			path = upgrade;
+			sourceTree = "<group>";
+		};
+		2405AEF621FC2DA4000E5081 /* choiceness */ = {
+			isa = PBXGroup;
+			children = (
+				2405AEF721FC2DFD000E5081 /* CTMemberChoicenessView.h */,
+				2405AEF821FC2DFD000E5081 /* CTMemberChoicenessView.m */,
+				2405AEFF21FC3166000E5081 /* CTMemberChoicenessCell.h */,
+				2405AF0021FC3166000E5081 /* CTMemberChoicenessCell.m */,
+				2405AEFD21FC2FB8000E5081 /* CTMemberChoicenessCell.xib */,
+			);
+			path = choiceness;
+			sourceTree = "<group>";
+		};
+		2405AF0221FC35AA000E5081 /* strategy */ = {
+			isa = PBXGroup;
+			children = (
+				2405AF0321FC35ED000E5081 /* CTMemberStrategyView.h */,
+				2405AF0421FC35ED000E5081 /* CTMemberStrategyView.m */,
+				2405AF0921FC3678000E5081 /* CTMemberStrategyItem.h */,
+				2405AF0A21FC3678000E5081 /* CTMemberStrategyItem.m */,
+				2405AF0C21FC3681000E5081 /* CTMemberStrategyItem.xib */,
+			);
+			path = strategy;
+			sourceTree = "<group>";
+		};
 		240F512D21F9DAEB00BFDD2D /* PopWindow */ = {
 			isa = PBXGroup;
 			children = (
@@ -1292,11 +1397,19 @@
 		326AC20521FB0DC9008C154B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				2405AF0221FC35AA000E5081 /* strategy */,
+				2405AEF621FC2DA4000E5081 /* choiceness */,
+				2405AEEB21FC2288000E5081 /* upgrade */,
+				2405AEE021FC1859000E5081 /* privilege */,
+				2405AED721FC0DF5000E5081 /* equity */,
 				326AC20621FB0DDD008C154B /* CTMemberHeadView.h */,
 				326AC20721FB0DDD008C154B /* CTMemberHeadView.m */,
 				326AC20921FB0DEF008C154B /* CTMemberHeadView.xib */,
 				326AC20B21FB15C8008C154B /* CTMemberLevelView.h */,
 				326AC20C21FB15C8008C154B /* CTMemberLevelView.m */,
+				2405AED221FC0CA1000E5081 /* CTMemberTitleView.h */,
+				2405AED321FC0CA1000E5081 /* CTMemberTitleView.m */,
+				2405AED521FC0CAD000E5081 /* CTMemberTitleView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -2111,6 +2224,7 @@
 				3220EA1621F95E8F004E0422 /* CTMessageTypeView.xib in Resources */,
 				245CAE5721F42E8000496052 /* CTMainCategoryItem.xib in Resources */,
 				32CA556821F6B6DB00145E31 /* CTShareView_.xib in Resources */,
+				2405AED621FC0CAD000E5081 /* CTMemberTitleView.xib in Resources */,
 				32BE600D21EDC5E500BA52EF /* Assets.xcassets in Resources */,
 				24FF625D21F40F0B00488860 /* CTHomeSalesView.xib in Resources */,
 				326525FA21F5CF5800B63DD7 /* CTGetCodeView_.xib in Resources */,
@@ -2126,16 +2240,21 @@
 				326AC1E921FAB14C008C154B /* CTSearchTikcetPasteView.xib in Resources */,
 				32CA55A221F7183200145E31 /* CTHotKeywordHeadView.xib in Resources */,
 				3220EA4421F9C343004E0422 /* CTHotSalesNoticeView.xib in Resources */,
+				2405AEF521FC22F7000E5081 /* CTMemberUpgradeContainerView.xib in Resources */,
 				326525CC21F5A2DA00B63DD7 /* CTGoodListCell.xib in Resources */,
 				326525C721F595D300B63DD7 /* CTGoodListView_.xib in Resources */,
 				326525F521F5CF0200B63DD7 /* CTRegisterView_.xib in Resources */,
 				32CA558021F6F10900145E31 /* CTUpDownControl.xib in Resources */,
 				32CA557021F6C22600145E31 /* LMNoDataView.xib in Resources */,
+				2405AEEA21FC18E3000E5081 /* CTMemberPrivilegeItem.xib in Resources */,
+				2405AEDF21FC0E3C000E5081 /* CTMemberEquityItem.xib in Resources */,
 				32BE613321EDCFA600BA52EF /* WSDatePickerView.xib in Resources */,
 				32E7EE6F21F32E9800191789 /* CTHomeNavView.xib in Resources */,
 				32E7EE7721F3321400191789 /* CTSalesItem.xib in Resources */,
 				326AC1E421FAAAA8008C154B /* CTSearchTikcetNavView.xib in Resources */,
 				245CAE5621F42E8000496052 /* CTMainCategoryHeadView.xib in Resources */,
+				2405AEFE21FC2FB8000E5081 /* CTMemberChoicenessCell.xib in Resources */,
+				2405AF0D21FC3681000E5081 /* CTMemberStrategyItem.xib in Resources */,
 				32CA55AC21F7242300145E31 /* CTSearchBar.xib in Resources */,
 				322453F621F2D60300471059 /* CTHomeNavBar.xib in Resources */,
 			);
@@ -2217,6 +2336,7 @@
 				326525D821F5B53000B63DD7 /* CTLoginView.m in Sources */,
 				32BE611D21EDCFA600BA52EF /* NSObject+YYAdd.m in Sources */,
 				32BE610D21EDCFA600BA52EF /* DateUtil.m in Sources */,
+				2405AEE421FC1885000E5081 /* CTMemberPrivilegeView.m in Sources */,
 				32E7EE5521F2F7E700191789 /* CTHomeTopView.m in Sources */,
 				32BE60FD21EDCFA600BA52EF /* SDBrowserImageView.m in Sources */,
 				325D3B5B21F1DE1200465B91 /* CTMemberViewController.m in Sources */,
@@ -2236,6 +2356,7 @@
 				32CA55AA21F7241C00145E31 /* CTSearchBar.m in Sources */,
 				326525CF21F5A40500B63DD7 /* UITableView+Helper.m in Sources */,
 				32BE611621EDCFA600BA52EF /* RegalurUtil.m in Sources */,
+				2405AEE821FC18D9000E5081 /* CTMemberPrivilegeItem.m in Sources */,
 				32E7EE6721F3263B00191789 /* CTHomeBannerView.m in Sources */,
 				32BE60EB21EDCFA600BA52EF /* CLNetworkEngine.m in Sources */,
 				32BE610121EDCFA600BA52EF /* UIView+Layout.m in Sources */,
@@ -2260,6 +2381,7 @@
 				32E7EE6121F30AB500191789 /* CTBaseListViewController.m in Sources */,
 				326525F321F5CEF600B63DD7 /* CTRegisterView.m in Sources */,
 				32BE60EC21EDCFA600BA52EF /* CLNetworkManager.m in Sources */,
+				2405AEEE21FC22A6000E5081 /* CTMemberUpgradeView.m in Sources */,
 				32BE601321EDC5E500BA52EF /* main.m in Sources */,
 				32BE60FE21EDCFA600BA52EF /* SDPhotoBrowser.m in Sources */,
 				326AC20821FB0DDD008C154B /* CTMemberHeadView.m in Sources */,
@@ -2272,11 +2394,14 @@
 				32BE60F621EDCFA600BA52EF /* CLRefreshCurveHeader.m in Sources */,
 				32BE611A21EDCFA600BA52EF /* UIUtil.m in Sources */,
 				322453E921F2C3EC00471059 /* CTModuleManager.m in Sources */,
+				2405AEF921FC2DFD000E5081 /* CTMemberChoicenessView.m in Sources */,
+				2405AED421FC0CA1000E5081 /* CTMemberTitleView.m in Sources */,
 				32CA559E21F7180000145E31 /* CTHistoryKeywordHeadView.m in Sources */,
 				3220EA1A21F9679B004E0422 /* CTMessageListCell.m in Sources */,
 				245CAE5521F42E8000496052 /* CTMainCategoryView.m in Sources */,
 				24FF626021F41D1000488860 /* CTHomeNewestHeadView.m in Sources */,
 				326525C521F595CB00B63DD7 /* CTGoodListView_.m in Sources */,
+				2405AF0B21FC3678000E5081 /* CTMemberStrategyItem.m in Sources */,
 				32BE612F21EDCFA600BA52EF /* SelVideoPlayer.m in Sources */,
 				32BE60F121EDCFA600BA52EF /* CLRefreshFactory.m in Sources */,
 				32BE60F421EDCFA600BA52EF /* CLRefreshManager.m in Sources */,
@@ -2289,6 +2414,7 @@
 				32BE610F21EDCFA600BA52EF /* NSArray+Category.m in Sources */,
 				32BE611721EDCFA600BA52EF /* UIButton+Create.m in Sources */,
 				3220EA2121F98622004E0422 /* CTMessageListViewController.m in Sources */,
+				2405AF0521FC35ED000E5081 /* CTMemberStrategyView.m in Sources */,
 				322453C621F2BED600471059 /* CTLoginService.m in Sources */,
 				32BE600521EDC5E100BA52EF /* AppDelegate.m in Sources */,
 				326AC1EF21FAC26E008C154B /* UIPasteboard+Helper.m in Sources */,
@@ -2297,6 +2423,7 @@
 				32BE60FC21EDCFA600BA52EF /* PassWordTool.m in Sources */,
 				32E7EE6A21F32CC700191789 /* CTHomeAdvertView.m in Sources */,
 				32CA556221F6B0E700145E31 /* CTMessageService.m in Sources */,
+				2405AEDA21FC0E20000E5081 /* CTMemberEquityItem.m in Sources */,
 				326AC1FE21FAF368008C154B /* CTYourLikedHeadView.m in Sources */,
 				32E7EE6421F30BAE00191789 /* CTHomeCatoryViewController.m in Sources */,
 				32BE610821EDCFA600BA52EF /* UITextField+Helper.m in Sources */,
@@ -2341,6 +2468,7 @@
 				32BE612221EDCFA600BA52EF /* AddressPickerView.m in Sources */,
 				32CA559021F712D900145E31 /* CTSearchService.m in Sources */,
 				3220EA3F21F9C2D3004E0422 /* CThotSalesListViewController.m in Sources */,
+				2405AF0121FC3166000E5081 /* CTMemberChoicenessCell.m in Sources */,
 				240F513121F9DBAB00BFDD2D /* CTPasteCheckPopView.m in Sources */,
 				322453BD21F2BEA300471059 /* CTMemberService.m in Sources */,
 				326AC1F721FAE29B008C154B /* CTMainCategoryItem.m in Sources */,
@@ -2350,6 +2478,7 @@
 				32BE612421EDCFA600BA52EF /* CLPayPasswordView.m in Sources */,
 				32BE612621EDCFA600BA52EF /* CLTextView.m in Sources */,
 				32E7EE5221F2F70700191789 /* CTHomeViewModel.m in Sources */,
+				2405AEF321FC22EB000E5081 /* CTMemberUpgradeContainerView.m in Sources */,
 				32BE613221EDCFA600BA52EF /* WSDatePickerView.m in Sources */,
 				322453B921F2BE8A00471059 /* CTRecommendService.m in Sources */,
 				32CA557321F6C53E00145E31 /* CTHomeCategoryViewModel.m in Sources */,
@@ -2382,6 +2511,7 @@
 				325D3B7421F1E67200465B91 /* CTMainController.m in Sources */,
 				32BE60FA21EDCFA600BA52EF /* ImagePicker.m in Sources */,
 				32BE611321EDCFA600BA52EF /* NSDictionary+Log.m in Sources */,
+				2405AEDD21FC0E34000E5081 /* CTMemberEquityView.m in Sources */,
 				32BE611921EDCFA600BA52EF /* UIImage+Category.m in Sources */,
 				322453D921F2BFC200471059 /* CTView.m in Sources */,
 				32CA55AF21F7253600145E31 /* CTSearchTextfield.m in Sources */,

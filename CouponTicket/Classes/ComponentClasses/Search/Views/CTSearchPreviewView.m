@@ -123,7 +123,7 @@ ViewInstance(setUp)
 - (void)setUp{
     CLHorizontalCompactLayout *layout = [[CLHorizontalCompactLayout alloc]init];
     _collectionView = [[UICollectionView alloc]initWithFrame:self.bounds collectionViewLayout:layout];
-    
+    _collectionView.showsVerticalScrollIndicator = NO;
     _collectionView.backgroundColor = [UIColor whiteColor];
     _collectionView.delegate = self;
     _collectionView.dataSource = self;
@@ -153,6 +153,10 @@ ViewInstance(setUp)
     _historyKeywords = [historyKeywords copy];
     self.historyKeywordsViewModels = [CTHotkeywordViewModel viewModelsWithKeywords:_historyKeywords];
     [self.collectionView reloadData];
+}
+
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView{
+    [self.superview endEditing:YES];
 }
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
@@ -260,5 +264,7 @@ ViewInstance(setUp)
         }
     }
 }
+
+
 
 @end

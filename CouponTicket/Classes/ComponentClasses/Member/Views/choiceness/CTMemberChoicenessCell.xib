@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="SRw-9I-0FJ" customClass="CTMemberChoicenessCell">
+            <rect key="frame" x="0.0" y="0.0" width="484" height="129"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                <rect key="frame" x="0.0" y="0.0" width="484" height="129"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SZf-aZ-4xC">
+                        <rect key="frame" x="18" y="0.0" width="448" height="129"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="SZf-aZ-4xC" secondAttribute="bottom" id="IUa-Qo-cP2"/>
+                <constraint firstItem="SZf-aZ-4xC" firstAttribute="top" secondItem="SRw-9I-0FJ" secondAttribute="top" id="LI8-p3-zKa"/>
+                <constraint firstItem="SZf-aZ-4xC" firstAttribute="leading" secondItem="SRw-9I-0FJ" secondAttribute="leading" constant="18" id="pGd-DR-HV9"/>
+                <constraint firstAttribute="trailing" secondItem="SZf-aZ-4xC" secondAttribute="trailing" constant="18" id="wai-D4-6fX"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="lYq-64-x17"/>
+            <size key="customSize" width="484" height="129"/>
+            <connections>
+                <outlet property="imageView" destination="SZf-aZ-4xC" id="JS0-1d-xYY"/>
+            </connections>
+            <point key="canvasLocation" x="-485" y="-120"/>
+        </collectionViewCell>
+    </objects>
+</document>

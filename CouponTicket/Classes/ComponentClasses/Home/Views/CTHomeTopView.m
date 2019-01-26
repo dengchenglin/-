@@ -143,7 +143,7 @@ ViewInstance(setUp)
             make.left.right.bottom.mas_equalTo(0);
         }];
         
-        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(hide)];
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(hideModalView)];
         categoryModalView.backgroundView.userInteractionEnabled = YES;
         [categoryModalView.backgroundView addGestureRecognizer:tap];
         _categoryModalView = categoryModalView;

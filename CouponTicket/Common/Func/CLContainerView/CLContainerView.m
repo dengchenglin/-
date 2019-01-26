@@ -37,6 +37,10 @@
     [self addSubview:_tableView];
     _tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
 }
+- (void)setBackgroundColor:(UIColor *)backgroundColor{
+    [super setBackgroundColor:backgroundColor];
+    _tableView.backgroundColor = backgroundColor;
+}
 
 - (void)layoutSubviews{
     [super layoutSubviews];
@@ -58,6 +62,9 @@
 }
 
 #pragma mark - UITableViewDelegate
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return self.configs.count;
+}
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
     return self.configs[section].sectionHeight;
 }

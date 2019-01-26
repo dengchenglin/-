@@ -78,7 +78,12 @@
             self.previewView.hidden = NO;
         }
     }];
-
+   //点击了历史或热门
+    [self.previewView setSelectKeyBlock:^(NSString *key) {
+        @strongify(self);
+        self.searchBar.searchTfd.text = key;
+        [self searchWithKeyword:key];
+    }];
     
     //清除历史记录
     [self.previewView setClearHistoryBlock:^{
@@ -89,7 +94,7 @@
 
 }
 
-
+//用户事件触发的搜索需要调用该方法
 - (void)searchWithKeyword:(NSString *)keyword{
     [self.view endEditing:YES];
     if(!keyword.length){
@@ -104,7 +109,7 @@
 
 - (void)request{
     //获取热门关键词和历史记录
-    [NSTimer scheduledTimerWithTimeInterval:1.0 block:^(NSTimer *timer) {
+    [NSTimer scheduledTimerWithTimeInterval:0.1 block:^(NSTimer *timer) {
         self.previewView.hotKeywords = [self testHot];
         self.previewView.historyKeywords = [self testHistory];
     } repeats:NO];
@@ -142,11 +147,14 @@
     [[NSUserDefaults standardUserDefaults] setObject:nil forKey:key];
 }
 
+
+//test
+
 - (NSArray *)testHot{
     return @[@"永生玫瑰",@"asfasf",@"蔻驰包包",@"雅斯兰黛棕瓶",@"按时发生经发局爱讲故事普吉岛公私兼顾",@"口红",@"氧气内衣店",@"暗示法三国杀",@"暗示法司法三个傻瓜萨德"];
 }
 
 - (NSArray *)testHistory{
-    return @[@"啥都暗杀教室；",@"按时发件案件挂牌",@"色谱",@"是；几个配数据",@"司法解释",@"是；弔",@"；SDJS"];
+    return @[@"啥都暗杀教室；",@"按时发件案件挂牌",@"色谱",@"是；几个配数据",@"司法解释",@"是；弔",@"SDJS"];
 }
 @end

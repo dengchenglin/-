@@ -28,7 +28,7 @@
                     <fontDescription key="fontDescription" name="PingFangSC-Semibold" family="PingFang SC" pointSize="16"/>
                     <state key="normal" title="点击下载高清二维码"/>
                     <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRaidus">
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                             <integer key="value" value="23"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
