@@ -24,6 +24,18 @@
 		2405AF0521FC35ED000E5081 /* CTMemberStrategyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2405AF0421FC35ED000E5081 /* CTMemberStrategyView.m */; };
 		2405AF0B21FC3678000E5081 /* CTMemberStrategyItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2405AF0A21FC3678000E5081 /* CTMemberStrategyItem.m */; };
 		2405AF0D21FC3681000E5081 /* CTMemberStrategyItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2405AF0C21FC3681000E5081 /* CTMemberStrategyItem.xib */; };
+		2407A8D821FD826A000403B7 /* CTMemberEquityController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2407A8D721FD826A000403B7 /* CTMemberEquityController.m */; };
+		2407A8DB21FD852C000403B7 /* CTEquitySegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 2407A8DA21FD852C000403B7 /* CTEquitySegmentedControl.m */; };
+		2407A8DE21FD882B000403B7 /* CTMemberEquityView1.m in Sources */ = {isa = PBXBuildFile; fileRef = 2407A8DD21FD882B000403B7 /* CTMemberEquityView1.m */; };
+		2407A8E121FD8868000403B7 /* CTMemberEquityTypeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2407A8E021FD8868000403B7 /* CTMemberEquityTypeView.m */; };
+		2407A8E421FD8895000403B7 /* CTMemberEquityView2.m in Sources */ = {isa = PBXBuildFile; fileRef = 2407A8E321FD8895000403B7 /* CTMemberEquityView2.m */; };
+		2407A8E721FD88A1000403B7 /* CTMemberEquityView3.m in Sources */ = {isa = PBXBuildFile; fileRef = 2407A8E621FD88A1000403B7 /* CTMemberEquityView3.m */; };
+		2407A8EA21FD88AF000403B7 /* CTMemberEquityView4.m in Sources */ = {isa = PBXBuildFile; fileRef = 2407A8E921FD88AF000403B7 /* CTMemberEquityView4.m */; };
+		2407A8EC21FD88F5000403B7 /* CTMemberEquityView1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2407A8EB21FD88F5000403B7 /* CTMemberEquityView1.xib */; };
+		2407A8EE21FD8C2D000403B7 /* CTMemberEquityView2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2407A8ED21FD8C2D000403B7 /* CTMemberEquityView2.xib */; };
+		2407A8F021FD8C3F000403B7 /* CTMemberEquityView3.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2407A8EF21FD8C3F000403B7 /* CTMemberEquityView3.xib */; };
+		2407A8F221FD8C4A000403B7 /* CTMemberEquityView4.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2407A8F121FD8C4A000403B7 /* CTMemberEquityView4.xib */; };
+		2407A8F521FD90A1000403B7 /* CTMemberEquityPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2407A8F421FD90A1000403B7 /* CTMemberEquityPageView.m */; };
 		240E188D21F5F1FC004A4BCB /* CTRegisterViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 240E188C21F5F1FC004A4BCB /* CTRegisterViewModel.m */; };
 		240E189121F5F4C6004A4BCB /* CTLoginBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 240E189021F5F4C6004A4BCB /* CTLoginBaseViewController.m */; };
 		240E189421F5F7D4004A4BCB /* CTGetCodeViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 240E189321F5F7D4004A4BCB /* CTGetCodeViewModel.m */; };
@@ -288,6 +300,26 @@
 		2405AF0921FC3678000E5081 /* CTMemberStrategyItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTMemberStrategyItem.h; sourceTree = "<group>"; };
 		2405AF0A21FC3678000E5081 /* CTMemberStrategyItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTMemberStrategyItem.m; sourceTree = "<group>"; };
 		2405AF0C21FC3681000E5081 /* CTMemberStrategyItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CTMemberStrategyItem.xib; sourceTree = "<group>"; };
+		2407A8D621FD826A000403B7 /* CTMemberEquityController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTMemberEquityController.h; sourceTree = "<group>"; };
+		2407A8D721FD826A000403B7 /* CTMemberEquityController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTMemberEquityController.m; sourceTree = "<group>"; };
+		2407A8D921FD852C000403B7 /* CTEquitySegmentedControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTEquitySegmentedControl.h; sourceTree = "<group>"; };
+		2407A8DA21FD852C000403B7 /* CTEquitySegmentedControl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTEquitySegmentedControl.m; sourceTree = "<group>"; };
+		2407A8DC21FD882B000403B7 /* CTMemberEquityView1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTMemberEquityView1.h; sourceTree = "<group>"; };
+		2407A8DD21FD882B000403B7 /* CTMemberEquityView1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTMemberEquityView1.m; sourceTree = "<group>"; };
+		2407A8DF21FD8868000403B7 /* CTMemberEquityTypeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTMemberEquityTypeView.h; sourceTree = "<group>"; };
+		2407A8E021FD8868000403B7 /* CTMemberEquityTypeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTMemberEquityTypeView.m; sourceTree = "<group>"; };
+		2407A8E221FD8895000403B7 /* CTMemberEquityView2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTMemberEquityView2.h; sourceTree = "<group>"; };
+		2407A8E321FD8895000403B7 /* CTMemberEquityView2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTMemberEquityView2.m; sourceTree = "<group>"; };
+		2407A8E521FD88A1000403B7 /* CTMemberEquityView3.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTMemberEquityView3.h; sourceTree = "<group>"; };
+		2407A8E621FD88A1000403B7 /* CTMemberEquityView3.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTMemberEquityView3.m; sourceTree = "<group>"; };
+		2407A8E821FD88AF000403B7 /* CTMemberEquityView4.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTMemberEquityView4.h; sourceTree = "<group>"; };
+		2407A8E921FD88AF000403B7 /* CTMemberEquityView4.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTMemberEquityView4.m; sourceTree = "<group>"; };
+		2407A8EB21FD88F5000403B7 /* CTMemberEquityView1.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CTMemberEquityView1.xib; sourceTree = "<group>"; };
+		2407A8ED21FD8C2D000403B7 /* CTMemberEquityView2.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CTMemberEquityView2.xib; sourceTree = "<group>"; };
+		2407A8EF21FD8C3F000403B7 /* CTMemberEquityView3.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CTMemberEquityView3.xib; sourceTree = "<group>"; };
+		2407A8F121FD8C4A000403B7 /* CTMemberEquityView4.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CTMemberEquityView4.xib; sourceTree = "<group>"; };
+		2407A8F321FD90A1000403B7 /* CTMemberEquityPageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTMemberEquityPageView.h; sourceTree = "<group>"; };
+		2407A8F421FD90A1000403B7 /* CTMemberEquityPageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTMemberEquityPageView.m; sourceTree = "<group>"; };
 		240E188B21F5F1FC004A4BCB /* CTRegisterViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTRegisterViewModel.h; sourceTree = "<group>"; };
 		240E188C21F5F1FC004A4BCB /* CTRegisterViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTRegisterViewModel.m; sourceTree = "<group>"; };
 		240E188F21F5F4C6004A4BCB /* CTLoginBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTLoginBaseViewController.h; sourceTree = "<group>"; };
@@ -759,6 +791,24 @@
 				2405AEDE21FC0E3C000E5081 /* CTMemberEquityItem.xib */,
 				2405AEDB21FC0E34000E5081 /* CTMemberEquityView.h */,
 				2405AEDC21FC0E34000E5081 /* CTMemberEquityView.m */,
+				2407A8D921FD852C000403B7 /* CTEquitySegmentedControl.h */,
+				2407A8DA21FD852C000403B7 /* CTEquitySegmentedControl.m */,
+				2407A8DF21FD8868000403B7 /* CTMemberEquityTypeView.h */,
+				2407A8E021FD8868000403B7 /* CTMemberEquityTypeView.m */,
+				2407A8F321FD90A1000403B7 /* CTMemberEquityPageView.h */,
+				2407A8F421FD90A1000403B7 /* CTMemberEquityPageView.m */,
+				2407A8DC21FD882B000403B7 /* CTMemberEquityView1.h */,
+				2407A8DD21FD882B000403B7 /* CTMemberEquityView1.m */,
+				2407A8EB21FD88F5000403B7 /* CTMemberEquityView1.xib */,
+				2407A8E221FD8895000403B7 /* CTMemberEquityView2.h */,
+				2407A8E321FD8895000403B7 /* CTMemberEquityView2.m */,
+				2407A8ED21FD8C2D000403B7 /* CTMemberEquityView2.xib */,
+				2407A8E521FD88A1000403B7 /* CTMemberEquityView3.h */,
+				2407A8E621FD88A1000403B7 /* CTMemberEquityView3.m */,
+				2407A8EF21FD8C3F000403B7 /* CTMemberEquityView3.xib */,
+				2407A8E821FD88AF000403B7 /* CTMemberEquityView4.h */,
+				2407A8E921FD88AF000403B7 /* CTMemberEquityView4.m */,
+				2407A8F121FD8C4A000403B7 /* CTMemberEquityView4.xib */,
 			);
 			path = equity;
 			sourceTree = "<group>";
@@ -1216,6 +1266,8 @@
 			children = (
 				325D3B5921F1DE1200465B91 /* CTMemberViewController.h */,
 				325D3B5A21F1DE1200465B91 /* CTMemberViewController.m */,
+				2407A8D621FD826A000403B7 /* CTMemberEquityController.h */,
+				2407A8D721FD826A000403B7 /* CTMemberEquityController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -2214,6 +2266,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2407A8EC21FD88F5000403B7 /* CTMemberEquityView1.xib in Resources */,
 				32BE601021EDC5E500BA52EF /* LaunchScreen.storyboard in Resources */,
 				32CA55A721F71D6900145E31 /* CTHistoryKeywordCell.xib in Resources */,
 				32BE612321EDCFA600BA52EF /* area.plist in Resources */,
@@ -2231,6 +2284,7 @@
 				326525DA21F5B53900B63DD7 /* CTLoginView_.xib in Resources */,
 				32CA556F21F6C22600145E31 /* LMNetErrorView.xib in Resources */,
 				32CA55A021F7181600145E31 /* CTHistoryKeywordHeadView.xib in Resources */,
+				2407A8F021FD8C3F000403B7 /* CTMemberEquityView3.xib in Resources */,
 				32CA558521F6F23A00145E31 /* CTSortButton.xib in Resources */,
 				240E189C21F5FA45004A4BCB /* CTForgetPsdView_.xib in Resources */,
 				3220EA1B21F9679B004E0422 /* CTMessageListCell.xib in Resources */,
@@ -2243,9 +2297,11 @@
 				2405AEF521FC22F7000E5081 /* CTMemberUpgradeContainerView.xib in Resources */,
 				326525CC21F5A2DA00B63DD7 /* CTGoodListCell.xib in Resources */,
 				326525C721F595D300B63DD7 /* CTGoodListView_.xib in Resources */,
+				2407A8EE21FD8C2D000403B7 /* CTMemberEquityView2.xib in Resources */,
 				326525F521F5CF0200B63DD7 /* CTRegisterView_.xib in Resources */,
 				32CA558021F6F10900145E31 /* CTUpDownControl.xib in Resources */,
 				32CA557021F6C22600145E31 /* LMNoDataView.xib in Resources */,
+				2407A8F221FD8C4A000403B7 /* CTMemberEquityView4.xib in Resources */,
 				2405AEEA21FC18E3000E5081 /* CTMemberPrivilegeItem.xib in Resources */,
 				2405AEDF21FC0E3C000E5081 /* CTMemberEquityItem.xib in Resources */,
 				32BE613321EDCFA600BA52EF /* WSDatePickerView.xib in Resources */,
@@ -2369,6 +2425,7 @@
 				326525EA21F5CDE900B63DD7 /* CTAgreementViewController.m in Sources */,
 				32BE60F521EDCFA600BA52EF /* CLRefreshCurveFooter.m in Sources */,
 				322453C121F2BEBC00471059 /* CTMineService.m in Sources */,
+				2407A8DE21FD882B000403B7 /* CTMemberEquityView1.m in Sources */,
 				326525E721F5CDC700B63DD7 /* CTForgetViewController.m in Sources */,
 				325D3B6121F1DE3700465B91 /* CTLoginViewController.m in Sources */,
 				32BE60EE21EDCFA600BA52EF /* CLTaskRequest.m in Sources */,
@@ -2429,6 +2486,8 @@
 				32BE610821EDCFA600BA52EF /* UITextField+Helper.m in Sources */,
 				32BE60F821EDCFA600BA52EF /* CLRefreshNulMoreView.m in Sources */,
 				32BE60F721EDCFA600BA52EF /* CLRefreshCurveLayer.m in Sources */,
+				2407A8E421FD8895000403B7 /* CTMemberEquityView2.m in Sources */,
+				2407A8DB21FD852C000403B7 /* CTEquitySegmentedControl.m in Sources */,
 				32BE611521EDCFA600BA52EF /* NSString+Log.m in Sources */,
 				32BE612C21EDCFA600BA52EF /* SelPlayerConfiguration.m in Sources */,
 				32BE611821EDCFA600BA52EF /* UIColor+HexString.m in Sources */,
@@ -2466,6 +2525,7 @@
 				3220EA2721F989A6004E0422 /* CTWebViewController.m in Sources */,
 				324C3DA721F854B000536DA8 /* CTGoodService.m in Sources */,
 				32BE612221EDCFA600BA52EF /* AddressPickerView.m in Sources */,
+				2407A8D821FD826A000403B7 /* CTMemberEquityController.m in Sources */,
 				32CA559021F712D900145E31 /* CTSearchService.m in Sources */,
 				3220EA3F21F9C2D3004E0422 /* CThotSalesListViewController.m in Sources */,
 				2405AF0121FC3166000E5081 /* CTMemberChoicenessCell.m in Sources */,
@@ -2479,6 +2539,7 @@
 				32BE612621EDCFA600BA52EF /* CLTextView.m in Sources */,
 				32E7EE5221F2F70700191789 /* CTHomeViewModel.m in Sources */,
 				2405AEF321FC22EB000E5081 /* CTMemberUpgradeContainerView.m in Sources */,
+				2407A8F521FD90A1000403B7 /* CTMemberEquityPageView.m in Sources */,
 				32BE613221EDCFA600BA52EF /* WSDatePickerView.m in Sources */,
 				322453B921F2BE8A00471059 /* CTRecommendService.m in Sources */,
 				32CA557321F6C53E00145E31 /* CTHomeCategoryViewModel.m in Sources */,
@@ -2494,11 +2555,13 @@
 				32BE612521EDCFA600BA52EF /* CLTextField.m in Sources */,
 				240E188D21F5F1FC004A4BCB /* CTRegisterViewModel.m in Sources */,
 				326AC1F221FADF00008C154B /* CTHotCatoryView.m in Sources */,
+				2407A8E721FD88A1000403B7 /* CTMemberEquityView3.m in Sources */,
 				32BE611B21EDCFA600BA52EF /* UIView+Category.m in Sources */,
 				32BE610921EDCFA600BA52EF /* UITextView+Helper.m in Sources */,
 				3220EA1421F95E59004E0422 /* CTMessageTypeView.m in Sources */,
 				32BE60FF21EDCFA600BA52EF /* SDWaitingView.m in Sources */,
 				3220EA4221F9C2F9004E0422 /* CTHotSalesNoticeView.m in Sources */,
+				2407A8EA21FD88AF000403B7 /* CTMemberEquityView4.m in Sources */,
 				3220EA3B21F9BF9C004E0422 /* CTGoodDetailViewController.m in Sources */,
 				240E189A21F5FA39004A4BCB /* CTForgetPsdView.m in Sources */,
 				326525DE21F5C60B00B63DD7 /* CTLoginViewModel.m in Sources */,
@@ -2518,6 +2581,7 @@
 				322453B521F2BE6F00471059 /* CTSearchTicketService.m in Sources */,
 				32E7EE7221F331E500191789 /* CTHomeSalesView.m in Sources */,
 				240E18A321F5FB0D004A4BCB /* CTSetPasswordViewModel.m in Sources */,
+				2407A8E121FD8868000403B7 /* CTMemberEquityTypeView.m in Sources */,
 				32CA557B21F6F02700145E31 /* CTLeftTextButton.m in Sources */,
 				322453D821F2BFC200471059 /* CTTableView.m in Sources */,
 				326AC20421FB04B1008C154B /* CLContainerView.m in Sources */,

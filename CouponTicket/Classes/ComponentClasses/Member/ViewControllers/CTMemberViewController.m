@@ -24,6 +24,9 @@
 
 #import "CTMemberStrategyView.h"
 
+
+#import "CTMemberEquityController.h"
+
 @interface CTMemberViewController ()
 
 @property (nonatomic, strong) CLContainerView *containerView;
@@ -180,6 +183,16 @@
         self.strategyView.models = @[@"",@""];
         config.sectionHeight = [self.strategyView systemLayoutSizeFittingSize:CGSizeMake(SCREEN_WIDTH, CGFLOAT_MAX)].height;
         config.space = 20;
+    }];
+}
+
+
+- (void)setUpEvent{
+    @weakify(self)
+    [self.headView.equityBackgroundView addActionWithBlock:^(id target) {
+        @strongify(self)
+        CTMemberEquityController *vc =  [CTMemberEquityController new];
+        [self.navigationController pushViewController:vc animated:YES];
     }];
 }
 @end

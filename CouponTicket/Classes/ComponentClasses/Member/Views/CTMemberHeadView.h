@@ -12,5 +12,5 @@
 @property (weak, nonatomic) IBOutlet UIImageView *iconImageView;
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *jobLabel;
-
+@property (weak, nonatomic) IBOutlet UIView *equityBackgroundView;
 @end

@@ -11,7 +11,7 @@
 #import "CALayer+YYAdd.h"
 
 @interface CTMemberHeadView()
-@property (weak, nonatomic) IBOutlet UIView *equityBackgroundView;
+
 
 @end
 

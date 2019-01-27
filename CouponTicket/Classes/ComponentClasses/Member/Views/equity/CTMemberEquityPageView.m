@@ -1,0 +1,91 @@
+//
+//  CTMemberEquityPageView.m
+//  CouponTicket
+//
+//  Created by Dankal on 2019/1/27.
+//  Copyright © 2019 Danke. All rights reserved.
+//
+
+#import "CTMemberEquityPageView.h"
+
+#import "CTMemberEquityView1.h"
+
+#import "CTMemberEquityView2.h"
+
+#import "CTMemberEquityView3.h"
+
+#import "CTMemberEquityView4.h"
+
+#import "CTMemberEquityTypeView.h"
+
+@interface CTMemberEquityPageView()<UIScrollViewDelegate>
+
+@end
+
+@implementation CTMemberEquityPageView
+{
+    UIScrollView *_scrollView;
+    UIView *_containerView;
+}
+ViewInstance(setUp)
+
+- (void)setUp{
+    _scrollView = [[UIScrollView alloc]init];
+    _scrollView.delegate = self;
+    _scrollView.showsHorizontalScrollIndicator = NO;
+    _scrollView.pagingEnabled = YES;
+    [self addSubview:_scrollView];
+    
+    _containerView = [UIView new];
+    [_scrollView addSubview:_containerView];
+    
+    [_scrollView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.mas_equalTo(UIEdgeInsetsZero);
+    }];
+    [_containerView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.mas_equalTo(UIEdgeInsetsZero);
+        make.height.mas_equalTo(self->_scrollView.mas_height);
+    }];
+    
+}
+
+- (void)setLevel:(CTMemberLevel)level{
+    _level = level;
+    
+    UIView *tempView;
+    for(int i = 0;i <= _level;i ++){
+        NSString *classStr = [NSString stringWithFormat:@"CTMemberEquityView%d",i + 1];
+        CTMemberEquityTypeView *view = NSMainBundleName(classStr);
+        view.tag = 100 + i;
+        [_containerView addSubview:view];
+        [view mas_makeConstraints:^(MASConstraintMaker *make) {
+            if(tempView){
+                make.left.mas_equalTo(tempView.mas_right);
+            }
+            else{
+                make.left.mas_equalTo(0);
+            }
+            if(i == _level){
+                make.right.mas_equalTo(0);
+            }
+            make.width.mas_equalTo(self->_scrollView.mas_width);
+            make.top.bottom.mas_equalTo(0);
+        }];
+        tempView = view;
+    }
+}
+
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
+    if(!self.width)return;
+    NSInteger index = scrollView.contentOffset.x/scrollView.width;
+    if(_delegate && [_delegate respondsToSelector:@selector(pageView:didScrollWithIndex:)]){
+        [_delegate pageView:self didScrollWithIndex:index];
+    }
+}
+
+- (void)scrollToIndex:(NSInteger)index{
+    [_scrollView setContentOffset:CGPointMake(_scrollView.width * index, 0) animated:YES];
+}
+
+@end
