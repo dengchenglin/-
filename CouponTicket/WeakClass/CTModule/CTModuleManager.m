@@ -24,7 +24,8 @@
              @"ct_message":[self shareService],
              @"ct_search":[self searchService],
              @"ct_good_list":[self goodListService],
-             @"ct_web":[self webService]
+             @"ct_web":[self webService],
+             @"ct_set":[self setService],
           };
 }
 
@@ -80,5 +81,9 @@
 }
 + (id)webService{
       return [CLModuleManager moduleServiceInstanceForProtocol:@protocol(CTWebServiceProtocol)];
+}
+
++ (id)setService{
+    return [CLModuleManager moduleServiceInstanceForProtocol:@protocol(CTSetServiceProtocol)];
 }
 @end

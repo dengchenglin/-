@@ -34,12 +34,13 @@ static const int IsPopKey;
 
 - (void)cl_viewWillDisappear:(BOOL)animated{
     [self cl_viewWillDisappear:animated];
-    if(self.navigationController.viewControllers.count > 1){
+    if(self.navigationController.viewControllers.count > 1 || self.presentedViewController){
         self.isPop = YES;
     }
     else{
         self.isPop = NO;
     }
+    
 }
 
 - (void)cl_viewDidAppear:(BOOL)animated{

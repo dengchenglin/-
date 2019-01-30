@@ -104,10 +104,9 @@
 
 
 - (void)request{
-    [NSTimer scheduledTimerWithTimeInterval:1.0 block:^(NSTimer *timer) {
-         [self reloadData:nil];
-    } repeats:NO];
-   
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self reloadData:nil];
+    });
 }
 
 - (void)reloadData:(id)data{
@@ -143,7 +142,6 @@
 - (void)didTransitionToIndex:(NSInteger)index pageControlManager:(UIPageControlManager *)pageControlManager{
     [self.topView.categoryControl.segmentedControl scrollToIndex:index];
 }
-
 
 
 

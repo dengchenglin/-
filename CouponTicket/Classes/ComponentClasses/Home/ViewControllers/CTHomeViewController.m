@@ -178,6 +178,12 @@
         UIViewController *vc = [[CTModuleManager goodListService]hotsalesViewController];
         [self.navigationController pushViewController:vc animated:YES];
     }];
+    //销量榜商品点击
+    [self.salesView setClickItemBlock:^(NSInteger index) {
+        @strongify(self)
+        UIViewController *vc = [[CTModuleManager goodListService]goodDetailViewControllerWithGoodId:nil];
+        [self.navigationController pushViewController:vc animated:YES];
+    }];
 }
 
 - (void)request{

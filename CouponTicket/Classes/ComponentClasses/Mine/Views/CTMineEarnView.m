@@ -10,12 +10,16 @@
 
 @implementation CTMineEarnView
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
+- (void)awakeFromNib{
+    [super awakeFromNib];
+    _earnButton.titleEdgeInsets = UIEdgeInsetsMake(0, 3, 0, 0);
+    self.layer.cornerRadius = 10;
+    self.layer.backgroundColor = [UIColor colorWithRed:255/255.0 green:255/255.0 blue:255/255.0 alpha:1.0].CGColor;
+    self.layer.shadowColor = [UIColor colorWithRed:153/255.0 green:153/255.0 blue:153/255.0 alpha:0.3].CGColor;
+    self.layer.shadowOffset = CGSizeMake(0,8);
+    self.layer.shadowOpacity = 1;
+    self.layer.shadowRadius = 17.5;
+    
 }
-*/
 
 @end

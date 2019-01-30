@@ -47,6 +47,13 @@
     return _searchBar;
 }
 
+- (void)willMoveToParentViewController:(UIViewController *)parent{
+    [super willMoveToParentViewController:parent];
+    if(!parent){
+        [self.searchBar endEditing:YES];
+    }
+}
+
 - (void)setUpUI{
     self.title = @"搜索";
     self.navigationBarStyle = CTNavigationBarWhite;

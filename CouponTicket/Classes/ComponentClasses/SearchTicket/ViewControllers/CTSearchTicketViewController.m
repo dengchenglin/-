@@ -140,6 +140,11 @@
         UIViewController *vc = [[CTModuleManager searchService] goodResultViewControllerWithKeyword:keyword];
         [self.navigationController pushViewController:vc animated:YES];
     }];
+    [self.categoryView.categoryView setClickItemBlock:^(NSInteger index) {
+        @strongify(self)
+        UIViewController *vc = [[CTModuleManager goodListService]goodListViewControllerWithCategoryId:nil];
+        [self.navigationController pushViewController:vc animated:YES];
+    }];
 }
 
 - (void)request{

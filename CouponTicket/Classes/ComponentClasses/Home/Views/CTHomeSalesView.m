@@ -21,6 +21,7 @@
     UIView *leftView;
     for(int i = 0;i < 3;i ++){
         CTSalesItem *item = NSMainBundleClass(CTSalesItem.class);
+        item.tag = 100 + i;
         [self addSubview:item];
         [item mas_makeConstraints:^(MASConstraintMaker *make) {
             if(leftView){
@@ -37,6 +38,14 @@
             make.bottom.mas_equalTo(0);
         }];
         leftView = item;
+        
+        @weakify(self)
+        [item addActionWithBlock:^(UIView *target) {
+            @strongify(self)
+            if(self.clickItemBlock){
+                self.clickItemBlock(target.tag - 100);
+            }
+        }];
     }
 }
 

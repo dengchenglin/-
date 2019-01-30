@@ -39,7 +39,7 @@ typedef NS_ENUM(NSInteger,CTNavigationBarStyle) {
 
 - (UIButton *)setRightButtonWithTitle:(NSString *)title  selector:(SEL)selector;
 
-- (UIButton *)setRightButtonWithTitle:(NSString *)title titleColor:(UIColor *)titleColor  selector:(SEL)selector;
+- (UIButton *)setRightButtonWithTitle:(NSString *)title font:(UIFont *)font titleColor:(UIColor *)titleColor selector:(SEL)selector;
 
 - (UIButton *)setRightButtonWithImageName:(NSString *)imageName selector:(SEL)selector;
 

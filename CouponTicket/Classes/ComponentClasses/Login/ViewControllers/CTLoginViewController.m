@@ -80,6 +80,11 @@
             [MBProgressHUD showMBProgressHudWithTitle:@"手机格式不正确"];
             return ;
         }
+        [CTAppManager sharedInstance].user = [CTUser new];
+        if(self.callback){
+            self.callback(YES);
+        }
+        [self back];
     }];
     //注册
     [self.loginView.registerButton touchUpInsideSubscribeNext:^(id x) {
@@ -96,7 +101,7 @@
     //qq登录
     [self.loginView.qqButton touchUpInsideSubscribeNext:^(id x) {
         @strongify(self)
-        
+    
     }];
     //微信登录
     [self.loginView.wechatButton touchUpInsideSubscribeNext:^(id x) {

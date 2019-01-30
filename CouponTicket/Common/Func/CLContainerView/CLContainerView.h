@@ -20,6 +20,8 @@
 
 @interface CLContainerView : UIView
 
+@property (nonatomic, copy) void (^scrollBlock)(CGPoint contentOffest);
+
 - (void)removeAllObjects;
 
 - (void)addConfig:(void(^)(CLSectionConfig *config))config;

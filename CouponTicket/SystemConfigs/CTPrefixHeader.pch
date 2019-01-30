@@ -35,7 +35,7 @@
 #import "UITextView+Helper.h"
 #import "UITableView+Helper.h"
 #import "UIViewController+Helper.h"
-
+#import "UINavigationBar+handle.h"
 
 //弱业务通用功能
 #import "CTModule.h"

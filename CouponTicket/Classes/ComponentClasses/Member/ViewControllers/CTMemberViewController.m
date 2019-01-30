@@ -24,10 +24,13 @@
 
 #import "CTMemberStrategyView.h"
 
+#import "CTNavBar.h"
 
 #import "CTMemberEquityController.h"
 
 @interface CTMemberViewController ()
+
+@property (nonatomic, strong) CTNavBar *navBar;
 
 @property (nonatomic, strong) CLContainerView *containerView;
 
@@ -48,6 +51,15 @@
 @end
 
 @implementation CTMemberViewController
+
+- (CTNavBar *)navBar{
+    if(!_navBar){
+        _navBar = NSMainBundleClass(CTNavBar.class);
+        _navBar.alpha = 0;
+        _navBar.title = @"会员中心";
+    }
+    return _navBar;
+}
 
 - (CLContainerView *)containerView{
     if(!_containerView){
@@ -105,15 +117,23 @@
     return _strategyView;
 }
 
+
 - (void)setUpUI{
+    self.title = @"会员中心";
     self.hideSystemNavBarWhenAppear = YES;
     [self.view addSubview:self.containerView];
-
+    [self.view addSubview:self.navBar];
+    
 }
+
 
 - (void)autoLayout{
     [self.containerView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.mas_equalTo(0);
+    }];
+    [self.navBar mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.top.mas_equalTo(0);
+        make.height.mas_equalTo(NAVBAR_HEIGHT);
     }];
 }
 - (void)request{
@@ -134,7 +154,7 @@
         self.levelView.level = CTMemberPartner;
         [self.headView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.left.right.mas_equalTo(0);
-            make.height.mas_equalTo(188);
+            make.height.mas_equalTo(188 + NAVBAR_TOP);
         }];
         [self.levelView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.mas_equalTo(10);
@@ -177,6 +197,7 @@
         config.sectionHeight = [self.choicenessView systemLayoutSizeFittingSize:CGSizeMake(SCREEN_WIDTH, CGFLOAT_MAX)].height;
         config.space = 20;
     }];
+    //赚钱攻略
     [self.containerView addConfig:^(CLSectionConfig *config) {
         @strongify(self)
         config.sectioView = self.strategyView;
@@ -193,6 +214,20 @@
         @strongify(self)
         CTMemberEquityController *vc =  [CTMemberEquityController new];
         [self.navigationController pushViewController:vc animated:YES];
+    }];
+    
+    
+    [self.containerView setScrollBlock:^(CGPoint contentOffest) {
+        @strongify(self)
+        CGFloat startOffest = 100;
+        CGFloat alpha = 0;
+        if(contentOffest.y > startOffest){
+           alpha = (contentOffest.y - startOffest)/80;
+        }
+        else{
+            alpha = 0;
+        }
+        self.navBar.alpha = alpha;
     }];
 }
 @end

@@ -10,7 +10,6 @@
 #define CTMarco_h
 
 
-#define CTLightGrayColor RGBColor(220,220,220)
 #define CTLineColor  RGBColor(230,230,230)
 
 #define CTNavTitleColor   RGBColor(51,51,51)
@@ -22,5 +21,7 @@
 #define CTEnterButtonColor RGBColor(255,97,36)
 
 #define CTCoarseFont(s) [UIFont fontWithName:(IOS_9?@"PingFangSC-Semibold":@"Heiti SC") size:s]
+#define CTPsbFont(s) [UIFont fontWithName:(IOS_9?@"PingFangSC-Semibold":@"Heiti SC") size:s]
+#define CTPsmFont(s) [UIFont fontWithName:(IOS_9?@"PingFangSC-Medium":@"Heiti SC") size:s]
 
 #endif /* CTMarco_h */

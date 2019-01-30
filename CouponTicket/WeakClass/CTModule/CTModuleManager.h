@@ -38,4 +38,6 @@
 + (id<CTGoodListServiceProtocol>)goodListService;
 
 + (id<CTWebServiceProtocol>)webService;
+
++ (id<CTSetServiceProtocol>)setService;
 @end

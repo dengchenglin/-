@@ -12,4 +12,6 @@
 @property (weak, nonatomic) IBOutlet UIView *titleheadView;
 @property (weak, nonatomic) IBOutlet UIView *goodsView;
 
+@property (nonatomic, copy) void (^clickItemBlock)(NSInteger index);
+
 @end

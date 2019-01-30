@@ -9,5 +9,15 @@
 #import <UIKit/UIKit.h>
 
 @interface CTMineEarnView : UIView
+@property (weak, nonatomic) IBOutlet UILabel *priceLabel1;
+@property (weak, nonatomic) IBOutlet UILabel *priceLabel2;
+@property (weak, nonatomic) IBOutlet UILabel *priceLabel3;
+
+@property (weak, nonatomic) IBOutlet UILabel *priceLabel4;
+
+
+@property (weak, nonatomic) IBOutlet UIButton *earnButton;
+@property (weak, nonatomic) IBOutlet UIButton *withdrawButton;
+@property (weak, nonatomic) IBOutlet UIButton *earndetailButton;
 
 @end

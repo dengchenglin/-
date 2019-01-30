@@ -182,7 +182,7 @@
 }
 
 - (UIButton *)setRightButtonWithTitle:(NSString *)title  selector:(SEL)selector{
-    return  [self setRightButtonWithTitle:title titleColor:nil  selector:selector];
+    return  [self setRightButtonWithTitle:title font:nil  titleColor:nil  selector:selector];
 }
 
 - (UIButton *)setRightButtonWithImageName:(NSString *)imageName size:(CGSize)size selector:(SEL)selector{
@@ -193,15 +193,16 @@
     return  [self setRightButtonWithImageName:imageName size:CGSizeZero imageEdgeInsets:imageEdgeInsets selector:selector];
 }
 
-- (UIButton *)setRightButtonWithTitle:(NSString *)title titleColor:(UIColor *)titleColor selector:(SEL)selector{
+- (UIButton *)setRightButtonWithTitle:(NSString *)title font:(UIFont *)font titleColor:(UIColor *)titleColor selector:(SEL)selector{
     CGSize size = CGSizeZero;
+    if(!font)font = [UIFont systemFontOfSize:15];
     if(title.length){
-        size = [title sizeWithFont:[UIFont systemFontOfSize:15] constrainedToSize:CGSizeMake(100, 15)];
+        size = [title sizeWithFont:font constrainedToSize:CGSizeMake(100, 15)];
         size.width += 1;
     }
     UIButton * button =[UIButton buttonWithType:UIButtonTypeCustom];
     [button setFrame:CGRectMake(0, 0, size.width, size.height)];
-    button.titleLabel.font = [UIFont systemFontOfSize:15];
+    button.titleLabel.font = font;
     [button setTitle:title forState:UIControlStateNormal];
     
     [button setTitleColor:(titleColor?titleColor:RGBColor(102, 102, 102)) forState:UIControlStateNormal];

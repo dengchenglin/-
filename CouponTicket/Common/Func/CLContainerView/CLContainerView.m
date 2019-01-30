@@ -34,6 +34,8 @@
     _tableView = [[UITableView alloc]initWithFrame:self.bounds style:UITableViewStyleGrouped];
     _tableView.delegate = self;
     _tableView.dataSource = self;
+    _tableView.showsVerticalScrollIndicator = NO;
+    _tableView.showsHorizontalScrollIndicator = NO;
     [self addSubview:_tableView];
     _tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
 }
@@ -79,5 +81,10 @@
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return 0;
+}
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
+    if(self.scrollBlock){
+        self.scrollBlock(scrollView.contentOffset);
+    }
 }
 @end

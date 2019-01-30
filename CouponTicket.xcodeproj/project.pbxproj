@@ -136,6 +136,32 @@
 		326AC20A21FB0DEF008C154B /* CTMemberHeadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 326AC20921FB0DEF008C154B /* CTMemberHeadView.xib */; };
 		326AC20D21FB15C8008C154B /* CTMemberLevelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 326AC20C21FB15C8008C154B /* CTMemberLevelView.m */; };
 		326AC21021FB1710008C154B /* CTMemberManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 326AC20F21FB1710008C154B /* CTMemberManager.m */; };
+		3280738B21FEE7B7009CABEC /* CTMineHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3280738A21FEE7B7009CABEC /* CTMineHeadView.m */; };
+		3280738D21FEE7C1009CABEC /* CTMineHeadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3280738C21FEE7C0009CABEC /* CTMineHeadView.xib */; };
+		3280739021FEEC74009CABEC /* CTMineEarnView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3280738F21FEEC74009CABEC /* CTMineEarnView.m */; };
+		3280739221FEEC7B009CABEC /* CTMineEarnView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3280739121FEEC7B009CABEC /* CTMineEarnView.xib */; };
+		3280739521FEF4D7009CABEC /* CTMineOrderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3280739421FEF4D7009CABEC /* CTMineOrderView.m */; };
+		3280739721FEF4DF009CABEC /* CTMineOrderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3280739621FEF4DF009CABEC /* CTMineOrderView.xib */; };
+		3280739A21FF0928009CABEC /* CTMineToolView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3280739921FF0922009CABEC /* CTMineToolView.m */; };
+		3280739C21FF0969009CABEC /* CTMineToolView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3280739B21FF0969009CABEC /* CTMineToolView.xib */; };
+		32BD0E23220171C500E99B86 /* CTNavBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 32BD0E22220171C500E99B86 /* CTNavBar.m */; };
+		32BD0E25220171D700E99B86 /* CTNavBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32BD0E24220171D700E99B86 /* CTNavBar.xib */; };
+		32BD0E28220172FE00E99B86 /* CTMineNavItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 32BD0E27220172FE00E99B86 /* CTMineNavItemView.m */; };
+		32BD0E2A2201730700E99B86 /* CTMineNavItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32BD0E292201730700E99B86 /* CTMineNavItemView.xib */; };
+		32BD0E312201844000E99B86 /* CTSetService.m in Sources */ = {isa = PBXBuildFile; fileRef = 32BD0E302201844000E99B86 /* CTSetService.m */; };
+		32BD0E342201847200E99B86 /* CTSetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32BD0E332201847200E99B86 /* CTSetViewController.m */; };
+		32BD0E382201865400E99B86 /* CTSetListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 32BD0E372201865400E99B86 /* CTSetListCell.m */; };
+		32BD0E3A2201867100E99B86 /* CTSetListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32BD0E392201867100E99B86 /* CTSetListCell.xib */; };
+		32BD0E3D2201890000E99B86 /* CTSetLogoutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 32BD0E3C2201890000E99B86 /* CTSetLogoutView.m */; };
+		32BD0E3F2201890C00E99B86 /* CTSetLogoutView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32BD0E3E2201890C00E99B86 /* CTSetLogoutView.xib */; };
+		32BD0E4222018C7B00E99B86 /* CTAdviseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32BD0E4122018C7B00E99B86 /* CTAdviseViewController.m */; };
+		32BD0E4622018CB600E99B86 /* CTContentInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 32BD0E4522018CB600E99B86 /* CTContentInputView.m */; };
+		32BD0E4822018D7100E99B86 /* CTContentInputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32BD0E4722018D7100E99B86 /* CTContentInputView.xib */; };
+		32BD0E4C22018FFE00E99B86 /* CTPhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 32BD0E4B22018FFE00E99B86 /* CTPhotoView.m */; };
+		32BD0E552201919500E99B86 /* LMPhotoBrower.m in Sources */ = {isa = PBXBuildFile; fileRef = 32BD0E542201919500E99B86 /* LMPhotoBrower.m */; };
+		32BD0E5922019D9300E99B86 /* LMUpdateData.m in Sources */ = {isa = PBXBuildFile; fileRef = 32BD0E5822019D9300E99B86 /* LMUpdateData.m */; };
+		32BD0E5C2201A19E00E99B86 /* CTUpdateImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 32BD0E5B2201A19E00E99B86 /* CTUpdateImageView.m */; };
+		32BD0E5E2201A1AA00E99B86 /* CTUpdateImageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32BD0E5D2201A1AA00E99B86 /* CTUpdateImageView.xib */; };
 		32BE600521EDC5E100BA52EF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 32BE600421EDC5E100BA52EF /* AppDelegate.m */; };
 		32BE600D21EDC5E500BA52EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32BE600C21EDC5E500BA52EF /* Assets.xcassets */; };
 		32BE601021EDC5E500BA52EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32BE600E21EDC5E500BA52EF /* LaunchScreen.storyboard */; };
@@ -258,6 +284,7 @@
 		32E7EE7221F331E500191789 /* CTHomeSalesView.m in Sources */ = {isa = PBXBuildFile; fileRef = 32E7EE7121F331E500191789 /* CTHomeSalesView.m */; };
 		32E7EE7521F3320900191789 /* CTSalesItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 32E7EE7421F3320900191789 /* CTSalesItem.m */; };
 		32E7EE7721F3321400191789 /* CTSalesItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32E7EE7621F3321400191789 /* CTSalesItem.xib */; };
+		32EA9E9E2201AB1B00D72291 /* CTDoneButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 32EA9E9D2201AB1B00D72291 /* CTDoneButton.m */; };
 		AAE7F6FFBF4288319E9610C9 /* libPods-CouponTicket.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F51AA050F5801C0FBDEE117 /* libPods-CouponTicket.a */; };
 /* End PBXBuildFile section */
 
@@ -515,6 +542,49 @@
 		326AC20C21FB15C8008C154B /* CTMemberLevelView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTMemberLevelView.m; sourceTree = "<group>"; };
 		326AC20E21FB1710008C154B /* CTMemberManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTMemberManager.h; sourceTree = "<group>"; };
 		326AC20F21FB1710008C154B /* CTMemberManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTMemberManager.m; sourceTree = "<group>"; };
+		3280738921FEE7B7009CABEC /* CTMineHeadView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTMineHeadView.h; sourceTree = "<group>"; };
+		3280738A21FEE7B7009CABEC /* CTMineHeadView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTMineHeadView.m; sourceTree = "<group>"; };
+		3280738C21FEE7C0009CABEC /* CTMineHeadView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CTMineHeadView.xib; sourceTree = "<group>"; };
+		3280738E21FEEC74009CABEC /* CTMineEarnView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTMineEarnView.h; sourceTree = "<group>"; };
+		3280738F21FEEC74009CABEC /* CTMineEarnView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTMineEarnView.m; sourceTree = "<group>"; };
+		3280739121FEEC7B009CABEC /* CTMineEarnView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CTMineEarnView.xib; sourceTree = "<group>"; };
+		3280739321FEF4D7009CABEC /* CTMineOrderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTMineOrderView.h; sourceTree = "<group>"; };
+		3280739421FEF4D7009CABEC /* CTMineOrderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTMineOrderView.m; sourceTree = "<group>"; };
+		3280739621FEF4DF009CABEC /* CTMineOrderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CTMineOrderView.xib; sourceTree = "<group>"; };
+		3280739821FF0922009CABEC /* CTMineToolView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTMineToolView.h; sourceTree = "<group>"; };
+		3280739921FF0922009CABEC /* CTMineToolView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTMineToolView.m; sourceTree = "<group>"; };
+		3280739B21FF0969009CABEC /* CTMineToolView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CTMineToolView.xib; sourceTree = "<group>"; };
+		32BD0E21220171C500E99B86 /* CTNavBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTNavBar.h; sourceTree = "<group>"; };
+		32BD0E22220171C500E99B86 /* CTNavBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTNavBar.m; sourceTree = "<group>"; };
+		32BD0E24220171D700E99B86 /* CTNavBar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CTNavBar.xib; sourceTree = "<group>"; };
+		32BD0E26220172FE00E99B86 /* CTMineNavItemView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTMineNavItemView.h; sourceTree = "<group>"; };
+		32BD0E27220172FE00E99B86 /* CTMineNavItemView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTMineNavItemView.m; sourceTree = "<group>"; };
+		32BD0E292201730700E99B86 /* CTMineNavItemView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CTMineNavItemView.xib; sourceTree = "<group>"; };
+		32BD0E2C220183AE00E99B86 /* CTSetServiceProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTSetServiceProtocol.h; sourceTree = "<group>"; };
+		32BD0E2F2201844000E99B86 /* CTSetService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTSetService.h; sourceTree = "<group>"; };
+		32BD0E302201844000E99B86 /* CTSetService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTSetService.m; sourceTree = "<group>"; };
+		32BD0E322201847200E99B86 /* CTSetViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTSetViewController.h; sourceTree = "<group>"; };
+		32BD0E332201847200E99B86 /* CTSetViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTSetViewController.m; sourceTree = "<group>"; };
+		32BD0E362201865400E99B86 /* CTSetListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTSetListCell.h; sourceTree = "<group>"; };
+		32BD0E372201865400E99B86 /* CTSetListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTSetListCell.m; sourceTree = "<group>"; };
+		32BD0E392201867100E99B86 /* CTSetListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CTSetListCell.xib; sourceTree = "<group>"; };
+		32BD0E3B2201890000E99B86 /* CTSetLogoutView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTSetLogoutView.h; sourceTree = "<group>"; };
+		32BD0E3C2201890000E99B86 /* CTSetLogoutView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTSetLogoutView.m; sourceTree = "<group>"; };
+		32BD0E3E2201890C00E99B86 /* CTSetLogoutView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CTSetLogoutView.xib; sourceTree = "<group>"; };
+		32BD0E4022018C7B00E99B86 /* CTAdviseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTAdviseViewController.h; sourceTree = "<group>"; };
+		32BD0E4122018C7B00E99B86 /* CTAdviseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTAdviseViewController.m; sourceTree = "<group>"; };
+		32BD0E4422018CB600E99B86 /* CTContentInputView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTContentInputView.h; sourceTree = "<group>"; };
+		32BD0E4522018CB600E99B86 /* CTContentInputView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTContentInputView.m; sourceTree = "<group>"; };
+		32BD0E4722018D7100E99B86 /* CTContentInputView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CTContentInputView.xib; sourceTree = "<group>"; };
+		32BD0E4A22018FFE00E99B86 /* CTPhotoView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTPhotoView.h; sourceTree = "<group>"; };
+		32BD0E4B22018FFE00E99B86 /* CTPhotoView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTPhotoView.m; sourceTree = "<group>"; };
+		32BD0E532201919500E99B86 /* LMPhotoBrower.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMPhotoBrower.h; sourceTree = "<group>"; };
+		32BD0E542201919500E99B86 /* LMPhotoBrower.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMPhotoBrower.m; sourceTree = "<group>"; };
+		32BD0E5722019D9300E99B86 /* LMUpdateData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMUpdateData.h; sourceTree = "<group>"; };
+		32BD0E5822019D9300E99B86 /* LMUpdateData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMUpdateData.m; sourceTree = "<group>"; };
+		32BD0E5A2201A19E00E99B86 /* CTUpdateImageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTUpdateImageView.h; sourceTree = "<group>"; };
+		32BD0E5B2201A19E00E99B86 /* CTUpdateImageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTUpdateImageView.m; sourceTree = "<group>"; };
+		32BD0E5D2201A1AA00E99B86 /* CTUpdateImageView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CTUpdateImageView.xib; sourceTree = "<group>"; };
 		32BE600021EDC5E100BA52EF /* CouponTicket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CouponTicket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		32BE600321EDC5E100BA52EF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		32BE600421EDC5E100BA52EF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -759,6 +829,8 @@
 		32E7EE7321F3320900191789 /* CTSalesItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTSalesItem.h; sourceTree = "<group>"; };
 		32E7EE7421F3320900191789 /* CTSalesItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTSalesItem.m; sourceTree = "<group>"; };
 		32E7EE7621F3321400191789 /* CTSalesItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CTSalesItem.xib; sourceTree = "<group>"; };
+		32EA9E9C2201AB1B00D72291 /* CTDoneButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTDoneButton.h; sourceTree = "<group>"; };
+		32EA9E9D2201AB1B00D72291 /* CTDoneButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTDoneButton.m; sourceTree = "<group>"; };
 		6AA14B2C43C4DB99B1D60D47 /* Pods-CouponTicket.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CouponTicket.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CouponTicket/Pods-CouponTicket.debug.xcconfig"; sourceTree = "<group>"; };
 		7665215356141A688CE2B40E /* Pods-CouponTicket.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CouponTicket.release.xcconfig"; path = "Pods/Target Support Files/Pods-CouponTicket/Pods-CouponTicket.release.xcconfig"; sourceTree = "<group>"; };
 		9F51AA050F5801C0FBDEE117 /* libPods-CouponTicket.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CouponTicket.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -861,14 +933,14 @@
 			path = strategy;
 			sourceTree = "<group>";
 		};
-		240F512D21F9DAEB00BFDD2D /* PopWindow */ = {
+		240F512D21F9DAEB00BFDD2D /* CTPopWindow */ = {
 			isa = PBXGroup;
 			children = (
 				240F512F21F9DBAB00BFDD2D /* CTPasteCheckPopView.h */,
 				240F513021F9DBAB00BFDD2D /* CTPasteCheckPopView.m */,
 				240F513221F9DBC100BFDD2D /* CTPasteCheckPopView.xib */,
 			);
-			path = PopWindow;
+			path = CTPopWindow;
 			sourceTree = "<group>";
 		};
 		245CAE4B21F42E6900496052 /* CommonClasses */ = {
@@ -883,7 +955,10 @@
 		245CAE4C21F42E8000496052 /* CTViews */ = {
 			isa = PBXGroup;
 			children = (
-				240F512D21F9DAEB00BFDD2D /* PopWindow */,
+				32BD0E4922018FE400E99B86 /* CTPhotosView */,
+				32BD0E4322018C8C00E99B86 /* CTContentInputView */,
+				32BD0E20220171B600E99B86 /* CTNavBar */,
+				240F512D21F9DAEB00BFDD2D /* CTPopWindow */,
 				32CA556921F6C22600145E31 /* CTNoDataResultView */,
 				326525C221F595AB00B63DD7 /* CTGoodListView */,
 				245CAE4D21F42E8000496052 /* CTMainCategoryView */,
@@ -1071,6 +1146,7 @@
 		322453C721F2BEF800471059 /* WeakClass */ = {
 			isa = PBXGroup;
 			children = (
+				32BD0E4D2201916900E99B86 /* CTFunc */,
 				326525D021F5B29400B63DD7 /* CTAppManager */,
 				326525BE21F57BCB00B63DD7 /* CTUtils */,
 				322453ED21F2CEF600471059 /* CTConfig */,
@@ -1131,6 +1207,8 @@
 				32CA55AE21F7253600145E31 /* CTSearchTextfield.m */,
 				326AC1EA21FAB8F4008C154B /* CTButton.h */,
 				326AC1EB21FAB8F4008C154B /* CTButton.m */,
+				32EA9E9C2201AB1B00D72291 /* CTDoneButton.h */,
+				32EA9E9D2201AB1B00D72291 /* CTDoneButton.m */,
 			);
 			path = CTViews;
 			sourceTree = "<group>";
@@ -1162,6 +1240,7 @@
 				32CA558621F7122A00145E31 /* CTSearchServiceProtocol.h */,
 				324C3DA821F854E800536DA8 /* CTGoodListServiceProtocol.h */,
 				3220EA2321F988DC004E0422 /* CTWebServiceProtocol.h */,
+				32BD0E2C220183AE00E99B86 /* CTSetServiceProtocol.h */,
 			);
 			path = CTModuleServices;
 			sourceTree = "<group>";
@@ -1464,6 +1543,130 @@
 				2405AED521FC0CAD000E5081 /* CTMemberTitleView.xib */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		3280738821FEE7A0009CABEC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3280738921FEE7B7009CABEC /* CTMineHeadView.h */,
+				3280738A21FEE7B7009CABEC /* CTMineHeadView.m */,
+				3280738C21FEE7C0009CABEC /* CTMineHeadView.xib */,
+				3280738E21FEEC74009CABEC /* CTMineEarnView.h */,
+				3280738F21FEEC74009CABEC /* CTMineEarnView.m */,
+				3280739121FEEC7B009CABEC /* CTMineEarnView.xib */,
+				3280739321FEF4D7009CABEC /* CTMineOrderView.h */,
+				3280739421FEF4D7009CABEC /* CTMineOrderView.m */,
+				3280739621FEF4DF009CABEC /* CTMineOrderView.xib */,
+				3280739821FF0922009CABEC /* CTMineToolView.h */,
+				3280739921FF0922009CABEC /* CTMineToolView.m */,
+				3280739B21FF0969009CABEC /* CTMineToolView.xib */,
+				32BD0E26220172FE00E99B86 /* CTMineNavItemView.h */,
+				32BD0E27220172FE00E99B86 /* CTMineNavItemView.m */,
+				32BD0E292201730700E99B86 /* CTMineNavItemView.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		32BD0E20220171B600E99B86 /* CTNavBar */ = {
+			isa = PBXGroup;
+			children = (
+				32BD0E21220171C500E99B86 /* CTNavBar.h */,
+				32BD0E22220171C500E99B86 /* CTNavBar.m */,
+				32BD0E24220171D700E99B86 /* CTNavBar.xib */,
+			);
+			path = CTNavBar;
+			sourceTree = "<group>";
+		};
+		32BD0E2B2201838500E99B86 /* Set */ = {
+			isa = PBXGroup;
+			children = (
+				32BD0E352201863200E99B86 /* Views */,
+				32BD0E2E2201842F00E99B86 /* Service */,
+				32BD0E2D2201842400E99B86 /* ViewControllers */,
+			);
+			path = Set;
+			sourceTree = "<group>";
+		};
+		32BD0E2D2201842400E99B86 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				32BD0E322201847200E99B86 /* CTSetViewController.h */,
+				32BD0E332201847200E99B86 /* CTSetViewController.m */,
+				32BD0E4022018C7B00E99B86 /* CTAdviseViewController.h */,
+				32BD0E4122018C7B00E99B86 /* CTAdviseViewController.m */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		32BD0E2E2201842F00E99B86 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				32BD0E2F2201844000E99B86 /* CTSetService.h */,
+				32BD0E302201844000E99B86 /* CTSetService.m */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		32BD0E352201863200E99B86 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				32BD0E362201865400E99B86 /* CTSetListCell.h */,
+				32BD0E372201865400E99B86 /* CTSetListCell.m */,
+				32BD0E392201867100E99B86 /* CTSetListCell.xib */,
+				32BD0E3B2201890000E99B86 /* CTSetLogoutView.h */,
+				32BD0E3C2201890000E99B86 /* CTSetLogoutView.m */,
+				32BD0E3E2201890C00E99B86 /* CTSetLogoutView.xib */,
+				32BD0E5A2201A19E00E99B86 /* CTUpdateImageView.h */,
+				32BD0E5B2201A19E00E99B86 /* CTUpdateImageView.m */,
+				32BD0E5D2201A1AA00E99B86 /* CTUpdateImageView.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		32BD0E4322018C8C00E99B86 /* CTContentInputView */ = {
+			isa = PBXGroup;
+			children = (
+				32BD0E4422018CB600E99B86 /* CTContentInputView.h */,
+				32BD0E4522018CB600E99B86 /* CTContentInputView.m */,
+				32BD0E4722018D7100E99B86 /* CTContentInputView.xib */,
+			);
+			path = CTContentInputView;
+			sourceTree = "<group>";
+		};
+		32BD0E4922018FE400E99B86 /* CTPhotosView */ = {
+			isa = PBXGroup;
+			children = (
+				32BD0E4A22018FFE00E99B86 /* CTPhotoView.h */,
+				32BD0E4B22018FFE00E99B86 /* CTPhotoView.m */,
+			);
+			path = CTPhotosView;
+			sourceTree = "<group>";
+		};
+		32BD0E4D2201916900E99B86 /* CTFunc */ = {
+			isa = PBXGroup;
+			children = (
+				32BD0E5622019D9300E99B86 /* LMUpdateData */,
+				32BD0E522201919500E99B86 /* LMPhotoBrower */,
+			);
+			path = CTFunc;
+			sourceTree = "<group>";
+		};
+		32BD0E522201919500E99B86 /* LMPhotoBrower */ = {
+			isa = PBXGroup;
+			children = (
+				32BD0E532201919500E99B86 /* LMPhotoBrower.h */,
+				32BD0E542201919500E99B86 /* LMPhotoBrower.m */,
+			);
+			path = LMPhotoBrower;
+			sourceTree = "<group>";
+		};
+		32BD0E5622019D9300E99B86 /* LMUpdateData */ = {
+			isa = PBXGroup;
+			children = (
+				32BD0E5722019D9300E99B86 /* LMUpdateData.h */,
+				32BD0E5822019D9300E99B86 /* LMUpdateData.m */,
+			);
+			path = LMUpdateData;
 			sourceTree = "<group>";
 		};
 		32BE5FF721EDC5E100BA52EF = {
@@ -1955,6 +2158,7 @@
 		32BE613A21EDD2CD00BA52EF /* Mine */ = {
 			isa = PBXGroup;
 			children = (
+				3280738821FEE7A0009CABEC /* Views */,
 				322453BE21F2BEAD00471059 /* Service */,
 				325D3B5121F1DDB400465B91 /* ViewControllers */,
 			);
@@ -1964,6 +2168,7 @@
 		32BE613B21EDDA7700BA52EF /* ComponentClasses */ = {
 			isa = PBXGroup;
 			children = (
+				32BD0E2B2201838500E99B86 /* Set */,
 				3220EA2221F98867004E0422 /* WebView */,
 				324C3D9E21F851D800536DA8 /* GoodList */,
 				32CA558721F7128D00145E31 /* Search */,
@@ -2281,13 +2486,19 @@
 				32BE600D21EDC5E500BA52EF /* Assets.xcassets in Resources */,
 				24FF625D21F40F0B00488860 /* CTHomeSalesView.xib in Resources */,
 				326525FA21F5CF5800B63DD7 /* CTGetCodeView_.xib in Resources */,
+				32BD0E3F2201890C00E99B86 /* CTSetLogoutView.xib in Resources */,
 				326525DA21F5B53900B63DD7 /* CTLoginView_.xib in Resources */,
+				3280739221FEEC7B009CABEC /* CTMineEarnView.xib in Resources */,
 				32CA556F21F6C22600145E31 /* LMNetErrorView.xib in Resources */,
 				32CA55A021F7181600145E31 /* CTHistoryKeywordHeadView.xib in Resources */,
 				2407A8F021FD8C3F000403B7 /* CTMemberEquityView3.xib in Resources */,
+				32BD0E25220171D700E99B86 /* CTNavBar.xib in Resources */,
+				32BD0E3A2201867100E99B86 /* CTSetListCell.xib in Resources */,
 				32CA558521F6F23A00145E31 /* CTSortButton.xib in Resources */,
 				240E189C21F5FA45004A4BCB /* CTForgetPsdView_.xib in Resources */,
+				32BD0E4822018D7100E99B86 /* CTContentInputView.xib in Resources */,
 				3220EA1B21F9679B004E0422 /* CTMessageListCell.xib in Resources */,
+				32BD0E5E2201A1AA00E99B86 /* CTUpdateImageView.xib in Resources */,
 				326AC1F421FADF08008C154B /* CTHotCatoryView.xib in Resources */,
 				326525FF21F5CF8100B63DD7 /* CTSetPasswordView_.xib in Resources */,
 				326AC20A21FB0DEF008C154B /* CTMemberHeadView.xib in Resources */,
@@ -2298,6 +2509,7 @@
 				326525CC21F5A2DA00B63DD7 /* CTGoodListCell.xib in Resources */,
 				326525C721F595D300B63DD7 /* CTGoodListView_.xib in Resources */,
 				2407A8EE21FD8C2D000403B7 /* CTMemberEquityView2.xib in Resources */,
+				3280738D21FEE7C1009CABEC /* CTMineHeadView.xib in Resources */,
 				326525F521F5CF0200B63DD7 /* CTRegisterView_.xib in Resources */,
 				32CA558021F6F10900145E31 /* CTUpDownControl.xib in Resources */,
 				32CA557021F6C22600145E31 /* LMNoDataView.xib in Resources */,
@@ -2308,9 +2520,12 @@
 				32E7EE6F21F32E9800191789 /* CTHomeNavView.xib in Resources */,
 				32E7EE7721F3321400191789 /* CTSalesItem.xib in Resources */,
 				326AC1E421FAAAA8008C154B /* CTSearchTikcetNavView.xib in Resources */,
+				32BD0E2A2201730700E99B86 /* CTMineNavItemView.xib in Resources */,
 				245CAE5621F42E8000496052 /* CTMainCategoryHeadView.xib in Resources */,
 				2405AEFE21FC2FB8000E5081 /* CTMemberChoicenessCell.xib in Resources */,
 				2405AF0D21FC3681000E5081 /* CTMemberStrategyItem.xib in Resources */,
+				3280739C21FF0969009CABEC /* CTMineToolView.xib in Resources */,
+				3280739721FEF4DF009CABEC /* CTMineOrderView.xib in Resources */,
 				32CA55AC21F7242300145E31 /* CTSearchBar.xib in Resources */,
 				322453F621F2D60300471059 /* CTHomeNavBar.xib in Resources */,
 			);
@@ -2398,6 +2613,8 @@
 				325D3B5B21F1DE1200465B91 /* CTMemberViewController.m in Sources */,
 				32BE60F021EDCFA600BA52EF /* CLRefreshConfig.m in Sources */,
 				326AC1E721FAB143008C154B /* CTSearchTikcetPasteView.m in Sources */,
+				32BD0E3D2201890000E99B86 /* CTSetLogoutView.m in Sources */,
+				32BD0E28220172FE00E99B86 /* CTMineNavItemView.m in Sources */,
 				32CA559421F7148800145E31 /* CTSearchPreviewView.m in Sources */,
 				32BE610421EDCFA600BA52EF /* UIButton+Helper.m in Sources */,
 				32BE610A21EDCFA600BA52EF /* UITextView+ZWPlaceHolder.m in Sources */,
@@ -2417,6 +2634,7 @@
 				32BE60EB21EDCFA600BA52EF /* CLNetworkEngine.m in Sources */,
 				32BE610121EDCFA600BA52EF /* UIView+Layout.m in Sources */,
 				32BE611221EDCFA600BA52EF /* NSDictionary+Category.m in Sources */,
+				3280739A21FF0928009CABEC /* CTMineToolView.m in Sources */,
 				3220EA4821F9C570004E0422 /* CTGoodListViewController.m in Sources */,
 				32BE611E21EDCFA600BA52EF /* NSObject+YYModels.m in Sources */,
 				32BE610E21EDCFA600BA52EF /* FileUtil.m in Sources */,
@@ -2441,7 +2659,10 @@
 				2405AEEE21FC22A6000E5081 /* CTMemberUpgradeView.m in Sources */,
 				32BE601321EDC5E500BA52EF /* main.m in Sources */,
 				32BE60FE21EDCFA600BA52EF /* SDPhotoBrowser.m in Sources */,
+				32BD0E23220171C500E99B86 /* CTNavBar.m in Sources */,
+				32BD0E4C22018FFE00E99B86 /* CTPhotoView.m in Sources */,
 				326AC20821FB0DDD008C154B /* CTMemberHeadView.m in Sources */,
+				32EA9E9E2201AB1B00D72291 /* CTDoneButton.m in Sources */,
 				3220EA2B21F98C6D004E0422 /* CTWebService.m in Sources */,
 				32BE612021EDCFA600BA52EF /* UIView+YYAdd.m in Sources */,
 				32CA556621F6B4F700145E31 /* CTShareView.m in Sources */,
@@ -2454,6 +2675,7 @@
 				2405AEF921FC2DFD000E5081 /* CTMemberChoicenessView.m in Sources */,
 				2405AED421FC0CA1000E5081 /* CTMemberTitleView.m in Sources */,
 				32CA559E21F7180000145E31 /* CTHistoryKeywordHeadView.m in Sources */,
+				3280739521FEF4D7009CABEC /* CTMineOrderView.m in Sources */,
 				3220EA1A21F9679B004E0422 /* CTMessageListCell.m in Sources */,
 				245CAE5521F42E8000496052 /* CTMainCategoryView.m in Sources */,
 				24FF626021F41D1000488860 /* CTHomeNewestHeadView.m in Sources */,
@@ -2474,7 +2696,9 @@
 				2405AF0521FC35ED000E5081 /* CTMemberStrategyView.m in Sources */,
 				322453C621F2BED600471059 /* CTLoginService.m in Sources */,
 				32BE600521EDC5E100BA52EF /* AppDelegate.m in Sources */,
+				3280739021FEEC74009CABEC /* CTMineEarnView.m in Sources */,
 				326AC1EF21FAC26E008C154B /* UIPasteboard+Helper.m in Sources */,
+				32BD0E5C2201A19E00E99B86 /* CTUpdateImageView.m in Sources */,
 				32BE60ED21EDCFA600BA52EF /* CLRequest.m in Sources */,
 				326AC1FB21FAE6C9008C154B /* CTSearchTicketViewModel.m in Sources */,
 				32BE60FC21EDCFA600BA52EF /* PassWordTool.m in Sources */,
@@ -2490,6 +2714,7 @@
 				2407A8DB21FD852C000403B7 /* CTEquitySegmentedControl.m in Sources */,
 				32BE611521EDCFA600BA52EF /* NSString+Log.m in Sources */,
 				32BE612C21EDCFA600BA52EF /* SelPlayerConfiguration.m in Sources */,
+				32BD0E552201919500E99B86 /* LMPhotoBrower.m in Sources */,
 				32BE611821EDCFA600BA52EF /* UIColor+HexString.m in Sources */,
 				32BE613121EDCFA600BA52EF /* NSDate+Extension.m in Sources */,
 				240E189121F5F4C6004A4BCB /* CTLoginBaseViewController.m in Sources */,
@@ -2505,6 +2730,7 @@
 				32BE611C21EDCFA600BA52EF /* CALayer+YYAdd.m in Sources */,
 				32BE612121EDCFA600BA52EF /* YYCGUtilities.m in Sources */,
 				32E7EE4921F2F0D500191789 /* LMSegmentedControl.m in Sources */,
+				3280738B21FEE7B7009CABEC /* CTMineHeadView.m in Sources */,
 				32BE611121EDCFA600BA52EF /* NSData+Category.m in Sources */,
 				32E7EE6D21F32CE700191789 /* CTHomeNavView.m in Sources */,
 				326AC1E221FAAA9C008C154B /* CTSearchTikcetNavView.m in Sources */,
@@ -2515,7 +2741,9 @@
 				32BE60FB21EDCFA600BA52EF /* KeychainTool.m in Sources */,
 				326525BD21F5652700B63DD7 /* CTMainCategoryHeadView.m in Sources */,
 				322453B121F2BE4600471059 /* CTHomeService.m in Sources */,
+				32BD0E4222018C7B00E99B86 /* CTAdviseViewController.m in Sources */,
 				322453D621F2BFC200471059 /* CTBaseViewController.m in Sources */,
+				32BD0E342201847200E99B86 /* CTSetViewController.m in Sources */,
 				32BE611F21EDCFA600BA52EF /* NSTimer+YYAdd.m in Sources */,
 				32BE610021EDCFA600BA52EF /* TZPhotoPreviewCell.m in Sources */,
 				326525E121F5C8BE00B63DD7 /* CTCanValidButton.m in Sources */,
@@ -2544,6 +2772,7 @@
 				322453B921F2BE8A00471059 /* CTRecommendService.m in Sources */,
 				32CA557321F6C53E00145E31 /* CTHomeCategoryViewModel.m in Sources */,
 				32CA555A21F6B07000145E31 /* CTShareService.m in Sources */,
+				32BD0E4622018CB600E99B86 /* CTContentInputView.m in Sources */,
 				245CAE5A21F42EC200496052 /* CTCategoryModel.m in Sources */,
 				32E7EE5E21F3066700191789 /* CTHomePageController.m in Sources */,
 				32BE612721EDCFA600BA52EF /* CLTimerButton.m in Sources */,
@@ -2555,6 +2784,7 @@
 				32BE612521EDCFA600BA52EF /* CLTextField.m in Sources */,
 				240E188D21F5F1FC004A4BCB /* CTRegisterViewModel.m in Sources */,
 				326AC1F221FADF00008C154B /* CTHotCatoryView.m in Sources */,
+				32BD0E382201865400E99B86 /* CTSetListCell.m in Sources */,
 				2407A8E721FD88A1000403B7 /* CTMemberEquityView3.m in Sources */,
 				32BE611B21EDCFA600BA52EF /* UIView+Category.m in Sources */,
 				32BE610921EDCFA600BA52EF /* UITextView+Helper.m in Sources */,
@@ -2566,12 +2796,14 @@
 				240E189A21F5FA39004A4BCB /* CTForgetPsdView.m in Sources */,
 				326525DE21F5C60B00B63DD7 /* CTLoginViewModel.m in Sources */,
 				32BE610221EDCFA600BA52EF /* MBProgressHUD+Helper.m in Sources */,
+				32BD0E312201844000E99B86 /* CTSetService.m in Sources */,
 				325D3B5821F1DE0600465B91 /* CTRecommendViewController.m in Sources */,
 				322453F021F2CF1100471059 /* CTAppConfig.m in Sources */,
 				32CA555521F6AD1600145E31 /* CTShareViewController.m in Sources */,
 				326525D321F5B2A700B63DD7 /* CTAppManager.m in Sources */,
 				32BE60E821EDCFA600BA52EF /* Aspects.m in Sources */,
 				325D3B7421F1E67200465B91 /* CTMainController.m in Sources */,
+				32BD0E5922019D9300E99B86 /* LMUpdateData.m in Sources */,
 				32BE60FA21EDCFA600BA52EF /* ImagePicker.m in Sources */,
 				32BE611321EDCFA600BA52EF /* NSDictionary+Log.m in Sources */,
 				2405AEDD21FC0E34000E5081 /* CTMemberEquityView.m in Sources */,
@@ -2737,17 +2969,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 9ZJ3RLKNS9;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/CouponTicket/SystemConfigs/CTPrefixHeader.pch";
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = NO;
 				INFOPLIST_FILE = "$(SRCROOT)/CouponTicket/SystemConfigs/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = cn.dankal.coupon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "38e0328f-6296-4476-8e11-69c0bf7da718";
+				PROVISIONING_PROFILE_SPECIFIER = AllProfile;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -2758,17 +2993,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 9ZJ3RLKNS9;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/CouponTicket/SystemConfigs/CTPrefixHeader.pch";
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = NO;
 				INFOPLIST_FILE = "$(SRCROOT)/CouponTicket/SystemConfigs/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = cn.dankal.coupon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "38e0328f-6296-4476-8e11-69c0bf7da718";
+				PROVISIONING_PROFILE_SPECIFIER = AllProfile;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

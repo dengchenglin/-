@@ -8,12 +8,16 @@
 
 #import "CTAppManager.h"
 
+@implementation CTUser
+
+@end
+
 @implementation CTAppManager
 
 SINGLETON_FOR_CLASS_IMP(CTAppManager)
 
 + (BOOL)logined{
-    return YES;
+    return [CTAppManager sharedInstance].user;
 }
 
 @end

@@ -9,5 +9,11 @@
 #import <UIKit/UIKit.h>
 
 @interface CTMineToolView : UIView
+@property (weak, nonatomic) IBOutlet UIView *inviteView;
+@property (weak, nonatomic) IBOutlet UIView *teamView;
+@property (weak, nonatomic) IBOutlet UIView *collectView;
+@property (weak, nonatomic) IBOutlet UIView *guideView;
+@property (weak, nonatomic) IBOutlet UIView *inviteCodeView;
+@property (weak, nonatomic) IBOutlet UIView *questionView;
 
 @end

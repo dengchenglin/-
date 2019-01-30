@@ -110,6 +110,15 @@
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
 }
 
+- (void)setUpEvent{
+    @weakify(self)
+    [self.categoryView setClickItemBlock:^(NSInteger index) {
+        @strongify(self)
+        UIViewController *vc = [[CTModuleManager goodListService]goodListViewControllerWithCategoryId:nil];
+        [self.navigationController pushViewController:vc animated:YES];
+    }];
+}
+
 - (void)request{
     [self reloadData:nil];
 }

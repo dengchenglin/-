@@ -14,7 +14,7 @@
 
 @property (nonatomic, copy) void (^refreshBlock)(void);
 
-//progress/loading/diff 自定义子视图时重写这些属性完成相应的UI效果
+//progress/loading/diff 自定义动画子视图时重写这些属性完成相应的UI效果
 //下拉进度
 @property (nonatomic, assign)CGFloat progress;
 //触发加载

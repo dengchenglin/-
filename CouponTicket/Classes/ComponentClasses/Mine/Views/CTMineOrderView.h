@@ -9,5 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface CTMineOrderView : UIView
+@property (weak, nonatomic) IBOutlet UIView *lookMoreView;
+@property (weak, nonatomic) IBOutlet UIView *payedView;
+@property (weak, nonatomic) IBOutlet UIView *calculatedView;
+@property (weak, nonatomic) IBOutlet UIView *disabledView;
+@property (weak, nonatomic) IBOutlet UIView *refundView;
 
 @end
