@@ -46,6 +46,12 @@
 		240F513121F9DBAB00BFDD2D /* CTPasteCheckPopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 240F513021F9DBAB00BFDD2D /* CTPasteCheckPopView.m */; };
 		240F513321F9DBC100BFDD2D /* CTPasteCheckPopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 240F513221F9DBC100BFDD2D /* CTPasteCheckPopView.xib */; };
 		240F513621F9EA3500BFDD2D /* CTHomePageController+PopWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 240F513521F9EA3500BFDD2D /* CTHomePageController+PopWindow.m */; };
+		240F74642201C5C600A2DFFC /* CTQuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 240F74632201C5C600A2DFFC /* CTQuestionViewController.m */; };
+		240F74682201C64600A2DFFC /* CTToolService.m in Sources */ = {isa = PBXBuildFile; fileRef = 240F74672201C64600A2DFFC /* CTToolService.m */; };
+		240F746B2201C70700A2DFFC /* CTToolViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 240F746A2201C70700A2DFFC /* CTToolViewController.m */; };
+		240F74702201C9BD00A2DFFC /* CTQuestionListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 240F746E2201C9BD00A2DFFC /* CTQuestionListCell.m */; };
+		240F74712201C9BD00A2DFFC /* CTQuestionListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 240F746F2201C9BD00A2DFFC /* CTQuestionListCell.xib */; };
+		240F74752201CABF00A2DFFC /* CTQuestionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 240F74742201CABF00A2DFFC /* CTQuestionModel.m */; };
 		245CAE5421F42E8000496052 /* CTMainCategoryControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 245CAE4E21F42E8000496052 /* CTMainCategoryControl.m */; };
 		245CAE5521F42E8000496052 /* CTMainCategoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 245CAE4F21F42E8000496052 /* CTMainCategoryView.m */; };
 		245CAE5621F42E8000496052 /* CTMainCategoryHeadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 245CAE5221F42E8000496052 /* CTMainCategoryHeadView.xib */; };
@@ -365,6 +371,18 @@
 		240F513221F9DBC100BFDD2D /* CTPasteCheckPopView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CTPasteCheckPopView.xib; sourceTree = "<group>"; };
 		240F513421F9EA3500BFDD2D /* CTHomePageController+PopWindow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CTHomePageController+PopWindow.h"; sourceTree = "<group>"; };
 		240F513521F9EA3500BFDD2D /* CTHomePageController+PopWindow.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CTHomePageController+PopWindow.m"; sourceTree = "<group>"; };
+		240F74622201C5C600A2DFFC /* CTQuestionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTQuestionViewController.h; sourceTree = "<group>"; };
+		240F74632201C5C600A2DFFC /* CTQuestionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTQuestionViewController.m; sourceTree = "<group>"; };
+		240F74652201C5E500A2DFFC /* CTToolServiceProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTToolServiceProtocol.h; sourceTree = "<group>"; };
+		240F74662201C64600A2DFFC /* CTToolService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTToolService.h; sourceTree = "<group>"; };
+		240F74672201C64600A2DFFC /* CTToolService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTToolService.m; sourceTree = "<group>"; };
+		240F74692201C70700A2DFFC /* CTToolViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTToolViewController.h; sourceTree = "<group>"; };
+		240F746A2201C70700A2DFFC /* CTToolViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTToolViewController.m; sourceTree = "<group>"; };
+		240F746D2201C9BD00A2DFFC /* CTQuestionListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTQuestionListCell.h; sourceTree = "<group>"; };
+		240F746E2201C9BD00A2DFFC /* CTQuestionListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTQuestionListCell.m; sourceTree = "<group>"; };
+		240F746F2201C9BD00A2DFFC /* CTQuestionListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CTQuestionListCell.xib; sourceTree = "<group>"; };
+		240F74732201CABF00A2DFFC /* CTQuestionModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTQuestionModel.h; sourceTree = "<group>"; };
+		240F74742201CABF00A2DFFC /* CTQuestionModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTQuestionModel.m; sourceTree = "<group>"; };
 		245CAE4E21F42E8000496052 /* CTMainCategoryControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTMainCategoryControl.m; sourceTree = "<group>"; };
 		245CAE4F21F42E8000496052 /* CTMainCategoryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTMainCategoryView.m; sourceTree = "<group>"; };
 		245CAE5021F42E8000496052 /* CTMainCategoryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTMainCategoryView.h; sourceTree = "<group>"; };
@@ -943,6 +961,56 @@
 			path = CTPopWindow;
 			sourceTree = "<group>";
 		};
+		240F745F2201C58F00A2DFFC /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				240F74722201CAB100A2DFFC /* Models */,
+				240F746C2201C99E00A2DFFC /* Views */,
+				240F74612201C5B000A2DFFC /* Service */,
+				240F74602201C59F00A2DFFC /* ViewControllers */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		240F74602201C59F00A2DFFC /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				240F74622201C5C600A2DFFC /* CTQuestionViewController.h */,
+				240F74632201C5C600A2DFFC /* CTQuestionViewController.m */,
+				240F74692201C70700A2DFFC /* CTToolViewController.h */,
+				240F746A2201C70700A2DFFC /* CTToolViewController.m */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		240F74612201C5B000A2DFFC /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				240F74662201C64600A2DFFC /* CTToolService.h */,
+				240F74672201C64600A2DFFC /* CTToolService.m */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		240F746C2201C99E00A2DFFC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				240F746D2201C9BD00A2DFFC /* CTQuestionListCell.h */,
+				240F746E2201C9BD00A2DFFC /* CTQuestionListCell.m */,
+				240F746F2201C9BD00A2DFFC /* CTQuestionListCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		240F74722201CAB100A2DFFC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				240F74732201CABF00A2DFFC /* CTQuestionModel.h */,
+				240F74742201CABF00A2DFFC /* CTQuestionModel.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		245CAE4B21F42E6900496052 /* CommonClasses */ = {
 			isa = PBXGroup;
 			children = (
@@ -1241,6 +1309,7 @@
 				324C3DA821F854E800536DA8 /* CTGoodListServiceProtocol.h */,
 				3220EA2321F988DC004E0422 /* CTWebServiceProtocol.h */,
 				32BD0E2C220183AE00E99B86 /* CTSetServiceProtocol.h */,
+				240F74652201C5E500A2DFFC /* CTToolServiceProtocol.h */,
 			);
 			path = CTModuleServices;
 			sourceTree = "<group>";
@@ -2168,6 +2237,7 @@
 		32BE613B21EDDA7700BA52EF /* ComponentClasses */ = {
 			isa = PBXGroup;
 			children = (
+				240F745F2201C58F00A2DFFC /* Tool */,
 				32BD0E2B2201838500E99B86 /* Set */,
 				3220EA2221F98867004E0422 /* WebView */,
 				324C3D9E21F851D800536DA8 /* GoodList */,
@@ -2507,6 +2577,7 @@
 				3220EA4421F9C343004E0422 /* CTHotSalesNoticeView.xib in Resources */,
 				2405AEF521FC22F7000E5081 /* CTMemberUpgradeContainerView.xib in Resources */,
 				326525CC21F5A2DA00B63DD7 /* CTGoodListCell.xib in Resources */,
+				240F74712201C9BD00A2DFFC /* CTQuestionListCell.xib in Resources */,
 				326525C721F595D300B63DD7 /* CTGoodListView_.xib in Resources */,
 				2407A8EE21FD8C2D000403B7 /* CTMemberEquityView2.xib in Resources */,
 				3280738D21FEE7C1009CABEC /* CTMineHeadView.xib in Resources */,
@@ -2606,6 +2677,7 @@
 				3220EA4B21F9C99B004E0422 /* CTGoodResultViewController.m in Sources */,
 				326525D821F5B53000B63DD7 /* CTLoginView.m in Sources */,
 				32BE611D21EDCFA600BA52EF /* NSObject+YYAdd.m in Sources */,
+				240F74682201C64600A2DFFC /* CTToolService.m in Sources */,
 				32BE610D21EDCFA600BA52EF /* DateUtil.m in Sources */,
 				2405AEE421FC1885000E5081 /* CTMemberPrivilegeView.m in Sources */,
 				32E7EE5521F2F7E700191789 /* CTHomeTopView.m in Sources */,
@@ -2680,6 +2752,7 @@
 				245CAE5521F42E8000496052 /* CTMainCategoryView.m in Sources */,
 				24FF626021F41D1000488860 /* CTHomeNewestHeadView.m in Sources */,
 				326525C521F595CB00B63DD7 /* CTGoodListView_.m in Sources */,
+				240F74752201CABF00A2DFFC /* CTQuestionModel.m in Sources */,
 				2405AF0B21FC3678000E5081 /* CTMemberStrategyItem.m in Sources */,
 				32BE612F21EDCFA600BA52EF /* SelVideoPlayer.m in Sources */,
 				32BE60F121EDCFA600BA52EF /* CLRefreshFactory.m in Sources */,
@@ -2706,6 +2779,7 @@
 				32CA556221F6B0E700145E31 /* CTMessageService.m in Sources */,
 				2405AEDA21FC0E20000E5081 /* CTMemberEquityItem.m in Sources */,
 				326AC1FE21FAF368008C154B /* CTYourLikedHeadView.m in Sources */,
+				240F746B2201C70700A2DFFC /* CTToolViewController.m in Sources */,
 				32E7EE6421F30BAE00191789 /* CTHomeCatoryViewController.m in Sources */,
 				32BE610821EDCFA600BA52EF /* UITextField+Helper.m in Sources */,
 				32BE60F821EDCFA600BA52EF /* CLRefreshNulMoreView.m in Sources */,
@@ -2752,6 +2826,7 @@
 				32BE612E21EDCFA600BA52EF /* SelPlaybackControls.m in Sources */,
 				3220EA2721F989A6004E0422 /* CTWebViewController.m in Sources */,
 				324C3DA721F854B000536DA8 /* CTGoodService.m in Sources */,
+				240F74702201C9BD00A2DFFC /* CTQuestionListCell.m in Sources */,
 				32BE612221EDCFA600BA52EF /* AddressPickerView.m in Sources */,
 				2407A8D821FD826A000403B7 /* CTMemberEquityController.m in Sources */,
 				32CA559021F712D900145E31 /* CTSearchService.m in Sources */,
@@ -2785,6 +2860,7 @@
 				240E188D21F5F1FC004A4BCB /* CTRegisterViewModel.m in Sources */,
 				326AC1F221FADF00008C154B /* CTHotCatoryView.m in Sources */,
 				32BD0E382201865400E99B86 /* CTSetListCell.m in Sources */,
+				240F74642201C5C600A2DFFC /* CTQuestionViewController.m in Sources */,
 				2407A8E721FD88A1000403B7 /* CTMemberEquityView3.m in Sources */,
 				32BE611B21EDCFA600BA52EF /* UIView+Category.m in Sources */,
 				32BE610921EDCFA600BA52EF /* UITextView+Helper.m in Sources */,

@@ -64,6 +64,7 @@
         CTSetPasswordViewController *vc = [CTSetPasswordViewController new];
         vc.eventKind = self.eventKind;
         vc.mobile = self.mobile;
+        vc.completed = self.completed;
         [self.navigationController pushViewController:vc animated:YES];
     }];
     

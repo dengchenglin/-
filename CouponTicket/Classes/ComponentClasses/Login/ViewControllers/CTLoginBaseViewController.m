@@ -22,6 +22,9 @@ NSString *GetEventTitleStr(CTEventKind eventKind){
         case CTEventKindWechatRegister:
             return @"微信快速注册";
             break;
+        case CTEventKindWithDraw:
+            return @"设置提现密码";
+            break;
         default:
             break;
     }

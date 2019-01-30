@@ -28,6 +28,7 @@
 - (void)setUpUI{
     self.title = @"邀请码";
     self.navigationBarStyle = CTNavigationBarWhite;
+    self.edgesForExtendedLayout = UIRectEdgeAll;
     [self setRightButtonWithTitle:@"分享海报" font:CTPsmFont(14) titleColor:CTColor selector:@selector(share)];
     [self.view addSubview:self.shareView];
 }

@@ -44,7 +44,7 @@
 - (CTDoneButton *)submitButton{
     if(!_submitButton){
         _submitButton = [[CTDoneButton alloc]init];
-        [_submitButton setTitle:@"登录" forState:UIControlStateNormal];
+        [_submitButton setTitle:@"提交" forState:UIControlStateNormal];
     
     }
     return _submitButton;

@@ -26,6 +26,7 @@
              @"ct_good_list":[self goodListService],
              @"ct_web":[self webService],
              @"ct_set":[self setService],
+             @"ct_tool":[self toolService],
           };
 }
 
@@ -85,5 +86,9 @@
 
 + (id)setService{
     return [CLModuleManager moduleServiceInstanceForProtocol:@protocol(CTSetServiceProtocol)];
+}
+
++ (id)toolService{
+    return [CLModuleManager moduleServiceInstanceForProtocol:@protocol(CTToolServiceProtocol)];
 }
 @end

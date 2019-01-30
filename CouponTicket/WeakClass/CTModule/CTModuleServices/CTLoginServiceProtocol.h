@@ -14,4 +14,6 @@
 
 - (void)showLoginFormViewController:(UIViewController *)viewController callback:(void(^)(BOOL logined))callback;
 
+- (void)pushWithdrawSetpsdFormViewController:(UIViewController *)viewController mobile:(NSString *)mobile completed:(void(^)(void))completed;
+
 @end

@@ -99,12 +99,24 @@
         break;
         case 1:
         {
-            
+            UIViewController *vc = [[CTModuleManager webService] pushWebFromViewController:self url:nil];
+            vc.title = @"关于我们";
         }
         break;
         case 2:
         {
-            
+            [[SDImageCache sharedImageCache]clearMemory];
+            [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+            [[SDImageCache sharedImageCache] clearDiskOnCompletion:^{
+                [MBProgressHUD hideHUDForView:self.view animated:YES];
+                [MBProgressHUD showMBProgressHudWithTitle:@"清除完成"];
+            }];
+        }
+        case 3:
+        {
+            [[CTModuleManager loginService]pushWithdrawSetpsdFormViewController:self mobile:@"13138878446" completed:^{
+                [self.navigationController popToViewController:self animated:YES];
+            }];
         }
         break;
         default:

@@ -40,4 +40,7 @@
 + (id<CTWebServiceProtocol>)webService;
 
 + (id<CTSetServiceProtocol>)setService;
+
++ (id<CTToolServiceProtocol>)toolService;
+
 @end

@@ -108,15 +108,6 @@
     [self.view addSubview:self.pasteView];
     [self.view addSubview:self.tableView];
 }
-- (void)viewWillAppear:(BOOL)animated{
-    [super viewWillAppear:animated];
-    NSString *pasteText = [UIPasteboard generalPasteboard]._newestString;
-    if(pasteText)
-    {
-        self.pasteView.text = pasteText;
-    }
-   
-}
 
 - (void)autoLayout{
     [self.navView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -144,6 +135,23 @@
         @strongify(self)
         UIViewController *vc = [[CTModuleManager goodListService]goodListViewControllerWithCategoryId:nil];
         [self.navigationController pushViewController:vc animated:YES];
+    }];
+    
+    
+    //检测粘贴板
+    void (^checkPasteBlock)(void) = ^{
+        @strongify(self)
+        NSString *pasteText = [UIPasteboard generalPasteboard]._newestString;
+        if(pasteText)
+        {
+            self.pasteView.text = pasteText;
+        }
+    };
+    [self aspect_hookSelector:@selector(viewWillAppear:) withOptions:AspectPositionAfter usingBlock:^(BOOL animated){
+        checkPasteBlock();
+    } error:nil];
+    [[[[NSNotificationCenter defaultCenter]rac_addObserverForName:UIApplicationDidBecomeActiveNotification object:nil]takeUntil:self.rac_willDeallocSignal] subscribeNext:^(NSNotification * _Nullable x) {
+        checkPasteBlock();
     }];
 }
 

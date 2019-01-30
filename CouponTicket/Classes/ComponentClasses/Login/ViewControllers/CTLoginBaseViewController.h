@@ -12,7 +12,8 @@ typedef NS_ENUM(NSInteger,CTEventKind) {
     CTEventKindRegister,
     CTEventKindForgetpsd,
     CTEventKindQQRegister,
-    CTEventKindWechatRegister
+    CTEventKindWechatRegister,
+    CTEventKindWithDraw,
 };
 
 NSString *GetEventTitleStr(CTEventKind eventKind);

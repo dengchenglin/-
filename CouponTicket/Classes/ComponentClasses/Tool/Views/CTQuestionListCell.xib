@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="102" id="oPv-gz-wO5" customClass="CTQuestionListCell">
+            <rect key="frame" x="0.0" y="0.0" width="430" height="102"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="oPv-gz-wO5" id="kgW-Nf-Nhf">
+                <rect key="frame" x="0.0" y="0.0" width="430" height="101.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dmn-EC-Gzf">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="101.5"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_more_gray" translatesAutoresizingMaskIntoConstraints="NO" id="wcM-cs-lBs">
+                                <rect key="frame" x="398" y="45" width="10" height="12"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="10" id="27u-dR-8Cg"/>
+                                    <constraint firstAttribute="height" constant="12" id="GsN-Eu-VzL"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FHe-Uw-yga">
+                                <rect key="frame" x="16" y="100.5" width="398" height="1"/>
+                                <color key="backgroundColor" red="0.93694469219999998" green="0.93694469219999998" blue="0.93694469219999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="eMM-zb-U3q"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Q1. 宝贝展现量很低，要怎么提高？" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4oE-6T-6TY">
+                                <rect key="frame" x="22" y="42.5" width="366" height="17.5"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
+                                <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="FHe-Uw-yga" secondAttribute="bottom" id="5bT-yM-Q5A"/>
+                            <constraint firstAttribute="trailing" secondItem="FHe-Uw-yga" secondAttribute="trailing" constant="16" id="DTg-hh-dan"/>
+                            <constraint firstItem="4oE-6T-6TY" firstAttribute="centerY" secondItem="dmn-EC-Gzf" secondAttribute="centerY" id="Kaa-WD-N5Y"/>
+                            <constraint firstItem="FHe-Uw-yga" firstAttribute="leading" secondItem="dmn-EC-Gzf" secondAttribute="leading" constant="16" id="N49-Vb-Qx0"/>
+                            <constraint firstAttribute="trailing" secondItem="wcM-cs-lBs" secondAttribute="trailing" constant="22" id="TFg-fl-puS"/>
+                            <constraint firstItem="wcM-cs-lBs" firstAttribute="centerY" secondItem="dmn-EC-Gzf" secondAttribute="centerY" id="ThP-ZA-oKK"/>
+                            <constraint firstItem="4oE-6T-6TY" firstAttribute="leading" secondItem="dmn-EC-Gzf" secondAttribute="leading" constant="22" id="uEN-ct-0Db"/>
+                            <constraint firstItem="wcM-cs-lBs" firstAttribute="leading" secondItem="4oE-6T-6TY" secondAttribute="trailing" constant="10" id="wEj-ct-uow"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="dmn-EC-Gzf" firstAttribute="leading" secondItem="kgW-Nf-Nhf" secondAttribute="leading" id="6fW-Ze-RHL"/>
+                    <constraint firstAttribute="bottom" secondItem="dmn-EC-Gzf" secondAttribute="bottom" id="8e6-uk-gcu"/>
+                    <constraint firstItem="dmn-EC-Gzf" firstAttribute="top" secondItem="kgW-Nf-Nhf" secondAttribute="top" id="GBn-32-11T"/>
+                    <constraint firstAttribute="trailing" secondItem="dmn-EC-Gzf" secondAttribute="trailing" id="WcL-6p-Zk6"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="titleLabel" destination="4oE-6T-6TY" id="N9G-xZ-sax"/>
+            </connections>
+            <point key="canvasLocation" x="17" y="-26"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="ic_more_gray" width="5" height="9"/>
+    </resources>
+</document>

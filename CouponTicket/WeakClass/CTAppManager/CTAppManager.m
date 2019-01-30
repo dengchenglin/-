@@ -17,7 +17,7 @@
 SINGLETON_FOR_CLASS_IMP(CTAppManager)
 
 + (BOOL)logined{
-    return [CTAppManager sharedInstance].user;
+    return YES;//[CTAppManager sharedInstance].user;
 }
 
 @end

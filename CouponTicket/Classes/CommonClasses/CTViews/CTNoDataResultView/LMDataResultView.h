@@ -32,3 +32,7 @@
 @property (nonatomic, copy) void(^clickRefreshBlock)(void);
 
 @end
+
+@interface LMNoQuestionView:LMDataResultView
+
+@end

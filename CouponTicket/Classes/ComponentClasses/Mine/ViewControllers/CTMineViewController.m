@@ -174,6 +174,12 @@
         UIViewController *messageVc = [[CTModuleManager messageService] rootViewController];
         [self.navigationController pushViewController:messageVc animated:YES];
     }];
+    //常见问题
+    [self.toolView.questionView addActionWithBlock:^(id target) {
+        @strongify(self)
+        UIViewController *vc = [[CTModuleManager toolService]questionViewController];
+        [self.navigationController pushViewController:vc animated:YES];
+    }];
     //导航渐变效果
     [self.containerView setScrollBlock:^(CGPoint contentOffest) {
         @strongify(self)

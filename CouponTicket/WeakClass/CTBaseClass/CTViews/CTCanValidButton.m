@@ -21,6 +21,8 @@ ViewInstance(setUp)
     [[self rac_valuesForKeyPath:@"enabled" observer:self] subscribeNext:^(id x) {
         BOOL enabled = [x boolValue];
         self.backgroundColor = enabled ?CTEnterButtonColor : CTLightGrayColor;
+        UIColor *textColor = enabled?[UIColor whiteColor]:RGBColor(153, 153, 153);
+        [self setTitleColor:textColor forState:UIControlStateNormal];
     }];
 }
 

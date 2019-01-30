@@ -14,4 +14,6 @@
 
 @property (nonatomic, assign) CTEventKind eventKind;
 
+@property (nonatomic, copy) void(^completed)(void);
+
 @end

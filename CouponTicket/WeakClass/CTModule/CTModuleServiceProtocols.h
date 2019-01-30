@@ -22,4 +22,5 @@
 #import "CTGoodListServiceProtocol.h"
 #import "CTWebServiceProtocol.h"
 #import "CTSetServiceProtocol.h"
+#import "CTToolServiceProtocol.h"
 #endif /* CTModuleServiceProtocols_h */

@@ -55,6 +55,9 @@
             [MBProgressHUD showMBProgressHudWithTitle:@"密码不一致"];
             return ;
         }
+        if(self.completed){
+            self.completed();
+        }
     }];
 }
 
