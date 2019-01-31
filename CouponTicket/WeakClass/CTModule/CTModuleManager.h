@@ -43,4 +43,6 @@
 
 + (id<CTToolServiceProtocol>)toolService;
 
++ (id<CTWithdrawServiceProtocol>)withdrawService;
+
 @end

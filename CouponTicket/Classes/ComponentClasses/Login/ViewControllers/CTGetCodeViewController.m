@@ -41,6 +41,11 @@
 - (void)setUpUI{
     self.title = GetEventTitleStr(_eventKind);
     [self.view addSubview:self.getCodeView];
+    if(_eventKind == CTEventKindWithDraw){
+       self.getCodeView.phoneTfd.enabled = NO;
+       self.getCodeView.phoneTfd.text = self.mobile;
+       self.getCodeView.nextButton.layer.cornerRadius = 23;
+    }
 }
 
 - (void)reloadView{

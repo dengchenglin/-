@@ -8,16 +8,36 @@
 
 #import <Foundation/Foundation.h>
 
+@interface CTWithdrawInfo:NSObject
+
+@property (nonatomic, copy) NSString *account;
+
+@property (nonatomic, copy) NSString *password;
+
+@property (nonatomic, copy) NSString *name;
+
+@end
+
 @interface CTUser  :NSObject
+
+@property (nonatomic, strong) CTWithdrawInfo *withInfo;
+
+@property (nonatomic, copy) NSString *mobile;
+
+@property (nonatomic, copy) NSString *balance;
 
 @end
 
 @interface CTAppManager : NSObject
 
-@property (nonatomic, strong) CTUser *user;
+@property (nonatomic, strong,readonly) CTUser *user;
 
 SINGLETON_FOR_CLASS_DEF
 
 + (BOOL)logined;
+
++ (CTUser *)user;
+
+- (void)saveUserWithInfo:(id)data;
 
 @end

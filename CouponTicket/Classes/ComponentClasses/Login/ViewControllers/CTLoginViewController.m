@@ -26,7 +26,6 @@
 
 @property (nonatomic, strong) CTLoginViewModel *viewModel;
 
-
 @end
 
 @implementation CTLoginViewController
@@ -80,7 +79,7 @@
             [MBProgressHUD showMBProgressHudWithTitle:@"手机格式不正确"];
             return ;
         }
-        [CTAppManager sharedInstance].user = [CTUser new];
+        [[CTAppManager sharedInstance] saveUserWithInfo:nil];
         if(self.callback){
             self.callback(YES);
         }

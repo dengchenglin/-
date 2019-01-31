@@ -114,7 +114,7 @@
         }
         case 3:
         {
-            [[CTModuleManager loginService]pushWithdrawSetpsdFormViewController:self mobile:@"13138878446" completed:^{
+            [[CTModuleManager loginService]pushWithdrawSetpsdFromViewController:self mobile:[CTAppManager user].mobile completed:^{
                 [self.navigationController popToViewController:self animated:YES];
             }];
         }

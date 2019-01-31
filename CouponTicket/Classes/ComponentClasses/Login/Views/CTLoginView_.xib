@@ -130,7 +130,7 @@
                     <state key="normal" title="登录"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                            <real key="value" value="2.5"/>
+                            <integer key="value" value="23"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </button>
@@ -245,7 +245,7 @@
                 <outlet property="registerButton" destination="kky-tZ-j2n" id="Zur-CC-UH7"/>
                 <outlet property="wechatButton" destination="n9s-R8-kv1" id="0oU-p9-SGJ"/>
             </connections>
-            <point key="canvasLocation" x="357" y="-66.5"/>
+            <point key="canvasLocation" x="26" y="-95"/>
         </view>
     </objects>
     <resources>

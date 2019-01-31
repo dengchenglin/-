@@ -41,7 +41,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ebf-3y-4A6">
-                            <rect key="frame" x="316.5" y="18" width="99.5" height="24"/>
+                            <rect key="frame" x="314.5" y="18" width="101.5" height="24"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="会员权益" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4EQ-OA-ftf">
                                     <rect key="frame" x="42" y="5" width="49.5" height="14.5"/>
@@ -52,7 +52,7 @@
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
-                                <constraint firstAttribute="trailing" secondItem="4EQ-OA-ftf" secondAttribute="trailing" constant="8" id="ZYq-u6-hCM"/>
+                                <constraint firstAttribute="trailing" secondItem="4EQ-OA-ftf" secondAttribute="trailing" constant="10" id="ZYq-u6-hCM"/>
                                 <constraint firstItem="4EQ-OA-ftf" firstAttribute="centerY" secondItem="ebf-3y-4A6" secondAttribute="centerY" id="nWB-VX-3LL"/>
                                 <constraint firstAttribute="height" constant="24" id="z3R-32-jqO"/>
                             </constraints>
@@ -63,7 +63,7 @@
                             </userDefinedRuntimeAttributes>
                         </view>
                         <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_vip" translatesAutoresizingMaskIntoConstraints="NO" id="tly-ZF-WUK">
-                            <rect key="frame" x="331.5" y="22" width="17" height="15"/>
+                            <rect key="frame" x="329.5" y="22" width="17" height="15"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="17" id="0MB-xy-7ja"/>
                                 <constraint firstAttribute="height" constant="15" id="B0V-Zq-9Ti"/>

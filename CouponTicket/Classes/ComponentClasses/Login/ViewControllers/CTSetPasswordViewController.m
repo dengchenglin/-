@@ -39,6 +39,9 @@
 - (void)setUpUI{
     self.title = GetEventTitleStr(_eventKind);
     [self.view addSubview:self.passwordView];
+    if(_eventKind == CTEventKindWithDraw){
+        self.passwordView.doneButton.layer.cornerRadius = 23;
+    }
 }
 
 - (void)autoLayout{

@@ -12,6 +12,8 @@
 
 #import "CTGetCodeViewController.h"
 
+#import "CTAlipayBoundViewController.h"
+
 @implementation CTLoginService
 
 CL_EXPORT_MODULE(CTLoginServiceProtocol)
@@ -20,15 +22,21 @@ CL_EXPORT_MODULE(CTLoginServiceProtocol)
     return [CTLoginViewController new];
 }
 
-- (void)showLoginFormViewController:(UIViewController *)viewController callback:(void(^)(BOOL logined))callback{
+- (void)showLoginFromViewController:(UIViewController *)viewController callback:(void(^)(BOOL logined))callback{
     [CTLoginViewController showLoginFormViewController:viewController callback:callback];
 }
 
-- (void)pushWithdrawSetpsdFormViewController:(UIViewController *)viewController mobile:(NSString *)mobile completed:(void(^)(void))completed{
+- (void)pushWithdrawSetpsdFromViewController:(UIViewController *)viewController mobile:(NSString *)mobile completed:(void(^)(void))completed{
     CTGetCodeViewController *vc = [CTGetCodeViewController new];
     vc.eventKind = CTEventKindWithDraw;
     vc.completed = completed;
     vc.mobile = mobile;
+    [viewController.navigationController pushViewController:vc animated:YES];
+}
+
+- (void)pushBoundAlipayFromViewController:(UIViewController *)viewController completed:(void(^)(void))completed{
+    CTAlipayBoundViewController *vc = [CTAlipayBoundViewController new];
+    vc.completed = completed;
     [viewController.navigationController pushViewController:vc animated:YES];
 }
 

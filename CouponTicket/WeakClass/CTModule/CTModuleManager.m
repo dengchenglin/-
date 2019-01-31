@@ -27,6 +27,7 @@
              @"ct_web":[self webService],
              @"ct_set":[self setService],
              @"ct_tool":[self toolService],
+             @"ct_withdraw":[self withdrawService],
           };
 }
 
@@ -90,5 +91,9 @@
 
 + (id)toolService{
     return [CLModuleManager moduleServiceInstanceForProtocol:@protocol(CTToolServiceProtocol)];
+}
+
++ (id)withdrawService{
+        return [CLModuleManager moduleServiceInstanceForProtocol:@protocol(CTWithdrawServiceProtocol)];
 }
 @end

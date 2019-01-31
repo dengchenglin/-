@@ -8,7 +8,33 @@
 
 #import "CTAppManager.h"
 
+@implementation CTWithdrawInfo
+
+- (NSString *)account{
+    return @"13138878446";
+}
+
+- (NSString *)name{
+    return @"老林sir";
+}
+
+@end
+
 @implementation CTUser
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _withInfo = [CTWithdrawInfo new];
+    }
+    return self;
+}
+
+- (NSString *)mobile{
+    return @"13138878446";
+}
+
 
 @end
 
@@ -17,7 +43,22 @@
 SINGLETON_FOR_CLASS_IMP(CTAppManager)
 
 + (BOOL)logined{
-    return YES;//[CTAppManager sharedInstance].user;
+    return [CTAppManager sharedInstance].user;
+}
++ (CTUser *)user{
+    return [CTAppManager sharedInstance].user;
 }
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _user = [CTUser new];
+    }
+    return self;
+}
+
+- (void)saveUserWithInfo:(id)data{
+    _user = [CTUser new];
+}
 @end

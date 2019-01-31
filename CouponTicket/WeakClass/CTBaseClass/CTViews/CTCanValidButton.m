@@ -13,17 +13,13 @@
 ViewInstance(setUp)
 
 - (void)setUp{
-    self.backgroundColor = CTEnterButtonColor;
-    self.layer.cornerRadius = 4;
+    self.clipsToBounds = YES;
+    [self setBackgroundImage:[UIImage imageNamed:@"pic_bt_bg"] forState:UIControlStateNormal];
+    [self setBackgroundImage:[UIImage imageWithColor:CTLightGrayColor] forState:UIControlStateDisabled];
+    [self setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [self setTitleColor:RGBColor(153, 153, 153) forState:UIControlStateDisabled];
     self.titleLabel.font = [UIFont systemFontOfSize:16];
     [self setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    
-    [[self rac_valuesForKeyPath:@"enabled" observer:self] subscribeNext:^(id x) {
-        BOOL enabled = [x boolValue];
-        self.backgroundColor = enabled ?CTEnterButtonColor : CTLightGrayColor;
-        UIColor *textColor = enabled?[UIColor whiteColor]:RGBColor(153, 153, 153);
-        [self setTitleColor:textColor forState:UIControlStateNormal];
-    }];
 }
 
 

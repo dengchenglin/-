@@ -22,6 +22,8 @@
 
 #import "CTMineNavItemView.h"
 
+#import "CTMyCollectListViewController.h"
+
 @interface CTMineViewController ()
 
 @property (nonatomic, strong) CTNavBar *navBar;
@@ -174,11 +176,38 @@
         UIViewController *messageVc = [[CTModuleManager messageService] rootViewController];
         [self.navigationController pushViewController:messageVc animated:YES];
     }];
+    //我的收藏
+    [self.toolView.collectView addActionWithBlock:^(id target) {
+        @strongify(self)
+        CTMyCollectListViewController *vc = [CTMyCollectListViewController new];
+        [self.navigationController pushViewController:vc animated:YES];
+    }];
     //常见问题
     [self.toolView.questionView addActionWithBlock:^(id target) {
         @strongify(self)
         UIViewController *vc = [[CTModuleManager toolService]questionViewController];
         [self.navigationController pushViewController:vc animated:YES];
+    }];
+    
+    //立即提现
+    void(^withdrawBlock)(void) = ^{
+        @strongify(self)
+        UIViewController *vc = [[CTModuleManager withdrawService] rootViewController];
+        [self.navigationController pushViewController:vc animated:YES];
+    };
+    [self.earnView.withdrawButton touchUpInsideSubscribeNext:^(id x) {
+        if([CTAppManager user].withInfo.account){
+            withdrawBlock();
+        }
+        else{
+            [[CTModuleManager loginService] pushBoundAlipayFromViewController:self completed:^{
+                @strongify(self)
+                [self.navigationController popToViewController:self animated:YES];
+                
+                withdrawBlock();
+            }];
+        }
+        
     }];
     //导航渐变效果
     [self.containerView setScrollBlock:^(CGPoint contentOffest) {
