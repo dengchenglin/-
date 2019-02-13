@@ -14,7 +14,6 @@ PODS:
   - AFNetworking/Serialization (3.2.1)
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
-  - FDFullscreenPopGesture (1.1)
   - GPUImage (0.1.7)
   - HappyDNS (0.3.14)
   - IQKeyboardManager (6.1.1)
@@ -41,7 +40,6 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking (~> 3.2.1)
-  - FDFullscreenPopGesture (~> 1.1)
   - GPUImage (~> 0.1.7)
   - IQKeyboardManager (~> 6.1.1)
   - JPush (~> 3.1.0)
@@ -60,7 +58,6 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - AFNetworking
-    - FDFullscreenPopGesture
     - GPUImage
     - HappyDNS
     - IQKeyboardManager
@@ -80,7 +77,6 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
-  FDFullscreenPopGesture: a8a620179e3d9c40e8e00256dcee1c1a27c6d0f0
   GPUImage: 733a5f0fab92df9de1c37ba9df520a833ccb406d
   HappyDNS: dc6a164ee81979093123c241c6353bcf0218add6
   IQKeyboardManager: 79c57795f5c2408d259d37b9da2ed07efcbb5225
@@ -98,6 +94,6 @@ SPEC CHECKSUMS:
   YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
   ZLPhotoBrowser: 6dfadc4706429424f0a851fe40752aff076689ab
 
-PODFILE CHECKSUM: 8452b824d934fed7ae71d27d23c8b0b17b2f688b
+PODFILE CHECKSUM: 6666bf0cb01d597deda454dd682a0e0d304b73d9
 
 COCOAPODS: 1.5.0

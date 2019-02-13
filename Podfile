@@ -18,5 +18,5 @@ target 'CouponTicket' do
   pod 'Qiniu',              '~> 7.2'
   pod 'JPush',              '~>3.1.0'
   pod 'SDCycleScrollView',   '~>1.75'
-  pod 'FDFullscreenPopGesture', '~>1.1'
+  #pod 'FDFullscreenPopGesture', '~>1.1'
 end

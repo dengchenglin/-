@@ -147,11 +147,21 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated{
+    BOOL lastNavBarHidden = self.navigationController.navigationBarHidden;
     [super viewWillAppear:animated];
-    [self.navigationController setNavigationBarHidden:_hideSystemNavBarWhenAppear animated:self.isPop?YES:NO];
+    if(self.isPop){
+        //如果发起push的控制器的导航是隐藏的就不要动画
+        [self.navigationController setNavigationBarHidden:_hideSystemNavBarWhenAppear animated:!lastNavBarHidden];
+    }
+    else{
+        [self.navigationController setNavigationBarHidden:_hideSystemNavBarWhenAppear animated:NO];
+    }
+ 
     self.hideNavBarBottomLine = _hideNavBarBottomLine;
     self.navigationBarStyle = _navigationBarStyle;
+
 }
+
 
 
 - (void)viewDidAppear:(BOOL)animated{

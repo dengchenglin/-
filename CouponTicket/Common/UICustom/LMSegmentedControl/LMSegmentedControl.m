@@ -44,7 +44,7 @@ ViewInstance(setUp)
 
 
 - (void)setUp{
-    _containerView = [[UIView alloc]init];
+    _containerView = [[UIView alloc]initWithFrame:self.bounds];
     [self addSubview:_containerView];
     [_containerView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.mas_equalTo(UIEdgeInsetsZero);

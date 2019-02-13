@@ -313,6 +313,18 @@
 		32E7EE7521F3320900191789 /* CTSalesItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 32E7EE7421F3320900191789 /* CTSalesItem.m */; };
 		32E7EE7721F3321400191789 /* CTSalesItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32E7EE7621F3321400191789 /* CTSalesItem.xib */; };
 		32EA9E9E2201AB1B00D72291 /* CTDoneButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 32EA9E9D2201AB1B00D72291 /* CTDoneButton.m */; };
+		32FEA9D02213B3C0001156CC /* CTNestPageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32FEA9CF2213B3C0001156CC /* CTNestPageController.m */; };
+		32FEA9F52213C666001156CC /* CTEarnRankPageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32FEA9F42213C666001156CC /* CTEarnRankPageController.m */; };
+		32FEA9F82213CC00001156CC /* CTEarnRankHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 32FEA9F72213CC00001156CC /* CTEarnRankHeadView.m */; };
+		32FEA9FA2213CC29001156CC /* CTEarnRankHeadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32FEA9F92213CC29001156CC /* CTEarnRankHeadView.xib */; };
+		32FEA9FD2213E9C1001156CC /* CTEarnRankViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32FEA9FC2213E9C1001156CC /* CTEarnRankViewController.m */; };
+		32FEAA0022140AAD001156CC /* CTEarnRankNavBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 32FEA9FF22140AAD001156CC /* CTEarnRankNavBar.m */; };
+		32FEAA0222140AB5001156CC /* CTEarnRankNavBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32FEAA0122140AB5001156CC /* CTEarnRankNavBar.xib */; };
+		32FEAA0622141ACB001156CC /* CTEarnRankCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 32FEAA0422141ACB001156CC /* CTEarnRankCell.m */; };
+		32FEAA0722141ACB001156CC /* CTEarnRankCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32FEAA0522141ACB001156CC /* CTEarnRankCell.xib */; };
+		32FEAA0A22142388001156CC /* CTEarnDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32FEAA0922142388001156CC /* CTEarnDetailViewController.m */; };
+		32FEAA0D221426EC001156CC /* CTEarnDescView.m in Sources */ = {isa = PBXBuildFile; fileRef = 32FEAA0C221426EC001156CC /* CTEarnDescView.m */; };
+		32FEAA0F221426F4001156CC /* CTEarnDescView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32FEAA0E221426F4001156CC /* CTEarnDescView.xib */; };
 		AAE7F6FFBF4288319E9610C9 /* libPods-CouponTicket.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F51AA050F5801C0FBDEE117 /* libPods-CouponTicket.a */; };
 /* End PBXBuildFile section */
 
@@ -910,6 +922,26 @@
 		32E7EE7621F3321400191789 /* CTSalesItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CTSalesItem.xib; sourceTree = "<group>"; };
 		32EA9E9C2201AB1B00D72291 /* CTDoneButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTDoneButton.h; sourceTree = "<group>"; };
 		32EA9E9D2201AB1B00D72291 /* CTDoneButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTDoneButton.m; sourceTree = "<group>"; };
+		32FEA9CE2213B3C0001156CC /* CTNestPageController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTNestPageController.h; sourceTree = "<group>"; };
+		32FEA9CF2213B3C0001156CC /* CTNestPageController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTNestPageController.m; sourceTree = "<group>"; };
+		32FEA9F32213C666001156CC /* CTEarnRankPageController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTEarnRankPageController.h; sourceTree = "<group>"; };
+		32FEA9F42213C666001156CC /* CTEarnRankPageController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTEarnRankPageController.m; sourceTree = "<group>"; };
+		32FEA9F62213CC00001156CC /* CTEarnRankHeadView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTEarnRankHeadView.h; sourceTree = "<group>"; };
+		32FEA9F72213CC00001156CC /* CTEarnRankHeadView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTEarnRankHeadView.m; sourceTree = "<group>"; };
+		32FEA9F92213CC29001156CC /* CTEarnRankHeadView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CTEarnRankHeadView.xib; sourceTree = "<group>"; };
+		32FEA9FB2213E9C1001156CC /* CTEarnRankViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTEarnRankViewController.h; sourceTree = "<group>"; };
+		32FEA9FC2213E9C1001156CC /* CTEarnRankViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTEarnRankViewController.m; sourceTree = "<group>"; };
+		32FEA9FE22140AAD001156CC /* CTEarnRankNavBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTEarnRankNavBar.h; sourceTree = "<group>"; };
+		32FEA9FF22140AAD001156CC /* CTEarnRankNavBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTEarnRankNavBar.m; sourceTree = "<group>"; };
+		32FEAA0122140AB5001156CC /* CTEarnRankNavBar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CTEarnRankNavBar.xib; sourceTree = "<group>"; };
+		32FEAA0322141ACB001156CC /* CTEarnRankCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTEarnRankCell.h; sourceTree = "<group>"; };
+		32FEAA0422141ACB001156CC /* CTEarnRankCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTEarnRankCell.m; sourceTree = "<group>"; };
+		32FEAA0522141ACB001156CC /* CTEarnRankCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CTEarnRankCell.xib; sourceTree = "<group>"; };
+		32FEAA0822142388001156CC /* CTEarnDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTEarnDetailViewController.h; sourceTree = "<group>"; };
+		32FEAA0922142388001156CC /* CTEarnDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTEarnDetailViewController.m; sourceTree = "<group>"; };
+		32FEAA0B221426EC001156CC /* CTEarnDescView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTEarnDescView.h; sourceTree = "<group>"; };
+		32FEAA0C221426EC001156CC /* CTEarnDescView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTEarnDescView.m; sourceTree = "<group>"; };
+		32FEAA0E221426F4001156CC /* CTEarnDescView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CTEarnDescView.xib; sourceTree = "<group>"; };
 		6AA14B2C43C4DB99B1D60D47 /* Pods-CouponTicket.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CouponTicket.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CouponTicket/Pods-CouponTicket.debug.xcconfig"; sourceTree = "<group>"; };
 		7665215356141A688CE2B40E /* Pods-CouponTicket.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CouponTicket.release.xcconfig"; path = "Pods/Target Support Files/Pods-CouponTicket/Pods-CouponTicket.release.xcconfig"; sourceTree = "<group>"; };
 		9F51AA050F5801C0FBDEE117 /* libPods-CouponTicket.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CouponTicket.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1308,6 +1340,8 @@
 				32E7EE6021F30AB500191789 /* CTBaseListViewController.m */,
 				3220EA2C21F99A20004E0422 /* CTPageController.h */,
 				3220EA2D21F99A20004E0422 /* CTPageController.m */,
+				32FEA9CE2213B3C0001156CC /* CTNestPageController.h */,
+				32FEA9CF2213B3C0001156CC /* CTNestPageController.m */,
 			);
 			path = CTViewControllers;
 			sourceTree = "<group>";
@@ -1490,6 +1524,12 @@
 				325D3B5D21F1DE2F00465B91 /* CTMineViewController.m */,
 				32A28ED72202F52F0049B003 /* CTMyCollectListViewController.h */,
 				32A28ED82202F52F0049B003 /* CTMyCollectListViewController.m */,
+				32FEA9F32213C666001156CC /* CTEarnRankPageController.h */,
+				32FEA9F42213C666001156CC /* CTEarnRankPageController.m */,
+				32FEA9FB2213E9C1001156CC /* CTEarnRankViewController.h */,
+				32FEA9FC2213E9C1001156CC /* CTEarnRankViewController.m */,
+				32FEAA0822142388001156CC /* CTEarnDetailViewController.h */,
+				32FEAA0922142388001156CC /* CTEarnDetailViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -1704,6 +1744,18 @@
 				32BD0E26220172FE00E99B86 /* CTMineNavItemView.h */,
 				32BD0E27220172FE00E99B86 /* CTMineNavItemView.m */,
 				32BD0E292201730700E99B86 /* CTMineNavItemView.xib */,
+				32FEA9F62213CC00001156CC /* CTEarnRankHeadView.h */,
+				32FEA9F72213CC00001156CC /* CTEarnRankHeadView.m */,
+				32FEA9F92213CC29001156CC /* CTEarnRankHeadView.xib */,
+				32FEA9FE22140AAD001156CC /* CTEarnRankNavBar.h */,
+				32FEA9FF22140AAD001156CC /* CTEarnRankNavBar.m */,
+				32FEAA0122140AB5001156CC /* CTEarnRankNavBar.xib */,
+				32FEAA0322141ACB001156CC /* CTEarnRankCell.h */,
+				32FEAA0422141ACB001156CC /* CTEarnRankCell.m */,
+				32FEAA0522141ACB001156CC /* CTEarnRankCell.xib */,
+				32FEAA0B221426EC001156CC /* CTEarnDescView.h */,
+				32FEAA0C221426EC001156CC /* CTEarnDescView.m */,
+				32FEAA0E221426F4001156CC /* CTEarnDescView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -2719,6 +2771,7 @@
 				240E189C21F5FA45004A4BCB /* CTForgetPsdView_.xib in Resources */,
 				32BD0E4822018D7100E99B86 /* CTContentInputView.xib in Resources */,
 				3220EA1B21F9679B004E0422 /* CTMessageListCell.xib in Resources */,
+				32FEAA0F221426F4001156CC /* CTEarnDescView.xib in Resources */,
 				32BD0E5E2201A1AA00E99B86 /* CTUpdateImageView.xib in Resources */,
 				326AC1F421FADF08008C154B /* CTHotCatoryView.xib in Resources */,
 				326525FF21F5CF8100B63DD7 /* CTSetPasswordView_.xib in Resources */,
@@ -2728,6 +2781,7 @@
 				3220EA4421F9C343004E0422 /* CTHotSalesNoticeView.xib in Resources */,
 				2405AEF521FC22F7000E5081 /* CTMemberUpgradeContainerView.xib in Resources */,
 				326525CC21F5A2DA00B63DD7 /* CTGoodListCell.xib in Resources */,
+				32FEA9FA2213CC29001156CC /* CTEarnRankHeadView.xib in Resources */,
 				240F74712201C9BD00A2DFFC /* CTQuestionListCell.xib in Resources */,
 				32A28EB62202A3CA0049B003 /* CTWithDrawInputView.xib in Resources */,
 				326525C721F595D300B63DD7 /* CTGoodListView_.xib in Resources */,
@@ -2751,7 +2805,9 @@
 				3280739C21FF0969009CABEC /* CTMineToolView.xib in Resources */,
 				3280739721FEF4DF009CABEC /* CTMineOrderView.xib in Resources */,
 				32A28EB12202A2CD0049B003 /* CTWithdrawAlipayInfoView.xib in Resources */,
+				32FEAA0722141ACB001156CC /* CTEarnRankCell.xib in Resources */,
 				32CA55AC21F7242300145E31 /* CTSearchBar.xib in Resources */,
+				32FEAA0222140AB5001156CC /* CTEarnRankNavBar.xib in Resources */,
 				322453F621F2D60300471059 /* CTHomeNavBar.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2924,6 +2980,7 @@
 				32CA558D21F712C800145E31 /* CTSearchViewController.m in Sources */,
 				32BE610F21EDCFA600BA52EF /* NSArray+Category.m in Sources */,
 				32BE611721EDCFA600BA52EF /* UIButton+Create.m in Sources */,
+				32FEA9D02213B3C0001156CC /* CTNestPageController.m in Sources */,
 				3220EA2121F98622004E0422 /* CTMessageListViewController.m in Sources */,
 				2405AF0521FC35ED000E5081 /* CTMemberStrategyView.m in Sources */,
 				322453C621F2BED600471059 /* CTLoginService.m in Sources */,
@@ -2944,6 +3001,7 @@
 				32BE60F821EDCFA600BA52EF /* CLRefreshNulMoreView.m in Sources */,
 				32BE60F721EDCFA600BA52EF /* CLRefreshCurveLayer.m in Sources */,
 				2407A8E421FD8895000403B7 /* CTMemberEquityView2.m in Sources */,
+				32FEAA0022140AAD001156CC /* CTEarnRankNavBar.m in Sources */,
 				2407A8DB21FD852C000403B7 /* CTEquitySegmentedControl.m in Sources */,
 				32BE611521EDCFA600BA52EF /* NSString+Log.m in Sources */,
 				32BE612C21EDCFA600BA52EF /* SelPlayerConfiguration.m in Sources */,
@@ -2988,10 +3046,12 @@
 				32BE60EF21EDCFA600BA52EF /* CLURLRequest.m in Sources */,
 				32BE612E21EDCFA600BA52EF /* SelPlaybackControls.m in Sources */,
 				3220EA2721F989A6004E0422 /* CTWebViewController.m in Sources */,
+				32FEA9F52213C666001156CC /* CTEarnRankPageController.m in Sources */,
 				324C3DA721F854B000536DA8 /* CTGoodService.m in Sources */,
 				240F74702201C9BD00A2DFFC /* CTQuestionListCell.m in Sources */,
 				32BE612221EDCFA600BA52EF /* AddressPickerView.m in Sources */,
 				2407A8D821FD826A000403B7 /* CTMemberEquityController.m in Sources */,
+				32FEAA0622141ACB001156CC /* CTEarnRankCell.m in Sources */,
 				32CA559021F712D900145E31 /* CTSearchService.m in Sources */,
 				3220EA3F21F9C2D3004E0422 /* CThotSalesListViewController.m in Sources */,
 				2405AF0121FC3166000E5081 /* CTMemberChoicenessCell.m in Sources */,
@@ -3007,15 +3067,18 @@
 				32E7EE5221F2F70700191789 /* CTHomeViewModel.m in Sources */,
 				2405AEF321FC22EB000E5081 /* CTMemberUpgradeContainerView.m in Sources */,
 				2407A8F521FD90A1000403B7 /* CTMemberEquityPageView.m in Sources */,
+				32FEAA0D221426EC001156CC /* CTEarnDescView.m in Sources */,
 				32BE613221EDCFA600BA52EF /* WSDatePickerView.m in Sources */,
 				322453B921F2BE8A00471059 /* CTRecommendService.m in Sources */,
 				32CA557321F6C53E00145E31 /* CTHomeCategoryViewModel.m in Sources */,
 				32A28ED92202F52F0049B003 /* CTMyCollectListViewController.m in Sources */,
+				32FEAA0A22142388001156CC /* CTEarnDetailViewController.m in Sources */,
 				32CA555A21F6B07000145E31 /* CTShareService.m in Sources */,
 				32BD0E4622018CB600E99B86 /* CTContentInputView.m in Sources */,
 				245CAE5A21F42EC200496052 /* CTCategoryModel.m in Sources */,
 				32E7EE5E21F3066700191789 /* CTHomePageController.m in Sources */,
 				32BE612721EDCFA600BA52EF /* CLTimerButton.m in Sources */,
+				32FEA9F82213CC00001156CC /* CTEarnRankHeadView.m in Sources */,
 				322453EC21F2C7F000471059 /* CTNavigationController.m in Sources */,
 				32BE613021EDCFA600BA52EF /* SelVideoSlider.m in Sources */,
 				326525E421F5CDB200B63DD7 /* CTRegisterViewController.m in Sources */,
@@ -3025,6 +3088,7 @@
 				240E188D21F5F1FC004A4BCB /* CTRegisterViewModel.m in Sources */,
 				32A28ECC2202D5120049B003 /* CTWithdrawSuccessView.m in Sources */,
 				326AC1F221FADF00008C154B /* CTHotCatoryView.m in Sources */,
+				32FEA9FD2213E9C1001156CC /* CTEarnRankViewController.m in Sources */,
 				32BD0E382201865400E99B86 /* CTSetListCell.m in Sources */,
 				240F74642201C5C600A2DFFC /* CTQuestionViewController.m in Sources */,
 				2407A8E721FD88A1000403B7 /* CTMemberEquityView3.m in Sources */,

@@ -24,6 +24,8 @@
 
 #import "CTMyCollectListViewController.h"
 
+#import "CTEarnRankPageController.h"
+
 @interface CTMineViewController ()
 
 @property (nonatomic, strong) CTNavBar *navBar;
@@ -157,7 +159,12 @@
 
 - (void)setUpEvent{
     @weakify(self)
-    
+    //收益排行
+    [self.earnView.earnButton touchUpInsideSubscribeNext:^(id x) {
+        @strongify(self)
+        CTEarnRankPageController *vc = [[CTEarnRankPageController alloc]init];
+        [self.navigationController pushViewController:vc animated:YES];
+    }];
     //邀请券友
     [self.toolView.inviteView addActionWithBlock:^(id target) {
         @strongify(self)
