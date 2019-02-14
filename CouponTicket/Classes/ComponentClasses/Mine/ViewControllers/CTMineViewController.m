@@ -26,6 +26,12 @@
 
 #import "CTEarnRankPageController.h"
 
+#import "CTEarnDetailViewController.h"
+
+#import "CTOrderPageController.h"
+
+#import "CTMyTeamPageController.h"
+
 @interface CTMineViewController ()
 
 @property (nonatomic, strong) CTNavBar *navBar;
@@ -165,6 +171,42 @@
         CTEarnRankPageController *vc = [[CTEarnRankPageController alloc]init];
         [self.navigationController pushViewController:vc animated:YES];
     }];
+    //收益明细
+    [self.earnView.earndetailButton touchUpInsideSubscribeNext:^(id x) {
+        @strongify(self)
+        CTEarnDetailViewController *vc = [[CTEarnDetailViewController alloc]init];
+        [self.navigationController pushViewController:vc animated:YES];
+    }];
+    //推广订单
+    [self.orderView.lookMoreView addActionWithBlock:^(id target) {
+        @strongify(self)
+        CTOrderPageController *vc = [[CTOrderPageController alloc]init];
+        [self.navigationController pushViewController:vc animated:YES];
+    }];
+    [self.orderView.payedView addActionWithBlock:^(id target) {
+        @strongify(self)
+        CTOrderPageController *vc = [[CTOrderPageController alloc]init];
+        vc.toIndex = 1;
+        [self.navigationController pushViewController:vc animated:YES];
+    }];
+    [self.orderView.calculatedView addActionWithBlock:^(id target) {
+        @strongify(self)
+        CTOrderPageController *vc = [[CTOrderPageController alloc]init];
+        vc.toIndex = 2;
+        [self.navigationController pushViewController:vc animated:YES];
+    }];
+    [self.orderView.disabledView addActionWithBlock:^(id target) {
+        @strongify(self)
+        CTOrderPageController *vc = [[CTOrderPageController alloc]init];
+        vc.toIndex = 3;
+        [self.navigationController pushViewController:vc animated:YES];
+    }];
+    [self.orderView.refundView addActionWithBlock:^(id target) {
+        @strongify(self)
+        CTOrderPageController *vc = [[CTOrderPageController alloc]init];
+        vc.toIndex = 4;
+        [self.navigationController pushViewController:vc animated:YES];
+    }];
     //邀请券友
     [self.toolView.inviteView addActionWithBlock:^(id target) {
         @strongify(self)
@@ -183,11 +225,29 @@
         UIViewController *messageVc = [[CTModuleManager messageService] rootViewController];
         [self.navigationController pushViewController:messageVc animated:YES];
     }];
+    //我的团队
+    [self.toolView.teamView addActionWithBlock:^(id target) {
+        @strongify(self)
+        CTMyTeamPageController *vc = [CTMyTeamPageController new];
+        [self.navigationController pushViewController:vc animated:YES];
+    }];
     //我的收藏
     [self.toolView.collectView addActionWithBlock:^(id target) {
         @strongify(self)
         CTMyCollectListViewController *vc = [CTMyCollectListViewController new];
         [self.navigationController pushViewController:vc animated:YES];
+    }];
+    //领券指南
+    [self.toolView.guideView addActionWithBlock:^(id target) {
+        @strongify(self)
+         UIViewController *webVc = [[CTModuleManager webService] pushWebFromViewController:self url:nil];
+        webVc.title = @"领券指南";
+    }];
+    //我的邀请码
+    [self.toolView.inviteCodeView addActionWithBlock:^(id target) {
+        @strongify(self)
+        UIViewController *shareVc = [[CTModuleManager shareService] rootViewController];
+        [self.navigationController pushViewController:shareVc animated:YES];
     }];
     //常见问题
     [self.toolView.questionView addActionWithBlock:^(id target) {

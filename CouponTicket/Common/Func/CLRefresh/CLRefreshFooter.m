@@ -30,12 +30,12 @@ NSString *const CLRefreshFooterKeyPathContentSize = @"contentSize";
         _refreshDistance = [CLRefreshManager shareInsatnce].config.loadMoreDistance;
         if (@available(iOS 11.0, *)) {
             _scrollView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
-            if([_scrollView isKindOfClass:[UITableView class]]){
-                UITableView *tableView = (UITableView *)_scrollView;
-                tableView.estimatedRowHeight = 0;
-                tableView.estimatedSectionFooterHeight = 0;
-                tableView.estimatedSectionHeaderHeight = 0;
-            }
+//            if([_scrollView isKindOfClass:[UITableView class]]){
+//                UITableView *tableView = (UITableView *)_scrollView;
+//                tableView.estimatedRowHeight = 0;
+//                tableView.estimatedSectionFooterHeight = 0;
+//                tableView.estimatedSectionHeaderHeight = 0;
+//            }
             _originDecelerationRate = _scrollView.decelerationRate;
         }
     }

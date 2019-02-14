@@ -24,4 +24,6 @@
 
 @property (nonatomic, assign) UIEdgeInsets contentInsets;
 
+@property (nonatomic, assign) NSInteger toIndex;
+
 @end

@@ -32,6 +32,7 @@
     [self.view addSubview:self.pageController.view];
 }
 
+
 - (void)setContentInsets:(UIEdgeInsets)contentInsets{
     _contentInsets = contentInsets;
     [self.pageController.view mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -42,7 +43,10 @@
 - (void)setViewControllers:(NSArray<UIViewController *> *)viewControllers{
     _viewControllers = [viewControllers copy];
     if(!_viewControllers.count)return;
-    UIViewController *firstVc = self.viewControllers[0];
+    if(_toIndex > _viewControllers.count - 1){
+        _toIndex = 0;
+    }
+    UIViewController *firstVc = self.viewControllers[_toIndex];
     
     if(_viewControllers.count){
         [self.pageController setViewControllers:@[firstVc] direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:nil];
@@ -50,6 +54,7 @@
     else{
         [self.pageController setViewControllers:@[[UIViewController new]] direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:nil];
     }
+    [self pageController:self didScrollToIndex:_toIndex];
 }
 
 - (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerAfterViewController:(UIViewController *)viewController{

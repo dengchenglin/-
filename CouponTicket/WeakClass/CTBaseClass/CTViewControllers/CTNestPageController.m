@@ -150,6 +150,8 @@
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
     CGFloat maxOffest = self.heightForHeadView - (self.ignoreNavBar?0:NAVBAR_HEIGHT);
+    //由于系统的contentOffset只精确到了一位 故这里也只能保留一位小数并且不能四舍五入
+    maxOffest = ((NSInteger)(maxOffest*10))/10.0;
     if(scrollView == self.scrollView){
         if(self.scrollView.contentOffset.y >= maxOffest){
             self.scrollView.contentOffset = CGPointMake(0, maxOffest);

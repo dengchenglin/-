@@ -27,6 +27,7 @@
         _tableView.delegate = self;
         _tableView.dataSource = self;
         _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+        _tableView.showsVerticalScrollIndicator = NO;
         [_tableView registerNibWithClass:CTEarnRankCell.class];
     }
     return _tableView;
@@ -53,9 +54,7 @@
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     CTEarnRankCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(CTEarnRankCell.class)];
-    if(!cell){
-        cell = [[CTEarnRankCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:NSStringFromClass(CTEarnRankCell.class)];
-    }
+
     return cell;
 }
 

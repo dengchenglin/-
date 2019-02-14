@@ -114,6 +114,14 @@
     }];
 }
 
+- (void)setUpEvent{
+    @weakify(self)
+    [self.navBar.backButton touchUpInsideSubscribeNext:^(id x) {
+        @strongify(self)
+        [self back];
+    }];
+}
+
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
     [super scrollViewDidScroll:scrollView];
     if(scrollView == self.scrollView){

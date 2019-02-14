@@ -10,7 +10,7 @@
 
 #import "UIScrollView+CLRefresh.h"
 
-@interface CTBaseListViewController ()<UITableViewDataSource,UITableViewDelegate>
+@interface CTBaseListViewController ()
 
 @end
 

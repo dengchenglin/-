@@ -9,5 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface CTEarnDescView : UIView
+@property (weak, nonatomic) IBOutlet UILabel *balanceLabel;
+@property (weak, nonatomic) IBOutlet UIButton *withdrawButton;
+@property (weak, nonatomic) IBOutlet UILabel *lastMonthProfitLabel;
+@property (weak, nonatomic) IBOutlet UILabel *totalProfitLabel;
 
 @end

@@ -10,7 +10,8 @@
 
 #import "CTTableView.h"
 
-@interface CTBaseListViewController : CTBaseViewController
+@interface CTBaseListViewController : CTBaseViewController<UITableViewDataSource,UITableViewDelegate>
+
 @property (nonatomic, strong) CTTableView *tableView;
 
 @property (nonatomic, assign) NSUInteger pageIndex;
