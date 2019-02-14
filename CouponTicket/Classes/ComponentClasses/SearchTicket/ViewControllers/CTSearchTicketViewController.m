@@ -136,23 +136,32 @@
         UIViewController *vc = [[CTModuleManager goodListService]goodListViewControllerWithCategoryId:nil];
         [self.navigationController pushViewController:vc animated:YES];
     }];
-    
-    
-    //检测粘贴板
-    void (^checkPasteBlock)(void) = ^{
+    //实时销量榜
+    [self.categoryView.titleheadView addActionWithBlock:^(id target) {
         @strongify(self)
-        NSString *pasteText = [UIPasteboard generalPasteboard]._newestString;
-        if(pasteText)
-        {
-            self.pasteView.text = pasteText;
-        }
-    };
-    [self aspect_hookSelector:@selector(viewWillAppear:) withOptions:AspectPositionAfter usingBlock:^(BOOL animated){
-        checkPasteBlock();
-    } error:nil];
-    [[[[NSNotificationCenter defaultCenter]rac_addObserverForName:UIApplicationDidBecomeActiveNotification object:nil]takeUntil:self.rac_willDeallocSignal] subscribeNext:^(NSNotification * _Nullable x) {
-        checkPasteBlock();
+        UIViewController *vc = [[CTModuleManager goodListService]hotsalesViewController];
+        [self.navigationController pushViewController:vc animated:YES];
     }];
+    
+    
+    //需要检测粘贴板
+    [[[[NSNotificationCenter defaultCenter]rac_addObserverForName:UIApplicationDidBecomeActiveNotification object:nil]takeUntil:self.rac_willDeallocSignal] subscribeNext:^(NSNotification * _Nullable x) {
+        @strongify(self)
+        [self checkPasteboard];
+    }];
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self checkPasteboard];
+}
+//检测粘贴板
+- (void)checkPasteboard{
+    NSString *pasteText = [UIPasteboard generalPasteboard]._newestString;
+    if(pasteText)
+    {
+        self.pasteView.text = pasteText;
+    }
 }
 
 - (void)request{

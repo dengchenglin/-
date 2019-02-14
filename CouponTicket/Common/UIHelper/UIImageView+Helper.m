@@ -31,7 +31,7 @@ static const int UIImageViewTapActionKey;
 @end
 @implementation UIImageView (Helper)
 - (void)addActionWithBlock:(void(^)(id target))block{
-   
+    self.userInteractionEnabled = YES;
     UIImageViewHelper *helper = [UIImageViewHelper new];
     helper.block = block;
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:helper action:@selector(tapAction:)];

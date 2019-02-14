@@ -73,7 +73,21 @@
     @weakify(self)
     [self.logoutView.logoutButton touchUpInsideSubscribeNext:^(id x) {
         @strongify(self)
-        
+        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"是否退出登录" message:nil delegate:nil cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
+        [alert show];
+        [alert.rac_buttonClickedSignal subscribeNext:^(NSNumber * _Nullable x) {
+            if(x.integerValue == 1){
+                [CTAppManager logout];
+                [[CTModuleManager loginService] showLoginFromViewController:self callback:^(BOOL logined) {
+                    if(logined){
+                        [self.navigationController popToRootViewControllerAnimated:YES];
+                    }
+                    else{
+                        [CTAppManager sharedInstance].mainTab.selectedIndex = 0;
+                    }
+                }];
+            }
+        }];
     }];
 }
 #pragma  mark - UITableViewDelegate+DataSoure
@@ -112,6 +126,7 @@
                 [MBProgressHUD showMBProgressHudWithTitle:@"清除完成"];
             }];
         }
+        break;
         case 3:
         {
             [[CTModuleManager loginService]pushWithdrawSetpsdFromViewController:self mobile:[CTAppManager user].mobile completed:^{

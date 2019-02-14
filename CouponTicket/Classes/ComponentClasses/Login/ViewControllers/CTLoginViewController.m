@@ -80,10 +80,7 @@
             return ;
         }
         [[CTAppManager sharedInstance] saveUserWithInfo:nil];
-        if(self.callback){
-            self.callback(YES);
-        }
-        [self back];
+        [self successBack];
     }];
     //注册
     [self.loginView.registerButton touchUpInsideSubscribeNext:^(id x) {
@@ -114,6 +111,20 @@
         [self.navigationController pushViewController:vc animated:YES];
     }];
     
+}
+
+- (void)successBack{
+    if(self.callback){
+        self.callback(YES);
+    }
+    [super back];
+}
+
+- (void)back{
+    if(self.callback){
+        self.callback(NO);
+    }
+    [super back];
 }
 
 @end

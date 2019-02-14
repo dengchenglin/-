@@ -36,6 +36,8 @@
 		2407A8F021FD8C3F000403B7 /* CTMemberEquityView3.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2407A8EF21FD8C3F000403B7 /* CTMemberEquityView3.xib */; };
 		2407A8F221FD8C4A000403B7 /* CTMemberEquityView4.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2407A8F121FD8C4A000403B7 /* CTMemberEquityView4.xib */; };
 		2407A8F521FD90A1000403B7 /* CTMemberEquityPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2407A8F421FD90A1000403B7 /* CTMemberEquityPageView.m */; };
+		240A8EF422158AD9006E4DED /* CTWebService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3220EA2A21F98C6D004E0422 /* CTWebService.m */; };
+		240A8EFC22158BCD006E4DED /* CTUserInfoService.m in Sources */ = {isa = PBXBuildFile; fileRef = 240A8EFB22158BCD006E4DED /* CTUserInfoService.m */; };
 		240E188D21F5F1FC004A4BCB /* CTRegisterViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 240E188C21F5F1FC004A4BCB /* CTRegisterViewModel.m */; };
 		240E189121F5F4C6004A4BCB /* CTLoginBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 240E189021F5F4C6004A4BCB /* CTLoginBaseViewController.m */; };
 		240E189421F5F7D4004A4BCB /* CTGetCodeViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 240E189321F5F7D4004A4BCB /* CTGetCodeViewModel.m */; };
@@ -412,6 +414,9 @@
 		2407A8F121FD8C4A000403B7 /* CTMemberEquityView4.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CTMemberEquityView4.xib; sourceTree = "<group>"; };
 		2407A8F321FD90A1000403B7 /* CTMemberEquityPageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTMemberEquityPageView.h; sourceTree = "<group>"; };
 		2407A8F421FD90A1000403B7 /* CTMemberEquityPageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTMemberEquityPageView.m; sourceTree = "<group>"; };
+		240A8EF922158B32006E4DED /* CTUserInfoServiceProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTUserInfoServiceProtocol.h; sourceTree = "<group>"; };
+		240A8EFA22158BCD006E4DED /* CTUserInfoService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTUserInfoService.h; sourceTree = "<group>"; };
+		240A8EFB22158BCD006E4DED /* CTUserInfoService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTUserInfoService.m; sourceTree = "<group>"; };
 		240E188B21F5F1FC004A4BCB /* CTRegisterViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTRegisterViewModel.h; sourceTree = "<group>"; };
 		240E188C21F5F1FC004A4BCB /* CTRegisterViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTRegisterViewModel.m; sourceTree = "<group>"; };
 		240E188F21F5F4C6004A4BCB /* CTLoginBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTLoginBaseViewController.h; sourceTree = "<group>"; };
@@ -1110,6 +1115,60 @@
 			path = strategy;
 			sourceTree = "<group>";
 		};
+		240A8EF522158AFB006E4DED /* UserInfo */ = {
+			isa = PBXGroup;
+			children = (
+				240A8EF822158B0E006E4DED /* ViewControllers */,
+				240A8EF722158B09006E4DED /* Views */,
+				240A8EF622158B04006E4DED /* Service */,
+			);
+			path = UserInfo;
+			sourceTree = "<group>";
+		};
+		240A8EF622158B04006E4DED /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				240A8EFA22158BCD006E4DED /* CTUserInfoService.h */,
+				240A8EFB22158BCD006E4DED /* CTUserInfoService.m */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		240A8EF722158B09006E4DED /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				32DB93CE221573E400300ACC /* CTUserInfoView.h */,
+				32DB93CF221573E400300ACC /* CTUserInfoView.m */,
+				32DB93D1221573EB00300ACC /* CTUserInfoView.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		240A8EF822158B0E006E4DED /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				32DB93D32215771900300ACC /* CTUserDetailViewController.h */,
+				32DB93D42215771900300ACC /* CTUserDetailViewController.m */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		240A8EFD22158D02006E4DED /* CTEarnView */ = {
+			isa = PBXGroup;
+			children = (
+				32DB939F2215090B00300ACC /* CTThirtyTrendView.h */,
+				32DB93A02215090B00300ACC /* CTThirtyTrendView.m */,
+				32DB93A52215093600300ACC /* CTThirtyTrendView.xib */,
+				32DB93A922150B2E00300ACC /* CTThirtyProfitView.h */,
+				32DB93AA22150B2E00300ACC /* CTThirtyProfitView.m */,
+				32DB93AC22150B3800300ACC /* CTThirtyProfitView.xib */,
+				32DB93AE22150C3800300ACC /* CTThirtyProfitHeadView.h */,
+				32DB93AF22150C3800300ACC /* CTThirtyProfitHeadView.m */,
+				32DB93B122150C4200300ACC /* CTThirtyProfitHeadView.xib */,
+			);
+			path = CTEarnView;
+			sourceTree = "<group>";
+		};
 		240F512D21F9DAEB00BFDD2D /* CTPopWindow */ = {
 			isa = PBXGroup;
 			children = (
@@ -1182,6 +1241,7 @@
 		245CAE4C21F42E8000496052 /* CTViews */ = {
 			isa = PBXGroup;
 			children = (
+				240A8EFD22158D02006E4DED /* CTEarnView */,
 				32A28EBB2202C88C0049B003 /* CTAlertView */,
 				32BD0E4922018FE400E99B86 /* CTPhotosView */,
 				32BD0E4322018C8C00E99B86 /* CTContentInputView */,
@@ -1473,6 +1533,7 @@
 				32BD0E2C220183AE00E99B86 /* CTSetServiceProtocol.h */,
 				240F74652201C5E500A2DFFC /* CTToolServiceProtocol.h */,
 				32A28EAB220295EF0049B003 /* CTWithdrawServiceProtocol.h */,
+				240A8EF922158B32006E4DED /* CTUserInfoServiceProtocol.h */,
 			);
 			path = CTModuleServices;
 			sourceTree = "<group>";
@@ -1606,8 +1667,6 @@
 				32DB93C422156A7D00300ACC /* CTMyTeamPageController.m */,
 				32DB93C622156C3900300ACC /* CTTeamListViewController.h */,
 				32DB93C722156C3900300ACC /* CTTeamListViewController.m */,
-				32DB93D32215771900300ACC /* CTUserDetailViewController.h */,
-				32DB93D42215771900300ACC /* CTUserDetailViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -1818,6 +1877,9 @@
 				3280739621FEF4DF009CABEC /* CTMineOrderView.xib */,
 				3280739821FF0922009CABEC /* CTMineToolView.h */,
 				3280739921FF0922009CABEC /* CTMineToolView.m */,
+				32DB93B322150D9A00300ACC /* CTEarnTrendCell.h */,
+				32DB93B422150D9A00300ACC /* CTEarnTrendCell.m */,
+				32DB93B522150D9A00300ACC /* CTEarnTrendCell.xib */,
 				3280739B21FF0969009CABEC /* CTMineToolView.xib */,
 				32BD0E26220172FE00E99B86 /* CTMineNavItemView.h */,
 				32BD0E27220172FE00E99B86 /* CTMineNavItemView.m */,
@@ -1839,30 +1901,15 @@
 				32DB93972214FC1C00300ACC /* CTEarnTimeView.h */,
 				32DB93982214FC1C00300ACC /* CTEarnTimeView.m */,
 				32DB939A2214FC2500300ACC /* CTEarnTimeView.xib */,
-				32DB939F2215090B00300ACC /* CTThirtyTrendView.h */,
-				32DB93A02215090B00300ACC /* CTThirtyTrendView.m */,
-				32DB93A52215093600300ACC /* CTThirtyTrendView.xib */,
 				32DB93A22215091A00300ACC /* CTSevenTrendView.h */,
 				32DB93A32215091A00300ACC /* CTSevenTrendView.m */,
 				32DB93A72215093F00300ACC /* CTSevenTrendView.xib */,
-				32DB93A922150B2E00300ACC /* CTThirtyProfitView.h */,
-				32DB93AA22150B2E00300ACC /* CTThirtyProfitView.m */,
-				32DB93AC22150B3800300ACC /* CTThirtyProfitView.xib */,
-				32DB93AE22150C3800300ACC /* CTThirtyProfitHeadView.h */,
-				32DB93AF22150C3800300ACC /* CTThirtyProfitHeadView.m */,
-				32DB93B122150C4200300ACC /* CTThirtyProfitHeadView.xib */,
-				32DB93B322150D9A00300ACC /* CTEarnTrendCell.h */,
-				32DB93B422150D9A00300ACC /* CTEarnTrendCell.m */,
-				32DB93B522150D9A00300ACC /* CTEarnTrendCell.xib */,
 				32DB93BE2215433000300ACC /* CTOrderListCell.h */,
 				32DB93BF2215433000300ACC /* CTOrderListCell.m */,
 				32DB93C02215433000300ACC /* CTOrderListCell.xib */,
 				32DB93C922156DDA00300ACC /* CTTeamListCell.h */,
 				32DB93CA22156DDA00300ACC /* CTTeamListCell.m */,
 				32DB93CB22156DDA00300ACC /* CTTeamListCell.xib */,
-				32DB93CE221573E400300ACC /* CTUserInfoView.h */,
-				32DB93CF221573E400300ACC /* CTUserInfoView.m */,
-				32DB93D1221573EB00300ACC /* CTUserInfoView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -2543,6 +2590,7 @@
 		32BE613B21EDDA7700BA52EF /* ComponentClasses */ = {
 			isa = PBXGroup;
 			children = (
+				240A8EF522158AFB006E4DED /* UserInfo */,
 				32A28EA2220294E10049B003 /* Withdraw */,
 				240F745F2201C58F00A2DFFC /* Tool */,
 				32BD0E2B2201838500E99B86 /* Set */,
@@ -3012,6 +3060,7 @@
 				325D3B5B21F1DE1200465B91 /* CTMemberViewController.m in Sources */,
 				32BE60F021EDCFA600BA52EF /* CLRefreshConfig.m in Sources */,
 				326AC1E721FAB143008C154B /* CTSearchTikcetPasteView.m in Sources */,
+				240A8EFC22158BCD006E4DED /* CTUserInfoService.m in Sources */,
 				32BD0E3D2201890000E99B86 /* CTSetLogoutView.m in Sources */,
 				32BD0E28220172FE00E99B86 /* CTMineNavItemView.m in Sources */,
 				32CA559421F7148800145E31 /* CTSearchPreviewView.m in Sources */,
@@ -3270,6 +3319,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				32BE601D21EDC5E500BA52EF /* CouponTicketTests.m in Sources */,
+				240A8EF422158AD9006E4DED /* CTWebService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

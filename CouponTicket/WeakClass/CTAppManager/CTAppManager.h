@@ -30,11 +30,15 @@
 
 @interface CTAppManager : NSObject
 
+@property (nonatomic, weak) UITabBarController *mainTab;
+
 @property (nonatomic, strong,readonly) CTUser *user;
 
 SINGLETON_FOR_CLASS_DEF
 
 + (BOOL)logined;
+
++ (void)logout;
 
 + (CTUser *)user;
 

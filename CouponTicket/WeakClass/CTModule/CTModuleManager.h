@@ -45,4 +45,7 @@
 
 + (id<CTWithdrawServiceProtocol>)withdrawService;
 
++ (id<CTUserInfoServiceProtocol>)userInfoService;
+
+
 @end

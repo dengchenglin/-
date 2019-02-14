@@ -104,6 +104,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [CTAppManager sharedInstance].mainTab = self;
     self.viewControllers = [self main_viewControllers];
     self.view.backgroundColor = [UIColor whiteColor];
     [self.tabBar setBackgroundImage:[UIImage new]];

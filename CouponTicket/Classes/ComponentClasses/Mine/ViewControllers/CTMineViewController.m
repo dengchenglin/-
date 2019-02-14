@@ -165,6 +165,12 @@
 
 - (void)setUpEvent{
     @weakify(self)
+    //我的信息
+    [self.headView.iconImageView addActionWithBlock:^(id  _Nonnull target) {
+        @strongify(self)
+        UIViewController *vc = [[CTModuleManager userInfoService] viewControllerForUserId:nil];
+        [self.navigationController pushViewController:vc animated:YES];
+    }];
     //收益排行
     [self.earnView.earnButton touchUpInsideSubscribeNext:^(id x) {
         @strongify(self)

@@ -45,6 +45,11 @@ SINGLETON_FOR_CLASS_IMP(CTAppManager)
 + (BOOL)logined{
     return [CTAppManager sharedInstance].user;
 }
+
++ (void)logout{
+    [[CTAppManager sharedInstance] logout];
+}
+
 + (CTUser *)user{
     return [CTAppManager sharedInstance].user;
 }
@@ -60,5 +65,8 @@ SINGLETON_FOR_CLASS_IMP(CTAppManager)
 
 - (void)saveUserWithInfo:(id)data{
     _user = [CTUser new];
+}
+- (void)logout{
+    _user = nil;
 }
 @end

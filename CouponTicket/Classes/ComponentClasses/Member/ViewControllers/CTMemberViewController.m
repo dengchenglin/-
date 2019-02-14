@@ -201,7 +201,7 @@
     [self.containerView addConfig:^(CLSectionConfig *config) {
         @strongify(self)
         config.sectioView = self.strategyView;
-        self.strategyView.models = @[@"",@""];
+        self.strategyView.models = @[@"赚钱攻略",@"省钱攻略"];
         config.sectionHeight = [self.strategyView systemLayoutSizeFittingSize:CGSizeMake(SCREEN_WIDTH, CGFLOAT_MAX)].height;
         config.space = 20;
     }];
@@ -210,13 +210,26 @@
 
 - (void)setUpEvent{
     @weakify(self)
+    //我的信息
+    [self.headView.iconImageView addActionWithBlock:^(id  _Nonnull target) {
+        @strongify(self)
+        UIViewController *vc = [[CTModuleManager userInfoService] viewControllerForUserId:nil];
+        [self.navigationController pushViewController:vc animated:YES];
+    }];
+    //会员权益
     [self.headView.equityBackgroundView addActionWithBlock:^(id target) {
         @strongify(self)
         CTMemberEquityController *vc =  [CTMemberEquityController new];
         [self.navigationController pushViewController:vc animated:YES];
     }];
+    //奖金攻略
+    [self.strategyView setClickItemBlock:^(NSInteger index) {
+        @strongify(self)
+        UIViewController *webVc = [[CTModuleManager webService]pushWebFromViewController:self url:nil];
+        webVc.title = self.strategyView.models[index];
+    }];
     
-    
+    //scrollView偏移导航效果
     [self.containerView setScrollBlock:^(CGPoint contentOffest) {
         @strongify(self)
         CGFloat startOffest = 100;

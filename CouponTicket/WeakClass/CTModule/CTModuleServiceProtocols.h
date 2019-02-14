@@ -24,4 +24,5 @@
 #import "CTSetServiceProtocol.h"
 #import "CTToolServiceProtocol.h"
 #import "CTWithdrawServiceProtocol.h"
+#import "CTUserInfoServiceProtocol.h"
 #endif /* CTModuleServiceProtocols_h */

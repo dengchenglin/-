@@ -14,6 +14,10 @@
 
 CL_EXPORT_MODULE(CTWebServiceProtocol)
 
+- (UIViewController *)rootViewController{
+    return [CTWebViewController new];
+}
+
 - (UIViewController *)pushWebFromViewController:(UIViewController *)viewController  htmlString:(NSString *)htmlString{
     return [CTWebViewController showWebFromViewController:viewController url:nil htmlString:htmlString isPush:YES];
 }

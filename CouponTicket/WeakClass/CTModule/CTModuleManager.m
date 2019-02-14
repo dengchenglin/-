@@ -28,6 +28,7 @@
              @"ct_set":[self setService],
              @"ct_tool":[self toolService],
              @"ct_withdraw":[self withdrawService],
+             @"ct_userinfo":[self userInfoService]
           };
 }
 
@@ -95,5 +96,9 @@
 
 + (id)withdrawService{
         return [CLModuleManager moduleServiceInstanceForProtocol:@protocol(CTWithdrawServiceProtocol)];
+}
+
++ (id)userInfoService{
+    return [CLModuleManager moduleServiceInstanceForProtocol:@protocol(CTUserInfoServiceProtocol)];
 }
 @end
