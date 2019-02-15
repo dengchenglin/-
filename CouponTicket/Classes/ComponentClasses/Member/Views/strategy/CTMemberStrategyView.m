@@ -14,6 +14,7 @@
 
 @property (nonatomic, strong) UIView *containerView;
 
+
 @end
 
 @implementation CTMemberStrategyView
@@ -39,23 +40,26 @@ ViewInstance(setUp)
         make.right.mas_equalTo(-30);
         make.bottom.mas_equalTo(0);
     }];
-}
-
-- (void)setModels:(NSArray *)models{
-    _models = [models copy];
-    [self reloadView];
+    
+    self.titles = @[@"赚钱攻略",@"省钱攻略"];
+    dispatch_async(dispatch_get_main_queue(), ^{
+         [self reloadView];
+    });
 }
 
 - (void)reloadView{
+    NSArray *imgs = @[@"ic_make_money",@"ic_save_money"];
     CGFloat containerWidth = _containerView.width;
     if(!containerWidth)containerWidth = SCREEN_WIDTH - 60;
-    NSInteger lineCount = (_models.count<4?_models.count:4);
+    NSInteger lineCount = (_titles.count<4?_titles.count:4);
     CGFloat itemWidth = containerWidth/lineCount;
     CGFloat itemHeight = 90;
-    NSInteger count = _models.count;
+    NSInteger count = _titles.count;
     
     for(int i = 0;i < count;i ++){
         CTMemberStrategyItem *item = NSMainBundleClass(CTMemberStrategyItem.class);
+        item.title = _titles[i];
+        item.imageView.image = [UIImage imageNamed:imgs[i]];
         item.tag = 100 + i;
         [_containerView addSubview:item];
         CGFloat left = (i%lineCount) * itemWidth;

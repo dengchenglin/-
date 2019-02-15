@@ -38,6 +38,10 @@
     
     self.text = [UIPasteboard generalPasteboard]._newestString;
     
+    [_navBarView mas_updateConstraints:^(MASConstraintMaker *make) {
+        make.height.mas_equalTo(115 + NAVBAR_TOP);
+    }];
+    
     @weakify(self)
     [_pasteActionView addActionWithBlock:^(id target) {
         @strongify(self);

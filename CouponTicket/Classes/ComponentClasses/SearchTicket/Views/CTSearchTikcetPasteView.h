@@ -11,6 +11,7 @@
 #import "CTButton.h"
 
 @interface CTSearchTikcetPasteView : UIView
+@property (weak, nonatomic) IBOutlet UIView *navBarView;
 
 @property (nonatomic, copy) NSString *text;
 

@@ -16,6 +16,8 @@
 
 #import "CTEarnTimeView.h"
 
+#import "CTProfitShareViewController.h"
+
 @interface CTEarnDetailViewController ()
 
 @property (nonatomic, strong) CTEarnDescView *descView;
@@ -80,6 +82,7 @@
 - (void)setUpUI{
     self.title = @"收益明细";
     self.navigationBarStyle = CTNavigationBarWhite;
+    [self setRightButtonWithTitle:@"分享" font:[UIFont systemFontOfSize:14] titleColor:RGBColor(20, 20, 20) selector:@selector(share)];
     self.scrollViewAvailable = YES;
     self.scrollView.backgroundColor = CTBackGroundGrayColor;
     [self.autoLayoutContainerView addSubview:self.descView];
@@ -150,6 +153,10 @@
         
     }];
 
+}
+- (void)share{
+    CTProfitShareViewController *vc = [[CTProfitShareViewController alloc]init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 @end

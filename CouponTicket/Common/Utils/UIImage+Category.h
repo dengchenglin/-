@@ -11,7 +11,8 @@
 @interface UIImage (Category)
 //图片压缩
 - (UIImage *)imageByResizeWithMaxSize:(CGSize)size;
-
+//保存到相册
+- (void)saveToPhotosWithCompleted:(void(^)(BOOL success))completed;
 @end
 
 @interface UIImage (Color)

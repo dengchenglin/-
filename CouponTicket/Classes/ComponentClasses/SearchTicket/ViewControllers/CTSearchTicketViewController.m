@@ -48,6 +48,9 @@
         _tableView.dataSource = self;
         _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         [_tableView registerNibWithClass:CTGoodListCell.class];
+        if (@available(iOS 11.0, *)) {
+            _tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+        }
         [self.view addSubview:_tableView];
     }
     return _tableView;
@@ -56,6 +59,7 @@
 - (CTSearchTikcetNavView *)navView{
     if(!_navView){
         _navView = NSMainBundleClass(CTSearchTikcetNavView.class);
+        _navView.alpha = 0;
     }
     return _navView;
 }
@@ -77,13 +81,20 @@
 - (UIView *)headView{
     if(!_headView){
         _headView = [UIView new];
+        [_headView addSubview:self.pasteView];
         [_headView addSubview:self.categoryView];
         
         CTYourLikedHeadView *yourLikedView = NSMainBundleClass(CTYourLikedHeadView.class);
         [_headView addSubview:yourLikedView];
         
+        [self.pasteView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.right.mas_equalTo(0);
+            make.top.mas_equalTo(0);
+        }];
+
         [self.categoryView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.left.right.mas_equalTo(0);
+            make.top.mas_equalTo(self.pasteView.mas_bottom);
+            make.left.right.mas_equalTo(0);
         }];
         [yourLikedView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.mas_equalTo(self.categoryView.mas_bottom);
@@ -104,23 +115,18 @@
 
 - (void)setUpUI{
     self.hideSystemNavBarWhenAppear = YES;
-    [self.view addSubview:self.navView];
-    [self.view addSubview:self.pasteView];
     [self.view addSubview:self.tableView];
+    [self.view addSubview:self.navView];
 }
 
 - (void)autoLayout{
     [self.navView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.right.left.mas_equalTo(0);
-        make.height.mas_equalTo(NAVBAR_HEIGHT + 40);
+        make.height.mas_equalTo(NAVBAR_HEIGHT);
     }];
-    [self.pasteView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.right.mas_equalTo(0);
-        make.top.mas_equalTo(self.navView.mas_bottom).offset(-30);
-    }];
+
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(self.pasteView.mas_bottom);
-        make.left.right.bottom.mas_equalTo(0);
+        make.edges.mas_equalTo(UIEdgeInsetsZero);
     }];
 }
 
@@ -136,12 +142,7 @@
         UIViewController *vc = [[CTModuleManager goodListService]goodListViewControllerWithCategoryId:nil];
         [self.navigationController pushViewController:vc animated:YES];
     }];
-    //实时销量榜
-    [self.categoryView.titleheadView addActionWithBlock:^(id target) {
-        @strongify(self)
-        UIViewController *vc = [[CTModuleManager goodListService]hotsalesViewController];
-        [self.navigationController pushViewController:vc animated:YES];
-    }];
+
     
     
     //需要检测粘贴板
@@ -206,6 +207,24 @@
     [self.navigationController pushViewController:vc animated:YES];
 }
 
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
+    if(scrollView.contentOffset.y > 40){
+        if(self.navView.alpha == 0){
+            [UIView animateWithDuration:0.3 animations:^{
+                self.navView.alpha = 1;
+            }];
+        }
+    }
+    else{
+        if(self.navView.alpha == 1){
+            [UIView animateWithDuration:0.3 animations:^{
+                self.navView.alpha = 0;
+            }];
+        }
+    }
+
+  
+}
 
 - (NSArray *)testCategory{
     

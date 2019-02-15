@@ -174,6 +174,14 @@
 		32A28ED42202EC630049B003 /* CTWithdrawModifyAlipayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 32A28ED32202EC630049B003 /* CTWithdrawModifyAlipayView.m */; };
 		32A28ED62202EC6C0049B003 /* CTWithdrawModifyAlipayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32A28ED52202EC6C0049B003 /* CTWithdrawModifyAlipayView.xib */; };
 		32A28ED92202F52F0049B003 /* CTMyCollectListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32A28ED82202F52F0049B003 /* CTMyCollectListViewController.m */; };
+		32AE799822166DD500E29FC3 /* CTProfitShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32AE799722166DD500E29FC3 /* CTProfitShareViewController.m */; };
+		32AE799B22166DEC00E29FC3 /* CTProfitShareView.m in Sources */ = {isa = PBXBuildFile; fileRef = 32AE799A22166DEC00E29FC3 /* CTProfitShareView.m */; };
+		32AE799D22166DF600E29FC3 /* CTProfitShareView_.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32AE799C22166DF600E29FC3 /* CTProfitShareView_.xib */; };
+		32AE79A12216914600E29FC3 /* CTSharePopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 32AE79A02216914600E29FC3 /* CTSharePopView.m */; };
+		32AE79A42216916400E29FC3 /* CTSharePopContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 32AE79A32216916400E29FC3 /* CTSharePopContainerView.m */; };
+		32AE79A9221691A400E29FC3 /* CTShareItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 32AE79A8221691A400E29FC3 /* CTShareItemView.m */; };
+		32AE79AB221691AC00E29FC3 /* CTShareItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32AE79AA221691AC00E29FC3 /* CTShareItemView.xib */; };
+		32AE79AD2216926F00E29FC3 /* CTSharePopContainerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32AE79AC2216926F00E29FC3 /* CTSharePopContainerView.xib */; };
 		32BD0E23220171C500E99B86 /* CTNavBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 32BD0E22220171C500E99B86 /* CTNavBar.m */; };
 		32BD0E25220171D700E99B86 /* CTNavBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32BD0E24220171D700E99B86 /* CTNavBar.xib */; };
 		32BD0E28220172FE00E99B86 /* CTMineNavItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 32BD0E27220172FE00E99B86 /* CTMineNavItemView.m */; };
@@ -675,6 +683,19 @@
 		32A28ED52202EC6C0049B003 /* CTWithdrawModifyAlipayView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CTWithdrawModifyAlipayView.xib; sourceTree = "<group>"; };
 		32A28ED72202F52F0049B003 /* CTMyCollectListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTMyCollectListViewController.h; sourceTree = "<group>"; };
 		32A28ED82202F52F0049B003 /* CTMyCollectListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTMyCollectListViewController.m; sourceTree = "<group>"; };
+		32AE799622166DD500E29FC3 /* CTProfitShareViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTProfitShareViewController.h; sourceTree = "<group>"; };
+		32AE799722166DD500E29FC3 /* CTProfitShareViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTProfitShareViewController.m; sourceTree = "<group>"; };
+		32AE799922166DEC00E29FC3 /* CTProfitShareView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTProfitShareView.h; sourceTree = "<group>"; };
+		32AE799A22166DEC00E29FC3 /* CTProfitShareView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTProfitShareView.m; sourceTree = "<group>"; };
+		32AE799C22166DF600E29FC3 /* CTProfitShareView_.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CTProfitShareView_.xib; sourceTree = "<group>"; };
+		32AE799F2216914600E29FC3 /* CTSharePopView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTSharePopView.h; sourceTree = "<group>"; };
+		32AE79A02216914600E29FC3 /* CTSharePopView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTSharePopView.m; sourceTree = "<group>"; };
+		32AE79A22216916400E29FC3 /* CTSharePopContainerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTSharePopContainerView.h; sourceTree = "<group>"; };
+		32AE79A32216916400E29FC3 /* CTSharePopContainerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTSharePopContainerView.m; sourceTree = "<group>"; };
+		32AE79A7221691A400E29FC3 /* CTShareItemView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTShareItemView.h; sourceTree = "<group>"; };
+		32AE79A8221691A400E29FC3 /* CTShareItemView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTShareItemView.m; sourceTree = "<group>"; };
+		32AE79AA221691AC00E29FC3 /* CTShareItemView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CTShareItemView.xib; sourceTree = "<group>"; };
+		32AE79AC2216926F00E29FC3 /* CTSharePopContainerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CTSharePopContainerView.xib; sourceTree = "<group>"; };
 		32BD0E21220171C500E99B86 /* CTNavBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTNavBar.h; sourceTree = "<group>"; };
 		32BD0E22220171C500E99B86 /* CTNavBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTNavBar.m; sourceTree = "<group>"; };
 		32BD0E24220171D700E99B86 /* CTNavBar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CTNavBar.xib; sourceTree = "<group>"; };
@@ -1241,6 +1262,7 @@
 		245CAE4C21F42E8000496052 /* CTViews */ = {
 			isa = PBXGroup;
 			children = (
+				32AE799E2216913000E29FC3 /* CTSharePopView */,
 				240A8EFD22158D02006E4DED /* CTEarnView */,
 				32A28EBB2202C88C0049B003 /* CTAlertView */,
 				32BD0E4922018FE400E99B86 /* CTPhotosView */,
@@ -1667,6 +1689,8 @@
 				32DB93C422156A7D00300ACC /* CTMyTeamPageController.m */,
 				32DB93C622156C3900300ACC /* CTTeamListViewController.h */,
 				32DB93C722156C3900300ACC /* CTTeamListViewController.m */,
+				32AE799622166DD500E29FC3 /* CTProfitShareViewController.h */,
+				32AE799722166DD500E29FC3 /* CTProfitShareViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -1866,6 +1890,9 @@
 		3280738821FEE7A0009CABEC /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				32AE799922166DEC00E29FC3 /* CTProfitShareView.h */,
+				32AE799A22166DEC00E29FC3 /* CTProfitShareView.m */,
+				32AE799C22166DF600E29FC3 /* CTProfitShareView_.xib */,
 				3280738921FEE7B7009CABEC /* CTMineHeadView.h */,
 				3280738A21FEE7B7009CABEC /* CTMineHeadView.m */,
 				3280738C21FEE7C0009CABEC /* CTMineHeadView.xib */,
@@ -1987,6 +2014,21 @@
 				32A28EC02202C97E0049B003 /* CTAlertHelper.m */,
 			);
 			path = CTAlertView;
+			sourceTree = "<group>";
+		};
+		32AE799E2216913000E29FC3 /* CTSharePopView */ = {
+			isa = PBXGroup;
+			children = (
+				32AE799F2216914600E29FC3 /* CTSharePopView.h */,
+				32AE79A02216914600E29FC3 /* CTSharePopView.m */,
+				32AE79A22216916400E29FC3 /* CTSharePopContainerView.h */,
+				32AE79A32216916400E29FC3 /* CTSharePopContainerView.m */,
+				32AE79AC2216926F00E29FC3 /* CTSharePopContainerView.xib */,
+				32AE79A7221691A400E29FC3 /* CTShareItemView.h */,
+				32AE79A8221691A400E29FC3 /* CTShareItemView.m */,
+				32AE79AA221691AC00E29FC3 /* CTShareItemView.xib */,
+			);
+			path = CTSharePopView;
 			sourceTree = "<group>";
 		};
 		32BD0E20220171B600E99B86 /* CTNavBar */ = {
@@ -2922,6 +2964,7 @@
 				2407A8F021FD8C3F000403B7 /* CTMemberEquityView3.xib in Resources */,
 				32DB93C22215433000300ACC /* CTOrderListCell.xib in Resources */,
 				32BD0E25220171D700E99B86 /* CTNavBar.xib in Resources */,
+				32AE79AB221691AC00E29FC3 /* CTShareItemView.xib in Resources */,
 				32BD0E3A2201867100E99B86 /* CTSetListCell.xib in Resources */,
 				32CA558521F6F23A00145E31 /* CTSortButton.xib in Resources */,
 				240E189C21F5FA45004A4BCB /* CTForgetPsdView_.xib in Resources */,
@@ -2930,6 +2973,7 @@
 				3220EA1B21F9679B004E0422 /* CTMessageListCell.xib in Resources */,
 				32FEAA0F221426F4001156CC /* CTEarnDescView.xib in Resources */,
 				32DB93A62215093600300ACC /* CTThirtyTrendView.xib in Resources */,
+				32AE79AD2216926F00E29FC3 /* CTSharePopContainerView.xib in Resources */,
 				32BD0E5E2201A1AA00E99B86 /* CTUpdateImageView.xib in Resources */,
 				32DB93B722150D9A00300ACC /* CTEarnTrendCell.xib in Resources */,
 				326AC1F421FADF08008C154B /* CTHotCatoryView.xib in Resources */,
@@ -2953,6 +2997,7 @@
 				32CA558021F6F10900145E31 /* CTUpDownControl.xib in Resources */,
 				32CA557021F6C22600145E31 /* LMNoDataView.xib in Resources */,
 				2407A8F221FD8C4A000403B7 /* CTMemberEquityView4.xib in Resources */,
+				32AE799D22166DF600E29FC3 /* CTProfitShareView_.xib in Resources */,
 				2405AEEA21FC18E3000E5081 /* CTMemberPrivilegeItem.xib in Resources */,
 				2405AEDF21FC0E3C000E5081 /* CTMemberEquityItem.xib in Resources */,
 				32A28ECE2202D5230049B003 /* CTWithdrawSuccessView.xib in Resources */,
@@ -3058,6 +3103,7 @@
 				32E7EE5521F2F7E700191789 /* CTHomeTopView.m in Sources */,
 				32BE60FD21EDCFA600BA52EF /* SDBrowserImageView.m in Sources */,
 				325D3B5B21F1DE1200465B91 /* CTMemberViewController.m in Sources */,
+				32AE79A42216916400E29FC3 /* CTSharePopContainerView.m in Sources */,
 				32BE60F021EDCFA600BA52EF /* CLRefreshConfig.m in Sources */,
 				326AC1E721FAB143008C154B /* CTSearchTikcetPasteView.m in Sources */,
 				240A8EFC22158BCD006E4DED /* CTUserInfoService.m in Sources */,
@@ -3104,6 +3150,7 @@
 				32DB93C522156A7D00300ACC /* CTMyTeamPageController.m in Sources */,
 				240E18A021F5FAC6004A4BCB /* CTForgetpsdViewModel.m in Sources */,
 				32BE60EA21EDCFA600BA52EF /* CLNetworkConfig.m in Sources */,
+				32AE799822166DD500E29FC3 /* CTProfitShareViewController.m in Sources */,
 				32BE60F321EDCFA600BA52EF /* CLRefreshHeader.m in Sources */,
 				326525ED21F5CE7F00B63DD7 /* CTGetCodeViewController.m in Sources */,
 				32E7EE6121F30AB500191789 /* CTBaseListViewController.m in Sources */,
@@ -3215,6 +3262,7 @@
 				32BD0E4222018C7B00E99B86 /* CTAdviseViewController.m in Sources */,
 				322453D621F2BFC200471059 /* CTBaseViewController.m in Sources */,
 				32BD0E342201847200E99B86 /* CTSetViewController.m in Sources */,
+				32AE79A12216914600E29FC3 /* CTSharePopView.m in Sources */,
 				32BE611F21EDCFA600BA52EF /* NSTimer+YYAdd.m in Sources */,
 				32BE610021EDCFA600BA52EF /* TZPhotoPreviewCell.m in Sources */,
 				326525E121F5C8BE00B63DD7 /* CTCanValidButton.m in Sources */,
@@ -3267,6 +3315,7 @@
 				32A28ECC2202D5120049B003 /* CTWithdrawSuccessView.m in Sources */,
 				32DB93A12215090B00300ACC /* CTThirtyTrendView.m in Sources */,
 				326AC1F221FADF00008C154B /* CTHotCatoryView.m in Sources */,
+				32AE799B22166DEC00E29FC3 /* CTProfitShareView.m in Sources */,
 				32FEA9FD2213E9C1001156CC /* CTEarnRankViewController.m in Sources */,
 				32BD0E382201865400E99B86 /* CTSetListCell.m in Sources */,
 				240F74642201C5C600A2DFFC /* CTQuestionViewController.m in Sources */,
@@ -3304,6 +3353,7 @@
 				240E18A321F5FB0D004A4BCB /* CTSetPasswordViewModel.m in Sources */,
 				2407A8E121FD8868000403B7 /* CTMemberEquityTypeView.m in Sources */,
 				32CA557B21F6F02700145E31 /* CTLeftTextButton.m in Sources */,
+				32AE79A9221691A400E29FC3 /* CTShareItemView.m in Sources */,
 				322453D821F2BFC200471059 /* CTTableView.m in Sources */,
 				326AC20421FB04B1008C154B /* CLContainerView.m in Sources */,
 				32A28EA7220295A30049B003 /* CTWithdrawViewController.m in Sources */,

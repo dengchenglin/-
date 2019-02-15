@@ -43,4 +43,5 @@
 #import "UIImageView+CTHelper.h"
 #import "CTAppManager.h"
 #import "CTMemberManager.h"
+#import "CTTableView.h"
 #endif /* CTPrefixHeader_pch */

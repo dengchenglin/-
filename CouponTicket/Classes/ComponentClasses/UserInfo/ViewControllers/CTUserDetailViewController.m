@@ -20,8 +20,9 @@
 
 @interface CTUserDetailViewController ()<UITableViewDataSource,UITableViewDelegate>
 
-@property (nonatomic, strong) CTUserInfoView
-*infoView;@property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, strong) CTUserInfoView *infoView;
+
+@property (nonatomic, strong) UITableView *tableView;
 
 @property (nonatomic, strong) CTThirtyProfitView *profitView;
 

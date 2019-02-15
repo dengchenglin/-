@@ -32,7 +32,7 @@ ViewInstance(setUp)
     _segmentedControl.selectedLineWidth = 26;
     _segmentedControl.selectedLineHeight = 4;
     _segmentedControl.selectedLineColor = HexColor(@"#FFC726");
-    _segmentedControl.titleNormalColor = RGBColor(200, 200, 200);
+    _segmentedControl.titleNormalColor = HexColor(@"#FFCCBE");
     _segmentedControl.titleSelectedColor = [UIColor whiteColor];
     [self addSubview:_segmentedControl];
     

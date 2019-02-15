@@ -10,6 +10,10 @@
 
 #import "CTShareView.h"
 
+#import "CTSharePopView.h"
+
+#import "UIView+YYAdd.h"
+
 @interface CTShareViewController ()
 
 @property (nonatomic, strong) CTShareView *shareView;
@@ -40,7 +44,7 @@
 }
 
 - (void)share{
-    
+      [CTSharePopView showSharePopViewWithTypes:@[CTShareTypeWeChat,CTShareTypeQQ,CTShareTypeSaveImg] image:[self.view snapshotImage] title:nil url:nil];
 }
 
 @end

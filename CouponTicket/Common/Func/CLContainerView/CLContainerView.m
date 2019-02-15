@@ -37,17 +37,18 @@
     _tableView.showsVerticalScrollIndicator = NO;
     _tableView.showsHorizontalScrollIndicator = NO;
     [self addSubview:_tableView];
-    _tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+    if (@available(iOS 11.0, *)) {
+        _tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+    }
+    [_tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.mas_equalTo(UIEdgeInsetsZero);
+    }];
 }
 - (void)setBackgroundColor:(UIColor *)backgroundColor{
     [super setBackgroundColor:backgroundColor];
     _tableView.backgroundColor = backgroundColor;
 }
 
-- (void)layoutSubviews{
-    [super layoutSubviews];
-    _tableView.frame = self.bounds;
-}
 
 - (void)removeAllObjects{
     [self.configs removeAllObjects];

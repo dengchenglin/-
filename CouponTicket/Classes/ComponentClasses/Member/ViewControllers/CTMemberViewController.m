@@ -129,7 +129,7 @@
 
 - (void)autoLayout{
     [self.containerView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.mas_equalTo(0);
+        make.edges.mas_equalTo(UIEdgeInsetsZero);
     }];
     [self.navBar mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.top.mas_equalTo(0);
@@ -189,19 +189,18 @@
         config.sectionHeight = [self.upgradeView systemLayoutSizeFittingSize:CGSizeMake(SCREEN_WIDTH, CGFLOAT_MAX)].height;
         config.space = 30;
     }];
-    //会员精选
-    [self.containerView addConfig:^(CLSectionConfig *config) {
-        @strongify(self)
-        config.sectioView = self.choicenessView;
-        self.choicenessView.imgs = @[@"",@"",@""];
-        config.sectionHeight = [self.choicenessView systemLayoutSizeFittingSize:CGSizeMake(SCREEN_WIDTH, CGFLOAT_MAX)].height;
-        config.space = 20;
-    }];
+//    //会员精选
+//    [self.containerView addConfig:^(CLSectionConfig *config) {
+//        @strongify(self)
+//        config.sectioView = self.choicenessView;
+//        self.choicenessView.imgs = @[@"",@"",@""];
+//        config.sectionHeight = [self.choicenessView systemLayoutSizeFittingSize:CGSizeMake(SCREEN_WIDTH, CGFLOAT_MAX)].height;
+//        config.space = 20;
+//    }];
     //赚钱攻略
     [self.containerView addConfig:^(CLSectionConfig *config) {
         @strongify(self)
         config.sectioView = self.strategyView;
-        self.strategyView.models = @[@"赚钱攻略",@"省钱攻略"];
         config.sectionHeight = [self.strategyView systemLayoutSizeFittingSize:CGSizeMake(SCREEN_WIDTH, CGFLOAT_MAX)].height;
         config.space = 20;
     }];
@@ -210,12 +209,7 @@
 
 - (void)setUpEvent{
     @weakify(self)
-    //我的信息
-    [self.headView.iconImageView addActionWithBlock:^(id  _Nonnull target) {
-        @strongify(self)
-        UIViewController *vc = [[CTModuleManager userInfoService] viewControllerForUserId:nil];
-        [self.navigationController pushViewController:vc animated:YES];
-    }];
+
     //会员权益
     [self.headView.equityBackgroundView addActionWithBlock:^(id target) {
         @strongify(self)
@@ -226,7 +220,7 @@
     [self.strategyView setClickItemBlock:^(NSInteger index) {
         @strongify(self)
         UIViewController *webVc = [[CTModuleManager webService]pushWebFromViewController:self url:nil];
-        webVc.title = self.strategyView.models[index];
+        webVc.title = self.strategyView.titles[index];
     }];
     
     //scrollView偏移导航效果

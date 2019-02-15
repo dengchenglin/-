@@ -14,7 +14,7 @@
 
 @property (nonatomic, strong) CTMemberTitleView *titleView;
 
-@property (nonatomic, copy) NSArray *models;
+@property (nonatomic, copy) NSArray *titles;
 
 @property (nonatomic, copy) void(^clickItemBlock)(NSInteger index);
 

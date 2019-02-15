@@ -26,6 +26,19 @@
     return image;
 }
 
+
+- (void)saveToPhotosWithCompleted:(void(^)(BOOL success))completed{
+    void *contextInfo = (__bridge void *)completed;
+    UIImageWriteToSavedPhotosAlbum(self, self, @selector(image:didFinishSavingWithError:contextInfo:), contextInfo);
+}
+
+- (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo {
+    void(^completed)(BOOL success) = (__bridge void (^)(BOOL))(contextInfo);
+   if(completed)
+   {
+       completed(error?NO:YES);
+   }
+}
 @end
 @implementation UIImage (Color)
 
