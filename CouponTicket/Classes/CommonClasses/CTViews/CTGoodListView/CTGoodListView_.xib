@@ -108,7 +108,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="70" height="30"/>
                                 </imageView>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P87-MY-Dnu">
-                                    <rect key="frame" x="7" y="0.0" width="24.5" height="30"/>
+                                    <rect key="frame" x="7.5" y="0.0" width="24.5" height="30"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¥" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fk1-Ba-0jN">
                                             <rect key="frame" x="0.0" y="9.5" width="7" height="12"/>
@@ -116,7 +116,7 @@
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="38" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iec-fm-bbx">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="38" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iec-fm-bbx">
                                             <rect key="frame" x="7" y="6" width="17.5" height="17"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -126,6 +126,7 @@
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="trailing" secondItem="iec-fm-bbx" secondAttribute="trailing" id="9fm-VK-f7H"/>
+                                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="40" id="CrX-p6-TVK"/>
                                         <constraint firstItem="fk1-Ba-0jN" firstAttribute="centerY" secondItem="P87-MY-Dnu" secondAttribute="centerY" id="HlJ-f6-cq5"/>
                                         <constraint firstItem="fk1-Ba-0jN" firstAttribute="leading" secondItem="P87-MY-Dnu" secondAttribute="leading" id="LLS-qZ-klf"/>
                                         <constraint firstItem="iec-fm-bbx" firstAttribute="centerY" secondItem="P87-MY-Dnu" secondAttribute="centerY" id="cWa-Cd-eYR"/>

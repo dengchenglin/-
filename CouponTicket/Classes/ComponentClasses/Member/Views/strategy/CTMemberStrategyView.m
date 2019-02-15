@@ -42,9 +42,7 @@ ViewInstance(setUp)
     }];
     
     self.titles = @[@"赚钱攻略",@"省钱攻略"];
-    dispatch_async(dispatch_get_main_queue(), ^{
-         [self reloadView];
-    });
+    [self reloadView];
 }
 
 - (void)reloadView{

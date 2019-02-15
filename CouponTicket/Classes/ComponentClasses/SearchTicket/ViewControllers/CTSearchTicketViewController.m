@@ -48,9 +48,6 @@
         _tableView.dataSource = self;
         _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         [_tableView registerNibWithClass:CTGoodListCell.class];
-        if (@available(iOS 11.0, *)) {
-            _tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
-        }
         [self.view addSubview:_tableView];
     }
     return _tableView;
@@ -59,7 +56,6 @@
 - (CTSearchTikcetNavView *)navView{
     if(!_navView){
         _navView = NSMainBundleClass(CTSearchTikcetNavView.class);
-        _navView.alpha = 0;
     }
     return _navView;
 }
@@ -91,7 +87,6 @@
             make.left.right.mas_equalTo(0);
             make.top.mas_equalTo(0);
         }];
-
         [self.categoryView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.mas_equalTo(self.pasteView.mas_bottom);
             make.left.right.mas_equalTo(0);
@@ -115,18 +110,21 @@
 
 - (void)setUpUI{
     self.hideSystemNavBarWhenAppear = YES;
-    [self.view addSubview:self.tableView];
     [self.view addSubview:self.navView];
+    [self.view addSubview:self.tableView];
+    self.view.backgroundColor = RGBColor(245, 245, 245);
+    self.tableView.backgroundColor = [UIColor clearColor];
 }
 
 - (void)autoLayout{
     [self.navView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.right.left.mas_equalTo(0);
-        make.height.mas_equalTo(NAVBAR_HEIGHT);
+        make.height.mas_equalTo(NAVBAR_HEIGHT + 40);
     }];
 
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.mas_equalTo(UIEdgeInsetsZero);
+        make.top.mas_equalTo(self.navView.mas_bottom).offset(-30);
+        make.left.right.bottom.mas_equalTo(0);
     }];
 }
 
@@ -207,24 +205,6 @@
     [self.navigationController pushViewController:vc animated:YES];
 }
 
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
-    if(scrollView.contentOffset.y > 40){
-        if(self.navView.alpha == 0){
-            [UIView animateWithDuration:0.3 animations:^{
-                self.navView.alpha = 1;
-            }];
-        }
-    }
-    else{
-        if(self.navView.alpha == 1){
-            [UIView animateWithDuration:0.3 animations:^{
-                self.navView.alpha = 0;
-            }];
-        }
-    }
-
-  
-}
 
 - (NSArray *)testCategory{
     
