@@ -50,7 +50,7 @@
  * 导航与TabBar
  */
 #define NAVBAR_HEIGHT ((IS_iPhoneX|IS_iPhoneXM) ? (64 + 24) : 64)
-#define TABBAR_HEIGHT ((IS_iPhoneX|IS_iPhoneXM) ? (49 + 34) : 49)
+#define TABBAR_HEIGHT ((IS_iPhoneX|IS_iPhoneXM) ? (49 + 24) : 49)
 #define NAVBAR_TOP ((IS_iPhoneX|IS_iPhoneXM) ? 24 : 0)
 #define BOTTOM_HEIGHT (IS_Than_IPhoneX?10:0)
 

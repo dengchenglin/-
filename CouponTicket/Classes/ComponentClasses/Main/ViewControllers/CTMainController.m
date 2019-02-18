@@ -127,6 +127,10 @@
 - (void)viewDidLayoutSubviews{
     [super viewDidLayoutSubviews];
     [self removeSystemTabbar];
+    CGRect frame = self.tabBar.frame;
+    frame.origin.y = self.view.frame.size.height - TABBAR_HEIGHT;
+    self.tabBar.frame = frame;
+    self.tabBar.backgroundColor = [UIColor whiteColor];
     
 }
 //彻底删除系统的tabbaritem

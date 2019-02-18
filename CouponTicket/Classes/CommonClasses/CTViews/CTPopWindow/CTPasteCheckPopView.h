@@ -12,4 +12,6 @@
 
 + (void)showPopViewWithText:(NSString *)text callback:(void(^)(NSInteger buttonIndex))callback;
 
+
++ (void)hiddenPopView;
 @end

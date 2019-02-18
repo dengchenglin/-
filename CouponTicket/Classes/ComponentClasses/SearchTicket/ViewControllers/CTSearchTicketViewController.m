@@ -48,6 +48,9 @@
         _tableView.dataSource = self;
         _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         [_tableView registerNibWithClass:CTGoodListCell.class];
+        if (@available(iOS 11.0, *)) {
+            _tableView.contentInsetAdjustmentBehavior = UIApplicationBackgroundFetchIntervalNever;
+        } 
         [self.view addSubview:_tableView];
     }
     return _tableView;
@@ -124,7 +127,8 @@
 
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(self.navView.mas_bottom).offset(-30);
-        make.left.right.bottom.mas_equalTo(0);
+        make.left.right.mas_equalTo(0);
+        make.height.mas_equalTo(SCREEN_HEIGHT - NAVBAR_HEIGHT - 10 - TABBAR_HEIGHT);
     }];
 }
 

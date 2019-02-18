@@ -8,6 +8,10 @@
 
 #import "CTPasteCheckPopView.h"
 
+#import <objc/runtime.h>
+
+static int CTPasteCheckPopViewKey;
+
 @interface CTPasteCheckPopView()
 @property (weak, nonatomic) IBOutlet UIView *contentView;
 @property (weak, nonatomic) IBOutlet UIImageView *backgroundView;
@@ -21,14 +25,23 @@
 @implementation CTPasteCheckPopView
 
 + (void)showPopViewWithText:(NSString *)text callback:(void(^)(NSInteger buttonIndex))callback{
+    [CTPasteCheckPopView hiddenPopView];
     CTPasteCheckPopView *popView = NSMainBundleClass(CTPasteCheckPopView.class);
     popView.clickButtonBlock = callback;
     popView.textLabel.text = text;
     [[UIApplication sharedApplication].keyWindow addSubview:popView];
+    objc_setAssociatedObject([UIApplication sharedApplication].keyWindow, &CTPasteCheckPopViewKey, popView, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     [popView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.mas_equalTo(UIEdgeInsetsZero);
     }];
     [popView startAnimation];
+}
+
++ (void)hiddenPopView{
+    UIView *popView = objc_getAssociatedObject([UIApplication sharedApplication].keyWindow, &CTPasteCheckPopViewKey);
+    if(popView){
+        [popView removeFromSuperview];
+    }
 }
 
 - (void)awakeFromNib{

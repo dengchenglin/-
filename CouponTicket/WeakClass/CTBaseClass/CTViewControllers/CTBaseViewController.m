@@ -138,7 +138,7 @@
       
     }
     else{
-        self.edgesForExtendedLayout = UIRectEdgeNone;
+        self.edgesForExtendedLayout = UIRectEdgeBottom;
     }
     [self configureNavBar];
     

@@ -54,6 +54,9 @@
         _tableView.dataSource = self;
         [_tableView registerNibWithClass:CTGoodListCell.class];
         _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+        if (@available(iOS 11.0, *)) {
+            _tableView.contentInsetAdjustmentBehavior = UIApplicationBackgroundFetchIntervalNever;
+        } 
         [self.view addSubview:_tableView];
     }
     return _tableView;
@@ -61,7 +64,7 @@
 
 - (CTHomeBannerView *)bannerView{
     if(!_bannerView){
-        _bannerView = [[CTHomeBannerView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 180)];
+        _bannerView = [[CTHomeBannerView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 0.48 * SCREEN_WIDTH)];
     }
     return _bannerView;
 }
@@ -203,7 +206,7 @@
     return 0.0001;
 }
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
-    return [UIView new];
+    return nil;
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return 5;

@@ -129,7 +129,8 @@
 
 - (void)autoLayout{
     [self.containerView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.mas_equalTo(UIEdgeInsetsZero);
+        make.top.left.right.mas_equalTo(0);
+        make.height.mas_equalTo(SCREEN_HEIGHT - TABBAR_HEIGHT);
     }];
     [self.navBar mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.top.mas_equalTo(0);
