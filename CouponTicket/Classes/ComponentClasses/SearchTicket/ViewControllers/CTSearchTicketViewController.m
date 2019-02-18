@@ -171,7 +171,6 @@
     NSArray <CTCategoryModel *>*models = [CTCategoryModel yy_modelsWithDatas:[self testCategory]];
     self.viewModel.categoryModels = models;
     [self.tableView reloadData];
-    
 }
 
 #pragma mark - UITableViewDelegate
