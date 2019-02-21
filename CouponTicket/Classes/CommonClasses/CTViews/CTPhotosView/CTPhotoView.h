@@ -20,4 +20,6 @@
 
 @property (nonatomic, assign) NSUInteger space;
 
+@property (nonatomic, assign) BOOL autoExtrusion;
+
 @end

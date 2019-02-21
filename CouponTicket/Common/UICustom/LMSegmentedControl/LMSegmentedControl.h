@@ -15,6 +15,12 @@ typedef NS_ENUM(NSInteger,LMSegmentedControlType) {
     LMSegmentedControlAuto
 };
 
+typedef NS_ENUM(NSInteger,LMSegmentedControlSilderStyle) {
+    LMSegmentedControlSilderLine,
+    LMSegmentedControlSilderSquare
+};
+
+
 @class LMSegmentedControl;
 
 @protocol LMSegmentedControlDelegate <NSObject>
@@ -44,6 +50,8 @@ typedef NS_ENUM(NSInteger,LMSegmentedControlType) {
 @property (nonatomic, weak) id <LMSegmentedControlDelegate>delegate;
 
 @property (nonatomic, assign) LMSegmentedControlType segmentedControlType;
+
+@property (nonatomic, assign) LMSegmentedControlSilderStyle silderStyle;
 
 - (void)scrollToIndex:(NSUInteger)index;
 

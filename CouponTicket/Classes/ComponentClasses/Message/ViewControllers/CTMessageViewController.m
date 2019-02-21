@@ -80,4 +80,8 @@
     vc.title = @"消息详情";
 }
 
+- (void)dealloc
+{
+    
+}
 @end

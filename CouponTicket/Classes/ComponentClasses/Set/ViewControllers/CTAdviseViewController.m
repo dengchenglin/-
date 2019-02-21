@@ -54,6 +54,7 @@
     self.title = @"意见反馈";
     self.scrollViewAvailable = YES;
     self.navigationBarStyle = CTNavigationBarWhite;
+    self.view.backgroundColor = CTBackGroundGrayColor;
     [self.autoLayoutContainerView addSubview:self.contentInputView];
     [self.autoLayoutContainerView addSubview:self.updateImageView];
     [self.autoLayoutContainerView addSubview:self.submitButton];
@@ -62,7 +63,7 @@
 
 - (void)autoLayout{
     [self.contentInputView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(20);
+        make.top.mas_equalTo(1);
         make.left.right.mas_equalTo(0);
         make.height.mas_equalTo(150);
     }];

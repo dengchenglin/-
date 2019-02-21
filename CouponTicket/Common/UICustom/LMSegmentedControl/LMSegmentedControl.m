@@ -28,7 +28,7 @@
 
 @property (nonatomic, strong) UIScrollView *scrollView;
 
-@property (nonatomic, strong) UIImageView *seletcedLine;
+@property (nonatomic, strong) UIImageView *silder;
 
 @property (nonatomic, copy) NSArray<LMSegmentedModel*> *models;
 
@@ -75,14 +75,14 @@ ViewInstance(setUp)
     }
     [_scrollView removeAllSubViews];
     if(_segmentedControlType == LMSegmentedControlScreen){
-        if(!_seletcedLine){
-            _seletcedLine = [[UIImageView alloc]init];
+        if(!_silder){
+            _silder = [[UIImageView alloc]init];
           
         }
-        _seletcedLine.backgroundColor = _selectedLineColor;
-        _seletcedLine.layer.cornerRadius = _selectedLineHeight/2;
-        _seletcedLine.clipsToBounds = YES;
-        [_containerView addSubview:_seletcedLine];
+        _silder.backgroundColor = _selectedLineColor;
+        _silder.layer.cornerRadius = _selectedLineHeight/2;
+        _silder.clipsToBounds = YES;
+        [_scrollView addSubview:_silder];
         _itemWidth = self.width/_titles.count;
         if(_itemWidth < LMSegmentedItemMinWidth){
             _itemWidth = LMSegmentedItemMinWidth;
@@ -99,8 +99,14 @@ ViewInstance(setUp)
             [_scrollView addSubview:itemBtn];
             if(i == _currentIndex){
                 itemBtn.selected = YES;
-                [_seletcedLine setBounds:CGRectMake(0, 0, _selectedLineWidth, _selectedLineHeight)];
-                [_seletcedLine setCenter:CGPointMake(_itemWidth/2 + _itemWidth * _currentIndex, _containerView.height - _seletcedLine.height/2)];
+                [_silder setBounds:CGRectMake(0, 0, _selectedLineWidth, _selectedLineHeight)];
+                if(_silderStyle == LMSegmentedControlSilderLine)
+                {
+                  [_silder setCenter:CGPointMake(_itemWidth/2 + _itemWidth * _currentIndex, _containerView.height - _silder.height/2)];
+                }else if (_silderStyle == LMSegmentedControlSilderSquare){
+                    [_silder setCenter:CGPointMake(_itemWidth/2 + _itemWidth * _currentIndex, _containerView.height/2)];
+                }
+                
             }
         }
         _scrollView.contentSize = CGSizeMake(_titles.count * (_itemWidth), _scrollView.contentSize.height);
@@ -150,19 +156,30 @@ ViewInstance(setUp)
             [itemBtn addTarget:self action:@selector(selectAction:) forControlEvents:UIControlEventTouchUpInside];
             if(i == _currentIndex){
                 itemBtn.selected = YES;
-                if(!_seletcedLine){
-                    _seletcedLine = [[UIImageView alloc]init];
+                if(!_silder){
+                    _silder = [[UIImageView alloc]init];
                    
                 }
-                _seletcedLine.layer.cornerRadius = _selectedLineHeight/2;
-                _seletcedLine.backgroundColor = _selectedLineColor;
-                [_scrollContainerView addSubview:_seletcedLine];
+                _silder.layer.cornerRadius = _selectedLineHeight/2;
+                _silder.backgroundColor = _selectedLineColor;
+                [_scrollContainerView addSubview:_silder];
                 CGFloat left = (models[_currentIndex].width - _selectedLineWidth)/2;
-                [_seletcedLine mas_makeConstraints:^(MASConstraintMaker *make) {
-                    make.left.mas_equalTo(left); make.size.mas_equalTo(CGSizeMake(_selectedLineWidth, _selectedLineHeight));
-                   
-                    make.bottom.mas_equalTo(0);
-                }];
+          
+                
+                if(_silderStyle == LMSegmentedControlSilderLine)
+                {
+                    [_silder mas_makeConstraints:^(MASConstraintMaker *make) {
+                        make.left.mas_equalTo(left); make.size.mas_equalTo(CGSizeMake(_selectedLineWidth, _selectedLineHeight));
+                        
+                        make.bottom.mas_equalTo(0);
+                    }];
+                }else if (_silderStyle == LMSegmentedControlSilderSquare){
+                    [_silder mas_makeConstraints:^(MASConstraintMaker *make) {
+                        make.left.mas_equalTo(left); make.size.mas_equalTo(CGSizeMake(_selectedLineWidth, _selectedLineHeight));
+                        
+                        make.centerY.mas_equalTo(0);
+                    }];
+                }
             }
         }
     }
@@ -204,8 +221,8 @@ ViewInstance(setUp)
         UIButton *button = [self viewWithTag:100 + index];
         [UIView animateWithDuration:0.2 animations:^{
             button.layer.transformScale = 1.1;
-            [self.seletcedLine setCenter:CGPointMake(self->_itemWidth/2 + self->_itemWidth * (button.tag - 100), self->_seletcedLine.center.y)];
-            CGFloat offestX = [self.scrollView convertPoint:self.seletcedLine.center toView:self].x;
+            [self.silder setCenter:CGPointMake(self->_itemWidth/2 + self->_itemWidth * (button.tag - 100), self->_silder.center.y)];
+            CGFloat offestX = [self.scrollView convertPoint:self.silder.center toView:self].x;
             if(self.scrollView.contentOffset.x +  (offestX - self.scrollView.width/2) < 0){
                 self.scrollView.contentOffset = CGPointMake(0, 0);
             }
@@ -238,7 +255,7 @@ ViewInstance(setUp)
         CGFloat left = centerX - _selectedLineWidth/2;
         [UIView animateWithDuration:0.3 animations:^{
             button.layer.transformScale = 1.1;
-            [_seletcedLine mas_updateConstraints:^(MASConstraintMaker *make) {
+            [_silder mas_updateConstraints:^(MASConstraintMaker *make) {
                 make.left.mas_equalTo(left);
             }];
             [_scrollContainerView layoutIfNeeded];
