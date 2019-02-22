@@ -1,47 +1,32 @@
 //
-//  CThotSalesListViewController.m
+//  CTSpreeShopListViewController.m
 //  CouponTicket
 //
-//  Created by dengchenglin on 2019/1/24.
+//  Created by dengchenglin on 2019/2/22.
 //  Copyright © 2019年 Danke. All rights reserved.
 //
 
-#import "CThotSalesListViewController.h"
-
-#import "CTHotSalesNoticeView.h"
+#import "CTSpreeShopListViewController.h"
 
 #import "CTGoodListCell.h"
 
-@interface CThotSalesListViewController ()
+@interface CTSpreeShopListViewController ()
 
-@property (nonatomic, strong) CTHotSalesNoticeView *noticeView;
 
 @end
 
-@implementation CThotSalesListViewController
-
-- (CTHotSalesNoticeView *)noticeView{
-    if(!_noticeView){
-        _noticeView = NSMainBundleClass(CTHotSalesNoticeView.class);
-    }
-    return _noticeView;
-}
+@implementation CTSpreeShopListViewController
 
 - (void)setUpUI{
-    self.title = @"实时热销榜";
-    [self.view addSubview:self.noticeView];
+
     [self.view addSubview:self.tableView];
     [self.tableView registerNibWithClass:CTGoodListCell.class];
 }
 
 - (void)autoLayout{
-    [self.noticeView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.left.right.mas_equalTo(0);
-        make.height.mas_equalTo(40);
-    }];
+
     [self.tableView mas_remakeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(self.noticeView.mas_bottom);
-        make.left.right.bottom.mas_equalTo(0);
+        make.edges.mas_equalTo(UIEdgeInsetsZero);
     }];
 }
 
@@ -61,4 +46,6 @@
     [self.navigationController pushViewController:vc animated:YES];
 }
 
+
 @end
+

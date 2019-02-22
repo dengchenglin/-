@@ -20,10 +20,14 @@
 
 @interface CTPageController : CTBaseViewController <CTPageControllerDelegate>
 
+@property (nonatomic,strong) UIPageViewController *pageController;
+
 @property (nonatomic, copy)NSArray<UIViewController *>*viewControllers;
 
 @property (nonatomic, assign) UIEdgeInsets contentInsets;
 
 @property (nonatomic, assign) NSInteger toIndex;
+
+@property (nonatomic, assign) NSInteger currentIndex;
 
 @end

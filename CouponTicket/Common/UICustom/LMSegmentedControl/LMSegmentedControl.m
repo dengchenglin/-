@@ -55,6 +55,7 @@ ViewInstance(setUp)
     _selectedLineWidth = 20;
     _selectedLineHeight = 2;
     _textFont = [UIFont systemFontOfSize:14];
+
 }
 
 
@@ -183,8 +184,56 @@ ViewInstance(setUp)
             }
         }
     }
-    
-    
+    else if (_segmentedControlType == LMSegmentedControlConstant){
+        _scrollContainerView = [UIView new];
+        [_scrollView addSubview:_scrollContainerView];
+        [_scrollContainerView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.edges.mas_equalTo(UIEdgeInsetsZero);
+            make.height.mas_equalTo(self->_containerView.height);
+        }];
+        if(!_silder){
+            _silder = [[UIImageView alloc]init];
+            
+        }
+        _silder.backgroundColor = _selectedLineColor;
+        [_scrollContainerView addSubview:_silder];
+        
+        UIView *leftView;
+        for(int i = 0;i < _titles.count;i ++){
+            UIButton *itemBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+            itemBtn.tag = 100 + i;
+            [itemBtn setTitle:_titles[i] forState:UIControlStateNormal];
+            itemBtn.titleLabel.numberOfLines = 0;
+            [itemBtn setTitleColor:_titleNormalColor forState:UIControlStateNormal];
+            [itemBtn setTitleColor:_titleSelectedColor forState:UIControlStateSelected];
+            itemBtn.titleLabel.font = _textFont;
+            [itemBtn addTarget:self action:@selector(selectAction:) forControlEvents:UIControlEventTouchUpInside];
+            [_scrollContainerView addSubview:itemBtn];
+            [itemBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+                if(leftView){
+                    make.left.mas_equalTo(leftView.mas_right);
+                }
+                else{
+                    make.left.mas_equalTo(0);
+                }
+                make.top.bottom.mas_equalTo(0);
+                make.width.mas_equalTo(_itemSize.width);
+                if(i == _titles.count - 1){
+                    make.right.mas_equalTo(0);
+                }
+            }];
+            leftView = itemBtn;
+            [itemBtn addTarget:self action:@selector(selectAction:) forControlEvents:UIControlEventTouchUpInside];
+            if(i == _currentIndex){
+                itemBtn.selected = YES;
+                CGFloat left = _currentIndex *_itemSize.width;
+                [_silder mas_makeConstraints:^(MASConstraintMaker *make) {
+                    make.left.mas_equalTo(left); make.size.mas_equalTo(_itemSize);
+                    make.centerY.mas_equalTo(0);
+                }];
+            }
+        }
+    }
 }
 
 - (void)selectAction:(UIButton *)button
@@ -269,6 +318,42 @@ ViewInstance(setUp)
         }
         else if(offest <= max){
               [_scrollView setContentOffset:CGPointMake(offest, 0) animated:YES];
+        }
+        else{
+            [_scrollView setContentOffset:CGPointMake(max, 0) animated:YES];
+        }
+    }
+    else if (_segmentedControlType == LMSegmentedControlConstant){
+        
+        UIButton *button = [_scrollContainerView viewWithTag:100 + index];
+        for(int i = 0;i < _titles.count;i ++){
+            UIButton *b = [_scrollContainerView viewWithTag:100 + i];
+            
+            if(i == index){
+                b.selected = YES;
+            }
+            else{
+                b.selected = NO;
+                b.layer.transformScale = 1.0;
+            }
+        }
+        CGFloat left = index * _itemSize.width;
+        [UIView animateWithDuration:0.3 animations:^{
+            button.layer.transformScale = 1.1;
+            [_silder mas_updateConstraints:^(MASConstraintMaker *make) {
+                make.left.mas_equalTo(left);
+            }];
+            [_scrollContainerView layoutIfNeeded];
+        }];
+        CGFloat offest = index * _itemSize.width + _itemSize.width/2 - _scrollView.width/2;
+        CGFloat min = 0;
+        CGFloat max = _scrollView.contentSize.width - _scrollView.width;
+        if(offest <= min){
+            [_scrollView setContentOffset:CGPointZero animated:YES];
+            
+        }
+        else if(offest <= max){
+            [_scrollView setContentOffset:CGPointMake(offest, 0) animated:YES];
         }
         else{
             [_scrollView setContentOffset:CGPointMake(max, 0) animated:YES];

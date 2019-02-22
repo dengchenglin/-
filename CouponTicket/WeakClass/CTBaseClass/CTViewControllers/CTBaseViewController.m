@@ -49,7 +49,7 @@
         if(_scrollViewAvailable){
             if(!_scrollView){
                 _scrollView = [[UIScrollView alloc]initWithFrame:self.view.bounds];
-       
+                
             }
             [_scrollView addSubview:_autoLayoutContainerView];
             [_scrollView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -70,7 +70,7 @@
     if(!_scrollView)
     {
         _scrollView = [[UIScrollView alloc]initWithFrame:self.view.bounds];
-
+        
         _scrollView.contentSize = CGSizeMake(self.view.width, self.view.height + 10);
         _scrollView.delegate = (id<UIScrollViewDelegate>)self;
         _scrollView.alwaysBounceVertical = YES;
@@ -116,7 +116,7 @@
         }
     }
     else if(_navigationBarStyle == CTNavigationBarWhite){
-         [self.navigationController.navigationBar setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
+        [self.navigationController.navigationBar setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
         [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor colorWithHexString:@"#141414"],NSFontAttributeName:CTCoarseFont(20)}];
         UIButton *backButton = self.navigationItem.leftBarButtonItem.customView;
         if(backButton){
@@ -132,17 +132,29 @@
     self.extendedLayoutIncludesOpaqueBars = YES;
     self.automaticallyAdjustsScrollViewInsets = NO;
     self.view.backgroundColor = [UIColor whiteColor];
-    [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor colorWithHexString:@"#141414"],NSFontAttributeName:CTCoarseFont(22)}];
     if([self.navigationController.viewControllers indexOfObject:self] > 0){
         self.edgesForExtendedLayout = UIRectEdgeBottom;
-      
+        
     }
     else{
-        self.edgesForExtendedLayout = UIRectEdgeBottom;
+        self.edgesForExtendedLayout = UIRectEdgeNone;
     }
     [self configureNavBar];
-    
     self.navigationController.interactivePopGestureRecognizer.delegate = (id)self;
+    
+}
+
+- (void)configureNavBar{
+    self.hideNavBarBottomLine = YES;
+    self.navigationBarStyle = _navigationBarStyle;
+    
+    self.navigationController.navigationBar.translucent = NO;
+    if(self.navigationController.viewControllers.count > 1){
+        [self setLeftDefaultItem];
+    }
+    else{
+        self.navigationItem.leftBarButtonItem = nil;
+    }
     
 }
 
@@ -156,10 +168,10 @@
     else{
         [self.navigationController setNavigationBarHidden:_hideSystemNavBarWhenAppear animated:NO];
     }
- 
+    
     self.hideNavBarBottomLine = _hideNavBarBottomLine;
     self.navigationBarStyle = _navigationBarStyle;
-
+    
 }
 
 
@@ -255,23 +267,6 @@
     return button;
 }
 
-- (void)configureNavBar{
-    self.hideNavBarBottomLine = YES;
-    
-
-    self.navigationController.navigationBar.translucent = NO;
-    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageWithColor:[UIColor whiteColor]] forBarMetrics:UIBarMetricsDefault];
-    
-    [self.navigationController.navigationBar setShadowImage:[UIImage imageWithColor:RGBColor(240, 240, 240)]];
-    
-    if(self.navigationController.viewControllers.count > 1){
-        [self setLeftDefaultItem];
-    }
-    else{
-        self.navigationItem.leftBarButtonItem = nil;
-    }
-    
-}
 
 
 

@@ -22,4 +22,6 @@
 
 - (UIViewController *)nineListViewController;
 
+- (UIViewController *)spreeShopViewController;
+
 @end

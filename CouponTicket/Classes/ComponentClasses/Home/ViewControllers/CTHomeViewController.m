@@ -22,6 +22,8 @@
 
 #import "CTGoodListCell.h"
 
+#import "CTHomeSpreeShopView.h"
+
 @interface CTHomeViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic, strong) UITableView *tableView;
@@ -33,6 +35,8 @@
 @property (nonatomic, strong) CTHomeAdvertView *advertView;
 
 @property (nonatomic, strong) CTHomeNavView *navView;
+
+@property (nonatomic, strong) CTHomeSpreeShopView *spreeShopView;
 
 @property (nonatomic, strong) CTHomeSalesView *salesView;
 
@@ -83,6 +87,13 @@
     return _navView;
 }
 
+- (CTHomeSpreeShopView *)spreeShopView{
+    if(!_spreeShopView){
+        _spreeShopView = NSMainBundleClass(CTHomeSpreeShopView.class);
+    }
+    return _spreeShopView;
+}
+
 - (CTHomeSalesView *)salesView{
     if(!_salesView){
         _salesView = NSMainBundleClass(CTHomeSalesView.class);
@@ -103,6 +114,7 @@
         [_headView addSubview:self.bannerView];
         [_headView addSubview:self.advertView];
         [_headView addSubview:self.navView];
+        [_headView addSubview:self.spreeShopView];
         [_headView addSubview:self.salesView];
         [_headView addSubview:self.newestHeadView];
     }
@@ -133,9 +145,15 @@
         make.top.mas_equalTo(self.advertView.mas_bottom);
         make.left.right.mas_equalTo(0);
     }];
-    [self.salesView mas_makeConstraints:^(MASConstraintMaker *make) {
+    [self.spreeShopView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(self.navView.mas_bottom).offset(10);
         make.left.right.mas_equalTo(0);
+        make.height.mas_equalTo(510);
+    }];
+    [self.salesView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(self.spreeShopView.mas_bottom).offset(10);
+        make.left.right.mas_equalTo(0);
+        make.height.mas_equalTo(260);
     }];
     [self.newestHeadView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(self.salesView.mas_bottom).offset(10);
@@ -174,7 +192,12 @@
         UIViewController *vc = [[CTModuleManager goodListService]goodListViewControllerWithCategoryId:nil];
         [self.navigationController pushViewController:vc animated:YES];
     }];
-    
+    //整点抢购
+    [self.spreeShopView.headView addActionWithBlock:^(id target) {
+        @strongify(self)
+        UIViewController *vc = [[CTModuleManager goodListService] spreeShopViewController];
+        [self.navigationController pushViewController:vc animated:YES];
+    }];
     //销量榜
     [self.salesView.titleheadView addActionWithBlock:^(id target) {
         @strongify(self)

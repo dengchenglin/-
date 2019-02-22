@@ -8,9 +8,7 @@
 
 #import "CTPageController.h"
 
-@interface CTPageController ()<UIPageViewControllerDataSource,UIPageViewControllerDelegate>
-
-@property (nonatomic,strong) UIPageViewController *pageController;
+@interface CTPageController ()<UIPageViewControllerDataSource,UIPageViewControllerDelegate,UIGestureRecognizerDelegate>
 
 @end
 
@@ -30,7 +28,11 @@
     [super viewDidLoad];
     [self addChildViewController:self.pageController];
     [self.view addSubview:self.pageController.view];
+    __block UIScrollView *scrollView = nil;
+
+  
 }
+
 
 
 - (void)setContentInsets:(UIEdgeInsets)contentInsets{

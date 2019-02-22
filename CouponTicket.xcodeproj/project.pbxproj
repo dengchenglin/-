@@ -190,6 +190,13 @@
 		32AE79A9221691A400E29FC3 /* CTShareItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 32AE79A8221691A400E29FC3 /* CTShareItemView.m */; };
 		32AE79AB221691AC00E29FC3 /* CTShareItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32AE79AA221691AC00E29FC3 /* CTShareItemView.xib */; };
 		32AE79AD2216926F00E29FC3 /* CTSharePopContainerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32AE79AC2216926F00E29FC3 /* CTSharePopContainerView.xib */; };
+		32B4EE12221FA09300D2D71D /* CTHomeSpreeShopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 32B4EE11221FA09300D2D71D /* CTHomeSpreeShopView.m */; };
+		32B4EE14221FA0AE00D2D71D /* CTHomeSpreeShopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32B4EE13221FA0AE00D2D71D /* CTHomeSpreeShopView.xib */; };
+		32B4EE17221FC39100D2D71D /* CTSpreeShopItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 32B4EE16221FC39100D2D71D /* CTSpreeShopItem.m */; };
+		32B4EE19221FC39900D2D71D /* CTSpreeShopItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32B4EE18221FC39900D2D71D /* CTSpreeShopItem.xib */; };
+		32B4EE1D221FD63500D2D71D /* CTSpreeShopListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32B4EE1C221FD63500D2D71D /* CTSpreeShopListViewController.m */; };
+		32B4EE20221FE9FF00D2D71D /* CTSpreeShopPageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32B4EE1F221FE9FF00D2D71D /* CTSpreeShopPageController.m */; };
+		32B4EE2622200D9400D2D71D /* UIScrollView+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 32B4EE2522200D9400D2D71D /* UIScrollView+Helper.m */; };
 		32BD0E23220171C500E99B86 /* CTNavBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 32BD0E22220171C500E99B86 /* CTNavBar.m */; };
 		32BD0E25220171D700E99B86 /* CTNavBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32BD0E24220171D700E99B86 /* CTNavBar.xib */; };
 		32BD0E28220172FE00E99B86 /* CTMineNavItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 32BD0E27220172FE00E99B86 /* CTMineNavItemView.m */; };
@@ -716,6 +723,18 @@
 		32AE79A8221691A400E29FC3 /* CTShareItemView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTShareItemView.m; sourceTree = "<group>"; };
 		32AE79AA221691AC00E29FC3 /* CTShareItemView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CTShareItemView.xib; sourceTree = "<group>"; };
 		32AE79AC2216926F00E29FC3 /* CTSharePopContainerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CTSharePopContainerView.xib; sourceTree = "<group>"; };
+		32B4EE10221FA09300D2D71D /* CTHomeSpreeShopView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTHomeSpreeShopView.h; sourceTree = "<group>"; };
+		32B4EE11221FA09300D2D71D /* CTHomeSpreeShopView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTHomeSpreeShopView.m; sourceTree = "<group>"; };
+		32B4EE13221FA0AE00D2D71D /* CTHomeSpreeShopView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CTHomeSpreeShopView.xib; sourceTree = "<group>"; };
+		32B4EE15221FC39100D2D71D /* CTSpreeShopItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTSpreeShopItem.h; sourceTree = "<group>"; };
+		32B4EE16221FC39100D2D71D /* CTSpreeShopItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTSpreeShopItem.m; sourceTree = "<group>"; };
+		32B4EE18221FC39900D2D71D /* CTSpreeShopItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CTSpreeShopItem.xib; sourceTree = "<group>"; };
+		32B4EE1B221FD63500D2D71D /* CTSpreeShopListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTSpreeShopListViewController.h; sourceTree = "<group>"; };
+		32B4EE1C221FD63500D2D71D /* CTSpreeShopListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTSpreeShopListViewController.m; sourceTree = "<group>"; };
+		32B4EE1E221FE9FF00D2D71D /* CTSpreeShopPageController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTSpreeShopPageController.h; sourceTree = "<group>"; };
+		32B4EE1F221FE9FF00D2D71D /* CTSpreeShopPageController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTSpreeShopPageController.m; sourceTree = "<group>"; };
+		32B4EE2422200D9400D2D71D /* UIScrollView+Helper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+Helper.h"; sourceTree = "<group>"; };
+		32B4EE2522200D9400D2D71D /* UIScrollView+Helper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+Helper.m"; sourceTree = "<group>"; };
 		32BD0E21220171C500E99B86 /* CTNavBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTNavBar.h; sourceTree = "<group>"; };
 		32BD0E22220171C500E99B86 /* CTNavBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTNavBar.m; sourceTree = "<group>"; };
 		32BD0E24220171D700E99B86 /* CTNavBar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CTNavBar.xib; sourceTree = "<group>"; };
@@ -1598,6 +1617,12 @@
 				24FF625E21F41D1000488860 /* CTHomeNewestHeadView.h */,
 				24FF625F21F41D1000488860 /* CTHomeNewestHeadView.m */,
 				24FF626121F41D1700488860 /* CTHomeNewestHeadView.xib */,
+				32B4EE10221FA09300D2D71D /* CTHomeSpreeShopView.h */,
+				32B4EE11221FA09300D2D71D /* CTHomeSpreeShopView.m */,
+				32B4EE13221FA0AE00D2D71D /* CTHomeSpreeShopView.xib */,
+				32B4EE15221FC39100D2D71D /* CTSpreeShopItem.h */,
+				32B4EE16221FC39100D2D71D /* CTSpreeShopItem.m */,
+				32B4EE18221FC39900D2D71D /* CTSpreeShopItem.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1614,6 +1639,7 @@
 		324C3D9F21F851EE00536DA8 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				32B4EE1A221FD61500D2D71D /* SpreeShop */,
 				3220EA4521F9C550004E0422 /* GoodList */,
 				3220EA3C21F9C2A2004E0422 /* HotSales */,
 				3220EA3821F9BDF3004E0422 /* GoodDetail */,
@@ -2070,6 +2096,19 @@
 				32AE79AA221691AC00E29FC3 /* CTShareItemView.xib */,
 			);
 			path = CTSharePopView;
+			sourceTree = "<group>";
+		};
+		32B4EE1A221FD61500D2D71D /* SpreeShop */ = {
+			isa = PBXGroup;
+			children = (
+				32B4EE2422200D9400D2D71D /* UIScrollView+Helper.h */,
+				32B4EE2522200D9400D2D71D /* UIScrollView+Helper.m */,
+				32B4EE1E221FE9FF00D2D71D /* CTSpreeShopPageController.h */,
+				32B4EE1F221FE9FF00D2D71D /* CTSpreeShopPageController.m */,
+				32B4EE1B221FD63500D2D71D /* CTSpreeShopListViewController.h */,
+				32B4EE1C221FD63500D2D71D /* CTSpreeShopListViewController.m */,
+			);
+			path = SpreeShop;
 			sourceTree = "<group>";
 		};
 		32BD0E20220171B600E99B86 /* CTNavBar */ = {
@@ -3036,8 +3075,10 @@
 				32A28ECE2202D5230049B003 /* CTWithdrawSuccessView.xib in Resources */,
 				32BE613321EDCFA600BA52EF /* WSDatePickerView.xib in Resources */,
 				32E7EE6F21F32E9800191789 /* CTHomeNavView.xib in Resources */,
+				32B4EE19221FC39900D2D71D /* CTSpreeShopItem.xib in Resources */,
 				32DB93CD22156DDA00300ACC /* CTTeamListCell.xib in Resources */,
 				32E7EE7721F3321400191789 /* CTSalesItem.xib in Resources */,
+				32B4EE14221FA0AE00D2D71D /* CTHomeSpreeShopView.xib in Resources */,
 				326AC1E421FAAAA8008C154B /* CTSearchTikcetNavView.xib in Resources */,
 				32BD0E2A2201730700E99B86 /* CTMineNavItemView.xib in Resources */,
 				245CAE5621F42E8000496052 /* CTMainCategoryHeadView.xib in Resources */,
@@ -3174,6 +3215,7 @@
 				32BE60F521EDCFA600BA52EF /* CLRefreshCurveFooter.m in Sources */,
 				322453C121F2BEBC00471059 /* CTMineService.m in Sources */,
 				2407A8DE21FD882B000403B7 /* CTMemberEquityView1.m in Sources */,
+				32B4EE2622200D9400D2D71D /* UIScrollView+Helper.m in Sources */,
 				32A28EC42202CA260049B003 /* CTAlertHelper+WithdrawPsd.m in Sources */,
 				326525E721F5CDC700B63DD7 /* CTForgetViewController.m in Sources */,
 				325D3B6121F1DE3700465B91 /* CTLoginViewController.m in Sources */,
@@ -3297,6 +3339,7 @@
 				32A28EAF2202A2C60049B003 /* CTWithdrawAlipayInfoView.m in Sources */,
 				32A28E9C220287FE0049B003 /* CTAlipayBoundView.m in Sources */,
 				322453B121F2BE4600471059 /* CTHomeService.m in Sources */,
+				32B4EE17221FC39100D2D71D /* CTSpreeShopItem.m in Sources */,
 				322453D621F2BFC200471059 /* CTBaseViewController.m in Sources */,
 				32BD0E342201847200E99B86 /* CTSetViewController.m in Sources */,
 				32AE79A12216914600E29FC3 /* CTSharePopView.m in Sources */,
@@ -3307,6 +3350,7 @@
 				32BE60EF21EDCFA600BA52EF /* CLURLRequest.m in Sources */,
 				32BE612E21EDCFA600BA52EF /* SelPlaybackControls.m in Sources */,
 				3220EA2721F989A6004E0422 /* CTWebViewController.m in Sources */,
+				32B4EE12221FA09300D2D71D /* CTHomeSpreeShopView.m in Sources */,
 				32FEA9F52213C666001156CC /* CTEarnRankPageController.m in Sources */,
 				324C3DA721F854B000536DA8 /* CTGoodService.m in Sources */,
 				240F74702201C9BD00A2DFFC /* CTQuestionListCell.m in Sources */,
@@ -3324,6 +3368,7 @@
 				32DB93992214FC1C00300ACC /* CTEarnTimeView.m in Sources */,
 				32BE60F221EDCFA600BA52EF /* CLRefreshFooter.m in Sources */,
 				32A28ED12202EA180049B003 /* CTAlertHelper+WithdrawSuccess.m in Sources */,
+				32B4EE1D221FD63500D2D71D /* CTSpreeShopListViewController.m in Sources */,
 				326525FD21F5CF7900B63DD7 /* CTSetPasswordView.m in Sources */,
 				32BE612421EDCFA600BA52EF /* CLPayPasswordView.m in Sources */,
 				32BE612621EDCFA600BA52EF /* CLTextView.m in Sources */,
@@ -3338,6 +3383,7 @@
 				32CA555A21F6B07000145E31 /* CTShareService.m in Sources */,
 				32BD0E4622018CB600E99B86 /* CTContentInputView.m in Sources */,
 				32A3D158221E9C22000CA323 /* CTAdviseViewController.m in Sources */,
+				32B4EE20221FE9FF00D2D71D /* CTSpreeShopPageController.m in Sources */,
 				245CAE5A21F42EC200496052 /* CTCategoryModel.m in Sources */,
 				32E7EE5E21F3066700191789 /* CTHomePageController.m in Sources */,
 				32BE612721EDCFA600BA52EF /* CLTimerButton.m in Sources */,

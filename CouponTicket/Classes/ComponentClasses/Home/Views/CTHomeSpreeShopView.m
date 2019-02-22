@@ -1,16 +1,16 @@
 //
-//  CTHomeSalesView.m
+//  CTHomeSpreeShopView.m
 //  CouponTicket
 //
-//  Created by dengchenglin on 2019/1/19.
+//  Created by dengchenglin on 2019/2/22.
 //  Copyright © 2019年 Danke. All rights reserved.
 //
 
-#import "CTHomeSalesView.h"
+#import "CTHomeSpreeShopView.h"
 
-#import "CTSalesItem.h"
+#import "CTSpreeShopItem.h"
 
-@implementation CTHomeSalesView
+@implementation CTHomeSpreeShopView
 
 - (void)awakeFromNib{
     [super awakeFromNib];
@@ -18,10 +18,11 @@
 }
 
 - (void)reloadView{
+    NSInteger count = 6;
     UIView *leftView;
-    NSInteger count = 3;
+    UIView *topView = self.headView;
     for(int i = 0;i < count;i ++){
-        CTSalesItem *item = NSMainBundleClass(CTSalesItem.class);
+        CTSpreeShopItem *item = NSMainBundleClass(CTSpreeShopItem.class);
         item.tag = 100 + i;
         [self addSubview:item];
         [item mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -32,14 +33,18 @@
             else{
                 make.left.mas_equalTo(0);
             }
-            if(i == 2){
+            if((i + 1)%3 == 0){
                 make.right.mas_equalTo(0);
             }
-            make.top.mas_equalTo(self.titleheadView.mas_bottom);
-            make.bottom.mas_equalTo(0);
+            make.top.mas_equalTo(topView.mas_bottom);
+            make.height.mas_equalTo(230);
         }];
-        leftView = item;
         
+        leftView = item;
+        if((i + 1)%3 == 0){
+            topView = item;
+            leftView = nil;
+        }
         @weakify(self)
         [item addActionWithBlock:^(UIView *target) {
             @strongify(self)

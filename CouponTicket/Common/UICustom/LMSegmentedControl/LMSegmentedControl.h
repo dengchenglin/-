@@ -12,7 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 typedef NS_ENUM(NSInteger,LMSegmentedControlType) {
     LMSegmentedControlScreen,
-    LMSegmentedControlAuto
+    LMSegmentedControlAuto,
+    LMSegmentedControlConstant
 };
 
 typedef NS_ENUM(NSInteger,LMSegmentedControlSilderStyle) {
@@ -46,6 +47,8 @@ typedef NS_ENUM(NSInteger,LMSegmentedControlSilderStyle) {
 @property (nonatomic, assign) CGFloat selectedLineWidth;
 
 @property (nonatomic, assign) CGFloat selectedLineHeight;
+
+@property (nonatomic, assign) CGSize itemSize;
 
 @property (nonatomic, weak) id <LMSegmentedControlDelegate>delegate;
 

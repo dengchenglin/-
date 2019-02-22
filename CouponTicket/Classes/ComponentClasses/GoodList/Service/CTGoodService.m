@@ -16,6 +16,8 @@
 
 #import "CThotSalesListViewController.h"
 
+#import "CTSpreeShopPageController.h"
+
 @implementation CTGoodService
 
 CL_EXPORT_MODULE(CTGoodListServiceProtocol)
@@ -38,6 +40,10 @@ CL_EXPORT_MODULE(CTGoodListServiceProtocol)
 
 - (UIViewController *)nineListViewController{
     return [CTNineNineListViewController new];
+}
+
+- (UIViewController *)spreeShopViewController{
+    return [CTSpreeShopPageController new];
 }
 
 @end
