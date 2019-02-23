@@ -162,12 +162,10 @@
                 [nav popToRootViewControllerAnimated:NO];
             }
         }
-        [NSTimer scheduledTimerWithTimeInterval:0.1 block:^(NSTimer *timer) {
+        dispatch_async(dispatch_get_main_queue(), ^{
             self.selectedIndex = 0;
-        } repeats:NO];
-        
+        });
     }
-    
 }
 
 

@@ -16,6 +16,7 @@
 
 #define LMQiniuTokenKey @"LMQiniuTokenKey"
 
+#define LMQiniuTokenUrl @"http://api-lighting-dev.dankal.cn/v1/Communal/qiniu"
 
 @interface LMUpdateHelper: NSObject
 
@@ -88,7 +89,7 @@
 }
 
 + (void)getToken:(void(^)(NSString *token))callback{
-    NSString *getTokenUrl = @"http://api-lighting-dev.dankal.cn/v1/Communal/qiniu";
+    NSString *getTokenUrl = LMQiniuTokenUrl;
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:getTokenUrl]];
     NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
     NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {

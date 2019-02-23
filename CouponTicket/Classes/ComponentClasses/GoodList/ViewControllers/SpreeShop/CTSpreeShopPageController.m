@@ -22,7 +22,7 @@
 
 - (LMSegmentedControl *)segmentedControl{
     if(!_segmentedControl){
-        _segmentedControl = [[LMSegmentedControl alloc]init];
+        _segmentedControl = [[LMSegmentedControl alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 47)];
         _segmentedControl.delegate = self;
         _segmentedControl.layer.contents = (__bridge id)[UIImage imageNamed:@"pic_bt_bg"].CGImage;
         _segmentedControl.titleNormalColor = [UIColor whiteColor];
@@ -77,6 +77,4 @@
 - (void)pageController:(CTPageController *)pageController didScrollToIndex:(NSInteger)index{
     [self.segmentedControl scrollToIndex:index];
 }
-
-
 @end

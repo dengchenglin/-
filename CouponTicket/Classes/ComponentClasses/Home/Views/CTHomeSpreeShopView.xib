@@ -22,17 +22,17 @@
                             <rect key="frame" x="0.0" y="0.0" width="469" height="50"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gpe-B0-JGh">
-                                    <rect key="frame" x="117" y="0.0" width="236.5" height="50"/>
+                                    <rect key="frame" x="112" y="0.0" width="247" height="50"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6fS-tx-OTx">
-                                            <rect key="frame" x="0.0" y="0.0" width="113.5" height="50"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="124" height="50"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8db-rt-29z">
-                                                    <rect key="frame" x="0.0" y="0.0" width="113.5" height="50"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pic_title_seckill-1" translatesAutoresizingMaskIntoConstraints="NO" id="8db-rt-29z">
+                                                    <rect key="frame" x="0.0" y="0.0" width="124" height="50"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15:00 疯抢中" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kF1-jp-6TM">
-                                                    <rect key="frame" x="16" y="15" width="81.5" height="20"/>
+                                                    <rect key="frame" x="16" y="15" width="92" height="20"/>
                                                     <fontDescription key="fontDescription" name="PingFangSC-Semibold" family="PingFang SC" pointSize="14"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -51,7 +51,7 @@
                                             </constraints>
                                         </view>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="下一场16:00开始" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uAW-He-HB2">
-                                            <rect key="frame" x="113.5" y="13" width="123" height="24"/>
+                                            <rect key="frame" x="124" y="13" width="123" height="24"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="24" id="k5u-GY-jbw"/>
                                             </constraints>
@@ -123,5 +123,6 @@
     </objects>
     <resources>
         <image name="ic_next_gray" width="6" height="9"/>
+        <image name="pic_title_seckill-1" width="124" height="40"/>
     </resources>
 </document>

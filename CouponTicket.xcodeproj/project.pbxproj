@@ -196,7 +196,6 @@
 		32B4EE19221FC39900D2D71D /* CTSpreeShopItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32B4EE18221FC39900D2D71D /* CTSpreeShopItem.xib */; };
 		32B4EE1D221FD63500D2D71D /* CTSpreeShopListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32B4EE1C221FD63500D2D71D /* CTSpreeShopListViewController.m */; };
 		32B4EE20221FE9FF00D2D71D /* CTSpreeShopPageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32B4EE1F221FE9FF00D2D71D /* CTSpreeShopPageController.m */; };
-		32B4EE2622200D9400D2D71D /* UIScrollView+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 32B4EE2522200D9400D2D71D /* UIScrollView+Helper.m */; };
 		32BD0E23220171C500E99B86 /* CTNavBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 32BD0E22220171C500E99B86 /* CTNavBar.m */; };
 		32BD0E25220171D700E99B86 /* CTNavBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32BD0E24220171D700E99B86 /* CTNavBar.xib */; };
 		32BD0E28220172FE00E99B86 /* CTMineNavItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 32BD0E27220172FE00E99B86 /* CTMineNavItemView.m */; };
@@ -360,6 +359,7 @@
 		32E7EE7521F3320900191789 /* CTSalesItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 32E7EE7421F3320900191789 /* CTSalesItem.m */; };
 		32E7EE7721F3321400191789 /* CTSalesItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32E7EE7621F3321400191789 /* CTSalesItem.xib */; };
 		32EA9E9E2201AB1B00D72291 /* CTDoneButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 32EA9E9D2201AB1B00D72291 /* CTDoneButton.m */; };
+		32EDC59F2221186C00AFF766 /* UIScrollView+CTPagePanGes.m in Sources */ = {isa = PBXBuildFile; fileRef = 32EDC59E2221186C00AFF766 /* UIScrollView+CTPagePanGes.m */; };
 		32FEA9D02213B3C0001156CC /* CTNestPageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32FEA9CF2213B3C0001156CC /* CTNestPageController.m */; };
 		32FEA9F52213C666001156CC /* CTEarnRankPageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32FEA9F42213C666001156CC /* CTEarnRankPageController.m */; };
 		32FEA9F82213CC00001156CC /* CTEarnRankHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 32FEA9F72213CC00001156CC /* CTEarnRankHeadView.m */; };
@@ -733,8 +733,6 @@
 		32B4EE1C221FD63500D2D71D /* CTSpreeShopListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTSpreeShopListViewController.m; sourceTree = "<group>"; };
 		32B4EE1E221FE9FF00D2D71D /* CTSpreeShopPageController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTSpreeShopPageController.h; sourceTree = "<group>"; };
 		32B4EE1F221FE9FF00D2D71D /* CTSpreeShopPageController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTSpreeShopPageController.m; sourceTree = "<group>"; };
-		32B4EE2422200D9400D2D71D /* UIScrollView+Helper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+Helper.h"; sourceTree = "<group>"; };
-		32B4EE2522200D9400D2D71D /* UIScrollView+Helper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+Helper.m"; sourceTree = "<group>"; };
 		32BD0E21220171C500E99B86 /* CTNavBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTNavBar.h; sourceTree = "<group>"; };
 		32BD0E22220171C500E99B86 /* CTNavBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTNavBar.m; sourceTree = "<group>"; };
 		32BD0E24220171D700E99B86 /* CTNavBar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CTNavBar.xib; sourceTree = "<group>"; };
@@ -1047,6 +1045,8 @@
 		32E7EE7621F3321400191789 /* CTSalesItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CTSalesItem.xib; sourceTree = "<group>"; };
 		32EA9E9C2201AB1B00D72291 /* CTDoneButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTDoneButton.h; sourceTree = "<group>"; };
 		32EA9E9D2201AB1B00D72291 /* CTDoneButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTDoneButton.m; sourceTree = "<group>"; };
+		32EDC59D2221186C00AFF766 /* UIScrollView+CTPagePanGes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+CTPagePanGes.h"; sourceTree = "<group>"; };
+		32EDC59E2221186C00AFF766 /* UIScrollView+CTPagePanGes.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+CTPagePanGes.m"; sourceTree = "<group>"; };
 		32FEA9CE2213B3C0001156CC /* CTNestPageController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTNestPageController.h; sourceTree = "<group>"; };
 		32FEA9CF2213B3C0001156CC /* CTNestPageController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTNestPageController.m; sourceTree = "<group>"; };
 		32FEA9F32213C666001156CC /* CTEarnRankPageController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTEarnRankPageController.h; sourceTree = "<group>"; };
@@ -1780,6 +1780,8 @@
 			children = (
 				326525BF21F57BE900B63DD7 /* UIImageView+CTHelper.h */,
 				326525C021F57BE900B63DD7 /* UIImageView+CTHelper.m */,
+				32EDC59D2221186C00AFF766 /* UIScrollView+CTPagePanGes.h */,
+				32EDC59E2221186C00AFF766 /* UIScrollView+CTPagePanGes.m */,
 			);
 			path = CTUtils;
 			sourceTree = "<group>";
@@ -2061,12 +2063,12 @@
 		32A3D142221E9C0D000CA323 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				32A3D147221E9C0D000CA323 /* CTRecommendViewController.h */,
+				32A3D148221E9C0D000CA323 /* CTRecommendViewController.m */,
 				32A3D143221E9C0D000CA323 /* CTHandpickListViewController.h */,
 				32A3D144221E9C0D000CA323 /* CTHandpickListViewController.m */,
 				32A3D145221E9C0D000CA323 /* CTIntPointShopListViewController.h */,
 				32A3D146221E9C0D000CA323 /* CTIntPointShopListViewController.m */,
-				32A3D147221E9C0D000CA323 /* CTRecommendViewController.h */,
-				32A3D148221E9C0D000CA323 /* CTRecommendViewController.m */,
 				32A3D149221E9C0D000CA323 /* CTVideoShopListViewController.h */,
 				32A3D14A221E9C0D000CA323 /* CTVideoShopListViewController.m */,
 			);
@@ -2101,8 +2103,6 @@
 		32B4EE1A221FD61500D2D71D /* SpreeShop */ = {
 			isa = PBXGroup;
 			children = (
-				32B4EE2422200D9400D2D71D /* UIScrollView+Helper.h */,
-				32B4EE2522200D9400D2D71D /* UIScrollView+Helper.m */,
 				32B4EE1E221FE9FF00D2D71D /* CTSpreeShopPageController.h */,
 				32B4EE1F221FE9FF00D2D71D /* CTSpreeShopPageController.m */,
 				32B4EE1B221FD63500D2D71D /* CTSpreeShopListViewController.h */,
@@ -3215,7 +3215,6 @@
 				32BE60F521EDCFA600BA52EF /* CLRefreshCurveFooter.m in Sources */,
 				322453C121F2BEBC00471059 /* CTMineService.m in Sources */,
 				2407A8DE21FD882B000403B7 /* CTMemberEquityView1.m in Sources */,
-				32B4EE2622200D9400D2D71D /* UIScrollView+Helper.m in Sources */,
 				32A28EC42202CA260049B003 /* CTAlertHelper+WithdrawPsd.m in Sources */,
 				326525E721F5CDC700B63DD7 /* CTForgetViewController.m in Sources */,
 				325D3B6121F1DE3700465B91 /* CTLoginViewController.m in Sources */,
@@ -3433,6 +3432,7 @@
 				32CA55AF21F7253600145E31 /* CTSearchTextfield.m in Sources */,
 				322453B521F2BE6F00471059 /* CTSearchTicketService.m in Sources */,
 				32E7EE7221F331E500191789 /* CTHomeSalesView.m in Sources */,
+				32EDC59F2221186C00AFF766 /* UIScrollView+CTPagePanGes.m in Sources */,
 				240E18A321F5FB0D004A4BCB /* CTSetPasswordViewModel.m in Sources */,
 				2407A8E121FD8868000403B7 /* CTMemberEquityTypeView.m in Sources */,
 				32CA557B21F6F02700145E31 /* CTLeftTextButton.m in Sources */,

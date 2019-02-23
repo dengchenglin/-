@@ -64,6 +64,7 @@ ViewInstance(setUp)
     if(!_scrollView){
         _scrollView = [[UIScrollView alloc]initWithFrame:_containerView.bounds];
         _scrollView.scrollsToTop = NO;
+        _scrollView.decelerationRate = 0.2;
         _scrollView.showsHorizontalScrollIndicator = NO;
  
         [_containerView addSubview:self.scrollView];
