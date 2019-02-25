@@ -98,5 +98,7 @@
         }
     }
 }
-
+- (void)pageController:(CTPageController *)pageController didScrollToIndex:(NSInteger)index{
+    
+}
 @end

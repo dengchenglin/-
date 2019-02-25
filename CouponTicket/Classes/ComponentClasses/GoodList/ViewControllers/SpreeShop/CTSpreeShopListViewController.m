@@ -20,6 +20,7 @@
 - (void)setUpUI{
 
     [self.view addSubview:self.tableView];
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self.tableView registerNibWithClass:CTGoodListCell.class];
 }
 

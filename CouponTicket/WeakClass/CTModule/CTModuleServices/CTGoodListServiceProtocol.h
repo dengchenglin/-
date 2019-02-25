@@ -22,6 +22,10 @@
 
 - (UIViewController *)nineListViewController;
 
+- (UIViewController *)handpickShopViewController;
+
 - (UIViewController *)spreeShopViewController;
+
+- (UIViewController *)videoShopViewController;
 
 @end

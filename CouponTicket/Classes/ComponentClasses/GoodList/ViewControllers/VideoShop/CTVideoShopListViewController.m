@@ -1,59 +1,58 @@
 //
-//  CThotSalesListViewController.m
+//  CTVideoShopListViewController.m
 //  CouponTicket
 //
-//  Created by dengchenglin on 2019/1/24.
+//  Created by dengchenglin on 2019/2/21.
 //  Copyright © 2019年 Danke. All rights reserved.
 //
 
-#import "CThotSalesListViewController.h"
+#import "CTVideoShopListViewController.h"
 
-#import "CTHotSalesNoticeView.h"
+#import "CTGoodSortView.h"
 
-#import "CTGoodListCell.h"
+#import "CTVideoGoodListCell.h"
 
-@interface CThotSalesListViewController ()
+@interface CTVideoShopListViewController ()
 
-@property (nonatomic, strong) CTHotSalesNoticeView *noticeView;
+@property (nonatomic, strong) CTGoodSortView *sortView;
 
 @end
 
-@implementation CThotSalesListViewController
+@implementation CTVideoShopListViewController
 
-- (CTHotSalesNoticeView *)noticeView{
-    if(!_noticeView){
-        _noticeView = NSMainBundleClass(CTHotSalesNoticeView.class);
+- (CTGoodSortView *)sortView{
+    if(!_sortView){
+        _sortView = [[CTGoodSortView alloc]init];
+        _sortView.backgroundColor = [UIColor whiteColor];
     }
-    return _noticeView;
+    return _sortView;
 }
 
 - (void)setUpUI{
-    self.title = @"实时热销榜";
-    [self.view addSubview:self.noticeView];
-    [self.view addSubview:self.tableView];
+    [self.view addSubview:self.sortView];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    [self.tableView registerNibWithClass:CTGoodListCell.class];
+    [self.tableView registerNibWithClass:CTVideoGoodListCell.class];
 }
 
 - (void)autoLayout{
-    [self.noticeView mas_makeConstraints:^(MASConstraintMaker *make) {
+    [self.sortView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.left.right.mas_equalTo(0);
         make.height.mas_equalTo(40);
     }];
     [self.tableView mas_remakeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(self.noticeView.mas_bottom);
+        make.top.mas_equalTo(self.sortView.mas_bottom);
         make.left.right.bottom.mas_equalTo(0);
     }];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 5;
+    return 10;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 112;
+    return 292;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    CTGoodListCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(CTGoodListCell.class)];
+    CTVideoGoodListCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(CTVideoGoodListCell.class)];
     return cell;
 }
 

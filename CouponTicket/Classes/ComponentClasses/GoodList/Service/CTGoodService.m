@@ -14,9 +14,13 @@
 
 #import "CTNineNineListViewController.h"
 
+#import "CTHandpickListViewController.h"
+
 #import "CThotSalesListViewController.h"
 
 #import "CTSpreeShopPageController.h"
+
+#import "CTVideoShopPageController.h"
 
 @implementation CTGoodService
 
@@ -42,8 +46,16 @@ CL_EXPORT_MODULE(CTGoodListServiceProtocol)
     return [CTNineNineListViewController new];
 }
 
+- (UIViewController *)handpickShopViewController{
+    return [CTHandpickListViewController new];
+}
+
 - (UIViewController *)spreeShopViewController{
     return [CTSpreeShopPageController new];
+}
+
+- (UIViewController *)videoShopViewController{
+    return [CTVideoShopPageController new];
 }
 
 @end
