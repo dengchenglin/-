@@ -1646,7 +1646,6 @@
 		324C3D9E21F851D800536DA8 /* GoodList */ = {
 			isa = PBXGroup;
 			children = (
-				324C3DA021F851F400536DA8 /* Service */,
 				324C3D9F21F851EE00536DA8 /* ViewControllers */,
 			);
 			path = GoodList;
@@ -1672,7 +1671,8 @@
 				324C3DA521F854B000536DA8 /* CTGoodService.h */,
 				324C3DA621F854B000536DA8 /* CTGoodService.m */,
 			);
-			path = Service;
+			name = Service;
+			path = ../GoodList/Service;
 			sourceTree = "<group>";
 		};
 		325D3B4C21F1DC6D00465B91 /* Login */ = {
@@ -2125,6 +2125,7 @@
 		32BD0E2B2201838500E99B86 /* Set */ = {
 			isa = PBXGroup;
 			children = (
+				324C3DA021F851F400536DA8 /* Service */,
 				32BD0E352201863200E99B86 /* Views */,
 				32BD0E2E2201842F00E99B86 /* Service */,
 				32BD0E2D2201842400E99B86 /* ViewControllers */,

@@ -63,6 +63,9 @@
     //获取验证码
     [self.getCodeView.getCodeButton touchUpInsideSubscribeNext:^(id x) {
         @strongify(self)
+        if(self.viewModel.mobile.length){
+            [self.getCodeView.getCodeButton startTimer];
+        }
     }];
     [self.getCodeView.nextButton touchUpInsideSubscribeNext:^(id x) {
         @strongify(self)

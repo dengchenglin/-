@@ -162,11 +162,10 @@ NSData *CompressedImage(UIImage *image){
     }
     dispatch_group_notify(group, dispatch_get_main_queue(), ^{
         [MBProgressHUD hideHUDForView:viewController.view animated:YES];
-        
+ 
         NSArray <NSString *>*hashKeys = [downloaders map:^id(NSInteger index, LMUpdateHelper *element) {
             return element.requestKey;
         }];
-        
         __block BOOL result = YES;
         [hashKeys enumerateObjectsUsingBlock:^(NSString *obj, NSUInteger idx, BOOL * _Nonnull stop) {
             if(!obj.length){
@@ -179,8 +178,5 @@ NSData *CompressedImage(UIImage *image){
             callback(hashKeys);
         }
     });
-    
 }
-
-
 @end

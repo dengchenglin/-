@@ -58,7 +58,6 @@ ViewInstance(setUp)
 
 }
 
-
 - (void)setTitles:(NSArray<NSString *> *)titles{
     _titles = [titles copy];
     if(!_scrollView){
@@ -66,7 +65,6 @@ ViewInstance(setUp)
         _scrollView.scrollsToTop = NO;
         _scrollView.decelerationRate = 0.2;
         _scrollView.showsHorizontalScrollIndicator = NO;
- 
         [_containerView addSubview:self.scrollView];
         [_scrollView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.right.left.top.mas_equalTo(0);
