@@ -36,6 +36,8 @@
 
 SINGLETON_FOR_CLASS_DEF
 
++ (void)showLogin;
+
 + (BOOL)logined;
 
 + (void)logout;

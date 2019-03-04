@@ -20,6 +20,8 @@
 
 + (void)showMBProgressHudWithTitle:(NSString *)title hideAfterDelay:(NSTimeInterval)hideAfterDelay;
 
++ (void)showMBProgressHudOnView:(UIView *)view title:(NSString *)title hideAfterDelay:(NSTimeInterval)hideAfterDelay;
+
 + (void)showMBProgressHudWithTitle:(NSString *)title hideAfterDelay:(NSTimeInterval)hideAfterDelay complited:(void(^)(void))complited;
 
 @end

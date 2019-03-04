@@ -70,12 +70,18 @@
     //下一步
     [self.registerView.nextButton touchUpInsideSubscribeNext:^(id x) {
         @strongify(self)
+        if(!self.viewModel.inviteCode.length){
+            [MBProgressHUD showMBProgressHudWithTitle:@"邀请码不能为空"];
+            return ;
+        }
         if(![self.viewModel.mobile.wipSpace validateMobile]){
             [MBProgressHUD showMBProgressHudWithTitle:@"手机格式不正确"];
             return ;
         }
         CTGetCodeViewController *vc = [CTGetCodeViewController new];
         vc.mobile = self.viewModel.mobile.wipSpace;
+        vc.inviteCode = self.viewModel.inviteCode;
+        vc.eventKind = CTEventKindRegister;
         [self.navigationController pushViewController:vc animated:YES];
     }];
     

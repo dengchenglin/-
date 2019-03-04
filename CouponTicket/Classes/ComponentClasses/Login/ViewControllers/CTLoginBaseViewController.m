@@ -31,6 +31,19 @@ NSString *GetEventTitleStr(CTEventKind eventKind){
     return @"";
 }
 
+CTSendCodeType GetSendCodeStrForEventKind(CTEventKind eventKind){
+    switch (eventKind) {
+        case CTEventKindRegister:
+            return CTSendCodeRegister;
+            break;
+        case CTEventKindForgetpsd:
+            return CTSendCodeResetpwd;
+            break;
+        default:
+            break;
+    }
+    return 0;
+}
 
 @interface CTLoginBaseViewController ()
 

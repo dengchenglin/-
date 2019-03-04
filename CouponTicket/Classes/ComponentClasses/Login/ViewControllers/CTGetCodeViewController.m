@@ -50,6 +50,7 @@
 
 - (void)reloadView{
     self.getCodeView.phoneTfd.text = self.mobile;
+    //self.getCodeView.phoneTfd.enabled = !(self.eventKind == CTEventKindRegister);
 }
 
 - (void)autoLayout{
@@ -63,15 +64,27 @@
     //获取验证码
     [self.getCodeView.getCodeButton touchUpInsideSubscribeNext:^(id x) {
         @strongify(self)
-        if(self.viewModel.mobile.length){
-            [self.getCodeView.getCodeButton startTimer];
+        if(!self.viewModel.mobile.length){
+            [MBProgressHUD showMBProgressHudWithTitle:@"请输入手机号"];
+            return ;
         }
+        [CTRequest smsSendWithPhone:self.viewModel.mobile type:GetSendCodeStrForEventKind(self.eventKind) callback:^(id data, CLRequest *request, CTNetError error) {
+            @strongify(self)
+            if(!error){
+                [MBProgressHUD showMBProgressHudWithTitle:@"发送成功"];
+                [self.getCodeView.getCodeButton startTimer];
+            }
+        }];
     }];
     [self.getCodeView.nextButton touchUpInsideSubscribeNext:^(id x) {
         @strongify(self)
         CTSetPasswordViewController *vc = [CTSetPasswordViewController new];
         vc.eventKind = self.eventKind;
-        vc.mobile = self.mobile;
+        vc.mobile = self.viewModel.mobile;
+        vc.inviteCode = self.inviteCode;
+        vc.verCode = self.viewModel.code;
+        vc.nickname = self.nickname;
+        vc.iconurl = self.iconurl;
         vc.completed = self.completed;
         [self.navigationController pushViewController:vc animated:YES];
     }];

@@ -8,6 +8,8 @@
 
 #import "CTBaseViewController.h"
 
+#import "CTNetworkEngine+Login.h"
+
 typedef NS_ENUM(NSInteger,CTEventKind) {
     CTEventKindRegister,
     CTEventKindForgetpsd,
@@ -17,6 +19,8 @@ typedef NS_ENUM(NSInteger,CTEventKind) {
 };
 
 NSString *GetEventTitleStr(CTEventKind eventKind);
+
+CTSendCodeType GetSendCodeStrForEventKind(CTEventKind eventKind);
 
 @interface CTLoginBaseViewController : CTBaseViewController
 

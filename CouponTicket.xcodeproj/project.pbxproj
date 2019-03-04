@@ -365,6 +365,16 @@
 		32E7EE7521F3320900191789 /* CTSalesItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 32E7EE7421F3320900191789 /* CTSalesItem.m */; };
 		32E7EE7721F3321400191789 /* CTSalesItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32E7EE7621F3321400191789 /* CTSalesItem.xib */; };
 		32EA9E9E2201AB1B00D72291 /* CTDoneButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 32EA9E9D2201AB1B00D72291 /* CTDoneButton.m */; };
+		32ED00D3222CD6CF008A1640 /* CTNetworkEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 32ED00D2222CD6CF008A1640 /* CTNetworkEngine.m */; };
+		32ED00D6222CF242008A1640 /* CTNetworkEngine+Login.m in Sources */ = {isa = PBXBuildFile; fileRef = 32ED00D5222CF242008A1640 /* CTNetworkEngine+Login.m */; };
+		32ED00DB222D0F89008A1640 /* UMShareManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 32ED00DA222D0F89008A1640 /* UMShareManager.m */; };
+		32ED00E2222D25F5008A1640 /* ScanSuccessJumpVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 32ED00DE222D25F5008A1640 /* ScanSuccessJumpVC.m */; };
+		32ED00E3222D25F5008A1640 /* WCQRCodeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 32ED00E1222D25F5008A1640 /* WCQRCodeVC.m */; };
+		32ED00E6222D25FE008A1640 /* SGWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 32ED00E4222D25FE008A1640 /* SGWebView.m */; };
+		32ED00E9222D2635008A1640 /* bg_image.png in Resources */ = {isa = PBXBuildFile; fileRef = 32ED00E8222D2635008A1640 /* bg_image.png */; };
+		32ED00EB222D2640008A1640 /* SGQRCodeFlashlightCloseImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 32ED00EA222D2640008A1640 /* SGQRCodeFlashlightCloseImage.png */; };
+		32ED00ED222D264F008A1640 /* SGQRCodeFlashlightOpenImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 32ED00EC222D264F008A1640 /* SGQRCodeFlashlightOpenImage.png */; };
+		32ED00F1222D28A3008A1640 /* QCodeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 32ED00F0222D28A3008A1640 /* QCodeHelper.m */; };
 		32EDC59F2221186C00AFF766 /* UIScrollView+CTPagePanGes.m in Sources */ = {isa = PBXBuildFile; fileRef = 32EDC59E2221186C00AFF766 /* UIScrollView+CTPagePanGes.m */; };
 		32FEA9D02213B3C0001156CC /* CTNestPageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32FEA9CF2213B3C0001156CC /* CTNestPageController.m */; };
 		32FEA9F52213C666001156CC /* CTEarnRankPageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32FEA9F42213C666001156CC /* CTEarnRankPageController.m */; };
@@ -1061,6 +1071,23 @@
 		32E7EE7621F3321400191789 /* CTSalesItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CTSalesItem.xib; sourceTree = "<group>"; };
 		32EA9E9C2201AB1B00D72291 /* CTDoneButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTDoneButton.h; sourceTree = "<group>"; };
 		32EA9E9D2201AB1B00D72291 /* CTDoneButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTDoneButton.m; sourceTree = "<group>"; };
+		32ED00D1222CD6CF008A1640 /* CTNetworkEngine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTNetworkEngine.h; sourceTree = "<group>"; };
+		32ED00D2222CD6CF008A1640 /* CTNetworkEngine.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTNetworkEngine.m; sourceTree = "<group>"; };
+		32ED00D4222CF242008A1640 /* CTNetworkEngine+Login.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CTNetworkEngine+Login.h"; sourceTree = "<group>"; };
+		32ED00D5222CF242008A1640 /* CTNetworkEngine+Login.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CTNetworkEngine+Login.m"; sourceTree = "<group>"; };
+		32ED00D9222D0F89008A1640 /* UMShareManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UMShareManager.h; sourceTree = "<group>"; };
+		32ED00DA222D0F89008A1640 /* UMShareManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UMShareManager.m; sourceTree = "<group>"; };
+		32ED00DE222D25F5008A1640 /* ScanSuccessJumpVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanSuccessJumpVC.m; sourceTree = "<group>"; };
+		32ED00DF222D25F5008A1640 /* WCQRCodeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCQRCodeVC.h; sourceTree = "<group>"; };
+		32ED00E0222D25F5008A1640 /* ScanSuccessJumpVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanSuccessJumpVC.h; sourceTree = "<group>"; };
+		32ED00E1222D25F5008A1640 /* WCQRCodeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCQRCodeVC.m; sourceTree = "<group>"; };
+		32ED00E4222D25FE008A1640 /* SGWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGWebView.m; sourceTree = "<group>"; };
+		32ED00E5222D25FE008A1640 /* SGWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGWebView.h; sourceTree = "<group>"; };
+		32ED00E8222D2635008A1640 /* bg_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_image.png; sourceTree = "<group>"; };
+		32ED00EA222D2640008A1640 /* SGQRCodeFlashlightCloseImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SGQRCodeFlashlightCloseImage.png; sourceTree = "<group>"; };
+		32ED00EC222D264F008A1640 /* SGQRCodeFlashlightOpenImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SGQRCodeFlashlightOpenImage.png; sourceTree = "<group>"; };
+		32ED00EF222D28A3008A1640 /* QCodeHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QCodeHelper.h; sourceTree = "<group>"; };
+		32ED00F0222D28A3008A1640 /* QCodeHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QCodeHelper.m; sourceTree = "<group>"; };
 		32EDC59D2221186C00AFF766 /* UIScrollView+CTPagePanGes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+CTPagePanGes.h"; sourceTree = "<group>"; };
 		32EDC59E2221186C00AFF766 /* UIScrollView+CTPagePanGes.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+CTPagePanGes.m"; sourceTree = "<group>"; };
 		32FEA9CE2213B3C0001156CC /* CTNestPageController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTNestPageController.h; sourceTree = "<group>"; };
@@ -1496,6 +1523,8 @@
 		322453C721F2BEF800471059 /* WeakClass */ = {
 			isa = PBXGroup;
 			children = (
+				32ED00D7222D0F63008A1640 /* CTThirdManager */,
+				32ED00D0222CD6A4008A1640 /* CTNetwork */,
 				32BD0E4D2201916900E99B86 /* CTFunc */,
 				326525D021F5B29400B63DD7 /* CTAppManager */,
 				326525BE21F57BCB00B63DD7 /* CTUtils */,
@@ -2542,6 +2571,7 @@
 		32BE60BB21EDCFA600BA52EF /* UICustom */ = {
 			isa = PBXGroup;
 			children = (
+				32ED00DD222D25C0008A1640 /* QCode */,
 				32CD9AC52223B764000D733B /* WebView */,
 				32CA559521F7157400145E31 /* CLHorizontalCompactLayout */,
 				32E7EE5821F3024D00191789 /* UIPageControlManager */,
@@ -2952,6 +2982,60 @@
 			path = UIPageControlManager;
 			sourceTree = "<group>";
 		};
+		32ED00D0222CD6A4008A1640 /* CTNetwork */ = {
+			isa = PBXGroup;
+			children = (
+				32ED00D1222CD6CF008A1640 /* CTNetworkEngine.h */,
+				32ED00D2222CD6CF008A1640 /* CTNetworkEngine.m */,
+				32ED00D4222CF242008A1640 /* CTNetworkEngine+Login.h */,
+				32ED00D5222CF242008A1640 /* CTNetworkEngine+Login.m */,
+			);
+			path = CTNetwork;
+			sourceTree = "<group>";
+		};
+		32ED00D7222D0F63008A1640 /* CTThirdManager */ = {
+			isa = PBXGroup;
+			children = (
+				32ED00D8222D0F7A008A1640 /* ShareManager */,
+			);
+			path = CTThirdManager;
+			sourceTree = "<group>";
+		};
+		32ED00D8222D0F7A008A1640 /* ShareManager */ = {
+			isa = PBXGroup;
+			children = (
+				32ED00D9222D0F89008A1640 /* UMShareManager.h */,
+				32ED00DA222D0F89008A1640 /* UMShareManager.m */,
+			);
+			path = ShareManager;
+			sourceTree = "<group>";
+		};
+		32ED00DD222D25C0008A1640 /* QCode */ = {
+			isa = PBXGroup;
+			children = (
+				32ED00E7222D2602008A1640 /* Resources */,
+				32ED00E5222D25FE008A1640 /* SGWebView.h */,
+				32ED00E4222D25FE008A1640 /* SGWebView.m */,
+				32ED00E0222D25F5008A1640 /* ScanSuccessJumpVC.h */,
+				32ED00DE222D25F5008A1640 /* ScanSuccessJumpVC.m */,
+				32ED00DF222D25F5008A1640 /* WCQRCodeVC.h */,
+				32ED00E1222D25F5008A1640 /* WCQRCodeVC.m */,
+				32ED00EF222D28A3008A1640 /* QCodeHelper.h */,
+				32ED00F0222D28A3008A1640 /* QCodeHelper.m */,
+			);
+			path = QCode;
+			sourceTree = "<group>";
+		};
+		32ED00E7222D2602008A1640 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				32ED00E8222D2635008A1640 /* bg_image.png */,
+				32ED00EA222D2640008A1640 /* SGQRCodeFlashlightCloseImage.png */,
+				32ED00EC222D264F008A1640 /* SGQRCodeFlashlightOpenImage.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		81B790F6F60DCAA925C30A30 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -3062,6 +3146,7 @@
 				240F513321F9DBC100BFDD2D /* CTPasteCheckPopView.xib in Resources */,
 				32E7EE5721F3013B00191789 /* Info.plist in Resources */,
 				3220EA1621F95E8F004E0422 /* CTMessageTypeView.xib in Resources */,
+				32ED00ED222D264F008A1640 /* SGQRCodeFlashlightOpenImage.png in Resources */,
 				245CAE5721F42E8000496052 /* CTMainCategoryItem.xib in Resources */,
 				32CA556821F6B6DB00145E31 /* CTShareView_.xib in Resources */,
 				2405AED621FC0CAD000E5081 /* CTMemberTitleView.xib in Resources */,
@@ -3073,6 +3158,7 @@
 				3280739221FEEC7B009CABEC /* CTMineEarnView.xib in Resources */,
 				32A28ED62202EC6C0049B003 /* CTWithdrawModifyAlipayView.xib in Resources */,
 				32CA556F21F6C22600145E31 /* LMNetErrorView.xib in Resources */,
+				32ED00E9222D2635008A1640 /* bg_image.png in Resources */,
 				32A28EC92202CA8B0049B003 /* CTWithdrawInputPsdView.xib in Resources */,
 				32CA55A021F7181600145E31 /* CTHistoryKeywordHeadView.xib in Resources */,
 				2407A8F021FD8C3F000403B7 /* CTMemberEquityView3.xib in Resources */,
@@ -3081,6 +3167,7 @@
 				32AE79AB221691AC00E29FC3 /* CTShareItemView.xib in Resources */,
 				32BD0E3A2201867100E99B86 /* CTSetListCell.xib in Resources */,
 				32CD9AB422239545000D733B /* CTHandpickListCell.xib in Resources */,
+				32ED00EB222D2640008A1640 /* SGQRCodeFlashlightCloseImage.png in Resources */,
 				32CA558521F6F23A00145E31 /* CTSortButton.xib in Resources */,
 				240E189C21F5FA45004A4BCB /* CTForgetPsdView_.xib in Resources */,
 				32DB93A82215093F00300ACC /* CTSevenTrendView.xib in Resources */,
@@ -3163,6 +3250,7 @@
 				"${PODS_ROOT}/GPUImage/framework/Resources/lookup_soft_elegance_1.png",
 				"${PODS_ROOT}/GPUImage/framework/Resources/lookup_soft_elegance_2.png",
 				"${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle",
+				"${PODS_ROOT}/SGQRCode/SGQRCode/SGQRCode.bundle",
 				"${PODS_ROOT}/ZLPhotoBrowser/PhotoBrowser/resource/ZLPhotoActionSheet.xib",
 				"${PODS_ROOT}/ZLPhotoBrowser/PhotoBrowser/resource/ZLPhotoBrowserCell.xib",
 				"${PODS_ROOT}/ZLPhotoBrowser/PhotoBrowser/resource/ZLPhotoBrowser.bundle",
@@ -3175,6 +3263,7 @@
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/lookup_soft_elegance_1.png",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/lookup_soft_elegance_2.png",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/IQKeyboardManager.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SGQRCode.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ZLPhotoActionSheet.nib",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ZLPhotoBrowserCell.nib",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ZLPhotoBrowser.bundle",
@@ -3322,6 +3411,7 @@
 				32CA559B21F717EA00145E31 /* CTHotKeywordHeadView.m in Sources */,
 				32CA558D21F712C800145E31 /* CTSearchViewController.m in Sources */,
 				32BE610F21EDCFA600BA52EF /* NSArray+Category.m in Sources */,
+				32ED00F1222D28A3008A1640 /* QCodeHelper.m in Sources */,
 				32BE611721EDCFA600BA52EF /* UIButton+Create.m in Sources */,
 				32FEA9D02213B3C0001156CC /* CTNestPageController.m in Sources */,
 				3220EA2121F98622004E0422 /* CTMessageListViewController.m in Sources */,
@@ -3344,6 +3434,7 @@
 				32BE60F821EDCFA600BA52EF /* CLRefreshNulMoreView.m in Sources */,
 				32BE60F721EDCFA600BA52EF /* CLRefreshCurveLayer.m in Sources */,
 				2407A8E421FD8895000403B7 /* CTMemberEquityView2.m in Sources */,
+				32ED00D3222CD6CF008A1640 /* CTNetworkEngine.m in Sources */,
 				32FEAA0022140AAD001156CC /* CTEarnRankNavBar.m in Sources */,
 				2407A8DB21FD852C000403B7 /* CTEquitySegmentedControl.m in Sources */,
 				32BE611521EDCFA600BA52EF /* NSString+Log.m in Sources */,
@@ -3369,6 +3460,7 @@
 				32BE611C21EDCFA600BA52EF /* CALayer+YYAdd.m in Sources */,
 				32BE612121EDCFA600BA52EF /* YYCGUtilities.m in Sources */,
 				3280738B21FEE7B7009CABEC /* CTMineHeadView.m in Sources */,
+				32ED00D6222CF242008A1640 /* CTNetworkEngine+Login.m in Sources */,
 				32BE611121EDCFA600BA52EF /* NSData+Category.m in Sources */,
 				32E7EE6D21F32CE700191789 /* CTHomeNavView.m in Sources */,
 				32A3D15E221E9CD1000CA323 /* LMSegmentedControl.m in Sources */,
@@ -3392,11 +3484,13 @@
 				32BE611F21EDCFA600BA52EF /* NSTimer+YYAdd.m in Sources */,
 				32BE610021EDCFA600BA52EF /* TZPhotoPreviewCell.m in Sources */,
 				326525E121F5C8BE00B63DD7 /* CTCanValidButton.m in Sources */,
+				32ED00E6222D25FE008A1640 /* SGWebView.m in Sources */,
 				322453AD21F2BE1100471059 /* CTMainService.m in Sources */,
 				32BE60EF21EDCFA600BA52EF /* CLURLRequest.m in Sources */,
 				32BE612E21EDCFA600BA52EF /* SelPlaybackControls.m in Sources */,
 				3220EA2721F989A6004E0422 /* CTWebViewController.m in Sources */,
 				32CD9AC82223B765000D733B /* LMWebView.m in Sources */,
+				32ED00DB222D0F89008A1640 /* UMShareManager.m in Sources */,
 				32B4EE12221FA09300D2D71D /* CTHomeSpreeShopView.m in Sources */,
 				32FEA9F52213C666001156CC /* CTEarnRankPageController.m in Sources */,
 				324C3DA721F854B000536DA8 /* CTGoodService.m in Sources */,
@@ -3463,6 +3557,7 @@
 				326525DE21F5C60B00B63DD7 /* CTLoginViewModel.m in Sources */,
 				32BE610221EDCFA600BA52EF /* MBProgressHUD+Helper.m in Sources */,
 				32BD0E312201844000E99B86 /* CTSetService.m in Sources */,
+				32ED00E2222D25F5008A1640 /* ScanSuccessJumpVC.m in Sources */,
 				322453F021F2CF1100471059 /* CTAppConfig.m in Sources */,
 				32CA555521F6AD1600145E31 /* CTShareViewController.m in Sources */,
 				326525D321F5B2A700B63DD7 /* CTAppManager.m in Sources */,
@@ -3483,6 +3578,7 @@
 				32EDC59F2221186C00AFF766 /* UIScrollView+CTPagePanGes.m in Sources */,
 				240E18A321F5FB0D004A4BCB /* CTSetPasswordViewModel.m in Sources */,
 				2407A8E121FD8868000403B7 /* CTMemberEquityTypeView.m in Sources */,
+				32ED00E3222D25F5008A1640 /* WCQRCodeVC.m in Sources */,
 				32CA557B21F6F02700145E31 /* CTLeftTextButton.m in Sources */,
 				32AE79A9221691A400E29FC3 /* CTShareItemView.m in Sources */,
 				322453D821F2BFC200471059 /* CTTableView.m in Sources */,

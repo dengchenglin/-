@@ -50,6 +50,9 @@
         }
     } repeats:NO];
 }
++ (void)showMBProgressHudOnView:(UIView *)view title:(NSString *)title hideAfterDelay:(NSTimeInterval)hideAfterDelay{
+    [self showMBProgressHudOnView:view top:0 title:title hideAfterDelay:hideAfterDelay];
+}
 
 + (void)showMBProgressHudOnView:(UIView *)view top:(CGFloat)top title:(NSString *)title hideAfterDelay:(NSTimeInterval)hideAfterDelay{
     if(!title.length)return;

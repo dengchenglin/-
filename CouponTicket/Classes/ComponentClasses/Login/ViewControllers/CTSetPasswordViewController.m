@@ -54,12 +54,36 @@
     @weakify(self)
     [self.passwordView.doneButton touchUpInsideSubscribeNext:^(id x) {
         @strongify(self)
+        [self.view endEditing:YES];
+        if(!self.viewModel.password.length){
+            [MBProgressHUD showMBProgressHudWithTitle:@"请输入密码"];
+            return ;
+        }
+        if(!self.viewModel.repassword.length){
+            [MBProgressHUD showMBProgressHudWithTitle:@"请再次输入密码"];
+            return ;
+        }
         if(!self.viewModel.psdConsistented){
             [MBProgressHUD showMBProgressHudWithTitle:@"密码不一致"];
             return ;
         }
         if(self.completed){
             self.completed();
+        }
+        switch (self.eventKind) {
+                //手机注册
+            case CTEventKindRegister:
+                {
+                    [CTRequest registerWithPhone:self.mobile pwd:self.viewModel.password type:CTLoginPhone ivCode:self.inviteCode smsCode:self.verCode openid:self.openid nickname:self.nickname headicon:self.iconurl unionid:self.unionid callback:^(id data, CLRequest *request, CTNetError error) {
+                        if(!error){
+                            
+                        }
+                    }];
+                }
+                break;
+                
+            default:
+                break;
         }
     }];
 }

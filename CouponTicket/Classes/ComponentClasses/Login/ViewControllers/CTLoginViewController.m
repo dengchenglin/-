@@ -18,6 +18,8 @@
 
 #import "CTAgreementViewController.h"
 
+#import "UMShareManager.h"
+
 @interface CTLoginViewController ()
 
 @property (nonatomic, strong) CTLoginView *loginView;
@@ -97,12 +99,16 @@
     //qq登录
     [self.loginView.qqButton touchUpInsideSubscribeNext:^(id x) {
         @strongify(self)
-    
+        [UMShareManager getUserInfoForPlatform:UMSocialPlatformType_QQ completion:^(UMSocialUserInfoResponse *response) {
+            
+        }];
     }];
     //微信登录
     [self.loginView.wechatButton touchUpInsideSubscribeNext:^(id x) {
         @strongify(self)
-        
+        [UMShareManager getUserInfoForPlatform:UMSocialPlatformType_WechatSession completion:^(UMSocialUserInfoResponse *response) {
+            
+        }];
     }];
     //同意协议
     [self.loginView.agreementButton touchUpInsideSubscribeNext:^(id x) {
