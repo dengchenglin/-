@@ -107,10 +107,13 @@ return instance;\
 
 
 
-
+//加载xib
 #define NSMainBundleClass(class) [[NSBundle mainBundle]loadNibNamed:NSStringFromClass(class) owner:self options:nil][0]
 
 #define NSMainBundleName(name) [[NSBundle mainBundle]loadNibNamed:name owner:self options:nil][0]
+
+//通知
+#define POST_NOTIFICATION(name)  [[NSNotificationCenter defaultCenter]postNotificationName:name object:nil];
 
 //view的初始化
 #define ViewInstance(setUpName) \

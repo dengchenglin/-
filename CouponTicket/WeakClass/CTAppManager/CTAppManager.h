@@ -22,10 +22,16 @@
 
 @property (nonatomic, strong) CTWithdrawInfo *withInfo;
 
-@property (nonatomic, copy) NSString *mobile;
-
-@property (nonatomic, copy) NSString *balance;
-
+@property (nonatomic, copy) NSString *uid;
+@property (nonatomic, copy) NSString *phone;
+@property (nonatomic, copy) NSString *iv_code;
+@property (nonatomic, copy) NSString *money;
+@property (nonatomic, copy) NSString *headimg;
+@property (nonatomic, copy) NSString *nickname;
+@property (nonatomic, assign) NSInteger level;
+@property (nonatomic, copy) NSString *create_at;
+@property (nonatomic, copy) NSString *token;
+@property (nonatomic, copy) NSString *level_txt;
 @end
 
 @interface CTAppManager : NSObject
@@ -44,6 +50,6 @@ SINGLETON_FOR_CLASS_DEF
 
 + (CTUser *)user;
 
-- (void)saveUserWithInfo:(id)data;
++ (void)saveUserWithInfo:(id)data;
 
 @end

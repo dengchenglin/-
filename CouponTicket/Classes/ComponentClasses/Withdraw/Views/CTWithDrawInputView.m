@@ -26,11 +26,11 @@
     _moneyTextField.clearButtonMode = UITextFieldViewModeAlways;
 }
 - (IBAction)withdrawAll:(id)sender {
-    if([CTAppManager user].balance.floatValue < 0.001){
+    if([CTAppManager user].money.floatValue < 0.001){
         [MBProgressHUD showMBProgressHudWithTitle:@"抱歉！您的余额不足"];
         return;
     }
-    self.moneyTextField.text = [CTAppManager user].balance;
+    self.moneyTextField.text = [CTAppManager user].money;
     if(self.withDrawActionBlock){
         self.withDrawActionBlock();
     }

@@ -76,7 +76,7 @@
             boundBlock();
         }
         else{
-            [[CTModuleManager loginService]pushWithdrawSetpsdFromViewController:self mobile:[CTAppManager user].mobile completed:^{
+            [[CTModuleManager loginService]pushWithdrawSetpsdFromViewController:self mobile:[CTAppManager user].phone completed:^{
                 @strongify(self)
                 [self.navigationController popToViewController:self animated:YES];
                 boundBlock();

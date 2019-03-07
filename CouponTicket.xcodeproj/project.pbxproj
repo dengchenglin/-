@@ -177,6 +177,7 @@
 		32A3D158221E9C22000CA323 /* CTAdviseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32A3D157221E9C22000CA323 /* CTAdviseViewController.m */; };
 		32A3D15B221E9C59000CA323 /* CTPhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 32A3D159221E9C59000CA323 /* CTPhotoView.m */; };
 		32A3D15E221E9CD1000CA323 /* LMSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 32A3D15D221E9CD1000CA323 /* LMSegmentedControl.m */; };
+		32A56866222FC162005E2AE6 /* CTNotificationName.m in Sources */ = {isa = PBXBuildFile; fileRef = 32A56865222FC162005E2AE6 /* CTNotificationName.m */; };
 		32AE799822166DD500E29FC3 /* CTProfitShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32AE799722166DD500E29FC3 /* CTProfitShareViewController.m */; };
 		32AE799B22166DEC00E29FC3 /* CTProfitShareView.m in Sources */ = {isa = PBXBuildFile; fileRef = 32AE799A22166DEC00E29FC3 /* CTProfitShareView.m */; };
 		32AE799D22166DF600E29FC3 /* CTProfitShareView_.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32AE799C22166DF600E29FC3 /* CTProfitShareView_.xib */; };
@@ -717,6 +718,8 @@
 		32A3D15A221E9C59000CA323 /* CTPhotoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTPhotoView.h; sourceTree = "<group>"; };
 		32A3D15C221E9CD1000CA323 /* LMSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMSegmentedControl.h; sourceTree = "<group>"; };
 		32A3D15D221E9CD1000CA323 /* LMSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMSegmentedControl.m; sourceTree = "<group>"; };
+		32A56864222FC162005E2AE6 /* CTNotificationName.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTNotificationName.h; sourceTree = "<group>"; };
+		32A56865222FC162005E2AE6 /* CTNotificationName.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTNotificationName.m; sourceTree = "<group>"; };
 		32AE799622166DD500E29FC3 /* CTProfitShareViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTProfitShareViewController.h; sourceTree = "<group>"; };
 		32AE799722166DD500E29FC3 /* CTProfitShareViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTProfitShareViewController.m; sourceTree = "<group>"; };
 		32AE799922166DEC00E29FC3 /* CTProfitShareView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTProfitShareView.h; sourceTree = "<group>"; };
@@ -1523,6 +1526,7 @@
 		322453C721F2BEF800471059 /* WeakClass */ = {
 			isa = PBXGroup;
 			children = (
+				32A56863222FC12F005E2AE6 /* CTNotificationName */,
 				32ED00D7222D0F63008A1640 /* CTThirdManager */,
 				32ED00D0222CD6A4008A1640 /* CTNetwork */,
 				32BD0E4D2201916900E99B86 /* CTFunc */,
@@ -2113,6 +2117,15 @@
 				32A3D148221E9C0D000CA323 /* CTRecommendViewController.m */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		32A56863222FC12F005E2AE6 /* CTNotificationName */ = {
+			isa = PBXGroup;
+			children = (
+				32A56864222FC162005E2AE6 /* CTNotificationName.h */,
+				32A56865222FC162005E2AE6 /* CTNotificationName.m */,
+			);
+			path = CTNotificationName;
 			sourceTree = "<group>";
 		};
 		32AE799E2216913000E29FC3 /* CTSharePopView */ = {
@@ -3380,6 +3393,7 @@
 				3220EA2B21F98C6D004E0422 /* CTWebService.m in Sources */,
 				32BE612021EDCFA600BA52EF /* UIView+YYAdd.m in Sources */,
 				32CA556621F6B4F700145E31 /* CTShareView.m in Sources */,
+				32A56866222FC162005E2AE6 /* CTNotificationName.m in Sources */,
 				32DB93962214FBF800300ACC /* CTEarnTrendView.m in Sources */,
 				245CAE5421F42E8000496052 /* CTMainCategoryControl.m in Sources */,
 				32CA55A621F71D6900145E31 /* CTHistoryKeywordCell.m in Sources */,

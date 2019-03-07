@@ -76,7 +76,8 @@
                 {
                     [CTRequest registerWithPhone:self.mobile pwd:self.viewModel.password type:CTLoginPhone ivCode:self.inviteCode smsCode:self.verCode openid:self.openid nickname:self.nickname headicon:self.iconurl unionid:self.unionid callback:^(id data, CLRequest *request, CTNetError error) {
                         if(!error){
-                            
+                            [CTAppManager saveUserWithInfo:data];
+                            POST_NOTIFICATION(CTDidLoginNotification);
                         }
                     }];
                 }

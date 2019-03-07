@@ -78,7 +78,12 @@ static const int request_vc_key;
 
 - (CLRequest *)requestWithMethod:(CLRequestMethodType)methodType path:(NSString *)path params:(NSDictionary *)params images:(NSArray <UIImage *>*)images showHud:(BOOL)showHud showErrorHud:(BOOL)showErrorHud callback:(CTResponseBlock)callback{
     NSDictionary *refactorParams = [self refactorParams:params];
-    
+    NSMutableString *urlString = [[NSMutableString alloc]initWithFormat:@"%@/%@",[CLNetworkManager shareInstance].config.request.baseUrl,path];
+    [urlString appendString:@"?"];
+    for(NSString *key in refactorParams.allKeys){
+        [urlString appendFormat:@"%@=%@&",key,refactorParams[key]];
+    }
+    DBLog(@"url is --%@\n\n" ,urlString);
     DBLog(@"url is --%@\n\n params is --%@\n\n" ,[NSString stringWithFormat:@"%@/%@",[CLNetworkManager shareInstance].config.request.baseUrl,path],refactorParams);
 
     CLURLRequest *request = [CLURLRequest request].setMethod(methodType).setConstructingBodyBlock(images.count?^(id<CLMultipartFormDataProtocol> __nullable formData){

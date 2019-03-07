@@ -129,7 +129,7 @@
         break;
         case 3:
         {
-            [[CTModuleManager loginService]pushWithdrawSetpsdFromViewController:self mobile:[CTAppManager user].mobile completed:^{
+            [[CTModuleManager loginService]pushWithdrawSetpsdFromViewController:self mobile:[CTAppManager user].phone completed:^{
                 [self.navigationController popToViewController:self animated:YES];
             }];
         }

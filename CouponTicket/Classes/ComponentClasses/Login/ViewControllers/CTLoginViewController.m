@@ -74,6 +74,10 @@
 - (void)setUpEvent
 {
     @weakify(self)
+    [[[[NSNotificationCenter defaultCenter] rac_addObserverForName:CTDidLoginNotification object:nil] takeUntil:self.rac_willDeallocSignal] subscribeNext:^(NSNotification * _Nullable x) {
+        @strongify(self)
+        [self successBack];
+    }];
     //登录
     [self.loginView.loginButton touchUpInsideSubscribeNext:^(id x) {
         @strongify(self)
@@ -81,8 +85,7 @@
             [MBProgressHUD showMBProgressHudWithTitle:@"手机格式不正确"];
             return ;
         }
-        [[CTAppManager sharedInstance] saveUserWithInfo:nil];
-        [self successBack];
+        
     }];
     //注册
     [self.loginView.registerButton touchUpInsideSubscribeNext:^(id x) {
@@ -123,14 +126,14 @@
     if(self.callback){
         self.callback(YES);
     }
-    [super back];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)back{
     if(self.callback){
         self.callback(NO);
     }
-    [super back];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

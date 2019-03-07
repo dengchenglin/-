@@ -44,4 +44,5 @@
 #import "CTAppManager.h"
 #import "CTMemberManager.h"
 #import "CTTableView.h"
+#import "CTNotificationName.h"
 #endif /* CTPrefixHeader_pch */

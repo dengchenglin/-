@@ -125,15 +125,15 @@
     RAC(self.alipayInfoView.accountLabel,text) = RACObserve(self.viewModel, withdrawAccount);
     RAC(self.alipayInfoView.nameLabel,text) = RACObserve(self.viewModel, withdrawName);
     RAC(self.viewModel,money) = self.withDrawInputView.moneyTextField.cl_textSignal;
-    self.withDrawInputView.balanceNoticeLabel.text = [NSString stringWithFormat:@"可用余额 %.2f元",[CTAppManager user].balance.floatValue];
+    self.withDrawInputView.balanceNoticeLabel.text = [NSString stringWithFormat:@"可用余额 %.2f元",[CTAppManager user].money.floatValue];
     RAC(self.doneButton,enabled) = [self.withDrawInputView.moneyTextField.cl_textSignal map:^id _Nullable(NSString * value) {
-        return @(value.length && [CTAppManager user].balance.floatValue >= value.floatValue);
+        return @(value.length && [CTAppManager user].money.floatValue >= value.floatValue);
     }];
     
     [self.withDrawInputView.moneyTextField.cl_textSignal subscribeNext:^(NSString * _Nullable x) {
         @strongify(self)
-        self.withDrawInputView.balanceNoticeLabel.text = (x.floatValue > [CTAppManager user].balance.floatValue)?@"金额已超过可提现余额":[NSString stringWithFormat:@"可用余额 %.2f元",[CTAppManager user].balance.floatValue];
-        self.withDrawInputView.balanceNoticeLabel.textColor = (x.floatValue > [CTAppManager user].balance.floatValue)?[UIColor colorWithHexString:@"#F5A623"]:[UIColor colorWithHexString:@"#6F6F6F"];
+        self.withDrawInputView.balanceNoticeLabel.text = (x.floatValue > [CTAppManager user].money.floatValue)?@"金额已超过可提现余额":[NSString stringWithFormat:@"可用余额 %.2f元",[CTAppManager user].money.floatValue];
+        self.withDrawInputView.balanceNoticeLabel.textColor = (x.floatValue > [CTAppManager user].money.floatValue)?[UIColor colorWithHexString:@"#F5A623"]:[UIColor colorWithHexString:@"#6F6F6F"];
     }];
 
     
@@ -159,6 +159,7 @@
         @strongify(self)
         [self.view endEditing:YES];
         [[CTModuleManager loginService]pushBoundAlipayFromViewController:self completed:^{
+            @strongify(self)
             [self.navigationController popToViewController:self animated:YES];
             [self reloadView];
         }];
@@ -167,6 +168,7 @@
         @strongify(self)
         [self.view endEditing:YES];
         [[CTModuleManager loginService]pushBoundAlipayFromViewController:self completed:^{
+            @strongify(self)
             [self.navigationController popToViewController:self animated:YES];
             [self reloadView];
         }];

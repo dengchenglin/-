@@ -8,6 +8,10 @@
 
 #import "CTAppManager.h"
 
+#import "KeychainTool.h"
+
+#define CTLoginInfoKey @"CTLoginInfoKey"
+
 @implementation CTWithdrawInfo
 
 - (NSString *)account{
@@ -54,17 +58,27 @@ SINGLETON_FOR_CLASS_IMP(CTAppManager)
     return [CTAppManager sharedInstance].user;
 }
 
++ (void)saveUserWithInfo:(id)data{
+    [[CTAppManager sharedInstance] saveUserWithInfo:data];
+}
+
 - (instancetype)init
 {
     self = [super init];
     if (self) {
-        _user = [CTUser new];
+        id data = [KeychainTool load:CTLoginInfoKey];
+        if(data){
+            _user = [CTUser yy_modelWithDictionary:data];
+        }
     }
     return self;
 }
 
+
 - (void)saveUserWithInfo:(id)data{
-    _user = [CTUser new];
+    [KeychainTool save:CTLoginInfoKey data:data];
+    CTUser *user = [CTUser yy_modelWithDictionary:data];
+    _user = user;
 }
 - (void)logout{
     _user = nil;
