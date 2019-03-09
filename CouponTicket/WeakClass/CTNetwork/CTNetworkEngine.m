@@ -116,7 +116,7 @@ static const int request_vc_key;
                     [MBProgressHUD showMBProgressHudWithTitle:info];
                 }
                 if(callback){
-                    callback(nil,request,CTNetErrorStatus);
+                    callback(responseObject,request,CTNetErrorStatus);
                 }
             }
         }

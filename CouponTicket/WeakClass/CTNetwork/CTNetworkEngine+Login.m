@@ -62,4 +62,32 @@ NSString * GetSendCodeStr(CTSendCodeType type){
     [params setValue:GetSendCodeStr(type) forKey:@"type"];
     return [self postWithPath:CTLogin(@"sms_send") params:params callback:callback];
 }
+
+//检查手机号是否注册
+- (CLRequest *)checkPhoneWithPhone:(NSString *)phone callback:(CTResponseBlock)callback{
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    [params setValue:phone forKey:@"phone"];
+    return [self postWithPath:CTLogin(@"check_phone") params:params callback:callback];
+}
+//修改密码
+- (CLRequest *)resetPwdWithPhone:(NSString *)phone pwd:(NSString *)pwd smsCode:(NSString *)smsCode callback:(CTResponseBlock)callback{
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    [params setValue:phone forKey:@"phone"];
+    [params setValue:pwd forKey:@"pwd"];
+    [params setValue:smsCode forKey:@"sms_code"];
+    return [self postWithPath:CTLogin(@"reset_pwd") params:params callback:callback];
+}
+- (CLRequest *)bindPhoneWithPhone:(NSString *)phone 
+                             type:(CTLoginType)type ivCode:(NSString *)ivCode smsCode:(NSString *)smsCode openid:(NSString *)openid nickname:(NSString *)nickname headicon:(NSString *)headicon unionid:(NSString *)unionid callback:(CTResponseBlock)callback{
+        NSMutableDictionary *params = [NSMutableDictionary dictionary];
+        [params setValue:phone forKey:@"phone"];
+        [params setValue:@(type) forKey:@"type"];
+        [params setValue:ivCode forKey:@"iv_code"];
+        [params setValue:smsCode forKey:@"sms_code"];
+        [params setValue:openid forKey:@"openid"];
+        [params setValue:nickname forKey:@"nickname"];
+        [params setValue:headicon forKey:@"headimg"];
+        [params setValue:unionid forKey:@"unionid"];
+        return [self postWithPath:CTLogin(@"bing_phone") params:params callback:callback];
+}
 @end

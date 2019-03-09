@@ -24,6 +24,8 @@
 
 #import "CTHomeSpreeShopView.h"
 
+#import "CTNetworkEngine+Index.h"
+
 @interface CTHomeViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic, strong) UITableView *tableView;
@@ -161,8 +163,26 @@
         make.height.mas_equalTo(50);
         make.bottom.mas_equalTo(0);
     }];
+}
 
+- (void)reloadView{
+    @weakify(self)
+    [self.tableView addHeaderRefreshWithCallBack:^{
+        @strongify(self)
+        [self request];
+    }];
+}
+
+- (void)request{
+    self.viewModel.banner_imgs = [self banner_imgs];
+    self.bannerView.banner_imgs = _viewModel.banner_imgs;
     
+    [CTRequest indexWithCallback:^(id data, CLRequest *request, CTNetError error) {
+        [self.scrollView endRefreshing];
+        if(!error){
+            
+        }
+    }];
 }
 
 - (void)setUpEvent{
@@ -212,10 +232,7 @@
     }];
 }
 
-- (void)request{
-    self.viewModel.banner_imgs = [self banner_imgs];
-    self.bannerView.banner_imgs = _viewModel.banner_imgs;
-}
+
 
 #pragma mark - UITableViewDelegate
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{

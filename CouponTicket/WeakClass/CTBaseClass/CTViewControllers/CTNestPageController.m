@@ -59,6 +59,7 @@
     [self addChildViewController:self.pageController];
     [self.scrollView addSubview:self.pageController.view];
      [self.pageController.view setFrame:CGRectMake(0,self.heightForHeadView+self.heightForSuspendView,self.scrollView.width,SCREEN_HEIGHT - self.heightForSuspendView - (self.ignoreNavBar?0:NAVBAR_HEIGHT))];
+    self.scrollView.contentSize = CGSizeMake(SCREEN_WIDTH, CGRectGetMaxY(self.pageController.view.frame));
     [self reloadPageController];
 }
 

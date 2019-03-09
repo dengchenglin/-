@@ -57,10 +57,14 @@
             [MBProgressHUD showMBProgressHudWithTitle:@"手机格式不正确"];
             return ;
         }
-        CTGetCodeViewController *vc = [CTGetCodeViewController new];;
-        vc.mobile = self.viewModel.mobile;
-        vc.eventKind = CTEventKindForgetpsd;
-        [self.navigationController pushViewController:vc animated:YES];
+        [CTRequest checkPhoneWithPhone:self.viewModel.mobile callback:^(id data, CLRequest *request, CTNetError error) {
+            if(!error){
+                CTGetCodeViewController *vc = [CTGetCodeViewController new];;
+                vc.mobile = self.viewModel.mobile;
+                vc.eventKind = CTEventKindForgetpsd;
+                [self.navigationController pushViewController:vc animated:YES];
+            }
+        }];
     }];
 }
 

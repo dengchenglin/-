@@ -89,6 +89,7 @@
     return self.rankHeadView;
 }
 
+
 - (CGFloat)heightForSuspendView{
     return 40;
 }

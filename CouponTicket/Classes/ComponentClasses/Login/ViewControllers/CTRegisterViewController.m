@@ -18,8 +18,6 @@
 
 @property (nonatomic, strong) CTRegisterView *registerView;
 
-@property (nonatomic, copy) void (^callback)(BOOL logined);
-
 @property (nonatomic, strong) CTRegisterViewModel *viewModel;
 
 
@@ -43,7 +41,7 @@
 
 - (void)setUpUI{
     [self setLeftDefaultItem];
-    self.title = @"手机快速注册";
+    self.title = GetEventTitleStr(_eventKind);
     [self.view addSubview:self.registerView];
 }
 
@@ -70,7 +68,7 @@
     //下一步
     [self.registerView.nextButton touchUpInsideSubscribeNext:^(id x) {
         @strongify(self)
-        if(!self.viewModel.inviteCode.length){
+        if(!self.viewModel.inviteCode.wipSpace.length){
             [MBProgressHUD showMBProgressHudWithTitle:@"邀请码不能为空"];
             return ;
         }
@@ -78,11 +76,17 @@
             [MBProgressHUD showMBProgressHudWithTitle:@"手机格式不正确"];
             return ;
         }
-        CTGetCodeViewController *vc = [CTGetCodeViewController new];
-        vc.mobile = self.viewModel.mobile.wipSpace;
-        vc.inviteCode = self.viewModel.inviteCode;
-        vc.eventKind = CTEventKindRegister;
-        [self.navigationController pushViewController:vc animated:YES];
+        [CTRequest checkPhoneWithPhone:self.viewModel.mobile callback:^(id data, CLRequest *request, CTNetError error) {
+            if(!error){
+                CTGetCodeViewController *vc = [CTGetCodeViewController new];
+                vc.mobile = self.viewModel.mobile.wipSpace;
+                vc.inviteCode = self.viewModel.inviteCode.wipSpace;
+                vc.eventKind = _eventKind;
+                vc.response = self.response;
+                [self.navigationController pushViewController:vc animated:YES];
+            }
+        }];
+
     }];
     
 }

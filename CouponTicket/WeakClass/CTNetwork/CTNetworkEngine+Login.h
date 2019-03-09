@@ -33,4 +33,12 @@ NSString * GetSendCodeStr(CTSendCodeType type);
 
 //发送验证码
 - (CLRequest *)smsSendWithPhone:(NSString *)phone type:(CTSendCodeType)type callback:(CTResponseBlock)callback;
+
+//检查手机号是否注册
+- (CLRequest *)checkPhoneWithPhone:(NSString *)phone callback:(CTResponseBlock)callback;
+//修改密码
+- (CLRequest *)resetPwdWithPhone:(NSString *)phone pwd:(NSString *)pwd smsCode:(NSString *)smsCode callback:(CTResponseBlock)callback;
+//第三方登录绑定已有账号
+- (CLRequest *)bindPhoneWithPhone:(NSString *)phone 
+                             type:(CTLoginType)type ivCode:(NSString *)ivCode smsCode:(NSString *)smsCode openid:(NSString *)openid nickname:(NSString *)nickname headicon:(NSString *)headicon unionid:(NSString *)unionid callback:(CTResponseBlock)callback;
 @end

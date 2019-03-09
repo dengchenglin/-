@@ -95,6 +95,11 @@
 		324C3D9421F84C9900536DA8 /* UIActionSheet+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 324C3D9221F84C9800536DA8 /* UIActionSheet+Category.m */; };
 		324C3D9D21F84FB200536DA8 /* CTGoodSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 324C3D9C21F84FB200536DA8 /* CTGoodSearchViewController.m */; };
 		324C3DA721F854B000536DA8 /* CTGoodService.m in Sources */ = {isa = PBXBuildFile; fileRef = 324C3DA621F854B000536DA8 /* CTGoodService.m */; };
+		324CE757223367060052A029 /* CTThirdRegController.m in Sources */ = {isa = PBXBuildFile; fileRef = 324CE756223367060052A029 /* CTThirdRegController.m */; };
+		324CE75A22336EC60052A029 /* CTBindPhoneView.m in Sources */ = {isa = PBXBuildFile; fileRef = 324CE75922336EC60052A029 /* CTBindPhoneView.m */; };
+		324CE75C22336ECF0052A029 /* CTBindPhoneView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 324CE75B22336ECF0052A029 /* CTBindPhoneView.xib */; };
+		324CE75F22336F650052A029 /* CTBindPhoneViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 324CE75E22336F650052A029 /* CTBindPhoneViewModel.m */; };
+		32534D0222323B5700A31645 /* CTNetworkEngine+Index.m in Sources */ = {isa = PBXBuildFile; fileRef = 32534D0122323B5700A31645 /* CTNetworkEngine+Index.m */; };
 		325D3B5521F1DDF400465B91 /* CTSearchTicketViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 325D3B5421F1DDF400465B91 /* CTSearchTicketViewController.m */; };
 		325D3B5B21F1DE1200465B91 /* CTMemberViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 325D3B5A21F1DE1200465B91 /* CTMemberViewController.m */; };
 		325D3B5E21F1DE2F00465B91 /* CTMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 325D3B5D21F1DE2F00465B91 /* CTMineViewController.m */; };
@@ -573,6 +578,15 @@
 		324C3DA521F854B000536DA8 /* CTGoodService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTGoodService.h; sourceTree = "<group>"; };
 		324C3DA621F854B000536DA8 /* CTGoodService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTGoodService.m; sourceTree = "<group>"; };
 		324C3DA821F854E800536DA8 /* CTGoodListServiceProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTGoodListServiceProtocol.h; sourceTree = "<group>"; };
+		324CE755223367060052A029 /* CTThirdRegController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTThirdRegController.h; sourceTree = "<group>"; };
+		324CE756223367060052A029 /* CTThirdRegController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTThirdRegController.m; sourceTree = "<group>"; };
+		324CE75822336EC60052A029 /* CTBindPhoneView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTBindPhoneView.h; sourceTree = "<group>"; };
+		324CE75922336EC60052A029 /* CTBindPhoneView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTBindPhoneView.m; sourceTree = "<group>"; };
+		324CE75B22336ECF0052A029 /* CTBindPhoneView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CTBindPhoneView.xib; sourceTree = "<group>"; };
+		324CE75D22336F650052A029 /* CTBindPhoneViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTBindPhoneViewModel.h; sourceTree = "<group>"; };
+		324CE75E22336F650052A029 /* CTBindPhoneViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTBindPhoneViewModel.m; sourceTree = "<group>"; };
+		32534D0022323B5700A31645 /* CTNetworkEngine+Index.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CTNetworkEngine+Index.h"; sourceTree = "<group>"; };
+		32534D0122323B5700A31645 /* CTNetworkEngine+Index.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CTNetworkEngine+Index.m"; sourceTree = "<group>"; };
 		325D3B5321F1DDF400465B91 /* CTSearchTicketViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTSearchTicketViewController.h; sourceTree = "<group>"; };
 		325D3B5421F1DDF400465B91 /* CTSearchTicketViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTSearchTicketViewController.m; sourceTree = "<group>"; };
 		325D3B5921F1DE1200465B91 /* CTMemberViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTMemberViewController.h; sourceTree = "<group>"; };
@@ -1777,6 +1791,8 @@
 				325D3B6021F1DE3700465B91 /* CTLoginViewController.m */,
 				326525E221F5CDB200B63DD7 /* CTRegisterViewController.h */,
 				326525E321F5CDB200B63DD7 /* CTRegisterViewController.m */,
+				324CE755223367060052A029 /* CTThirdRegController.h */,
+				324CE756223367060052A029 /* CTThirdRegController.m */,
 				326525E521F5CDC700B63DD7 /* CTForgetViewController.h */,
 				326525E621F5CDC700B63DD7 /* CTForgetViewController.m */,
 				326525EB21F5CE7F00B63DD7 /* CTGetCodeViewController.h */,
@@ -1873,6 +1889,9 @@
 				240E189821F5FA39004A4BCB /* CTForgetPsdView.h */,
 				240E189921F5FA39004A4BCB /* CTForgetPsdView.m */,
 				240E189B21F5FA45004A4BCB /* CTForgetPsdView_.xib */,
+				324CE75822336EC60052A029 /* CTBindPhoneView.h */,
+				324CE75922336EC60052A029 /* CTBindPhoneView.m */,
+				324CE75B22336ECF0052A029 /* CTBindPhoneView.xib */,
 				326525F621F5CF5000B63DD7 /* CTGetCodeView.h */,
 				326525F721F5CF5000B63DD7 /* CTGetCodeView.m */,
 				326525F921F5CF5800B63DD7 /* CTGetCodeView_.xib */,
@@ -1897,6 +1916,8 @@
 				240E189321F5F7D4004A4BCB /* CTGetCodeViewModel.m */,
 				240E189E21F5FAC6004A4BCB /* CTForgetpsdViewModel.h */,
 				240E189F21F5FAC6004A4BCB /* CTForgetpsdViewModel.m */,
+				324CE75D22336F650052A029 /* CTBindPhoneViewModel.h */,
+				324CE75E22336F650052A029 /* CTBindPhoneViewModel.m */,
 				240E18A121F5FB0D004A4BCB /* CTSetPasswordViewModel.h */,
 				240E18A221F5FB0D004A4BCB /* CTSetPasswordViewModel.m */,
 				32A28E9F22028B7A0049B003 /* CTAlipayBoundViewModel.h */,
@@ -3002,6 +3023,8 @@
 				32ED00D2222CD6CF008A1640 /* CTNetworkEngine.m */,
 				32ED00D4222CF242008A1640 /* CTNetworkEngine+Login.h */,
 				32ED00D5222CF242008A1640 /* CTNetworkEngine+Login.m */,
+				32534D0022323B5700A31645 /* CTNetworkEngine+Index.h */,
+				32534D0122323B5700A31645 /* CTNetworkEngine+Index.m */,
 			);
 			path = CTNetwork;
 			sourceTree = "<group>";
@@ -3164,6 +3187,7 @@
 				32CA556821F6B6DB00145E31 /* CTShareView_.xib in Resources */,
 				2405AED621FC0CAD000E5081 /* CTMemberTitleView.xib in Resources */,
 				32BE600D21EDC5E500BA52EF /* Assets.xcassets in Resources */,
+				324CE75C22336ECF0052A029 /* CTBindPhoneView.xib in Resources */,
 				24FF625D21F40F0B00488860 /* CTHomeSalesView.xib in Resources */,
 				326525FA21F5CF5800B63DD7 /* CTGetCodeView_.xib in Resources */,
 				32BD0E3F2201890C00E99B86 /* CTSetLogoutView.xib in Resources */,
@@ -3348,6 +3372,7 @@
 				32CA55AA21F7241C00145E31 /* CTSearchBar.m in Sources */,
 				326525CF21F5A40500B63DD7 /* UITableView+Helper.m in Sources */,
 				32BE611621EDCFA600BA52EF /* RegalurUtil.m in Sources */,
+				32534D0222323B5700A31645 /* CTNetworkEngine+Index.m in Sources */,
 				2405AEE821FC18D9000E5081 /* CTMemberPrivilegeItem.m in Sources */,
 				32E7EE6721F3263B00191789 /* CTHomeBannerView.m in Sources */,
 				32BE60EB21EDCFA600BA52EF /* CLNetworkEngine.m in Sources */,
@@ -3369,6 +3394,7 @@
 				326525E721F5CDC700B63DD7 /* CTForgetViewController.m in Sources */,
 				325D3B6121F1DE3700465B91 /* CTLoginViewController.m in Sources */,
 				32BE60EE21EDCFA600BA52EF /* CLTaskRequest.m in Sources */,
+				324CE75F22336F650052A029 /* CTBindPhoneViewModel.m in Sources */,
 				32CA555F21F6B0DA00145E31 /* CTMessageViewController.m in Sources */,
 				32BE610C21EDCFA600BA52EF /* UIViewController+Helper.m in Sources */,
 				32A28EBA2202C1C60049B003 /* CTWithdrawViewModel.m in Sources */,
@@ -3458,6 +3484,7 @@
 				32A28EAA220295B30049B003 /* CTWithdrawService.m in Sources */,
 				32BE613121EDCFA600BA52EF /* NSDate+Extension.m in Sources */,
 				32DB93AB22150B2E00300ACC /* CTThirtyProfitView.m in Sources */,
+				324CE75A22336EC60052A029 /* CTBindPhoneView.m in Sources */,
 				240E189121F5F4C6004A4BCB /* CTLoginBaseViewController.m in Sources */,
 				326525C121F57BE900B63DD7 /* UIImageView+CTHelper.m in Sources */,
 				322453D721F2BFC200471059 /* CTViewModel.m in Sources */,
@@ -3473,6 +3500,7 @@
 				32DB93A42215091A00300ACC /* CTSevenTrendView.m in Sources */,
 				32BE611C21EDCFA600BA52EF /* CALayer+YYAdd.m in Sources */,
 				32BE612121EDCFA600BA52EF /* YYCGUtilities.m in Sources */,
+				324CE757223367060052A029 /* CTThirdRegController.m in Sources */,
 				3280738B21FEE7B7009CABEC /* CTMineHeadView.m in Sources */,
 				32ED00D6222CF242008A1640 /* CTNetworkEngine+Login.m in Sources */,
 				32BE611121EDCFA600BA52EF /* NSData+Category.m in Sources */,

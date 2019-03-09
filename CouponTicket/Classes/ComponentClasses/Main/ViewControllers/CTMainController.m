@@ -84,7 +84,7 @@
 }
 
 - (void)setSelectedIndex:(NSUInteger)selectedIndex{
-    if(selectedIndex == 2 || selectedIndex == 3){
+    if(selectedIndex == 3 || selectedIndex == 4){
         if(![CTAppManager logined]){
             [[CTModuleManager loginService] showLoginFromViewController:self callback:^(BOOL logined) {
                 if(logined){

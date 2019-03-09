@@ -10,17 +10,23 @@
 
 #import "CTNetworkEngine+Login.h"
 
+#import "UMShareManager.h"
+
 typedef NS_ENUM(NSInteger,CTEventKind) {
     CTEventKindRegister,
     CTEventKindForgetpsd,
     CTEventKindQQRegister,
     CTEventKindWechatRegister,
+    CTEventKindQQBind,
+    CTEventKindWechatBind,
     CTEventKindWithDraw,
 };
 
 NSString *GetEventTitleStr(CTEventKind eventKind);
 
 CTSendCodeType GetSendCodeStrForEventKind(CTEventKind eventKind);
+
+CTEventKind GetEventKindWithLoginType(CTLoginType loginType);
 
 @interface CTLoginBaseViewController : CTBaseViewController
 

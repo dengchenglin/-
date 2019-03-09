@@ -82,5 +82,6 @@ SINGLETON_FOR_CLASS_IMP(CTAppManager)
 }
 - (void)logout{
     _user = nil;
+    [KeychainTool save:CTLoginInfoKey data:nil];
 }
 @end

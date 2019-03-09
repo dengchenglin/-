@@ -71,18 +71,25 @@
             self.completed();
         }
         switch (self.eventKind) {
-                //手机注册
             case CTEventKindRegister:
                 {
-                    [CTRequest registerWithPhone:self.mobile pwd:self.viewModel.password type:CTLoginPhone ivCode:self.inviteCode smsCode:self.verCode openid:self.openid nickname:self.nickname headicon:self.iconurl unionid:self.unionid callback:^(id data, CLRequest *request, CTNetError error) {
-                        if(!error){
-                            [CTAppManager saveUserWithInfo:data];
-                            POST_NOTIFICATION(CTDidLoginNotification);
-                        }
-                    }];
+                    [self registerWithType:CTLoginPhone];
                 }
                 break;
-                
+            case CTEventKindQQRegister:
+            {
+                [self registerWithType:CTLoginQQ];
+            }
+                break;
+            case CTEventKindWechatRegister:
+            {
+                [self registerWithType:CTLoginWeChat];
+            }
+                break;
+            case CTEventKindForgetpsd:{
+                [self resetPwd];
+            }
+                 break;
             default:
                 break;
         }
@@ -93,6 +100,26 @@
     RAC(self.viewModel,password) = self.passwordView.passwordTfd.rac_textSignal;
     RAC(self.viewModel,repassword) = self.passwordView.repasswordTfd.rac_textSignal;
     RAC(self.passwordView.doneButton,enabled) = self.viewModel.validRegisterSignal;
+}
+
+
+//手机注册
+- (void)registerWithType:(CTLoginType)type{
+    [CTRequest registerWithPhone:self.mobile pwd:self.viewModel.password type:type ivCode:self.inviteCode smsCode:self.verCode openid:self.response.openid nickname:self.response.name headicon:self.response.iconurl unionid:self.response.unionId callback:^(id data, CLRequest *request, CTNetError error) {
+        if(!error){
+            [CTAppManager saveUserWithInfo:data];
+            POST_NOTIFICATION(CTDidLoginNotification);
+        }
+    }];
+}
+//找回密码
+- (void)resetPwd{
+    [CTRequest resetPwdWithPhone:self.mobile pwd:self.viewModel.password smsCode:self.verCode callback:^(id data, CLRequest *request, CTNetError error) {
+        if(!error){
+            [MBProgressHUD showMBProgressHudWithTitle:@"设置成功"];
+            [self.navigationController popToRootViewControllerAnimated:YES];
+        }
+    }];
 }
 
 @end

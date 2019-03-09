@@ -41,16 +41,21 @@
 - (void)setUpUI{
     self.title = GetEventTitleStr(_eventKind);
     [self.view addSubview:self.getCodeView];
-    if(_eventKind == CTEventKindWithDraw){
-       self.getCodeView.phoneTfd.enabled = NO;
-       self.getCodeView.phoneTfd.text = self.mobile;
-       self.getCodeView.nextButton.layer.cornerRadius = 23;
-    }
+
 }
 
 - (void)reloadView{
     self.getCodeView.phoneTfd.text = self.mobile;
-    //self.getCodeView.phoneTfd.enabled = !(self.eventKind == CTEventKindRegister);
+    if(_eventKind == CTEventKindWithDraw){
+        self.getCodeView.phoneTfd.text = self.mobile;
+        self.getCodeView.nextButton.layer.cornerRadius = 23;
+    }
+    if(_eventKind == CTEventKindRegister||CTEventKindForgetpsd){
+        self.getCodeView.phoneTfd.text = self.mobile;
+    }
+    if(_eventKind == CTEventKindQQBind || _eventKind == CTEventKindWechatBind){
+        [self.getCodeView.nextButton setTitle:@"绑定" forState:UIControlStateNormal];
+    }
 }
 
 - (void)autoLayout{
@@ -78,15 +83,26 @@
     }];
     [self.getCodeView.nextButton touchUpInsideSubscribeNext:^(id x) {
         @strongify(self)
-        CTSetPasswordViewController *vc = [CTSetPasswordViewController new];
-        vc.eventKind = self.eventKind;
-        vc.mobile = self.viewModel.mobile;
-        vc.inviteCode = self.inviteCode;
-        vc.verCode = self.viewModel.code;
-        vc.nickname = self.nickname;
-        vc.iconurl = self.iconurl;
-        vc.completed = self.completed;
-        [self.navigationController pushViewController:vc animated:YES];
+        //第三方绑定已有账户
+        CTLoginType type = ((self.eventKind == CTEventKindQQBind)?CTLoginQQ:CTLoginWeChat);
+        if(self.eventKind == CTEventKindQQBind || self.eventKind == CTEventKindWechatBind){
+            [CTRequest bindPhoneWithPhone:self.viewModel.mobile type:type ivCode:self.inviteCode smsCode:self.viewModel.code openid:self.response.openid nickname:self.response.name headicon:self.response.iconurl unionid:self.response.unionId callback:^(id data, CLRequest *request, CTNetError error) {
+                if(!error){
+                    [CTAppManager saveUserWithInfo:data];
+                    POST_NOTIFICATION(CTDidLoginNotification);
+                }
+            }];
+        }
+        else{
+            CTSetPasswordViewController *vc = [CTSetPasswordViewController new];
+            vc.eventKind = self.eventKind;
+            vc.mobile = self.viewModel.mobile;
+            vc.inviteCode = self.inviteCode;
+            vc.verCode = self.viewModel.code;
+            vc.response = self.response;
+            vc.completed = self.completed;
+            [self.navigationController pushViewController:vc animated:YES];
+        }
     }];
     
 }

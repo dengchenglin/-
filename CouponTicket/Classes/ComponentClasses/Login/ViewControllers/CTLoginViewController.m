@@ -18,7 +18,7 @@
 
 #import "CTAgreementViewController.h"
 
-#import "UMShareManager.h"
+#import "CTThirdRegController.h"
 
 @interface CTLoginViewController ()
 
@@ -85,12 +85,19 @@
             [MBProgressHUD showMBProgressHudWithTitle:@"手机格式不正确"];
             return ;
         }
-        
+        [CTRequest loginWithType:CTLoginPhone openid:nil phone:self.viewModel.account pwd:self.viewModel.password callback:^(id data, CLRequest *request, CTNetError error) {
+            if(!error){
+               [CTAppManager saveUserWithInfo:data];
+                POST_NOTIFICATION(CTDidLoginNotification);
+            }
+            
+        }];
     }];
     //注册
     [self.loginView.registerButton touchUpInsideSubscribeNext:^(id x) {
         @strongify(self)
         CTRegisterViewController *vc = [CTRegisterViewController new];
+        vc.eventKind = CTEventKindRegister;
         [self.navigationController pushViewController:vc animated:YES];
     }];
     //忘记密码
@@ -103,14 +110,16 @@
     [self.loginView.qqButton touchUpInsideSubscribeNext:^(id x) {
         @strongify(self)
         [UMShareManager getUserInfoForPlatform:UMSocialPlatformType_QQ completion:^(UMSocialUserInfoResponse *response) {
-            
+            @strongify(self)
+            [self thirdLoginWithType:CTLoginQQ response:response];
         }];
     }];
     //微信登录
     [self.loginView.wechatButton touchUpInsideSubscribeNext:^(id x) {
         @strongify(self)
         [UMShareManager getUserInfoForPlatform:UMSocialPlatformType_WechatSession completion:^(UMSocialUserInfoResponse *response) {
-            
+            @strongify(self)
+            [self thirdLoginWithType:CTLoginQQ response:response];
         }];
     }];
     //同意协议
@@ -120,6 +129,25 @@
         [self.navigationController pushViewController:vc animated:YES];
     }];
     
+}
+
+//第三方登录
+- (void)thirdLoginWithType:(CTLoginType)loginType  response:(UMSocialUserInfoResponse *)response{
+    [CTRequest loginWithType:loginType openid:response.openid phone:nil pwd:nil callback:^(id data, CLRequest *request, CTNetError error) {
+        if(!error){
+            [CTAppManager saveUserWithInfo:data];
+            POST_NOTIFICATION(CTDidLoginNotification);
+        }
+        else{
+            NSInteger status = [data[@"status"] integerValue];
+            if(status == 402){
+                CTThirdRegController *vc = [CTThirdRegController new];
+                vc.eventKind = GetEventKindWithLoginType(loginType);
+                vc.response = response;
+                [self.navigationController pushViewController:vc animated:YES];
+            }
+        }
+    }];
 }
 
 - (void)successBack{

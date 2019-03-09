@@ -14,9 +14,7 @@
 
 @property (nonatomic, copy) NSString *inviteCode;
 
-@property (nonatomic, copy) NSString *nickname;
-
-@property (nonatomic, copy) NSString *iconurl;
+@property (nonatomic, strong) UMSocialUserInfoResponse *response;
 
 @property (nonatomic, assign) CTEventKind eventKind;
 
