@@ -47,11 +47,7 @@
 - (void)reloadView{
     self.getCodeView.phoneTfd.text = self.mobile;
     if(_eventKind == CTEventKindWithDraw){
-        self.getCodeView.phoneTfd.text = self.mobile;
         self.getCodeView.nextButton.layer.cornerRadius = 23;
-    }
-    if(_eventKind == CTEventKindRegister||CTEventKindForgetpsd){
-        self.getCodeView.phoneTfd.text = self.mobile;
     }
     if(_eventKind == CTEventKindQQBind || _eventKind == CTEventKindWechatBind){
         [self.getCodeView.nextButton setTitle:@"绑定" forState:UIControlStateNormal];
