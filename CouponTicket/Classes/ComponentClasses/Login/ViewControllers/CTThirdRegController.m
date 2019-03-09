@@ -221,7 +221,7 @@
     if(_eventKind == CTEventKindQQRegister){
         vc2.eventKind = CTEventKindQQBind;
     }
-    else if (_eventKind == CTEventKindWechatBind){
+    else if (_eventKind == CTEventKindWechatRegister){
         vc2.eventKind = CTEventKindWechatBind;
     }
     vc2.response = _response;

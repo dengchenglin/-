@@ -119,7 +119,7 @@
         @strongify(self)
         [UMShareManager getUserInfoForPlatform:UMSocialPlatformType_WechatSession completion:^(UMSocialUserInfoResponse *response) {
             @strongify(self)
-            [self thirdLoginWithType:CTLoginQQ response:response];
+            [self thirdLoginWithType:CTLoginWeChat response:response];
         }];
     }];
     //同意协议
