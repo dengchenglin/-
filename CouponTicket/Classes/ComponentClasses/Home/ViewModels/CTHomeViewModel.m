@@ -10,4 +10,10 @@
 
 @implementation CTHomeViewModel
 
++ (id)bindModel:(id)model{
+    CTHomeViewModel *viewModel = [CTHomeViewModel new];
+    viewModel.model = model;
+    return viewModel;
+}
+
 @end

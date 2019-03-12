@@ -1,0 +1,16 @@
+//
+//  CTNetworkEngine+Recommend.h
+//  CouponTicket
+//
+//  Created by dengchenglin on 2019/3/12.
+//  Copyright © 2019年 Danke. All rights reserved.
+//
+
+#import "CTNetworkEngine.h"
+
+@interface CTNetworkEngine (Recommend)
+//整点抢购时间列表
+- (CLRequest *)allTimeBuyWithCallback:(CTResponseBlock)callback;
+//整点抢购商品列表
+- (CLRequest *)timeBuyGoodsWithPage:(NSInteger)page size:(NSInteger)size markeId:(NSString *)markeId callback:(CTResponseBlock)callback;
+@end

@@ -163,6 +163,7 @@
     }
     else{
         CGFloat offestY = scrollView.contentOffset.y + self.scrollView.contentOffset.y;
+
         if(self.scrollView.contentOffset.y < maxOffest){
             self.scrollView.contentOffset = CGPointMake(0, offestY);
             if(scrollView.isDragging){
@@ -170,7 +171,6 @@
                     scrollView.contentOffset = CGPointZero;
                 }
             }
-
         }
         else if(scrollView.contentOffset.y < 0){
             self.scrollView.contentOffset = CGPointMake(0, offestY);

@@ -127,7 +127,8 @@ return self;}\
 //编码
 #define EnCodingNSString(s) (__bridge_transfer NSString *)CFURLCreateStringByAddingPercentEscapes(NULL,(__bridge CFStringRef)s,NULL,CFSTR("!*’();:@&=+$,/?%#[]"),CFStringConvertNSStringEncodingToEncoding(NSUTF8StringEncoding))
 
-
+//docoument
+#define CLDocumentPath(pathKey) [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0] stringByAppendingPathComponent:pathKey]
 
 //debug log
 #ifdef DEBUG

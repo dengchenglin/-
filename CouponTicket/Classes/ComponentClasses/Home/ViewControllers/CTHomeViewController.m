@@ -174,8 +174,7 @@
 }
 
 - (void)request{
-    self.viewModel.banner_imgs = [self banner_imgs];
-    self.bannerView.banner_imgs = _viewModel.banner_imgs;
+
     
     [CTRequest indexWithCallback:^(id data, CLRequest *request, CTNetError error) {
         [self.scrollView endRefreshing];

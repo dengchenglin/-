@@ -155,6 +155,12 @@
 		3280739721FEF4DF009CABEC /* CTMineOrderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3280739621FEF4DF009CABEC /* CTMineOrderView.xib */; };
 		3280739A21FF0928009CABEC /* CTMineToolView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3280739921FF0922009CABEC /* CTMineToolView.m */; };
 		3280739C21FF0969009CABEC /* CTMineToolView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3280739B21FF0969009CABEC /* CTMineToolView.xib */; };
+		32A281092237D2F2007DF6C2 /* CTNetworkEngine+Recommend.m in Sources */ = {isa = PBXBuildFile; fileRef = 32A281082237D2F2007DF6C2 /* CTNetworkEngine+Recommend.m */; };
+		32A2810C2237D50C007DF6C2 /* CTNetworkEngine+Member.m in Sources */ = {isa = PBXBuildFile; fileRef = 32A2810B2237D50C007DF6C2 /* CTNetworkEngine+Member.m */; };
+		32A2810F2237D58E007DF6C2 /* CTNetworkEngine+Goods.m in Sources */ = {isa = PBXBuildFile; fileRef = 32A2810E2237D58E007DF6C2 /* CTNetworkEngine+Goods.m */; };
+		32A281132237DCAB007DF6C2 /* CTHomeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 32A281122237DCAB007DF6C2 /* CTHomeModel.m */; };
+		32A281172237DE5C007DF6C2 /* CTGoodsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 32A281162237DE5C007DF6C2 /* CTGoodsModel.m */; };
+		32A2811A2237DEE9007DF6C2 /* CTActivityModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 32A281192237DEE9007DF6C2 /* CTActivityModel.m */; };
 		32A28E992202871D0049B003 /* CTAlipayBoundViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32A28E982202871D0049B003 /* CTAlipayBoundViewController.m */; };
 		32A28E9C220287FE0049B003 /* CTAlipayBoundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 32A28E9B220287FE0049B003 /* CTAlipayBoundView.m */; };
 		32A28E9E220288080049B003 /* CTAlipayBoundView_.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32A28E9D220288080049B003 /* CTAlipayBoundView_.xib */; };
@@ -683,6 +689,18 @@
 		3280739821FF0922009CABEC /* CTMineToolView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTMineToolView.h; sourceTree = "<group>"; };
 		3280739921FF0922009CABEC /* CTMineToolView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTMineToolView.m; sourceTree = "<group>"; };
 		3280739B21FF0969009CABEC /* CTMineToolView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CTMineToolView.xib; sourceTree = "<group>"; };
+		32A281072237D2F2007DF6C2 /* CTNetworkEngine+Recommend.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CTNetworkEngine+Recommend.h"; sourceTree = "<group>"; };
+		32A281082237D2F2007DF6C2 /* CTNetworkEngine+Recommend.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CTNetworkEngine+Recommend.m"; sourceTree = "<group>"; };
+		32A2810A2237D50C007DF6C2 /* CTNetworkEngine+Member.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CTNetworkEngine+Member.h"; sourceTree = "<group>"; };
+		32A2810B2237D50C007DF6C2 /* CTNetworkEngine+Member.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CTNetworkEngine+Member.m"; sourceTree = "<group>"; };
+		32A2810D2237D58E007DF6C2 /* CTNetworkEngine+Goods.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CTNetworkEngine+Goods.h"; sourceTree = "<group>"; };
+		32A2810E2237D58E007DF6C2 /* CTNetworkEngine+Goods.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CTNetworkEngine+Goods.m"; sourceTree = "<group>"; };
+		32A281112237DCAB007DF6C2 /* CTHomeModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTHomeModel.h; sourceTree = "<group>"; };
+		32A281122237DCAB007DF6C2 /* CTHomeModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTHomeModel.m; sourceTree = "<group>"; };
+		32A281152237DE5C007DF6C2 /* CTGoodsModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTGoodsModel.h; sourceTree = "<group>"; };
+		32A281162237DE5C007DF6C2 /* CTGoodsModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTGoodsModel.m; sourceTree = "<group>"; };
+		32A281182237DEE9007DF6C2 /* CTActivityModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTActivityModel.h; sourceTree = "<group>"; };
+		32A281192237DEE9007DF6C2 /* CTActivityModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTActivityModel.m; sourceTree = "<group>"; };
 		32A28E972202871D0049B003 /* CTAlipayBoundViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTAlipayBoundViewController.h; sourceTree = "<group>"; };
 		32A28E982202871D0049B003 /* CTAlipayBoundViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTAlipayBoundViewController.m; sourceTree = "<group>"; };
 		32A28E9A220287FE0049B003 /* CTAlipayBoundView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTAlipayBoundView.h; sourceTree = "<group>"; };
@@ -717,7 +735,7 @@
 		32A28ECD2202D5230049B003 /* CTWithdrawSuccessView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CTWithdrawSuccessView.xib; sourceTree = "<group>"; };
 		32A28ECF2202EA180049B003 /* CTAlertHelper+WithdrawSuccess.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CTAlertHelper+WithdrawSuccess.h"; sourceTree = "<group>"; };
 		32A28ED02202EA180049B003 /* CTAlertHelper+WithdrawSuccess.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CTAlertHelper+WithdrawSuccess.m"; sourceTree = "<group>"; };
-		32A28ED22202EC630049B003 /* CTWithdrawModifyAlipayView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTWithdrawModifyAlipayView.h; sourceTree = "<group>"; };
+		32A28ED22202EC630049B003 /* CTWithdrawModifyAlipayView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTWithdrawModifyAlipayView.h; sourceTree = "<group>"; tabWidth = 5; };
 		32A28ED32202EC630049B003 /* CTWithdrawModifyAlipayView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTWithdrawModifyAlipayView.m; sourceTree = "<group>"; };
 		32A28ED52202EC6C0049B003 /* CTWithdrawModifyAlipayView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CTWithdrawModifyAlipayView.xib; sourceTree = "<group>"; };
 		32A28ED72202F52F0049B003 /* CTMyCollectListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTMyCollectListViewController.h; sourceTree = "<group>"; };
@@ -792,7 +810,6 @@
 		32BE601221EDC5E500BA52EF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32BE601821EDC5E500BA52EF /* CouponTicketTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CouponTicketTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		32BE601C21EDC5E500BA52EF /* CouponTicketTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CouponTicketTests.m; sourceTree = "<group>"; };
-		32BE601E21EDC5E500BA52EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		32BE603121EDCFA500BA52EF /* Aspects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Aspects.h; sourceTree = "<group>"; };
 		32BE603221EDCFA500BA52EF /* Aspects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Aspects.m; sourceTree = "<group>"; };
 		32BE603421EDCFA500BA52EF /* CLModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLModule.h; sourceTree = "<group>"; };
@@ -1346,6 +1363,7 @@
 		245CAE4B21F42E6900496052 /* CommonClasses */ = {
 			isa = PBXGroup;
 			children = (
+				32A281142237DE48007DF6C2 /* CTModels */,
 				3220EA3221F9A045004E0422 /* CTGoodDefine */,
 				245CAE4C21F42E8000496052 /* CTViews */,
 			);
@@ -2037,6 +2055,26 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		32A281102237DC86007DF6C2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				32A281112237DCAB007DF6C2 /* CTHomeModel.h */,
+				32A281122237DCAB007DF6C2 /* CTHomeModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		32A281142237DE48007DF6C2 /* CTModels */ = {
+			isa = PBXGroup;
+			children = (
+				32A281152237DE5C007DF6C2 /* CTGoodsModel.h */,
+				32A281162237DE5C007DF6C2 /* CTGoodsModel.m */,
+				32A281182237DEE9007DF6C2 /* CTActivityModel.h */,
+				32A281192237DEE9007DF6C2 /* CTActivityModel.m */,
+			);
+			path = CTModels;
+			sourceTree = "<group>";
+		};
 		32A28EA2220294E10049B003 /* Withdraw */ = {
 			isa = PBXGroup;
 			children = (
@@ -2316,7 +2354,6 @@
 			isa = PBXGroup;
 			children = (
 				32BE601C21EDC5E500BA52EF /* CouponTicketTests.m */,
-				32BE601E21EDC5E500BA52EF /* Info.plist */,
 			);
 			path = CouponTicketTests;
 			sourceTree = "<group>";
@@ -2728,6 +2765,7 @@
 		32BE613621EDD24600BA52EF /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				32A281102237DC86007DF6C2 /* Model */,
 				32E7EE4F21F2F6F500191789 /* ViewModels */,
 				322453F121F2D3D500471059 /* Views */,
 				322453AE21F2BE3900471059 /* Service */,
@@ -3025,6 +3063,12 @@
 				32ED00D5222CF242008A1640 /* CTNetworkEngine+Login.m */,
 				32534D0022323B5700A31645 /* CTNetworkEngine+Index.h */,
 				32534D0122323B5700A31645 /* CTNetworkEngine+Index.m */,
+				32A281072237D2F2007DF6C2 /* CTNetworkEngine+Recommend.h */,
+				32A281082237D2F2007DF6C2 /* CTNetworkEngine+Recommend.m */,
+				32A2810A2237D50C007DF6C2 /* CTNetworkEngine+Member.h */,
+				32A2810B2237D50C007DF6C2 /* CTNetworkEngine+Member.m */,
+				32A2810D2237D58E007DF6C2 /* CTNetworkEngine+Goods.h */,
+				32A2810E2237D58E007DF6C2 /* CTNetworkEngine+Goods.m */,
 			);
 			path = CTNetwork;
 			sourceTree = "<group>";
@@ -3355,6 +3399,7 @@
 				240A8EFC22158BCD006E4DED /* CTUserInfoService.m in Sources */,
 				32BD0E3D2201890000E99B86 /* CTSetLogoutView.m in Sources */,
 				32BD0E28220172FE00E99B86 /* CTMineNavItemView.m in Sources */,
+				32A281172237DE5C007DF6C2 /* CTGoodsModel.m in Sources */,
 				32CA559421F7148800145E31 /* CTSearchPreviewView.m in Sources */,
 				32BE610421EDCFA600BA52EF /* UIButton+Helper.m in Sources */,
 				32BE610A21EDCFA600BA52EF /* UITextView+ZWPlaceHolder.m in Sources */,
@@ -3452,6 +3497,7 @@
 				32CA558D21F712C800145E31 /* CTSearchViewController.m in Sources */,
 				32BE610F21EDCFA600BA52EF /* NSArray+Category.m in Sources */,
 				32ED00F1222D28A3008A1640 /* QCodeHelper.m in Sources */,
+				32A281132237DCAB007DF6C2 /* CTHomeModel.m in Sources */,
 				32BE611721EDCFA600BA52EF /* UIButton+Create.m in Sources */,
 				32FEA9D02213B3C0001156CC /* CTNestPageController.m in Sources */,
 				3220EA2121F98622004E0422 /* CTMessageListViewController.m in Sources */,
@@ -3542,6 +3588,7 @@
 				32FEAA0622141ACB001156CC /* CTEarnRankCell.m in Sources */,
 				32CA559021F712D900145E31 /* CTSearchService.m in Sources */,
 				3220EA3F21F9C2D3004E0422 /* CThotSalesListViewController.m in Sources */,
+				32A2811A2237DEE9007DF6C2 /* CTActivityModel.m in Sources */,
 				2405AF0121FC3166000E5081 /* CTMemberChoicenessCell.m in Sources */,
 				32DB93BD2215394700300ACC /* CTOrderListViewController.m in Sources */,
 				240F513121F9DBAB00BFDD2D /* CTPasteCheckPopView.m in Sources */,
@@ -3580,6 +3627,7 @@
 				32BE612521EDCFA600BA52EF /* CLTextField.m in Sources */,
 				240E188D21F5F1FC004A4BCB /* CTRegisterViewModel.m in Sources */,
 				32A28ECC2202D5120049B003 /* CTWithdrawSuccessView.m in Sources */,
+				32A2810C2237D50C007DF6C2 /* CTNetworkEngine+Member.m in Sources */,
 				32DB93A12215090B00300ACC /* CTThirtyTrendView.m in Sources */,
 				326AC1F221FADF00008C154B /* CTHotCatoryView.m in Sources */,
 				32AE799B22166DEC00E29FC3 /* CTProfitShareView.m in Sources */,
@@ -3590,6 +3638,7 @@
 				32A28EC12202C97E0049B003 /* CTAlertHelper.m in Sources */,
 				32BE611B21EDCFA600BA52EF /* UIView+Category.m in Sources */,
 				32BE610921EDCFA600BA52EF /* UITextView+Helper.m in Sources */,
+				32A281092237D2F2007DF6C2 /* CTNetworkEngine+Recommend.m in Sources */,
 				3220EA1421F95E59004E0422 /* CTMessageTypeView.m in Sources */,
 				32BE60FF21EDCFA600BA52EF /* SDWaitingView.m in Sources */,
 				3220EA4221F9C2F9004E0422 /* CTHotSalesNoticeView.m in Sources */,
@@ -3622,6 +3671,7 @@
 				2407A8E121FD8868000403B7 /* CTMemberEquityTypeView.m in Sources */,
 				32ED00E3222D25F5008A1640 /* WCQRCodeVC.m in Sources */,
 				32CA557B21F6F02700145E31 /* CTLeftTextButton.m in Sources */,
+				32A2810F2237D58E007DF6C2 /* CTNetworkEngine+Goods.m in Sources */,
 				32AE79A9221691A400E29FC3 /* CTShareItemView.m in Sources */,
 				322453D821F2BFC200471059 /* CTTableView.m in Sources */,
 				326AC20421FB04B1008C154B /* CLContainerView.m in Sources */,

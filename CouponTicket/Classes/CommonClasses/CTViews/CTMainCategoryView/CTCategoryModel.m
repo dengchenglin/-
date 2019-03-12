@@ -10,4 +10,8 @@
 
 @implementation CTCategoryModel
 
++ (NSDictionary *)modelCustomPropertyMapper{
+    return @{@"uid":@"id",@"title":@"cate_title"};
+}
+
 @end

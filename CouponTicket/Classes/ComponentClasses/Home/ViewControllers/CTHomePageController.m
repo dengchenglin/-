@@ -20,6 +20,8 @@
 
 #import "CTMainCategoryView.h"
 
+#import "CTNetworkEngine+Index.h"
+
 @interface CTHomePageController ()<UIPageControlManagerDataSoure,UIPageControlManagerDelegate>
 
 @property (nonatomic, strong) CTHomeTopView *topView;
@@ -104,17 +106,20 @@
 
 
 - (void)request{
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [self reloadData:nil];
-    });
+    [CTRequest indexWithCallback:^(id data, CLRequest *request, CTNetError error) {
+        if(!error){
+            [self reloadData:data];
+        }
+    }];
+
 }
 
 - (void)reloadData:(id)data{
 
-    NSArray <CTCategoryModel *>*models = [CTCategoryModel yy_modelsWithDatas:[self testCategory]];
-    self.viewModel.categoryModels = models;
+   CTHomeModel *model = [CTHomeModel yy_modelWithDictionary:data];
+    self.viewModel = [CTHomeViewModel bindModel:model];
     
-    for(int i = 0;i < self.viewModel.categoryModels.count;i ++){
+    for(int i = 0;i < self.viewModel.model.cate.count;i ++){
         UIViewController *vc;
         if(i == 0){
             vc = [[CTHomeViewController alloc]init];
@@ -127,7 +132,7 @@
         [self.viewControllers addObject:vc];
     }
     
-    self.topView.categoryModels = _viewModel.categoryModels;
+    self.topView.categoryModels = _viewModel.model.cate;
     [self.pageControlManager reloadData];
 
 
