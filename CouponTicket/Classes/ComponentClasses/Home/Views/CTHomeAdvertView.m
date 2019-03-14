@@ -19,7 +19,7 @@ ViewInstance(setUp)
 }
 - (void)setUpUI{
     _imageView = [[UIImageView alloc]init];
-    _imageView.image = [UIImage imageNamed:@"pic_home_banner"];
+
     [self addSubview:_imageView];
 }
 - (void)autoLayout{

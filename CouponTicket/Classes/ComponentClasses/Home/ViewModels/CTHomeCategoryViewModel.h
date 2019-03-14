@@ -12,12 +12,9 @@
 
 #import "CTGoodDefine.h"
 
-#import "CTGoodsModel.h"
+
 
 @interface CTHomeCategoryViewModel : CTViewModel
-
-//子分类集
-@property (nonatomic, copy) NSArray <CTCategoryModel *>*subCategoryModels;
 
 //主分类Id
 @property (nonatomic, copy) NSString *main_category_id;
@@ -26,6 +23,7 @@
 //排序方式
 @property (nonatomic, assign) CTGoodSortType sortType;
 
-@property (nonatomic, strong) NSMutableArray <CTGoodsModel *> *dataSoures;
+@property (nonatomic, copy) NSString *order;
+
 
 @end

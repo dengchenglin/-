@@ -10,6 +10,10 @@
 
 #import "CTTableView.h"
 
+#import "CTNetworkEngine.h"
+
+#import "CTViewModel.h"
+
 @interface CTBaseListViewController : CTBaseViewController<UITableViewDataSource,UITableViewDelegate>
 
 @property (nonatomic, strong) CTTableView *tableView;
@@ -22,5 +26,5 @@
 
 @property (nonatomic, strong) NSMutableArray *dataSoures;
 
-//- (void)analysisAndReloadWithData:(id)data listKey:(NSString *)listKey error:(LMNetError)error modelClass:(Class)modelClass viewModelClass:(Class <LMViewModelProtocol>)viewModelClass;
+
 @end

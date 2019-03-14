@@ -28,7 +28,7 @@
 }
 //二级分类
 - (CLRequest *)cateWithCallback:(CTResponseBlock)callback{
-    return [self postWithPath:CTIndex(@"cate") params:nil callback:callback];
+    return [self postWithPath:CTIndex(@"cate") params:nil showHud:NO callback:callback];
 }
 //分类商品
 - (CLRequest *)cateGoodsWithPage:(NSInteger)page size:(NSInteger)size cateId:(NSString *)cateId order:(NSString *)order callback:(CTResponseBlock)callback{
@@ -38,7 +38,7 @@
     [params setValue:cateId forKey:@"cate_id"];
     [params setValue:order forKey:@"order"];
 
-    return [self postWithPath:CTIndex(@"cur_time_buy") params:params callback:callback];
+    return [self postWithPath:CTIndex(@"cate_goods") params:params callback:callback];
 }
 
 @end

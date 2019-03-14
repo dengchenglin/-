@@ -125,7 +125,7 @@
         }
         else{
             vc = [[CTHomeCatoryViewController alloc]init];
-            
+            ((CTHomeCatoryViewController *)vc).cateId = self.viewModel.model.cate[i].uid;
         }
         ((id<CTPageControllerProtocol>)vc).bounds = CGRectMake(0, 0, self.pageControlManager.pageViewControllerFrame.size.width, self.pageControlManager.pageViewControllerFrame.size.height);
         [self.viewControllers addObject:vc];
