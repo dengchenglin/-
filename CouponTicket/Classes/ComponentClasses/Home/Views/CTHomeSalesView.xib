@@ -25,8 +25,8 @@
                                 <constraint firstAttribute="height" constant="30" id="Q3y-Ih-sGE"/>
                             </constraints>
                         </imageView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="21:45秒后更新" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dST-mK-Bch">
-                            <rect key="frame" x="173.5" y="45" width="81" height="14.5"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--:--" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dST-mK-Bch">
+                            <rect key="frame" x="201" y="45" width="26.5" height="14.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                             <color key="textColor" red="0.81176470588235294" green="0.81176470588235294" blue="0.81176470588235294" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
@@ -68,9 +68,10 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="goodsView" destination="e9B-Ts-NMf" id="1Mt-OY-MDE"/>
+                <outlet property="timeLabel" destination="dST-mK-Bch" id="hPJ-wy-awg"/>
                 <outlet property="titleheadView" destination="gWJ-QW-1D9" id="EZg-YL-qA6"/>
             </connections>
-            <point key="canvasLocation" x="127.5" y="-10"/>
+            <point key="canvasLocation" x="35" y="-18"/>
         </view>
     </objects>
     <resources>

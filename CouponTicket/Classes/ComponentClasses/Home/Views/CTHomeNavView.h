@@ -8,12 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+#import "CTActivityModel.h"
+
 @interface CTHomeNavView : UIView
 
-@property (weak, nonatomic) IBOutlet UIButton *item1;
-@property (weak, nonatomic) IBOutlet UIButton *item2;
-@property (weak, nonatomic) IBOutlet UIButton *item3;
-@property (weak, nonatomic) IBOutlet UIButton *item4;
-@property (weak, nonatomic) IBOutlet UIButton *item5;
+@property (nonatomic, copy) NSArray <CTActivityModel *> *activitys;
+
+@property (nonatomic, copy) void (^clickItemBlock)(CTActivityModel *model);
 
 @end

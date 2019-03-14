@@ -24,17 +24,26 @@
 
 @end
 
+@interface CTHomeHotGoodsModel:NSObject
+@property (nonatomic, copy) NSString *update_timestamp;
+@property (nonatomic, copy) NSString *update_time;
+@property (nonatomic, assign) double next_update_timestamp;
+@property (nonatomic, copy) NSArray <CTGoodsModel *> *goods;
+@end
+
 @interface CTHomeModel : NSObject
 //一级分类
 @property (nonatomic, copy) NSArray <CTCategoryModel *> *cate;
 //活动数据
 @property (nonatomic, copy) NSArray <CTActivityModel *> *activity;
 //活动广告数据
-@property (nonatomic, copy) NSArray <CTActivityModel *> *activity_banner;
+@property (nonatomic, strong) CTActivityModel *activity_banner;
 //广告数据
 @property (nonatomic, copy) NSArray <CTActivityModel *> *advs;
 //整点抢购数据
 @property (nonatomic, strong) CTHomeCurTimeBuyModel *cur_time_buy;
+//热销榜
+@property (nonatomic, strong) CTHomeHotGoodsModel *hot_goods;
 //上新数据
 @property (nonatomic, copy) NSArray <CTGoodsModel *> *now_goods;
 @end

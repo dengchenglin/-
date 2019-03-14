@@ -8,8 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+#import "CTActivityModel.h"
+
 @interface CTHomeAdvertView : UIView
 
 @property (nonatomic, strong) UIImageView *imageView;
+
+@property (nonatomic, strong) CTActivityModel *model;
 
 @end

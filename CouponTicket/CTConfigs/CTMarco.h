@@ -24,4 +24,6 @@
 #define CTPsbFont(s) [UIFont fontWithName:(IOS_9?@"PingFangSC-Semibold":@"Heiti SC") size:s]
 #define CTPsmFont(s) [UIFont fontWithName:(IOS_9?@"PingFangSC-Medium":@"Heiti SC") size:s]
 
+
+#define CTGoodsFailImage [UIImage imageNamed:@"pic_holder"]
 #endif /* CTMarco_h */

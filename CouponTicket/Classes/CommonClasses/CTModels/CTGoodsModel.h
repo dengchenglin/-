@@ -12,8 +12,25 @@
 
 @property (nonatomic, copy) NSString *uid;
 
-@property (nonatomic, copy) NSString *title;
+@property (nonatomic, copy) NSString *sale_price;
 
-@property (nonatomic, copy) NSString *img;
+@property (nonatomic, copy) NSString *goods_title;
 
+@property (nonatomic, copy) NSString *goods_short_title;
+
+@property (nonatomic, copy) NSString *goods_logo;
+
+@property (nonatomic, copy) NSString *market_price;
+
+@property (nonatomic, copy) NSString *coupon_amount;
+
+@property (nonatomic, copy) NSString *commission_money;
+
+@property (nonatomic, copy) NSString *coupon_price;
+
+@property (nonatomic, copy) NSString *upgrade_money;
+
+@property (nonatomic, copy) NSString *type_logo;
+
+@property (nonatomic, copy) NSString *item_id;
 @end

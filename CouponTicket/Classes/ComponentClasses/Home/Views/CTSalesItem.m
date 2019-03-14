@@ -10,12 +10,11 @@
 
 @implementation CTSalesItem
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
+- (void)setModel:(CTGoodsModel *)model{
+    _model = model;
+    [_imageView sd_setImageWithURL:[NSURL URLWithString:_model.goods_logo] placeholderImage:CTGoodsFailImage];
+    _titleLabel.text = _model.goods_short_title;
+    _priceLabel.text = [NSString stringWithFormat:@"¥%@",_model.sale_price];
 }
-*/
 
 @end

@@ -16,6 +16,8 @@
 
 #import "CTGoodSortView.h"
 
+#import "CTNetworkEngine+Index.h"
+
 @interface CTHomeCatoryViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic, strong) CTMainCategoryView *categoryView;
@@ -49,6 +51,13 @@
     return _sortView;
 }
 
+- (CTHomeCategoryViewModel *)viewModel{
+    if(!_viewModel){
+        _viewModel = [CTHomeCategoryViewModel new];
+    }
+    return _viewModel;
+}
+
 
 - (CTTableView *)tableView{
     if(!_tableView){
@@ -69,12 +78,31 @@
 
 - (UIView *)headView{
     if(!_headView){
-        UIView *headView = [UIView new];
+        _headView = [UIView new];
+    }
+    return _headView;
+}
+
+
+
+
+- (void)setUpUI{
+    self.hideSystemNavBarWhenAppear = YES;
+    self.tableView.backgroundColor = RGBColor(245, 245, 245);
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    [self.tableView registerNibWithClass:CTGoodListCell.class];
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+}
+
+- (void)reloadHeadView{
+    [self.headView removeAllSubViews];
+    if(self.viewModel.subCategoryModels.count){
         UIView *spaceView = [UIView new];
         spaceView.backgroundColor = [UIColor whiteColor];
-        [headView addSubview:spaceView];
-        [headView addSubview:self.categoryView];
-        [headView addSubview:self.sortView];
+        [self.headView addSubview:spaceView];
+        [self.headView addSubview:self.categoryView];
+        [self.headView addSubview:self.sortView];
         [spaceView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.top.right.mas_equalTo(0);
             make.height.mas_equalTo(10);
@@ -88,30 +116,23 @@
             make.bottom.left.right.mas_equalTo(0);
             make.height.mas_equalTo(40);
         }];
-        _headView = headView;
     }
-    return _headView;
-}
-
-- (CTHomeCategoryViewModel *)viewModel{
-    if(!_viewModel){
-        _viewModel = [CTHomeCategoryViewModel new];
+    else{
+        [self.headView addSubview:self.sortView];
+        [self.sortView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.bottom.left.right.mas_equalTo(0);
+            make.height.mas_equalTo(40);
+        }];
     }
-    return _viewModel;
-}
 
-
-- (void)setUpUI{
-    self.hideSystemNavBarWhenAppear = YES;
-    self.tableView.backgroundColor = RGBColor(245, 245, 245);
-    self.tableView.delegate = self;
-    self.tableView.dataSource = self;
-    [self.tableView registerNibWithClass:CTGoodListCell.class];
-    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
 }
 
 - (void)setUpEvent{
     @weakify(self)
+    [self.tableView addHeaderRefreshWithCallBack:^{
+        @strongify(self)
+        [self request];
+    }];
     [self.categoryView setClickItemBlock:^(NSInteger index) {
         @strongify(self)
         UIViewController *vc = [[CTModuleManager goodListService]goodListViewControllerWithCategoryId:nil];
@@ -120,19 +141,31 @@
 }
 
 - (void)request{
-    [self reloadData:nil];
+    [CTRequest cateWithCallback:^(id data, CLRequest *request, CTNetError error) {
+        [self.tableView endRefreshing];
+        if(!error){
+            [self reloadData:data];
+        }
+        else if (!self.viewModel.subCategoryModels.count && !self.viewModel.dataSoures.count){
+            [LMNoDataView showNoNetErrorResultOnView:self.view clickRefreshBlock:^{
+                [self request];
+            }];
+        }
+    }];
 }
 
 - (void)reloadData:(id)data{
-     NSArray <CTCategoryModel *>*models = [CTCategoryModel yy_modelsWithDatas:[self testCategory]];
+     NSArray <CTCategoryModel *>*models = [CTCategoryModel yy_modelsWithDatas:data];
     self.viewModel.subCategoryModels = models;
+    [self reloadHeadView];
+    self.categoryView.categoryModels = self.viewModel.subCategoryModels;
     [self.tableView reloadData];
 
 }
 
 #pragma mark - UITableViewDelegate
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-    self.categoryView.categoryModels = self.viewModel.subCategoryModels;
+    
     CGFloat height = [self.headView systemLayoutSizeFittingSize:CGSizeMake(SCREEN_WIDTH, CGFLOAT_MAX)].height;
     return height;
 }

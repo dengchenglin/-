@@ -51,14 +51,6 @@
     }
     return _topView;
 }
-
-- (CTHomeViewModel *)viewModel{
-    if(!_viewModel){
-        _viewModel = [CTHomeViewModel new];
-    }
-    return _viewModel;
-}
-
 - (void)setUpUI{
     self.hideSystemNavBarWhenAppear = YES;
     self.pageControlManager = [[UIPageControlManager alloc]initWithViewController:self];
@@ -107,8 +99,14 @@
 
 - (void)request{
     [CTRequest indexWithCallback:^(id data, CLRequest *request, CTNetError error) {
+        [LMDataResultView hideDataResultOnView:self.view];
         if(!error){
             [self reloadData:data];
+        }
+        else if (!self.viewModel){
+            [LMDataResultView showNoNetErrorResultOnView:self.view clickRefreshBlock:^{
+                [self request];
+            }];
         }
     }];
 
@@ -123,6 +121,7 @@
         UIViewController *vc;
         if(i == 0){
             vc = [[CTHomeViewController alloc]init];
+            ((CTHomeViewController *)vc).viewModel = _viewModel;
         }
         else{
             vc = [[CTHomeCatoryViewController alloc]init];
@@ -134,8 +133,6 @@
     
     self.topView.categoryModels = _viewModel.model.cate;
     [self.pageControlManager reloadData];
-
-
 }
 
 

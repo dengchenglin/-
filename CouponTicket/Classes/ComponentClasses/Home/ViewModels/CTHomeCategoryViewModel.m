@@ -10,4 +10,11 @@
 
 @implementation CTHomeCategoryViewModel
 
+- (NSMutableArray<CTGoodsModel *> *)dataSoures{
+    if(!_dataSoures){
+        _dataSoures = [NSMutableArray array];
+    }
+    return _dataSoures;
+}
+
 @end

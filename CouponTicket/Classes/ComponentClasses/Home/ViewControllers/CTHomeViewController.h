@@ -10,6 +10,10 @@
 
 #import "CTPageControllerProtocol.h"
 
+#import "CTHomeViewModel.h"
+
 @interface CTHomeViewController : CTBaseViewController<CTPageControllerProtocol>
+
+@property (nonatomic, strong) CTHomeViewModel *viewModel;
 
 @end

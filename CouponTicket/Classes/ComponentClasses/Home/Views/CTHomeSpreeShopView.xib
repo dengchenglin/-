@@ -22,7 +22,7 @@
                             <rect key="frame" x="0.0" y="0.0" width="469" height="50"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gpe-B0-JGh">
-                                    <rect key="frame" x="112" y="0.0" width="247" height="50"/>
+                                    <rect key="frame" x="111" y="0.0" width="247" height="50"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6fS-tx-OTx">
                                             <rect key="frame" x="0.0" y="0.0" width="124" height="50"/>
@@ -115,8 +115,10 @@
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
+                <outlet property="currentTimeLabel" destination="kF1-jp-6TM" id="TTg-Gm-yjB"/>
                 <outlet property="goodsView" destination="Glw-Pp-hZA" id="A5R-jD-6Pf"/>
                 <outlet property="headView" destination="Smh-jG-BWz" id="9x4-B5-iSk"/>
+                <outlet property="nextTimeLabel" destination="uAW-He-HB2" id="YSd-FS-odr"/>
             </connections>
             <point key="canvasLocation" x="-26.5" y="203"/>
         </view>

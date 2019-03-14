@@ -28,9 +28,6 @@
     [super viewDidLoad];
     [self addChildViewController:self.pageController];
     [self.view addSubview:self.pageController.view];
-    __block UIScrollView *scrollView = nil;
-
-  
 }
 
 

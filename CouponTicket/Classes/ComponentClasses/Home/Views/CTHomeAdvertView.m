@@ -28,5 +28,9 @@ ViewInstance(setUp)
     }];
 }
 
+- (void)setModel:(CTActivityModel *)model{
+    _model = model;
+    [_imageView sd_setImageWithURL:[NSURL URLWithString:_model.img]];
+}
 
 @end

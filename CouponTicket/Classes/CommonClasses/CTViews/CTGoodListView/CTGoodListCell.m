@@ -20,5 +20,9 @@
     }];
 }
 
+- (void)setModel:(CTGoodsModel *)model{
+    _model = model;
+    _containerView.model = model;
+}
 
 @end

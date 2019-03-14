@@ -32,13 +32,6 @@
     return _registerView;
 }
 
-- (CTRegisterViewModel *)viewModel{
-    if(!_viewModel){
-        _viewModel = [CTRegisterViewModel new];
-    }
-    return _viewModel;
-}
-
 - (void)setUpUI{
     [self setLeftDefaultItem];
     self.title = GetEventTitleStr(_eventKind);

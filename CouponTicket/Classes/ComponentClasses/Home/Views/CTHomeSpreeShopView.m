@@ -55,4 +55,14 @@
     }
 }
 
+- (void)setModel:(CTHomeCurTimeBuyModel *)model{
+    _model = model;
+    _currentTimeLabel.text = _model.time;
+    _nextTimeLabel.text = _model.next_time;
+    for(int i = 0;i < 6;i ++){
+        CTSpreeShopItem *item = [self viewWithTag:100 + i];
+        item.model = [_model.goods safe_objectAtIndex:i];
+    }
+}
+
 @end

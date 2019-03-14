@@ -8,8 +8,6 @@
 
 #import "CTHomeViewController.h"
 
-#import "CTHomeViewModel.h"
-
 #import "CTHomeBannerView.h"
 
 #import "CTHomeAdvertView.h"
@@ -25,6 +23,7 @@
 #import "CTHomeSpreeShopView.h"
 
 #import "CTNetworkEngine+Index.h"
+
 
 @interface CTHomeViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -43,8 +42,6 @@
 @property (nonatomic, strong) CTHomeSalesView *salesView;
 
 @property (nonatomic, strong) CTHomeNewestHeadView *newestHeadView;
-
-@property (nonatomic, strong) CTHomeViewModel *viewModel;
 
 @end
 
@@ -146,6 +143,7 @@
     [self.navView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(self.advertView.mas_bottom);
         make.left.right.mas_equalTo(0);
+        make.height.mas_equalTo(SCREEN_WIDTH*242/375);
     }];
     [self.spreeShopView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(self.navView.mas_bottom).offset(10);
@@ -166,50 +164,40 @@
 }
 
 - (void)reloadView{
-    @weakify(self)
-    [self.tableView addHeaderRefreshWithCallBack:^{
-        @strongify(self)
-        [self request];
-    }];
+    //首页数据在上一层传过来的
+    if(_viewModel){
+        self.bannerView.banner_imgs = [self.viewModel.model.advs map:^id(NSInteger index, CTActivityModel *element) {
+            return element.img?:@"";
+        }];
+        self.advertView.model = self.viewModel.model.activity_banner;
+        self.navView.activitys = self.viewModel.model.activity;
+        self.spreeShopView.model = self.viewModel.model.cur_time_buy;
+        self.salesView.model = self.viewModel.model.hot_goods;
+    }
 }
 
-- (void)request{
-
-    
+- (void)loadData{
     [CTRequest indexWithCallback:^(id data, CLRequest *request, CTNetError error) {
-        [self.scrollView endRefreshing];
+        [self.tableView endRefreshing];
         if(!error){
-            
+            CTHomeModel *model = [CTHomeModel yy_modelWithDictionary:data];
+            self.viewModel = [CTHomeViewModel bindModel:model];
+            [self reloadView];
         }
     }];
 }
 
 - (void)setUpEvent{
     @weakify(self)
-    [self.navView.item1 touchUpInsideSubscribeNext:^(id x) {
+    //刷新
+    [self.tableView addHeaderRefreshWithCallBack:^{
         @strongify(self)
-        UIViewController *vc = [[CTModuleManager goodListService]nineListViewController];
-        [self.navigationController pushViewController:vc animated:YES];
+        [self loadData];
     }];
-    [self.navView.item2 touchUpInsideSubscribeNext:^(id x) {
+    
+    //五个导航按钮
+    [self.navView setClickItemBlock:^(CTActivityModel *model) {
         @strongify(self)
-        UIViewController *vc = [[CTModuleManager goodListService]goodListViewControllerWithCategoryId:nil];
-        [self.navigationController pushViewController:vc animated:YES];
-    }];
-    [self.navView.item3 touchUpInsideSubscribeNext:^(id x) {
-        @strongify(self)
-        UIViewController *vc = [[CTModuleManager goodListService]goodListViewControllerWithCategoryId:nil];
-        [self.navigationController pushViewController:vc animated:YES];
-    }];
-    [self.navView.item4 touchUpInsideSubscribeNext:^(id x) {
-        @strongify(self)
-        UIViewController *vc = [[CTModuleManager goodListService]goodListViewControllerWithCategoryId:nil];
-        [self.navigationController pushViewController:vc animated:YES];
-    }];
-    [self.navView.item5 touchUpInsideSubscribeNext:^(id x) {
-        @strongify(self)
-        UIViewController *vc = [[CTModuleManager goodListService]goodListViewControllerWithCategoryId:nil];
-        [self.navigationController pushViewController:vc animated:YES];
     }];
     //整点抢购
     [self.spreeShopView.headView addActionWithBlock:^(id target) {
@@ -248,18 +236,19 @@
     return nil;
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 5;
+    return self.viewModel.model.now_goods.count;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 114;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     CTGoodListCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(CTGoodListCell.class)];
+    cell.model = self.viewModel.model.now_goods[indexPath.row];
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    UIViewController *vc = [[CTModuleManager goodListService]goodDetailViewControllerWithGoodId:nil];
+    UIViewController *vc = [[CTModuleManager goodListService]goodDetailViewControllerWithGoodId:self.viewModel.model.now_goods[indexPath.row].uid];
     [self.navigationController pushViewController:vc animated:YES];
 }
 
