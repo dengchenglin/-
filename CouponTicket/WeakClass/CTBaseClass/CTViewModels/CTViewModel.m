@@ -25,7 +25,13 @@
 }
 
 + (NSArray *)bindModels:(NSArray *)models{
-    
-    return nil;
+    NSMutableArray *array = [NSMutableArray array];
+    for(id model in models){
+        id viewModel = [self bindModel:model];
+        if(viewModel){
+            [array addObject:viewModel];
+        }
+    }
+    return array;
 }
 @end

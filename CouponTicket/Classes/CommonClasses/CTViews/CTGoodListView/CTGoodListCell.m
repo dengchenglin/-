@@ -20,9 +20,9 @@
     }];
 }
 
-- (void)setModel:(CTGoodsModel *)model{
-    _model = model;
-    _containerView.model = model;
+- (void)setViewModel:(CTGoodsViewModel *)viewModel{
+    _viewModel = viewModel;
+    _containerView.viewModel = _viewModel;
 }
 
 @end

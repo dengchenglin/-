@@ -32,6 +32,12 @@ CL_EXPORT_MODULE(CTGoodListServiceProtocol)
     return vc;
 }
 
+- (UIViewController *)goodListViewControllerWithActivityId:(NSString *)activityId{
+    CTGoodListViewController *vc = [CTGoodListViewController new];
+    vc.activity_id = activityId;
+    return vc;
+}
+
 - (UIViewController *)goodDetailViewControllerWithGoodId:(NSString *)goodId{
     CTGoodDetailViewController * vc = [CTGoodDetailViewController new];
     vc.goog_id = goodId;

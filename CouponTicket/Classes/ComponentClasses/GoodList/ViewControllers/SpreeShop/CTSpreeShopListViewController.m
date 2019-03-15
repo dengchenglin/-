@@ -10,12 +10,17 @@
 
 #import "CTGoodListCell.h"
 
+#import "CTNetworkEngine+Recommend.h"
+
 @interface CTSpreeShopListViewController ()
 
+@property (nonatomic, strong) NSMutableArray <CTGoodsViewModel *> *dataSoures;
 
 @end
 
 @implementation CTSpreeShopListViewController
+
+@synthesize dataSoures = _dataSoures;
 
 - (void)setUpUI{
 
@@ -31,14 +36,22 @@
     }];
 }
 
+
+- (void)request{
+    [CTRequest timeBuyGoodsWithPage:self.pageIndex size:self.pageSize markeId:self.model.Id callback:^(id data, CLRequest *request, CTNetError error) {
+        [self analysisAndReloadWithData:data error:error modelClass:CTGoodsModel.class viewModelClass:CTGoodsViewModel.class];
+    }];
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 5;
+    return self.dataSoures.count;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 112;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     CTGoodListCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(CTGoodListCell.class)];
+    cell.viewModel = self.dataSoures[indexPath.row];
     return cell;
 }
 

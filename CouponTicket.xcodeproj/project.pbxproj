@@ -155,6 +155,8 @@
 		3280739721FEF4DF009CABEC /* CTMineOrderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3280739621FEF4DF009CABEC /* CTMineOrderView.xib */; };
 		3280739A21FF0928009CABEC /* CTMineToolView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3280739921FF0922009CABEC /* CTMineToolView.m */; };
 		3280739C21FF0969009CABEC /* CTMineToolView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3280739B21FF0969009CABEC /* CTMineToolView.xib */; };
+		329B36FF223B91F60003AD30 /* CTGoodsViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 329B36FE223B91F60003AD30 /* CTGoodsViewModel.m */; };
+		329B3706223BAF130003AD30 /* CTTimeBuyCateModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 329B3705223BAF100003AD30 /* CTTimeBuyCateModel.m */; };
 		32A281092237D2F2007DF6C2 /* CTNetworkEngine+Recommend.m in Sources */ = {isa = PBXBuildFile; fileRef = 32A281082237D2F2007DF6C2 /* CTNetworkEngine+Recommend.m */; };
 		32A2810C2237D50C007DF6C2 /* CTNetworkEngine+Member.m in Sources */ = {isa = PBXBuildFile; fileRef = 32A2810B2237D50C007DF6C2 /* CTNetworkEngine+Member.m */; };
 		32A2810F2237D58E007DF6C2 /* CTNetworkEngine+Goods.m in Sources */ = {isa = PBXBuildFile; fileRef = 32A2810E2237D58E007DF6C2 /* CTNetworkEngine+Goods.m */; };
@@ -689,6 +691,10 @@
 		3280739821FF0922009CABEC /* CTMineToolView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTMineToolView.h; sourceTree = "<group>"; };
 		3280739921FF0922009CABEC /* CTMineToolView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTMineToolView.m; sourceTree = "<group>"; };
 		3280739B21FF0969009CABEC /* CTMineToolView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CTMineToolView.xib; sourceTree = "<group>"; };
+		329B36FD223B91F60003AD30 /* CTGoodsViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTGoodsViewModel.h; sourceTree = "<group>"; };
+		329B36FE223B91F60003AD30 /* CTGoodsViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTGoodsViewModel.m; sourceTree = "<group>"; };
+		329B3704223BAF100003AD30 /* CTTimeBuyCateModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTTimeBuyCateModel.h; sourceTree = "<group>"; };
+		329B3705223BAF100003AD30 /* CTTimeBuyCateModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTTimeBuyCateModel.m; sourceTree = "<group>"; };
 		32A281072237D2F2007DF6C2 /* CTNetworkEngine+Recommend.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CTNetworkEngine+Recommend.h"; sourceTree = "<group>"; };
 		32A281082237D2F2007DF6C2 /* CTNetworkEngine+Recommend.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CTNetworkEngine+Recommend.m"; sourceTree = "<group>"; };
 		32A2810A2237D50C007DF6C2 /* CTNetworkEngine+Member.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CTNetworkEngine+Member.h"; sourceTree = "<group>"; };
@@ -1711,6 +1717,8 @@
 		324C3D9E21F851D800536DA8 /* GoodList */ = {
 			isa = PBXGroup;
 			children = (
+				329B3703223BAED60003AD30 /* Models */,
+				324C3DA021F851F400536DA8 /* Service */,
 				324C3D9F21F851EE00536DA8 /* ViewControllers */,
 			);
 			path = GoodList;
@@ -1736,8 +1744,7 @@
 				324C3DA521F854B000536DA8 /* CTGoodService.h */,
 				324C3DA621F854B000536DA8 /* CTGoodService.m */,
 			);
-			name = Service;
-			path = ../GoodList/Service;
+			path = Service;
 			sourceTree = "<group>";
 		};
 		325D3B4C21F1DC6D00465B91 /* Login */ = {
@@ -2055,6 +2062,15 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		329B3703223BAED60003AD30 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				329B3704223BAF100003AD30 /* CTTimeBuyCateModel.h */,
+				329B3705223BAF100003AD30 /* CTTimeBuyCateModel.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		32A281102237DC86007DF6C2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -2071,6 +2087,8 @@
 				32A281162237DE5C007DF6C2 /* CTGoodsModel.m */,
 				32A281182237DEE9007DF6C2 /* CTActivityModel.h */,
 				32A281192237DEE9007DF6C2 /* CTActivityModel.m */,
+				329B36FD223B91F60003AD30 /* CTGoodsViewModel.h */,
+				329B36FE223B91F60003AD30 /* CTGoodsViewModel.m */,
 			);
 			path = CTModels;
 			sourceTree = "<group>";
@@ -2226,7 +2244,6 @@
 		32BD0E2B2201838500E99B86 /* Set */ = {
 			isa = PBXGroup;
 			children = (
-				324C3DA021F851F400536DA8 /* Service */,
 				32BD0E352201863200E99B86 /* Views */,
 				32BD0E2E2201842F00E99B86 /* Service */,
 				32BD0E2D2201842400E99B86 /* ViewControllers */,
@@ -3446,6 +3463,7 @@
 				32DB93C522156A7D00300ACC /* CTMyTeamPageController.m in Sources */,
 				240E18A021F5FAC6004A4BCB /* CTForgetpsdViewModel.m in Sources */,
 				32BE60EA21EDCFA600BA52EF /* CLNetworkConfig.m in Sources */,
+				329B3706223BAF130003AD30 /* CTTimeBuyCateModel.m in Sources */,
 				32AE799822166DD500E29FC3 /* CTProfitShareViewController.m in Sources */,
 				32BE60F321EDCFA600BA52EF /* CLRefreshHeader.m in Sources */,
 				326525ED21F5CE7F00B63DD7 /* CTGetCodeViewController.m in Sources */,
@@ -3539,6 +3557,7 @@
 				32DB93D52215771900300ACC /* CTUserDetailViewController.m in Sources */,
 				32BE610621EDCFA600BA52EF /* UILabel+Helper.m in Sources */,
 				322453F421F2D3F700471059 /* CTHomeNavBar.m in Sources */,
+				329B36FF223B91F60003AD30 /* CTGoodsViewModel.m in Sources */,
 				32BE611021EDCFA600BA52EF /* NSArray+Log.m in Sources */,
 				3220EA3721F9AD01004E0422 /* CTNineNineListViewController.m in Sources */,
 				326525CB21F5A2DA00B63DD7 /* CTGoodListCell.m in Sources */,

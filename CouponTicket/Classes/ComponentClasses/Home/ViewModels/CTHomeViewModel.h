@@ -12,13 +12,12 @@
 
 #import "CTHomeModel.h"
 
+#import "CTGoodsViewModel.h"
+
 @interface CTHomeViewModel : CTViewModel
 
 @property (nonatomic, strong) CTHomeModel *model;
 
-//@property (nonatomic, copy) NSArray <CTCategoryModel *>*categoryModels;
-//
-//@property (nonatomic, copy) NSArray <NSString *> *banner_imgs;
-
+@property (nonatomic, copy) NSArray <CTGoodsViewModel *> *now_goods;
 
 @end

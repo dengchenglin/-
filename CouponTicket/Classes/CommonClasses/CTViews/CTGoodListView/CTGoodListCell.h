@@ -14,5 +14,5 @@
 
 @property (nonatomic, strong) CTGoodListView_ *containerView;
 
-@property (nonatomic, strong) CTGoodsModel *model;
+@property (nonatomic, strong) CTGoodsViewModel *viewModel;
 @end

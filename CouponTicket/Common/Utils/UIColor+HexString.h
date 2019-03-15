@@ -10,6 +10,6 @@
 
 @interface UIColor (HexString)
 
-+ (UIColor *) colorWithHexString:(NSString *)color;
++ (UIColor *)colorWithHexString:(NSString *)color;
 
 @end

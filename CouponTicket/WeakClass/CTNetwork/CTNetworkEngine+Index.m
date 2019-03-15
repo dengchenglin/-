@@ -10,6 +10,7 @@
 
 #define CTIndex(path)   [CTUrlPath(@"index") stringByAppendingPathComponent:path]
 
+
 @implementation CTNetworkEngine (Index)
 
 - (CLRequest *)indexWithCallback:(CTResponseBlock)callback{
@@ -39,6 +40,16 @@
     [params setValue:order forKey:@"order"];
 
     return [self postWithPath:CTIndex(@"cate_goods") params:params callback:callback];
+}
+
+- (CLRequest *)activityGoodsWithPage:(NSInteger)page size:(NSInteger)size activityId:(NSString *)activityId order:(NSString *)order callback:(CTResponseBlock)callback{
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    [params setValue:@(page) forKey:@"page"];
+    [params setValue:@(size) forKey:@"size"];
+    [params setValue:activityId forKey:@"activity_id"];
+    [params setValue:order forKey:@"order"];
+    
+    return [self postWithPath:CTIndex(@"activity_goods") params:params callback:callback];
 }
 
 @end

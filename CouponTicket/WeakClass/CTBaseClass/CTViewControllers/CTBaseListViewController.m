@@ -62,50 +62,47 @@
 }
 
 - (void)analysisAndReloadWithData:(NSArray *)data error:(CTNetError)error modelClass:(Class)modelClass viewModelClass:(Class <CTViewModelProtocol>)viewModelClass{
+        [self.tableView endRefreshing];
+        if(!error){
+            if(!self.isLoadMore){
+                [self.dataSoures removeAllObjects];
+            }
+            NSArray *models = [modelClass yy_modelsWithDatas:data];
+            for(int i = 0;i < models.count;i ++){
+    
+                [self.dataSoures addObject:[viewModelClass bindModel:models[i]]];
+            }
+            [self.tableView reloadData];
+    
+            if(data.count < self.pageSize){
+                [self.tableView showNulMoreView];
+            }
+            else{
+                [self.tableView hiddenNulMoreView];
+            }
+            if(!self.isLoadMore && self.dataSoures.count == 0){
+                [LMNetErrorView showNoDataResultOnView:self.tableView];
+            }
+            else{
+                [LMNetErrorView hideDataResultOnView:self.tableView];
+            }
+        }
+        else{
+            if(self.isLoadMore){
+                self.pageIndex --;
+            }
+            if(error == CTNetErrorNet && self.dataSoures.count == 0){
+                [LMNetErrorView showNoNetErrorResultOnView:self.view clickRefreshBlock:^{
+                    [self request];
+                }];
+            }
+            else{
+                [LMNetErrorView hideDataResultOnView:self.view];
+            }
+        }
     
 }
-//- (void)analysisAndReloadWithData:(id)data listKey:(NSString *)listKey error:(LMNetError)error modelClass:(Class)modelClass viewModelClass:(Class <LMViewModelProtocol>)viewModelClass{
-//    [self.tableView endRefreshing];
-//    if(!error){
-//        if(!self.isLoadMore){
-//            [self.dataSoures removeAllObjects];
-//        }
-//        NSArray *models = [modelClass yy_modelsWithDatas:data[listKey]];
-//        for(int i = 0;i < models.count;i ++){
-//            
-//            [self.dataSoures addObject:[viewModelClass bindModel:models[i]]];
-//        }
-//        [self.tableView reloadData];
-//        
-//        NSInteger total = [data[@"total"] integerValue];
-//        if(self.dataSoures.count >= total){
-//            [self.tableView showNulMoreView];
-//        }
-//        else{
-//            [self.tableView hiddenNulMoreView];
-//        }
-//        if(!self.isLoadMore && self.dataSoures.count == 0){
-//            [LMNetErrorView showNoDataResultOnView:self.tableView];
-//        }
-//        else{
-//            [LMNetErrorView hideDataResultOnView:self.tableView];
-//        }
-//    }
-//    else{
-//        if(self.isLoadMore){
-//            self.pageIndex --;
-//        }
-//        if(error == LMNetErrorNet && self.dataSoures.count == 0){
-//            [LMNetErrorView showNoNetErrorResultOnView:self.view clickRefreshBlock:^{
-//                [self request];
-//            }];
-//        }
-//        else{
-//            [LMNetErrorView hideDataResultOnView:self.view];
-//        }
-//    }
-//    
-//}
+
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return 0;

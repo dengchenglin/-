@@ -8,6 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
+#import "CTGoodDefine.h"
+
+NSString *GetGoodsOrderStr(CTGoodSortType type);
+
+NSString *GetTypeImageStr(NSInteger status);
+
 @interface CTGoodsModel : NSObject
 
 @property (nonatomic, copy) NSString *uid;
@@ -33,4 +39,9 @@
 @property (nonatomic, copy) NSString *type_logo;
 
 @property (nonatomic, copy) NSString *item_id;
+
+@property (nonatomic, assign) NSInteger status;
+
+@property (nonatomic, copy) NSString *text;
+
 @end

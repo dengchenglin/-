@@ -18,7 +18,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s1g-IQ-zmz">
                     <rect key="frame" x="0.0" y="0.0" width="423" height="446"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="search_empty_data" translatesAutoresizingMaskIntoConstraints="NO" id="2mX-ML-gNz">
+                        <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="search_empty_expression_image" translatesAutoresizingMaskIntoConstraints="NO" id="2mX-ML-gNz">
                             <rect key="frame" x="91.5" y="89" width="240" height="128"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="128" id="cqT-Ec-XiF"/>
@@ -53,6 +53,6 @@
         </view>
     </objects>
     <resources>
-        <image name="search_empty_data" width="212" height="156"/>
+        <image name="search_empty_expression_image" width="212" height="156"/>
     </resources>
 </document>

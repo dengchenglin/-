@@ -8,6 +8,10 @@
 
 #import "CTBaseListViewController.h"
 
+#import "CTTimeBuyCateModel.h"
+
 @interface CTSpreeShopListViewController : CTBaseListViewController
+
+@property (nonatomic, strong) CTTimeBuyCateModel *model;
 
 @end

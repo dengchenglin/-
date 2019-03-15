@@ -11,7 +11,7 @@
 
 
 typedef NS_ENUM(NSInteger,CTGoodSortType) {
-    CTGoodSortComprehensive,    //综合
+    CTGoodSortComprehensive = 0,    //综合
     CTGoodSortSales,            //销量
     CTGoodSortNewest,           //最新
     CTGoodSortDiscountUp,       //折扣力度升序

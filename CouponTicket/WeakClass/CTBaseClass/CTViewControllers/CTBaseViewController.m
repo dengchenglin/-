@@ -12,6 +12,8 @@
 
 @property (nonatomic, strong) UIView *autoLayoutContainerView;
 
+@property (nonatomic, assign) BOOL requested;
+
 @end
 
 @implementation CTBaseViewController
@@ -24,10 +26,16 @@
         @strongify(viewController)
         [viewController setUpUI];
         [viewController autoLayout];
-        [viewController request];
         [viewController reloadView];
         [viewController setUpEvent];
         [viewController bindViewModel];
+    }];
+    [[viewController rac_signalForSelector:@selector(viewWillAppear:)] subscribeNext:^(id x) {
+        @strongify(viewController)
+        if(!viewController.requested){
+            [viewController request];
+            viewController.requested = YES;
+        }
     }];
     [[viewController rac_signalForSelector:@selector(viewDidLayoutSubviews)] subscribeNext:^(id x) {
         @strongify(viewController)

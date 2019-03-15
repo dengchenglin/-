@@ -12,13 +12,19 @@
 
 #import "CTGoodListCell.h"
 
+#import "CTNetworkEngine+Index.h"
+
 @interface CTGoodListViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic, strong) CTGoodSortView *sortView;
 
+@property (nonatomic, strong) NSMutableArray <CTGoodsViewModel *> *dataSoures;
+
 @end
 
 @implementation CTGoodListViewController
+
+@synthesize dataSoures = _dataSoures;
 
 - (CTGoodSortView *)sortView{
     if(!_sortView){
@@ -54,17 +60,32 @@
     @weakify(self)
     [self.sortView setClickBlock:^(CTGoodSortType type) {
         @strongify(self)
-        NSLog(@"%d",type);
+        [self request];
     }];
 }
+
+- (void)request{
+    if(self.category_id){
+        [CTRequest cateGoodsWithPage:self.pageIndex size:self.pageSize cateId:self.category_id order:GetGoodsOrderStr(self.sortView.currentType) callback:^(id data, CLRequest *request, CTNetError error) {
+            [self analysisAndReloadWithData:data error:error modelClass:CTGoodsModel.class viewModelClass:CTGoodsViewModel.class];
+        }];
+    }
+    else if (self.activity_id){
+        [CTRequest activityGoodsWithPage:self.pageIndex size:self.pageSize activityId:self.activity_id order:GetGoodsOrderStr(self.sortView.currentType) callback:^(id data, CLRequest *request, CTNetError error) {
+            [self analysisAndReloadWithData:data error:error modelClass:CTGoodsModel.class viewModelClass:CTGoodsViewModel.class];
+        }];
+    }
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 5;
+    return self.dataSoures.count;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 112;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     CTGoodListCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(CTGoodListCell.class)];
+    cell.viewModel = self.dataSoures[indexPath.row];
     return cell;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{

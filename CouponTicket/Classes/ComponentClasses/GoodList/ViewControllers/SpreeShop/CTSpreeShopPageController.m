@@ -12,9 +12,15 @@
 
 #import "CTSpreeShopListViewController.h"
 
+#import "CTNetworkEngine+Recommend.h"
+
+#import "CTTimeBuyCateModel.h"
+
 @interface CTSpreeShopPageController ()<LMSegmentedControlDelegate>
 
 @property (nonatomic, strong) LMSegmentedControl *segmentedControl;
+
+@property (nonatomic, strong) NSArray <CTTimeBuyCateModel *> *cates;
 
 @end
 
@@ -38,13 +44,6 @@
     self.title = @"整点抢购";
     [self.view addSubview:self.segmentedControl];
     self.contentInsets = UIEdgeInsetsMake(47, 0, 0, 0);
-    __block UIScrollView *scrollView = nil;
-    [self.pageController.view.subviews enumerateObjectsUsingBlock:^(__kindof UIView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        if ([obj isKindOfClass:[UIScrollView class]]) scrollView = (UIScrollView *)obj;
-        
-    }];
-   
-
 }
 
 - (void)autoLayout{
@@ -54,22 +53,32 @@
     }];
 }
 
-- (void)reloadView{
-    NSMutableArray *titles = [NSMutableArray array];
-    for(int i = 0;i < 12;i ++){
-        NSString *title = [NSString stringWithFormat:@"08:00\n已结束"];
-        [titles addObject:title];
-    }
-    dispatch_async(dispatch_get_main_queue(), ^{
-        self.segmentedControl.titles = titles;
-    });
+- (void)request{
+    [CTRequest allTimeBuyWithCallback:^(id data, CLRequest *request, CTNetError error) {
+        if(!error){
+            [self reloadData:data];
+            
+        }
+    }];
+}
+
+- (void)reloadData:(id)data{
+    
+    self.cates = [CTTimeBuyCateModel yy_modelsWithDatas:data];
+
+    self.segmentedControl.titles = [self.cates map:^id(NSInteger index, CTTimeBuyCateModel *element) {
+        return [NSString stringWithFormat:@"%@\n%@",element.time,element.text];;
+    }];
     NSMutableArray *array = [NSMutableArray array];
-    for(int i= 0;i < titles.count;i ++){
+    for(int i= 0;i < self.cates.count;i ++){
         CTSpreeShopListViewController *vc = [CTSpreeShopListViewController new];
+        vc.model = self.cates[i];
         [array addObject:vc];
     }
     self.viewControllers = array;
+
 }
+
 
 - (void)segmentedControl:(LMSegmentedControl *)segmentedControl didSelectedInbdex:(NSUInteger)index{
     [self scrollToIndex:index];

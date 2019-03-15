@@ -37,7 +37,7 @@
 
 @property (nonatomic, copy) NSArray <CTCategoryModel *>*subCategoryModels;
 
-@property (nonatomic, strong) NSMutableArray <CTGoodsModel *> *dataSoures;
+@property (nonatomic, strong) NSMutableArray <CTGoodsViewModel *> *dataSoures;
 
 @end
 
@@ -87,7 +87,7 @@
 }
 
 
-- (NSMutableArray<CTGoodsModel *> *)dataSoures{
+- (NSMutableArray<CTGoodsViewModel *> *)dataSoures{
     if(!_dataSoures){
         _dataSoures = [NSMutableArray array];
     }
@@ -122,6 +122,7 @@
         [self request];
     }];
     [self.tableView addFooterRefreshWithCallBack:^{
+        @strongify(self)
         self.pageIndex ++;
         self.isLoadMore = YES;
         [self request];
@@ -170,7 +171,7 @@
                 [self.dataSoures removeAllObjects];
             }
             for(int i = 0;i < data.count;i ++){
-                [self.dataSoures addObject:[CTGoodsModel yy_modelWithDictionary:data[i]]];
+                [self.dataSoures addObject:[CTGoodsViewModel bindModel:[CTGoodsModel yy_modelWithDictionary:data[i]]]];
             }
             [self.tableView reloadData];
             if(data.count < self.pageSize){
@@ -231,12 +232,12 @@
         return nil;
     }
     CTGoodListCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(CTGoodListCell.class)];
-    cell.model = self.dataSoures[indexPath.row];
+    cell.viewModel = self.dataSoures[indexPath.row];
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    UIViewController *vc = [[CTModuleManager goodListService]goodDetailViewControllerWithGoodId:self.dataSoures[indexPath.row].uid];
+    UIViewController *vc = [[CTModuleManager goodListService]goodDetailViewControllerWithGoodId:self.dataSoures[indexPath.row].model.uid];
     [self.navigationController pushViewController:vc animated:YES];
 }
 

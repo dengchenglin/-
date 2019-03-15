@@ -12,7 +12,7 @@
 
 #import "CTGoodDefine.h"
 
-
+#import "CTGoodsModel.h"
 
 @interface CTHomeCategoryViewModel : CTViewModel
 

@@ -12,4 +12,6 @@
 
 @property (nonatomic, copy) NSString *category_id;
 
+@property (nonatomic, copy) NSString *activity_id;
+
 @end

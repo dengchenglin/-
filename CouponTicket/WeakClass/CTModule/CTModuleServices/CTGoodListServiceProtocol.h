@@ -16,6 +16,8 @@
 
 - (UIViewController *)goodListViewControllerWithCategoryId:(NSString *)categoryId;
 
+- (UIViewController *)goodListViewControllerWithActivityId:(NSString *)activityId;
+
 - (UIViewController *)goodDetailViewControllerWithGoodId:(NSString *)goodId;
 
 - (UIViewController *)hotsalesViewController;

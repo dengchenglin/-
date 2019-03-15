@@ -26,5 +26,6 @@
 
 @property (nonatomic, strong) NSMutableArray *dataSoures;
 
+- (void)analysisAndReloadWithData:(NSArray *)data error:(CTNetError)error modelClass:(Class)modelClass viewModelClass:(Class <CTViewModelProtocol>)viewModelClass;
 
 @end

@@ -232,6 +232,7 @@ ViewInstance(setUp)
                 }];
             }
         }
+        [_scrollContainerView layoutIfNeeded];
     }
 }
 

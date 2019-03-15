@@ -102,6 +102,7 @@ ViewInstance(setUp)
                         type = CTGoodSortComprehensive;
                         break;
                 }
+                self.currentType = type;
                 self.clickBlock(type);
             }
         }];

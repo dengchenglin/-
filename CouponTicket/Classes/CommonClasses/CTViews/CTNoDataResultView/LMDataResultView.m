@@ -20,6 +20,7 @@
      [self hideDataResultOnView:view];
     LMNoDataView *resultView = NSMainBundleClass(LMNoDataView.class);
     [view addSubview:resultView];
+    [view layoutIfNeeded];
     if(CGRectEqualToRect(frame, CGRectZero)){
         [resultView mas_makeConstraints:^(MASConstraintMaker *make) {
             if([view isKindOfClass:[UIScrollView class]]){

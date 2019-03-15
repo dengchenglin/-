@@ -53,6 +53,7 @@
     else{
         [self.pageController setViewControllers:@[[UIViewController new]] direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:nil];
     }
+    
     [self pageController:self didScrollToIndex:_toIndex];
 }
 

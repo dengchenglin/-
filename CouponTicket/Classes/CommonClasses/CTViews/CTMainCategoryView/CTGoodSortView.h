@@ -24,4 +24,6 @@
 
 @property (nonatomic, copy) void (^clickBlock)(CTGoodSortType type);
 
+@property (nonatomic, assign) CTGoodSortType currentType;
+
 @end

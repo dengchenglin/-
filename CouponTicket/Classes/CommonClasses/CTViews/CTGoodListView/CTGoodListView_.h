@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "CTGoodsModel.h"
+#import "CTGoodsViewModel.h"
 @interface CTGoodListView_ : UIView
 @property (weak, nonatomic) IBOutlet UIImageView *goodImageView;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
@@ -18,5 +18,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *originPriceLabel;
 @property (weak, nonatomic) IBOutlet UILabel *couponPriceLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *typeImageView;
-@property (nonatomic, strong) CTGoodsModel *model;
+@property (weak, nonatomic) IBOutlet UIImageView *statusImageView;
+@property (nonatomic, strong) CTGoodsViewModel *viewModel;
 @end
