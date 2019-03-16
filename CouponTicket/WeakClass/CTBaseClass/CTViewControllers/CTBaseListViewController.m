@@ -19,6 +19,7 @@
 - (void)initialize{
     self.pageIndex = 1;
     self.pageSize = 15;
+    self.canLoadMore = YES;
     self.dataSoures = [NSMutableArray array];
 }
 
@@ -51,12 +52,15 @@
             self.isLoadMore = NO;
             [self request];
         }];
-        [self.tableView addFooterRefreshWithCallBack:^{
-            @strongify(self)
-            self.pageIndex += 1;
-            self.isLoadMore = YES;
-            [self request];
-        }];
+        if(self.canLoadMore){
+            [self.tableView addFooterRefreshWithCallBack:^{
+                @strongify(self)
+                self.pageIndex += 1;
+                self.isLoadMore = YES;
+                [self request];
+            }];
+        }
+  
     } repeats:NO];
     
 }

@@ -42,6 +42,7 @@
     return [self postWithPath:CTIndex(@"cate_goods") params:params callback:callback];
 }
 
+//活动列表数据
 - (CLRequest *)activityGoodsWithPage:(NSInteger)page size:(NSInteger)size activityId:(NSString *)activityId order:(NSString *)order callback:(CTResponseBlock)callback{
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     [params setValue:@(page) forKey:@"page"];
@@ -52,4 +53,8 @@
     return [self postWithPath:CTIndex(@"activity_goods") params:params callback:callback];
 }
 
+//实时热销榜
+- (CLRequest *)hotGoodsWithCallback:(CTResponseBlock)callback{
+    return [self postWithPath:CTIndex(@"hot_goods") params:nil callback:callback];
+}
 @end

@@ -16,5 +16,9 @@
 
 + (void)showAlertView:(CTAlertView *)alertView onView:(UIView *)view callback:(void(^)(NSUInteger buttonIndex))callback;
 
++ (void)showNoticeAlertViewWithTitle:(NSString *)title;
+
++ (void)showNoticeAlertViewWithTitle:(NSString *)title callback:(void(^)(NSUInteger buttonIndex))callback;
+
 + (void)hideAlertView;
 @end

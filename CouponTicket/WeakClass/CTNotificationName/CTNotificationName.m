@@ -10,3 +10,4 @@
 
 NSString * const CTDidLoginNotification = @"CTDidLoginNotification";
 NSString * const CTDidLogoutNotification = @"CTDidLogoutNotification";
+NSString * const CTRefreshHotGoodsNotification = @"CTRefreshHotGoodsNotification";

@@ -10,6 +10,8 @@
 
 #import <objc/runtime.h>
 
+#import "CTNoticeAlertView.h"
+
 static const int CTAlertViewKey;
 
 
@@ -48,6 +50,16 @@ static const int CTAlertViewKey;
 
 + (void)showAlertView:(CTAlertView *)alertView callback:(void(^)(NSUInteger buttonIndex))callback{
      [self showAlertView:alertView onView:[UIApplication sharedApplication].keyWindow callback:callback];
+}
+
++ (void)showNoticeAlertViewWithTitle:(NSString *)title{
+    [self showNoticeAlertViewWithTitle:title callback:nil];
+}
+
++ (void)showNoticeAlertViewWithTitle:(NSString *)title callback:(void(^)(NSUInteger buttonIndex))callback{
+    CTNoticeAlertView *alertView = NSMainBundleClass(CTNoticeAlertView.class);
+    alertView.titleLabel.text = title;
+    [self showAlertView:alertView onView:[UIApplication sharedApplication].keyWindow callback:callback];
 }
 
 + (void)showAlertView:(CTAlertView *)alertView onView:(UIView *)view callback:(void(^)(NSUInteger buttonIndex))callback{

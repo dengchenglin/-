@@ -16,6 +16,6 @@
 
 + (id)bindModel:(id)model;
 
-+ (NSArray *)bindModels:(NSArray *)models;
++ (__kindof NSArray *)bindModels:(NSArray *)models;
 
 @end

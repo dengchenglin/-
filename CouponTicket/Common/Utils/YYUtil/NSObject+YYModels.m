@@ -15,7 +15,7 @@
 + (nullable NSArray *)yy_modelsWithDatas:(NSArray *)datas{
     NSMutableArray *array = [NSMutableArray array];
     for(NSDictionary *data in datas){
-        [array addObject:[self yy_modelWithJSON:data]];
+        [array addObject:[self yy_modelWithDictionary:data]];
     }
     return [array copy];
 }

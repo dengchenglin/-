@@ -12,9 +12,17 @@
 
 #import "CTGoodListCell.h"
 
+#import "CTNetworkEngine+Index.h"
+
+#import "CTHotGoodsModel.h"
+
 @interface CThotSalesListViewController ()
 
 @property (nonatomic, strong) CTHotSalesNoticeView *noticeView;
+
+@property (nonatomic, strong) CTHotGoodsModel *model;
+
+@property (nonatomic, copy) NSArray <CTGoodsViewModel *> *dataSources;
 
 @end
 
@@ -29,6 +37,7 @@
 
 - (void)setUpUI{
     self.title = @"实时热销榜";
+    self.canLoadMore = NO;
     [self.view addSubview:self.noticeView];
     [self.view addSubview:self.tableView];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
@@ -45,15 +54,26 @@
         make.left.right.bottom.mas_equalTo(0);
     }];
 }
+- (void)request{
+    [CTRequest hotGoodsWithCallback:^(id data, CLRequest *request, CTNetError error) {
+        if(!error){
+            self.model = [CTHotGoodsModel yy_modelWithDictionary:data];
+            self.noticeView.model = _model;
+            self.dataSoures = [CTGoodsViewModel bindModels:[CTGoodsModel yy_modelsWithDatas:_model.goods]];
+            [self.tableView reloadData];
+        }
+    }];
+}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 5;
+    return self.dataSoures.count;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 112;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     CTGoodListCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(CTGoodListCell.class)];
+    cell.viewModel = self.dataSoures[indexPath.row];
     return cell;
 }
 

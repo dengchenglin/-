@@ -59,6 +59,10 @@
 		245CAE5621F42E8000496052 /* CTMainCategoryHeadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 245CAE5221F42E8000496052 /* CTMainCategoryHeadView.xib */; };
 		245CAE5721F42E8000496052 /* CTMainCategoryItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 245CAE5321F42E8000496052 /* CTMainCategoryItem.xib */; };
 		245CAE5A21F42EC200496052 /* CTCategoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 245CAE5921F42EC200496052 /* CTCategoryModel.m */; };
+		24B1C56B223CC5E300831ACC /* CTRecommendService.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B1C56A223CC5E300831ACC /* CTRecommendService.m */; };
+		24B1C56E223CCAF900831ACC /* CTHotGoodsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B1C56D223CCAF900831ACC /* CTHotGoodsModel.m */; };
+		24B1C571223CD29900831ACC /* CTNoticeAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B1C570223CD29900831ACC /* CTNoticeAlertView.m */; };
+		24B1C573223CD2C800831ACC /* CTNoticeAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24B1C572223CD2C700831ACC /* CTNoticeAlertView.xib */; };
 		24FF625D21F40F0B00488860 /* CTHomeSalesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24FF625C21F40F0B00488860 /* CTHomeSalesView.xib */; };
 		24FF626021F41D1000488860 /* CTHomeNewestHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 24FF625F21F41D1000488860 /* CTHomeNewestHeadView.m */; };
 		24FF626221F41D1700488860 /* CTHomeNewestHeadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24FF626121F41D1700488860 /* CTHomeNewestHeadView.xib */; };
@@ -185,8 +189,6 @@
 		32A28ED42202EC630049B003 /* CTWithdrawModifyAlipayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 32A28ED32202EC630049B003 /* CTWithdrawModifyAlipayView.m */; };
 		32A28ED62202EC6C0049B003 /* CTWithdrawModifyAlipayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32A28ED52202EC6C0049B003 /* CTWithdrawModifyAlipayView.xib */; };
 		32A28ED92202F52F0049B003 /* CTMyCollectListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32A28ED82202F52F0049B003 /* CTMyCollectListViewController.m */; };
-		32A3D14F221E9C0D000CA323 /* CTRecommendService.m in Sources */ = {isa = PBXBuildFile; fileRef = 32A3D141221E9C0D000CA323 /* CTRecommendService.m */; };
-		32A3D152221E9C0D000CA323 /* CTRecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32A3D148221E9C0D000CA323 /* CTRecommendViewController.m */; };
 		32A3D158221E9C22000CA323 /* CTAdviseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32A3D157221E9C22000CA323 /* CTAdviseViewController.m */; };
 		32A3D15B221E9C59000CA323 /* CTPhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 32A3D159221E9C59000CA323 /* CTPhotoView.m */; };
 		32A3D15E221E9CD1000CA323 /* LMSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 32A3D15D221E9CD1000CA323 /* LMSegmentedControl.m */; };
@@ -505,6 +507,13 @@
 		245CAE5321F42E8000496052 /* CTMainCategoryItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CTMainCategoryItem.xib; sourceTree = "<group>"; };
 		245CAE5821F42EC200496052 /* CTCategoryModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTCategoryModel.h; sourceTree = "<group>"; };
 		245CAE5921F42EC200496052 /* CTCategoryModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTCategoryModel.m; sourceTree = "<group>"; };
+		24B1C569223CC5E300831ACC /* CTRecommendService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTRecommendService.h; sourceTree = "<group>"; };
+		24B1C56A223CC5E300831ACC /* CTRecommendService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTRecommendService.m; sourceTree = "<group>"; };
+		24B1C56C223CCAF900831ACC /* CTHotGoodsModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTHotGoodsModel.h; sourceTree = "<group>"; };
+		24B1C56D223CCAF900831ACC /* CTHotGoodsModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTHotGoodsModel.m; sourceTree = "<group>"; };
+		24B1C56F223CD29900831ACC /* CTNoticeAlertView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTNoticeAlertView.h; sourceTree = "<group>"; };
+		24B1C570223CD29900831ACC /* CTNoticeAlertView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTNoticeAlertView.m; sourceTree = "<group>"; };
+		24B1C572223CD2C700831ACC /* CTNoticeAlertView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CTNoticeAlertView.xib; sourceTree = "<group>"; };
 		24FF625C21F40F0B00488860 /* CTHomeSalesView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CTHomeSalesView.xib; sourceTree = "<group>"; };
 		24FF625E21F41D1000488860 /* CTHomeNewestHeadView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTHomeNewestHeadView.h; sourceTree = "<group>"; };
 		24FF625F21F41D1000488860 /* CTHomeNewestHeadView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTHomeNewestHeadView.m; sourceTree = "<group>"; };
@@ -746,10 +755,6 @@
 		32A28ED52202EC6C0049B003 /* CTWithdrawModifyAlipayView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CTWithdrawModifyAlipayView.xib; sourceTree = "<group>"; };
 		32A28ED72202F52F0049B003 /* CTMyCollectListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTMyCollectListViewController.h; sourceTree = "<group>"; };
 		32A28ED82202F52F0049B003 /* CTMyCollectListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTMyCollectListViewController.m; sourceTree = "<group>"; };
-		32A3D140221E9C0D000CA323 /* CTRecommendService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTRecommendService.h; sourceTree = "<group>"; };
-		32A3D141221E9C0D000CA323 /* CTRecommendService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTRecommendService.m; sourceTree = "<group>"; };
-		32A3D147221E9C0D000CA323 /* CTRecommendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTRecommendViewController.h; sourceTree = "<group>"; };
-		32A3D148221E9C0D000CA323 /* CTRecommendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTRecommendViewController.m; sourceTree = "<group>"; };
 		32A3D156221E9C21000CA323 /* CTAdviseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTAdviseViewController.h; sourceTree = "<group>"; };
 		32A3D157221E9C22000CA323 /* CTAdviseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTAdviseViewController.m; sourceTree = "<group>"; };
 		32A3D159221E9C59000CA323 /* CTPhotoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTPhotoView.m; sourceTree = "<group>"; };
@@ -1420,6 +1425,15 @@
 			path = CTMainCategoryView;
 			sourceTree = "<group>";
 		};
+		24B1C568223CC5A700831ACC /* Recommend */ = {
+			isa = PBXGroup;
+			children = (
+				24B1C569223CC5E300831ACC /* CTRecommendService.h */,
+				24B1C56A223CC5E300831ACC /* CTRecommendService.m */,
+			);
+			path = Recommend;
+			sourceTree = "<group>";
+		};
 		3220EA1121F95E22004E0422 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -2067,6 +2081,8 @@
 			children = (
 				329B3704223BAF100003AD30 /* CTTimeBuyCateModel.h */,
 				329B3705223BAF100003AD30 /* CTTimeBuyCateModel.m */,
+				24B1C56C223CCAF900831ACC /* CTHotGoodsModel.h */,
+				24B1C56D223CCAF900831ACC /* CTHotGoodsModel.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -2164,36 +2180,11 @@
 				32A28EBD2202C8B10049B003 /* CTAlertView.m */,
 				32A28EBF2202C97E0049B003 /* CTAlertHelper.h */,
 				32A28EC02202C97E0049B003 /* CTAlertHelper.m */,
+				24B1C56F223CD29900831ACC /* CTNoticeAlertView.h */,
+				24B1C570223CD29900831ACC /* CTNoticeAlertView.m */,
+				24B1C572223CD2C700831ACC /* CTNoticeAlertView.xib */,
 			);
 			path = CTAlertView;
-			sourceTree = "<group>";
-		};
-		32A3D13E221E9C0D000CA323 /* Recommend */ = {
-			isa = PBXGroup;
-			children = (
-				32A3D13F221E9C0D000CA323 /* Service */,
-				32A3D142221E9C0D000CA323 /* ViewControllers */,
-			);
-			name = Recommend;
-			path = ../../../../../ios_coupon_ticket/CouponTicket/Classes/ComponentClasses/Recommend;
-			sourceTree = "<group>";
-		};
-		32A3D13F221E9C0D000CA323 /* Service */ = {
-			isa = PBXGroup;
-			children = (
-				32A3D140221E9C0D000CA323 /* CTRecommendService.h */,
-				32A3D141221E9C0D000CA323 /* CTRecommendService.m */,
-			);
-			path = Service;
-			sourceTree = "<group>";
-		};
-		32A3D142221E9C0D000CA323 /* ViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-				32A3D147221E9C0D000CA323 /* CTRecommendViewController.h */,
-				32A3D148221E9C0D000CA323 /* CTRecommendViewController.m */,
-			);
-			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		32A56863222FC12F005E2AE6 /* CTNotificationName */ = {
@@ -2825,7 +2816,7 @@
 		32BE613B21EDDA7700BA52EF /* ComponentClasses */ = {
 			isa = PBXGroup;
 			children = (
-				32A3D13E221E9C0D000CA323 /* Recommend */,
+				24B1C568223CC5A700831ACC /* Recommend */,
 				240A8EF522158AFB006E4DED /* UserInfo */,
 				32A28EA2220294E10049B003 /* Withdraw */,
 				240F745F2201C58F00A2DFFC /* Tool */,
@@ -3290,6 +3281,7 @@
 				32DB93B222150C4200300ACC /* CTThirtyProfitHeadView.xib in Resources */,
 				32FEA9FA2213CC29001156CC /* CTEarnRankHeadView.xib in Resources */,
 				240F74712201C9BD00A2DFFC /* CTQuestionListCell.xib in Resources */,
+				24B1C573223CD2C800831ACC /* CTNoticeAlertView.xib in Resources */,
 				32A28EB62202A3CA0049B003 /* CTWithDrawInputView.xib in Resources */,
 				326525C721F595D300B63DD7 /* CTGoodListView_.xib in Resources */,
 				2407A8EE21FD8C2D000403B7 /* CTMemberEquityView2.xib in Resources */,
@@ -3475,7 +3467,6 @@
 				32DB93C12215433000300ACC /* CTOrderListCell.m in Sources */,
 				32BE60FE21EDCFA600BA52EF /* SDPhotoBrowser.m in Sources */,
 				32A28E992202871D0049B003 /* CTAlipayBoundViewController.m in Sources */,
-				32A3D14F221E9C0D000CA323 /* CTRecommendService.m in Sources */,
 				32BD0E23220171C500E99B86 /* CTNavBar.m in Sources */,
 				326AC20821FB0DDD008C154B /* CTMemberHeadView.m in Sources */,
 				32EA9E9E2201AB1B00D72291 /* CTDoneButton.m in Sources */,
@@ -3502,7 +3493,6 @@
 				24FF626021F41D1000488860 /* CTHomeNewestHeadView.m in Sources */,
 				326525C521F595CB00B63DD7 /* CTGoodListView_.m in Sources */,
 				240F74752201CABF00A2DFFC /* CTQuestionModel.m in Sources */,
-				32A3D152221E9C0D000CA323 /* CTRecommendViewController.m in Sources */,
 				2405AF0B21FC3678000E5081 /* CTMemberStrategyItem.m in Sources */,
 				32BE612F21EDCFA600BA52EF /* SelVideoPlayer.m in Sources */,
 				32BE60F121EDCFA600BA52EF /* CLRefreshFactory.m in Sources */,
@@ -3556,6 +3546,7 @@
 				32BE60F921EDCFA600BA52EF /* UIScrollView+CLRefresh.m in Sources */,
 				32DB93D52215771900300ACC /* CTUserDetailViewController.m in Sources */,
 				32BE610621EDCFA600BA52EF /* UILabel+Helper.m in Sources */,
+				24B1C571223CD29900831ACC /* CTNoticeAlertView.m in Sources */,
 				322453F421F2D3F700471059 /* CTHomeNavBar.m in Sources */,
 				329B36FF223B91F60003AD30 /* CTGoodsViewModel.m in Sources */,
 				32BE611021EDCFA600BA52EF /* NSArray+Log.m in Sources */,
@@ -3571,6 +3562,7 @@
 				32BE611121EDCFA600BA52EF /* NSData+Category.m in Sources */,
 				32E7EE6D21F32CE700191789 /* CTHomeNavView.m in Sources */,
 				32A3D15E221E9CD1000CA323 /* LMSegmentedControl.m in Sources */,
+				24B1C56B223CC5E300831ACC /* CTRecommendService.m in Sources */,
 				32DB93C822156C3900300ACC /* CTTeamListViewController.m in Sources */,
 				326AC1E221FAAA9C008C154B /* CTSearchTikcetNavView.m in Sources */,
 				240E189421F5F7D4004A4BCB /* CTGetCodeViewModel.m in Sources */,
@@ -3680,6 +3672,7 @@
 				32DB93B622150D9A00300ACC /* CTEarnTrendCell.m in Sources */,
 				2405AEDD21FC0E34000E5081 /* CTMemberEquityView.m in Sources */,
 				32A28EBE2202C8B10049B003 /* CTAlertView.m in Sources */,
+				24B1C56E223CCAF900831ACC /* CTHotGoodsModel.m in Sources */,
 				32BE611921EDCFA600BA52EF /* UIImage+Category.m in Sources */,
 				322453D921F2BFC200471059 /* CTView.m in Sources */,
 				32CA55AF21F7253600145E31 /* CTSearchTextfield.m in Sources */,

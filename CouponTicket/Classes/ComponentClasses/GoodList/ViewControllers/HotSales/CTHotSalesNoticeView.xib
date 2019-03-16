@@ -15,8 +15,8 @@
             <rect key="frame" x="0.0" y="0.0" width="441" height="225"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="24小时内销量排行，17分11秒后更新" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WOC-jE-aoc">
-                    <rect key="frame" x="108.5" y="102.5" width="224" height="20"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="24小时内销量排行" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WOC-jE-aoc">
+                    <rect key="frame" x="163" y="102.5" width="115" height="20"/>
                     <fontDescription key="fontDescription" name="PingFangSC-Medium" family="PingFang SC" pointSize="14"/>
                     <color key="textColor" red="1" green="0.38039215686274508" blue="0.14117647058823529" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
@@ -28,6 +28,9 @@
                 <constraint firstItem="WOC-jE-aoc" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="uTv-TS-5mB"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="titleLabel" destination="WOC-jE-aoc" id="qxD-mz-50u"/>
+            </connections>
             <point key="canvasLocation" x="-43" y="23"/>
         </view>
     </objects>

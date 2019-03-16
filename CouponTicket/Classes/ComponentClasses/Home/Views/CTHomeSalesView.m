@@ -58,7 +58,6 @@
         CTSalesItem *item = [self viewWithTag:100 + i];
         item.model = [_model.goods safe_objectAtIndex:i];
     }
-    NSTimeInterval nowTimestamp = [DateUtil getNowDateTimestamp].doubleValue;
     if(_timer && _timer.isValid){
         [_timer invalidate];
         _timer = nil;

@@ -8,3 +8,4 @@
 
 UIKIT_EXTERN NSString * const CTDidLoginNotification;
 UIKIT_EXTERN NSString * const CTDidLogoutNotification;
+UIKIT_EXTERN NSString * const CTRefreshHotGoodsNotification;
