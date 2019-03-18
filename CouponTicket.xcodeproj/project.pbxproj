@@ -398,8 +398,6 @@
 		32FD1260223F39A600CB85C1 /* CTGoodsCouponView.m in Sources */ = {isa = PBXBuildFile; fileRef = 32FD125F223F39A600CB85C1 /* CTGoodsCouponView.m */; };
 		32FD1262223F39B000CB85C1 /* CTGoodsCouponView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32FD1261223F39B000CB85C1 /* CTGoodsCouponView.xib */; };
 		32FD1264223F404800CB85C1 /* CTGoodsBuyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32FD1263223F404800CB85C1 /* CTGoodsBuyView.xib */; };
-		32FD1297223F7A7200CB85C1 /* CTRecommendService.m in Sources */ = {isa = PBXBuildFile; fileRef = 32FD1293223F7A7200CB85C1 /* CTRecommendService.m */; };
-		32FD1298223F7A7200CB85C1 /* CTRecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32FD1296223F7A7200CB85C1 /* CTRecommendViewController.m */; };
 		32FD12C5223F7B3800CB85C1 /* AliTradeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 32FD12C4223F7B3800CB85C1 /* AliTradeManager.m */; };
 		32FD1369223F916D00CB85C1 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 32FD1368223F916D00CB85C1 /* libz.tbd */; };
 		32FD136B223F917600CB85C1 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 32FD136A223F917600CB85C1 /* libsqlite3.0.tbd */; };
@@ -425,6 +423,8 @@
 		32FD13BE223F94A400CB85C1 /* UTDID.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32FD13AB223F94A400CB85C1 /* UTDID.framework */; };
 		32FD13BF223F94A400CB85C1 /* UTMini.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32FD13AC223F94A400CB85C1 /* UTMini.framework */; };
 		32FD13C1223F9AA400CB85C1 /* yw_1222.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 32FD13C0223F9AA400CB85C1 /* yw_1222.jpg */; };
+		32FD13C9223FBAAE00CB85C1 /* CTRecommendService.m in Sources */ = {isa = PBXBuildFile; fileRef = 32FD13C5223FBAAE00CB85C1 /* CTRecommendService.m */; };
+		32FD13CA223FBAAE00CB85C1 /* CTRecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32FD13C8223FBAAE00CB85C1 /* CTRecommendViewController.m */; };
 		32FEA9D02213B3C0001156CC /* CTNestPageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32FEA9CF2213B3C0001156CC /* CTNestPageController.m */; };
 		32FEA9F52213C666001156CC /* CTEarnRankPageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32FEA9F42213C666001156CC /* CTEarnRankPageController.m */; };
 		32FEA9F82213CC00001156CC /* CTEarnRankHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 32FEA9F72213CC00001156CC /* CTEarnRankHeadView.m */; };
@@ -1177,10 +1177,6 @@
 		32FD125F223F39A600CB85C1 /* CTGoodsCouponView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTGoodsCouponView.m; sourceTree = "<group>"; };
 		32FD1261223F39B000CB85C1 /* CTGoodsCouponView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CTGoodsCouponView.xib; sourceTree = "<group>"; };
 		32FD1263223F404800CB85C1 /* CTGoodsBuyView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CTGoodsBuyView.xib; sourceTree = "<group>"; };
-		32FD1292223F7A7200CB85C1 /* CTRecommendService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTRecommendService.h; sourceTree = "<group>"; };
-		32FD1293223F7A7200CB85C1 /* CTRecommendService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTRecommendService.m; sourceTree = "<group>"; };
-		32FD1295223F7A7200CB85C1 /* CTRecommendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTRecommendViewController.h; sourceTree = "<group>"; };
-		32FD1296223F7A7200CB85C1 /* CTRecommendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTRecommendViewController.m; sourceTree = "<group>"; };
 		32FD12C3223F7B3800CB85C1 /* AliTradeManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AliTradeManager.h; sourceTree = "<group>"; };
 		32FD12C4223F7B3800CB85C1 /* AliTradeManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AliTradeManager.m; sourceTree = "<group>"; };
 		32FD1368223F916D00CB85C1 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
@@ -1207,6 +1203,10 @@
 		32FD13AB223F94A400CB85C1 /* UTDID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UTDID.framework; sourceTree = "<group>"; };
 		32FD13AC223F94A400CB85C1 /* UTMini.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UTMini.framework; sourceTree = "<group>"; };
 		32FD13C0223F9AA400CB85C1 /* yw_1222.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = yw_1222.jpg; sourceTree = "<group>"; };
+		32FD13C4223FBAAE00CB85C1 /* CTRecommendService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTRecommendService.h; sourceTree = "<group>"; };
+		32FD13C5223FBAAE00CB85C1 /* CTRecommendService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTRecommendService.m; sourceTree = "<group>"; };
+		32FD13C7223FBAAE00CB85C1 /* CTRecommendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTRecommendViewController.h; sourceTree = "<group>"; };
+		32FD13C8223FBAAE00CB85C1 /* CTRecommendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTRecommendViewController.m; sourceTree = "<group>"; };
 		32FEA9CE2213B3C0001156CC /* CTNestPageController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTNestPageController.h; sourceTree = "<group>"; };
 		32FEA9CF2213B3C0001156CC /* CTNestPageController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTNestPageController.m; sourceTree = "<group>"; };
 		32FEA9F32213C666001156CC /* CTEarnRankPageController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTEarnRankPageController.h; sourceTree = "<group>"; };
@@ -2900,7 +2900,7 @@
 		32BE613B21EDDA7700BA52EF /* ComponentClasses */ = {
 			isa = PBXGroup;
 			children = (
-				32FD1290223F7A7200CB85C1 /* Recommend */,
+				32FD13C2223FBAAE00CB85C1 /* Recommend */,
 				240A8EF522158AFB006E4DED /* UserInfo */,
 				32A28EA2220294E10049B003 /* Withdraw */,
 				240F745F2201C58F00A2DFFC /* Tool */,
@@ -3246,34 +3246,6 @@
 			path = ThirdLib;
 			sourceTree = "<group>";
 		};
-		32FD1290223F7A7200CB85C1 /* Recommend */ = {
-			isa = PBXGroup;
-			children = (
-				32FD1291223F7A7200CB85C1 /* Service */,
-				32FD1294223F7A7200CB85C1 /* ViewControllers */,
-			);
-			name = Recommend;
-			path = ../../../../../../ios_coupon_ticket/CouponTicket/Classes/ComponentClasses/Recommend;
-			sourceTree = "<group>";
-		};
-		32FD1291223F7A7200CB85C1 /* Service */ = {
-			isa = PBXGroup;
-			children = (
-				32FD1292223F7A7200CB85C1 /* CTRecommendService.h */,
-				32FD1293223F7A7200CB85C1 /* CTRecommendService.m */,
-			);
-			path = Service;
-			sourceTree = "<group>";
-		};
-		32FD1294223F7A7200CB85C1 /* ViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-				32FD1295223F7A7200CB85C1 /* CTRecommendViewController.h */,
-				32FD1296223F7A7200CB85C1 /* CTRecommendViewController.m */,
-			);
-			path = ViewControllers;
-			sourceTree = "<group>";
-		};
 		32FD1312223F8B0000CB85C1 /* AlibcTradeSDK */ = {
 			isa = PBXGroup;
 			children = (
@@ -3321,6 +3293,34 @@
 				32FD13AC223F94A400CB85C1 /* UTMini.framework */,
 			);
 			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		32FD13C2223FBAAE00CB85C1 /* Recommend */ = {
+			isa = PBXGroup;
+			children = (
+				32FD13C3223FBAAE00CB85C1 /* Service */,
+				32FD13C6223FBAAE00CB85C1 /* ViewControllers */,
+			);
+			name = Recommend;
+			path = "../../../../../../ios_coupon_ticket 下午7.31.49/CouponTicket/Classes/ComponentClasses/Recommend";
+			sourceTree = "<group>";
+		};
+		32FD13C3223FBAAE00CB85C1 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				32FD13C4223FBAAE00CB85C1 /* CTRecommendService.h */,
+				32FD13C5223FBAAE00CB85C1 /* CTRecommendService.m */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		32FD13C6223FBAAE00CB85C1 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				32FD13C7223FBAAE00CB85C1 /* CTRecommendViewController.h */,
+				32FD13C8223FBAAE00CB85C1 /* CTRecommendViewController.m */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		81B790F6F60DCAA925C30A30 /* Pods */ = {
@@ -3721,6 +3721,7 @@
 				32ED00F1222D28A3008A1640 /* QCodeHelper.m in Sources */,
 				32A281132237DCAB007DF6C2 /* CTHomeModel.m in Sources */,
 				32BE611721EDCFA600BA52EF /* UIButton+Create.m in Sources */,
+				32FD13CA223FBAAE00CB85C1 /* CTRecommendViewController.m in Sources */,
 				32FEA9D02213B3C0001156CC /* CTNestPageController.m in Sources */,
 				3220EA2121F98622004E0422 /* CTMessageListViewController.m in Sources */,
 				2405AF0521FC35ED000E5081 /* CTMemberStrategyView.m in Sources */,
@@ -3741,7 +3742,6 @@
 				32BE610821EDCFA600BA52EF /* UITextField+Helper.m in Sources */,
 				32BE60F821EDCFA600BA52EF /* CLRefreshNulMoreView.m in Sources */,
 				32BE60F721EDCFA600BA52EF /* CLRefreshCurveLayer.m in Sources */,
-				32FD1298223F7A7200CB85C1 /* CTRecommendViewController.m in Sources */,
 				2407A8E421FD8895000403B7 /* CTMemberEquityView2.m in Sources */,
 				32ED00D3222CD6CF008A1640 /* CTNetworkEngine.m in Sources */,
 				32FEAA0022140AAD001156CC /* CTEarnRankNavBar.m in Sources */,
@@ -3751,6 +3751,7 @@
 				32BD0E552201919500E99B86 /* LMPhotoBrower.m in Sources */,
 				32BE611821EDCFA600BA52EF /* UIColor+HexString.m in Sources */,
 				32A28EAA220295B30049B003 /* CTWithdrawService.m in Sources */,
+				32FD13C9223FBAAE00CB85C1 /* CTRecommendService.m in Sources */,
 				32BE613121EDCFA600BA52EF /* NSDate+Extension.m in Sources */,
 				32DB93AB22150B2E00300ACC /* CTThirtyProfitView.m in Sources */,
 				324CE75A22336EC60052A029 /* CTBindPhoneView.m in Sources */,
@@ -3795,7 +3796,6 @@
 				322453D621F2BFC200471059 /* CTBaseViewController.m in Sources */,
 				32BD0E342201847200E99B86 /* CTSetViewController.m in Sources */,
 				32AE79A12216914600E29FC3 /* CTSharePopView.m in Sources */,
-				32FD1297223F7A7200CB85C1 /* CTRecommendService.m in Sources */,
 				32BE611F21EDCFA600BA52EF /* NSTimer+YYAdd.m in Sources */,
 				32BE610021EDCFA600BA52EF /* TZPhotoPreviewCell.m in Sources */,
 				326525E121F5C8BE00B63DD7 /* CTCanValidButton.m in Sources */,
