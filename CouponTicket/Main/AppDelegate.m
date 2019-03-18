@@ -12,6 +12,8 @@
 
 #import "UMShareManager.h"
 
+#import "AliTradeManager.h"
+
 @interface AppDelegate ()
 
 @end
@@ -26,6 +28,7 @@
     [self.window makeKeyAndVisible];
     [CTAppConfig config];
     [UMShareManager config];
+    [AliTradeManager initSDK];
     return YES;
 }
 
@@ -35,10 +38,16 @@
     if([UMShareManager application:application openURL:url sourceApplication:sourceApplication annotation:application]){
         return YES;
     }
+    if([AliTradeManager application:application openURL:url sourceApplication:sourceApplication annotation:application]){
+        return YES;
+    }
     return NO;
 }
 + (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey, id> *)options{
     if([UMShareManager application:app openURL:url options:options]){
+        return YES;
+    }
+    if([AliTradeManager application:app openURL:url options:options]){
         return YES;
     }
     return NO;

@@ -109,7 +109,7 @@
     //qq登录
     [self.loginView.qqButton touchUpInsideSubscribeNext:^(id x) {
         @strongify(self)
-        [UMShareManager getUserInfoForPlatform:UMSocialPlatformType_QQ completion:^(UMSocialUserInfoResponse *response) {
+        [UMShareManager getUserInfoForPlatform:UMSocialPlatformType_QQ completion:^(CTUMSocialUserInfoResponse *response) {
             @strongify(self)
             [self thirdLoginWithType:CTLoginQQ response:response];
         }];
@@ -117,7 +117,7 @@
     //微信登录
     [self.loginView.wechatButton touchUpInsideSubscribeNext:^(id x) {
         @strongify(self)
-        [UMShareManager getUserInfoForPlatform:UMSocialPlatformType_WechatSession completion:^(UMSocialUserInfoResponse *response) {
+        [UMShareManager getUserInfoForPlatform:UMSocialPlatformType_WechatSession completion:^(CTUMSocialUserInfoResponse *response) {
             @strongify(self)
             [self thirdLoginWithType:CTLoginWeChat response:response];
         }];
@@ -132,7 +132,7 @@
 }
 
 //第三方登录
-- (void)thirdLoginWithType:(CTLoginType)loginType  response:(UMSocialUserInfoResponse *)response{
+- (void)thirdLoginWithType:(CTLoginType)loginType  response:(CTUMSocialUserInfoResponse *)response{
     [CTRequest loginWithType:loginType openid:response.openid phone:nil pwd:nil callback:^(id data, CLRequest *request, CTNetError error) {
         if(!error){
             [CTAppManager saveUserWithInfo:data];

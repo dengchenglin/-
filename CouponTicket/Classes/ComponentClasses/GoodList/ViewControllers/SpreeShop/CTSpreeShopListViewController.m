@@ -14,13 +14,13 @@
 
 @interface CTSpreeShopListViewController ()
 
-@property (nonatomic, strong) NSMutableArray <CTGoodsViewModel *> *dataSoures;
+@property (nonatomic, strong) NSMutableArray <CTGoodsViewModel *> *dataSources;
 
 @end
 
 @implementation CTSpreeShopListViewController
 
-@synthesize dataSoures = _dataSoures;
+@synthesize dataSources = _dataSources;
 
 - (void)setUpUI{
 
@@ -44,24 +44,24 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return self.dataSoures.count;
+    return self.dataSources.count;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 112;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     CTGoodListCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(CTGoodListCell.class)];
-    cell.viewModel = self.dataSoures[indexPath.row];
+    cell.viewModel = self.dataSources[indexPath.row];
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    CTGoodsModel *model = self.dataSoures[indexPath.row].model;
+    CTGoodsModel *model = self.dataSources[indexPath.row].model;
    if (model.status == 3 || model.status == 1){
          [CTAlertHelper showNoticeAlertViewWithTitle:@"商品还未到开抢时间哦!\n请耐心等待商品开抢～"];
     }
     else if (model.status == 2){
-        UIViewController *vc = [[CTModuleManager goodListService] goodDetailViewControllerWithGoodId:nil];
+        UIViewController *vc = [[CTModuleManager goodListService] goodDetailViewControllerWithGoodId:model.uid];
         [self.navigationController pushViewController:vc animated:YES];
     }
    

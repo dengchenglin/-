@@ -26,7 +26,7 @@
 
 @property (nonatomic, assign) BOOL canLoadMore;
 
-@property (nonatomic, strong) NSMutableArray *dataSoures;
+@property (nonatomic, strong) NSMutableArray *dataSources;
 
 - (void)analysisAndReloadWithData:(NSArray *)data error:(CTNetError)error modelClass:(Class)modelClass viewModelClass:(Class <CTViewModelProtocol>)viewModelClass;
 

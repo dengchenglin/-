@@ -18,6 +18,25 @@
 #define UMWeChatAppKey @"wxa1721eeba2b8afa8"
 #define UMWeChatSecrect @"4eeb74f2543e2183522de2cd7a8026dc"
 
+
+@implementation CTUMSocialUserInfoResponse
+- (instancetype)initWithResponse:(UMSocialUserInfoResponse *)response{
+    if(self = [super init]){
+        _name = response.name;
+        _iconurl = response.iconurl;
+        _unionGender = response.unionGender;
+        _gender = response.gender;
+        _uid = response.uid;
+        _openid = response.openid;
+        _refreshToken = response.refreshToken;
+        _expiration = response.expiration;
+        _accessToken = response.accessToken;
+        _unionId = response.unionId;
+ 
+    }
+    return self;
+}
+@end
 @implementation UMShareManager
 
 + (void)config{
@@ -54,10 +73,10 @@
     }
     return result;
 }
-+ (void)getUserInfoForPlatform:(UMSocialPlatformType)platformType completion:(void(^)(UMSocialUserInfoResponse *respone))completion{
++ (void)getUserInfoForPlatform:(UMSocialPlatformType)platformType completion:(void(^)(CTUMSocialUserInfoResponse *respone))completion{
     [[UMSocialManager defaultManager] getUserInfoWithPlatform:platformType currentViewController:nil completion:^(id result, NSError *error) {
         if(!error && completion){
-            UMSocialUserInfoResponse *resp = result;
+            CTUMSocialUserInfoResponse *resp = [[CTUMSocialUserInfoResponse alloc]initWithResponse:result];
             completion(resp);
         }
     }];

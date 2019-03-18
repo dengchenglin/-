@@ -18,7 +18,7 @@
 
 @property (nonatomic, copy) NSString *verCode;
 
-@property (nonatomic, strong) UMSocialUserInfoResponse *response;
+@property (nonatomic, strong) CTUMSocialUserInfoResponse *response;
 
 @property (nonatomic, copy) void(^completed)(void);
 

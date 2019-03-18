@@ -59,26 +59,26 @@
         if(!error){
             self.model = [CTHotGoodsModel yy_modelWithDictionary:data];
             self.noticeView.model = _model;
-            self.dataSoures = [CTGoodsViewModel bindModels:[CTGoodsModel yy_modelsWithDatas:_model.goods]];
+            self.dataSources = [CTGoodsViewModel bindModels:[CTGoodsModel yy_modelsWithDatas:_model.goods]];
             [self.tableView reloadData];
         }
     }];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return self.dataSoures.count;
+    return self.dataSources.count;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 112;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     CTGoodListCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(CTGoodListCell.class)];
-    cell.viewModel = self.dataSoures[indexPath.row];
+    cell.viewModel = self.dataSources[indexPath.row];
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    UIViewController *vc = [[CTModuleManager goodListService] goodDetailViewControllerWithGoodId:nil];
+    UIViewController *vc = [[CTModuleManager goodListService] goodDetailViewControllerWithGoodId:self.dataSources[indexPath.row].model.uid];
     [self.navigationController pushViewController:vc animated:YES];
 }
 

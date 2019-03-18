@@ -59,7 +59,6 @@
 		245CAE5621F42E8000496052 /* CTMainCategoryHeadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 245CAE5221F42E8000496052 /* CTMainCategoryHeadView.xib */; };
 		245CAE5721F42E8000496052 /* CTMainCategoryItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 245CAE5321F42E8000496052 /* CTMainCategoryItem.xib */; };
 		245CAE5A21F42EC200496052 /* CTCategoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 245CAE5921F42EC200496052 /* CTCategoryModel.m */; };
-		24B1C56B223CC5E300831ACC /* CTRecommendService.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B1C56A223CC5E300831ACC /* CTRecommendService.m */; };
 		24B1C56E223CCAF900831ACC /* CTHotGoodsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B1C56D223CCAF900831ACC /* CTHotGoodsModel.m */; };
 		24B1C571223CD29900831ACC /* CTNoticeAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B1C570223CD29900831ACC /* CTNoticeAlertView.m */; };
 		24B1C573223CD2C800831ACC /* CTNoticeAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24B1C572223CD2C700831ACC /* CTNoticeAlertView.xib */; };
@@ -392,6 +391,40 @@
 		32ED00ED222D264F008A1640 /* SGQRCodeFlashlightOpenImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 32ED00EC222D264F008A1640 /* SGQRCodeFlashlightOpenImage.png */; };
 		32ED00F1222D28A3008A1640 /* QCodeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 32ED00F0222D28A3008A1640 /* QCodeHelper.m */; };
 		32EDC59F2221186C00AFF766 /* UIScrollView+CTPagePanGes.m in Sources */ = {isa = PBXBuildFile; fileRef = 32EDC59E2221186C00AFF766 /* UIScrollView+CTPagePanGes.m */; };
+		32FD1252223F2C3F00CB85C1 /* CTGoodsImgsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 32FD1251223F2C3F00CB85C1 /* CTGoodsImgsView.m */; };
+		32FD1255223F2C4C00CB85C1 /* CTGoodsDescView.m in Sources */ = {isa = PBXBuildFile; fileRef = 32FD1254223F2C4C00CB85C1 /* CTGoodsDescView.m */; };
+		32FD125B223F2C7E00CB85C1 /* CTGoodsBuyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 32FD125A223F2C7E00CB85C1 /* CTGoodsBuyView.m */; };
+		32FD125D223F2D5100CB85C1 /* CTGoodsDescView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32FD125C223F2D5100CB85C1 /* CTGoodsDescView.xib */; };
+		32FD1260223F39A600CB85C1 /* CTGoodsCouponView.m in Sources */ = {isa = PBXBuildFile; fileRef = 32FD125F223F39A600CB85C1 /* CTGoodsCouponView.m */; };
+		32FD1262223F39B000CB85C1 /* CTGoodsCouponView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32FD1261223F39B000CB85C1 /* CTGoodsCouponView.xib */; };
+		32FD1264223F404800CB85C1 /* CTGoodsBuyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32FD1263223F404800CB85C1 /* CTGoodsBuyView.xib */; };
+		32FD1297223F7A7200CB85C1 /* CTRecommendService.m in Sources */ = {isa = PBXBuildFile; fileRef = 32FD1293223F7A7200CB85C1 /* CTRecommendService.m */; };
+		32FD1298223F7A7200CB85C1 /* CTRecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32FD1296223F7A7200CB85C1 /* CTRecommendViewController.m */; };
+		32FD12C5223F7B3800CB85C1 /* AliTradeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 32FD12C4223F7B3800CB85C1 /* AliTradeManager.m */; };
+		32FD1369223F916D00CB85C1 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 32FD1368223F916D00CB85C1 /* libz.tbd */; };
+		32FD136B223F917600CB85C1 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 32FD136A223F917600CB85C1 /* libsqlite3.0.tbd */; };
+		32FD136D223F917D00CB85C1 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32FD136C223F917D00CB85C1 /* CoreTelephony.framework */; };
+		32FD136F223F918500CB85C1 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32FD136E223F918500CB85C1 /* SystemConfiguration.framework */; };
+		32FD13AD223F94A400CB85C1 /* AlibabaAuthSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 32FD1399223F94A100CB85C1 /* AlibabaAuthSDK.bundle */; };
+		32FD13AE223F94A400CB85C1 /* AlipaySDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 32FD139A223F94A100CB85C1 /* AlipaySDK.bundle */; };
+		32FD13AF223F94A400CB85C1 /* ALPLinkPartnerSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 32FD139B223F94A100CB85C1 /* ALPLinkPartnerSDK.bundle */; };
+		32FD13B0223F94A400CB85C1 /* NBResource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 32FD139C223F94A100CB85C1 /* NBResource.bundle */; };
+		32FD13B1223F94A400CB85C1 /* AlibabaAuthExt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32FD139E223F94A400CB85C1 /* AlibabaAuthExt.framework */; };
+		32FD13B2223F94A400CB85C1 /* AlibabaAuthSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32FD139F223F94A400CB85C1 /* AlibabaAuthSDK.framework */; };
+		32FD13B3223F94A400CB85C1 /* AlibcLinkPartnerSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32FD13A0223F94A400CB85C1 /* AlibcLinkPartnerSDK.framework */; };
+		32FD13B4223F94A400CB85C1 /* AlibcTradeBiz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32FD13A1223F94A400CB85C1 /* AlibcTradeBiz.framework */; };
+		32FD13B5223F94A400CB85C1 /* AlibcTradeCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32FD13A2223F94A400CB85C1 /* AlibcTradeCommon.framework */; };
+		32FD13B6223F94A400CB85C1 /* AlibcTradeSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32FD13A3223F94A400CB85C1 /* AlibcTradeSDK.framework */; };
+		32FD13B7223F94A400CB85C1 /* AlipaySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32FD13A4223F94A400CB85C1 /* AlipaySDK.framework */; };
+		32FD13B8223F94A400CB85C1 /* OpenMtopExt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32FD13A5223F94A400CB85C1 /* OpenMtopExt.framework */; };
+		32FD13B9223F94A400CB85C1 /* OpenMtopSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32FD13A6223F94A400CB85C1 /* OpenMtopSDK.framework */; };
+		32FD13BA223F94A400CB85C1 /* SecurityGuardSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32FD13A7223F94A400CB85C1 /* SecurityGuardSDK.framework */; };
+		32FD13BB223F94A400CB85C1 /* SGMain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32FD13A8223F94A400CB85C1 /* SGMain.framework */; };
+		32FD13BC223F94A400CB85C1 /* SGNoCaptcha.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32FD13A9223F94A400CB85C1 /* SGNoCaptcha.framework */; };
+		32FD13BD223F94A400CB85C1 /* SGSecurityBody.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32FD13AA223F94A400CB85C1 /* SGSecurityBody.framework */; };
+		32FD13BE223F94A400CB85C1 /* UTDID.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32FD13AB223F94A400CB85C1 /* UTDID.framework */; };
+		32FD13BF223F94A400CB85C1 /* UTMini.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32FD13AC223F94A400CB85C1 /* UTMini.framework */; };
+		32FD13C1223F9AA400CB85C1 /* yw_1222.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 32FD13C0223F9AA400CB85C1 /* yw_1222.jpg */; };
 		32FEA9D02213B3C0001156CC /* CTNestPageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32FEA9CF2213B3C0001156CC /* CTNestPageController.m */; };
 		32FEA9F52213C666001156CC /* CTEarnRankPageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32FEA9F42213C666001156CC /* CTEarnRankPageController.m */; };
 		32FEA9F82213CC00001156CC /* CTEarnRankHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 32FEA9F72213CC00001156CC /* CTEarnRankHeadView.m */; };
@@ -507,8 +540,6 @@
 		245CAE5321F42E8000496052 /* CTMainCategoryItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CTMainCategoryItem.xib; sourceTree = "<group>"; };
 		245CAE5821F42EC200496052 /* CTCategoryModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTCategoryModel.h; sourceTree = "<group>"; };
 		245CAE5921F42EC200496052 /* CTCategoryModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTCategoryModel.m; sourceTree = "<group>"; };
-		24B1C569223CC5E300831ACC /* CTRecommendService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTRecommendService.h; sourceTree = "<group>"; };
-		24B1C56A223CC5E300831ACC /* CTRecommendService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTRecommendService.m; sourceTree = "<group>"; };
 		24B1C56C223CCAF900831ACC /* CTHotGoodsModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTHotGoodsModel.h; sourceTree = "<group>"; };
 		24B1C56D223CCAF900831ACC /* CTHotGoodsModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTHotGoodsModel.m; sourceTree = "<group>"; };
 		24B1C56F223CD29900831ACC /* CTNoticeAlertView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTNoticeAlertView.h; sourceTree = "<group>"; };
@@ -1135,6 +1166,47 @@
 		32ED00F0222D28A3008A1640 /* QCodeHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QCodeHelper.m; sourceTree = "<group>"; };
 		32EDC59D2221186C00AFF766 /* UIScrollView+CTPagePanGes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+CTPagePanGes.h"; sourceTree = "<group>"; };
 		32EDC59E2221186C00AFF766 /* UIScrollView+CTPagePanGes.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+CTPagePanGes.m"; sourceTree = "<group>"; };
+		32FD1250223F2C3F00CB85C1 /* CTGoodsImgsView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTGoodsImgsView.h; sourceTree = "<group>"; };
+		32FD1251223F2C3F00CB85C1 /* CTGoodsImgsView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTGoodsImgsView.m; sourceTree = "<group>"; };
+		32FD1253223F2C4C00CB85C1 /* CTGoodsDescView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTGoodsDescView.h; sourceTree = "<group>"; };
+		32FD1254223F2C4C00CB85C1 /* CTGoodsDescView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTGoodsDescView.m; sourceTree = "<group>"; };
+		32FD1259223F2C7E00CB85C1 /* CTGoodsBuyView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTGoodsBuyView.h; sourceTree = "<group>"; };
+		32FD125A223F2C7E00CB85C1 /* CTGoodsBuyView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTGoodsBuyView.m; sourceTree = "<group>"; };
+		32FD125C223F2D5100CB85C1 /* CTGoodsDescView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CTGoodsDescView.xib; sourceTree = "<group>"; };
+		32FD125E223F39A600CB85C1 /* CTGoodsCouponView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTGoodsCouponView.h; sourceTree = "<group>"; };
+		32FD125F223F39A600CB85C1 /* CTGoodsCouponView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTGoodsCouponView.m; sourceTree = "<group>"; };
+		32FD1261223F39B000CB85C1 /* CTGoodsCouponView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CTGoodsCouponView.xib; sourceTree = "<group>"; };
+		32FD1263223F404800CB85C1 /* CTGoodsBuyView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CTGoodsBuyView.xib; sourceTree = "<group>"; };
+		32FD1292223F7A7200CB85C1 /* CTRecommendService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTRecommendService.h; sourceTree = "<group>"; };
+		32FD1293223F7A7200CB85C1 /* CTRecommendService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTRecommendService.m; sourceTree = "<group>"; };
+		32FD1295223F7A7200CB85C1 /* CTRecommendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTRecommendViewController.h; sourceTree = "<group>"; };
+		32FD1296223F7A7200CB85C1 /* CTRecommendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTRecommendViewController.m; sourceTree = "<group>"; };
+		32FD12C3223F7B3800CB85C1 /* AliTradeManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AliTradeManager.h; sourceTree = "<group>"; };
+		32FD12C4223F7B3800CB85C1 /* AliTradeManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AliTradeManager.m; sourceTree = "<group>"; };
+		32FD1368223F916D00CB85C1 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		32FD136A223F917600CB85C1 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		32FD136C223F917D00CB85C1 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		32FD136E223F918500CB85C1 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		32FD1399223F94A100CB85C1 /* AlibabaAuthSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AlibabaAuthSDK.bundle; sourceTree = "<group>"; };
+		32FD139A223F94A100CB85C1 /* AlipaySDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AlipaySDK.bundle; sourceTree = "<group>"; };
+		32FD139B223F94A100CB85C1 /* ALPLinkPartnerSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ALPLinkPartnerSDK.bundle; sourceTree = "<group>"; };
+		32FD139C223F94A100CB85C1 /* NBResource.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = NBResource.bundle; sourceTree = "<group>"; };
+		32FD139E223F94A400CB85C1 /* AlibabaAuthExt.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AlibabaAuthExt.framework; sourceTree = "<group>"; };
+		32FD139F223F94A400CB85C1 /* AlibabaAuthSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AlibabaAuthSDK.framework; sourceTree = "<group>"; };
+		32FD13A0223F94A400CB85C1 /* AlibcLinkPartnerSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AlibcLinkPartnerSDK.framework; sourceTree = "<group>"; };
+		32FD13A1223F94A400CB85C1 /* AlibcTradeBiz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AlibcTradeBiz.framework; sourceTree = "<group>"; };
+		32FD13A2223F94A400CB85C1 /* AlibcTradeCommon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AlibcTradeCommon.framework; sourceTree = "<group>"; };
+		32FD13A3223F94A400CB85C1 /* AlibcTradeSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AlibcTradeSDK.framework; sourceTree = "<group>"; };
+		32FD13A4223F94A400CB85C1 /* AlipaySDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AlipaySDK.framework; sourceTree = "<group>"; };
+		32FD13A5223F94A400CB85C1 /* OpenMtopExt.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OpenMtopExt.framework; sourceTree = "<group>"; };
+		32FD13A6223F94A400CB85C1 /* OpenMtopSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OpenMtopSDK.framework; sourceTree = "<group>"; };
+		32FD13A7223F94A400CB85C1 /* SecurityGuardSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SecurityGuardSDK.framework; sourceTree = "<group>"; };
+		32FD13A8223F94A400CB85C1 /* SGMain.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SGMain.framework; sourceTree = "<group>"; };
+		32FD13A9223F94A400CB85C1 /* SGNoCaptcha.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SGNoCaptcha.framework; sourceTree = "<group>"; };
+		32FD13AA223F94A400CB85C1 /* SGSecurityBody.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SGSecurityBody.framework; sourceTree = "<group>"; };
+		32FD13AB223F94A400CB85C1 /* UTDID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UTDID.framework; sourceTree = "<group>"; };
+		32FD13AC223F94A400CB85C1 /* UTMini.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UTMini.framework; sourceTree = "<group>"; };
+		32FD13C0223F9AA400CB85C1 /* yw_1222.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = yw_1222.jpg; sourceTree = "<group>"; };
 		32FEA9CE2213B3C0001156CC /* CTNestPageController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTNestPageController.h; sourceTree = "<group>"; };
 		32FEA9CF2213B3C0001156CC /* CTNestPageController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTNestPageController.m; sourceTree = "<group>"; };
 		32FEA9F32213C666001156CC /* CTEarnRankPageController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTEarnRankPageController.h; sourceTree = "<group>"; };
@@ -1165,7 +1237,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32FD13B3223F94A400CB85C1 /* AlibcLinkPartnerSDK.framework in Frameworks */,
+				32FD136F223F918500CB85C1 /* SystemConfiguration.framework in Frameworks */,
+				32FD136D223F917D00CB85C1 /* CoreTelephony.framework in Frameworks */,
+				32FD13B2223F94A400CB85C1 /* AlibabaAuthSDK.framework in Frameworks */,
+				32FD13B4223F94A400CB85C1 /* AlibcTradeBiz.framework in Frameworks */,
+				32FD13B9223F94A400CB85C1 /* OpenMtopSDK.framework in Frameworks */,
+				32FD136B223F917600CB85C1 /* libsqlite3.0.tbd in Frameworks */,
+				32FD13B1223F94A400CB85C1 /* AlibabaAuthExt.framework in Frameworks */,
+				32FD13BE223F94A400CB85C1 /* UTDID.framework in Frameworks */,
+				32FD1369223F916D00CB85C1 /* libz.tbd in Frameworks */,
+				32FD13B6223F94A400CB85C1 /* AlibcTradeSDK.framework in Frameworks */,
+				32FD13BC223F94A400CB85C1 /* SGNoCaptcha.framework in Frameworks */,
+				32FD13B5223F94A400CB85C1 /* AlibcTradeCommon.framework in Frameworks */,
+				32FD13BB223F94A400CB85C1 /* SGMain.framework in Frameworks */,
+				32FD13BF223F94A400CB85C1 /* UTMini.framework in Frameworks */,
+				32FD13B8223F94A400CB85C1 /* OpenMtopExt.framework in Frameworks */,
+				32FD13BA223F94A400CB85C1 /* SecurityGuardSDK.framework in Frameworks */,
 				AAE7F6FFBF4288319E9610C9 /* libPods-CouponTicket.a in Frameworks */,
+				32FD13BD223F94A400CB85C1 /* SGSecurityBody.framework in Frameworks */,
+				32FD13B7223F94A400CB85C1 /* AlipaySDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1423,15 +1514,6 @@
 				32CA558421F6F23A00145E31 /* CTSortButton.xib */,
 			);
 			path = CTMainCategoryView;
-			sourceTree = "<group>";
-		};
-		24B1C568223CC5A700831ACC /* Recommend */ = {
-			isa = PBXGroup;
-			children = (
-				24B1C569223CC5E300831ACC /* CTRecommendService.h */,
-				24B1C56A223CC5E300831ACC /* CTRecommendService.m */,
-			);
-			path = Recommend;
 			sourceTree = "<group>";
 		};
 		3220EA1121F95E22004E0422 /* Views */ = {
@@ -1731,6 +1813,7 @@
 		324C3D9E21F851D800536DA8 /* GoodList */ = {
 			isa = PBXGroup;
 			children = (
+				32FD124F223F2C0E00CB85C1 /* Views */,
 				329B3703223BAED60003AD30 /* Models */,
 				324C3DA021F851F400536DA8 /* Service */,
 				324C3D9F21F851EE00536DA8 /* ViewControllers */,
@@ -2353,6 +2436,7 @@
 				325D3B6A21F1E53600465B91 /* CTConfigs */,
 				32BE602A21EDCEA200BA52EF /* Common */,
 				32BE602821EDCE7500BA52EF /* SystemConfigs */,
+				32FD1266223F784600CB85C1 /* ThirdLib */,
 				32BE602721EDCE6C00BA52EF /* ReSources */,
 			);
 			path = CouponTicket;
@@ -2816,7 +2900,7 @@
 		32BE613B21EDDA7700BA52EF /* ComponentClasses */ = {
 			isa = PBXGroup;
 			children = (
-				24B1C568223CC5A700831ACC /* Recommend */,
+				32FD1290223F7A7200CB85C1 /* Recommend */,
 				240A8EF522158AFB006E4DED /* UserInfo */,
 				32A28EA2220294E10049B003 /* Withdraw */,
 				240F745F2201C58F00A2DFFC /* Tool */,
@@ -3084,6 +3168,7 @@
 		32ED00D7222D0F63008A1640 /* CTThirdManager */ = {
 			isa = PBXGroup;
 			children = (
+				32FD1265223F762300CB85C1 /* AliTradeManager */,
 				32ED00D8222D0F7A008A1640 /* ShareManager */,
 			);
 			path = CTThirdManager;
@@ -3124,6 +3209,120 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		32FD124F223F2C0E00CB85C1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				32FD1250223F2C3F00CB85C1 /* CTGoodsImgsView.h */,
+				32FD1251223F2C3F00CB85C1 /* CTGoodsImgsView.m */,
+				32FD1253223F2C4C00CB85C1 /* CTGoodsDescView.h */,
+				32FD1254223F2C4C00CB85C1 /* CTGoodsDescView.m */,
+				32FD125C223F2D5100CB85C1 /* CTGoodsDescView.xib */,
+				32FD125E223F39A600CB85C1 /* CTGoodsCouponView.h */,
+				32FD125F223F39A600CB85C1 /* CTGoodsCouponView.m */,
+				32FD1261223F39B000CB85C1 /* CTGoodsCouponView.xib */,
+				32FD1259223F2C7E00CB85C1 /* CTGoodsBuyView.h */,
+				32FD125A223F2C7E00CB85C1 /* CTGoodsBuyView.m */,
+				32FD1263223F404800CB85C1 /* CTGoodsBuyView.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		32FD1265223F762300CB85C1 /* AliTradeManager */ = {
+			isa = PBXGroup;
+			children = (
+				32FD13C0223F9AA400CB85C1 /* yw_1222.jpg */,
+				32FD12C3223F7B3800CB85C1 /* AliTradeManager.h */,
+				32FD12C4223F7B3800CB85C1 /* AliTradeManager.m */,
+			);
+			path = AliTradeManager;
+			sourceTree = "<group>";
+		};
+		32FD1266223F784600CB85C1 /* ThirdLib */ = {
+			isa = PBXGroup;
+			children = (
+				32FD133B223F909F00CB85C1 /* UMShare */,
+				32FD1312223F8B0000CB85C1 /* AlibcTradeSDK */,
+			);
+			path = ThirdLib;
+			sourceTree = "<group>";
+		};
+		32FD1290223F7A7200CB85C1 /* Recommend */ = {
+			isa = PBXGroup;
+			children = (
+				32FD1291223F7A7200CB85C1 /* Service */,
+				32FD1294223F7A7200CB85C1 /* ViewControllers */,
+			);
+			name = Recommend;
+			path = ../../../../../../ios_coupon_ticket/CouponTicket/Classes/ComponentClasses/Recommend;
+			sourceTree = "<group>";
+		};
+		32FD1291223F7A7200CB85C1 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				32FD1292223F7A7200CB85C1 /* CTRecommendService.h */,
+				32FD1293223F7A7200CB85C1 /* CTRecommendService.m */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		32FD1294223F7A7200CB85C1 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				32FD1295223F7A7200CB85C1 /* CTRecommendViewController.h */,
+				32FD1296223F7A7200CB85C1 /* CTRecommendViewController.m */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		32FD1312223F8B0000CB85C1 /* AlibcTradeSDK */ = {
+			isa = PBXGroup;
+			children = (
+				32FD139D223F94A400CB85C1 /* Frameworks */,
+				32FD1398223F94A100CB85C1 /* Resources */,
+			);
+			path = AlibcTradeSDK;
+			sourceTree = "<group>";
+		};
+		32FD133B223F909F00CB85C1 /* UMShare */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UMShare;
+			sourceTree = "<group>";
+		};
+		32FD1398223F94A100CB85C1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				32FD1399223F94A100CB85C1 /* AlibabaAuthSDK.bundle */,
+				32FD139A223F94A100CB85C1 /* AlipaySDK.bundle */,
+				32FD139B223F94A100CB85C1 /* ALPLinkPartnerSDK.bundle */,
+				32FD139C223F94A100CB85C1 /* NBResource.bundle */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		32FD139D223F94A400CB85C1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				32FD139E223F94A400CB85C1 /* AlibabaAuthExt.framework */,
+				32FD139F223F94A400CB85C1 /* AlibabaAuthSDK.framework */,
+				32FD13A0223F94A400CB85C1 /* AlibcLinkPartnerSDK.framework */,
+				32FD13A1223F94A400CB85C1 /* AlibcTradeBiz.framework */,
+				32FD13A2223F94A400CB85C1 /* AlibcTradeCommon.framework */,
+				32FD13A3223F94A400CB85C1 /* AlibcTradeSDK.framework */,
+				32FD13A4223F94A400CB85C1 /* AlipaySDK.framework */,
+				32FD13A5223F94A400CB85C1 /* OpenMtopExt.framework */,
+				32FD13A6223F94A400CB85C1 /* OpenMtopSDK.framework */,
+				32FD13A7223F94A400CB85C1 /* SecurityGuardSDK.framework */,
+				32FD13A8223F94A400CB85C1 /* SGMain.framework */,
+				32FD13A9223F94A400CB85C1 /* SGNoCaptcha.framework */,
+				32FD13AA223F94A400CB85C1 /* SGSecurityBody.framework */,
+				32FD13AB223F94A400CB85C1 /* UTDID.framework */,
+				32FD13AC223F94A400CB85C1 /* UTMini.framework */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
 		81B790F6F60DCAA925C30A30 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -3136,6 +3335,10 @@
 		EE852392595567F7ACDC605A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				32FD136E223F918500CB85C1 /* SystemConfiguration.framework */,
+				32FD136C223F917D00CB85C1 /* CoreTelephony.framework */,
+				32FD136A223F917600CB85C1 /* libsqlite3.0.tbd */,
+				32FD1368223F916D00CB85C1 /* libz.tbd */,
 				9F51AA050F5801C0FBDEE117 /* libPods-CouponTicket.a */,
 			);
 			name = Frameworks;
@@ -3240,6 +3443,7 @@
 				2405AED621FC0CAD000E5081 /* CTMemberTitleView.xib in Resources */,
 				32BE600D21EDC5E500BA52EF /* Assets.xcassets in Resources */,
 				324CE75C22336ECF0052A029 /* CTBindPhoneView.xib in Resources */,
+				32FD13AF223F94A400CB85C1 /* ALPLinkPartnerSDK.bundle in Resources */,
 				24FF625D21F40F0B00488860 /* CTHomeSalesView.xib in Resources */,
 				326525FA21F5CF5800B63DD7 /* CTGetCodeView_.xib in Resources */,
 				32BD0E3F2201890C00E99B86 /* CTSetLogoutView.xib in Resources */,
@@ -3249,6 +3453,7 @@
 				32CA556F21F6C22600145E31 /* LMNetErrorView.xib in Resources */,
 				32ED00E9222D2635008A1640 /* bg_image.png in Resources */,
 				32A28EC92202CA8B0049B003 /* CTWithdrawInputPsdView.xib in Resources */,
+				32FD1264223F404800CB85C1 /* CTGoodsBuyView.xib in Resources */,
 				32CA55A021F7181600145E31 /* CTHistoryKeywordHeadView.xib in Resources */,
 				2407A8F021FD8C3F000403B7 /* CTMemberEquityView3.xib in Resources */,
 				32DB93C22215433000300ACC /* CTOrderListCell.xib in Resources */,
@@ -3271,6 +3476,7 @@
 				326525FF21F5CF8100B63DD7 /* CTSetPasswordView_.xib in Resources */,
 				326AC20A21FB0DEF008C154B /* CTMemberHeadView.xib in Resources */,
 				326AC1E921FAB14C008C154B /* CTSearchTikcetPasteView.xib in Resources */,
+				32FD13C1223F9AA400CB85C1 /* yw_1222.jpg in Resources */,
 				32DB93D2221573EB00300ACC /* CTUserInfoView.xib in Resources */,
 				32CA55A221F7183200145E31 /* CTHotKeywordHeadView.xib in Resources */,
 				3220EA4421F9C343004E0422 /* CTHotSalesNoticeView.xib in Resources */,
@@ -3283,7 +3489,10 @@
 				240F74712201C9BD00A2DFFC /* CTQuestionListCell.xib in Resources */,
 				24B1C573223CD2C800831ACC /* CTNoticeAlertView.xib in Resources */,
 				32A28EB62202A3CA0049B003 /* CTWithDrawInputView.xib in Resources */,
+				32FD13AD223F94A400CB85C1 /* AlibabaAuthSDK.bundle in Resources */,
+				32FD13B0223F94A400CB85C1 /* NBResource.bundle in Resources */,
 				326525C721F595D300B63DD7 /* CTGoodListView_.xib in Resources */,
+				32FD1262223F39B000CB85C1 /* CTGoodsCouponView.xib in Resources */,
 				2407A8EE21FD8C2D000403B7 /* CTMemberEquityView2.xib in Resources */,
 				3280738D21FEE7C1009CABEC /* CTMineHeadView.xib in Resources */,
 				326525F521F5CF0200B63DD7 /* CTRegisterView_.xib in Resources */,
@@ -3309,6 +3518,8 @@
 				3280739C21FF0969009CABEC /* CTMineToolView.xib in Resources */,
 				3280739721FEF4DF009CABEC /* CTMineOrderView.xib in Resources */,
 				32A28EB12202A2CD0049B003 /* CTWithdrawAlipayInfoView.xib in Resources */,
+				32FD125D223F2D5100CB85C1 /* CTGoodsDescView.xib in Resources */,
+				32FD13AE223F94A400CB85C1 /* AlipaySDK.bundle in Resources */,
 				32FEAA0722141ACB001156CC /* CTEarnRankCell.xib in Resources */,
 				32CA55AC21F7242300145E31 /* CTSearchBar.xib in Resources */,
 				32CD9AD82223B9F5000D733B /* CTHandpickDescView.xib in Resources */,
@@ -3394,6 +3605,7 @@
 				32BE614B21EDDBBB00BA52EF /* CTHomeViewController.m in Sources */,
 				32BE610B21EDCFA600BA52EF /* UIView+Helper.m in Sources */,
 				3220EA4B21F9C99B004E0422 /* CTGoodResultViewController.m in Sources */,
+				32FD1260223F39A600CB85C1 /* CTGoodsCouponView.m in Sources */,
 				326525D821F5B53000B63DD7 /* CTLoginView.m in Sources */,
 				32BE611D21EDCFA600BA52EF /* NSObject+YYAdd.m in Sources */,
 				240F74682201C64600A2DFFC /* CTToolService.m in Sources */,
@@ -3414,6 +3626,7 @@
 				32BE610A21EDCFA600BA52EF /* UITextView+ZWPlaceHolder.m in Sources */,
 				32CD9ABE22239607000D733B /* CTVideoGoodListCell.m in Sources */,
 				32CA556E21F6C22600145E31 /* LMDataResultView.m in Sources */,
+				32FD1252223F2C3F00CB85C1 /* CTGoodsImgsView.m in Sources */,
 				326525F021F5CE8C00B63DD7 /* CTSetPasswordViewController.m in Sources */,
 				32BE610721EDCFA600BA52EF /* UINavigationBar+handle.m in Sources */,
 				32CA559821F7157400145E31 /* CLHorizontalCompactLayout.m in Sources */,
@@ -3429,6 +3642,7 @@
 				32534D0222323B5700A31645 /* CTNetworkEngine+Index.m in Sources */,
 				2405AEE821FC18D9000E5081 /* CTMemberPrivilegeItem.m in Sources */,
 				32E7EE6721F3263B00191789 /* CTHomeBannerView.m in Sources */,
+				32FD125B223F2C7E00CB85C1 /* CTGoodsBuyView.m in Sources */,
 				32BE60EB21EDCFA600BA52EF /* CLNetworkEngine.m in Sources */,
 				32BE610121EDCFA600BA52EF /* UIView+Layout.m in Sources */,
 				32BE611221EDCFA600BA52EF /* NSDictionary+Category.m in Sources */,
@@ -3527,6 +3741,7 @@
 				32BE610821EDCFA600BA52EF /* UITextField+Helper.m in Sources */,
 				32BE60F821EDCFA600BA52EF /* CLRefreshNulMoreView.m in Sources */,
 				32BE60F721EDCFA600BA52EF /* CLRefreshCurveLayer.m in Sources */,
+				32FD1298223F7A7200CB85C1 /* CTRecommendViewController.m in Sources */,
 				2407A8E421FD8895000403B7 /* CTMemberEquityView2.m in Sources */,
 				32ED00D3222CD6CF008A1640 /* CTNetworkEngine.m in Sources */,
 				32FEAA0022140AAD001156CC /* CTEarnRankNavBar.m in Sources */,
@@ -3545,6 +3760,7 @@
 				32BE612D21EDCFA600BA52EF /* UIViewController+PlayerRotation.m in Sources */,
 				32BE60F921EDCFA600BA52EF /* UIScrollView+CLRefresh.m in Sources */,
 				32DB93D52215771900300ACC /* CTUserDetailViewController.m in Sources */,
+				32FD12C5223F7B3800CB85C1 /* AliTradeManager.m in Sources */,
 				32BE610621EDCFA600BA52EF /* UILabel+Helper.m in Sources */,
 				24B1C571223CD29900831ACC /* CTNoticeAlertView.m in Sources */,
 				322453F421F2D3F700471059 /* CTHomeNavBar.m in Sources */,
@@ -3562,7 +3778,6 @@
 				32BE611121EDCFA600BA52EF /* NSData+Category.m in Sources */,
 				32E7EE6D21F32CE700191789 /* CTHomeNavView.m in Sources */,
 				32A3D15E221E9CD1000CA323 /* LMSegmentedControl.m in Sources */,
-				24B1C56B223CC5E300831ACC /* CTRecommendService.m in Sources */,
 				32DB93C822156C3900300ACC /* CTTeamListViewController.m in Sources */,
 				326AC1E221FAAA9C008C154B /* CTSearchTikcetNavView.m in Sources */,
 				240E189421F5F7D4004A4BCB /* CTGetCodeViewModel.m in Sources */,
@@ -3580,6 +3795,7 @@
 				322453D621F2BFC200471059 /* CTBaseViewController.m in Sources */,
 				32BD0E342201847200E99B86 /* CTSetViewController.m in Sources */,
 				32AE79A12216914600E29FC3 /* CTSharePopView.m in Sources */,
+				32FD1297223F7A7200CB85C1 /* CTRecommendService.m in Sources */,
 				32BE611F21EDCFA600BA52EF /* NSTimer+YYAdd.m in Sources */,
 				32BE610021EDCFA600BA52EF /* TZPhotoPreviewCell.m in Sources */,
 				326525E121F5C8BE00B63DD7 /* CTCanValidButton.m in Sources */,
@@ -3679,6 +3895,7 @@
 				322453B521F2BE6F00471059 /* CTSearchTicketService.m in Sources */,
 				32E7EE7221F331E500191789 /* CTHomeSalesView.m in Sources */,
 				32EDC59F2221186C00AFF766 /* UIScrollView+CTPagePanGes.m in Sources */,
+				32FD1255223F2C4C00CB85C1 /* CTGoodsDescView.m in Sources */,
 				240E18A321F5FB0D004A4BCB /* CTSetPasswordViewModel.m in Sources */,
 				2407A8E121FD8868000403B7 /* CTMemberEquityTypeView.m in Sources */,
 				32ED00E3222D25F5008A1640 /* WCQRCodeVC.m in Sources */,
@@ -3845,6 +4062,17 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 9ZJ3RLKNS9;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CouponTicket/ThirdLib/AlibcTradeSDK/Frameworks",
+					"$(PROJECT_DIR)/Pods/UMCShare/UMShare",
+					"$(PROJECT_DIR)/Pods/UMCSecurityPlugins/thirdparties",
+					"$(PROJECT_DIR)/Pods/UMCCommon",
+					"$(PROJECT_DIR)/CouponTicket/ThirdLib/UMShare/UMCShare/UMShare",
+					"$(PROJECT_DIR)/CouponTicket/ThirdLib/UMShare/UMCCommon",
+					"$(PROJECT_DIR)/CouponTicket/ThirdLib/UMShare/UMCSecurityPlugins/thirdparties",
+				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/CouponTicket/SystemConfigs/CTPrefixHeader.pch";
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = NO;
 				INFOPLIST_FILE = "$(SRCROOT)/CouponTicket/SystemConfigs/Info.plist";
@@ -3852,6 +4080,85 @@
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/UMCShare/UMShare/SocialLibraries/QQ",
+					"$(PROJECT_DIR)/Pods/UMCShare/UMShare/SocialLibraries/WeChat",
+					"$(PROJECT_DIR)/CouponTicket/ThirdLib/UMShare/UMCShare/UMShare/SocialLibraries/QQ",
+					"$(PROJECT_DIR)/CouponTicket/ThirdLib/UMShare/UMCShare/UMShare/SocialLibraries/WeChat",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"AFNetworking\"",
+					"-l\"GPUImage\"",
+					"-l\"HappyDNS\"",
+					"-l\"IQKeyboardManager\"",
+					"-l\"MBProgressHUD\"",
+					"-l\"Masonry\"",
+					"-l\"PLeakSniffer\"",
+					"-l\"Qiniu\"",
+					"-l\"ReactiveObjC\"",
+					"-l\"SDCycleScrollView\"",
+					"-l\"SDWebImage\"",
+					"-l\"SGQRCode\"",
+					"-l\"SocialQQ\"",
+					"-l\"SocialWeChat\"",
+					"-l\"UITableView+FDTemplateLayoutCell\"",
+					"-l\"YYModel\"",
+					"-l\"YYText\"",
+					"-l\"ZLPhotoBrowser\"",
+					"-l\"jcore-ios-1.2.5\"",
+					"-l\"jpush-ios-3.1.1\"",
+					"-l\"resolv\"",
+					"-l\"sqlite3\"",
+					"-l\"z\"",
+					"-framework",
+					"\"AVFoundation\"",
+					"-framework",
+					"\"Accelerate\"",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"CoreFoundation\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreMedia\"",
+					"-framework",
+					"\"CoreTelephony\"",
+					"-framework",
+					"\"CoreText\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"OpenGLES\"",
+					"-framework",
+					"\"Photos\"",
+					"-framework",
+					"\"PhotosUI\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-framework",
+					"\"UMCommon\"",
+					"-framework",
+					"\"UMShare\"",
+					"-framework",
+					"\"UTDID\"",
+					"-weak_framework",
+					"\"UserNotifications\"",
+					"-lstdc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = cn.dankal.coupon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -3869,6 +4176,17 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 9ZJ3RLKNS9;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CouponTicket/ThirdLib/AlibcTradeSDK/Frameworks",
+					"$(PROJECT_DIR)/Pods/UMCShare/UMShare",
+					"$(PROJECT_DIR)/Pods/UMCSecurityPlugins/thirdparties",
+					"$(PROJECT_DIR)/Pods/UMCCommon",
+					"$(PROJECT_DIR)/CouponTicket/ThirdLib/UMShare/UMCShare/UMShare",
+					"$(PROJECT_DIR)/CouponTicket/ThirdLib/UMShare/UMCCommon",
+					"$(PROJECT_DIR)/CouponTicket/ThirdLib/UMShare/UMCSecurityPlugins/thirdparties",
+				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/CouponTicket/SystemConfigs/CTPrefixHeader.pch";
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = NO;
 				INFOPLIST_FILE = "$(SRCROOT)/CouponTicket/SystemConfigs/Info.plist";
@@ -3876,6 +4194,85 @@
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/UMCShare/UMShare/SocialLibraries/QQ",
+					"$(PROJECT_DIR)/Pods/UMCShare/UMShare/SocialLibraries/WeChat",
+					"$(PROJECT_DIR)/CouponTicket/ThirdLib/UMShare/UMCShare/UMShare/SocialLibraries/QQ",
+					"$(PROJECT_DIR)/CouponTicket/ThirdLib/UMShare/UMCShare/UMShare/SocialLibraries/WeChat",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"AFNetworking\"",
+					"-l\"GPUImage\"",
+					"-l\"HappyDNS\"",
+					"-l\"IQKeyboardManager\"",
+					"-l\"MBProgressHUD\"",
+					"-l\"Masonry\"",
+					"-l\"PLeakSniffer\"",
+					"-l\"Qiniu\"",
+					"-l\"ReactiveObjC\"",
+					"-l\"SDCycleScrollView\"",
+					"-l\"SDWebImage\"",
+					"-l\"SGQRCode\"",
+					"-l\"SocialQQ\"",
+					"-l\"SocialWeChat\"",
+					"-l\"UITableView+FDTemplateLayoutCell\"",
+					"-l\"YYModel\"",
+					"-l\"YYText\"",
+					"-l\"ZLPhotoBrowser\"",
+					"-l\"jcore-ios-1.2.5\"",
+					"-l\"jpush-ios-3.1.1\"",
+					"-l\"resolv\"",
+					"-l\"sqlite3\"",
+					"-l\"z\"",
+					"-framework",
+					"\"AVFoundation\"",
+					"-framework",
+					"\"Accelerate\"",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"CoreFoundation\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreMedia\"",
+					"-framework",
+					"\"CoreTelephony\"",
+					"-framework",
+					"\"CoreText\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"OpenGLES\"",
+					"-framework",
+					"\"Photos\"",
+					"-framework",
+					"\"PhotosUI\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-framework",
+					"\"UMCommon\"",
+					"-framework",
+					"\"UMShare\"",
+					"-framework",
+					"\"UTDID\"",
+					"-weak_framework",
+					"\"UserNotifications\"",
+					"-lstdc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = cn.dankal.coupon;
 				PRODUCT_NAME = "$(TARGET_NAME)";

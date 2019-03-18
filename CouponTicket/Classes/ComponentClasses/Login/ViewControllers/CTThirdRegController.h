@@ -14,6 +14,6 @@
 
 @property (nonatomic, assign) CTEventKind eventKind;
 
-@property (nonatomic, strong) UMSocialUserInfoResponse *response;
+@property (nonatomic, strong) CTUMSocialUserInfoResponse *response;
 
 @end

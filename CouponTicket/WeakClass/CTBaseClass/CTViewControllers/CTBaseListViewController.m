@@ -20,7 +20,7 @@
     self.pageIndex = 1;
     self.pageSize = 15;
     self.canLoadMore = YES;
-    self.dataSoures = [NSMutableArray array];
+    self.dataSources = [NSMutableArray array];
 }
 
 - (CTTableView *)tableView{
@@ -69,12 +69,12 @@
         [self.tableView endRefreshing];
         if(!error){
             if(!self.isLoadMore){
-                [self.dataSoures removeAllObjects];
+                [self.dataSources removeAllObjects];
             }
             NSArray *models = [modelClass yy_modelsWithDatas:data];
             for(int i = 0;i < models.count;i ++){
     
-                [self.dataSoures addObject:[viewModelClass bindModel:models[i]]];
+                [self.dataSources addObject:[viewModelClass bindModel:models[i]]];
             }
             [self.tableView reloadData];
     
@@ -84,7 +84,7 @@
             else{
                 [self.tableView hiddenNulMoreView];
             }
-            if(!self.isLoadMore && self.dataSoures.count == 0){
+            if(!self.isLoadMore && self.dataSources.count == 0){
                 [LMNetErrorView showNoDataResultOnView:self.tableView];
             }
             else{
@@ -95,7 +95,7 @@
             if(self.isLoadMore){
                 self.pageIndex --;
             }
-            if(error == CTNetErrorNet && self.dataSoures.count == 0){
+            if(error == CTNetErrorNet && self.dataSources.count == 0){
                 [LMNetErrorView showNoNetErrorResultOnView:self.view clickRefreshBlock:^{
                     [self request];
                 }];

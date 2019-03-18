@@ -1,7 +1,9 @@
-
+source 'https://github.com/CocoaPods/Specs.git'
+source 'http://repo.baichuan-ios.taobao.com/baichuanSDK/AliBCSpecs.git'
 target 'CouponTicket' do
   platform :ios, '8.0'
   inhibit_all_warnings!
+  #pod 'AlibcTradeSDK'
   pod 'AFNetworking',       '~>3.2.1'
   pod 'ReactiveObjC',       '~>3.1.0'
   pod 'YYModel',            '~>1.0.4'
@@ -19,6 +21,7 @@ target 'CouponTicket' do
   pod 'JPush',              '~>3.1.0'
   pod 'SDCycleScrollView',   '~>1.75'
   #pod 'FDFullscreenPopGesture', '~>1.1'
+  
   pod 'UMCCommon'
   pod 'UMCSecurityPlugins'
   pod 'UMCShare/Social/ReducedWeChat'

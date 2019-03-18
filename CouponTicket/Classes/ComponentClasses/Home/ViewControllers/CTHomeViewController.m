@@ -217,7 +217,7 @@
     //销量榜商品点击
     [self.salesView setClickItemBlock:^(NSInteger index) {
         @strongify(self)
-        UIViewController *vc = [[CTModuleManager goodListService]goodDetailViewControllerWithGoodId:nil];
+        UIViewController *vc = [[CTModuleManager goodListService]goodDetailViewControllerWithGoodId:self.viewModel.model.hot_goods.goods[index].uid];
         [self.navigationController pushViewController:vc animated:YES];
     }];
 }

@@ -8,8 +8,12 @@
 
 #import "CTBaseViewController.h"
 
+#import "CTGoodsViewModel.h"
+
 @interface CTGoodDetailViewController : CTBaseViewController
 
 @property (nonatomic, copy) NSString *goog_id;
+
+@property (nonatomic, strong) CTGoodsViewModel *viewModel;
 
 @end

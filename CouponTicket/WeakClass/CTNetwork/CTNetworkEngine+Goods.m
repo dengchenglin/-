@@ -16,23 +16,24 @@
 - (CLRequest *)goodsDetailWithId:(NSString *)Id callback:(CTResponseBlock)callback{
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     [params setValue:Id forKey:@"id"];
-    return [self postWithPath:CTGoods(@"goodsDetail") params:nil callback:callback];
+    return [self postWithPath:CTGoods(@"goodsDetail") params:params callback:callback];
 }
 
 //获取商品链接（转链）
 - (CLRequest *)goodsUrlConvertWithTbGoodId:(NSString *)tbGoodId callback:(CTResponseBlock)callback{
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     [params setValue:tbGoodId forKey:@"tb_goods_id"];
-    return [self postWithPath:CTGoods(@"goods_url_convert") params:nil callback:callback];
+    return [self postWithPath:CTGoods(@"goods_url_convert") params:params callback:callback];
 }
 
 //搜索
 - (CLRequest *)goodsSearchWithKeyword:(NSString *)keyword page:(NSInteger)page size:(NSInteger)size order:(NSString *)order callback:(CTResponseBlock)callback{
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    [params setValue:keyword forKey:@"keyword"];
     [params setValue:@(page) forKey:@"page"];
     [params setValue:@(size) forKey:@"size"];
     [params setValue:order forKey:@"order"];
-    return [self postWithPath:CTGoods(@"goods_search") params:nil callback:callback];
+    return [self postWithPath:CTGoods(@"goods_search") params:params callback:callback];
 }
 
 @end

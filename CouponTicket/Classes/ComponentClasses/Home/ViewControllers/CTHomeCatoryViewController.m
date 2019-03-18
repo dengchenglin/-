@@ -37,7 +37,7 @@
 
 @property (nonatomic, copy) NSArray <CTCategoryModel *>*subCategoryModels;
 
-@property (nonatomic, strong) NSMutableArray <CTGoodsViewModel *> *dataSoures;
+@property (nonatomic, strong) NSMutableArray <CTGoodsViewModel *> *dataSources;
 
 @end
 
@@ -87,11 +87,11 @@
 }
 
 
-- (NSMutableArray<CTGoodsViewModel *> *)dataSoures{
-    if(!_dataSoures){
-        _dataSoures = [NSMutableArray array];
+- (NSMutableArray<CTGoodsViewModel *> *)dataSources{
+    if(!_dataSources){
+        _dataSources = [NSMutableArray array];
     }
-    return _dataSoures;
+    return _dataSources;
 }
 
 - (instancetype)init
@@ -154,7 +154,7 @@
             self.categoryView.categoryModels = self.subCategoryModels;
             [self.tableView reloadData];
         }
-        else if (!self.subCategoryModels.count && !self.dataSoures.count){
+        else if (!self.subCategoryModels.count && !self.dataSources.count){
             [LMNoDataView showNoNetErrorResultOnView:self.view clickRefreshBlock:^{
                 [self request];
             }];
@@ -168,10 +168,10 @@
     [CTRequest cateGoodsWithPage:self.pageIndex size:self.pageSize cateId:self.cateId order:self.viewModel.order callback:^(NSArray *data, CLRequest *request, CTNetError error) {
         if(!error){
             if(!self.isLoadMore){
-                [self.dataSoures removeAllObjects];
+                [self.dataSources removeAllObjects];
             }
             for(int i = 0;i < data.count;i ++){
-                [self.dataSoures addObject:[CTGoodsViewModel bindModel:[CTGoodsModel yy_modelWithDictionary:data[i]]]];
+                [self.dataSources addObject:[CTGoodsViewModel bindModel:[CTGoodsModel yy_modelWithDictionary:data[i]]]];
             }
             [self.tableView reloadData];
             if(data.count < self.pageSize){
@@ -219,7 +219,7 @@
     if(section == 0){
         return 0;
     }
-    return self.dataSoures.count;
+    return self.dataSources.count;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     if(indexPath.section == 0){
@@ -232,12 +232,12 @@
         return nil;
     }
     CTGoodListCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(CTGoodListCell.class)];
-    cell.viewModel = self.dataSoures[indexPath.row];
+    cell.viewModel = self.dataSources[indexPath.row];
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    UIViewController *vc = [[CTModuleManager goodListService]goodDetailViewControllerWithGoodId:self.dataSoures[indexPath.row].model.uid];
+    UIViewController *vc = [[CTModuleManager goodListService]goodDetailViewControllerWithGoodId:self.dataSources[indexPath.row].model.uid];
     [self.navigationController pushViewController:vc animated:YES];
 }
 
