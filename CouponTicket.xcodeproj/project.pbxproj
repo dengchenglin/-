@@ -3311,7 +3311,8 @@
 				32FD13C4223FBAAE00CB85C1 /* CTRecommendService.h */,
 				32FD13C5223FBAAE00CB85C1 /* CTRecommendService.m */,
 			);
-			path = Service;
+			name = Service;
+			path = "../../../../../项目/淘券模块/ios_coupon_ticket/CouponTicket/Classes/ComponentClasses/Recommend/Service";
 			sourceTree = "<group>";
 		};
 		32FD13C6223FBAAE00CB85C1 /* ViewControllers */ = {
@@ -3320,7 +3321,8 @@
 				32FD13C7223FBAAE00CB85C1 /* CTRecommendViewController.h */,
 				32FD13C8223FBAAE00CB85C1 /* CTRecommendViewController.m */,
 			);
-			path = ViewControllers;
+			name = ViewControllers;
+			path = "../../../../../项目/淘券模块/ios_coupon_ticket/CouponTicket/Classes/ComponentClasses/Recommend/ViewControllers";
 			sourceTree = "<group>";
 		};
 		81B790F6F60DCAA925C30A30 /* Pods */ = {
