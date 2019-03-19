@@ -13,6 +13,22 @@
 @implementation CTNetworkEngine (Member)
 //会员信息
 - (CLRequest *)userIndexWithCallback:(CTResponseBlock)callback{
-    return [self postWithPath:CTUser(@"index") params:nil callback:callback];
+    NSString *path = CLDocumentPath(CTUser(@"index"));
+    NSDictionary *data = [[NSDictionary alloc]initWithContentsOfFile:path];
+    if(callback && data){
+        callback(data,nil,0);
+    }
+    return [self postWithPath:CTUser(@"index") params:nil callback:^(id data, CLRequest *request, CTNetError error) {
+        if(callback){
+            callback(data,request,error);
+        }
+        if(!error){
+            [((NSDictionary *)data) writeToFile:path atomically:YES];
+        }
+    }];
+}
+//会员权益
+- (CLRequest *)userPowerWithCallback:(CTResponseBlock)callback{
+    return [self postWithPath:CTUser(@"user_power") params:nil callback:callback];
 }
 @end

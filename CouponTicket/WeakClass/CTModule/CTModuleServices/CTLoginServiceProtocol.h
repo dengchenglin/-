@@ -12,6 +12,8 @@
 
 @protocol CTLoginServiceProtocol <NSObject,CLModuleServiceProtocol>
 
+- (void)showLoginFromViewController:(UIViewController *)viewController success:(void(^)(void))success failure:(void(^)(void))failure;
+
 - (void)showLoginFromViewController:(UIViewController *)viewController callback:(void(^)(BOOL logined))callback;
 
 - (void)pushWithdrawSetpsdFromViewController:(UIViewController *)viewController mobile:(NSString *)mobile completed:(void(^)(void))completed;

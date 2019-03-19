@@ -12,11 +12,13 @@
 
 #import "CTMemberEquityItem.h"
 
+#import "CTMemberInfoModel.h"
+
 @interface CTMemberEquityView : UIView
 
 @property (nonatomic, strong) CTMemberTitleView *titleView;
 
-@property (nonatomic, copy) NSArray *models;
+@property (nonatomic, copy) NSArray <CTMemberRebateModel *>*models;
 
 
 @end

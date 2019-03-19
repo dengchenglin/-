@@ -20,9 +20,11 @@
 }
 
 //获取商品链接（转链）
-- (CLRequest *)goodsUrlConvertWithTbGoodId:(NSString *)tbGoodId callback:(CTResponseBlock)callback{
+- (CLRequest *)goodsUrlConvertWithTbGoodUrl:(NSString *)goodUrl tbCode:(NSString *)tbCode tbToken:(NSString *)tbToken callback:(CTResponseBlock)callback{
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
-    [params setValue:tbGoodId forKey:@"tb_goods_id"];
+    [params setValue:goodUrl forKey:@"coupon_share_url"];
+    [params setValue:tbCode forKey:@"tb_code"];
+    [params setValue:tbToken forKey:@"tb_token"];
     return [self postWithPath:CTGoods(@"goods_url_convert") params:params callback:callback];
 }
 
@@ -34,6 +36,15 @@
     [params setValue:@(size) forKey:@"size"];
     [params setValue:order forKey:@"order"];
     return [self postWithPath:CTGoods(@"goods_search") params:params callback:callback];
+}
+
+//商品收藏
+- (CLRequest *)favoriteWithGoodsId:(NSString *)goodsId isFavorite:(BOOL)isFavorite callback:(CTResponseBlock)callback{
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+
+    [params setValue:goodsId forKey:@"goods_id"];
+    [params setValue:@(isFavorite) forKey:@"is_favorite"];
+    return [self postWithPath:CTGoods(@"favorite") params:params callback:callback];
 }
 
 @end

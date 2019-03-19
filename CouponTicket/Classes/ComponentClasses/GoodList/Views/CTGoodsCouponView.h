@@ -11,6 +11,7 @@
 @interface CTGoodsCouponView : UIView
 @property (weak, nonatomic) IBOutlet UILabel *couonTextLabel;
 
+@property (weak, nonatomic) IBOutlet UIView *couponTimeView;
 @property (weak, nonatomic) IBOutlet UILabel *couponTimeLabel;
 @property (nonatomic, strong) CTGoodsViewModel *viewModel;
 @end

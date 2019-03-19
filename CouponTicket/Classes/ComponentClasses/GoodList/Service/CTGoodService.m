@@ -43,6 +43,11 @@ CL_EXPORT_MODULE(CTGoodListServiceProtocol)
     vc.goog_id = goodId;
     return vc;
 }
+- (UIViewController *)goodDetailViewControllerWithGoodViewModel:(id)viewModel{
+    CTGoodDetailViewController * vc = [CTGoodDetailViewController new];
+    vc.viewModel = viewModel;
+    return vc;
+}
 
 - (UIViewController *)hotsalesViewController{
     return [CThotSalesListViewController new];

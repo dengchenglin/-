@@ -39,7 +39,7 @@ ViewInstance(setUp)
     }];
 }
 
-- (void)setModels:(NSArray *)models{
+- (void)setModels:(NSArray<CTMemberRebateModel *> *)models{
     _models = [models copy];
     [self reloadView];
 }
@@ -53,6 +53,8 @@ ViewInstance(setUp)
     NSInteger count = _models.count;
     for(int i = 0;i < count;i ++){
         CTMemberEquityItem *item = NSMainBundleClass(CTMemberEquityItem.class);
+        item.valueLabel.text = _models[i].fx_scale;
+        item.typeLabel.text = _models[i].fx_level;
         [_containerView addSubview:item];
         CGFloat left = (i%lineCount) * itemWidth;
         CGFloat top = (i/lineCount) * itemHeight;

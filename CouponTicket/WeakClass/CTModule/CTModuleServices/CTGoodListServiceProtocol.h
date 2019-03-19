@@ -10,8 +10,6 @@
 
 #import "CLModuleServiceProtocol.h"
 
-
-
 @protocol CTGoodListServiceProtocol <NSObject,CLModuleServiceProtocol>
 
 - (UIViewController *)goodListViewControllerWithCategoryId:(NSString *)categoryId;
@@ -19,6 +17,8 @@
 - (UIViewController *)goodListViewControllerWithActivityId:(NSString *)activityId;
 
 - (UIViewController *)goodDetailViewControllerWithGoodId:(NSString *)goodId;
+
+- (UIViewController *)goodDetailViewControllerWithGoodViewModel:(id)viewModel;
 
 - (UIViewController *)hotsalesViewController;
 

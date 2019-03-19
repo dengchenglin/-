@@ -194,7 +194,18 @@
         @strongify(self)
         [self loadData];
     }];
-    
+    //轮播
+    [self.bannerView setClickItemBlock:^(NSInteger index) {
+        @strongify(self)
+         [[CTModuleManager webService] pushWebFromViewController:self url:self.viewModel.model.advs[index].url];
+    }];
+    //活动数据
+    [self.advertView addActionWithBlock:^(id target) {
+        @strongify(self)
+        UIViewController *vc = [[CTModuleManager goodListService] goodListViewControllerWithActivityId:self.viewModel.model.activity_banner.uid];
+        vc.title = self.viewModel.model.activity_banner.title;
+        [self.navigationController pushViewController:vc animated:YES];
+    }];
     //五个导航按钮
     [self.navView setClickItemBlock:^(CTActivityModel *model) {
         @strongify(self)
@@ -206,6 +217,12 @@
     [self.spreeShopView.headView addActionWithBlock:^(id target) {
         @strongify(self)
         UIViewController *vc = [[CTModuleManager goodListService] spreeShopViewController];
+        [self.navigationController pushViewController:vc animated:YES];
+    }];
+    //整点抢购商品点击
+    [self.spreeShopView setClickItemBlock:^(NSInteger index) {
+        @strongify(self)
+        UIViewController *vc = [[CTModuleManager goodListService]goodDetailViewControllerWithGoodId:self.viewModel.model.cur_time_buy.goods[index].uid];
         [self.navigationController pushViewController:vc animated:YES];
     }];
     //销量榜

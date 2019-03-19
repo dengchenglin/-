@@ -208,7 +208,17 @@ ViewInstance(setUp)
 }
 
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section{
-    return section==0?UIEdgeInsetsMake(15, 10, 15, 15):UIEdgeInsetsMake(0, 13, 15, 15);
+    if(section == 0){
+        if(self.hotKeywordsViewModels.count){
+            return UIEdgeInsetsMake(15, 10, 15, 15);
+        }
+    }
+    else if (section == 1){
+        if(self.historyKeywordsViewModels.count){
+             return UIEdgeInsetsMake(0, 13, 15, 15);
+        }
+    }
+    return UIEdgeInsetsZero;
 }
 
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section{

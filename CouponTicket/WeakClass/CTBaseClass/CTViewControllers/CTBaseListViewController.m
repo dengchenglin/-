@@ -28,6 +28,7 @@
         _tableView = [[CTTableView alloc]init];
         _tableView.dataSource = self;
         _tableView.delegate = self;
+        _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         [_tableView setTableFooterView:[[UIView alloc] initWithFrame:CGRectZero]];
         [self.view addSubview:_tableView];
         [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {

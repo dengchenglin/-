@@ -17,7 +17,7 @@
 
 + (void)config{
 
-    [self configSniffer];
+    //[self configSniffer];
 
 }
 

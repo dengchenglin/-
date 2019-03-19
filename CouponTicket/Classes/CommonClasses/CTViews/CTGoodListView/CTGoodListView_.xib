@@ -118,23 +118,23 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b1S-Yy-U8L">
-                            <rect key="frame" x="295" y="117" width="85" height="30"/>
+                            <rect key="frame" x="303.5" y="117" width="76.5" height="30"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5ST-cF-eRh">
-                                    <rect key="frame" x="0.0" y="0.0" width="85" height="30"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="76.5" height="30"/>
                                 </imageView>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pic_list_coupon_bg2" translatesAutoresizingMaskIntoConstraints="NO" id="eyb-H0-Jir">
-                                    <rect key="frame" x="43" y="1" width="42" height="32"/>
+                                    <rect key="frame" x="34.5" y="1" width="42" height="32"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="42" id="3n7-KL-sfl"/>
                                         <constraint firstAttribute="height" constant="32" id="rlb-kt-y5M"/>
                                     </constraints>
                                 </imageView>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P87-MY-Dnu">
-                                    <rect key="frame" x="0.0" y="0.0" width="43" height="30"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="34.5" height="30"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hiv-h4-u8N">
-                                            <rect key="frame" x="9.5" y="0.0" width="24.5" height="30"/>
+                                            <rect key="frame" x="9.5" y="0.0" width="16" height="30"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¥" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fk1-Ba-0jN">
                                                     <rect key="frame" x="0.0" y="9" width="7" height="12"/>
@@ -142,8 +142,8 @@
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="38" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iec-fm-bbx">
-                                                    <rect key="frame" x="7" y="6" width="17.5" height="17"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iec-fm-bbx">
+                                                    <rect key="frame" x="7" y="6" width="9" height="17"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -163,6 +163,7 @@
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstItem="Hiv-h4-u8N" firstAttribute="centerY" secondItem="P87-MY-Dnu" secondAttribute="centerY" id="F8G-LM-yOJ"/>
+                                        <constraint firstItem="Hiv-h4-u8N" firstAttribute="centerX" secondItem="P87-MY-Dnu" secondAttribute="centerX" id="Pmo-pg-abL"/>
                                         <constraint firstAttribute="trailing" secondItem="Hiv-h4-u8N" secondAttribute="trailing" constant="9" id="fMQ-S1-d9v"/>
                                         <constraint firstItem="Hiv-h4-u8N" firstAttribute="leading" secondItem="P87-MY-Dnu" secondAttribute="leading" constant="9.5" id="zSO-bE-NXJ"/>
                                     </constraints>

@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 typedef NS_ENUM(NSInteger,CTMemberLevel) {
-    CTMemberStudent,
+    CTMemberStudent = 1,
     CTMemberTeacher,
     CTMemberMatser,
     CTMemberPartner

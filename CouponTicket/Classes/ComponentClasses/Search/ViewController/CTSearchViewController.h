@@ -12,6 +12,8 @@
 
 @property (nonatomic, strong) UITableView *dataTableView;
 
+- (NSString *)keyword;
+
 - (void)searchKeyword:(NSString *)keyword;
 
 @end

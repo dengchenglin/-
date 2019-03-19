@@ -19,7 +19,14 @@
     if(callback && data){
         callback(data,nil,0);
     }
-    return  [self postWithPath:CTIndex(@"index") params:nil callback:callback];
+    return  [self postWithPath:CTIndex(@"index") params:nil callback:^(id data, CLRequest *request, CTNetError error) {
+        if(callback){
+            callback(data,request,error);
+        }
+        if(!error){
+            [((NSDictionary *)data) writeToFile:path atomically:YES];
+        }
+    }];
 }
 //当前整点抢购
 - (CLRequest *)curTimeBuyWithTime:(NSString *)time callback:(CTResponseBlock)callback{

@@ -12,5 +12,6 @@
 
 //会员信息
 - (CLRequest *)userIndexWithCallback:(CTResponseBlock)callback;
-
+//会员权益
+- (CLRequest *)userPowerWithCallback:(CTResponseBlock)callback;
 @end

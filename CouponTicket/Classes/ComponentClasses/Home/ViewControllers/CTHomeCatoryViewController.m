@@ -129,7 +129,8 @@
     }];
     [self.categoryView setClickItemBlock:^(NSInteger index) {
         @strongify(self)
-        UIViewController *vc = [[CTModuleManager goodListService]goodListViewControllerWithCategoryId:nil];
+        UIViewController *vc = [[CTModuleManager goodListService]goodListViewControllerWithCategoryId:self.subCategoryModels[index].uid];
+        vc.title = self.subCategoryModels[index].title;
         [self.navigationController pushViewController:vc animated:YES];
     }];
     [self.sortView setClickBlock:^(CTGoodSortType type) {

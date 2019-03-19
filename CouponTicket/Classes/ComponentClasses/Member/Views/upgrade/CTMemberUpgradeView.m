@@ -14,7 +14,7 @@ ViewInstance(setUp)
 
 - (void)setUp{
     _titleView = NSMainBundleClass(CTMemberTitleView.class);
-    _titleView.titleLabel.text = @"我的特权";
+    _titleView.titleLabel.text = @"升级条件";
     [self addSubview:_titleView];
     
     _containerView = NSMainBundleClass(CTMemberUpgradeContainerView.class);

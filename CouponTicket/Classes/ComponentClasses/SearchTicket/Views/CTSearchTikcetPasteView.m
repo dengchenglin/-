@@ -52,7 +52,7 @@
         if(!self.textView.text.length){
              [self paste];
         }
-        if(self.searchBlock){
+        if(self.searchBlock && self.textView.text.wipSpace.length){
             self.searchBlock(self.textView.text);
         }
     }];

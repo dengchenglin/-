@@ -25,7 +25,7 @@
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pic_coupon_front" translatesAutoresizingMaskIntoConstraints="NO" id="f2i-0j-pSx">
                                     <rect key="frame" x="0.0" y="0.0" width="246.5" height="141"/>
                                 </imageView>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1MJ-lb-mZ6">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1MJ-lb-mZ6">
                                     <rect key="frame" x="123.5" y="51.5" width="0.0" height="0.0"/>
                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -59,8 +59,10 @@
                                 <constraint firstItem="f2i-0j-pSx" firstAttribute="top" secondItem="atY-kb-Djd" secondAttribute="top" id="QcC-KB-XAd"/>
                                 <constraint firstItem="1MJ-lb-mZ6" firstAttribute="centerX" secondItem="atY-kb-Djd" secondAttribute="centerX" id="UJj-Uk-jdx"/>
                                 <constraint firstAttribute="trailing" secondItem="f2i-0j-pSx" secondAttribute="trailing" id="Wy3-e4-Xqg"/>
+                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="1MJ-lb-mZ6" secondAttribute="trailing" constant="10" id="a5g-gt-8ci"/>
                                 <constraint firstItem="f2i-0j-pSx" firstAttribute="leading" secondItem="atY-kb-Djd" secondAttribute="leading" id="cyu-Ei-aUy"/>
                                 <constraint firstAttribute="bottom" secondItem="f2i-0j-pSx" secondAttribute="bottom" id="h9D-5h-LCK"/>
+                                <constraint firstItem="1MJ-lb-mZ6" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="atY-kb-Djd" secondAttribute="leading" constant="10" id="qKx-ej-Iq5"/>
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mhZ-xc-Qob">
@@ -129,7 +131,9 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="couonTextLabel" destination="1MJ-lb-mZ6" id="fI5-DX-E0V"/>
+                <outlet property="couponTextCenterY" destination="8Cf-f7-NDr" id="hha-HR-mKa"/>
                 <outlet property="couponTimeLabel" destination="dt1-Wg-GMo" id="smt-Tx-K9j"/>
+                <outlet property="couponTimeView" destination="NFx-Jg-mCm" id="H7H-DS-kbE"/>
             </connections>
             <point key="canvasLocation" x="-234.5" y="129.5"/>
         </view>

@@ -365,6 +365,8 @@
 		32DB93D0221573E400300ACC /* CTUserInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 32DB93CF221573E400300ACC /* CTUserInfoView.m */; };
 		32DB93D2221573EB00300ACC /* CTUserInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32DB93D1221573EB00300ACC /* CTUserInfoView.xib */; };
 		32DB93D52215771900300ACC /* CTUserDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32DB93D42215771900300ACC /* CTUserDetailViewController.m */; };
+		32E7A5942240D9890074069D /* CTMemberInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 32E7A5932240D9880074069D /* CTMemberInfoModel.m */; };
+		32E7A5972240F1C10074069D /* AliTradeWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32E7A5962240F1C10074069D /* AliTradeWebViewController.m */; };
 		32E7EE5221F2F70700191789 /* CTHomeViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 32E7EE5121F2F70700191789 /* CTHomeViewModel.m */; };
 		32E7EE5521F2F7E700191789 /* CTHomeTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 32E7EE5421F2F7E700191789 /* CTHomeTopView.m */; };
 		32E7EE5721F3013B00191789 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 32E7EE5621F3013B00191789 /* Info.plist */; };
@@ -1007,7 +1009,7 @@
 		32BE60E721EDCFA600BA52EF /* WSDatePickerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WSDatePickerView.xib; sourceTree = "<group>"; };
 		32BE613421EDD04A00BA52EF /* CTPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTPrefixHeader.pch; sourceTree = "<group>"; };
 		32BE614921EDDBBB00BA52EF /* CTHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTHomeViewController.h; sourceTree = "<group>"; };
-		32BE614A21EDDBBB00BA52EF /* CTHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTHomeViewController.m; sourceTree = "<group>"; };
+		32BE614A21EDDBBB00BA52EF /* CTHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTHomeViewController.m; sourceTree = "<group>"; wrapsLines = 0; };
 		32CA555321F6AD1600145E31 /* CTShareViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTShareViewController.h; sourceTree = "<group>"; };
 		32CA555421F6AD1600145E31 /* CTShareViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTShareViewController.m; sourceTree = "<group>"; };
 		32CA555621F6AD3700145E31 /* CTShareServiceProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTShareServiceProtocol.h; sourceTree = "<group>"; };
@@ -1120,6 +1122,10 @@
 		32DB93D1221573EB00300ACC /* CTUserInfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CTUserInfoView.xib; sourceTree = "<group>"; };
 		32DB93D32215771900300ACC /* CTUserDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTUserDetailViewController.h; sourceTree = "<group>"; };
 		32DB93D42215771900300ACC /* CTUserDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTUserDetailViewController.m; sourceTree = "<group>"; };
+		32E7A5922240D9880074069D /* CTMemberInfoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTMemberInfoModel.h; sourceTree = "<group>"; };
+		32E7A5932240D9880074069D /* CTMemberInfoModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTMemberInfoModel.m; sourceTree = "<group>"; };
+		32E7A5952240F1C10074069D /* AliTradeWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AliTradeWebViewController.h; sourceTree = "<group>"; };
+		32E7A5962240F1C10074069D /* AliTradeWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AliTradeWebViewController.m; sourceTree = "<group>"; };
 		32E7EE5021F2F70700191789 /* CTHomeViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTHomeViewModel.h; sourceTree = "<group>"; };
 		32E7EE5121F2F70700191789 /* CTHomeViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTHomeViewModel.m; sourceTree = "<group>"; };
 		32E7EE5321F2F7E700191789 /* CTHomeTopView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTHomeTopView.h; sourceTree = "<group>"; };
@@ -2880,6 +2886,7 @@
 		32BE613921EDD2C500BA52EF /* Member */ = {
 			isa = PBXGroup;
 			children = (
+				32E7A5912240D69A0074069D /* Models */,
 				326AC20521FB0DC9008C154B /* Views */,
 				322453BA21F2BE8D00471059 /* Service */,
 				325D3B5021F1DDAF00465B91 /* ViewControllers */,
@@ -3117,6 +3124,15 @@
 			path = WebView;
 			sourceTree = "<group>";
 		};
+		32E7A5912240D69A0074069D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				32E7A5922240D9880074069D /* CTMemberInfoModel.h */,
+				32E7A5932240D9880074069D /* CTMemberInfoModel.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		32E7EE4A21F2F0D800191789 /* LMSegmentedControl */ = {
 			isa = PBXGroup;
 			children = (
@@ -3233,6 +3249,8 @@
 				32FD13C0223F9AA400CB85C1 /* yw_1222.jpg */,
 				32FD12C3223F7B3800CB85C1 /* AliTradeManager.h */,
 				32FD12C4223F7B3800CB85C1 /* AliTradeManager.m */,
+				32E7A5952240F1C10074069D /* AliTradeWebViewController.h */,
+				32E7A5962240F1C10074069D /* AliTradeWebViewController.m */,
 			);
 			path = AliTradeManager;
 			sourceTree = "<group>";
@@ -3728,6 +3746,7 @@
 				32BE600521EDC5E100BA52EF /* AppDelegate.m in Sources */,
 				3280739021FEEC74009CABEC /* CTMineEarnView.m in Sources */,
 				326AC1EF21FAC26E008C154B /* UIPasteboard+Helper.m in Sources */,
+				32E7A5942240D9890074069D /* CTMemberInfoModel.m in Sources */,
 				32BD0E5C2201A19E00E99B86 /* CTUpdateImageView.m in Sources */,
 				32BE60ED21EDCFA600BA52EF /* CLRequest.m in Sources */,
 				326AC1FB21FAE6C9008C154B /* CTSearchTicketViewModel.m in Sources */,
@@ -3834,6 +3853,7 @@
 				2407A8F521FD90A1000403B7 /* CTMemberEquityPageView.m in Sources */,
 				32FEAA0D221426EC001156CC /* CTEarnDescView.m in Sources */,
 				32BE613221EDCFA600BA52EF /* WSDatePickerView.m in Sources */,
+				32E7A5972240F1C10074069D /* AliTradeWebViewController.m in Sources */,
 				32CA557321F6C53E00145E31 /* CTHomeCategoryViewModel.m in Sources */,
 				32A28ED92202F52F0049B003 /* CTMyCollectListViewController.m in Sources */,
 				32FEAA0A22142388001156CC /* CTEarnDetailViewController.m in Sources */,

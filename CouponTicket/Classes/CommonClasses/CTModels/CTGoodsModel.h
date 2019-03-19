@@ -37,6 +37,7 @@ NSString *GetTypeImageStr(NSInteger status);
 @property (nonatomic, copy) NSString *package_stock;
 @property (nonatomic, copy) NSString *package_sale;
 @property (nonatomic, assign) NSInteger favorite_num;
+@property (nonatomic, assign) BOOL is_favorite;
 @property (nonatomic, copy) NSString *create_at;
 @property (nonatomic, copy) NSString *shop_url;
 @property (nonatomic, copy) NSString *coupon_end_time;

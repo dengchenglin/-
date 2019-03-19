@@ -13,8 +13,10 @@
 - (CLRequest *)goodsDetailWithId:(NSString *)Id callback:(CTResponseBlock)callback;
 
 //获取商品链接（转链）
-- (CLRequest *)goodsUrlConvertWithTbGoodId:(NSString *)tbGoodId callback:(CTResponseBlock)callback;
+- (CLRequest *)goodsUrlConvertWithTbGoodUrl:(NSString *)goodUrl tbCode:(NSString *)tbCode tbToken:(NSString *)tbToken callback:(CTResponseBlock)callback;
 
 //搜索
 - (CLRequest *)goodsSearchWithKeyword:(NSString *)keyword page:(NSInteger)page size:(NSInteger)size order:(NSString *)order callback:(CTResponseBlock)callback;
+//商品收藏
+- (CLRequest *)favoriteWithGoodsId:(NSString *)goodsId isFavorite:(BOOL)isFavorite callback:(CTResponseBlock)callback;
 @end

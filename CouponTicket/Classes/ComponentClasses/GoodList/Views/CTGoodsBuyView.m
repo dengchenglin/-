@@ -12,7 +12,7 @@
 
 - (void)setViewModel:(CTGoodsViewModel *)viewModel{
     _viewModel = viewModel;
-    _collectButton.selected = _viewModel.model.favorite_num;
+    _collectButton.selected = _viewModel.model.is_favorite;
     _awardLabel.text = _viewModel.model.commission_money;
     _awardView.hidden = !_viewModel.model.commission_money.floatValue;
 }

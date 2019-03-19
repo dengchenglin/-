@@ -43,10 +43,11 @@
 - (void)checkPasteboard{
     UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
     //如果有重新粘贴 就会弹出
-    if(pasteboard._newestString.length){
-        [CTPasteCheckPopView showPopViewWithText:pasteboard.string callback:^(NSInteger buttonIndex) {
+    NSString *pasteString = pasteboard._newestString;
+    if(pasteString.length){
+        [CTPasteCheckPopView showPopViewWithText:pasteString callback:^(NSInteger buttonIndex) {
             if(buttonIndex == 1){
-                UIViewController *vc = [[CTModuleManager searchService] goodResultViewControllerWithKeyword:pasteboard._newestString];
+                UIViewController *vc = [[CTModuleManager searchService] goodResultViewControllerWithKeyword:pasteString];
                 [self.navigationController pushViewController:vc animated:YES];
             }
         }];

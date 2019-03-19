@@ -28,6 +28,10 @@
 
 #import "CTMemberEquityController.h"
 
+#import "CTNetworkEngine+Member.h"
+
+#import "CTMemberInfoModel.h"
+
 @interface CTMemberViewController ()
 
 @property (nonatomic, strong) CTNavBar *navBar;
@@ -47,6 +51,8 @@
 @property (nonatomic, strong) CTMemberChoicenessView *choicenessView;
 
 @property (nonatomic, strong) CTMemberStrategyView *strategyView;
+
+@property (nonatomic, strong) CTMemberInfoModel *model;
 
 @end
 
@@ -138,13 +144,27 @@
     }];
 }
 - (void)request{
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [self reloadView];
-    });
+    [CTRequest userIndexWithCallback:^(id data, CLRequest *request, CTNetError error) {
+        if(!error){
+            self.model = [CTMemberInfoModel yy_modelWithDictionary:data];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self reloadView];
+            });
+        }
+    }];
 }
-
 - (void)reloadView{
     [self.containerView removeAllObjects];
+
+    [self.headView.iconImageView sd_setImageWithURL:[NSURL URLWithString:self.model.user.headimg]];
+    self.headView.nameLabel.text = self.model.user.nickname;
+    self.headView.jobLabel.text = self.model.user.level_txt;
+    self.levelView.level = self.model.user.level;
+    self.equityView.models = self.model.user_rebate;
+    self.privilegeView.models = self.model.grade_power;
+    self.upgradeView.containerView.titleLabel.text = self.model.upgrade_condition.txt1;
+    self.upgradeView.containerView.mainConditionLabel.text = self.model.upgrade_condition.txt1;
+    self.upgradeView.containerView.subConditionLabel.text = self.model.upgrade_condition.txt1;
     @weakify(self)
     //头部视图
     [self.containerView addConfig:^(CLSectionConfig *config) {
@@ -152,7 +172,7 @@
         UIView *section1 = [UIView new];
         [section1 addSubview:self.headView];
         [section1 addSubview:self.levelView];
-        self.levelView.level = CTMemberPartner;
+        
         [self.headView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.left.right.mas_equalTo(0);
             make.height.mas_equalTo(188 + NAVBAR_TOP);
@@ -172,20 +192,21 @@
     [self.containerView addConfig:^(CLSectionConfig *config) {
         @strongify(self)
         config.sectioView = self.equityView;
-        self.equityView.models = @[@"",@"",@"",@""];
+        
         config.sectionHeight = [self.equityView systemLayoutSizeFittingSize:CGSizeMake(SCREEN_WIDTH, CGFLOAT_MAX)].height;
     }];
     //我的特权
     [self.containerView addConfig:^(CLSectionConfig *config) {
         @strongify(self)
         config.sectioView = self.privilegeView;
-        self.privilegeView.models = @[@"",@"",@"",@"",@"",@"",@"",@""];
+        
         config.sectionHeight = [self.privilegeView systemLayoutSizeFittingSize:CGSizeMake(SCREEN_WIDTH, CGFLOAT_MAX)].height;
         config.space = 20;
     }];
     //升级条件
     [self.containerView addConfig:^(CLSectionConfig *config) {
         @strongify(self)
+
         config.sectioView = self.upgradeView;
         config.sectionHeight = [self.upgradeView systemLayoutSizeFittingSize:CGSizeMake(SCREEN_WIDTH, CGFLOAT_MAX)].height;
         config.space = 30;
@@ -205,12 +226,13 @@
         config.sectionHeight = [self.strategyView systemLayoutSizeFittingSize:CGSizeMake(SCREEN_WIDTH, CGFLOAT_MAX)].height;
         config.space = 20;
     }];
+    
+ 
 }
 
 
 - (void)setUpEvent{
     @weakify(self)
-
     //会员权益
     [self.headView.equityBackgroundView addActionWithBlock:^(id target) {
         @strongify(self)
@@ -236,6 +258,11 @@
             alpha = 0;
         }
         self.navBar.alpha = alpha;
+    }];
+    //登录后刷新
+    [[[NSNotificationCenter defaultCenter]rac_addObserverForName:CTDidLoginNotification object:nil] subscribeNext:^(NSNotification * _Nullable x) {
+        @strongify(self)
+        [self request];
     }];
 }
 @end

@@ -12,6 +12,8 @@
 
 #import <AlibabaAuthSDK/ALBBSDK.h>
 
+#import "AliTradeWebViewController.h"
+
 @implementation AliTradeManager
 
 + (void)initSDK{
@@ -51,9 +53,26 @@
 
 
 + (void)openTbWithViewController:(UIViewController *)viewController url:(NSString *)url{
+    if(!url.length)return;
+//    AliTradeWebViewController *webViewController = [AliTradeWebViewController new];
+//     [viewController.navigationController pushViewController:webViewController animated:YES];
+//    id<AlibcTradePage> page = [AlibcTradePageFactory page:url];
+//    NSInteger ret = [[AlibcTradeSDK sharedInstance].tradeService show:webViewController webView:webViewController.webView page:page showParams:nil taoKeParams: nil trackParam:nil tradeProcessSuccessCallback:^(AlibcTradeResult * _Nullable result) {
+//        DBLog(@"%@",result);
+//    } tradeProcessFailedCallback:^(NSError * _Nullable error) {
+//        DBLog(@"%@",error);
+//    }];
+//    //返回1,说明h5打开,否则不应该展示页面
+//    if (ret == 1) {
+//        [viewController.navigationController pushViewController:webViewController animated:YES];
+//    }
+//    else{
+//        [MBProgressHUD showMBProgressHudWithTitle:@"链接错误"];
+//    }
+    
     AlibcTradeShowParams* showParam = [[AlibcTradeShowParams alloc] init];
     showParam.openType = AlibcOpenTypeAuto;
-    showParam.isNeedPush = YES;
+    showParam.isNeedPush = NO;
     id<AlibcTradePage> page = [AlibcTradePageFactory page:url];
 
     [[AlibcTradeSDK sharedInstance].tradeService show: viewController.navigationController page:page showParams:showParam taoKeParams: nil trackParam: nil tradeProcessSuccessCallback:^(AlibcTradeResult * _Nullable result) {

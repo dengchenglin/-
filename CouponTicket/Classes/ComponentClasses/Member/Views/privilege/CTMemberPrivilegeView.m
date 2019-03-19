@@ -39,7 +39,7 @@ ViewInstance(setUp)
     }];
 }
 
-- (void)setModels:(NSArray *)models{
+- (void)setModels:(NSArray<CTMemberGradePowerModel *> *)models{
     _models = [models copy];
     [self reloadView];
 }
@@ -54,6 +54,8 @@ ViewInstance(setUp)
     
     for(int i = 0;i < count;i ++){
         CTMemberPrivilegeItem *item = NSMainBundleClass(CTMemberPrivilegeItem.class);
+        [item.imageView sd_setImageWithURL:[NSURL URLWithString:_models[i].img]];
+        item.titleLabel.text = _models[i].name;
         [_containerView addSubview:item];
         CGFloat left = (i%lineCount) * itemWidth;
         CGFloat top = (i/lineCount) * itemHeight;

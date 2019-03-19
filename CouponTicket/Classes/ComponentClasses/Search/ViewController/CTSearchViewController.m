@@ -26,6 +26,10 @@
     return @"search_history_key";
 }
 
+- (NSString *)keyword{
+    return self.searchBar.searchTfd.text.wipSpace;
+}
+
 - (UITableView *)dataTableView{
     if(!_dataTableView){
         _dataTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 40, SCREEN_WIDTH, SCREEN_HEIGHT - NAVBAR_HEIGHT - 40)];
@@ -117,8 +121,8 @@
 - (void)request{
     //获取热门关键词和历史记录
     [NSTimer scheduledTimerWithTimeInterval:0.1 block:^(NSTimer *timer) {
-        self.previewView.hotKeywords = [self testHot];
-        self.previewView.historyKeywords = [self testHistory];
+        self.previewView.hotKeywords = nil;
+        self.previewView.historyKeywords = [self histroysForKey:[self historyCachesKey]];
     } repeats:NO];
 }
 
@@ -155,13 +159,4 @@
 }
 
 
-//test
-
-- (NSArray *)testHot{
-    return @[@"永生玫瑰",@"asfasf",@"蔻驰包包",@"雅斯兰黛棕瓶",@"按时发生经发局爱讲故事普吉岛公私兼顾",@"口红",@"氧气内衣店",@"暗示法三国杀",@"暗示法司法三个傻瓜萨德"];
-}
-
-- (NSArray *)testHistory{
-    return @[@"啥都暗杀教室；",@"按时发件案件挂牌",@"色谱",@"是；几个配数据",@"司法解释",@"是；弔",@"SDJS"];
-}
 @end

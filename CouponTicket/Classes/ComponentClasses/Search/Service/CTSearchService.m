@@ -25,6 +25,7 @@ CL_EXPORT_MODULE(CTSearchServiceProtocol)
 - (UIViewController *)goodResultViewControllerWithKeyword:(NSString *)keyword{
     CTGoodResultViewController *vc = [CTGoodResultViewController new];
     vc.keyword = keyword;
+    vc.title = keyword;
     return vc;
 }
 

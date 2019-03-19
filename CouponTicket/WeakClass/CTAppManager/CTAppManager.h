@@ -32,6 +32,9 @@
 @property (nonatomic, copy) NSString *create_at;
 @property (nonatomic, copy) NSString *token;
 @property (nonatomic, copy) NSString *level_txt;
+@property (nonatomic, copy) NSString *tbk_relation_id;
+@property (nonatomic, copy) NSString *pay_pwd;
+@property (nonatomic, copy) NSString *tbk_account_name;
 @end
 
 @interface CTAppManager : NSObject

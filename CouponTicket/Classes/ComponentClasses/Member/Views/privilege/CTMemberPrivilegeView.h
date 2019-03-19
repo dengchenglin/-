@@ -12,10 +12,12 @@
 
 #import "CTMemberPrivilegeItem.h"
 
+#import "CTMemberInfoModel.h"
+
 @interface CTMemberPrivilegeView : UIView
 
 @property (nonatomic, strong) CTMemberTitleView *titleView;
 
-@property (nonatomic, copy) NSArray *models;
+@property (nonatomic, copy) NSArray <CTMemberGradePowerModel *>*models;
 
 @end

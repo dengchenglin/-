@@ -31,7 +31,7 @@
     _disLabel2.text = [NSString stringWithFormat:@"升级可赚%@元",_viewModel.model.upgrade_money];
     _priceLabel.text = _viewModel.model.sale_price;
     _originPriceLabel.text = _viewModel.model.market_price;
-    _couponPriceLabel.text = [NSString stringWithFormat:@"%.0f",_viewModel.model.coupon_amount.floatValue];
+    _couponPriceLabel.text = _viewModel.model.coupon_amount;
     _statusImageView.hidden = !_viewModel.model.status;
     _statusImageView.image = [UIImage imageNamed:GetTypeImageStr(_viewModel.model.status)];
 }

@@ -12,13 +12,19 @@
 
 #import "CTGoodListCell.h"
 
+#import "CTNetworkEngine+Goods.h"
+
 @interface CTGoodResultViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic, strong) CTGoodSortView *sortView;
 
+@property (nonatomic, strong) NSMutableArray <CTGoodsViewModel *>*dataSources;
+
 @end
 
 @implementation CTGoodResultViewController
+
+@synthesize dataSources = _dataSources;
 
 - (CTGoodSortView *)sortView{
     if(!_sortView){
@@ -54,18 +60,33 @@
     @weakify(self)
     [self.sortView setClickBlock:^(CTGoodSortType type) {
         @strongify(self)
-        NSLog(@"%d",type);
+        [self request];
     }];
 }
+- (void)request{
+    [CTRequest goodsSearchWithKeyword:_keyword page:self.pageSize size:self.pageIndex order:GetGoodsOrderStr(self.sortView.currentType) callback:^(id data, CLRequest *request, CTNetError error) {
+        [self analysisAndReloadWithData:data error:error modelClass:CTGoodsModel.class viewModelClass:CTGoodsViewModel.class];
+    }];
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 5;
+    return self.dataSources.count;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 112;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     CTGoodListCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(CTGoodListCell.class)];
+    cell.viewModel = self.dataSources[indexPath.row];
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    UIViewController *vc = [[CTModuleManager goodListService]goodDetailViewControllerWithGoodViewModel:self.dataSources[indexPath.row]];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView{
+    [self.view endEditing:YES];
+}
 @end
