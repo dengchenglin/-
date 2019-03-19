@@ -222,6 +222,7 @@
     //整点抢购商品点击
     [self.spreeShopView setClickItemBlock:^(NSInteger index) {
         @strongify(self)
+        if(![self.viewModel.model.cur_time_buy.goods safe_objectAtIndex:index])return ;
         UIViewController *vc = [[CTModuleManager goodListService]goodDetailViewControllerWithGoodId:self.viewModel.model.cur_time_buy.goods[index].uid];
         [self.navigationController pushViewController:vc animated:YES];
     }];
@@ -234,6 +235,7 @@
     //销量榜商品点击
     [self.salesView setClickItemBlock:^(NSInteger index) {
         @strongify(self)
+         if(![self.viewModel.model.hot_goods.goods safe_objectAtIndex:index])return ;
         UIViewController *vc = [[CTModuleManager goodListService]goodDetailViewControllerWithGoodId:self.viewModel.model.hot_goods.goods[index].uid];
         [self.navigationController pushViewController:vc animated:YES];
     }];
