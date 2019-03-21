@@ -50,7 +50,7 @@
     for(int i = 0;i < count;i ++){
         UIImageView *imageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"ic_vip_level"]];
         imageView.tag = 200 + i;
-        imageView.hidden = (i>_level);
+        imageView.hidden = (i>_level-1);
         [self addSubview:imageView];
         UIView *referView = [self viewWithTag:100 + i];
         [imageView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -77,7 +77,7 @@
     UIView *hidhbackgroundView = [UIView new];
     hidhbackgroundView.backgroundColor = RGBColor(231, 208, 153);
     [self addSubview:hidhbackgroundView];
-    UIView *rightView = [self viewWithTag:200 + _level];
+    UIView *rightView = [self viewWithTag:200 + _level - 1];
     [hidhbackgroundView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(firstView.mas_left).offset(logoSize.width/2);
         make.right.mas_equalTo(rightView.mas_left).offset(logoSize.width/2);
@@ -164,7 +164,7 @@ ViewInstance(setUp)
 
 - (void)setLevel:(CTMemberLevel)level{
     _level = level;
-    if(_level < 0 || _level > 3){
+    if(_level < 1 || _level > 4){
         return;
     }
     [self reloadView];

@@ -10,15 +10,15 @@
 
 @implementation CTOrderListCell
 
-- (void)awakeFromNib {
-    [super awakeFromNib];
-    // Initialization code
-}
-
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
+- (void)setViewModel:(CTOrderViewModel *)viewModel{
+    _viewModel = viewModel;
+    _orderLabel.text = _viewModel.model.trade_id;
+    _statusLabel.text = _viewModel.model.tk_status_txt;
+    _goodTitleLabel.text = _viewModel.model.item_title;
+    [_goodImageView sd_setImageWithURL:[NSURL URLWithString:_viewModel.model.item_img]];
+    _createTimeLabel.text = _viewModel.model.create_time;
+    _priceLabel.text  = _viewModel.model.alipay_total_price;
+    [_userheadImageView sd_setImageWithURL:[NSURL URLWithString:_viewModel.model.headimg]];
 }
 
 @end

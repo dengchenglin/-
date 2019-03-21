@@ -16,7 +16,6 @@
 
 @property (nonatomic, strong) CTSearchBar *searchBar;
 
-@property (nonatomic, strong) CTSearchPreviewView *previewView;
 
 @end
 
@@ -121,7 +120,6 @@
 - (void)request{
     //获取热门关键词和历史记录
     [NSTimer scheduledTimerWithTimeInterval:0.1 block:^(NSTimer *timer) {
-        self.previewView.hotKeywords = nil;
         self.previewView.historyKeywords = [self histroysForKey:[self historyCachesKey]];
     } repeats:NO];
 }

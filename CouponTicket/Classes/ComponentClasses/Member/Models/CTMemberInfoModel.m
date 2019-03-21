@@ -7,8 +7,7 @@
 //
 
 #import "CTMemberInfoModel.h"
-@implementation CTMemberRebateModel
-@end
+
 @implementation CTMemberGradePowerModel
 + (NSDictionary *)modelCustomPropertyMapper{
     return @{@"Id":@"id"};

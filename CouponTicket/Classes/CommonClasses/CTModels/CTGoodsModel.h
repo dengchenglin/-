@@ -22,6 +22,7 @@ NSString *GetTypeImageStr(NSInteger status);
 @property (nonatomic, copy) NSString *goods_logo;
 @property (nonatomic, copy) NSString *market_price;
 @property (nonatomic, copy) NSString *coupon_amount;
+@property (nonatomic, copy) NSString *coupon_text;
 @property (nonatomic, copy) NSString *commission_money;
 @property (nonatomic, copy) NSString *coupon_price;
 @property (nonatomic, copy) NSString *upgrade_money;

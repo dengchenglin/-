@@ -128,7 +128,7 @@ return self;}\
 #define EnCodingNSString(s) (__bridge_transfer NSString *)CFURLCreateStringByAddingPercentEscapes(NULL,(__bridge CFStringRef)s,NULL,CFSTR("!*’();:@&=+$,/?%#[]"),CFStringConvertNSStringEncodingToEncoding(NSUTF8StringEncoding))
 
 //docoument
-#define CLDocumentPath(pathKey) [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0] stringByAppendingPathComponent:pathKey]
+#define CLDocumentPath(pathKey) [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0] stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.plist",pathKey]]
 
 //debug log
 #ifdef DEBUG

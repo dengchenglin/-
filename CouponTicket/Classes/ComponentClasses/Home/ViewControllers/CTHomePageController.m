@@ -116,7 +116,7 @@
 
    CTHomeModel *model = [CTHomeModel yy_modelWithDictionary:data];
     self.viewModel = [CTHomeViewModel bindModel:model];
-    
+    [self.viewControllers removeAllObjects];
     for(int i = 0;i < self.viewModel.model.cate.count;i ++){
         UIViewController *vc;
         if(i == 0){

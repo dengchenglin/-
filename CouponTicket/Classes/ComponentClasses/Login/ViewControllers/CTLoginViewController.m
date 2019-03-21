@@ -88,6 +88,7 @@
         [CTRequest loginWithType:CTLoginPhone openid:nil phone:self.viewModel.account pwd:self.viewModel.password callback:^(id data, CLRequest *request, CTNetError error) {
             if(!error){
                [CTAppManager saveUserWithInfo:data];
+                [CTAppManager saveToken:data[@"token"]];
                 POST_NOTIFICATION(CTDidLoginNotification);
             }
             
@@ -136,6 +137,7 @@
     [CTRequest loginWithType:loginType openid:response.openid phone:nil pwd:nil callback:^(id data, CLRequest *request, CTNetError error) {
         if(!error){
             [CTAppManager saveUserWithInfo:data];
+            [CTAppManager saveToken:data[@"token"]];
             POST_NOTIFICATION(CTDidLoginNotification);
         }
         else{

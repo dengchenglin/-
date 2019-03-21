@@ -9,5 +9,7 @@
 #import "CTQuestionModel.h"
 
 @implementation CTQuestionModel
-
++ (NSDictionary *)modelCustomPropertyMapper{
+    return @{@"Id":@"id"};
+}
 @end

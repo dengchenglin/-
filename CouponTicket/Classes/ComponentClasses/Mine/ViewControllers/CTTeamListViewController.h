@@ -8,14 +8,14 @@
 
 #import "CTBaseListViewController.h"
 
-typedef NS_ENUM(NSInteger,CTTeamKind) {
-    CTTeamKindAll,
-    CTTeamKindDirectly,
-    CTTeamKindMediate
-};
+//typedef NS_ENUM(NSInteger,CTTeamKind) {
+//    CTTeamKindAll,
+//    CTTeamKindDirectly,
+//    CTTeamKindMediate
+//};
 
 @interface CTTeamListViewController : CTBaseListViewController
 
-@property (nonatomic, assign) CTTeamKind teamKind;
+@property (nonatomic, copy) NSString * cateId;
 
 @end

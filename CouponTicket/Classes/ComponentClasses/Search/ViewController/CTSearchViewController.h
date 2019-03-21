@@ -8,9 +8,14 @@
 
 #import "CTBaseViewController.h"
 
+#import "CTSearchPreviewView.h"
+
 @interface CTSearchViewController : CTBaseViewController
 
 @property (nonatomic, strong) UITableView *dataTableView;
+
+@property (nonatomic, strong) CTSearchPreviewView *previewView;
+
 
 - (NSString *)keyword;
 

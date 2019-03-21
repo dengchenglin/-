@@ -12,17 +12,19 @@
 
 #import "CTQuestionListCell.h"
 
+#import "CTNetworkEngine+Member.h"
+
 @interface CTQuestionViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic, strong) CTSearchBar *searchBar;
 
-@property (nonatomic, strong) UITableView *tableView;
-
-@property (nonatomic, strong) NSArray <CTQuestionModel *>*dataSoures;
+@property (nonatomic, strong) NSMutableArray <CTQuestionModel *>*dataSources;
 
 @end
 
 @implementation CTQuestionViewController
+
+@synthesize dataSources = _dataSources;
 
 - (CTSearchBar *)searchBar{
     if(!_searchBar){
@@ -32,21 +34,14 @@
     return _searchBar;
 }
 
-- (UITableView *)tableView{
-    if(!_tableView){
-        _tableView = [[UITableView alloc]init];
-        _tableView.delegate = self;
-        _tableView.dataSource = self;
-        _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-        [_tableView registerNib:[UINib nibWithNibName:NSStringFromClass(CTQuestionListCell.class) bundle:nil] forCellReuseIdentifier:NSStringFromClass(CTQuestionListCell.class)];
-    }
-    return _tableView;
-}
 
 - (void)setUpUI{
     self.title = @"常见问题";
+     self.navigationBarStyle = CTNavigationBarWhite;
     [self.view addSubview:self.searchBar];
     [self.view addSubview:self.tableView];
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass(CTQuestionListCell.class) bundle:nil] forCellReuseIdentifier:NSStringFromClass(CTQuestionListCell.class)];
 }
 - (void)autoLayout{
     [self.searchBar mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -60,22 +55,39 @@
     }];
 }
 
+- (void)setUpEvent{
+    @weakify(self)
+    [self.searchBar setSearchBlock:^(NSString *keyword) {
+        @strongify(self)
+        [self request];
+    }];
+}
+
+- (void)request{
+    [CTRequest oftenProblemWithPage:self.pageIndex size:self.pageSize name:self.searchBar.searchTfd.text callback:^(id data, CLRequest *request, CTNetError error) {
+        if(!error){
+            [self analysisAndReloadWithData:data error:error modelClass:CTQuestionModel.class viewModelClass:nil];
+        }
+    }];
+}
+
 #pragma  mark - UITableViewDelegate+DataSoure
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 10;//self.dataSoures.count;
+    return self.dataSources.count;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 49;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     CTQuestionListCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(CTQuestionListCell.class)];
+    cell.model = self.dataSources[indexPath.row];
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    UIViewController *vc = [[CTModuleManager webService]pushWebFromViewController:self htmlString:nil];
-    vc.title = @"问题1";
+    UIViewController *vc = [[CTModuleManager webService]pushWebFromViewController:self htmlString:self.dataSources[indexPath.row].content];
+    vc.title = self.dataSources[indexPath.row].name;
 }
 
 @end

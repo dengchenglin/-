@@ -25,7 +25,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OhD-EY-jzt">
-                            <rect key="frame" x="170.5" y="267" width="55" height="50"/>
+                            <rect key="frame" x="0.0" y="267" width="396" height="50"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="50" id="Y9Y-x7-4qW"/>
                             </constraints>
@@ -47,17 +47,18 @@
                         <constraint firstItem="4xE-pE-qFc" firstAttribute="top" secondItem="MX1-Zv-NOC" secondAttribute="bottom" constant="45" id="CNs-z6-ahe"/>
                         <constraint firstItem="4xE-pE-qFc" firstAttribute="leading" secondItem="mpc-3b-eje" secondAttribute="leading" id="KQw-ot-fqe"/>
                         <constraint firstItem="OhD-EY-jzt" firstAttribute="top" secondItem="4xE-pE-qFc" secondAttribute="bottom" id="Qwz-is-Fjk"/>
+                        <constraint firstItem="OhD-EY-jzt" firstAttribute="leading" secondItem="mpc-3b-eje" secondAttribute="leading" id="SE1-hg-gcU"/>
                         <constraint firstItem="4xE-pE-qFc" firstAttribute="centerX" secondItem="mpc-3b-eje" secondAttribute="centerX" id="cTg-ja-8zp"/>
                         <constraint firstItem="MX1-Zv-NOC" firstAttribute="top" secondItem="mpc-3b-eje" secondAttribute="top" constant="45" id="cbH-Dx-zHG"/>
                         <constraint firstAttribute="trailing" secondItem="4xE-pE-qFc" secondAttribute="trailing" id="goY-r9-HtY"/>
                         <constraint firstAttribute="trailing" secondItem="MX1-Zv-NOC" secondAttribute="trailing" constant="25" id="ha3-14-iuC"/>
-                        <constraint firstItem="OhD-EY-jzt" firstAttribute="centerX" secondItem="mpc-3b-eje" secondAttribute="centerX" id="lMl-HR-wpo"/>
+                        <constraint firstAttribute="trailing" secondItem="OhD-EY-jzt" secondAttribute="trailing" id="jCR-rj-7Bi"/>
                         <constraint firstAttribute="bottom" secondItem="OhD-EY-jzt" secondAttribute="bottom" id="pGY-vc-V0D"/>
                         <constraint firstItem="MX1-Zv-NOC" firstAttribute="leading" secondItem="mpc-3b-eje" secondAttribute="leading" constant="25" id="wr1-wL-c06"/>
                     </constraints>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                            <integer key="value" value="0"/>
+                            <integer key="value" value="8"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </view>

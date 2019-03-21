@@ -57,6 +57,7 @@
     for(int i = 0;i < 3;i ++){
         CTSalesItem *item = [self viewWithTag:100 + i];
         item.model = [_model.goods safe_objectAtIndex:i];
+        item.hidden = !item.model;
     }
     if(_timer && _timer.isValid){
         [_timer invalidate];
@@ -66,10 +67,10 @@
         _model.next_update_timestamp -= 1;
         NSString *displayText = GetdifferTimeStrWithNextUpdateTimestamp(_model.next_update_timestamp);
         if(displayText.length){
-            _timeLabel.text = [NSString stringWithFormat:@"%@后开始",GetdifferTimeStrWithNextUpdateTimestamp(_model.next_update_timestamp)];
+            _timeLabel.text = [NSString stringWithFormat:@"%@后更新",GetdifferTimeStrWithNextUpdateTimestamp(_model.next_update_timestamp)];
         }
         else{
-            _timeLabel.text = nil;
+            _timeLabel.text = @"最新";
             [timer invalidate];
             timer = nil;
         }

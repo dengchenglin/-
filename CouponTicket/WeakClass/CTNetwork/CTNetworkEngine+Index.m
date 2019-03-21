@@ -14,7 +14,8 @@
 @implementation CTNetworkEngine (Index)
 
 - (CLRequest *)indexWithCallback:(CTResponseBlock)callback{
-    NSString *path = CLDocumentPath(CTIndex(@"index"));
+    NSString *path = CLDocumentPath(@"home_index");
+    
     NSDictionary *data = [[NSDictionary alloc]initWithContentsOfFile:path];
     if(callback && data){
         callback(data,nil,0);

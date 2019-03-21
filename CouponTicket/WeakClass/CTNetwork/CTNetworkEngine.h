@@ -20,6 +20,8 @@
 #define CT_API_BASE_URL  CT_API_PRODUCTION_BASE_URL
 #endif
 
+#define CTBaseUrl(path) [CT_API_BASE_URL stringByAppendingPathComponent:path]
+
 #define CTUrlPath(path) [@"api" stringByAppendingPathComponent:path]
 
 #define CTRequest [CTNetworkEngine sharedInstance]

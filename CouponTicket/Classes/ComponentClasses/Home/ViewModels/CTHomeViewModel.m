@@ -14,6 +14,18 @@
     CTHomeViewModel *viewModel = [CTHomeViewModel new];
     viewModel.model = model;
     viewModel.now_goods = [CTGoodsViewModel bindModels:model.now_goods];
+    if(model.cur_time_buy.goods.count){
+        viewModel.spreeHeight = 50 + (model.cur_time_buy.goods.count + 2)/3 * 230;
+    }
+    else{
+        viewModel.spreeHeight = 0;
+    }
+    if(model.hot_goods.goods.count){
+        viewModel.saleHeight = 260;
+    }
+    else{
+        viewModel.saleHeight = 0;
+    }
     return viewModel;
 }
 

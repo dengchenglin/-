@@ -12,11 +12,17 @@
 
 #import "CTTeamListCell.h"
 
+#import "CTNetworkEngine+Member.h"
+
 @interface CTTeamListViewController ()
+
+@property (nonatomic, strong) NSMutableArray <CTUser *> *dataSources;
 
 @end
 
 @implementation CTTeamListViewController
+
+@synthesize dataSources = _dataSources;
 
 - (void)setUpUI{
     self.title = @"我的团队";
@@ -31,8 +37,14 @@
     }];
 }
 
+- (void)request{
+    [CTRequest teamListWithCateId:self.cateId page:self.pageIndex size:self.pageSize callback:^(id data, CLRequest *request, CTNetError error) {
+        [self analysisAndReloadWithData:data error:error modelClass:CTUser.class viewModelClass:nil];
+    }];
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 30;
+    return self.dataSources.count;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -41,11 +53,12 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     CTTeamListCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(CTTeamListCell.class)];
+    cell.user = self.dataSources[indexPath.row];
     return cell;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     CTUserDetailViewController *vc = [CTUserDetailViewController new];
-    vc.userId = nil;
+    vc.userId = self.dataSources[indexPath.row].uid;
     [self.navigationController pushViewController:vc animated:YES];
 }
 

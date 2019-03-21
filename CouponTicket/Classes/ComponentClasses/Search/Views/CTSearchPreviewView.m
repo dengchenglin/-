@@ -39,7 +39,7 @@ const int CTSearchPreviewViewKey;
     for(NSString *keyword in keywords){
         CTHotkeywordViewModel *viewModel = [CTHotkeywordViewModel new];
         viewModel.keyword = keyword;
-        viewModel.keywordWidth = [keyword sizeWithFont:CTHotkeywordFont maxSize:CGSizeMake(SCREEN_WIDTH, 15)].width + 1;
+        viewModel.keywordWidth = [keyword sizeWithFont:CTHotkeywordFont maxSize:CGSizeMake(SCREEN_WIDTH/2 - 30, 15)].width + 1;
         viewModel.itemSize = CGSizeMake(viewModel.keywordWidth + 20, 26);
         [array addObject:viewModel];
     }
@@ -66,9 +66,8 @@ const int CTSearchPreviewViewKey;
         _titleLabel.font = FONT_PFRG_SIZE(13);
         _titleLabel.textAlignment = NSTextAlignmentCenter;
         _titleLabel.textColor = RGBColor(153, 153, 153);
-        _titleLabel.backgroundColor = RGBColor(245, 245, 245);
-        _titleLabel.clipsToBounds = YES;
         [self.contentView addSubview:_titleLabel];
+        self.contentView.backgroundColor = RGBColor(245, 245, 245);
     }
     return self;
 }
@@ -76,8 +75,9 @@ const int CTSearchPreviewViewKey;
 - (void)setViewModel:(CTHotkeywordViewModel *)viewModel{
     _viewModel = viewModel;
     _titleLabel.text = _viewModel.keyword;
-    [_titleLabel setFrame:CGRectMake(0, 0, _viewModel.itemSize.width, _viewModel.itemSize.height)];
-    _titleLabel.layer.cornerRadius = _viewModel.itemSize.height/2;
+    [_titleLabel setFrame:CGRectMake(10, 0, _viewModel.itemSize.width-20, _viewModel.itemSize.height)];
+    self.contentView.layer.cornerRadius = _viewModel.itemSize.height/2;
+    self.contentView.clipsToBounds = YES;
 }
 
 @end
@@ -91,6 +91,7 @@ const int CTSearchPreviewViewKey;
 
 @property (nonatomic, copy) NSArray <CTHotkeywordViewModel *> *historyKeywordsViewModels;
 
+@property (nonatomic, strong) CTHistoryKeywordHeadView *headView;
 
 @end
 
@@ -136,6 +137,9 @@ ViewInstance(setUp)
     [_collectionView registerNib:[UINib nibWithNibName:NSStringFromClass(CTHistoryKeywordHeadView.class) bundle:nil] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:NSStringFromClass(CTHistoryKeywordHeadView.class)];
 
     [self addSubview:_collectionView];
+    if (@available(iOS 11.0, *)) {
+        _collectionView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+    }
 }
 
 - (void)layoutSubviews{
@@ -185,21 +189,24 @@ ViewInstance(setUp)
         }
         if(indexPath.section == 1){
             CTHistoryKeywordHeadView *headView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:NSStringFromClass(CTHistoryKeywordHeadView.class) forIndexPath:indexPath];
-            @weakify(self)
-            [headView.clearButton touchUpInsideSubscribeNext:^(id x) {
-                @strongify(self)
-                UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"是否删除搜索历史？" message:nil delegate:nil cancelButtonTitle:@"取消" otherButtonTitles:@"删除", nil];
-                [[alertView rac_buttonClickedSignal] subscribeNext:^(NSNumber * _Nullable x) {
+            if(!_headView){
+                @weakify(self)
+                [headView.clearButton touchUpInsideSubscribeNext:^(id x) {
                     @strongify(self)
-                    if(x.integerValue == 1){
-                        if(self.clearHistoryBlock){
-                            self.clearHistoryBlock();
+                    UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"是否删除搜索历史？" message:nil delegate:nil cancelButtonTitle:@"取消" otherButtonTitles:@"删除", nil];
+                    [[alertView rac_buttonClickedSignal] subscribeNext:^(NSNumber * _Nullable x) {
+                        @strongify(self)
+                        if(x.integerValue == 1){
+                            if(self.clearHistoryBlock){
+                                self.clearHistoryBlock();
+                            }
                         }
-                    }
+                    }];
+                    [alertView show];
+                    
                 }];
-                [alertView show];
-            
-            }];
+                _headView = headView;
+            }
             return headView;
         }
 
@@ -210,7 +217,7 @@ ViewInstance(setUp)
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section{
     if(section == 0){
         if(self.hotKeywordsViewModels.count){
-            return UIEdgeInsetsMake(15, 10, 15, 15);
+            return UIEdgeInsetsMake(10, 10, 15, 15);
         }
     }
     else if (section == 1){

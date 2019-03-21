@@ -20,9 +20,9 @@
 
 @interface CTMemberEquityPageView : UIView
 
-@property (nonatomic, assign) CTMemberLevel level;
-
 @property (nonatomic, weak) id<CTMemberEquityPageViewDelegate> delegate;
+
+@property (nonatomic, copy) NSArray *list;
 
 - (void)scrollToIndex:(NSInteger)index;
 

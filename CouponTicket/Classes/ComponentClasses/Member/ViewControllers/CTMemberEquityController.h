@@ -10,4 +10,6 @@
 
 @interface CTMemberEquityController : CTBaseViewController
 
+@property (nonatomic, assign) CTMemberLevel level;
+
 @end

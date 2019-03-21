@@ -6,8 +6,8 @@
 //  Copyright © 2019 Danke. All rights reserved.
 //
 
-#import "CTToolViewController.h"
+#import "CTBaseListViewController.h"
 
-@interface CTQuestionViewController : CTToolViewController
+@interface CTQuestionViewController : CTBaseListViewController
 
 @end

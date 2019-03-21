@@ -112,7 +112,7 @@
             <connections>
                 <outlet property="userKindLabel" destination="wqR-K1-ZV4" id="jMl-4g-dzS"/>
                 <outlet property="userLevelLabel" destination="omr-Rw-9RH" id="dpt-gl-GUe"/>
-                <outlet property="userheadImageView" destination="XaK-30-Mag" id="qAt-bw-qlB"/>
+                <outlet property="userheadImageView" destination="fWk-Mt-Pgt" id="jVs-7O-3WW"/>
                 <outlet property="usernameLabel" destination="QWt-PZ-q5K" id="l2U-pv-gfw"/>
             </connections>
             <point key="canvasLocation" x="-102.5" y="-11.5"/>

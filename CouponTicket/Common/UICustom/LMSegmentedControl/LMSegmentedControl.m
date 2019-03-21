@@ -60,6 +60,11 @@ ViewInstance(setUp)
 
 - (void)setTitles:(NSArray<NSString *> *)titles{
     _titles = [titles copy];
+    dispatch_async(dispatch_get_main_queue(), ^{
+         [self reloadView];
+    });
+}
+- (void)reloadView{
     if(!_scrollView){
         _scrollView = [[UIScrollView alloc]initWithFrame:_containerView.bounds];
         _scrollView.scrollsToTop = NO;
@@ -70,14 +75,14 @@ ViewInstance(setUp)
             make.right.left.top.mas_equalTo(0);
             make.bottom.mas_equalTo(0);
         }];
-
+        
         _scrollView.contentSize = CGSizeMake(0, _containerView.height);
     }
     [_scrollView removeAllSubViews];
     if(_segmentedControlType == LMSegmentedControlScreen){
         if(!_silder){
             _silder = [[UIImageView alloc]init];
-          
+            
         }
         _silder.backgroundColor = _selectedLineColor;
         _silder.layer.cornerRadius = _selectedLineHeight/2;
@@ -102,7 +107,7 @@ ViewInstance(setUp)
                 [_silder setBounds:CGRectMake(0, 0, _selectedLineWidth, _selectedLineHeight)];
                 if(_silderStyle == LMSegmentedControlSilderLine)
                 {
-                  [_silder setCenter:CGPointMake(_itemWidth/2 + _itemWidth * _currentIndex, _containerView.height - _silder.height/2)];
+                    [_silder setCenter:CGPointMake(_itemWidth/2 + _itemWidth * _currentIndex, _containerView.height - _silder.height/2)];
                 }else if (_silderStyle == LMSegmentedControlSilderSquare){
                     [_silder setCenter:CGPointMake(_itemWidth/2 + _itemWidth * _currentIndex, _containerView.height/2)];
                 }
@@ -122,7 +127,7 @@ ViewInstance(setUp)
         CGFloat totalWidth = 0;
         for(int i = 0;i < _titles.count;i ++){
             LMSegmentedModel *model = [LMSegmentedModel new];
-            model.title = titles[i];
+            model.title = _titles[i];
             model.width = [model.title sizeWithFont:_textFont maxSize:CGSizeMake(CGFLOAT_MAX, 16)].width + 30;
             totalWidth += model.width;
             [models addObject:model];
@@ -158,13 +163,13 @@ ViewInstance(setUp)
                 itemBtn.selected = YES;
                 if(!_silder){
                     _silder = [[UIImageView alloc]init];
-                   
+                    
                 }
                 _silder.layer.cornerRadius = _selectedLineHeight/2;
                 _silder.backgroundColor = _selectedLineColor;
                 [_scrollContainerView addSubview:_silder];
                 CGFloat left = (models[_currentIndex].width - _selectedLineWidth)/2;
-          
+                
                 
                 if(_silderStyle == LMSegmentedControlSilderLine)
                 {

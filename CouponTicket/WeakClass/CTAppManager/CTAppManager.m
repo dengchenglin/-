@@ -11,16 +11,10 @@
 #import "KeychainTool.h"
 
 #define CTLoginInfoKey @"CTLoginInfoKey"
+#define CTUserTokenKey @"CTUserTokenKey"
 
 @implementation CTWithdrawInfo
 
-- (NSString *)account{
-    return @"13138878446";
-}
-
-- (NSString *)name{
-    return @"老林sir";
-}
 
 @end
 
@@ -35,10 +29,6 @@
     return self;
 }
 
-- (NSString *)mobile{
-    return @"13138878446";
-}
-
 
 @end
 
@@ -47,7 +37,7 @@
 SINGLETON_FOR_CLASS_IMP(CTAppManager)
 
 + (BOOL)logined{
-    return [CTAppManager sharedInstance].user;
+    return [CTAppManager sharedInstance].token;
 }
 
 + (void)logout{
@@ -62,12 +52,16 @@ SINGLETON_FOR_CLASS_IMP(CTAppManager)
     [[CTAppManager sharedInstance] saveUserWithInfo:data];
 }
 
++ (void)saveToken:(NSString *)token{
+    [[CTAppManager sharedInstance]saveToken:token];
+}
 - (instancetype)init
 {
     self = [super init];
     if (self) {
         id data = [KeychainTool load:CTLoginInfoKey];
-        if(data){
+         _token = [KeychainTool load:CTUserTokenKey];
+        if(data && _token.length){
             _user = [CTUser yy_modelWithDictionary:data];
         }
     }
@@ -80,8 +74,14 @@ SINGLETON_FOR_CLASS_IMP(CTAppManager)
     CTUser *user = [CTUser yy_modelWithDictionary:data];
     _user = user;
 }
+- (void)saveToken:(NSString *)token{
+    [KeychainTool save:CTUserTokenKey data:token];
+    _token = token;
+}
 - (void)logout{
     _user = nil;
+    _token = nil;
     [KeychainTool save:CTLoginInfoKey data:nil];
+    [KeychainTool save:CTUserTokenKey data:nil];
 }
 @end

@@ -85,6 +85,7 @@
             [CTRequest bindPhoneWithPhone:self.viewModel.mobile type:type ivCode:self.inviteCode smsCode:self.viewModel.code openid:self.response.openid nickname:self.response.name headicon:self.response.iconurl unionid:self.response.unionId callback:^(id data, CLRequest *request, CTNetError error) {
                 if(!error){
                     [CTAppManager saveUserWithInfo:data];
+                    [CTAppManager saveToken:data[@"token"]];
                     POST_NOTIFICATION(CTDidLoginNotification);
                 }
             }];

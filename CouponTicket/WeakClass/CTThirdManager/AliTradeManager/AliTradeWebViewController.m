@@ -75,7 +75,10 @@
 }
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView{
-    
+    NSString *title = [webView stringByEvaluatingJavaScriptFromString:@"document.title"];
+    if(title){
+        self.title = title;
+    }
 }
 
 @end

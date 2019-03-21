@@ -48,22 +48,18 @@
     self.navigationBarStyle = CTNavigationBarWhite;
     [self.view addSubview:self.webView];
 }
-
-- (void)setUrl:(NSString *)url{
-    _url = [url copy];
-    if(_url){
+- (void)reloadView{
+    NSURL *URL = [NSURL URLWithString:_url];
+    if(URL){
         [MBProgressHUD showMBProgressHudOnView:self.view];
-        [_webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:_url]]];
+        [_webView loadRequest:[NSURLRequest requestWithURL:URL]];
     }
-}
-
-- (void)setHtmlString:(NSString *)htmlString{
-    _htmlString = htmlString;
     if(_htmlString){
         [MBProgressHUD showMBProgressHudOnView:self.view];
         [_webView loadHTMLString:_htmlString baseURL:nil];
     }
 }
+
 
 #pragma mark -WKNavigationDelegate
 

@@ -33,7 +33,7 @@
     NSArray *attributes = [[super layoutAttributesForElementsInRect:rect] mutableCopy];
     for(int i = 0; i < attributes.count; ++i) {
         UICollectionViewLayoutAttributes *currentLayoutAttributes = attributes[i];
- 
+
         NSInteger maximumSpacing = self.minimumInteritemSpacing;
         if((id<UICollectionViewDelegateFlowLayout>)self.collectionView.delegate && [(id<UICollectionViewDelegateFlowLayout>)self.collectionView.delegate respondsToSelector:@selector(collectionView:layout:minimumInteritemSpacingForSectionAtIndex:)]){
             maximumSpacing = [(id<UICollectionViewDelegateFlowLayout>)self.collectionView.delegate collectionView:self.collectionView layout:self minimumInteritemSpacingForSectionAtIndex:currentLayoutAttributes.indexPath.section];
@@ -54,10 +54,16 @@
             frame.origin.x = inset.left;
             currentLayoutAttributes.frame = frame;
         }
-        if(i == 0){
+        if(currentLayoutAttributes.indexPath.row <= 0){
             continue;
         }
-        UICollectionViewLayoutAttributes *prevLayoutAttributes = attributes[i - 1];
+        UICollectionViewLayoutAttributes *prevLayoutAttributes;
+        if(i != 0){
+            prevLayoutAttributes = attributes[i - 1];
+        }
+        else{
+            prevLayoutAttributes = [UICollectionViewLayoutAttributes layoutAttributesForCellWithIndexPath:[NSIndexPath indexPathForRow:currentLayoutAttributes.indexPath.row - 1 inSection:currentLayoutAttributes.indexPath.section]];
+        }
         NSInteger origin = CGRectGetMaxX(prevLayoutAttributes.frame);
         if(prevLayoutAttributes.frame.origin.y != currentLayoutAttributes.frame.origin.y){
             CGRect frame = currentLayoutAttributes.frame;

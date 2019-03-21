@@ -74,8 +74,12 @@
             }
             NSArray *models = [modelClass yy_modelsWithDatas:data];
             for(int i = 0;i < models.count;i ++){
-    
-                [self.dataSources addObject:[viewModelClass bindModel:models[i]]];
+                if(viewModelClass){
+                    [self.dataSources addObject:[viewModelClass bindModel:models[i]]];
+                }
+                else{
+                    [self.dataSources addObject:models[i]];
+                }
             }
             [self.tableView reloadData];
     

@@ -156,9 +156,16 @@
                     [AliTradeManager openTbWithViewController:self url:clickUrl];
                 }
                 else{
-                    NSString *clickUrl = data[@"data"];
-                    [[CTModuleManager webService]pushWebFromViewController:self url:clickUrl];
-                    //[AliTradeManager openTbWithViewController:self url:clickUrl];
+                    NSInteger status = [data[@"status"] integerValue];
+                    if(status == 404){
+                        NSString *clickUrl = data[@"data"];
+                        [[CTModuleManager webService]tbAuthFromViewController:self url:clickUrl callback:^(id data) {
+                            [AliTradeManager openTbWithViewController:self url:data];
+                        }];
+                    }
+                    else{
+                        [MBProgressHUD showMBProgressHudWithTitle:data[@"info"]];
+                    }
                 }
             }];
         }];

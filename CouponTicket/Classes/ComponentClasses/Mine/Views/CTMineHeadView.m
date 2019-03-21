@@ -10,12 +10,11 @@
 
 @implementation CTMineHeadView
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
+- (void)setUser:(CTUser *)user{
+    _user = user;
+    [_iconImageView sd_setImageWithURL:[NSURL URLWithString:_user.headimg] placeholderImage:[UIImage imageNamed:@"pic_head_placeholder"]];
+    _nameLabel.text = _user.nickname;
+    _jobLabel.text = _user.level_txt;
 }
-*/
 
 @end

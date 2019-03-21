@@ -1,14 +1,14 @@
 //
-//  CTMemberEquityView4.m
+//  CTMemberEquityRowView.m
 //  CouponTicket
 //
-//  Created by Dankal on 2019/1/27.
-//  Copyright © 2019 Danke. All rights reserved.
+//  Created by dengchenglin on 2019/3/21.
+//  Copyright © 2019年 Danke. All rights reserved.
 //
 
-#import "CTMemberEquityView4.h"
+#import "CTMemberEquityRowView.h"
 
-@implementation CTMemberEquityView4
+@implementation CTMemberEquityRowView
 
 /*
 // Only override drawRect: if you perform custom drawing.

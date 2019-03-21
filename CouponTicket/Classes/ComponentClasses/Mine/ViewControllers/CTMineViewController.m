@@ -32,6 +32,10 @@
 
 #import "CTMyTeamPageController.h"
 
+#import "CTNetworkEngine+Member.h"
+
+#import "CTMyEarnModel.h"
+
 @interface CTMineViewController ()
 
 @property (nonatomic, strong) CTNavBar *navBar;
@@ -125,6 +129,16 @@
         make.top.mas_equalTo(top);
         make.size.mas_equalTo(CGSizeMake(72, 30));
         make.right.mas_equalTo(-15);
+    }];
+}
+- (void)request{
+    [CTRequest userInfoWithCallback:^(id data, CLRequest *request, CTNetError error) {
+        if(!error){
+            [CTAppManager saveUserWithInfo:data[@"user"]];
+            self.headView.user = [CTAppManager user];
+            self.earnView.user = [CTAppManager user];
+            self.earnView.model = [CTMyEarnModel yy_modelWithDictionary:data];
+        }
     }];
 }
 - (void)reloadView{
@@ -247,7 +261,7 @@
     //领券指南
     [self.toolView.guideView addActionWithBlock:^(id target) {
         @strongify(self)
-         UIViewController *webVc = [[CTModuleManager webService] pushWebFromViewController:self url:nil];
+         UIViewController *webVc = [[CTModuleManager webService] pushWebFromViewController:self url:CTBaseUrl(@"api/user/comfield?type=lqzn")];
         webVc.title = @"领券指南";
     }];
     //我的邀请码

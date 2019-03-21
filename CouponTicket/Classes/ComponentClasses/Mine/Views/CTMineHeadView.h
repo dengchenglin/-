@@ -14,5 +14,5 @@
 @property (weak, nonatomic) IBOutlet UILabel *jobLabel;
 @property (weak, nonatomic) IBOutlet UIButton *messageButton;
 @property (weak, nonatomic) IBOutlet UIButton *setButton;
-
+@property (nonatomic, strong) CTUser *user;
 @end

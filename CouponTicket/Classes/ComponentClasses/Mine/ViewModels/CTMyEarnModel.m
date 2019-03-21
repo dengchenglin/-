@@ -1,14 +1,14 @@
 //
-//  CTMemberEquityView3.m
+//  CTMyEarnModel.m
 //  CouponTicket
 //
-//  Created by Dankal on 2019/1/27.
-//  Copyright © 2019 Danke. All rights reserved.
+//  Created by dengchenglin on 2019/3/21.
+//  Copyright © 2019年 Danke. All rights reserved.
 //
 
-#import "CTMemberEquityView3.h"
+#import "CTMyEarnModel.h"
 
-@implementation CTMemberEquityView3
+@implementation CTMyEarnModel
 
 /*
 // Only override drawRect: if you perform custom drawing.

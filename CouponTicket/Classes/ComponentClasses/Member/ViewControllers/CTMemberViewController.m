@@ -147,6 +147,13 @@
     [CTRequest userIndexWithCallback:^(id data, CLRequest *request, CTNetError error) {
         if(!error){
             self.model = [CTMemberInfoModel yy_modelWithDictionary:data];
+            self.headView.user = self.model.user;
+            self.levelView.level = self.model.user.level;
+            self.equityView.models = self.model.user_rebate;
+            self.privilegeView.models = self.model.grade_power;
+            self.upgradeView.containerView.titleLabel.text = self.model.upgrade_condition.txt1;
+            self.upgradeView.containerView.mainConditionLabel.text = self.model.upgrade_condition.txt1;
+            self.upgradeView.containerView.subConditionLabel.text = self.model.upgrade_condition.txt1;
             dispatch_async(dispatch_get_main_queue(), ^{
                 [self reloadView];
             });
@@ -156,15 +163,6 @@
 - (void)reloadView{
     [self.containerView removeAllObjects];
 
-    [self.headView.iconImageView sd_setImageWithURL:[NSURL URLWithString:self.model.user.headimg]];
-    self.headView.nameLabel.text = self.model.user.nickname;
-    self.headView.jobLabel.text = self.model.user.level_txt;
-    self.levelView.level = self.model.user.level;
-    self.equityView.models = self.model.user_rebate;
-    self.privilegeView.models = self.model.grade_power;
-    self.upgradeView.containerView.titleLabel.text = self.model.upgrade_condition.txt1;
-    self.upgradeView.containerView.mainConditionLabel.text = self.model.upgrade_condition.txt1;
-    self.upgradeView.containerView.subConditionLabel.text = self.model.upgrade_condition.txt1;
     @weakify(self)
     //头部视图
     [self.containerView addConfig:^(CLSectionConfig *config) {
@@ -242,7 +240,8 @@
     //奖金攻略
     [self.strategyView setClickItemBlock:^(NSInteger index) {
         @strongify(self)
-        UIViewController *webVc = [[CTModuleManager webService]pushWebFromViewController:self url:nil];
+        NSArray *urls = @[CTBaseUrl(@"api/user/comfield?type=zqgl"),CTBaseUrl(@"api/user/comfield?type=sqgl")];
+        UIViewController *webVc = [[CTModuleManager webService]pushWebFromViewController:self url:urls[index]];
         webVc.title = self.strategyView.titles[index];
     }];
     

@@ -10,11 +10,17 @@
 
 #import "CTOrderListCell.h"
 
+#import "CTOrderViewModel.h"
+
 @interface CTOrderListViewController ()<UITableViewDelegate,UITableViewDataSource>
+
+@property (nonatomic, strong) NSMutableArray <CTOrderViewModel *>*dataSources;
 
 @end
 
 @implementation CTOrderListViewController
+
+@synthesize dataSources = _dataSources;
 
 - (void)setUpUI{
     self.hideNavBarBottomLine = YES;
@@ -29,11 +35,16 @@
     }];
 }
 
-
-
+- (void)request{
+    [CTRequest orderIndexWithPage:self.pageIndex size:self.pageSize tkStatus:self.status callback:^(id data, CLRequest *request, CTNetError error) {
+        if(!error){
+            [self analysisAndReloadWithData:data error:error modelClass:CTOrderModel.class viewModelClass:CTOrderViewModel.class];
+        }
+    }];
+}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 20;
+    return self.dataSources.count;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -41,6 +52,7 @@
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     CTOrderListCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(CTOrderListCell.class)];
+    cell.viewModel = self.dataSources[indexPath.row];
     return cell;
 }
 

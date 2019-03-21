@@ -60,6 +60,7 @@ ViewInstance(setUp)
 - (void)setCategoryModels:(NSArray<CTCategoryModel *> *)categoryModels{
     _categoryModels = [categoryModels copy];
     _unfoldButton.hidden = NO;
+    
     self.segmentedControl.titles = [_categoryModels map:^id(NSInteger index, CTCategoryModel * element) {
         return element.title?:@"";
     }];

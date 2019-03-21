@@ -7,16 +7,7 @@
 //
 
 #import "CTMemberEquityPageView.h"
-
-#import "CTMemberEquityView1.h"
-
-#import "CTMemberEquityView2.h"
-
-#import "CTMemberEquityView3.h"
-
-#import "CTMemberEquityView4.h"
-
-#import "CTMemberEquityTypeView.h"
+#import "CTMemberEquityItemView.h"
 
 @interface CTMemberEquityPageView()<UIScrollViewDelegate>
 
@@ -49,13 +40,16 @@ ViewInstance(setUp)
     
 }
 
-- (void)setLevel:(CTMemberLevel)level{
-    _level = level;
-    
+- (void)setList:(NSArray *)list{
+    _list = list;
     UIView *tempView;
-    for(int i = 0;i <= _level;i ++){
-        NSString *classStr = [NSString stringWithFormat:@"CTMemberEquityView%d",i + 1];
-        CTMemberEquityTypeView *view = NSMainBundleName(classStr);
+    NSArray *titles = @[@"优券小生",@"优券导师",@"优券大咖",@"优券合伙人"];
+    for(int i = 0;i < _list.count;i ++){
+        NSArray *subList = _list[i];
+
+        CTMemberEquityItemView *view = NSMainBundleClass(CTMemberEquityItemView.class);
+        view.titleLabel.text = [titles safe_objectAtIndex:i];
+        view.datas = [CTMemberRebateModel yy_modelsWithDatas:subList];
         view.tag = 100 + i;
         [_containerView addSubview:view];
         [view mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -65,7 +59,7 @@ ViewInstance(setUp)
             else{
                 make.left.mas_equalTo(0);
             }
-            if(i == _level){
+            if(i == _list.count - 1){
                 make.right.mas_equalTo(0);
             }
             make.width.mas_equalTo(self->_scrollView.mas_width);
@@ -74,7 +68,6 @@ ViewInstance(setUp)
         tempView = view;
     }
 }
-
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
     if(!self.width)return;

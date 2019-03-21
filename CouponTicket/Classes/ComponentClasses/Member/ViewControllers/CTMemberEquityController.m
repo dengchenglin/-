@@ -12,6 +12,10 @@
 
 #import "CTEquitySegmentedControl.h"
 
+#import "CTNetworkEngine+Member.h"
+
+#import "CTMemberRebateModel.h"
+
 @interface CTMemberEquityController ()<CTEquitySegmentedControlDelegate,CTMemberEquityPageViewDelegate>
 
 @property (nonatomic, strong) CTEquitySegmentedControl *segmentedControl;
@@ -59,15 +63,15 @@
 }
 
 - (void)request{
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [self reloadData:nil];
-    });
+    [CTRequest userPowerWithCallback:^(id data, CLRequest *request, CTNetError error) {
+        if(!error){
+            self.pageView.list = data[@"list"];
+            self.segmentedControl.level = self.pageView.list.count;
+        }
+    }];
 }
 
-- (void)reloadData:(id)data{
-    self.segmentedControl.level = CTMemberPartner;
-    self.pageView.level = CTMemberPartner;
-}
+
 
 - (void)segmentedControl:(CTEquitySegmentedControl *)segmentedControl didScrollWithIndex:(NSInteger)index{
     [_pageView scrollToIndex:index];

@@ -13,8 +13,13 @@
 
 #import "CTTeamListViewController.h"
 
+#import "CTNetworkEngine+Member.h"
+
+#import "CTTeamCateModel.h"
+
 @interface CTMyTeamPageController ()<LMSegmentedControlDelegate>
 @property (nonatomic, strong) LMSegmentedControl *segmentedControl;
+@property (nonatomic, strong) CTTeamCateModel *model;
 @end
 
 @implementation CTMyTeamPageController
@@ -49,19 +54,41 @@
         make.height.mas_equalTo(45);
     }];
 }
+- (void)request{
+    [CTRequest teamCateWithCallback:^(id data, CLRequest *request, CTNetError error) {
+        if(!error){
+             self.model =  [CTTeamCateModel yy_modelWithDictionary:data];
+            [self reloadView];
+        }
+    }];
+}
+
 
 - (void)reloadView{
-    NSArray *titles = @[@"全部(268人)",@"直属用户(168人)",@"间接用户(100人)"];
-    dispatch_async(dispatch_get_main_queue(), ^{
-        _segmentedControl.titles = titles;
-    });
-    NSMutableArray *array = [NSMutableArray array];
-    for(int i = 0;i < titles.count;i ++){
-        CTTeamListViewController *vc = [[CTTeamListViewController alloc]init];
-        vc.teamKind = i;
-        [array addObject:vc];
+    if(!self.model)return;
+    NSMutableArray <CTTeamCateItem *>*array = [NSMutableArray array];
+    if(self.model.all){
+        [array addObject:self.model.all];
     }
-    self.viewControllers = array;
+    if(self.model.directly){
+        [array addObject:self.model.directly];
+    }
+    if(self.model.indirect){
+        [array addObject:self.model.indirect];
+    }
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        _segmentedControl.titles = [array map:^id(NSInteger index, CTTeamCateItem *element) {
+            return element.txt?:@"";
+        }];
+    });
+    NSMutableArray *vcs = [NSMutableArray array];
+    for(int i = 0;i < array.count;i ++){
+        CTTeamListViewController *vc = [[CTTeamListViewController alloc]init];
+        vc.cateId = array[i].cate_id;
+        [vcs addObject:vc];
+    }
+    self.viewControllers = vcs;
 }
 
 - (void)segmentedControl:(LMSegmentedControl *)segmentedControl didSelectedInbdex:(NSUInteger)index{

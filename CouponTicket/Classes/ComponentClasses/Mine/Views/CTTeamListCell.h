@@ -9,9 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface CTTeamListCell : UITableViewCell
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *userheadImageView;
+@property (weak, nonatomic) IBOutlet UIImageView *userheadImageView;
 @property (weak, nonatomic) IBOutlet UILabel *usernameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *userLevelLabel;
 @property (weak, nonatomic) IBOutlet UILabel *userKindLabel;
-
+@property (nonatomic, strong) CTUser *user;
 @end

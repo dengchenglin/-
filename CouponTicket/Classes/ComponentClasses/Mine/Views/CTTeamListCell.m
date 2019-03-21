@@ -10,15 +10,11 @@
 
 @implementation CTTeamListCell
 
-- (void)awakeFromNib {
-    [super awakeFromNib];
-    // Initialization code
+- (void)setUser:(CTUser *)user{
+    _user = user;
+    [_userheadImageView sd_setImageWithURL:[NSURL URLWithString:_user.headimg] placeholderImage:[UIImage imageNamed:@"pic_head_placeholder"]];
+    _usernameLabel.text = _user.nickname;
+    _userLevelLabel.text = _user.level_txt;
+    _userKindLabel.text = _user.type;
 }
-
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
-}
-
 @end

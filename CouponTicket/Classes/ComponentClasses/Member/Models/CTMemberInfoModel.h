@@ -7,10 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-@interface CTMemberRebateModel:NSObject
-@property (nonatomic, copy) NSString *fx_level;
-@property (nonatomic, copy) NSString *fx_scale;
-@end
+#import "CTMemberRebateModel.h"
 @interface CTMemberGradePowerModel:NSObject
 @property (nonatomic, copy) NSString *Id;
 @property (nonatomic, copy) NSString *img;

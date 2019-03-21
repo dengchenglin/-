@@ -15,6 +15,8 @@
 
 #import "CTNetworkEngine+Goods.h"
 
+#import "CTSearchHotModel.h"
+
 @interface CTGoodSearchViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic, assign) NSUInteger pageIndex;
@@ -70,8 +72,21 @@
         [self searchKeyword:[self keyword]];
     }];
 }
+
+- (void)request{
+    [super request];
+    [CTRequest searchHistoryWithCallback:^(id data, CLRequest *request, CTNetError error) {
+        if(!error){
+           NSArray *models = [CTSearchHotModel yy_modelsWithDatas:data[@"hot_history"]];
+            self.previewView.hotKeywords = [models map:^id(NSInteger index, CTSearchHotModel *element) {
+                return element.keyword?:@"";
+            }];
+        }
+    }];
+}
+
 - (void)searchKeyword:(NSString *)keyword{
-    [CTRequest goodsSearchWithKeyword:keyword page:self.pageSize size:self.pageIndex order:nil callback:^(id data, CLRequest *request, CTNetError error) {
+    [CTRequest goodsSearchWithKeyword:keyword page:self.pageIndex size:self.pageSize order:nil callback:^(id data, CLRequest *request, CTNetError error) {
         [self.dataTableView endRefreshing];
         if(!error){
             if(!self.isLoadMore){

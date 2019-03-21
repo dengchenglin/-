@@ -62,6 +62,7 @@
     for(int i = 0;i < 6;i ++){
         CTSpreeShopItem *item = [self viewWithTag:100 + i];
         item.model = [_model.goods safe_objectAtIndex:i];
+        item.hidden = !item.model;
     }
 }
 

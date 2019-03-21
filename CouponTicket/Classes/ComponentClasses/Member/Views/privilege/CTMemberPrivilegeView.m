@@ -66,7 +66,7 @@ ViewInstance(setUp)
             make.height.mas_equalTo(itemHeight);
         }];
     }
-    CGFloat totalHeight = (count + lineCount - 1)/lineCount * itemHeight;
+    CGFloat totalHeight = lineCount?((count + lineCount - 1)/lineCount * itemHeight):0;
     [_containerView mas_updateConstraints:^(MASConstraintMaker *make) {
         make.height.mas_equalTo(totalHeight);
     }];

@@ -8,13 +8,7 @@
 
 #import "CTPageController.h"
 
-typedef NS_ENUM(NSInteger,CTOrderStatus) {
-    CTOrderAll = 0,
-    CTOrderPayed,
-    CTOrderRebated,
-    CTOrderLose,
-    CTOrderRefund
-};
+#import "CTNetworkEngine+Order.h"
 
 @interface CTOrderPageController : CTPageController
 

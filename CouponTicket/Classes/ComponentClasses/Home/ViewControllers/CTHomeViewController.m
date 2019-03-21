@@ -173,6 +173,16 @@
         self.navView.activitys = self.viewModel.model.activity;
         self.spreeShopView.model = self.viewModel.model.cur_time_buy;
         self.salesView.model = self.viewModel.model.hot_goods;
+        
+        [self.spreeShopView mas_updateConstraints:^(MASConstraintMaker *make) {
+            make.top.mas_equalTo(self.navView.mas_bottom).offset(self.viewModel.spreeHeight?10:0);
+            make.height.mas_equalTo(self.viewModel.spreeHeight);
+        }];
+        [self.salesView mas_updateConstraints:^(MASConstraintMaker *make) {
+            make.top.mas_equalTo(self.spreeShopView.mas_bottom).offset(self.viewModel.saleHeight?10:0);
+            make.height.mas_equalTo(self.viewModel.saleHeight);
+        }];
+        [self.tableView reloadData];
     }
 }
 

@@ -20,4 +20,8 @@
 
 @property (nonatomic, copy) NSArray <CTGoodsViewModel *> *now_goods;
 
+@property (nonatomic, assign) CGFloat spreeHeight;
+
+@property (nonatomic, assign) CGFloat saleHeight;
+
 @end
