@@ -19,14 +19,17 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ept-6B-lMQ">
                     <rect key="frame" x="16" y="10" width="355" height="107"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="----" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dxx-dY-CXe">
-                            <rect key="frame" x="0.0" y="0.0" width="355" height="22.5"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="----" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dxx-dY-CXe">
+                            <rect key="frame" x="0.0" y="0.0" width="355" height="45"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="45" id="oBt-LW-fM7"/>
+                            </constraints>
                             <fontDescription key="fontDescription" name="PingFangSC-Medium" family="PingFang SC" pointSize="16"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="llO-Oq-VO9">
-                            <rect key="frame" x="0.0" y="22.5" width="355" height="34"/>
+                            <rect key="frame" x="0.0" y="45" width="355" height="34"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¥" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YEZ-Xd-gvg">
                                     <rect key="frame" x="0.0" y="10.5" width="8" height="18"/>
@@ -69,23 +72,23 @@
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Ou-Sn-zks">
-                            <rect key="frame" x="0.0" y="56.5" width="355" height="50.5"/>
+                            <rect key="frame" x="0.0" y="79" width="355" height="28"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="---" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vXW-19-BWe">
-                                    <rect key="frame" x="17" y="18" width="17" height="14.5"/>
+                                    <rect key="frame" x="17" y="7.5" width="17" height="14.5"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                     <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Uta-wi-ieF">
-                                    <rect key="frame" x="0.0" y="19.5" width="12" height="12"/>
+                                    <rect key="frame" x="0.0" y="9" width="12" height="12"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="12" id="lEq-TB-0jj"/>
                                         <constraint firstAttribute="height" constant="12" id="yx9-N5-fzb"/>
                                     </constraints>
                                 </imageView>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JaL-64-tuI">
-                                    <rect key="frame" x="240" y="16" width="37" height="18"/>
+                                    <rect key="frame" x="240" y="5.5" width="37" height="18"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="赚0元" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E2W-Rc-5LF">
                                             <rect key="frame" x="5" y="0.0" width="27" height="18"/>
@@ -111,7 +114,7 @@
                                     </userDefinedRuntimeAttributes>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZJJ-tG-Jqq">
-                                    <rect key="frame" x="287" y="16" width="68" height="18"/>
+                                    <rect key="frame" x="287" y="5.5" width="68" height="18"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="升级可赚0元" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WaN-SH-b94">
                                             <rect key="frame" x="5" y="0.0" width="58" height="18"/>

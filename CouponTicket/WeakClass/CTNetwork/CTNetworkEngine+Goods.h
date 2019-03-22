@@ -21,4 +21,5 @@
 - (CLRequest *)favoriteWithGoodsId:(NSString *)goodsId isFavorite:(BOOL)isFavorite callback:(CTResponseBlock)callback;
 //热搜和搜索历史
 - (CLRequest *)searchHistoryWithCallback:(CTResponseBlock)callback;
+
 @end

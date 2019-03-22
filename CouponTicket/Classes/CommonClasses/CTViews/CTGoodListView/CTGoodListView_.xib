@@ -118,20 +118,20 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b1S-Yy-U8L">
-                            <rect key="frame" x="303.5" y="117" width="76.5" height="30"/>
+                            <rect key="frame" x="307" y="117" width="73" height="30"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5ST-cF-eRh">
-                                    <rect key="frame" x="0.0" y="0.0" width="76.5" height="30"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="73" height="30"/>
                                 </imageView>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pic_list_coupon_bg2" translatesAutoresizingMaskIntoConstraints="NO" id="eyb-H0-Jir">
-                                    <rect key="frame" x="34.5" y="1" width="42" height="32"/>
+                                    <rect key="frame" x="31" y="1" width="42" height="32"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="42" id="3n7-KL-sfl"/>
                                         <constraint firstAttribute="height" constant="32" id="rlb-kt-y5M"/>
                                     </constraints>
                                 </imageView>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P87-MY-Dnu">
-                                    <rect key="frame" x="0.0" y="0.0" width="34.5" height="30"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="31" height="30"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hiv-h4-u8N">
                                             <rect key="frame" x="9.5" y="0.0" width="16" height="30"/>
@@ -163,8 +163,7 @@
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstItem="Hiv-h4-u8N" firstAttribute="centerY" secondItem="P87-MY-Dnu" secondAttribute="centerY" id="F8G-LM-yOJ"/>
-                                        <constraint firstItem="Hiv-h4-u8N" firstAttribute="centerX" secondItem="P87-MY-Dnu" secondAttribute="centerX" id="Pmo-pg-abL"/>
-                                        <constraint firstAttribute="trailing" secondItem="Hiv-h4-u8N" secondAttribute="trailing" constant="9" id="fMQ-S1-d9v"/>
+                                        <constraint firstItem="Hiv-h4-u8N" firstAttribute="centerX" secondItem="P87-MY-Dnu" secondAttribute="centerX" constant="2" id="Pmo-pg-abL"/>
                                         <constraint firstItem="Hiv-h4-u8N" firstAttribute="leading" secondItem="P87-MY-Dnu" secondAttribute="leading" constant="9.5" id="zSO-bE-NXJ"/>
                                     </constraints>
                                 </view>
@@ -242,7 +241,7 @@
                 <outlet property="typeImageView" destination="8vE-uF-COr" id="VFs-Be-sV6"/>
                 <outlet property="upgradeView" destination="l4c-Gi-QmW" id="iBt-r6-w8Z"/>
             </connections>
-            <point key="canvasLocation" x="-67" y="-306"/>
+            <point key="canvasLocation" x="-233" y="-314"/>
         </view>
     </objects>
     <resources>

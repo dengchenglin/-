@@ -147,6 +147,7 @@
         @strongify(self)
         //获取真正的click_url
         [AliTradeManager autoWithViewController:self successCallback:^(ALBBSession *session) {
+            ALBBUser *user = [session getUser];
             @strongify(self)
             [CTRequest goodsUrlConvertWithTbGoodUrl:self.viewModel.model.coupon_share_url tbCode:[session getUser].topAuthCode tbToken:[session getUser].topAccessToken callback:^(id data, CLRequest *request, CTNetError error) {
                 @strongify(self)
@@ -157,7 +158,7 @@
                 }
                 else{
                     NSInteger status = [data[@"status"] integerValue];
-                    if(status == 404){
+                    if(status == 403){
                         NSString *clickUrl = data[@"data"];
                         [[CTModuleManager webService]tbAuthFromViewController:self url:clickUrl callback:^(id data) {
                             [AliTradeManager openTbWithViewController:self url:data];
@@ -179,7 +180,9 @@
         else {
             [[CTModuleManager loginService]showLoginFromViewController:self callback:^(BOOL logined) {
                 if(logined){
-                    buybuy();
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                         buybuy();
+                    });
                 }
             }];
         }

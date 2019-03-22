@@ -55,7 +55,8 @@
     @weakify(self)
     [self.sortView setClickBlock:^(CTGoodSortType type) {
         @strongify(self)
-        NSLog(@"%d",type);
+
+        
     }];
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{

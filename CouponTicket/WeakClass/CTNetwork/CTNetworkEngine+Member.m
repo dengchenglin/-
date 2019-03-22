@@ -34,7 +34,7 @@
 
 //我的收益
 - (CLRequest *)userInfoWithCallback:(CTResponseBlock)callback{
-    return [self postWithPath:CTUser(@"my") params:nil callback:callback];
+    return [self postWithPath:CTUser(@"my") params:nil showHud:NO callback:callback];
 }
 //常见问题
 - (CLRequest *)oftenProblemWithPage:(NSInteger)page size:(NSInteger)size name:(NSString *)name callback:(CTResponseBlock)callback{
@@ -54,4 +54,9 @@
     [params setValue:cateId forKey:@"cate_id"];
     return [self postWithPath:CTUser(@"team_list") params:params callback:callback];
 }
+//热门分类和猜你喜欢
+- (CLRequest *)hotGoodsCateWithCallback:(CTResponseBlock)callback{
+    return [self postWithPath:CTUser(@"hot_goods_cate") params:nil callback:callback];
+}
+
 @end

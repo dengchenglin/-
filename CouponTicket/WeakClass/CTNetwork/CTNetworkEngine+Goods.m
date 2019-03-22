@@ -35,7 +35,7 @@
     [params setValue:@(page) forKey:@"page"];
     [params setValue:@(size) forKey:@"size"];
     [params setValue:order forKey:@"order"];
-    return [self postWithPath:CTGoods(@"goods_search") params:params showHud:NO callback:callback];
+    return [self postWithPath:CTGoods(@"goods_search") params:params showHud:YES callback:callback];
 }
 
 //商品收藏

@@ -22,4 +22,8 @@
 - (CLRequest *)teamCateWithCallback:(CTResponseBlock)callback;
 //我的团队-列表
 - (CLRequest *)teamListWithCateId:(NSString *)cateId page:(NSInteger)page size:(NSInteger)size  callback:(CTResponseBlock)callback;
+//热门分类和猜你喜欢
+- (CLRequest *)hotGoodsCateWithCallback:(CTResponseBlock)callback;
+
+
 @end

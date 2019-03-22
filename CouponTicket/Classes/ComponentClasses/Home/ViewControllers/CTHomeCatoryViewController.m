@@ -138,6 +138,8 @@
         self.viewModel.sortType = type;
         self.pageIndex = 1;
         self.isLoadMore = NO;
+        [self.dataSources removeAllObjects];
+        [self.tableView reloadData];
         [self loadlListData];
     }];
 }

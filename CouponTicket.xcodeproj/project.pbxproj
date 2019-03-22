@@ -377,7 +377,6 @@
 		32E7A5972240F1C10074069D /* AliTradeWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32E7A5962240F1C10074069D /* AliTradeWebViewController.m */; };
 		32E7EE5221F2F70700191789 /* CTHomeViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 32E7EE5121F2F70700191789 /* CTHomeViewModel.m */; };
 		32E7EE5521F2F7E700191789 /* CTHomeTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 32E7EE5421F2F7E700191789 /* CTHomeTopView.m */; };
-		32E7EE5721F3013B00191789 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 32E7EE5621F3013B00191789 /* Info.plist */; };
 		32E7EE5B21F3024D00191789 /* UIPageControlManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 32E7EE5A21F3024D00191789 /* UIPageControlManager.m */; };
 		32E7EE5E21F3066700191789 /* CTHomePageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32E7EE5D21F3066700191789 /* CTHomePageController.m */; };
 		32E7EE6121F30AB500191789 /* CTBaseListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32E7EE6021F30AB500191789 /* CTBaseListViewController.m */; };
@@ -1156,7 +1155,6 @@
 		32E7EE5121F2F70700191789 /* CTHomeViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTHomeViewModel.m; sourceTree = "<group>"; };
 		32E7EE5321F2F7E700191789 /* CTHomeTopView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTHomeTopView.h; sourceTree = "<group>"; };
 		32E7EE5421F2F7E700191789 /* CTHomeTopView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTHomeTopView.m; sourceTree = "<group>"; };
-		32E7EE5621F3013B00191789 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		32E7EE5921F3024D00191789 /* UIPageControlManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIPageControlManager.h; sourceTree = "<group>"; };
 		32E7EE5A21F3024D00191789 /* UIPageControlManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIPageControlManager.m; sourceTree = "<group>"; };
 		32E7EE5C21F3066700191789 /* CTHomePageController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTHomePageController.h; sourceTree = "<group>"; };
@@ -1198,6 +1196,7 @@
 		32ED00F0222D28A3008A1640 /* QCodeHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QCodeHelper.m; sourceTree = "<group>"; };
 		32EDC59D2221186C00AFF766 /* UIScrollView+CTPagePanGes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+CTPagePanGes.h"; sourceTree = "<group>"; };
 		32EDC59E2221186C00AFF766 /* UIScrollView+CTPagePanGes.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+CTPagePanGes.m"; sourceTree = "<group>"; };
+		32F47E5E2244B011001BBD4A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		32FD1250223F2C3F00CB85C1 /* CTGoodsImgsView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTGoodsImgsView.h; sourceTree = "<group>"; };
 		32FD1251223F2C3F00CB85C1 /* CTGoodsImgsView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTGoodsImgsView.m; sourceTree = "<group>"; };
 		32FD1253223F2C4C00CB85C1 /* CTGoodsDescView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTGoodsDescView.h; sourceTree = "<group>"; };
@@ -2521,7 +2520,7 @@
 			isa = PBXGroup;
 			children = (
 				32BE600E21EDC5E500BA52EF /* LaunchScreen.storyboard */,
-				32E7EE5621F3013B00191789 /* Info.plist */,
+				32F47E5E2244B011001BBD4A /* Info.plist */,
 				32BE613421EDD04A00BA52EF /* CTPrefixHeader.pch */,
 			);
 			path = SystemConfigs;
@@ -3476,7 +3475,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = CT;
-				LastUpgradeCheck = 0940;
+				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = Danke;
 				TargetAttributes = {
 					32BE5FFF21EDC5E100BA52EF = {
@@ -3519,7 +3518,6 @@
 				24FF626221F41D1700488860 /* CTHomeNewestHeadView.xib in Resources */,
 				326AC20021FAF370008C154B /* CTYourLikedHeadView.xib in Resources */,
 				240F513321F9DBC100BFDD2D /* CTPasteCheckPopView.xib in Resources */,
-				32E7EE5721F3013B00191789 /* Info.plist in Resources */,
 				3220EA1621F95E8F004E0422 /* CTMessageTypeView.xib in Resources */,
 				32ED00ED222D264F008A1640 /* SGQRCodeFlashlightOpenImage.png in Resources */,
 				245CAE5721F42E8000496052 /* CTMainCategoryItem.xib in Resources */,

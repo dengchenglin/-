@@ -10,8 +10,12 @@
 
 #import "CTCategoryModel.h"
 
+#import "CTGoodsViewModel.h"
+
 @interface CTSearchTicketViewModel : CTViewModel
 
 @property (nonatomic, copy) NSArray <CTCategoryModel *>*categoryModels;
+
+@property (nonatomic, copy) NSArray <CTGoodsViewModel *> *likes;
 
 @end

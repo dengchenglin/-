@@ -60,6 +60,10 @@
     @weakify(self)
     [self.sortView setClickBlock:^(CTGoodSortType type) {
         @strongify(self)
+        [self.dataSources removeAllObjects];
+        [self.tableView reloadData];
+        self.pageIndex = 1;
+        self.isLoadMore = NO;
         [self request];
     }];
 }

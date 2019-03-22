@@ -60,11 +60,15 @@
     @weakify(self)
     [self.sortView setClickBlock:^(CTGoodSortType type) {
         @strongify(self)
+        [self.dataSources removeAllObjects];
+        [self.tableView reloadData];
+        self.pageIndex = 1;
+        self.isLoadMore = NO;
         [self request];
     }];
 }
 - (void)request{
-    [CTRequest goodsSearchWithKeyword:_keyword page:self.pageSize size:self.pageIndex order:GetGoodsOrderStr(self.sortView.currentType) callback:^(id data, CLRequest *request, CTNetError error) {
+    [CTRequest goodsSearchWithKeyword:_keyword page:self.pageIndex size:self.pageSize order:GetGoodsOrderStr(self.sortView.currentType) callback:^(id data, CLRequest *request, CTNetError error) {
         [self analysisAndReloadWithData:data error:error modelClass:CTGoodsModel.class viewModelClass:CTGoodsViewModel.class];
     }];
 }

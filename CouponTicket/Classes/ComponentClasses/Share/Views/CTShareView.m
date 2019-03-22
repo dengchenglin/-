@@ -13,6 +13,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *qrCodeImageView;
 @property (weak, nonatomic) IBOutlet UILabel *inviteCodeLabel;
 @property (weak, nonatomic) IBOutlet UIButton *downLoadButton;
+@property (weak, nonatomic) IBOutlet UIView *preView;
 
 
 @end

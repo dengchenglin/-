@@ -150,10 +150,10 @@ static const int request_vc_key;
     
     NSMutableDictionary *dic = [NSMutableDictionary dictionary];
     [dic setValue:[CTAppManager sharedInstance].token forKey:@"token"];
-//    [dic setValue:CT_SIGN_MODEL forKey:@"device_type"];
-//    [dic setValue:CT_APP_VERSION forKey:@"app_version"];
-//    [dic setValue:CT_SIGN_SYSTEM_VERSION forKey:@"system_version"];
-//    [dic setValue:CT_SIGN_DEVICE_ID forKey:@"device_id"];
+    [dic setValue:@"ios" forKey:@"app_type"];
+    [dic setValue:CT_APP_VERSION forKey:@"app_version"];
+    [dic setValue:CT_SIGN_SYSTEM_VERSION forKey:@"system_version"];
+    [dic setValue:CT_SIGN_DEVICE_ID forKey:@"device_id"];
     
 //#ifdef DEBUG
 //    [dic setValue:@"1" forKey:@"app_test"];

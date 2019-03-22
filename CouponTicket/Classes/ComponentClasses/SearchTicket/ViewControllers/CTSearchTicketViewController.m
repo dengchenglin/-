@@ -22,6 +22,8 @@
 
 #import "CTGoodListCell.h"
 
+#import "CTNetworkEngine+Member.h"
+
 @interface CTSearchTicketViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic, strong) UITableView *tableView;
@@ -141,7 +143,8 @@
     }];
     [self.categoryView.categoryView setClickItemBlock:^(NSInteger index) {
         @strongify(self)
-        UIViewController *vc = [[CTModuleManager goodListService]goodListViewControllerWithCategoryId:nil];
+        UIViewController *vc = [[CTModuleManager goodListService]goodListViewControllerWithCategoryId:self.viewModel.categoryModels[index].uid];
+        vc.title = self.viewModel.categoryModels[index].title;
         [self.navigationController pushViewController:vc animated:YES];
     }];
 
@@ -151,6 +154,11 @@
     [[[[NSNotificationCenter defaultCenter]rac_addObserverForName:UIApplicationDidBecomeActiveNotification object:nil]takeUntil:self.rac_willDeallocSignal] subscribeNext:^(NSNotification * _Nullable x) {
         @strongify(self)
         [self checkPasteboard];
+    }];
+    //登录/退出
+    [[[[[NSNotificationCenter defaultCenter]rac_addObserverForName:CTDidLoginNotification object:nil]takeUntil:self.rac_willDeallocSignal] merge:[[[NSNotificationCenter defaultCenter]rac_addObserverForName:CTDidLogoutNotification object:nil]takeUntil:self.rac_willDeallocSignal]] subscribeNext:^(NSNotification * _Nullable x) {
+        @strongify(self)
+        [self request];
     }];
 }
 
@@ -168,12 +176,17 @@
 }
 
 - (void)request{
-    [self reloadData:nil];
+    [CTRequest hotGoodsCateWithCallback:^(id data, CLRequest *request, CTNetError error) {
+        if(!error){
+            [self reloadData:data];
+        }
+    }];
 }
 
 - (void)reloadData:(id)data{
-    NSArray <CTCategoryModel *>*models = [CTCategoryModel yy_modelsWithDatas:[self testCategory]];
+    NSArray <CTCategoryModel *>*models = [CTCategoryModel yy_modelsWithDatas:data[@"cate"]];
     self.viewModel.categoryModels = models;
+    self.viewModel.likes = [CTGoodsViewModel bindModels:[CTGoodsModel yy_modelsWithDatas:data[@"list"]]];
     [self.tableView reloadData];
 }
 
@@ -193,25 +206,20 @@
     return [UIView new];
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 10;
+    return self.viewModel.likes.count;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 112;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     CTGoodListCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(CTGoodListCell.class)];
+    cell.viewModel = self.viewModel.likes[indexPath.row];
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    UIViewController *vc = [[CTModuleManager goodListService]goodDetailViewControllerWithGoodId:nil];
+    UIViewController *vc = [[CTModuleManager goodListService]goodDetailViewControllerWithGoodViewModel:self.viewModel.likes[indexPath.row]];
     [self.navigationController pushViewController:vc animated:YES];
-}
-
-
-- (NSArray *)testCategory{
-    
-    return @[@{@"title":@"今日精选"},@{@"title":@"女装"},@{@"title":@"母婴儿童"},@{@"title":@"内衣"},@{@"title":@"居家"},@{@"title":@"男装"},@{@"title":@"女装"},@{@"title":@"内裤"}];
 }
 
 @end

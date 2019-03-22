@@ -72,7 +72,7 @@
         JSValue *jsVal = [args objectAtIndex:0];
         NSString *jsStr = [jsVal toString];
         NSDictionary *data = [jsStr jsonValueDecoded];
-        NSString *result = data[@"result"];
+        NSString *result = data[@"status"];
         if(result.integerValue == 200){
             if(self.callback){
                 self.callback(data[@"data"]);

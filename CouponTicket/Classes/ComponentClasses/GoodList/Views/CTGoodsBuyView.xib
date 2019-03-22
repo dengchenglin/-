@@ -101,7 +101,7 @@
                 <outlet property="buyButton" destination="CE7-gh-ZCk" id="3H7-Fe-VXO"/>
                 <outlet property="collectButton" destination="cew-gG-qO4" id="rwW-kn-rcb"/>
             </connections>
-            <point key="canvasLocation" x="-25" y="105.5"/>
+            <point key="canvasLocation" x="-209" y="106"/>
         </view>
     </objects>
     <resources>
