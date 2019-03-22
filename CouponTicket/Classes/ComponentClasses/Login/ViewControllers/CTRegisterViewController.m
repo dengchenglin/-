@@ -14,6 +14,8 @@
 
 #import "CTGetCodeViewController.h"
 
+#import "QCodeHelper.h"
+
 @interface CTRegisterViewController ()
 
 @property (nonatomic, strong) CTRegisterView *registerView;
@@ -63,7 +65,10 @@
     //扫一扫
     [self.registerView.scanButton touchUpInsideSubscribeNext:^(id x) {
         @strongify(self)
-        
+        [QCodeHelper showQcodeFromViewController:self discernCallback:^(NSString *result) {
+            @strongify(self)
+            self.registerView.inviteCodeTfd.text = result;
+        }];
     }];
     //下一步
     [self.registerView.nextButton touchUpInsideSubscribeNext:^(id x) {

@@ -10,6 +10,8 @@
 
 #import <UMCommon/UMCommon.h>
 
+#import <UMShare/UMShare.h>
+
 #define UMAppKey @"5c7ce2030cafb2fa0c0000bc"
 
 #define UMQQAppKey @"101548386"
@@ -44,6 +46,7 @@
     [UMConfigure initWithAppkey:UMAppKey channel:@"App Store"];
     [[UMSocialManager defaultManager]setPlaform:UMSocialPlatformType_QQ appKey:UMQQAppKey appSecret:UMWeChatSecrect redirectURL:nil];
     [[UMSocialManager defaultManager]setPlaform:UMSocialPlatformType_WechatSession appKey:UMWeChatAppKey appSecret:UMWeChatSecrect redirectURL:nil];
+    [UMSocialGlobal shareInstance].isUsingHttpsWhenShareContent = NO;
 }
 // 支持所有iOS系统
 + (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
@@ -78,6 +81,33 @@
         if(!error && completion){
             CTUMSocialUserInfoResponse *resp = [[CTUMSocialUserInfoResponse alloc]initWithResponse:result];
             completion(resp);
+        }
+    }];
+}
+
++ (void)shareImageToPlatformType:(UMSocialPlatformType)platformType thumbImage:(UIImage *)image imageUrl:(NSString *)imageUrl
+{
+    if(!image)return;
+    //创建分享消息对象
+    UMSocialMessageObject *messageObject = [UMSocialMessageObject messageObject];
+    
+    //创建图片内容对象
+    UMShareImageObject *shareObject = [[UMShareImageObject alloc] init];
+    //如果有缩略图，则设置缩略图
+    shareObject.thumbImage = image;
+    [shareObject setShareImage:imageUrl];
+    
+    //分享消息对象设置分享内容对象
+    messageObject.shareObject = shareObject;
+    
+    UIViewController *vc = [UIUtil getCurrentViewController];
+    
+    //调用分享接口
+    [[UMSocialManager defaultManager] shareToPlatform:platformType messageObject:messageObject currentViewController:vc completion:^(id data, NSError *error) {
+        if (error) {
+            NSLog(@"************Share fail with error %@*********",error);
+        }else{
+            NSLog(@"response data is %@",data);
         }
     }];
 }

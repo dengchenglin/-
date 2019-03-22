@@ -10,6 +10,6 @@
 
 @interface QCodeHelper : NSObject
 
-+ (void)showQcodeFromViewController:(UIViewController *)viewController;
++ (void)showQcodeFromViewController:(UIViewController *)viewController discernCallback:(void(^)(NSString *result))discernCallback;
 
 @end

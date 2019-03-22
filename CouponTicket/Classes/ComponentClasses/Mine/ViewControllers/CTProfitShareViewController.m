@@ -48,6 +48,6 @@
 }
 
 - (void)share{
-    [CTSharePopView showSharePopViewWithTypes:@[CTShareTypeWeChat,CTShareTypeQQ,CTShareTypeSaveImg] image:[self.view snapshotImage] title:nil url:nil];
+    [CTSharePopView showSharePopViewWithTypes:@[CTShareTypeWeChat,CTShareTypeQQ,CTShareTypeSaveImg] image:[self.view snapshotImage] imageUrl:nil title:nil url:nil];
 }
 @end

@@ -14,8 +14,9 @@
 
 @implementation QCodeHelper
 
-+ (void)showQcodeFromViewController:(UIViewController *)viewController{
++ (void)showQcodeFromViewController:(UIViewController *)viewController discernCallback:(void(^)(NSString *result))discernCallback{
     WCQRCodeVC *scanVC = [[WCQRCodeVC alloc] init];
+    scanVC.discernCallback = discernCallback;
     AVCaptureDevice *device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
     if (device) {
         AVAuthorizationStatus status = [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeVideo];

@@ -27,4 +27,6 @@ target 'CouponTicket' do
   pod 'UMCShare/Social/ReducedWeChat'
   pod 'UMCShare/Social/ReducedQQ'
   pod 'SGQRCode', '~> 3.0.1'
+  
+  pod 'Qiniu',              '~> 7.2'
 end

@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+#define LMImageUrlForKey(key) [@"http://lighting.dankal.cn/" stringByAppendingPathComponent:key]
+
 @interface LMUpdateData : NSObject
 
 + (void)updateImages:(NSArray <UIImage *>*)images callback:(void(^)(NSArray <NSString *> *hashKeys))callback;

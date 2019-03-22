@@ -79,8 +79,7 @@
     //二维码邀请页面
     [self.topView.navBar.scanButton touchUpInsideSubscribeNext:^(id x) {
         @strongify(self)
-        UIViewController *shareVc = [[CTModuleManager shareService]rootViewController];
-        [self.navigationController pushViewController:shareVc animated:YES];
+        [[CTModuleManager shareService]pushShareFromViewController:self];
     }];
     //搜索
     [self.topView.navBar setClickSearchBarBlock:^{

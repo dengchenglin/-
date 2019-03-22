@@ -32,4 +32,5 @@
 + (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey, id> *)options;
 + (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url;
 + (void)getUserInfoForPlatform:(UMSocialPlatformType)platformType completion:(void(^)(CTUMSocialUserInfoResponse *respone))completion;
++ (void)shareImageToPlatformType:(UMSocialPlatformType)platformType thumbImage:(UIImage *)image imageUrl:(NSString *)imageUrl;
 @end

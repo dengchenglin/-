@@ -10,4 +10,6 @@
 
 @interface WCQRCodeVC : UIViewController
 
+@property (nonatomic, copy) void (^discernCallback)(NSString *result);
+
 @end

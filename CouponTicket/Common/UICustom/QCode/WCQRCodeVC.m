@@ -108,6 +108,7 @@
     [obtain setBlockWithQRCodeObtainAlbumDidCancelImagePickerController:^(SGQRCodeObtain *obtain) {
         [weakSelf.view addSubview:weakSelf.scanView];
     }];
+    @weakify(self)
     [obtain setBlockWithQRCodeObtainAlbumResult:^(SGQRCodeObtain *obtain, NSString *result) {
         [MBProgressHUD showMBProgressHudOnView:weakSelf.view title:@"正在处理..."];
         if (result == nil) {
@@ -117,19 +118,22 @@
                 [MBProgressHUD showMBProgressHudWithTitle:@"未发现二维码/条形码"];
             });
         } else {
-//            ScanSuccessJumpVC *jumpVC = [[ScanSuccessJumpVC alloc] init];
-//            jumpVC.comeFromVC = ScanSuccessJumpComeFromWC;
-//            if ([result hasPrefix:@"http"]) {
-//                jumpVC.jump_URL = result;
-//            } else {
-//                jumpVC.jump_bar_code = result;
-//            }
-//            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-//                [MBProgressHUD hideHUDForView:weakSelf.view animated:YES];
-//                [weakSelf.navigationController pushViewController:jumpVC animated:YES];
-//            });
+            @strongify(self)
+            if(self.discernCallback){
+                self.discernCallback(result);
+                [self back];
+            }
         }
     }];
+}
+
+- (void)back{
+    if(self.navigationController.viewControllers.count > 1){
+        [self.navigationController popViewControllerAnimated:YES];
+    }
+    else{
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }
 }
 
 - (SGQRCodeScanView *)scanView {

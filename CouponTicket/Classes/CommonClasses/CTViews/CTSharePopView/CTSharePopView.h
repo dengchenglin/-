@@ -12,6 +12,6 @@
 
 @interface CTSharePopView : UIView
 
-+ (void)showSharePopViewWithTypes:(NSArray <NSString *>*)types image:(UIImage *)image title:(NSString *)title url:(NSString *)url;
++ (void)showSharePopViewWithTypes:(NSArray <NSString *>*)types image:(UIImage *)image imageUrl:(NSString *)imageUrl title:(NSString *)title url:(NSString *)url;
 
 @end

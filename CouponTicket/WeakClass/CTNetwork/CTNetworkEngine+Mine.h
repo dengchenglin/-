@@ -10,4 +10,7 @@
 
 @interface CTNetworkEngine (Mine)
 
+//获取我的邀请码
+- (NSString *)qCodeUrl;
+
 @end

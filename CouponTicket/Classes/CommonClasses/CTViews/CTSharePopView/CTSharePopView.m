@@ -8,11 +8,15 @@
 
 #import "CTSharePopView.h"
 
+#import "UMShareManager.h"
+
 @interface CTSharePopView()
 
 @property (nonatomic, copy) NSArray <NSString *> *types;
 
 @property (nonatomic, copy) UIImage *image;
+
+@property (nonatomic, copy) NSString *imageUrl;
 
 @property (nonatomic, copy) NSString *title;
 
@@ -28,11 +32,12 @@
 
 ViewInstance(setUp)
 
-+ (void)showSharePopViewWithTypes:(NSArray <NSString *>*)types image:(UIImage *)image title:(NSString *)title url:(NSString *)url{
++ (void)showSharePopViewWithTypes:(NSArray <NSString *>*)types image:(UIImage *)image imageUrl:(NSString *)imageUrl title:(NSString *)title url:(NSString *)url{
     CTSharePopView *view = [CTSharePopView new];
     view.types = types;
     view.image = image;
     view.title = title;
+    view.imageUrl = imageUrl;
     view.url = url;
     [[UIApplication sharedApplication].keyWindow addSubview:view];
     [view mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -70,6 +75,16 @@ ViewInstance(setUp)
     [_containerView setClickItemBlock:^(NSInteger index) {
         @strongify(self)
         [self removeFromSuperview];
+        if(!self.image || !self.imageUrl){
+            [MBProgressHUD showMBProgressHudWithTitle:@"图片出错"];
+            return ;
+        }
+        if(index == 0){
+            [UMShareManager shareImageToPlatformType:UMSocialPlatformType_WechatSession thumbImage:self.image imageUrl:self.imageUrl];
+        }
+        if(index == 1){
+            [UMShareManager shareImageToPlatformType:UMSocialPlatformType_QQ thumbImage:self.image imageUrl:self.imageUrl];
+        }
         if(index == 2){
             [MBProgressHUD showHUDAddedTo:[UIApplication sharedApplication].keyWindow animated:YES];
             [self.image saveToPhotosWithCompleted:^(BOOL success) {
