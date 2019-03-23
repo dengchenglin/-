@@ -8,22 +8,31 @@
 
 #import "CTNetworkEngine+Member.h"
 
+#import "LMUpdateData.h"
+
 #define CTUser(path)   [CTUrlPath(@"user") stringByAppendingPathComponent:path]
 
 @implementation CTNetworkEngine (Member)
+
+//获取我的邀请码
+- (NSString *)qCodeUrl{
+    NSString *path = [NSString stringWithFormat:@"api/user/user_qr.html?token=%@",[CTAppManager sharedInstance].token];
+    return CTBaseUrl(path);
+}
+
 //会员信息
 - (CLRequest *)userIndexWithCallback:(CTResponseBlock)callback{
-    NSString *path = CLDocumentPath(@"user_index");
-    NSDictionary *data = [[NSDictionary alloc]initWithContentsOfFile:path];
-    if(callback && data){
-        callback(data,nil,0);
+    NSString *cachesPath = CLDocumentPath(@"user_index");
+    NSDictionary *cachesData = [[NSDictionary alloc]initWithContentsOfFile:cachesPath];
+    if(callback && cachesData){
+        callback(cachesData,nil,0);
     }
     return [self postWithPath:CTUser(@"index") params:nil callback:^(id data, CLRequest *request, CTNetError error) {
         if(callback){
             callback(data,request,error);
         }
         if(!error){
-            [((NSDictionary *)data) writeToFile:path atomically:YES];
+            [((NSDictionary *)data) writeToFile:cachesPath atomically:YES];
         }
     }];
 }
@@ -56,7 +65,41 @@
 }
 //热门分类和猜你喜欢
 - (CLRequest *)hotGoodsCateWithCallback:(CTResponseBlock)callback{
-    return [self postWithPath:CTUser(@"hot_goods_cate") params:nil callback:callback];
+    NSString *cachesPath = CLDocumentPath(@"hot_goods_cate");
+    NSDictionary *cachesData = [[NSDictionary alloc]initWithContentsOfFile:cachesPath];
+    if(callback && cachesData){
+        callback(cachesData,nil,0);
+    }
+    return [self postWithPath:CTUser(@"hot_goods_cate") params:nil showHud:cachesData?NO:YES callback:^(id data, CLRequest *request, CTNetError error) {
+        if(callback){
+            callback(data,request,error);
+        }
+        if(!error){
+            [((NSDictionary *)data) writeToFile:cachesPath atomically:YES];
+        }
+    }];
 }
 
+//我的收藏
+- (CLRequest *)myGoodsFavoriteWithPage:(NSInteger)page size:(NSInteger)size callback:(CTResponseBlock)callback{
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    [params setValue:@(page) forKey:@"page"];
+    [params setValue:@(size) forKey:@"size"];
+    return [self postWithPath:CTUser(@"my_goods_favorite") params:params callback:callback];
+}
+
+//意见反馈
+- (CLRequest *)viewSaveWithDetail:(NSString *)detail img:(NSArray <NSString *>*)imgs callback:(CTResponseBlock)callback{
+    NSMutableString *imgStr = [NSMutableString string];
+    for(NSString *img in imgs){
+        [imgStr appendFormat:@"%@,",LMImageUrlForKey(img)];
+    }
+    if(imgStr.length){
+        [imgStr deleteCharactersInRange:NSMakeRange(imgStr.length - 1, 1)];
+    }
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    [params setValue:detail forKey:@"detail"];
+    [params setValue:imgStr forKey:@"imgs"];
+    return [self postWithPath:CTUser(@"view_save") params:params callback:callback];
+}
 @end

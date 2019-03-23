@@ -139,7 +139,7 @@
         [self.navigationController pushViewController:vc animated:YES];
     };
     [self.descView.withdrawButton touchUpInsideSubscribeNext:^(id x) {
-        if([CTAppManager user].withInfo.account){
+        if([CTAppManager user].pay_account){
             withdrawBlock();
         }
         else{

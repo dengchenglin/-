@@ -56,6 +56,9 @@ CTSendCodeType GetSendCodeStrForEventKind(CTEventKind eventKind){
         case CTEventKindForgetpsd:
             return CTSendCodeResetpwd;
             break;
+        case CTEventKindWithDraw:
+            return CTSendCodeResetinfo;
+            break;
         default:
             break;
     }

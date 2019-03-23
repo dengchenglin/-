@@ -110,6 +110,14 @@ static const int request_vc_key;
                     callback(responseObject[@"data"],request,CTNetErrorNone);
                 }
             }
+            else if (status == 401){
+                NSString *info = responseObject[@"info"];
+                if(info.length){
+                    [MBProgressHUD showMBProgressHudWithTitle:info];
+                }
+                [CTAppManager logout];
+                [CTAppManager showLogin];
+            }
             else{
                 NSString *info = responseObject[@"info"];
                 if(info.length){

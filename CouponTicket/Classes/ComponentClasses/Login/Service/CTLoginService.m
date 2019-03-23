@@ -18,6 +18,10 @@
 
 CL_EXPORT_MODULE(CTLoginServiceProtocol)
 
+- (Class)rootBaseClass{
+    return CTLoginBaseViewController.class;
+}
+
 - (UIViewController *)rootViewController{
     return [CTLoginViewController new];
 }

@@ -75,7 +75,7 @@ ViewInstance(setUp)
     [_containerView setClickItemBlock:^(NSInteger index) {
         @strongify(self)
         [self removeFromSuperview];
-        if(!self.image || !self.imageUrl){
+        if(!self.image){
             [MBProgressHUD showMBProgressHudWithTitle:@"图片出错"];
             return ;
         }

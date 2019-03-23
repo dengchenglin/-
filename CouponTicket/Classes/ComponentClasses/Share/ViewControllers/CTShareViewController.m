@@ -16,7 +16,7 @@
 
 #import "LMUpdateData.h"
 
-#import "CTNetworkEngine+Mine.h"
+#import "CTNetworkEngine+Member.h"
 
 @interface CTShareViewController ()
 
@@ -52,15 +52,23 @@
 }
 
 - (void)share{
-    UIImage *image = [self.view snapshotImage];
-    if(!image){
-        [MBProgressHUD showMBProgressHudWithTitle:@"图片出错"];
-        return;
-    }
-    [LMUpdateData updateImages:@[image] callback:^(NSArray<NSString *> *hashKeys) {
-        NSString *imageUrl = LMImageUrlForKey([hashKeys safe_objectAtIndex:0]);
-         [CTSharePopView showSharePopViewWithTypes:@[CTShareTypeWeChat,CTShareTypeQQ,CTShareTypeSaveImg] image:image imageUrl:imageUrl title:nil url:nil];
-    }];
+
+     __block UIImage *image;
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES]; dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        image = [self.shareView.preView snapshotImage];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [MBProgressHUD hideHUDForView:self.view animated:YES];
+            if(!image){
+                [MBProgressHUD showMBProgressHudWithTitle:@"图片出错"];
+                return;
+            }
+            [CTSharePopView showSharePopViewWithTypes:@[CTShareTypeWeChat,CTShareTypeQQ,CTShareTypeSaveImg] image:image imageUrl:nil title:nil url:nil];
+        });
+    });
+   
+    
+    
+   
    
 }
 

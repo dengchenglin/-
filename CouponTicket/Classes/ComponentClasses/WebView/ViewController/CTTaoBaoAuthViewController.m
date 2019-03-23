@@ -75,7 +75,7 @@
         NSString *result = data[@"status"];
         if(result.integerValue == 200){
             if(self.callback){
-                self.callback(data[@"data"]);
+                self.callback(data);
             }
         }
         else{

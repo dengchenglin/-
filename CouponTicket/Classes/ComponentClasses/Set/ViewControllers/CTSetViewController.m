@@ -113,8 +113,9 @@
         break;
         case 1:
         {
-            UIViewController *vc = [[CTModuleManager webService] pushWebFromViewController:self url:nil];
-            vc.title = @"关于我们";
+            UIViewController *webVc = [[CTModuleManager webService] pushWebFromViewController:self url:CTBaseUrl(@"api/user/comfield?type=gywm")];
+            webVc.title = @"领券指南";
+            webVc.title = @"关于我们";
         }
         break;
         case 2:

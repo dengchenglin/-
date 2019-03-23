@@ -20,6 +20,8 @@
 
 #import "CTGoodsViewModel.h"
 
+#import "CTGoodsPreViewController.h"
+
 @interface CTGoodDetailViewController()
 
 @property (nonatomic, strong) CTGoodsImgsView *imgsView;
@@ -147,21 +149,19 @@
         @strongify(self)
         //获取真正的click_url
         [AliTradeManager autoWithViewController:self successCallback:^(ALBBSession *session) {
-            ALBBUser *user = [session getUser];
             @strongify(self)
             [CTRequest goodsUrlConvertWithTbGoodUrl:self.viewModel.model.coupon_share_url tbCode:[session getUser].topAuthCode tbToken:[session getUser].topAccessToken callback:^(id data, CLRequest *request, CTNetError error) {
                 @strongify(self)
                 if(!error){
-                    NSString *clickUrl = data;
-                    //[[CTModuleManager webService]pushWebFromViewController:self url:clickUrl];
+                    NSString *clickUrl = data[@"click_url"];
                     [AliTradeManager openTbWithViewController:self url:clickUrl];
                 }
                 else{
                     NSInteger status = [data[@"status"] integerValue];
                     if(status == 403){
-                        NSString *clickUrl = data[@"data"];
-                        [[CTModuleManager webService]tbAuthFromViewController:self url:clickUrl callback:^(id data) {
-                            [AliTradeManager openTbWithViewController:self url:data];
+                        NSString *tbAuthUrl = data[@"tbAuth_url"];
+                        [[CTModuleManager webService]tbAuthFromViewController:self url:tbAuthUrl callback:^(id data) {
+                            [AliTradeManager openTbWithViewController:self url:data[@"click_url"]];
                         }];
                     }
                     else{
@@ -172,6 +172,7 @@
         }];
     };
     
+    //登录
     void (^clickButtonBlock)(void) = ^{
         @strongify(self)
         if([CTAppManager logined]){
@@ -194,10 +195,40 @@
     [self.couponView addActionWithBlock:^(id target) {
         clickButtonBlock();
     }];
+    
+    
+   
 }
 
 - (void)shareAction{
+    if(![CTAppManager logined]){
+        [[CTModuleManager loginService]showLoginFromViewController:self success:^{
+            [self shareAction];
+        } failure:nil];
+        return;
+    }
     
+    [CTRequest goodsUrlConvertWithTbGoodUrl:self.viewModel.model.coupon_share_url tbCode:nil tbToken:nil callback:^(id data, CLRequest *request, CTNetError error) {
+        if(!error){
+            //绑定过渠道id
+            NSString *clickUrl = data[@"click_url"];
+            [CTGoodsPreViewController pushGoodPreFromViewController:self viewModel:self.viewModel qCodeUrl:clickUrl];
+        }
+        else{
+            //未绑定过渠道id 需要进入h5淘宝授权
+            NSInteger status = [data[@"status"] integerValue];
+            if(status == 403){
+                NSString *tbAuthUrl = data[@"tbAuth_url"];
+                [[CTModuleManager webService]tbAuthFromViewController:self url:tbAuthUrl callback:^(id data) {
+                    NSString *clickUrl = data[@"click_url"];
+                    [CTGoodsPreViewController pushGoodPreFromViewController:self viewModel:self.viewModel qCodeUrl:clickUrl];
+                }];
+            }
+            else{
+                [MBProgressHUD showMBProgressHudWithTitle:data[@"info"]];
+            }
+        }
+    }];
 }
 
 @end

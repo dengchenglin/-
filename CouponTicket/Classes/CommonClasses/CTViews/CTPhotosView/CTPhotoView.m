@@ -187,6 +187,7 @@ ViewInstance(setUp)
 
 
 - (void)add{
+    [self.superview.superview endEditing:YES];
     CGFloat currentMaxCount = _maxCount - self.imageItems.count;
     [LMPhotoBrower showPhotoActionSheetWithMaxCount:currentMaxCount callback:^(NSArray<LMPhotoImageItem *> *imageItems) {
         [LMUpdateData updateImages:[imageItems map:^id(NSInteger index, LMPhotoImageItem *element) {

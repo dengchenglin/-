@@ -261,7 +261,7 @@
     //领券指南
     [self.toolView.guideView addActionWithBlock:^(id target) {
         @strongify(self)
-         UIViewController *webVc = [[CTModuleManager webService] pushWebFromViewController:self url:CTBaseUrl(@"api/user/comfield?type=lqzn")];
+        UIViewController *webVc = [[CTModuleManager webService] pushWebFromViewController:self url:CTBaseUrl(@"api/user/comfield?type=lqzn")];
         webVc.title = @"领券指南";
     }];
     //我的邀请码
@@ -284,7 +284,7 @@
         [self.navigationController pushViewController:vc animated:YES];
     };
     [self.earnView.withdrawButton touchUpInsideSubscribeNext:^(id x) {
-        if([CTAppManager user].withInfo.account){
+        if([CTAppManager user].pay_account){
             withdrawBlock();
         }
         else{

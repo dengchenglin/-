@@ -95,7 +95,7 @@
     UMShareImageObject *shareObject = [[UMShareImageObject alloc] init];
     //如果有缩略图，则设置缩略图
     shareObject.thumbImage = image;
-    [shareObject setShareImage:imageUrl];
+    [shareObject setShareImage:imageUrl?:image];
     
     //分享消息对象设置分享内容对象
     messageObject.shareObject = shareObject;

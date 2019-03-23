@@ -116,8 +116,8 @@
 }
 
 - (void)reloadView{
-    self.viewModel.withdrawAccount = [CTAppManager user].withInfo.account;
-    self.viewModel.withdrawName = [CTAppManager user].withInfo.name;
+    self.viewModel.withdrawAccount = [CTAppManager user].pay_account;
+    self.viewModel.withdrawName = [CTAppManager user].pay_name;
 }
 
 - (void)bindViewModel{

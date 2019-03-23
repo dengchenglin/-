@@ -47,9 +47,9 @@
         make.edges.mas_equalTo(UIEdgeInsetsZero);
     }];
 }
+
 - (void)reloadView{
-    self.boundView.accountTfd.text = [CTAppManager user].withInfo.account;
-    self.boundView.nameTfd.text = [CTAppManager user].withInfo.name;
+
 }
 
 - (void)bindViewModel{
@@ -72,7 +72,7 @@
     };
     [self.boundView.boundButton touchUpInsideSubscribeNext:^(id x) {
         @strongify(self)
-        if([CTAppManager user].withInfo.password){
+        if([CTAppManager user].pay_pwd){
             boundBlock();
         }
         else{

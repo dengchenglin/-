@@ -14,6 +14,8 @@
 
 #import "CTDoneButton.h"
 
+#import "CTNetworkEngine+Member.h"
+
 @interface CTAdviseViewController ()
 
 @property (nonatomic, strong) CTContentInputView *contentInputView;
@@ -81,4 +83,21 @@
     self.submitButton.layer.cornerRadius = 23;
 }
 
+
+- (void)setUpEvent{
+    @weakify(self)
+    [self.submitButton touchUpInsideSubscribeNext:^(id x) {
+       @strongify(self)
+        if(!self.contentInputView.textView.text.wipSpace.length){
+            [MBProgressHUD showMBProgressHudWithTitle:@"请输入文字内容"];
+            return ;
+        }
+        [CTRequest viewSaveWithDetail:self.contentInputView.textView.text img:self.updateImageView.photosView.imgs callback:^(id data, CLRequest *request, CTNetError error) {
+            if(!error){
+                [MBProgressHUD showMBProgressHudWithTitle:@"意见反馈成功"];
+                [self.navigationController popViewControllerAnimated:YES];
+            }
+        }];
+    }];
+}
 @end

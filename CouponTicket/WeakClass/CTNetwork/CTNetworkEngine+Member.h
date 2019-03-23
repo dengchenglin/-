@@ -10,6 +10,8 @@
 
 @interface CTNetworkEngine (Member)
 
+//获取我的邀请码
+- (NSString *)qCodeUrl;
 //会员信息
 - (CLRequest *)userIndexWithCallback:(CTResponseBlock)callback;
 //会员权益
@@ -21,9 +23,13 @@
 //我的团队-分类
 - (CLRequest *)teamCateWithCallback:(CTResponseBlock)callback;
 //我的团队-列表
-- (CLRequest *)teamListWithCateId:(NSString *)cateId page:(NSInteger)page size:(NSInteger)size  callback:(CTResponseBlock)callback;
+- (CLRequest *)teamListWithCateId:(NSString *)cateId page:(NSInteger)page size:(NSInteger)size callback:(CTResponseBlock)callback;
 //热门分类和猜你喜欢
 - (CLRequest *)hotGoodsCateWithCallback:(CTResponseBlock)callback;
-
-
+//我的收藏
+- (CLRequest *)myGoodsFavoriteWithPage:(NSInteger)page size:(NSInteger)size callback:(CTResponseBlock)callback;
+//设置提现密码
+- (CLRequest *)setPaypwdWithPhone:(NSString *)phone pwd:(NSString *)pwd smsCode:(NSString *)smsCode callback:(CTResponseBlock)callback;
+//意见反馈
+- (CLRequest *)viewSaveWithDetail:(NSString *)detail img:(NSArray <NSString *>*)imgs callback:(CTResponseBlock)callback;
 @end

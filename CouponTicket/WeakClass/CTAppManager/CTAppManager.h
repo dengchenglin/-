@@ -8,21 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-@interface CTWithdrawInfo:NSObject
 
-@property (nonatomic, copy) NSString *account;
-
-@property (nonatomic, copy) NSString *password;
-
-@property (nonatomic, copy) NSString *name;
-
-@end
 
 @interface CTUser  :NSObject
-
-
-@property (nonatomic, strong) CTWithdrawInfo *withInfo;
-
 @property (nonatomic, copy) NSString *uid;
 @property (nonatomic, copy) NSString *phone;
 @property (nonatomic, copy) NSString *iv_code;
@@ -34,6 +22,8 @@
 @property (nonatomic, copy) NSString *level_txt;
 @property (nonatomic, copy) NSString *tbk_relation_id;
 @property (nonatomic, copy) NSString *pay_pwd;
+@property (nonatomic, copy) NSString *pay_account;
+@property (nonatomic, copy) NSString *pay_name;
 @property (nonatomic, copy) NSString *tbk_account_name;
 @property (nonatomic, copy) NSString *pid;
 @property (nonatomic, copy) NSString *pwd;

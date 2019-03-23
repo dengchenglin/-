@@ -48,6 +48,18 @@
 }
 
 - (void)share{
-    [CTSharePopView showSharePopViewWithTypes:@[CTShareTypeWeChat,CTShareTypeQQ,CTShareTypeSaveImg] image:[self.view snapshotImage] imageUrl:nil title:nil url:nil];
+    __block UIImage *image;
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES]; dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        image = [self.view snapshotImage];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            if(!image){
+                [MBProgressHUD showMBProgressHudWithTitle:@"图片出错"];
+                return;
+            }
+              [CTSharePopView showSharePopViewWithTypes:@[CTShareTypeWeChat,CTShareTypeQQ,CTShareTypeSaveImg] image:image imageUrl:nil title:nil url:nil];
+        });
+    });
+    
+  
 }
 @end

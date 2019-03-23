@@ -12,6 +12,8 @@
 
 #import "CTSetPasswordViewModel.h"
 
+#import "CTNetworkEngine+Member.h"
+
 @interface CTSetPasswordViewController ()
 
 @property (nonatomic, strong) CTSetPasswordView *passwordView;
@@ -90,6 +92,10 @@
                 [self resetPwd];
             }
                  break;
+            case CTEventKindWithDraw:{
+                [self resetWithDrawPwd];
+            }
+                break;
             default:
                 break;
         }
@@ -117,6 +123,17 @@
 - (void)resetPwd{
     [CTRequest resetPwdWithPhone:self.mobile pwd:self.viewModel.password smsCode:self.verCode callback:^(id data, CLRequest *request, CTNetError error) {
         if(!error){
+            [MBProgressHUD showMBProgressHudWithTitle:@"设置成功"];
+            [self.navigationController popToRootViewControllerAnimated:YES];
+        }
+    }];
+}
+
+//设置提现密码
+- (void)resetWithDrawPwd{
+    [CTRequest setPaypwdWithPhone:self.mobile pwd:self.viewModel.password smsCode:self.verCode callback:^(id data, CLRequest *request, CTNetError error) {
+        if(!error){
+            [CTAppManager user].pay_pwd = self.viewModel.password;
             [MBProgressHUD showMBProgressHudWithTitle:@"设置成功"];
             [self.navigationController popToRootViewControllerAnimated:YES];
         }
