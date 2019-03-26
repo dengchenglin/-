@@ -8,11 +8,9 @@
 
 #import "CTWebViewController.h"
 
-#import <WebKit/WebKit.h>
+@interface CTWebViewController ()<UIScrollViewDelegate,UIWebViewDelegate>
 
-@interface CTWebViewController ()<WKNavigationDelegate>
-
-@property (nonatomic, strong) WKWebView *webView;
+@property (nonatomic, strong) UIWebView *webView;
 
 @property (nonatomic, copy) NSString *htmlString;
 
@@ -36,10 +34,10 @@
     return web;
 }
 
-- (WKWebView *)webView{
+- (UIWebView *)webView{
     if(!_webView){
-        _webView = [[WKWebView alloc]initWithFrame:self.view.bounds];
-        _webView.navigationDelegate = self;
+        _webView = [[UIWebView alloc]initWithFrame:self.view.bounds];
+        _webView.delegate = self;
     }
     return _webView;
 }
@@ -47,6 +45,8 @@
 - (void)setUpUI{
     self.navigationBarStyle = CTNavigationBarWhite;
     [self.view addSubview:self.webView];
+    self.webView.scalesPageToFit = YES;
+    self.webView.scrollView.delegate = self;
 }
 - (void)reloadView{
     NSURL *URL = [NSURL URLWithString:_url];
@@ -63,12 +63,14 @@
 
 #pragma mark -WKNavigationDelegate
 
-- (void)webView:(WKWebView *)webView didStartProvisionalNavigation:(null_unspecified WKNavigation *)navigation{
+- (void)webViewDidFinishLoad:(UIWebView *)webView{
     [MBProgressHUD hideHUDForView:self.view animated:YES];
 }
 
-- (void)webView:(WKWebView *)webView didFailProvisionalNavigation:(null_unspecified WKNavigation *)navigation withError:(NSError *)error{
+- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error{
     [MBProgressHUD hideHUDForView:self.view animated:YES];
 }
-
+- (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView {
+    return nil;
+}
 @end

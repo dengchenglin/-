@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -15,22 +15,24 @@
             <rect key="frame" x="0.0" y="0.0" width="422" height="181"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="最新上架" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pHQ-ZJ-pbG">
-                    <rect key="frame" x="0.0" y="0.0" width="422" height="181"/>
-                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
-                    <color key="textColor" red="0.078431372549019607" green="0.078431372549019607" blue="0.078431372549019607" alpha="1" colorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pic_title_2" translatesAutoresizingMaskIntoConstraints="NO" id="MWC-Yt-gr9">
+                    <rect key="frame" x="176" y="75.5" width="70" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="Vfw-KL-s04"/>
+                        <constraint firstAttribute="width" constant="70" id="xmD-WF-wPC"/>
+                    </constraints>
+                </imageView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="pHQ-ZJ-pbG" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Bdv-y5-FFv"/>
-                <constraint firstAttribute="trailing" secondItem="pHQ-ZJ-pbG" secondAttribute="trailing" id="M6M-HX-SuZ"/>
-                <constraint firstItem="pHQ-ZJ-pbG" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="a2m-gi-gmu"/>
-                <constraint firstAttribute="bottom" secondItem="pHQ-ZJ-pbG" secondAttribute="bottom" id="qtZ-pn-sEd"/>
+                <constraint firstItem="MWC-Yt-gr9" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="4P6-cT-S3z"/>
+                <constraint firstItem="MWC-Yt-gr9" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="O11-UY-cNG"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="-37" y="-26.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="pic_title_2" width="68" height="18"/>
+    </resources>
 </document>

@@ -14,6 +14,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *disLabel1;
 @property (weak, nonatomic) IBOutlet UILabel *disLabel2;
 @property (weak, nonatomic) IBOutlet UIView *upgradeView;
+@property (weak, nonatomic) IBOutlet UIView *salesView;
+@property (weak, nonatomic) IBOutlet UILabel *salesLabel;
 @property (weak, nonatomic) IBOutlet UILabel *priceLabel;
 @property (weak, nonatomic) IBOutlet UILabel *originPriceLabel;
 @property (weak, nonatomic) IBOutlet UILabel *couponPriceLabel;

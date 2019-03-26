@@ -18,5 +18,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *originPriceLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *typeImageView;
 @property (weak, nonatomic) IBOutlet UILabel *shopTitleLabel;
+@property (weak, nonatomic) IBOutlet UIView *salesView;
+@property (weak, nonatomic) IBOutlet UILabel *salesLabel;
 @property (nonatomic, strong) CTGoodsViewModel *viewModel;
 @end

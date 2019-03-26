@@ -17,7 +17,11 @@
 
 #import "CTSearchHotModel.h"
 
+#import "CTGoodSortView.h"
+
 @interface CTGoodSearchViewController ()<UITableViewDelegate,UITableViewDataSource>
+
+@property (nonatomic, strong) CTGoodSortView *sortView;
 
 @property (nonatomic, assign) NSUInteger pageIndex;
 
@@ -25,11 +29,21 @@
 
 @property (nonatomic, assign) BOOL isLoadMore;
 
+@property (nonatomic, copy) NSString *order;
+
 @property (nonatomic, strong) NSMutableArray <CTGoodsViewModel *> *dataSources;
 
 @end
 
 @implementation CTGoodSearchViewController
+
+- (CTGoodSortView *)sortView{
+    if(!_sortView){
+        _sortView = [[CTGoodSortView alloc]init];
+        _sortView.backgroundColor = [UIColor whiteColor];
+    }
+    return _sortView;
+}
 
 - (NSMutableArray<CTGoodsViewModel *> *)dataSources{
     if(!_dataSources){
@@ -37,6 +51,7 @@
     }
     return _dataSources;
 }
+
 
 - (instancetype)init
 {
@@ -69,7 +84,17 @@
         @strongify(self)
         self.pageIndex += 1;
         self.isLoadMore = YES;
-        [self searchKeyword:[self keyword]];
+        [self searchKeyword:[self keyword] order:self.order];
+    }];
+    
+    [self.sortView setClickBlock:^(CTGoodSortType type) {
+        @strongify(self)
+        self.order = GetGoodsOrderStr(type);
+        self.pageIndex = 1;
+        self.isLoadMore = NO;
+        [self.dataSources removeAllObjects];
+        [self.dataTableView reloadData];
+        [self searchKeyword:[self keyword] order:self.order];
     }];
 }
 
@@ -86,7 +111,11 @@
 }
 
 - (void)searchKeyword:(NSString *)keyword{
-    [CTRequest goodsSearchWithKeyword:keyword page:self.pageIndex size:self.pageSize order:nil callback:^(id data, CLRequest *request, CTNetError error) {
+    self.order = nil;
+    [self searchKeyword:keyword order:nil];
+}
+- (void)searchKeyword:(NSString *)keyword order:(NSString *)order{
+    [CTRequest goodsSearchWithKeyword:keyword page:self.pageIndex size:self.pageSize order:order callback:^(id data, CLRequest *request, CTNetError error) {
         [self.dataTableView endRefreshing];
         if(!error){
             if(!self.isLoadMore){
@@ -129,6 +158,14 @@
     
 }
 #pragma mark - UITableViewDelegate
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    return 40;
+}
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+
+    return self.sortView;
+}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return self.dataSources.count;

@@ -164,7 +164,7 @@
             make.bottom.mas_equalTo(-20);
         }];
         config.sectioView = sectionView1;
-        config.sectionHeight = 338 + NAVBAR_TOP;
+        config.sectionHeight = 290; //338 + NAVBAR_TOP;
     }];
     
     [self.containerView addConfig:^(CLSectionConfig *config) {
@@ -190,8 +190,8 @@
     //我的信息
     [self.headView.iconImageView addActionWithBlock:^(id  _Nonnull target) {
         @strongify(self)
-        UIViewController *vc = [[CTModuleManager userInfoService] viewControllerForUserId:nil];
-        [self.navigationController pushViewController:vc animated:YES];
+//        UIViewController *vc = [[CTModuleManager userInfoService] viewControllerForUserId:nil];
+//        [self.navigationController pushViewController:vc animated:YES];
     }];
     //收益排行
     [self.earnView.earnButton touchUpInsideSubscribeNext:^(id x) {

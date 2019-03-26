@@ -50,7 +50,7 @@
     if(callback && data){
         callback(data,nil,0);
     }
-    return  [self postWithPath:CTGoods(@"search_history") params:nil callback:^(id data, CLRequest *request, CTNetError error) {
+    return  [self postWithPath:CTGoods(@"search_history") params:nil showHud:NO callback:^(id data, CLRequest *request, CTNetError error) {
         if(callback){
             callback(data,request,error);
         }

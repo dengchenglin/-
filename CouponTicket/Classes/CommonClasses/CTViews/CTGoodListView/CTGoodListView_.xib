@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -26,6 +25,30 @@
                                 <constraint firstAttribute="width" constant="80" id="dPK-Zz-baK"/>
                             </constraints>
                         </imageView>
+                        <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EQX-KM-ttT">
+                            <rect key="frame" x="76" y="119" width="17" height="14"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lac-z0-YmR">
+                                    <rect key="frame" x="5" y="0.0" width="7" height="14"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.29995437956204379" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="Lac-z0-YmR" secondAttribute="bottom" id="FLL-yG-zdL"/>
+                                <constraint firstItem="Lac-z0-YmR" firstAttribute="leading" secondItem="EQX-KM-ttT" secondAttribute="leading" constant="5" id="O3O-8X-aMA"/>
+                                <constraint firstItem="Lac-z0-YmR" firstAttribute="top" secondItem="EQX-KM-ttT" secondAttribute="top" id="WOM-kU-Nyx"/>
+                                <constraint firstAttribute="trailing" secondItem="Lac-z0-YmR" secondAttribute="trailing" constant="5" id="Wa0-GS-XhQ"/>
+                                <constraint firstAttribute="height" constant="14" id="YyD-Wi-hOC"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="7"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Big-sF-MJ4">
                             <rect key="frame" x="18" y="93" width="45" height="45"/>
                             <constraints>
@@ -143,7 +166,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iec-fm-bbx">
-                                                    <rect key="frame" x="7" y="6" width="9" height="17"/>
+                                                    <rect key="frame" x="7" y="6.5" width="9" height="17"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -184,7 +207,7 @@
                             </constraints>
                         </view>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Qia-Us-tJx">
-                            <rect key="frame" x="152.5" y="131.5" width="26.5" height="1"/>
+                            <rect key="frame" x="152" y="131.5" width="26.5" height="1"/>
                             <color key="backgroundColor" red="0.58823529411764708" green="0.58823529411764708" blue="0.58823529411764708" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="1" id="NNU-4U-gd6"/>
@@ -197,12 +220,14 @@
                         <constraint firstItem="Big-sF-MJ4" firstAttribute="bottom" secondItem="5YZ-zJ-Ohz" secondAttribute="bottom" id="Caw-B1-IZc"/>
                         <constraint firstItem="p59-bX-ZsG" firstAttribute="leading" secondItem="Alv-wX-JD5" secondAttribute="trailing" constant="6" id="D1w-kV-g1q"/>
                         <constraint firstItem="Alv-wX-JD5" firstAttribute="leading" secondItem="Vm4-en-3qd" secondAttribute="trailing" id="EJl-Eb-shB"/>
+                        <constraint firstItem="EQX-KM-ttT" firstAttribute="bottom" secondItem="5YZ-zJ-Ohz" secondAttribute="bottom" constant="-5" id="IU1-xZ-PYQ"/>
                         <constraint firstItem="p59-bX-ZsG" firstAttribute="centerY" secondItem="Alv-wX-JD5" secondAttribute="centerY" id="IcP-nJ-mFq"/>
                         <constraint firstItem="Vm4-en-3qd" firstAttribute="leading" secondItem="RN2-Gd-Rxp" secondAttribute="leading" id="Lqa-ey-CGS"/>
                         <constraint firstItem="Qia-Us-tJx" firstAttribute="centerX" secondItem="p59-bX-ZsG" secondAttribute="centerX" id="M3c-jg-OCl"/>
                         <constraint firstItem="Qia-Us-tJx" firstAttribute="width" secondItem="p59-bX-ZsG" secondAttribute="width" multiplier="10:9" id="PaG-yn-aUc"/>
                         <constraint firstItem="b1S-Yy-U8L" firstAttribute="centerY" secondItem="Alv-wX-JD5" secondAttribute="centerY" id="SaU-NC-zN0"/>
                         <constraint firstAttribute="trailing" secondItem="b1S-Yy-U8L" secondAttribute="trailing" constant="19" id="Uvs-k8-hTU"/>
+                        <constraint firstItem="EQX-KM-ttT" firstAttribute="trailing" secondItem="5YZ-zJ-Ohz" secondAttribute="trailing" constant="-5" id="XEA-7N-EhF"/>
                         <constraint firstItem="Alv-wX-JD5" firstAttribute="top" secondItem="RN2-Gd-Rxp" secondAttribute="bottom" constant="8" id="Y1h-KP-sZj"/>
                         <constraint firstItem="yX6-B2-y3V" firstAttribute="leading" secondItem="QAT-nA-4p7" secondAttribute="leading" id="YKx-Ca-1Eo"/>
                         <constraint firstItem="Alv-wX-JD5" firstAttribute="bottom" secondItem="Vm4-en-3qd" secondAttribute="bottom" constant="1" id="YQj-yO-7id"/>
@@ -213,6 +238,7 @@
                         <constraint firstItem="l4c-Gi-QmW" firstAttribute="centerY" secondItem="yX6-B2-y3V" secondAttribute="centerY" id="hqo-x6-L25"/>
                         <constraint firstItem="Big-sF-MJ4" firstAttribute="leading" secondItem="5YZ-zJ-Ohz" secondAttribute="leading" id="mSs-KJ-EEx"/>
                         <constraint firstItem="8vE-uF-COr" firstAttribute="leading" secondItem="QAT-nA-4p7" secondAttribute="leading" id="mv7-l2-P0I"/>
+                        <constraint firstItem="EQX-KM-ttT" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="5YZ-zJ-Ohz" secondAttribute="leading" constant="10" id="uA5-Ka-ueq"/>
                         <constraint firstItem="l4c-Gi-QmW" firstAttribute="leading" secondItem="yX6-B2-y3V" secondAttribute="trailing" constant="10" id="vYI-Zn-Gm2"/>
                         <constraint firstItem="QAT-nA-4p7" firstAttribute="top" secondItem="5YZ-zJ-Ohz" secondAttribute="top" constant="-2" id="wSm-8g-s4E"/>
                         <constraint firstItem="Qia-Us-tJx" firstAttribute="centerY" secondItem="p59-bX-ZsG" secondAttribute="centerY" id="xYw-Ug-5dF"/>
@@ -236,12 +262,14 @@
                 <outlet property="goodImageView" destination="5YZ-zJ-Ohz" id="E6r-Vf-IsL"/>
                 <outlet property="originPriceLabel" destination="p59-bX-ZsG" id="k0V-Iw-axz"/>
                 <outlet property="priceLabel" destination="Alv-wX-JD5" id="WT4-fp-WLp"/>
+                <outlet property="salesLabel" destination="Lac-z0-YmR" id="Qry-Vt-KzX"/>
+                <outlet property="salesView" destination="EQX-KM-ttT" id="Axg-zO-TGC"/>
                 <outlet property="statusImageView" destination="Big-sF-MJ4" id="D7R-5v-YGu"/>
                 <outlet property="titleLabel" destination="QAT-nA-4p7" id="oQC-Ep-kC4"/>
                 <outlet property="typeImageView" destination="8vE-uF-COr" id="VFs-Be-sV6"/>
                 <outlet property="upgradeView" destination="l4c-Gi-QmW" id="iBt-r6-w8Z"/>
             </connections>
-            <point key="canvasLocation" x="-233" y="-314"/>
+            <point key="canvasLocation" x="221.59999999999999" y="-323.83808095952025"/>
         </view>
     </objects>
     <resources>

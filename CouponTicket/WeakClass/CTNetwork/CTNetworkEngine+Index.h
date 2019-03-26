@@ -15,7 +15,7 @@
 //当前整点抢购
 - (CLRequest *)curTimeBuyWithTime:(NSString *)time callback:(CTResponseBlock)callback;
 //二级分类
-- (CLRequest *)cateWithCallback:(CTResponseBlock)callback;
+- (CLRequest *)cateWithPid:(NSString *)pid callback:(CTResponseBlock)callback;
 
 //分类商品
 

@@ -22,7 +22,6 @@
 
 @property (nonatomic, strong) CTTableView *tableView;
 
-
 @property (nonatomic, strong) CTMainCategoryView *categoryView;
 
 @property (nonatomic, strong) CTGoodSortView *sortView;
@@ -147,7 +146,7 @@
 - (void)request{
     //加载子分类
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    [CTRequest cateWithCallback:^(id data, CLRequest *request, CTNetError error) {
+    [CTRequest cateWithPid:self.cateId callback:^(id data, CLRequest *request, CTNetError error) {
         [MBProgressHUD hideHUDForView:self.view animated:YES];
         [LMNoDataView hideDataResultOnView:self.view];
         [self.tableView endRefreshing];

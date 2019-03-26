@@ -380,7 +380,7 @@
 		32DB93D2221573EB00300ACC /* CTUserInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32DB93D1221573EB00300ACC /* CTUserInfoView.xib */; };
 		32DB93D52215771900300ACC /* CTUserDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32DB93D42215771900300ACC /* CTUserDetailViewController.m */; };
 		32DE0911224A042800474058 /* CTNetworkEngine+H5Url.m in Sources */ = {isa = PBXBuildFile; fileRef = 32DE0910224A042800474058 /* CTNetworkEngine+H5Url.m */; };
-		32DE0913224A0AC900474058 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32DE0912224A0AC900474058 /* Images.xcassets */; };
+		32DE0915224A348500474058 /* LMNoResultView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32DE0914224A348500474058 /* LMNoResultView.xib */; };
 		32E7A5942240D9890074069D /* CTMemberInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 32E7A5932240D9880074069D /* CTMemberInfoModel.m */; };
 		32E7A5972240F1C10074069D /* AliTradeWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32E7A5962240F1C10074069D /* AliTradeWebViewController.m */; };
 		32E7EE5221F2F70700191789 /* CTHomeViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 32E7EE5121F2F70700191789 /* CTHomeViewModel.m */; };
@@ -1167,7 +1167,7 @@
 		32DB93D42215771900300ACC /* CTUserDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTUserDetailViewController.m; sourceTree = "<group>"; };
 		32DE090F224A042800474058 /* CTNetworkEngine+H5Url.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CTNetworkEngine+H5Url.h"; sourceTree = "<group>"; };
 		32DE0910224A042800474058 /* CTNetworkEngine+H5Url.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CTNetworkEngine+H5Url.m"; sourceTree = "<group>"; };
-		32DE0912224A0AC900474058 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		32DE0914224A348500474058 /* LMNoResultView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LMNoResultView.xib; sourceTree = "<group>"; };
 		32E7A5922240D9880074069D /* CTMemberInfoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTMemberInfoModel.h; sourceTree = "<group>"; };
 		32E7A5932240D9880074069D /* CTMemberInfoModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTMemberInfoModel.m; sourceTree = "<group>"; };
 		32E7A5952240F1C10074069D /* AliTradeWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AliTradeWebViewController.h; sourceTree = "<group>"; };
@@ -2538,7 +2538,6 @@
 				32BE602821EDCE7500BA52EF /* SystemConfigs */,
 				32FD1266223F784600CB85C1 /* ThirdLib */,
 				32BE602721EDCE6C00BA52EF /* ReSources */,
-				32DE0912224A0AC900474058 /* Images.xcassets */,
 			);
 			path = CouponTicket;
 			sourceTree = "<group>";
@@ -3121,6 +3120,7 @@
 				32CA556B21F6C22600145E31 /* LMDataResultView.m */,
 				32CA556C21F6C22600145E31 /* LMNetErrorView.xib */,
 				32CA556D21F6C22600145E31 /* LMNoDataView.xib */,
+				32DE0914224A348500474058 /* LMNoResultView.xib */,
 			);
 			path = CTNoDataResultView;
 			sourceTree = "<group>";
@@ -3612,7 +3612,6 @@
 				326AC1E921FAB14C008C154B /* CTSearchTikcetPasteView.xib in Resources */,
 				32FD13C1223F9AA400CB85C1 /* yw_1222.jpg in Resources */,
 				32DB93D2221573EB00300ACC /* CTUserInfoView.xib in Resources */,
-				32DE0913224A0AC900474058 /* Images.xcassets in Resources */,
 				32CA55A221F7183200145E31 /* CTHotKeywordHeadView.xib in Resources */,
 				3220EA4421F9C343004E0422 /* CTHotSalesNoticeView.xib in Resources */,
 				3268B735224635EA00330579 /* CTGoodsDescPreView.xib in Resources */,
@@ -3639,6 +3638,7 @@
 				32A28ECE2202D5230049B003 /* CTWithdrawSuccessView.xib in Resources */,
 				32BE613321EDCFA600BA52EF /* WSDatePickerView.xib in Resources */,
 				32E7EE6F21F32E9800191789 /* CTHomeNavView.xib in Resources */,
+				32DE0915224A348500474058 /* LMNoResultView.xib in Resources */,
 				32B4EE19221FC39900D2D71D /* CTSpreeShopItem.xib in Resources */,
 				32DB93CD22156DDA00300ACC /* CTTeamListCell.xib in Resources */,
 				32E7EE7721F3321400191789 /* CTSalesItem.xib in Resources */,
@@ -4210,7 +4210,6 @@
 			baseConfigurationReference = 6AA14B2C43C4DB99B1D60D47 /* Pods-CouponTicket.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-4";
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
@@ -4326,7 +4325,6 @@
 			baseConfigurationReference = 7665215356141A688CE2B40E /* Pods-CouponTicket.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-4";
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;

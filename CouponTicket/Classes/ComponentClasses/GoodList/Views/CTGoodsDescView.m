@@ -19,9 +19,9 @@
     _priceLabel.text = _viewModel.model.coupon_price;
     _originPriceLabel.text = _viewModel.model.sale_price;
     _shopTitleLabel.text = _viewModel.model.shop_title;
-    
+    _salesLabel.text = _viewModel.model.package_sale;
     _upgradeView.hidden = !_viewModel.model.upgrade_money.length;
-    
+    _salesView.hidden = !_viewModel.model.package_sale.length;
     if(_upgradeView.hidden){
         [self.commissionView mas_remakeConstraints:^(MASConstraintMaker *make) {
             make.right.mas_equalTo(0);

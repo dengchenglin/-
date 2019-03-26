@@ -19,6 +19,7 @@
 - (void)awakeFromNib{
     [super awakeFromNib];
     _couponBgView.image = [[UIImage imageNamed:@"pic_list_coupon_bg1"] resizableImageWithCapInsets:UIEdgeInsetsMake(10, 20, 10, 45)];
+
 }
 
 - (void)setViewModel:(CTGoodsViewModel *)viewModel{
@@ -32,10 +33,12 @@
     _priceLabel.text = _viewModel.model.coupon_price;
     _originPriceLabel.text = _viewModel.model.sale_price;
     _couponPriceLabel.text = _viewModel.model.coupon_amount;
- 
+    _salesLabel.text = _viewModel.model.package_sale;
+
     _statusImageView.image = [UIImage imageNamed:GetTypeImageStr(_viewModel.model.status)];
     _upgradeView.hidden = !_viewModel.model.upgrade_money.length;
     _statusImageView.hidden = !_viewModel.model.status;
+    _salesView.hidden = !_viewModel.model.package_sale.length;
 }
 
 @end
