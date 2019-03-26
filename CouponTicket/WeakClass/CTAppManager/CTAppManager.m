@@ -20,6 +20,10 @@
 
 SINGLETON_FOR_CLASS_IMP(CTAppManager)
 
++ (void)judgeLogin:(void(^)(void))completed{
+    
+}
+
 + (void)showLogin{
     UIViewController *vc = [UIUtil getCurrentViewController];
     if(vc.tabBarController){
@@ -45,8 +49,9 @@ SINGLETON_FOR_CLASS_IMP(CTAppManager)
 + (void)updateUserInfoValue:(NSString *)value key:(NSString *)key{
     id data = [KeychainTool load:CTLoginInfoKey];
     if(data){
-        [data setValue:value forKey:@"key"];
-        [KeychainTool save:CTLoginInfoKey data:data];
+        NSMutableDictionary *dic = [NSMutableDictionary dictionaryWithDictionary:data];
+        [dic setValue:value forKey:key];
+        [KeychainTool save:CTLoginInfoKey data:dic];
     }
 }
 + (id)valueForUserInfoWithKey:(NSString *)key{
@@ -100,7 +105,7 @@ SINGLETON_FOR_CLASS_IMP(CTAppManager)
     NSString *key = @"pay_pwd";
     NSString *cachesPay_pwd = [CTAppManager valueForUserInfoWithKey:key];
     if(![cachesPay_pwd isEqualToString:pay_pwd]){
-        [CTAppManager updateUserInfoValue:_pay_pwd key:cachesPay_pwd];
+        [CTAppManager updateUserInfoValue:_pay_pwd key:key];
     }
 }
 - (void)setPay_name:(NSString *)pay_name{

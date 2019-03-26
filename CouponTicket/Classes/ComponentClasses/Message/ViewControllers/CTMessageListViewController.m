@@ -11,20 +11,27 @@
 #import "CTMessageListCell.h"
 
 @interface CTMessageListViewController ()<UITableViewDelegate,UITableViewDataSource>
-
+@property (nonatomic, strong) NSMutableArray <CTMessageModel *> *dataSources;
 @end
 
 @implementation CTMessageListViewController
+@synthesize dataSources = _dataSources;
 
 - (void)setUpUI{
     self.navigationBarStyle = CTNavigationBarWhite;
-    self.title = _messageKind?@"通知消息":@"系统消息";
+    self.title = GetMessageStr(_messageType);
     self.tableView.separatorColor = RGBColor(240, 240, 240);
     [self.tableView registerNibWithClass:CTMessageListCell.class];
 }
 
+- (void)request{
+    [CTRequest messageIndexWithType:_messageType page:self.pageIndex size:self.pageSize callback:^(id data, CLRequest *request, CTNetError error) {
+        [self analysisAndReloadWithData:data error:error modelClass:CTMessageModel.class viewModelClass:nil];
+    }];
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 5;
+    return self.dataSources.count;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -32,11 +39,13 @@
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     CTMessageListCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(CTMessageListCell.class)];
+    cell.model = self.dataSources[indexPath.row];
     return cell;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    UIViewController *vc = [[CTModuleManager webService] pushWebFromViewController:self htmlString:nil];
-    vc.title = @"消息详情";
+    CTMessageModel * model =self.dataSources[indexPath.row];
+    UIViewController *vc = [[CTModuleManager webService] pushWebFromViewController:self htmlString:model.detail];
+    vc.title = model.title;
 }
 
 @end

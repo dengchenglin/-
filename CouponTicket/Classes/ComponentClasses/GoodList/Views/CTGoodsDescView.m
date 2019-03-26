@@ -17,10 +17,25 @@
     _disLabel1.text = [NSString stringWithFormat:@"赚%@元",_viewModel.model.commission_money];
     _disLabel2.text = [NSString stringWithFormat:@"升级可赚%@元",_viewModel.model.upgrade_money];
     _priceLabel.text = _viewModel.model.coupon_price;
-    _originPriceLabel.text = _viewModel.model.market_price;
+    _originPriceLabel.text = _viewModel.model.sale_price;
     _shopTitleLabel.text = _viewModel.model.shop_title;
     
-     _upgradeView.hidden = !_viewModel.model.upgrade_money.length;
+    _upgradeView.hidden = !_viewModel.model.upgrade_money.length;
+    
+    if(_upgradeView.hidden){
+        [self.commissionView mas_remakeConstraints:^(MASConstraintMaker *make) {
+            make.right.mas_equalTo(0);
+            make.height.mas_equalTo(18);
+            make.centerY.mas_equalTo(0);
+        }];
+    }
+    else{
+        [self.commissionView mas_remakeConstraints:^(MASConstraintMaker *make) {
+            make.right.mas_equalTo(self.upgradeView.mas_left).offset(-10);
+            make.height.mas_equalTo(18);
+            make.centerY.mas_equalTo(0);
+        }];
+    }
 }
 
 

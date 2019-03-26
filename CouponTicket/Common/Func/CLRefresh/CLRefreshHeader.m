@@ -46,11 +46,11 @@ NSString *const CLRefreshKeyPathContentOffset = @"contentOffset";
         
         CGPoint contentOffset = [[change valueForKey:NSKeyValueChangeNewKey] CGPointValue];
         if (contentOffset.y  < 0) {
-            CGFloat progress = MAX(0.0, MIN(fabs(contentOffset.y)/_refreshDistance, 1.0));
+            CGFloat progress = MAX(0.0, MIN(fabs(contentOffset.y)/_refreshDistance, 1.2));
             if(!_loading){
                 self.progress = progress;
             }
-            if(self.progress >= 1.0 && !self.scrollView.tracking && !self.loading){
+            if(self.progress >= 1.0 && !self.scrollView.isDragging && !self.loading){
                 self.loading = YES;
                 [UIView animateWithDuration:0.3 animations:^{
                     self.scrollView.contentInset = UIEdgeInsetsMake(self.bounds.size.height, 0, 0, 0);

@@ -20,6 +20,8 @@
 
 #import "CTThirdRegController.h"
 
+#import "CTNetworkEngine+H5Url.h"
+
 @interface CTLoginViewController ()
 
 @property (nonatomic, strong) CTLoginView *loginView;
@@ -126,8 +128,10 @@
     //同意协议
     [self.loginView.agreementButton touchUpInsideSubscribeNext:^(id x) {
         @strongify(self)
-        CTAgreementViewController *vc = [CTAgreementViewController new];
-        [self.navigationController pushViewController:vc animated:YES];
+       UIViewController *vc = [[CTModuleManager webService]pushWebFromViewController:self url:CTH5UrlForType(CTH5UrlRegAgreement)];
+        vc.title = @"注册协议";
+//        CTAgreementViewController *vc = [CTAgreementViewController new];
+//        [self.navigationController pushViewController:vc animated:YES];
     }];
     
 }

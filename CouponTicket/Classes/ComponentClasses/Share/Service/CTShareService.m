@@ -18,7 +18,7 @@ CL_EXPORT_MODULE(CTShareServiceProtocol)
     return [CTShareViewController new];
 }
 
-- (void)pushShareFromViewController:(UIViewController *)viewController{
+- (UIViewController *)pushShareFromViewController:(UIViewController *)viewController{
     CTShareViewController *vc = [CTShareViewController new];
     if([CTAppManager logined]){
         [viewController.navigationController pushViewController:vc animated:YES];
@@ -28,5 +28,6 @@ CL_EXPORT_MODULE(CTShareServiceProtocol)
             [viewController.navigationController pushViewController:vc animated:YES];
         } failure:nil];
     }
+    return vc;
 }
 @end

@@ -15,7 +15,7 @@
 
 - (void)setViewModel:(CTGoodsViewModel *)viewModel{
     _viewModel = viewModel;
-    _couonTextLabel.text = _viewModel.model.coupon_text;
+    _couonTextLabel.text = _viewModel.model.coupon_amount;
     _couponTimeLabel.text = _viewModel.model.coupon_end_time;
 
     _couponTimeView.hidden = !_viewModel.model.coupon_end_time.length;

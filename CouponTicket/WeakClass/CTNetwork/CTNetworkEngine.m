@@ -19,6 +19,9 @@
 #define CT_SIGN_SYSTEM_VERSION              [UIDevice currentDevice].systemVersion
 #define CT_SIGN_DEVICE_ID                   [[UIDevice currentDevice].identifierForVendor UUIDString]
 
+
+
+
 static const int request_vc_key;
 
 @implementation CTNetworkEngine

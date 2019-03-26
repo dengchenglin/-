@@ -45,8 +45,8 @@
 }
 
 - (void)reloadView{
-    NSArray *titles = @[@"全部",@"已付款",@"已结算",@"已失效",@"退款/售后"];
-    NSArray *status = @[@"",@"12",@"3",@"13",@"14"];
+    NSArray *titles = @[@"全部",@"已付款",@"已结算",@"已失效"];
+    NSArray *status = @[@"",@"12",@"3",@"13"];
     dispatch_async(dispatch_get_main_queue(), ^{
         _segmentedControl.titles = titles;
     });

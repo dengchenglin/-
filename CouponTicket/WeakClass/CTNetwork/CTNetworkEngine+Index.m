@@ -14,18 +14,18 @@
 @implementation CTNetworkEngine (Index)
 
 - (CLRequest *)indexWithCallback:(CTResponseBlock)callback{
-    NSString *path = CLDocumentPath(@"home_index");
+    NSString *cachesPath = CLDocumentPath(@"home_index");
     
-    NSDictionary *data = [[NSDictionary alloc]initWithContentsOfFile:path];
-    if(callback && data){
-        callback(data,nil,0);
+    NSDictionary *cachesData = [[NSDictionary alloc]initWithContentsOfFile:cachesPath];
+    if(callback && cachesData){
+        callback(cachesData,nil,0);
     }
-    return  [self postWithPath:CTIndex(@"index") params:nil callback:^(id data, CLRequest *request, CTNetError error) {
+    return  [self postWithPath:CTIndex(@"index") params:nil showHud:cachesData?NO:YES callback:^(id data, CLRequest *request, CTNetError error) {
         if(callback){
             callback(data,request,error);
         }
         if(!error){
-            [((NSDictionary *)data) writeToFile:path atomically:YES];
+            [((NSDictionary *)data) writeToFile:cachesPath atomically:YES];
         }
     }];
 }
@@ -41,13 +41,16 @@
 }
 //分类商品
 - (CLRequest *)cateGoodsWithPage:(NSInteger)page size:(NSInteger)size cateId:(NSString *)cateId order:(NSString *)order callback:(CTResponseBlock)callback{
+    return [self cateGoodsWithPage:page size:size cateId:cateId order:order showHud:YES callback:callback];
+}
+- (CLRequest *)cateGoodsWithPage:(NSInteger)page size:(NSInteger)size cateId:(NSString *)cateId order:(NSString *)order showHud:(BOOL)showHud callback:(CTResponseBlock)callback{
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     [params setValue:@(page) forKey:@"page"];
     [params setValue:@(size) forKey:@"size"];
     [params setValue:cateId forKey:@"cate_id"];
     [params setValue:order forKey:@"order"];
 
-    return [self postWithPath:CTIndex(@"cate_goods") params:params callback:callback];
+    return [self postWithPath:CTIndex(@"cate_goods") params:params showHud:showHud callback:callback];
 }
 
 //活动列表数据
@@ -58,7 +61,7 @@
     [params setValue:activityId forKey:@"activity_id"];
     [params setValue:order forKey:@"order"];
     
-    return [self postWithPath:CTIndex(@"activity_goods") params:params callback:callback];
+    return [self postWithPath:CTIndex(@"activity_goods") params:params showHud:page>1?NO:YES callback:callback];
 }
 
 //实时热销榜

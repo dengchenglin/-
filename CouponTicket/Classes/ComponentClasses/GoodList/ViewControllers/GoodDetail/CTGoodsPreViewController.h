@@ -12,6 +12,6 @@
 
 @interface CTGoodsPreViewController : CTBaseViewController
 
-+ (CTGoodsPreViewController *)pushGoodPreFromViewController:(UIViewController *)viewController viewModel:(CTGoodsViewModel *)viewModel qCodeUrl:(NSString *)qCodeUrl;
++ (CTGoodsPreViewController *)pushGoodPreFromViewController:(UIViewController *)viewController viewModel:(CTGoodsViewModel *)viewModel qCodeContent:(NSString *)qCodeContent;
 
 @end

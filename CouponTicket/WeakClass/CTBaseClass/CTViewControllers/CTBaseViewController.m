@@ -140,17 +140,20 @@
     self.extendedLayoutIncludesOpaqueBars = YES;
     self.automaticallyAdjustsScrollViewInsets = NO;
     self.view.backgroundColor = [UIColor whiteColor];
+   self.navigationController.interactivePopGestureRecognizer.delegate = (id)self;
     if([self.navigationController.viewControllers indexOfObject:self] > 0){
         self.edgesForExtendedLayout = UIRectEdgeBottom;
-        
     }
     else{
         self.edgesForExtendedLayout = UIRectEdgeNone;
+        
     }
     [self configureNavBar];
-    self.navigationController.interactivePopGestureRecognizer.delegate = (id)self;
+   
     
 }
+
+
 
 - (void)configureNavBar{
     self.hideNavBarBottomLine = YES;
@@ -187,6 +190,13 @@
 - (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
     self.didAppear = YES;
+    if(self.navigationController.viewControllers.firstObject == self){
+      self.navigationController.interactivePopGestureRecognizer.enabled = NO;
+    }
+    else{
+        self.navigationController.interactivePopGestureRecognizer.enabled = YES;
+        
+    }
 }
 
 

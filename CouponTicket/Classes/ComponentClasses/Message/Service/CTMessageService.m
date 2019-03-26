@@ -18,4 +18,17 @@ CL_EXPORT_MODULE(CTMessageServiceProtocol)
     return [CTMessageViewController new];
 }
 
+
+- (UIViewController *)pushMessageFromViewController:(UIViewController *)viewController{
+    CTMessageViewController *vc = [CTMessageViewController new];
+    if([CTAppManager logined]){
+        [viewController.navigationController pushViewController:vc animated:YES];
+    }
+    else{
+        [[CTModuleManager loginService] showLoginFromViewController:viewController success:^{
+            [viewController.navigationController pushViewController:vc animated:YES];
+        } failure:nil];
+    }
+    return vc;
+}
 @end

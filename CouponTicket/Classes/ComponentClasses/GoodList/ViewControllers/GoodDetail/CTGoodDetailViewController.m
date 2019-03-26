@@ -22,7 +22,13 @@
 
 #import "CTGoodsPreViewController.h"
 
-@interface CTGoodDetailViewController()
+#import "CTGoodDetailNavbar.h"
+
+#import "CTSharePopView.h"
+
+@interface CTGoodDetailViewController()<UIScrollViewDelegate>
+
+@property (nonatomic, strong) CTGoodDetailNavbar *navBar;
 
 @property (nonatomic, strong) CTGoodsImgsView *imgsView;
 
@@ -35,6 +41,13 @@
 @end
 
 @implementation CTGoodDetailViewController
+
+- (CTGoodDetailNavbar *)navBar{
+    if(!_navBar){
+        _navBar = NSMainBundleClass(CTGoodDetailNavbar.class);
+    }
+    return _navBar;
+}
 
 - (CTGoodsImgsView *)imgsView{
     if(!_imgsView){
@@ -62,15 +75,22 @@
 }
 - (void)setUpUI{
     self.title = @"商品详情";
-    [self setRightButtonWithTitle:@"分享" font:CTPsbFont(14) titleColor:[UIColor whiteColor] selector:@selector(shareAction)];
-    self.edgesForExtendedLayout = UIRectEdgeAll;
+    self.hideSystemNavBarWhenAppear = YES;
+   
     self.scrollViewAvailable = YES;
     [self.autoLayoutContainerView addSubview:self.imgsView];
     [self.autoLayoutContainerView addSubview:self.descView];
     [self.autoLayoutContainerView addSubview:self.couponView];
     [self.view addSubview:self.buyView];
+    [self.view addSubview:self.navBar];
 }
+
+
 - (void)autoLayout{
+    [self.navBar mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.top.right.mas_equalTo(0);
+        make.height.mas_equalTo(NAVBAR_HEIGHT);
+    }];
     [self.scrollView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.top.right.mas_equalTo(0);
         make.bottom.mas_equalTo(45);
@@ -94,6 +114,18 @@
         make.left.right.bottom.mas_equalTo(0);
         make.height.mas_equalTo(45);
     }];
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
+    CGFloat startOffest = SCREEN_WIDTH;
+    CGFloat alpha = 0;
+    if(scrollView.contentOffset.y > startOffest){
+        alpha = (scrollView.contentOffset.y - startOffest)/80;
+    }
+    else{
+        alpha = 0;
+    }
+    self.navBar.backgroundAlpha = alpha;
 }
 
 - (void)reloadView{
@@ -124,44 +156,42 @@
     //收藏
     void(^collectBlock)(void) = ^{
          @strongify(self);
+        self.buyView.collectButton.userInteractionEnabled = NO;
         [CTRequest favoriteWithGoodsId:self.viewModel.model.item_id isFavorite:!self.viewModel.model.is_favorite callback:^(id data, CLRequest *request, CTNetError error) {
             @strongify(self);
+            self.buyView.collectButton.userInteractionEnabled = YES;
             if(!error){
                 self.viewModel.model.is_favorite = !self.viewModel.model.is_favorite;
                 self.buyView.viewModel = self.viewModel;
+                [MBProgressHUD showMBProgressHudWithTitle:self.viewModel.model.is_favorite?@"收藏成功":@"取消收藏"];
             }
         }];
     };
-    
-    [self.buyView.collectButton touchUpInsideSubscribeNext:^(id x) {
-        if([CTAppManager logined]){
-            collectBlock();
-        }
-        else{
-            [[CTModuleManager loginService]showLoginFromViewController:self success:^{
-                collectBlock();
-            } failure:nil];
-        }
-    }];
-    
-    //买买买
-    void (^buybuy)(void) = ^{
+
+    //通过转链接口获取真正的click_url数据
+    void (^goodsUrlConvertBlock)(void(^)(id data)) = ^(void(^getFinalData)(id data)){
         @strongify(self)
-        //获取真正的click_url
         [AliTradeManager autoWithViewController:self successCallback:^(ALBBSession *session) {
             @strongify(self)
-            [CTRequest goodsUrlConvertWithTbGoodUrl:self.viewModel.model.coupon_share_url tbCode:[session getUser].topAuthCode tbToken:[session getUser].topAccessToken callback:^(id data, CLRequest *request, CTNetError error) {
+            NSMutableDictionary *params = [NSMutableDictionary dictionary];
+            [params setValue:self.viewModel.model.goods_title forKey:@"goods_title"];
+            [params setValue:self.viewModel.model.goods_logo forKey:@"goods_logo"];
+            [params setValue:self.viewModel.model.coupon_share_url forKey:@"coupon_share_url"];
+            [CTRequest goodsUrlConvertWithTbGoodsInfo:params callback:^(id data, CLRequest *request, CTNetError error) {
                 @strongify(self)
-                if(!error){
-                    NSString *clickUrl = data[@"click_url"];
-                    [AliTradeManager openTbWithViewController:self url:clickUrl];
+                if(!error){//绑定过渠道id 直接返回最终数据
+                    if(getFinalData){
+                        getFinalData(data);
+                    }
                 }
-                else{
+                else{//如果未绑定过渠道id 事先通过淘宝H5授权绑定id同时通过js交互获取真正跳转的数据
                     NSInteger status = [data[@"status"] integerValue];
                     if(status == 403){
                         NSString *tbAuthUrl = data[@"tbAuth_url"];
                         [[CTModuleManager webService]tbAuthFromViewController:self url:tbAuthUrl callback:^(id data) {
-                            [AliTradeManager openTbWithViewController:self url:data[@"click_url"]];
+                            if(getFinalData){
+                                getFinalData(data);
+                            }
                         }];
                     }
                     else{
@@ -171,64 +201,78 @@
             }];
         }];
     };
+
+    //下单最后一步 唤起手淘
+    void (^goShop)(void) = ^{
+        //先获取最终的数据
+        goodsUrlConvertBlock(^(id data){
+            @strongify(self)
+            NSString *clickUrl = data[@"click_url"];
+            [AliTradeManager openTbWithViewController:self url:clickUrl];
+        });
+    };
     
-    //登录
-    void (^clickButtonBlock)(void) = ^{
+    //判断是否登录
+    void (^judgeLoginBlock)(void(^)(void)) = ^(void(^loginCompleted)(void)){
         @strongify(self)
         if([CTAppManager logined]){
-            buybuy();
+            if(loginCompleted){
+                loginCompleted();
+            }
         }
         else {
             [[CTModuleManager loginService]showLoginFromViewController:self callback:^(BOOL logined) {
                 if(logined){
-                    dispatch_async(dispatch_get_main_queue(), ^{
-                         buybuy();
-                    });
+                    if(loginCompleted){
+                        loginCompleted();
+                    }
                 }
             }];
         }
     };
     
+    //点击收藏
+    [self.buyView.collectButton touchUpInsideSubscribeNext:^(id x) {
+        judgeLoginBlock(^{
+            collectBlock();
+        });
+    }];
+    
+    //点击领券下单
     [self.buyView.buyButton touchUpInsideSubscribeNext:^(id x) {
-        clickButtonBlock();
+        judgeLoginBlock(^{
+            goShop();
+        });
     }];
+    //点击优惠券
     [self.couponView addActionWithBlock:^(id target) {
-        clickButtonBlock();
+        judgeLoginBlock(^{
+            goShop();
+        });
+    }];
+    //点击分享
+    [self.navBar.shareButton touchUpInsideSubscribeNext:^(id x) {
+        @strongify(self)
+        judgeLoginBlock(^{
+            goodsUrlConvertBlock(^(id data){
+                @strongify(self)
+                [CTGoodsPreViewController pushGoodPreFromViewController:self viewModel:self.viewModel qCodeContent:data[@"qcode_content"]];
+            });
+        });
     }];
     
-    
-   
-}
-
-- (void)shareAction{
-    if(![CTAppManager logined]){
-        [[CTModuleManager loginService]showLoginFromViewController:self success:^{
-            [self shareAction];
-        } failure:nil];
-        return;
-    }
-    
-    [CTRequest goodsUrlConvertWithTbGoodUrl:self.viewModel.model.coupon_share_url tbCode:nil tbToken:nil callback:^(id data, CLRequest *request, CTNetError error) {
-        if(!error){
-            //绑定过渠道id
-            NSString *clickUrl = data[@"click_url"];
-            [CTGoodsPreViewController pushGoodPreFromViewController:self viewModel:self.viewModel qCodeUrl:clickUrl];
-        }
-        else{
-            //未绑定过渠道id 需要进入h5淘宝授权
-            NSInteger status = [data[@"status"] integerValue];
-            if(status == 403){
-                NSString *tbAuthUrl = data[@"tbAuth_url"];
-                [[CTModuleManager webService]tbAuthFromViewController:self url:tbAuthUrl callback:^(id data) {
-                    NSString *clickUrl = data[@"click_url"];
-                    [CTGoodsPreViewController pushGoodPreFromViewController:self viewModel:self.viewModel qCodeUrl:clickUrl];
-                }];
-            }
-            else{
-                [MBProgressHUD showMBProgressHudWithTitle:data[@"info"]];
-            }
-        }
+    //点击返回
+    [self.navBar.backButton touchUpInsideSubscribeNext:^(id x) {
+        @strongify(self)
+        [self back];
     }];
+
 }
 
+
+
+- (void)dealloc
+{
+    
+}
 @end

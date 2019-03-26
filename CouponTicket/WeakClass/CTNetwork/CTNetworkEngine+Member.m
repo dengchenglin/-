@@ -27,7 +27,7 @@
     if(callback && cachesData){
         callback(cachesData,nil,0);
     }
-    return [self postWithPath:CTUser(@"index") params:nil callback:^(id data, CLRequest *request, CTNetError error) {
+    return [self postWithPath:CTUser(@"index") params:nil showHud:cachesData?NO:YES callback:^(id data, CLRequest *request, CTNetError error) {
         if(callback){
             callback(data,request,error);
         }
@@ -51,7 +51,7 @@
     [params setValue:@(page) forKey:@"page"];
     [params setValue:@(size) forKey:@"size"];
     [params setValue:name forKey:@"name"];
-    return [self postWithPath:CTUser(@"often_problem") params:nil callback:callback];
+    return [self postWithPath:CTUser(@"often_problem") params:nil showHud:page>1?NO:YES callback:callback];
 }
 //我的团队-分类
 - (CLRequest *)teamCateWithCallback:(CTResponseBlock)callback{
@@ -85,7 +85,7 @@
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     [params setValue:@(page) forKey:@"page"];
     [params setValue:@(size) forKey:@"size"];
-    return [self postWithPath:CTUser(@"my_goods_favorite") params:params callback:callback];
+    return [self postWithPath:CTUser(@"my_goods_favorite") params:params showHud:page>1?NO:YES callback:callback];
 }
 
 //意见反馈

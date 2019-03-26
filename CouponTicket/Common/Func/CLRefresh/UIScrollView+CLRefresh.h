@@ -8,11 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+#import "CLRefreshHeader.h"
+
+#import "CLRefreshFooter.h"
+
 @interface UIScrollView (CLRefresh)
 
-- (void)addHeaderRefreshWithCallBack:(void(^)(void))callBack;
+- (CLRefreshHeader *)addHeaderRefreshWithCallBack:(void(^)(void))callBack;
 
-- (void)addFooterRefreshWithCallBack:(void(^)(void))callBack;
+- (CLRefreshFooter *)addFooterRefreshWithCallBack:(void(^)(void))callBack;
 
 - (void)beginRefreshing;
 

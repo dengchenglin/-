@@ -14,6 +14,8 @@
 
 #import "CTAdviseViewController.h"
 
+#import "CTNetworkEngine+H5Url.h"
+
 @interface CTSetViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic, strong) UITableView *tableView;
@@ -113,8 +115,7 @@
         break;
         case 1:
         {
-            UIViewController *webVc = [[CTModuleManager webService] pushWebFromViewController:self url:CTBaseUrl(@"api/user/comfield?type=gywm")];
-            webVc.title = @"领券指南";
+            UIViewController *webVc = [[CTModuleManager webService] pushWebFromViewController:self url:CTH5UrlForType(CTH5UrlAbountUs)];
             webVc.title = @"关于我们";
         }
         break;

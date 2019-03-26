@@ -8,10 +8,6 @@
 
 #import "UIScrollView+CLRefresh.h"
 
-#import "CLRefreshHeader.h"
-
-#import "CLRefreshFooter.h"
-
 #import "CLRefreshFactory.h"
 
 #import "CLRefreshManager.h"
@@ -55,20 +51,22 @@ static int CLRefreshFooterKey;
 }
 
 
-- (void)addHeaderRefreshWithCallBack:(void(^)(void))callBack{
+- (CLRefreshHeader *)addHeaderRefreshWithCallBack:(void(^)(void))callBack{
     if(!self.header){
         CLRefreshHeader *header = [CLRefreshManager createHeaderWithScrollView:self];
         self.header = header;
     }
     self.header.refreshBlock = callBack;
+    return self.header;
 }
 
-- (void)addFooterRefreshWithCallBack:(void(^)(void))callBack{
+- (CLRefreshFooter *)addFooterRefreshWithCallBack:(void(^)(void))callBack{
     if(!self.footer){
         CLRefreshFooter *footer = [CLRefreshManager createFooterWithScrollView:self];
         self.footer = footer;
     }
     self.footer.refreshBlock = callBack;
+    return self.footer;
 }
 
 - (void)beginRefreshing{
@@ -81,7 +79,6 @@ static int CLRefreshFooterKey;
     if(self.header)[self.header endRefreshing];
     if(self.footer)[self.footer endRefreshing];
 }
-
 
 - (void)showNulMoreView{
    

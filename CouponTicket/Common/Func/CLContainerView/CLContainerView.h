@@ -20,6 +20,8 @@
 
 @interface CLContainerView : UIView
 
+@property (nonatomic, strong) UITableView *tableView;
+
 @property (nonatomic, copy) void (^scrollBlock)(CGPoint contentOffest);
 
 - (void)removeAllObjects;

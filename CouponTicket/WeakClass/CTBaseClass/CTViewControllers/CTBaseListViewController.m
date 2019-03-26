@@ -68,6 +68,7 @@
 
 - (void)analysisAndReloadWithData:(NSArray *)data error:(CTNetError)error modelClass:(Class)modelClass viewModelClass:(Class <CTViewModelProtocol>)viewModelClass{
         [self.tableView endRefreshing];
+        [LMNetErrorView hideDataResultOnView:self.view];
         if(!error){
             if(!self.isLoadMore){
                 [self.dataSources removeAllObjects];
@@ -92,9 +93,6 @@
             if(!self.isLoadMore && self.dataSources.count == 0){
                 [LMNetErrorView showNoDataResultOnView:self.tableView];
             }
-            else{
-                [LMNetErrorView hideDataResultOnView:self.tableView];
-            }
         }
         else{
             if(self.isLoadMore){
@@ -104,9 +102,6 @@
                 [LMNetErrorView showNoNetErrorResultOnView:self.view clickRefreshBlock:^{
                     [self request];
                 }];
-            }
-            else{
-                [LMNetErrorView hideDataResultOnView:self.view];
             }
         }
     

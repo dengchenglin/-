@@ -136,6 +136,10 @@
 
 - (void)setUpEvent{
     @weakify(self)
+    [self.tableView addHeaderRefreshWithCallBack:^{
+        @strongify(self);
+        [self request];
+    }].hidden = YES;
     [self.pasteView setSearchBlock:^(NSString *keyword) {
         @strongify(self)
         UIViewController *vc = [[CTModuleManager searchService] goodResultViewControllerWithKeyword:keyword];
@@ -177,6 +181,7 @@
 
 - (void)request{
     [CTRequest hotGoodsCateWithCallback:^(id data, CLRequest *request, CTNetError error) {
+        [self.tableView endRefreshing];
         if(!error){
             [self reloadData:data];
         }

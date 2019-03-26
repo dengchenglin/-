@@ -10,15 +10,11 @@
 
 @implementation CTMessageListCell
 
-- (void)awakeFromNib {
-    [super awakeFromNib];
-    // Initialization code
-}
-
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
+- (void)setModel:(CTMessageModel *)model{
+    _model = model;
+    _titleLabel.text = _model.title;
+    _descLabel.text = _model.intro;
+    _dateLabel.text = _model.fb_time;
 }
 
 @end

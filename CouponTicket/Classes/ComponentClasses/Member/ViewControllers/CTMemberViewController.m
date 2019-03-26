@@ -32,6 +32,8 @@
 
 #import "CTMemberInfoModel.h"
 
+#import "CTNetworkEngine+H5Url.h"
+
 @interface CTMemberViewController ()
 
 @property (nonatomic, strong) CTNavBar *navBar;
@@ -145,6 +147,7 @@
 }
 - (void)request{
     [CTRequest userIndexWithCallback:^(id data, CLRequest *request, CTNetError error) {
+        [self.containerView.tableView endRefreshing];
         if(!error){
             self.model = [CTMemberInfoModel yy_modelWithDictionary:data];
             self.headView.user = self.model.user;
@@ -231,6 +234,10 @@
 
 - (void)setUpEvent{
     @weakify(self)
+    [self.containerView.tableView addHeaderRefreshWithCallBack:^{
+        @strongify(self);
+        [self request];
+    }];
     //会员权益
     [self.headView.equityBackgroundView addActionWithBlock:^(id target) {
         @strongify(self)
@@ -240,7 +247,7 @@
     //奖金攻略
     [self.strategyView setClickItemBlock:^(NSInteger index) {
         @strongify(self)
-        NSArray *urls = @[CTBaseUrl(@"api/user/comfield?type=zqgl"),CTBaseUrl(@"api/user/comfield?type=sqgl")];
+        NSArray *urls = @[CTH5UrlForType(CTH5UrlMakeMoneyStrategy),CTH5UrlForType(CTH5UrlSaveMoneyStrategy)];
         UIViewController *webVc = [[CTModuleManager webService]pushWebFromViewController:self url:urls[index]];
         webVc.title = self.strategyView.titles[index];
     }];

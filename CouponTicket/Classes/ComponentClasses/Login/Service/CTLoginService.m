@@ -55,5 +55,20 @@ CL_EXPORT_MODULE(CTLoginServiceProtocol)
     [viewController.navigationController pushViewController:vc animated:YES];
 }
 
-
+- (void)judgeLoginWithViewController:(UIViewController *)viewController completed:(void(^)(void))completed{
+    if([CTAppManager logined]){
+        if(completed){
+            completed();
+        }
+    }
+    else {
+        [[CTModuleManager loginService]showLoginFromViewController:viewController callback:^(BOOL logined) {
+            if(logined){
+                if(completed){
+                    completed();
+                }
+            }
+        }];
+    }
+}
 @end

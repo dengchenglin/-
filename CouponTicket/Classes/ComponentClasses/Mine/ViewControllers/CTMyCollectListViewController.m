@@ -14,6 +14,8 @@
 
 #import "CTNetworkEngine+Goods.h"
 
+#import "CTGoodsPreViewController.h"
+
 @interface CTMyCollectListViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic, strong) NSMutableArray <CTGoodsViewModel *> *dataSources;
@@ -63,12 +65,15 @@
                 [MBProgressHUD showMBProgressHudWithTitle:@"取消成功"];
                 [self.dataSources removeObjectAtIndex:indexPath.row];
                 [self.tableView reloadData];
+                if(!self.dataSources.count){
+                    [self request];
+                }
             }
         }];
     }];
     action1.backgroundColor = RGBColor(255, 199, 38);
     UITableViewRowAction *action2 = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDestructive title:@"分享" handler:^(UITableViewRowAction * _Nonnull action, NSIndexPath * _Nonnull indexPath) {
-        
+        [self shareWithGoodsViewModel:self.dataSources[indexPath.row]];
     }];
     action2.backgroundColor = RGBColor(255, 97, 36);
     return @[action1,action2];
@@ -79,4 +84,56 @@
     [self.navigationController pushViewController:vc animated:YES];
 }
 
+
+- (void)shareWithGoodsViewModel:(CTGoodsViewModel *)viewModel{
+    @weakify(self)
+    if(![CTAppManager logined]){
+        [[CTModuleManager loginService]showLoginFromViewController:self callback:^(BOOL logined) {
+            if(logined){
+                [self shareWithGoodsViewModel:viewModel];
+            }
+        }];
+        return;
+    }
+
+    
+   void(^toShare)(id) = ^(id data){
+        @strongify(self)
+        [CTGoodsPreViewController pushGoodPreFromViewController:self viewModel:viewModel qCodeContent:data[@"qcode_content"]];
+    };
+    
+    //通过转链接口获取真正的click_url数据
+    [AliTradeManager autoWithViewController:self successCallback:^(ALBBSession *session) {
+        @strongify(self)
+        NSMutableDictionary *params = [NSMutableDictionary dictionary];
+        [params setValue:viewModel.model.goods_title forKey:@"goods_title"];
+        [params setValue:viewModel.model.goods_logo forKey:@"goods_logo"];
+        [params setValue:viewModel.model.coupon_share_url forKey:@"coupon_share_url"];
+        [CTRequest goodsUrlConvertWithTbGoodsInfo:params callback:^(id data, CLRequest *request, CTNetError error) {
+            @strongify(self)
+            if(!error){//绑定过渠道id 直接返回最终数据
+                if(toShare){
+                    toShare(data);
+                }
+            }
+            else{//如果未绑定过渠道id 事先通过淘宝H5授权绑定id同时通过js交互获取真正跳转的数据
+                NSInteger status = [data[@"status"] integerValue];
+                if(status == 403){
+                    NSString *tbAuthUrl = data[@"tbAuth_url"];
+                    [[CTModuleManager webService]tbAuthFromViewController:self url:tbAuthUrl callback:^(id data) {
+                        if(toShare){
+                            toShare(data);
+                        }
+                    }];
+                }
+                else{
+                    [MBProgressHUD showMBProgressHudWithTitle:data[@"info"]];
+                }
+            }
+        }];
+    }];
+    
+
+ 
+}
 @end

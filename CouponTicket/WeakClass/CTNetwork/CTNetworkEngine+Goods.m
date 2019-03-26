@@ -20,12 +20,8 @@
 }
 
 //获取商品链接（转链）
-- (CLRequest *)goodsUrlConvertWithTbGoodUrl:(NSString *)goodUrl tbCode:(NSString *)tbCode tbToken:(NSString *)tbToken callback:(CTResponseBlock)callback{
-    NSMutableDictionary *params = [NSMutableDictionary dictionary];
-    [params setValue:goodUrl forKey:@"coupon_share_url"];
-    [params setValue:tbCode forKey:@"tb_code"];
-    [params setValue:tbToken forKey:@"tb_token"];
-    return [self postWithPath:CTGoods(@"goods_url_convert") params:params callback:callback];
+- (CLRequest *)goodsUrlConvertWithTbGoodsInfo:(NSDictionary *)goodsInfo callback:(CTResponseBlock)callback{
+    return [self postWithPath:CTGoods(@"goods_url_convert") params:goodsInfo callback:callback];
 }
 
 //搜索
@@ -35,7 +31,7 @@
     [params setValue:@(page) forKey:@"page"];
     [params setValue:@(size) forKey:@"size"];
     [params setValue:order forKey:@"order"];
-    return [self postWithPath:CTGoods(@"goods_search") params:params showHud:YES callback:callback];
+    return [self postWithPath:CTGoods(@"goods_search") params:params  showHud:page>1?NO:YES callback:callback];
 }
 
 //商品收藏
@@ -43,7 +39,7 @@
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     [params setValue:goodsId forKey:@"goods_id"];
     [params setValue:@(isFavorite) forKey:@"is_favorite"];
-    return [self postWithPath:CTGoods(@"favorite") params:params callback:callback];
+    return [self postWithPath:CTGoods(@"favorite") params:params showHud:NO callback:callback];
 }
 
 //热搜和搜索历史

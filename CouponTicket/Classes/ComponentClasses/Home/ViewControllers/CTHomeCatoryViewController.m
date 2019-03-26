@@ -168,7 +168,7 @@
 }
 - (void)loadlListData{
     //加载商品列表
-    [CTRequest cateGoodsWithPage:self.pageIndex size:self.pageSize cateId:self.cateId order:self.viewModel.order callback:^(NSArray *data, CLRequest *request, CTNetError error) {
+    [CTRequest cateGoodsWithPage:self.pageIndex size:self.pageSize cateId:self.cateId order:self.viewModel.order showHud:NO callback:^(NSArray *data, CLRequest *request, CTNetError error) {
         if(!error){
             if(!self.isLoadMore){
                 [self.dataSources removeAllObjects];

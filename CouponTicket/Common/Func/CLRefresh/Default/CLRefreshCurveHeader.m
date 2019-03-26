@@ -56,7 +56,7 @@
     [super setProgress:progress];
     _curveLayer.progress = progress;
     self.alpha = 0.3 +  progress * 0.7;
-    if(progress < 1.0){
+    if(progress <= 1.0){
         _titleLabel.text = kRefreshDownString;
     }
     else{

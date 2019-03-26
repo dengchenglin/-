@@ -87,6 +87,10 @@
 		322453F021F2CF1100471059 /* CTAppConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 322453EF21F2CF1100471059 /* CTAppConfig.m */; };
 		322453F421F2D3F700471059 /* CTHomeNavBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 322453F321F2D3F700471059 /* CTHomeNavBar.m */; };
 		322453F621F2D60300471059 /* CTHomeNavBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 322453F521F2D60300471059 /* CTHomeNavBar.xib */; };
+		324961492248BF4C002D9383 /* CTGoodDetailNavbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 324961482248BF4B002D9383 /* CTGoodDetailNavbar.m */; };
+		3249614B2248BF7A002D9383 /* CTGoodDetailNavbar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3249614A2248BF7A002D9383 /* CTGoodDetailNavbar.xib */; };
+		3249614E2248E858002D9383 /* CTNetworkEngine+Message.m in Sources */ = {isa = PBXBuildFile; fileRef = 3249614D2248E856002D9383 /* CTNetworkEngine+Message.m */; };
+		324961532248E9DF002D9383 /* CTMessageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 324961522248E9DF002D9383 /* CTMessageModel.m */; };
 		324C3D9421F84C9900536DA8 /* UIActionSheet+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 324C3D9221F84C9800536DA8 /* UIActionSheet+Category.m */; };
 		324C3D9D21F84FB200536DA8 /* CTGoodSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 324C3D9C21F84FB200536DA8 /* CTGoodSearchViewController.m */; };
 		324C3DA721F854B000536DA8 /* CTGoodService.m in Sources */ = {isa = PBXBuildFile; fileRef = 324C3DA621F854B000536DA8 /* CTGoodService.m */; };
@@ -375,6 +379,8 @@
 		32DB93D0221573E400300ACC /* CTUserInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 32DB93CF221573E400300ACC /* CTUserInfoView.m */; };
 		32DB93D2221573EB00300ACC /* CTUserInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32DB93D1221573EB00300ACC /* CTUserInfoView.xib */; };
 		32DB93D52215771900300ACC /* CTUserDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32DB93D42215771900300ACC /* CTUserDetailViewController.m */; };
+		32DE0911224A042800474058 /* CTNetworkEngine+H5Url.m in Sources */ = {isa = PBXBuildFile; fileRef = 32DE0910224A042800474058 /* CTNetworkEngine+H5Url.m */; };
+		32DE0913224A0AC900474058 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32DE0912224A0AC900474058 /* Images.xcassets */; };
 		32E7A5942240D9890074069D /* CTMemberInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 32E7A5932240D9880074069D /* CTMemberInfoModel.m */; };
 		32E7A5972240F1C10074069D /* AliTradeWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32E7A5962240F1C10074069D /* AliTradeWebViewController.m */; };
 		32E7EE5221F2F70700191789 /* CTHomeViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 32E7EE5121F2F70700191789 /* CTHomeViewModel.m */; };
@@ -618,6 +624,13 @@
 		322453F221F2D3F700471059 /* CTHomeNavBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTHomeNavBar.h; sourceTree = "<group>"; };
 		322453F321F2D3F700471059 /* CTHomeNavBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTHomeNavBar.m; sourceTree = "<group>"; };
 		322453F521F2D60300471059 /* CTHomeNavBar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CTHomeNavBar.xib; sourceTree = "<group>"; };
+		324961472248BF4B002D9383 /* CTGoodDetailNavbar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTGoodDetailNavbar.h; sourceTree = "<group>"; };
+		324961482248BF4B002D9383 /* CTGoodDetailNavbar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTGoodDetailNavbar.m; sourceTree = "<group>"; };
+		3249614A2248BF7A002D9383 /* CTGoodDetailNavbar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CTGoodDetailNavbar.xib; sourceTree = "<group>"; };
+		3249614C2248E856002D9383 /* CTNetworkEngine+Message.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CTNetworkEngine+Message.h"; sourceTree = "<group>"; };
+		3249614D2248E856002D9383 /* CTNetworkEngine+Message.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CTNetworkEngine+Message.m"; sourceTree = "<group>"; };
+		324961512248E9DF002D9383 /* CTMessageModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTMessageModel.h; sourceTree = "<group>"; };
+		324961522248E9DF002D9383 /* CTMessageModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTMessageModel.m; sourceTree = "<group>"; };
 		324C3D9221F84C9800536DA8 /* UIActionSheet+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIActionSheet+Category.m"; sourceTree = "<group>"; };
 		324C3D9321F84C9900536DA8 /* UIActionSheet+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIActionSheet+Category.h"; sourceTree = "<group>"; };
 		324C3D9B21F84FB200536DA8 /* CTGoodSearchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTGoodSearchViewController.h; sourceTree = "<group>"; };
@@ -1152,6 +1165,9 @@
 		32DB93D1221573EB00300ACC /* CTUserInfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CTUserInfoView.xib; sourceTree = "<group>"; };
 		32DB93D32215771900300ACC /* CTUserDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTUserDetailViewController.h; sourceTree = "<group>"; };
 		32DB93D42215771900300ACC /* CTUserDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTUserDetailViewController.m; sourceTree = "<group>"; };
+		32DE090F224A042800474058 /* CTNetworkEngine+H5Url.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CTNetworkEngine+H5Url.h"; sourceTree = "<group>"; };
+		32DE0910224A042800474058 /* CTNetworkEngine+H5Url.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CTNetworkEngine+H5Url.m"; sourceTree = "<group>"; };
+		32DE0912224A0AC900474058 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		32E7A5922240D9880074069D /* CTMemberInfoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTMemberInfoModel.h; sourceTree = "<group>"; };
 		32E7A5932240D9880074069D /* CTMemberInfoModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTMemberInfoModel.m; sourceTree = "<group>"; };
 		32E7A5952240F1C10074069D /* AliTradeWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AliTradeWebViewController.h; sourceTree = "<group>"; };
@@ -1844,6 +1860,22 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		3249614F2248E9BF002D9383 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				324961512248E9DF002D9383 /* CTMessageModel.h */,
+				324961522248E9DF002D9383 /* CTMessageModel.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		324961502248E9C4002D9383 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		324C3D9E21F851D800536DA8 /* GoodList */ = {
 			isa = PBXGroup;
 			children = (
@@ -2018,6 +2050,9 @@
 				326525C821F5A2DA00B63DD7 /* CTGoodListCell.h */,
 				326525C921F5A2DA00B63DD7 /* CTGoodListCell.m */,
 				326525CA21F5A2DA00B63DD7 /* CTGoodListCell.xib */,
+				324961472248BF4B002D9383 /* CTGoodDetailNavbar.h */,
+				324961482248BF4B002D9383 /* CTGoodDetailNavbar.m */,
+				3249614A2248BF7A002D9383 /* CTGoodDetailNavbar.xib */,
 			);
 			path = CTGoodListView;
 			sourceTree = "<group>";
@@ -2503,6 +2538,7 @@
 				32BE602821EDCE7500BA52EF /* SystemConfigs */,
 				32FD1266223F784600CB85C1 /* ThirdLib */,
 				32BE602721EDCE6C00BA52EF /* ReSources */,
+				32DE0912224A0AC900474058 /* Images.xcassets */,
 			);
 			path = CouponTicket;
 			sourceTree = "<group>";
@@ -3030,6 +3066,8 @@
 		32CA555121F6ACBF00145E31 /* Message */ = {
 			isa = PBXGroup;
 			children = (
+				324961502248E9C4002D9383 /* ViewModels */,
+				3249614F2248E9BF002D9383 /* Models */,
 				3220EA1121F95E22004E0422 /* Views */,
 				32CA555C21F6B08900145E31 /* Service */,
 				32CA555B21F6B08200145E31 /* ViewControllers */,
@@ -3249,6 +3287,10 @@
 				32A2810E2237D58E007DF6C2 /* CTNetworkEngine+Goods.m */,
 				3297FDC62241FA9800B59746 /* CTNetworkEngine+Order.h */,
 				3297FDC72241FA9800B59746 /* CTNetworkEngine+Order.m */,
+				3249614C2248E856002D9383 /* CTNetworkEngine+Message.h */,
+				3249614D2248E856002D9383 /* CTNetworkEngine+Message.m */,
+				32DE090F224A042800474058 /* CTNetworkEngine+H5Url.h */,
+				32DE0910224A042800474058 /* CTNetworkEngine+H5Url.m */,
 			);
 			path = CTNetwork;
 			sourceTree = "<group>";
@@ -3519,6 +3561,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3249614B2248BF7A002D9383 /* CTGoodDetailNavbar.xib in Resources */,
 				32BE601021EDC5E500BA52EF /* LaunchScreen.storyboard in Resources */,
 				32CA55A721F71D6900145E31 /* CTHistoryKeywordCell.xib in Resources */,
 				32A28E9E220288080049B003 /* CTAlipayBoundView_.xib in Resources */,
@@ -3569,6 +3612,7 @@
 				326AC1E921FAB14C008C154B /* CTSearchTikcetPasteView.xib in Resources */,
 				32FD13C1223F9AA400CB85C1 /* yw_1222.jpg in Resources */,
 				32DB93D2221573EB00300ACC /* CTUserInfoView.xib in Resources */,
+				32DE0913224A0AC900474058 /* Images.xcassets in Resources */,
 				32CA55A221F7183200145E31 /* CTHotKeywordHeadView.xib in Resources */,
 				3220EA4421F9C343004E0422 /* CTHotSalesNoticeView.xib in Resources */,
 				3268B735224635EA00330579 /* CTGoodsDescPreView.xib in Resources */,
@@ -3741,6 +3785,7 @@
 				3280739A21FF0928009CABEC /* CTMineToolView.m in Sources */,
 				3220EA4821F9C570004E0422 /* CTGoodListViewController.m in Sources */,
 				32BE611E21EDCFA600BA52EF /* NSObject+YYModels.m in Sources */,
+				32DE0911224A042800474058 /* CTNetworkEngine+H5Url.m in Sources */,
 				32A3D15B221E9C59000CA323 /* CTPhotoView.m in Sources */,
 				32BE610E21EDCFA600BA52EF /* FileUtil.m in Sources */,
 				32CD9AC122239607000D733B /* CTVideoShopPageController.m in Sources */,
@@ -4008,9 +4053,12 @@
 				322453D821F2BFC200471059 /* CTTableView.m in Sources */,
 				326AC20421FB04B1008C154B /* CLContainerView.m in Sources */,
 				32A28EA7220295A30049B003 /* CTWithdrawViewController.m in Sources */,
+				3249614E2248E858002D9383 /* CTNetworkEngine+Message.m in Sources */,
+				324961532248E9DF002D9383 /* CTMessageModel.m in Sources */,
 				324C3D9421F84C9900536DA8 /* UIActionSheet+Category.m in Sources */,
 				32CD9AC42223B6C5000D733B /* CTHandpickDetailViewController.m in Sources */,
 				32CA557621F6E75F00145E31 /* CTGoodSortView.m in Sources */,
+				324961492248BF4C002D9383 /* CTGoodDetailNavbar.m in Sources */,
 				32A28EA122028B7A0049B003 /* CTAlipayBoundViewModel.m in Sources */,
 				325D3B7721F1E68500465B91 /* CTTabBarItem.m in Sources */,
 			);
@@ -4162,7 +4210,9 @@
 			baseConfigurationReference = 6AA14B2C43C4DB99B1D60D47 /* Pods-CouponTicket.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-4";
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 9ZJ3RLKNS9;
 				ENABLE_BITCODE = NO;
@@ -4266,7 +4316,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = cn.dankal.coupon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "ca772441-6872-4b13-bf12-3b01e0ed047d";
-				PROVISIONING_PROFILE_SPECIFIER = CommonProfile;
+				PROVISIONING_PROFILE_SPECIFIER = Common;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -4276,7 +4326,9 @@
 			baseConfigurationReference = 7665215356141A688CE2B40E /* Pods-CouponTicket.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-4";
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 9ZJ3RLKNS9;
 				ENABLE_BITCODE = NO;
@@ -4380,7 +4432,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = cn.dankal.coupon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "ca772441-6872-4b13-bf12-3b01e0ed047d";
-				PROVISIONING_PROFILE_SPECIFIER = CommonProfile;
+				PROVISIONING_PROFILE_SPECIFIER = Common;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

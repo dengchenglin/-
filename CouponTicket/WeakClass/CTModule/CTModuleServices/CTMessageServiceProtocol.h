@@ -12,4 +12,6 @@
 
 @protocol CTMessageServiceProtocol <NSObject,CLModuleServiceProtocol>
 
+- (UIViewController *)pushMessageFromViewController:(UIViewController *)viewController;
+
 @end

@@ -21,7 +21,7 @@
     [params setValue:@(page) forKey:@"page"];
     [params setValue:@(size) forKey:@"size"];
     [params setValue:markeId forKey:@"marke_id"];
-    return [self postWithPath:CTRecom(@"time_buy_goods") params:params callback:callback];
+    return [self postWithPath:CTRecom(@"time_buy_goods") params:params showHud:page>1?NO:YES callback:callback];
 }
 //视频购商品分类
 - (CLRequest *)videoBuyCateWithCallback:(CTResponseBlock)callback{
@@ -34,14 +34,14 @@
     [params setValue:@(size) forKey:@"size"];
     [params setValue:cateId forKey:@"cate_id"];
     [params setValue:order forKey:@"order"];
-    return [self postWithPath:CTRecom(@"video_buy_goods") params:params callback:callback];
+    return [self postWithPath:CTRecom(@"video_buy_goods") params:params showHud:page>1?NO:YES callback:callback];
 }
 //官方精选
 - (CLRequest *)officialBuyWithPage:(NSInteger)page size:(NSInteger)size callback:(CTResponseBlock)callback{
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     [params setValue:@(page) forKey:@"page"];
     [params setValue:@(size) forKey:@"size"];
-    return [self postWithPath:CTRecom(@"official_buy") params:params callback:callback];
+    return [self postWithPath:CTRecom(@"official_buy") params:params showHud:page>1?NO:YES callback:callback];
 }
 //官方精选详情
 - (CLRequest *)officialBuyDetailWithMarkeId:(NSString *)markeId callback:(CTResponseBlock)callback{

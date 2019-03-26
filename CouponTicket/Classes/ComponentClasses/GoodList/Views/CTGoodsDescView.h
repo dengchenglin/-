@@ -11,6 +11,7 @@
 @interface CTGoodsDescView : UIView
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *disLabel1;
+@property (weak, nonatomic) IBOutlet UIView *commissionView;
 @property (weak, nonatomic) IBOutlet UILabel *disLabel2;
 @property (weak, nonatomic) IBOutlet UIView *upgradeView;
 @property (weak, nonatomic) IBOutlet UILabel *priceLabel;

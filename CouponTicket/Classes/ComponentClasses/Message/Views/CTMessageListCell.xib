@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -51,12 +51,22 @@
                             <constraint firstItem="Mhq-4s-Ync" firstAttribute="top" secondItem="qMo-lh-b0z" secondAttribute="top" id="zAa-Ln-K0G"/>
                         </constraints>
                     </view>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VTW-Ab-Vva">
+                        <rect key="frame" x="0.0" y="95.5" width="402" height="1"/>
+                        <color key="backgroundColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="ReF-mF-SGP"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <constraints>
                     <constraint firstItem="qMo-lh-b0z" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="0mt-mj-bw8"/>
                     <constraint firstItem="qMo-lh-b0z" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="18" id="D75-bs-hgi"/>
+                    <constraint firstAttribute="bottom" secondItem="VTW-Ab-Vva" secondAttribute="bottom" id="E2p-ZB-wfz"/>
                     <constraint firstAttribute="bottom" secondItem="qMo-lh-b0z" secondAttribute="bottom" constant="14" id="KWc-yN-RMt"/>
+                    <constraint firstAttribute="trailing" secondItem="VTW-Ab-Vva" secondAttribute="trailing" id="RGw-iP-luy"/>
                     <constraint firstAttribute="trailing" secondItem="qMo-lh-b0z" secondAttribute="trailing" constant="15" id="aJJ-uN-YvC"/>
+                    <constraint firstItem="VTW-Ab-Vva" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="yW2-fo-Dty"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>

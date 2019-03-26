@@ -8,7 +8,7 @@
 
 #import "CLRefreshConfig.h"
 
-CGFloat const CLRefreshingDistance = 100.0f;
+CGFloat const CLRefreshingDistance = 80.0f;
 
 CGFloat const CLRefreshLoadMoreDistance = 60.0f;
 

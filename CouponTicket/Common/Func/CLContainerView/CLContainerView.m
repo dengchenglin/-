@@ -12,7 +12,7 @@
 @end
 @interface CLContainerView()<UITableViewDelegate,UITableViewDataSource>
 
-@property (nonatomic, strong) UITableView *tableView;
+
 
 @property (nonatomic, strong) NSMutableArray <CLSectionConfig *>*configs;
 

@@ -56,6 +56,7 @@
 }
 - (void)request{
     [CTRequest hotGoodsWithCallback:^(id data, CLRequest *request, CTNetError error) {
+        [self.tableView endRefreshing];
         if(!error){
             self.model = [CTHotGoodsModel yy_modelWithDictionary:data];
             self.noticeView.model = _model;

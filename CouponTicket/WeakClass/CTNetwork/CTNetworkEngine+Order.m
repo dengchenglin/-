@@ -17,7 +17,7 @@
     [params setValue:@(page) forKey:@"page"];
     [params setValue:@(size) forKey:@"size"];
     [params setValue:status?@(status):nil forKey:@"tk_status"];
-    return [self postWithPath:CTOrder(@"index") params:params callback:callback];
+    return [self postWithPath:CTOrder(@"index") params:params showHud:page>1?NO:YES callback:callback];
 }
 
 @end

@@ -207,7 +207,8 @@
     //轮播
     [self.bannerView setClickItemBlock:^(NSInteger index) {
         @strongify(self)
-         [[CTModuleManager webService] pushWebFromViewController:self url:self.viewModel.model.advs[index].url];
+        UIViewController *vc = [[CTModuleManager webService] pushWebFromViewController:self url:self.viewModel.model.advs[index].url];
+        vc.title = self.viewModel.model.advs[index].title;
     }];
     //活动数据
     [self.advertView addActionWithBlock:^(id target) {

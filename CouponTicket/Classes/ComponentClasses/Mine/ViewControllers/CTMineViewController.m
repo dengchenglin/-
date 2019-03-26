@@ -34,6 +34,8 @@
 
 #import "CTNetworkEngine+Member.h"
 
+#import "CTNetworkEngine+H5Url.h"
+
 #import "CTMyEarnModel.h"
 
 @interface CTMineViewController ()
@@ -133,6 +135,7 @@
 }
 - (void)request{
     [CTRequest userInfoWithCallback:^(id data, CLRequest *request, CTNetError error) {
+        [self.containerView.tableView endRefreshing];
         if(!error){
             [CTAppManager saveUserWithInfo:data[@"user"]];
             self.headView.user = [CTAppManager user];
@@ -180,6 +183,10 @@
 
 - (void)setUpEvent{
     @weakify(self)
+    [self.containerView.tableView addHeaderRefreshWithCallBack:^{
+        @strongify(self);
+        [self request];
+    }];
     //我的信息
     [self.headView.iconImageView addActionWithBlock:^(id  _Nonnull target) {
         @strongify(self)
@@ -261,7 +268,7 @@
     //领券指南
     [self.toolView.guideView addActionWithBlock:^(id target) {
         @strongify(self)
-        UIViewController *webVc = [[CTModuleManager webService] pushWebFromViewController:self url:CTBaseUrl(@"api/user/comfield?type=lqzn")];
+        UIViewController *webVc = [[CTModuleManager webService] pushWebFromViewController:self url:CTH5UrlForType(CTH5UrlGetTikcetAuide)];
         webVc.title = @"领券指南";
     }];
     //我的邀请码

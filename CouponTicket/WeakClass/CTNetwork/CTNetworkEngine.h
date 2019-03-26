@@ -34,7 +34,9 @@ typedef NS_ENUM(NSInteger,CTNetError) {
     CTNetErrorTimeOut   //请求超时
 };
 
+
 typedef void(^CTResponseBlock) (id data,CLRequest *request,CTNetError error);
+
 
 @interface CTNetworkEngine : NSObject
 

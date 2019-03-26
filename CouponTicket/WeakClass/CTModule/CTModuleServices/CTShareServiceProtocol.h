@@ -12,6 +12,6 @@
 
 @protocol CTShareServiceProtocol <NSObject,CLModuleServiceProtocol>
 
-- (void)pushShareFromViewController:(UIViewController *)viewController;
+- (UIViewController *)pushShareFromViewController:(UIViewController *)viewController;
 
 @end

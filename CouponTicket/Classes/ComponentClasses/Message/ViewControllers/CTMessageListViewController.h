@@ -8,13 +8,10 @@
 
 #import "CTBaseListViewController.h"
 
-typedef NS_ENUM(NSInteger,CTMessageKind) {
-    CTMessageSystem,
-    CTMessageNotification
-};
+#import "CTNetworkEngine+Message.h"
 
 @interface CTMessageListViewController : CTBaseListViewController
 
-@property (nonatomic, assign) CTMessageKind messageKind;
+@property (nonatomic, assign) CTMessageType messageType;
 
 @end

@@ -16,4 +16,6 @@
 
 + (UIViewController *)getCurrentViewController;
 
+//生成二维码
++ (UIImage *)createQRCodeImageWithString:(nonnull NSString *)codeString andSize:(CGSize)size andBackColor:(nullable UIColor *)backColor andFrontColor:(nullable UIColor *)frontColor andCenterImage:(nullable UIImage *)centerImage;
 @end

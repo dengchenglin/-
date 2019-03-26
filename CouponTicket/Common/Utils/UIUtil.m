@@ -88,4 +88,59 @@
     return viewController;
 }
 
+//生成二维码
++ (UIImage *)createQRCodeImageWithString:(nonnull NSString *)codeString andSize:(CGSize)size andBackColor:(nullable UIColor *)backColor andFrontColor:(nullable UIColor *)frontColor andCenterImage:(nullable UIImage *)centerImage{
+    
+    NSData *stringData = [codeString dataUsingEncoding:NSUTF8StringEncoding];
+    
+    CIFilter *qrFilter = [CIFilter filterWithName:@"CIQRCodeGenerator"];
+    //    NSLog(@"%@",qrFilter.inputKeys);
+    [qrFilter setValue:stringData forKey:@"inputMessage"];
+    [qrFilter setValue:@"M" forKey:@"inputCorrectionLevel"];
+    
+    CIImage *qrImage = qrFilter.outputImage;
+    //放大并绘制二维码 (上面生成的二维码很小，需要放大)
+    CGImageRef cgImage = [[CIContext contextWithOptions:nil] createCGImage:qrImage fromRect:qrImage.extent];
+    UIGraphicsBeginImageContext(size);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextSetInterpolationQuality(context, kCGInterpolationNone);
+    //翻转一下图片 不然生成的QRCode就是上下颠倒的
+    CGContextScaleCTM(context, 1.0, -1.0);
+    CGContextDrawImage(context, CGContextGetClipBoundingBox(context), cgImage);
+    UIImage *codeImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    CGImageRelease(cgImage);
+    
+    //绘制颜色
+    CIFilter *colorFilter = [CIFilter filterWithName:@"CIFalseColor"
+                                       keysAndValues:
+                             @"inputImage",[CIImage imageWithCGImage:codeImage.CGImage],
+                             @"inputColor0",[CIColor colorWithCGColor:frontColor == nil ? [UIColor clearColor].CGColor: frontColor.CGColor],
+                             @"inputColor1",[CIColor colorWithCGColor: backColor == nil ? [UIColor blackColor].CGColor : backColor.CGColor],
+                             nil];
+    
+    UIImage * colorCodeImage = [UIImage imageWithCIImage:colorFilter.outputImage];
+    
+    //中心添加图片
+    if (centerImage != nil) {
+        
+        UIGraphicsBeginImageContext(colorCodeImage.size);
+        
+        [colorCodeImage drawInRect:CGRectMake(0, 0, colorCodeImage.size.width, colorCodeImage.size.height)];
+        
+        UIImage *image = centerImage;
+        
+        CGFloat imageW = 50;
+        CGFloat imageX = (colorCodeImage.size.width - imageW) * 0.5;
+        CGFloat imgaeY = (colorCodeImage.size.height - imageW) * 0.5;
+        
+        [image drawInRect:CGRectMake(imageX, imgaeY, imageW, imageW)];
+        
+        UIImage *centerImageCode = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
+        return centerImageCode;
+    }
+    return colorCodeImage;
+}
 @end

@@ -73,8 +73,7 @@
     //消息
     [self.topView.navBar.messageButton touchUpInsideSubscribeNext:^(id x) {
         @strongify(self)
-        UIViewController *messageVc = [[CTModuleManager messageService]rootViewController];
-        [self.navigationController pushViewController:messageVc animated:YES];
+        [[CTModuleManager messageService]pushMessageFromViewController:self];
     }];
     //二维码邀请页面
     [self.topView.navBar.scanButton touchUpInsideSubscribeNext:^(id x) {

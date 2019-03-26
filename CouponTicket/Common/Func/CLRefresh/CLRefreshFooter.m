@@ -78,7 +78,7 @@ NSString *const CLRefreshFooterKeyPathContentSize = @"contentSize";
             if(!_loading){
                 self.progress = progress;
             }
-            if(self.progress >= 1.0 && !self.scrollView.tracking && !self.loading){
+            if(self.progress >= 1.0 && !self.scrollView.isDragging && !self.loading){
                 self.loading = YES;
                 self.scrollView.decelerationRate = 0.01;
                 [UIView animateWithDuration:0.5 animations:^{

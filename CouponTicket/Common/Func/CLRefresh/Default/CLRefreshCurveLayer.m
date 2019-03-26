@@ -15,6 +15,9 @@
 
 - (void)setProgress:(CGFloat)progress{
     _progress = progress;
+    if(_progress > 1.0){
+        _progress = 1.0;
+    }
     [self setNeedsDisplay];
 }
 -(void)drawInContext:(CGContextRef)ctx{
