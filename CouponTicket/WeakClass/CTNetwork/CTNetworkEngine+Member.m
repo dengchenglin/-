@@ -51,7 +51,7 @@
     [params setValue:@(page) forKey:@"page"];
     [params setValue:@(size) forKey:@"size"];
     [params setValue:name forKey:@"name"];
-    return [self postWithPath:CTUser(@"often_problem") params:nil showHud:page>1?NO:YES callback:callback];
+    return [self postWithPath:CTUser(@"often_problem") params:params showHud:page>1?NO:YES callback:callback];
 }
 //我的团队-分类
 - (CLRequest *)teamCateWithCallback:(CTResponseBlock)callback{

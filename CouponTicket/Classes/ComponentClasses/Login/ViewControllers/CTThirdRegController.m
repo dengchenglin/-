@@ -88,7 +88,7 @@
             return ;
         }
         [CTRequest checkPhoneWithPhone:self.viewModel.mobile callback:^(id data, CLRequest *request, CTNetError error) {
-            if(error){
+            if(!error){
                 CTGetCodeViewController *vc = [CTGetCodeViewController new];
                 vc.mobile = self.viewModel.mobile.wipSpace;
                 vc.inviteCode = self.viewModel.inviteCode.wipSpace;
@@ -153,7 +153,7 @@
             return ;
         }
         [CTRequest checkPhoneWithPhone:self.viewModel.mobile callback:^(id data, CLRequest *request, CTNetError error) {
-            if(!error){
+            if(error){
                 CTGetCodeViewController *vc = [CTGetCodeViewController new];;
                 vc.mobile = self.viewModel.mobile;
                 vc.eventKind = self.eventKind;

@@ -8,19 +8,39 @@
 
 #import "LMDataResultView.h"
 
+#import <objc/runtime.h>
+
+static const int LMDataResultViewKey;
+
 @implementation LMDataResultView
 
-
 + (void)showNoDataResultOnView:(UIView *)view{
-    [self showNoDataResultOnView:view frame:CGRectZero];
+    LMNoDataView *resultView = NSMainBundleClass(LMNoDataView.class);
+    [self showNoDataResultView:resultView onView:view frame:CGRectZero];
 }
 
 + (void)showNoDataResultOnView:(UIView *)view frame:(CGRect)frame{
-    if(!view && !view.bounds.size.width)return;
-     [self hideDataResultOnView:view];
     LMNoDataView *resultView = NSMainBundleClass(LMNoDataView.class);
+    [self showNoDataResultView:resultView onView:view frame:CGRectZero];
+}
+
++ (void)showNoOrderResultOnView:(UIView *)view{
+    LMNoOrderView *resultView = NSMainBundleClass(LMNoOrderView.class);
+    [self showNoDataResultView:resultView onView:view frame:CGRectZero];
+}
+
++ (void)showNoSearchResultOnView:(UIView *)view{
+    LMNoResultView *resultView = NSMainBundleClass(LMNoResultView.class);
+    [self showNoDataResultView:resultView onView:view frame:CGRectZero];
+}
+
++ (void)showNoDataResultView:(LMDataResultView *)resultView onView:(UIView *)view frame:(CGRect)frame{
+    if(!view && !view.bounds.size.width)return;
+    if(!resultView)return;
+    [self hideDataResultOnView:view];
     [view addSubview:resultView];
     [view layoutIfNeeded];
+  
     if(CGRectEqualToRect(frame, CGRectZero)){
         [resultView mas_makeConstraints:^(MASConstraintMaker *make) {
             if([view isKindOfClass:[UIScrollView class]]){
@@ -45,6 +65,9 @@
         }];
     }
  
+    
+    objc_setAssociatedObject(view, &LMDataResultViewKey, resultView, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    
 }
 
 
@@ -58,13 +81,15 @@
         make.edges.mas_equalTo(UIEdgeInsetsZero);
     }];
     
+    
+    objc_setAssociatedObject(view, &LMDataResultViewKey, resultView, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 + (void)hideDataResultOnView:(UIView *)view{
-    for(UIView *subView in view.subviews){
-        if([subView isKindOfClass:LMDataResultView.class]){
-            [subView removeFromSuperview];
-        }
+    if(!view)return;
+    LMDataResultView *resultView = objc_getAssociatedObject(view, &LMDataResultViewKey);
+    if(resultView){
+        [resultView removeFromSuperview];
     }
 }
 
@@ -94,4 +119,10 @@
 
 @implementation LMNoQuestionView
 
+@end
+
+@implementation LMNoResultView
+
+@end
+@implementation LMNoOrderView
 @end

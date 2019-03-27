@@ -157,10 +157,11 @@
 }
 
 - (void)successBack{
-    if(self.callback){
-        self.callback(YES);
-    }
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self dismissViewControllerAnimated:YES completion:^{
+        if(self.callback){
+            self.callback(YES);
+        }
+    }];
 }
 
 - (void)back{

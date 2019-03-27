@@ -66,7 +66,7 @@
     [CTRequest userPowerWithCallback:^(id data, CLRequest *request, CTNetError error) {
         if(!error){
             self.pageView.list = data[@"list"];
-            self.segmentedControl.level = self.pageView.list.count;
+            self.segmentedControl.titles = data[@"cate"];
         }
     }];
 }

@@ -20,7 +20,7 @@
 
 @interface CTEquitySegmentedControl : UIView
 
-@property (nonatomic, assign) CTMemberLevel level;
+@property (nonatomic, copy) NSArray <NSString *> *titles;
 
 @property (nonatomic, weak) id<CTEquitySegmentedControlDelegate> delegate;
 

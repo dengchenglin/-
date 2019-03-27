@@ -45,6 +45,7 @@ ViewInstance(setUp)
 }
 
 - (void)reloadView{
+    [_containerView removeAllSubViews];
     CGFloat containerWidth = _containerView.width;
     if(!containerWidth)containerWidth = SCREEN_WIDTH - 20;
     NSInteger lineCount = (_models.count<4?_models.count:4);

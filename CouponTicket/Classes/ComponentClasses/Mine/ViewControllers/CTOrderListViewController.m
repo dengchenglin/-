@@ -37,9 +37,13 @@
 
 - (void)request{
     [CTRequest orderIndexWithPage:self.pageIndex size:self.pageSize tkStatus:self.status callback:^(id data, CLRequest *request, CTNetError error) {
-        if(!error){
-            [self analysisAndReloadWithData:data error:error modelClass:CTOrderModel.class viewModelClass:CTOrderViewModel.class];
-        }
+        [self analysisAndReloadWithData:data error:error modelClass:CTOrderModel.class viewModelClass:CTOrderViewModel.class completed:^{
+            if(!error){
+                if(!self.isLoadMore && self.dataSources.count == 0){
+                    [LMNetErrorView showNoOrderResultOnView:self.tableView];
+                }
+            }
+        }];
     }];
 }
 

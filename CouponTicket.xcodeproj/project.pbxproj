@@ -155,6 +155,7 @@
 		326AC20A21FB0DEF008C154B /* CTMemberHeadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 326AC20921FB0DEF008C154B /* CTMemberHeadView.xib */; };
 		326AC20D21FB15C8008C154B /* CTMemberLevelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 326AC20C21FB15C8008C154B /* CTMemberLevelView.m */; };
 		326AC21021FB1710008C154B /* CTMemberManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 326AC20F21FB1710008C154B /* CTMemberManager.m */; };
+		327282F1224B6DE200CF5D01 /* LMNoOrderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 327282F0224B6DE200CF5D01 /* LMNoOrderView.xib */; };
 		3280738B21FEE7B7009CABEC /* CTMineHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3280738A21FEE7B7009CABEC /* CTMineHeadView.m */; };
 		3280738D21FEE7C1009CABEC /* CTMineHeadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3280738C21FEE7C0009CABEC /* CTMineHeadView.xib */; };
 		3280739021FEEC74009CABEC /* CTMineEarnView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3280738F21FEEC74009CABEC /* CTMineEarnView.m */; };
@@ -746,6 +747,7 @@
 		326AC20C21FB15C8008C154B /* CTMemberLevelView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTMemberLevelView.m; sourceTree = "<group>"; };
 		326AC20E21FB1710008C154B /* CTMemberManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTMemberManager.h; sourceTree = "<group>"; };
 		326AC20F21FB1710008C154B /* CTMemberManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTMemberManager.m; sourceTree = "<group>"; };
+		327282F0224B6DE200CF5D01 /* LMNoOrderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LMNoOrderView.xib; sourceTree = "<group>"; };
 		3280738921FEE7B7009CABEC /* CTMineHeadView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTMineHeadView.h; sourceTree = "<group>"; };
 		3280738A21FEE7B7009CABEC /* CTMineHeadView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTMineHeadView.m; sourceTree = "<group>"; };
 		3280738C21FEE7C0009CABEC /* CTMineHeadView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CTMineHeadView.xib; sourceTree = "<group>"; };
@@ -3121,6 +3123,7 @@
 				32CA556C21F6C22600145E31 /* LMNetErrorView.xib */,
 				32CA556D21F6C22600145E31 /* LMNoDataView.xib */,
 				32DE0914224A348500474058 /* LMNoResultView.xib */,
+				327282F0224B6DE200CF5D01 /* LMNoOrderView.xib */,
 			);
 			path = CTNoDataResultView;
 			sourceTree = "<group>";
@@ -3638,6 +3641,7 @@
 				32A28ECE2202D5230049B003 /* CTWithdrawSuccessView.xib in Resources */,
 				32BE613321EDCFA600BA52EF /* WSDatePickerView.xib in Resources */,
 				32E7EE6F21F32E9800191789 /* CTHomeNavView.xib in Resources */,
+				327282F1224B6DE200CF5D01 /* LMNoOrderView.xib in Resources */,
 				32DE0915224A348500474058 /* LMNoResultView.xib in Resources */,
 				32B4EE19221FC39900D2D71D /* CTSpreeShopItem.xib in Resources */,
 				32DB93CD22156DDA00300ACC /* CTTeamListCell.xib in Resources */,

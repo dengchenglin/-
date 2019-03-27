@@ -58,9 +58,9 @@
 }
 
 - (NSArray<UITableViewRowAction *> *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewRowAction *action1 = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDestructive title:@"取消\n收藏" handler:^(UITableViewRowAction * _Nonnull action, NSIndexPath * _Nonnull indexPath) {
+    UITableViewRowAction *action1 = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDefault title:@"取消\n收藏" handler:^(UITableViewRowAction * _Nonnull action, NSIndexPath * _Nonnull indexPath) {
         CTGoodsViewModel *viewModel = self.dataSources[indexPath.row];
-        [CTRequest favoriteWithGoodsId:viewModel.model.uid isFavorite:YES callback:^(id data, CLRequest *request, CTNetError error) {
+        [CTRequest favoriteWithGoodsId:viewModel.model.item_id isFavorite:NO callback:^(id data, CLRequest *request, CTNetError error) {
             if(!error){
                 [MBProgressHUD showMBProgressHudWithTitle:@"取消成功"];
                 [self.dataSources removeObjectAtIndex:indexPath.row];
@@ -72,12 +72,13 @@
         }];
     }];
     action1.backgroundColor = RGBColor(255, 199, 38);
-    UITableViewRowAction *action2 = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDestructive title:@"分享" handler:^(UITableViewRowAction * _Nonnull action, NSIndexPath * _Nonnull indexPath) {
+    UITableViewRowAction *action2 = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDefault title:@"分享" handler:^(UITableViewRowAction * _Nonnull action, NSIndexPath * _Nonnull indexPath) {
         [self shareWithGoodsViewModel:self.dataSources[indexPath.row]];
     }];
     action2.backgroundColor = RGBColor(255, 97, 36);
     return @[action1,action2];
 }
+
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     UIViewController *vc = [[CTModuleManager goodListService] goodDetailViewControllerWithGoodId:self.dataSources[indexPath.row].model.uid];

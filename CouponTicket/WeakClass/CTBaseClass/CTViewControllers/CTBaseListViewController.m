@@ -67,6 +67,10 @@
 }
 
 - (void)analysisAndReloadWithData:(NSArray *)data error:(CTNetError)error modelClass:(Class)modelClass viewModelClass:(Class <CTViewModelProtocol>)viewModelClass{
+    [self analysisAndReloadWithData:data error:error modelClass:modelClass viewModelClass:viewModelClass completed:nil];
+}
+
+- (void)analysisAndReloadWithData:(NSArray *)data error:(CTNetError)error modelClass:(Class)modelClass viewModelClass:(Class <CTViewModelProtocol>)viewModelClass completed:(void (^)(void))completed{
         [self.tableView endRefreshing];
         [LMNetErrorView hideDataResultOnView:self.view];
         if(!error){
@@ -104,8 +108,11 @@
                 }];
             }
         }
-    
+    if(completed){
+        completed();
+    }
 }
+
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{

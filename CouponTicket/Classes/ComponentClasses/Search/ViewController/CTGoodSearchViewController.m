@@ -117,6 +117,7 @@
 - (void)searchKeyword:(NSString *)keyword order:(NSString *)order{
     [CTRequest goodsSearchWithKeyword:keyword page:self.pageIndex size:self.pageSize order:order callback:^(id data, CLRequest *request, CTNetError error) {
         [self.dataTableView endRefreshing];
+        [LMNetErrorView hideDataResultOnView:self.view];
         if(!error){
             if(!self.isLoadMore){
                 [self.dataSources removeAllObjects];
@@ -135,7 +136,7 @@
                 [self.dataTableView hiddenNulMoreView];
             }
             if(!self.isLoadMore && self.dataSources.count == 0){
-                [LMNetErrorView showNoDataResultOnView:self.dataTableView];
+                [LMNetErrorView showNoSearchResultOnView:self.dataTableView];
             }
             else{
                 [LMNetErrorView hideDataResultOnView:self.dataTableView];

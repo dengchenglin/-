@@ -27,7 +27,12 @@ NSString *const CLRefreshKeyPathContentOffset = @"contentOffset";
         
         _refreshDistance = [CLRefreshManager shareInsatnce].config.refreshDistance;
         _originEdgeInsets = _scrollView.contentInset;
-        
+        if([_scrollView isKindOfClass:[UITableView class]]){
+            UITableView *tableView = (UITableView *)_scrollView;
+            tableView.estimatedRowHeight = 0;
+            tableView.estimatedSectionFooterHeight = 0;
+            tableView.estimatedSectionHeaderHeight = 0;
+        }
     }
     return self;
 }

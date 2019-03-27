@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -65,17 +65,17 @@
                     <rect key="frame" x="0.0" y="60" width="420" height="244"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VYN-c3-fvy">
-                            <rect key="frame" x="0.0" y="0.0" width="105" height="244"/>
+                            <rect key="frame" x="0.0" y="0.0" width="140" height="244"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_payment" translatesAutoresizingMaskIntoConstraints="NO" id="dZj-cm-UIM">
-                                    <rect key="frame" x="27.5" y="83" width="50" height="50"/>
+                                    <rect key="frame" x="45" y="83" width="50" height="50"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="50" id="GB5-2R-Z9q"/>
                                         <constraint firstAttribute="width" constant="50" id="Hp2-kM-y2x"/>
                                     </constraints>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="已付款" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eyx-YU-xOt">
-                                    <rect key="frame" x="34.5" y="141" width="37" height="14.5"/>
+                                    <rect key="frame" x="51.5" y="141" width="37" height="14.5"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                     <color key="textColor" red="0.078431372550000003" green="0.078431372550000003" blue="0.078431372550000003" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
@@ -90,17 +90,17 @@
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gdZ-bd-Pbo">
-                            <rect key="frame" x="105" y="0.0" width="105" height="244"/>
+                            <rect key="frame" x="140" y="0.0" width="140" height="244"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_already" translatesAutoresizingMaskIntoConstraints="NO" id="K3M-vK-8XW">
-                                    <rect key="frame" x="27.5" y="83" width="50" height="50"/>
+                                    <rect key="frame" x="45" y="83" width="50" height="50"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="50" id="1V4-4C-7qC"/>
                                         <constraint firstAttribute="width" constant="50" id="lRx-JO-fyp"/>
                                     </constraints>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="已结算" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kOP-Yc-jmc">
-                                    <rect key="frame" x="34.5" y="141" width="37" height="14.5"/>
+                                    <rect key="frame" x="51.5" y="141" width="37" height="14.5"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                     <color key="textColor" red="0.078431372550000003" green="0.078431372550000003" blue="0.078431372550000003" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
@@ -115,17 +115,17 @@
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ydp-Ae-oX4">
-                            <rect key="frame" x="210" y="0.0" width="105" height="244"/>
+                            <rect key="frame" x="280" y="0.0" width="140" height="244"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_lose_efficacy" translatesAutoresizingMaskIntoConstraints="NO" id="0BF-1d-Rh6">
-                                    <rect key="frame" x="27.5" y="83" width="50" height="50"/>
+                                    <rect key="frame" x="45" y="83" width="50" height="50"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="50" id="Efn-8g-sHk"/>
                                         <constraint firstAttribute="height" constant="50" id="oTO-Tu-A2g"/>
                                     </constraints>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="已失效" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y14-HJ-4ip">
-                                    <rect key="frame" x="34.5" y="141" width="37" height="14.5"/>
+                                    <rect key="frame" x="51.5" y="141" width="37" height="14.5"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                     <color key="textColor" red="0.078431372550000003" green="0.078431372550000003" blue="0.078431372550000003" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
@@ -139,50 +139,21 @@
                                 <constraint firstItem="Y14-HJ-4ip" firstAttribute="centerX" secondItem="Ydp-Ae-oX4" secondAttribute="centerX" id="lNX-AW-1T1"/>
                             </constraints>
                         </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hdf-x2-KoX">
-                            <rect key="frame" x="315" y="0.0" width="105" height="244"/>
-                            <subviews>
-                                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_refund" translatesAutoresizingMaskIntoConstraints="NO" id="gMo-lf-cbp">
-                                    <rect key="frame" x="27.5" y="83" width="50" height="50"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="50" id="pC2-lp-U6A"/>
-                                        <constraint firstAttribute="width" constant="50" id="xB0-fm-9nM"/>
-                                    </constraints>
-                                </imageView>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="退款/售后" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lul-Dq-FFn">
-                                    <rect key="frame" x="26.5" y="141" width="53.5" height="14.5"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                    <color key="textColor" red="0.078431372550000003" green="0.078431372550000003" blue="0.078431372550000003" alpha="1" colorSpace="calibratedRGB"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                            </subviews>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <constraints>
-                                <constraint firstItem="Lul-Dq-FFn" firstAttribute="centerX" secondItem="hdf-x2-KoX" secondAttribute="centerX" id="Tml-vX-1C5"/>
-                                <constraint firstItem="gMo-lf-cbp" firstAttribute="centerX" secondItem="hdf-x2-KoX" secondAttribute="centerX" id="ksi-pf-hgO"/>
-                                <constraint firstItem="Lul-Dq-FFn" firstAttribute="top" secondItem="gMo-lf-cbp" secondAttribute="bottom" constant="8" id="wcL-HK-J8W"/>
-                                <constraint firstItem="gMo-lf-cbp" firstAttribute="centerY" secondItem="hdf-x2-KoX" secondAttribute="centerY" constant="-14" id="zyn-tO-tPK"/>
-                            </constraints>
-                        </view>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="bottom" secondItem="Ydp-Ae-oX4" secondAttribute="bottom" id="4t4-q9-5cx"/>
                         <constraint firstItem="Ydp-Ae-oX4" firstAttribute="top" secondItem="N4P-UN-CyK" secondAttribute="top" id="9EI-0i-eKk"/>
                         <constraint firstItem="Ydp-Ae-oX4" firstAttribute="leading" secondItem="gdZ-bd-Pbo" secondAttribute="trailing" id="9fy-Uc-xSo"/>
-                        <constraint firstAttribute="bottom" secondItem="hdf-x2-KoX" secondAttribute="bottom" id="AzQ-nN-785"/>
                         <constraint firstItem="VYN-c3-fvy" firstAttribute="leading" secondItem="N4P-UN-CyK" secondAttribute="leading" id="F5d-9O-RFQ"/>
                         <constraint firstItem="Ydp-Ae-oX4" firstAttribute="width" secondItem="VYN-c3-fvy" secondAttribute="width" id="GJf-zQ-XEW"/>
                         <constraint firstItem="gdZ-bd-Pbo" firstAttribute="leading" secondItem="VYN-c3-fvy" secondAttribute="trailing" id="Jcn-7w-yHT"/>
                         <constraint firstAttribute="bottom" secondItem="gdZ-bd-Pbo" secondAttribute="bottom" id="M58-h8-vOY"/>
-                        <constraint firstAttribute="trailing" secondItem="hdf-x2-KoX" secondAttribute="trailing" id="OU2-3V-vau"/>
                         <constraint firstItem="VYN-c3-fvy" firstAttribute="top" secondItem="N4P-UN-CyK" secondAttribute="top" id="QiQ-Qg-IzD"/>
                         <constraint firstAttribute="bottom" secondItem="VYN-c3-fvy" secondAttribute="bottom" id="Qy3-ef-mGn"/>
                         <constraint firstItem="gdZ-bd-Pbo" firstAttribute="top" secondItem="N4P-UN-CyK" secondAttribute="top" id="cWl-D9-gWJ"/>
                         <constraint firstItem="gdZ-bd-Pbo" firstAttribute="width" secondItem="VYN-c3-fvy" secondAttribute="width" id="gjI-SW-iVU"/>
-                        <constraint firstItem="hdf-x2-KoX" firstAttribute="top" secondItem="N4P-UN-CyK" secondAttribute="top" id="nC2-rN-bVi"/>
-                        <constraint firstItem="hdf-x2-KoX" firstAttribute="width" secondItem="VYN-c3-fvy" secondAttribute="width" id="rsK-3D-0hJ"/>
-                        <constraint firstItem="hdf-x2-KoX" firstAttribute="leading" secondItem="Ydp-Ae-oX4" secondAttribute="trailing" id="sDe-iq-W6l"/>
+                        <constraint firstAttribute="trailing" secondItem="Ydp-Ae-oX4" secondAttribute="trailing" id="yyF-sl-oqD"/>
                     </constraints>
                 </view>
             </subviews>
@@ -202,7 +173,6 @@
                 <outlet property="disabledView" destination="Ydp-Ae-oX4" id="oXf-Gz-gtB"/>
                 <outlet property="lookMoreView" destination="QJu-bq-jo1" id="9Ah-3O-ur4"/>
                 <outlet property="payedView" destination="VYN-c3-fvy" id="rUh-ww-fSk"/>
-                <outlet property="refundView" destination="hdf-x2-KoX" id="dpQ-O5-VxJ"/>
             </connections>
             <point key="canvasLocation" x="16" y="-70"/>
         </view>
@@ -212,6 +182,5 @@
         <image name="ic_lose_efficacy" width="50" height="50"/>
         <image name="ic_more_gray" width="5" height="9"/>
         <image name="ic_payment" width="50" height="50"/>
-        <image name="ic_refund" width="50" height="50"/>
     </resources>
 </document>

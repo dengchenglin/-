@@ -12,6 +12,10 @@
 
 + (void)showNoDataResultOnView:(UIView *)view;
 
++ (void)showNoSearchResultOnView:(UIView *)view;
+
++ (void)showNoOrderResultOnView:(UIView *)view;
+
 + (void)showNoDataResultOnView:(UIView *)view frame:(CGRect)frame;
 
 + (void)showNoNetErrorResultOnView:(UIView *)view clickRefreshBlock:(void(^)(void))clickRefreshBlock;
@@ -35,4 +39,10 @@
 
 @interface LMNoQuestionView:LMDataResultView
 
+@end
+@interface LMNoResultView: LMDataResultView
+
+@end
+
+@interface LMNoOrderView:LMDataResultView
 @end

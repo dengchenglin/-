@@ -18,17 +18,17 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pbt-JV-dBr">
                     <rect key="frame" x="0.0" y="0.0" width="423" height="446"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="search_empty_expression_image" translatesAutoresizingMaskIntoConstraints="NO" id="3zn-l9-6BN">
-                            <rect key="frame" x="91.5" y="89" width="240" height="128"/>
+                        <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pic_search_holder" translatesAutoresizingMaskIntoConstraints="NO" id="3zn-l9-6BN">
+                            <rect key="frame" x="91.5" y="109" width="240" height="128"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="128" id="1Xs-KP-E5e"/>
                                 <constraint firstAttribute="width" constant="240" id="jSr-eG-WgJ"/>
                             </constraints>
                         </imageView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="空空如也~" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eUP-2U-RxT">
-                            <rect key="frame" x="172" y="257" width="79" height="22"/>
-                            <fontDescription key="fontDescription" name="KannadaSangamMN" family="Kannada Sangam MN" pointSize="17"/>
-                            <color key="textColor" red="0.36058937819999998" green="0.36058937819999998" blue="0.36058937819999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="找不到该商品的优惠券哦" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eUP-2U-RxT">
+                            <rect key="frame" x="134.5" y="257" width="154" height="20"/>
+                            <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="14"/>
+                            <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
@@ -36,8 +36,8 @@
                     <constraints>
                         <constraint firstItem="3zn-l9-6BN" firstAttribute="centerX" secondItem="pbt-JV-dBr" secondAttribute="centerX" id="49q-p4-IXY"/>
                         <constraint firstItem="eUP-2U-RxT" firstAttribute="centerX" secondItem="pbt-JV-dBr" secondAttribute="centerX" id="Mwk-oH-iJ0"/>
-                        <constraint firstItem="eUP-2U-RxT" firstAttribute="top" secondItem="3zn-l9-6BN" secondAttribute="bottom" constant="40" id="efj-9K-quZ"/>
-                        <constraint firstItem="3zn-l9-6BN" firstAttribute="centerY" secondItem="pbt-JV-dBr" secondAttribute="centerY" constant="-70" id="lT1-dk-KoD"/>
+                        <constraint firstItem="eUP-2U-RxT" firstAttribute="top" secondItem="3zn-l9-6BN" secondAttribute="bottom" constant="20" id="efj-9K-quZ"/>
+                        <constraint firstItem="3zn-l9-6BN" firstAttribute="centerY" secondItem="pbt-JV-dBr" secondAttribute="centerY" constant="-50" id="lT1-dk-KoD"/>
                     </constraints>
                 </view>
             </subviews>
@@ -53,6 +53,6 @@
         </view>
     </objects>
     <resources>
-        <image name="search_empty_expression_image" width="212" height="156"/>
+        <image name="pic_search_holder" width="240" height="240"/>
     </resources>
 </document>

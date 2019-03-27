@@ -34,12 +34,11 @@
     return _searchBar;
 }
 
-
 - (void)setUpUI{
     self.title = @"常见问题";
      self.navigationBarStyle = CTNavigationBarWhite;
-    [self.view addSubview:self.searchBar];
     [self.view addSubview:self.tableView];
+    [self.view addSubview:self.searchBar];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass(CTQuestionListCell.class) bundle:nil] forCellReuseIdentifier:NSStringFromClass(CTQuestionListCell.class)];
 }
@@ -48,8 +47,8 @@
         make.left.top.right.mas_equalTo(0);
         make.height.mas_equalTo(40);
     }];
-    [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(self.searchBar.mas_bottom);
+    [self.tableView mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(40);
         make.left.right.bottom.mas_equalTo(0);
         
     }];
@@ -59,6 +58,7 @@
     @weakify(self)
     [self.searchBar setSearchBlock:^(NSString *keyword) {
         @strongify(self)
+        [self.view endEditing:YES];
         [self request];
     }];
 }

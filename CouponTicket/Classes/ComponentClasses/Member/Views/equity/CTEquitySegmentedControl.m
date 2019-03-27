@@ -39,13 +39,9 @@ ViewInstance(setUp)
 }
 
 
-- (void)setLevel:(CTMemberLevel)level{
-    _level = level;
-    if(_level < 1)_level = 1;
-    NSArray *titles = @[@"优券小生",@"优券导师",@"优券大咖",@"优券合伙人"];
-    _titles = [titles subarrayWithRange:NSMakeRange(0, _level)];
-    
-    _segmentedControl.titles = _titles;
+- (void)setTitles:(NSArray<NSString *> *)titles{
+    _titles = titles;
+    _segmentedControl.titles = titles;
 }
 
 - (void)scrollToIndex:(NSInteger)index{
