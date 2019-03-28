@@ -8,6 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
+typedef NS_ENUM(NSInteger,CTLinkType) {
+    CTLinkWeb = 1,
+    CTLinkGoodsDetail
+};
+
 @interface CTActivityModel : NSObject
 
 @property (nonatomic, copy) NSString *uid;
@@ -16,6 +21,8 @@
 
 @property (nonatomic, copy) NSString *img;
 
-@property (nonatomic, copy) NSString *url;
+@property (nonatomic, copy) NSString *href;
+
+@property (nonatomic, assign) CTLinkType link_type;
 
 @end

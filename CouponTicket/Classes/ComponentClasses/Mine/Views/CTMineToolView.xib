@@ -35,43 +35,8 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jf7-Te-RzY">
                     <rect key="frame" x="0.0" y="60" width="376" height="277"/>
                     <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vfu-ZJ-FtU">
-                            <rect key="frame" x="0.0" y="0.0" width="376" height="46"/>
-                            <subviews>
-                                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_invite" translatesAutoresizingMaskIntoConstraints="NO" id="Gtz-20-UYQ">
-                                    <rect key="frame" x="25" y="8.5" width="30" height="30"/>
-                                    <constraints>
-                                        <constraint firstAttribute="width" constant="30" id="0nI-gw-LZO"/>
-                                        <constraint firstAttribute="height" constant="30" id="EUE-hM-dDX"/>
-                                    </constraints>
-                                </imageView>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="邀请券友" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MVG-QO-AfO">
-                                    <rect key="frame" x="67" y="15" width="53.5" height="16"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                    <color key="textColor" red="0.078431372550000003" green="0.078431372550000003" blue="0.078431372550000003" alpha="1" colorSpace="calibratedRGB"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_more_black" translatesAutoresizingMaskIntoConstraints="NO" id="qa6-i1-OxO">
-                                    <rect key="frame" x="336" y="15.5" width="15" height="15"/>
-                                    <constraints>
-                                        <constraint firstAttribute="width" constant="15" id="lqS-r5-m7b"/>
-                                        <constraint firstAttribute="height" constant="15" id="ojw-6E-LMH"/>
-                                    </constraints>
-                                </imageView>
-                            </subviews>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <constraints>
-                                <constraint firstItem="qa6-i1-OxO" firstAttribute="centerY" secondItem="Vfu-ZJ-FtU" secondAttribute="centerY" id="DdE-36-fuC"/>
-                                <constraint firstItem="MVG-QO-AfO" firstAttribute="leading" secondItem="Gtz-20-UYQ" secondAttribute="trailing" constant="12" id="SFm-k8-tTl"/>
-                                <constraint firstItem="Gtz-20-UYQ" firstAttribute="leading" secondItem="Vfu-ZJ-FtU" secondAttribute="leading" constant="25" id="Tts-oB-Naa"/>
-                                <constraint firstItem="Gtz-20-UYQ" firstAttribute="centerY" secondItem="Vfu-ZJ-FtU" secondAttribute="centerY" id="U9I-zx-9cc"/>
-                                <constraint firstItem="MVG-QO-AfO" firstAttribute="centerY" secondItem="Vfu-ZJ-FtU" secondAttribute="centerY" id="Yxd-pW-lok"/>
-                                <constraint firstAttribute="height" constant="46" id="fVN-ZX-VAD"/>
-                                <constraint firstAttribute="trailing" secondItem="qa6-i1-OxO" secondAttribute="trailing" constant="25" id="oBb-pg-IIH"/>
-                            </constraints>
-                        </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oCX-eE-0db">
-                            <rect key="frame" x="0.0" y="46" width="376" height="46"/>
+                            <rect key="frame" x="0.0" y="0.0" width="376" height="46"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_my_team" translatesAutoresizingMaskIntoConstraints="NO" id="hp9-wf-WdN">
                                     <rect key="frame" x="25" y="8.5" width="30" height="30"/>
@@ -106,7 +71,7 @@
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PGr-n0-V0I">
-                            <rect key="frame" x="0.0" y="92" width="376" height="46"/>
+                            <rect key="frame" x="0.0" y="46" width="376" height="46"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_my_collect" translatesAutoresizingMaskIntoConstraints="NO" id="MXK-gk-F18">
                                     <rect key="frame" x="25" y="8.5" width="30" height="30"/>
@@ -141,7 +106,7 @@
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Sh-Kd-8YC">
-                            <rect key="frame" x="0.0" y="138" width="376" height="46"/>
+                            <rect key="frame" x="0.0" y="92" width="376" height="46"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_my_coupon" translatesAutoresizingMaskIntoConstraints="NO" id="8VV-tB-4eO">
                                     <rect key="frame" x="25" y="8.5" width="30" height="30"/>
@@ -176,7 +141,7 @@
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WWx-nB-gDy">
-                            <rect key="frame" x="0.0" y="184" width="376" height="46"/>
+                            <rect key="frame" x="0.0" y="138" width="376" height="46"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_Invitation_code" translatesAutoresizingMaskIntoConstraints="NO" id="nFX-6e-8oh">
                                     <rect key="frame" x="25" y="8.5" width="30" height="30"/>
@@ -211,7 +176,7 @@
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kBP-XB-oSU">
-                            <rect key="frame" x="0.0" y="230" width="376" height="46"/>
+                            <rect key="frame" x="0.0" y="184" width="376" height="46"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_faq" translatesAutoresizingMaskIntoConstraints="NO" id="2Lh-lW-ajU">
                                     <rect key="frame" x="25" y="8.5" width="30" height="30"/>
@@ -248,14 +213,12 @@
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstItem="oCX-eE-0db" firstAttribute="top" secondItem="Vfu-ZJ-FtU" secondAttribute="bottom" id="0Yd-0K-6q4"/>
                         <constraint firstItem="1Sh-Kd-8YC" firstAttribute="top" secondItem="PGr-n0-V0I" secondAttribute="bottom" id="2Td-hy-VFh"/>
+                        <constraint firstItem="oCX-eE-0db" firstAttribute="top" secondItem="jf7-Te-RzY" secondAttribute="top" id="C6W-ag-ieU"/>
                         <constraint firstAttribute="trailing" secondItem="1Sh-Kd-8YC" secondAttribute="trailing" id="KKS-zJ-5ZW"/>
                         <constraint firstItem="kBP-XB-oSU" firstAttribute="leading" secondItem="jf7-Te-RzY" secondAttribute="leading" id="NbV-EP-5n7"/>
                         <constraint firstItem="1Sh-Kd-8YC" firstAttribute="leading" secondItem="jf7-Te-RzY" secondAttribute="leading" id="PUZ-4R-z1i"/>
-                        <constraint firstItem="Vfu-ZJ-FtU" firstAttribute="top" secondItem="jf7-Te-RzY" secondAttribute="top" id="Pch-JA-Env"/>
                         <constraint firstAttribute="trailing" secondItem="kBP-XB-oSU" secondAttribute="trailing" id="S63-71-WXF"/>
-                        <constraint firstAttribute="trailing" secondItem="Vfu-ZJ-FtU" secondAttribute="trailing" id="S7W-Ig-hkq"/>
                         <constraint firstItem="WWx-nB-gDy" firstAttribute="top" secondItem="1Sh-Kd-8YC" secondAttribute="bottom" id="UJw-Vo-a2v"/>
                         <constraint firstAttribute="trailing" secondItem="WWx-nB-gDy" secondAttribute="trailing" id="V7s-nq-ldA"/>
                         <constraint firstItem="WWx-nB-gDy" firstAttribute="leading" secondItem="jf7-Te-RzY" secondAttribute="leading" id="c0N-4A-VeN"/>
@@ -264,7 +227,6 @@
                         <constraint firstAttribute="trailing" secondItem="oCX-eE-0db" secondAttribute="trailing" id="ghh-m1-RON"/>
                         <constraint firstItem="oCX-eE-0db" firstAttribute="leading" secondItem="jf7-Te-RzY" secondAttribute="leading" id="hIK-lF-s6N"/>
                         <constraint firstItem="PGr-n0-V0I" firstAttribute="leading" secondItem="jf7-Te-RzY" secondAttribute="leading" id="q1p-v7-ouO"/>
-                        <constraint firstItem="Vfu-ZJ-FtU" firstAttribute="leading" secondItem="jf7-Te-RzY" secondAttribute="leading" id="sR1-bP-V1W"/>
                         <constraint firstItem="kBP-XB-oSU" firstAttribute="top" secondItem="WWx-nB-gDy" secondAttribute="bottom" id="wZS-ec-wNX"/>
                     </constraints>
                 </view>
@@ -284,17 +246,15 @@
                 <outlet property="collectView" destination="PGr-n0-V0I" id="75D-sP-tdI"/>
                 <outlet property="guideView" destination="1Sh-Kd-8YC" id="zuf-JP-gS9"/>
                 <outlet property="inviteCodeView" destination="WWx-nB-gDy" id="Ok3-7N-3Nw"/>
-                <outlet property="inviteView" destination="Vfu-ZJ-FtU" id="GRd-Ds-puB"/>
                 <outlet property="questionView" destination="kBP-XB-oSU" id="cL6-Dd-F5X"/>
                 <outlet property="teamView" destination="oCX-eE-0db" id="X9D-uI-amc"/>
             </connections>
-            <point key="canvasLocation" x="-237" y="-44.5"/>
+            <point key="canvasLocation" x="-88" y="-41"/>
         </view>
     </objects>
     <resources>
         <image name="ic_Invitation_code" width="17" height="17"/>
         <image name="ic_faq" width="17" height="17"/>
-        <image name="ic_invite" width="17" height="17"/>
         <image name="ic_more_black" width="5" height="9"/>
         <image name="ic_my_collect" width="17" height="17"/>
         <image name="ic_my_coupon" width="17" height="17"/>

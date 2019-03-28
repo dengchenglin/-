@@ -155,8 +155,8 @@
             self.equityView.models = self.model.user_rebate;
             self.privilegeView.models = self.model.grade_power;
             self.upgradeView.containerView.titleLabel.text = self.model.upgrade_condition.txt1;
-            self.upgradeView.containerView.mainConditionLabel.text = self.model.upgrade_condition.txt1;
-            self.upgradeView.containerView.subConditionLabel.text = self.model.upgrade_condition.txt1;
+            self.upgradeView.containerView.mainConditionLabel.text = self.model.upgrade_condition.txt2;
+            self.upgradeView.containerView.subConditionLabel.text = self.model.upgrade_condition.txt3;
             dispatch_async(dispatch_get_main_queue(), ^{
                 [self reloadView];
             });

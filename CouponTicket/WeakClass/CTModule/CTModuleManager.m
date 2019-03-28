@@ -101,4 +101,6 @@
 + (id)userInfoService{
     return [CLModuleManager moduleServiceInstanceForProtocol:@protocol(CTUserInfoServiceProtocol)];
 }
+
+
 @end

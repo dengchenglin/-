@@ -212,11 +212,11 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1aD-Uq-2w2">
-                    <rect key="frame" x="139" y="515" width="130" height="20"/>
+                    <rect key="frame" x="139" y="523" width="130" height="20"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Gge-uI-Xeg">
                             <rect key="frame" x="0.0" y="9.5" width="43.5" height="1"/>
-                            <color key="backgroundColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="1" id="kKD-LP-4hg"/>
                             </constraints>
@@ -227,9 +227,9 @@
                             <color key="textColor" red="0.81176470588235294" green="0.81176470588235294" blue="0.81176470588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Kjy-aP-9xd">
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Kjy-aP-9xd">
                             <rect key="frame" x="86.5" y="9.5" width="43.5" height="1"/>
-                            <color key="backgroundColor" red="0.81176470590000005" green="0.81176470590000005" blue="0.81176470590000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="1" id="Kjy-o3-BVe"/>
                             </constraints>
@@ -262,7 +262,7 @@
                 <constraint firstItem="8u5-hy-fIB" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="NKQ-Tj-bg9"/>
                 <constraint firstItem="sqK-H1-g7r" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Pef-ut-GeZ"/>
                 <constraint firstItem="sqK-H1-g7r" firstAttribute="top" secondItem="Pax-Mz-rRu" secondAttribute="bottom" constant="12" id="ZOi-o4-DuW"/>
-                <constraint firstItem="1GY-Gg-kxr" firstAttribute="top" secondItem="1aD-Uq-2w2" secondAttribute="bottom" constant="28" id="Zrd-17-acE"/>
+                <constraint firstItem="1GY-Gg-kxr" firstAttribute="top" secondItem="1aD-Uq-2w2" secondAttribute="bottom" constant="20" id="Zrd-17-acE"/>
                 <constraint firstAttribute="trailing" secondItem="7Wa-0h-c9X" secondAttribute="trailing" constant="20" id="b0c-5C-RBc"/>
                 <constraint firstAttribute="trailing" secondItem="sqK-H1-g7r" secondAttribute="trailing" id="chS-Lv-daL"/>
                 <constraint firstItem="kky-tZ-j2n" firstAttribute="leading" secondItem="7Wa-0h-c9X" secondAttribute="leading" constant="2" id="jxt-f6-eYl"/>

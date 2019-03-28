@@ -136,6 +136,10 @@
         self.descView.viewModel = _viewModel;
         self.couponView.viewModel = _viewModel;
         self.buyView.viewModel = _viewModel;
+        
+        [self.couponView mas_updateConstraints:^(MASConstraintMaker *make) {
+            make.height.mas_equalTo(self.viewModel.model.show_coupon?127:0);
+        }];
     }
 }
 

@@ -43,4 +43,5 @@ NSString *GetTypeImageStr(NSInteger status);
 @property (nonatomic, copy) NSString *shop_url;
 @property (nonatomic, copy) NSString *coupon_end_time;
 @property (nonatomic, copy) NSString *coupon_share_url;
+@property (nonatomic, assign) BOOL show_coupon;
 @end

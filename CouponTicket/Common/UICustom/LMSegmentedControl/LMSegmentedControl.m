@@ -42,7 +42,6 @@
 
 ViewInstance(setUp)
 
-
 - (void)setUp{
     _containerView = [[UIView alloc]initWithFrame:self.bounds];
     [self addSubview:_containerView];

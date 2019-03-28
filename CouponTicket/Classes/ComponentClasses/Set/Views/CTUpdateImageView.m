@@ -10,6 +10,13 @@
 
 @implementation CTUpdateImageView
 
-
+- (void)awakeFromNib{
+    [super awakeFromNib];
+    @weakify(self)
+    [self.photosView setImageCountDidChangedBlock:^(NSInteger count) {
+            @strongify(self)
+        self.countDescLabel.text = [NSString stringWithFormat:@"(%zu/%lu)",count,(unsigned long)self.photosView.maxCount];
+    }];
+}
 
 @end
