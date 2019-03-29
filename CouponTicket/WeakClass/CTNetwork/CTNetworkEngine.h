@@ -12,7 +12,7 @@
 
 #define CT_API_DEVELOPER_BASE_URL @"http://www.youquan8888888.com"
 
-#define CT_API_PRODUCTION_BASE_URL "http://www.youquan8888888.com"
+#define CT_API_PRODUCTION_BASE_URL @"http://www.youquan8888888.com"
 
 #ifdef DEBUG
 #define CT_API_BASE_URL  CT_API_DEVELOPER_BASE_URL

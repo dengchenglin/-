@@ -21,6 +21,7 @@
     _priceLabel.text  = _viewModel.model.alipay_total_price;
     _rebateDescLabel.text = [NSString stringWithFormat:@"奖励金%@元",_viewModel.model.money];
     [_userheadImageView sd_setImageWithURL:[NSURL URLWithString:_viewModel.model.headimg]];
+    _rebateDescLabel.hidden = !_viewModel.model.money.length;
 }
 
 @end
