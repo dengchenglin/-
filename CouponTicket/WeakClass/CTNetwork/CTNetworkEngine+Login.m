@@ -69,6 +69,13 @@ NSString * GetSendCodeStr(CTSendCodeType type){
     [params setValue:phone forKey:@"phone"];
     return [self postWithPath:CTLogin(@"check_phone") params:params callback:callback];
 }
+
+- (CLRequest *)checkPhoneWithPhone:(NSString *)phone showErrorHud:(BOOL)showErrorHud callback:(CTResponseBlock)callback{
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    [params setValue:phone forKey:@"phone"];
+    return [self postWithPath:CTLogin(@"check_phone") params:params showHud:YES showErrorHud:showErrorHud callback:callback];
+}
+
 //修改密码
 - (CLRequest *)resetPwdWithPhone:(NSString *)phone pwd:(NSString *)pwd smsCode:(NSString *)smsCode callback:(CTResponseBlock)callback{
     NSMutableDictionary *params = [NSMutableDictionary dictionary];

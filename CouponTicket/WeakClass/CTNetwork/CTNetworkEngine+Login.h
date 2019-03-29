@@ -36,6 +36,9 @@ NSString * GetSendCodeStr(CTSendCodeType type);
 
 //检查手机号是否注册
 - (CLRequest *)checkPhoneWithPhone:(NSString *)phone callback:(CTResponseBlock)callback;
+- (CLRequest *)checkPhoneWithPhone:(NSString *)phone showErrorHud:(BOOL)showErrorHud callback:(CTResponseBlock)callback;
+
+
 //修改密码
 - (CLRequest *)resetPwdWithPhone:(NSString *)phone pwd:(NSString *)pwd smsCode:(NSString *)smsCode callback:(CTResponseBlock)callback;
 //校验验证码

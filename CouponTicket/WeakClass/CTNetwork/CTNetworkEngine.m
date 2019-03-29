@@ -115,7 +115,7 @@ static const int request_vc_key;
             }
             else if (status == 401){
                 NSString *info = responseObject[@"info"];
-                if(info.length){
+                if(info.length && showErrorHud){
                     [MBProgressHUD showMBProgressHudWithTitle:info];
                 }
                 [CTAppManager logout];
@@ -123,7 +123,7 @@ static const int request_vc_key;
             }
             else{
                 NSString *info = responseObject[@"info"];
-                if(info.length){
+                if(info.length && showErrorHud){
                     [MBProgressHUD showMBProgressHudWithTitle:info];
                 }
                 if(callback){

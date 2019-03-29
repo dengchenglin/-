@@ -87,7 +87,7 @@
             [MBProgressHUD showMBProgressHudWithTitle:@"手机格式不正确"];
             return ;
         }
-        [CTRequest checkPhoneWithPhone:self.viewModel.mobile callback:^(id data, CLRequest *request, CTNetError error) {
+        [CTRequest checkIvcodeOrPhoneWithIvCode:self.viewModel.inviteCode phone:self.viewModel.mobile callback:^(id data, CLRequest *request, CTNetError error) {
             if(!error){
                 CTGetCodeViewController *vc = [CTGetCodeViewController new];
                 vc.mobile = self.viewModel.mobile.wipSpace;
@@ -97,7 +97,10 @@
                 [self.navigationController pushViewController:vc animated:YES];
             }
             else{
-                [[[UIAlertView alloc]initWithTitle:@"该账号已被注册，请选择“老用户绑定”" message:nil delegate:nil cancelButtonTitle:nil otherButtonTitles:@"知道了", nil] show];
+               NSInteger status = [data[@"status"] integerValue];
+                if(status == 102){
+                        [[[UIAlertView alloc]initWithTitle:@"该账号已被注册，请选择“老用户绑定”" message:nil delegate:nil cancelButtonTitle:nil otherButtonTitles:@"知道了", nil] show];
+                }
             }
         }];
 
@@ -152,7 +155,7 @@
             [MBProgressHUD showMBProgressHudWithTitle:@"手机格式不正确"];
             return ;
         }
-        [CTRequest checkPhoneWithPhone:self.viewModel.mobile callback:^(id data, CLRequest *request, CTNetError error) {
+        [CTRequest checkPhoneWithPhone:self.viewModel.mobile showErrorHud:NO callback:^(id data, CLRequest *request, CTNetError error) {
             if(error){
                 CTGetCodeViewController *vc = [CTGetCodeViewController new];;
                 vc.mobile = self.viewModel.mobile;
