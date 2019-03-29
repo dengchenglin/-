@@ -110,6 +110,8 @@
 	</dict>
 	<key>NSCameraUsageDescription</key>
 	<string>是否允许访问你的相机上传图片或扫码?</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>App需要访问麦克风，用于录音并发送语音消息。</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
 	<string>允许添加图片到您的相册？</string>
 	<key>NSPhotoLibraryUsageDescription</key>

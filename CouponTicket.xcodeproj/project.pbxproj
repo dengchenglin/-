@@ -4245,7 +4245,7 @@
 				GCC_PREFIX_HEADER = "$(SRCROOT)/CouponTicket/SystemConfigs/CTPrefixHeader.pch";
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = NO;
 				INFOPLIST_FILE = "$(SRCROOT)/CouponTicket/SystemConfigs/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -4333,7 +4333,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "ca772441-6872-4b13-bf12-3b01e0ed047d";
 				PROVISIONING_PROFILE_SPECIFIER = distribution;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -4361,7 +4361,7 @@
 				GCC_PREFIX_HEADER = "$(SRCROOT)/CouponTicket/SystemConfigs/CTPrefixHeader.pch";
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = NO;
 				INFOPLIST_FILE = "$(SRCROOT)/CouponTicket/SystemConfigs/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -4449,7 +4449,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "ca772441-6872-4b13-bf12-3b01e0ed047d";
 				PROVISIONING_PROFILE_SPECIFIER = distribution;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
