@@ -22,6 +22,5 @@
 
 - (void)pushBoundAlipayFromViewController:(UIViewController *)viewController completed:(void(^)(void))completed;
 
-
 - (void)judgeLoginWithViewController:(UIViewController *)viewController completed:(void(^)(void))completed;
 @end

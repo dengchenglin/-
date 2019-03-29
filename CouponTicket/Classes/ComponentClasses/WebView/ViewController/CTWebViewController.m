@@ -53,10 +53,12 @@
     if(URL){
         [MBProgressHUD showMBProgressHudOnView:self.view];
         [_webView loadRequest:[NSURLRequest requestWithURL:URL]];
+        DBLog(@"url is %@",_url);
     }
     if(_htmlString){
         [MBProgressHUD showMBProgressHudOnView:self.view];
         [_webView loadHTMLString:_htmlString baseURL:nil];
+        DBLog(@"htmlStr is %@",_htmlString);
     }
 }
 

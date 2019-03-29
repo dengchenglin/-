@@ -24,7 +24,6 @@
 
 #import "CTNetworkEngine+Index.h"
 
-
 @interface CTHomeViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic, strong) UITableView *tableView;
@@ -207,8 +206,7 @@
     //轮播
     [self.bannerView setClickItemBlock:^(NSInteger index) {
         @strongify(self)
-        UIViewController *vc = [[CTModuleManager webService] pushWebFromViewController:self url:self.viewModel.model.advs[index].url];
-        vc.title = self.viewModel.model.advs[index].title;
+        [CTModuleHelper showCtVcFromViewController:self model:self.viewModel.model.advs[index]];
     }];
     //活动数据
     [self.advertView addActionWithBlock:^(id target) {

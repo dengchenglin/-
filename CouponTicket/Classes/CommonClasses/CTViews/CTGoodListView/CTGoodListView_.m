@@ -9,8 +9,8 @@
 #import "CTGoodListView_.h"
 
 @interface CTGoodListView_()
-@property (weak, nonatomic) IBOutlet UIImageView *couponBgView;
 
+@property (weak, nonatomic) IBOutlet UIImageView *couponBgView;
 
 @end
 
@@ -39,6 +39,7 @@
     _upgradeView.hidden = !_viewModel.model.upgrade_money.length;
     _statusImageView.hidden = !_viewModel.model.status;
     _salesView.hidden = !_viewModel.model.package_sale.length;
+    _couponView.hidden = !_viewModel.model.show_coupon;
 }
 
 @end

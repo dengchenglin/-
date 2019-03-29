@@ -149,6 +149,9 @@ ViewInstance(setUp)
     self.imgs = [self.imageItems map:^id(NSInteger index, LMPhotoImageItem *element) {
         return element.imgUrl;
     }];
+    if(self.imageCountDidChangedBlock){
+        self.imageCountDidChangedBlock(self.imgs.count);
+    }
 }
 
 - (void)reloadView{

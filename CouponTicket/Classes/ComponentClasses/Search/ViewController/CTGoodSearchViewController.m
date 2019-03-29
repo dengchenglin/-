@@ -118,6 +118,7 @@
     [CTRequest goodsSearchWithKeyword:keyword page:self.pageIndex size:self.pageSize order:order callback:^(id data, CLRequest *request, CTNetError error) {
         [self.dataTableView endRefreshing];
         [LMNetErrorView hideDataResultOnView:self.view];
+        [LMNetErrorView hideDataResultOnView:self.dataTableView];
         if(!error){
             if(!self.isLoadMore){
                 [self.dataSources removeAllObjects];
@@ -138,9 +139,7 @@
             if(!self.isLoadMore && self.dataSources.count == 0){
                 [LMNetErrorView showNoSearchResultOnView:self.dataTableView];
             }
-            else{
-                [LMNetErrorView hideDataResultOnView:self.dataTableView];
-            }
+
         }
         else{
             if(self.isLoadMore){
@@ -148,11 +147,8 @@
             }
             if(error == CTNetErrorNet && self.dataSources.count == 0){
                 [LMNetErrorView showNoNetErrorResultOnView:self.view clickRefreshBlock:^{
-                    [self request];
+                    [self searchKeyword:keyword order:order];
                 }];
-            }
-            else{
-                [LMNetErrorView hideDataResultOnView:self.view];
             }
         }
     }];

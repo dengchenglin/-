@@ -43,6 +43,7 @@
 - (void)request{
     NSString *qCodeUrl = [CTRequest qCodeUrl];
     [self.shareView.qrCodeImageView sd_setImageWithURL:[NSURL URLWithString:qCodeUrl]];
+    self.shareView.inviteCodeLabel.text = [NSString stringWithFormat:@"邀请码 %@",[CTAppManager user].iv_code];
 }
 
 - (void)autoLayout{

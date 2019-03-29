@@ -16,4 +16,6 @@
 
 #import "CTModuleManager.h"
 
+#import "CTModuleHelper.h"
+
 #endif /* CTModule_h */

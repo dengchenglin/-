@@ -69,7 +69,14 @@
 }
 - (void)request{
     [CTRequest goodsSearchWithKeyword:_keyword page:self.pageIndex size:self.pageSize order:GetGoodsOrderStr(self.sortView.currentType) callback:^(id data, CLRequest *request, CTNetError error) {
-        [self analysisAndReloadWithData:data error:error modelClass:CTGoodsModel.class viewModelClass:CTGoodsViewModel.class];
+        [self analysisAndReloadWithData:data error:error modelClass:CTGoodsModel.class viewModelClass:CTGoodsViewModel.class completed:^{
+             [LMNetErrorView hideDataResultOnView:self.tableView];
+            if(!error){
+                if(!self.isLoadMore && self.dataSources.count == 0){
+                    [LMNetErrorView showNoSearchResultOnView:self.tableView];
+                }
+            }
+        }];
     }];
 }
 

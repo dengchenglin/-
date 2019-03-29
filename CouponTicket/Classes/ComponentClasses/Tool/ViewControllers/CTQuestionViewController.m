@@ -29,6 +29,7 @@
 - (CTSearchBar *)searchBar{
     if(!_searchBar){
         _searchBar = NSMainBundleClass(CTSearchBar.class);
+        _searchBar.searchTfd.placeholder = @"请输入问题关键字";
         _searchBar.searchTfd.layer.cornerRadius = 5;
     }
     return _searchBar;

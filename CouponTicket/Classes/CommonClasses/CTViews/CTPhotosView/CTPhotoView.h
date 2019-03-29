@@ -22,4 +22,6 @@
 
 @property (nonatomic, assign) BOOL autoExtrusion;
 
+@property (nonatomic, copy) void(^imageCountDidChangedBlock) (NSInteger count);
+
 @end

@@ -176,7 +176,7 @@
     [self.containerView addConfig:^(CLSectionConfig *config) {
         @strongify(self)
         config.sectioView = self.toolView;
-        config.sectionHeight = 345;
+        config.sectionHeight = 299;
         config.space = 10;
     }];
 }

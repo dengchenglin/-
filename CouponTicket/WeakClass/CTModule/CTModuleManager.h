@@ -47,5 +47,4 @@
 
 + (id<CTUserInfoServiceProtocol>)userInfoService;
 
-
 @end
