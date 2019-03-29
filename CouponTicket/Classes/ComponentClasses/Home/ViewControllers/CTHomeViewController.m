@@ -172,7 +172,14 @@
         self.navView.activitys = self.viewModel.model.activity;
         self.spreeShopView.model = self.viewModel.model.cur_time_buy;
         self.salesView.model = self.viewModel.model.hot_goods;
-        
+        [self.advertView mas_updateConstraints:^(MASConstraintMaker *make) {
+            if(self.advertView.model){
+                 make.height.mas_equalTo(SCREEN_WIDTH/3.75);
+            }
+            else{
+                 make.height.mas_equalTo(0);
+            }
+        }];
         [self.spreeShopView mas_updateConstraints:^(MASConstraintMaker *make) {
             make.top.mas_equalTo(self.navView.mas_bottom).offset(self.viewModel.spreeHeight?10:0);
             make.height.mas_equalTo(self.viewModel.spreeHeight);
@@ -189,11 +196,15 @@
     [CTRequest indexWithCallback:^(id data, CLRequest *request, CTNetError error) {
         [self.tableView endRefreshing];
         if(!error){
-            CTHomeModel *model = [CTHomeModel yy_modelWithDictionary:data];
-            self.viewModel = [CTHomeViewModel bindModel:model];
-            [self reloadView];
+            [self reloadData:data];
         }
-    }];
+    } isCaches:NO];
+}
+
+- (void)reloadData:(id)data{
+    CTHomeModel *model = [CTHomeModel yy_modelWithDictionary:data];
+    self.viewModel = [CTHomeViewModel bindModel:model];
+    [self reloadView];
 }
 
 - (void)setUpEvent{

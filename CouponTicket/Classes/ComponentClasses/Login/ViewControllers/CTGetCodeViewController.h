@@ -14,6 +14,10 @@
 
 @property (nonatomic, copy) NSString *inviteCode;
 
+@property (nonatomic, copy) NSString *cashAccount;
+
+@property (nonatomic, copy) NSString *cashName;
+
 @property (nonatomic, strong) CTUMSocialUserInfoResponse *response;
 
 @property (nonatomic, assign) CTEventKind eventKind;

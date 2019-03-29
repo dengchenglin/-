@@ -8,6 +8,8 @@
 
 #import "CTAlipayBoundViewController.h"
 
+#import "CTGetCodeViewController.h"
+
 #import "CTAlipayBoundView.h"
 
 #import "CTAlipayBoundViewModel.h"

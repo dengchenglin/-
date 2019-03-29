@@ -13,11 +13,11 @@
 
 @implementation CTNetworkEngine (Index)
 
-- (CLRequest *)indexWithCallback:(CTResponseBlock)callback{
+- (CLRequest *)indexWithCallback:(CTResponseBlock)callback isCaches:(BOOL)isCaches{
     NSString *cachesPath = CLDocumentPath(@"home_index");
     
     NSDictionary *cachesData = [[NSDictionary alloc]initWithContentsOfFile:cachesPath];
-    if(callback && cachesData){
+    if(callback && cachesData && isCaches){
         callback(cachesData,nil,0);
     }
     return  [self postWithPath:CTIndex(@"index") params:nil showHud:cachesData?NO:YES callback:^(id data, CLRequest *request, CTNetError error) {

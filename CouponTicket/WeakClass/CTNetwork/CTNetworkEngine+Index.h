@@ -11,7 +11,7 @@
 @interface CTNetworkEngine (Index)
 
 //首页数据
-- (CLRequest *)indexWithCallback:(CTResponseBlock)callback;
+- (CLRequest *)indexWithCallback:(CTResponseBlock)callback isCaches:(BOOL)isCaches;
 //当前整点抢购
 - (CLRequest *)curTimeBuyWithTime:(NSString *)time callback:(CTResponseBlock)callback;
 //二级分类

@@ -106,7 +106,7 @@
                 [self request];
             }];
         }
-    }];
+    } isCaches:YES];
 
 }
 

@@ -49,6 +49,11 @@
     if(_eventKind == CTEventKindWithDraw){
         self.getCodeView.nextButton.layer.cornerRadius = 23;
     }
+    if(_eventKind == CTEventKindBindAlipay){
+        self.getCodeView.phoneTfd.userInteractionEnabled = NO;
+        self.getCodeView.phoneTfd.text = [CTAppManager user].phone;
+        [self.getCodeView.nextButton setTitle:@"绑定" forState:UIControlStateNormal];
+    }
     if(_eventKind == CTEventKindQQBind || _eventKind == CTEventKindWechatBind){
         [self.getCodeView.nextButton setTitle:@"绑定" forState:UIControlStateNormal];
     }
@@ -90,6 +95,9 @@
                 }
             }];
         }
+        else if (self.eventKind == CTEventKindBindAlipay){
+            
+        }
         else{
             [CTRequest checkSmsCodeWithPhone:self.viewModel.mobile smsCode:self.viewModel.code callback:^(id data, CLRequest *request, CTNetError error) {
                 if(error){
@@ -108,6 +116,10 @@
             }];
         }
     }];
+    
+}
+
+- (void)bindApliay{
     
 }
 
