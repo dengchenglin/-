@@ -18,5 +18,5 @@
 @interface CTWithDrawInputView : UIView
 @property (weak, nonatomic) IBOutlet CTWithdrawTextField *moneyTextField;
 @property (weak, nonatomic) IBOutlet UILabel *balanceNoticeLabel;
-@property (nonatomic, copy) void (^withDrawActionBlock)(void);
+@property (nonatomic, copy) void (^withDrawAllBlock)(void);
 @end

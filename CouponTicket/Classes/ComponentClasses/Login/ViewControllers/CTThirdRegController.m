@@ -73,7 +73,7 @@
         @strongify(self)
         [QCodeHelper showQcodeFromViewController:self discernCallback:^(NSString *result) {
             @strongify(self)
-            self.registerView.inviteCodeTfd.text = result;
+             self.registerView.inviteCodeTfd.text = [RegalurUtil jiexi:@"iv_code" webaddress:result];
         }];
     }];
     //下一步

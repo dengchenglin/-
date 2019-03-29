@@ -30,6 +30,9 @@ NSString *GetEventTitleStr(CTEventKind eventKind){
         case CTEventKindWithDraw:
             return @"设置提现密码";
             break;
+        case CTEventKindBindAlipay:
+            return @"支付账号绑定";
+            break;
         default:
             break;
     }
@@ -57,6 +60,9 @@ CTSendCodeType GetSendCodeStrForEventKind(CTEventKind eventKind){
             return CTSendCodeResetpwd;
             break;
         case CTEventKindWithDraw:
+            return CTSendCodeResetinfo;
+            break;
+        case CTEventKindBindAlipay:
             return CTSendCodeResetinfo;
             break;
         default:

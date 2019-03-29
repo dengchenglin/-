@@ -67,19 +67,16 @@
     SGQRCodeObtainConfigure *configure = [SGQRCodeObtainConfigure QRCodeObtainConfigure];
     configure.sampleBufferDelegate = YES;
     [obtain establishQRCodeObtainScanWithController:self configure:configure];
+    @weakify(self)
     [obtain setBlockWithQRCodeObtainScanResult:^(SGQRCodeObtain *obtain, NSString *result) {
         if (result) {
-            [MBProgressHUD showMBProgressHudWithTitle:@"正在处理..." hideAfterDelay:10.0];
             [obtain stopRunning];
             [obtain playSoundName:@"SGQRCode.bundle/sound.caf"];
-            
-//            ScanSuccessJumpVC *jumpVC = [[ScanSuccessJumpVC alloc] init];
-//            jumpVC.comeFromVC = ScanSuccessJumpComeFromWC;
-//            jumpVC.jump_URL = result;
-//            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-//                [MBProgressHUD hideHUDForView:weakSelf.view animated:YES];
-//                [weakSelf.navigationController pushViewController:jumpVC animated:YES];
-//            });
+            @strongify(self)
+            if(self.discernCallback){
+                self.discernCallback(result);
+                [self back];
+            }
         }
     }];
     [obtain setBlockWithQRCodeObtainScanBrightness:^(SGQRCodeObtain *obtain, CGFloat brightness) {

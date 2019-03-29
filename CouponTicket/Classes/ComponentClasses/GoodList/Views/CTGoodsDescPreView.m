@@ -18,6 +18,7 @@
      _titleLabel.text = [NSString stringWithFormat:@"%@",_viewModel.model.goods_title];
     _priceLabel.text = _viewModel.model.coupon_price;
     _originPriceLabel.text = _viewModel.model.market_price;
-    _couponLabel.text = _viewModel.model.coupon_price;
+    _couponLabel.text = _viewModel.model.coupon_text;
+    _couponView.hidden = !_viewModel.model.coupon_text.length;
 }
 @end

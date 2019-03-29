@@ -98,35 +98,5 @@ SINGLETON_FOR_CLASS_IMP(CTAppManager)
 @end
 @implementation CTUser
 
-- (void)setPay_pwd:(NSString *)pay_pwd{
-    if(_pay_pwd != pay_pwd){
-        _pay_pwd = pay_pwd;
-    }
-    NSString *key = @"pay_pwd";
-    NSString *cachesPay_pwd = [CTAppManager valueForUserInfoWithKey:key];
-    if(![cachesPay_pwd isEqualToString:pay_pwd]){
-        [CTAppManager updateUserInfoValue:_pay_pwd key:key];
-    }
-}
-- (void)setPay_name:(NSString *)pay_name{
-    if(_pay_name != pay_name){
-        _pay_name = pay_name;
-    }
-    NSString *key = @"pay_name";
-    NSString *cachesPay_name = [CTAppManager valueForUserInfoWithKey:key];
-    if(![cachesPay_name isEqualToString:pay_name]){
-        [CTAppManager updateUserInfoValue:_pay_name key:key];
-    }
-}
-- (void)setPay_account:(NSString *)pay_account{
-    if(_pay_account != pay_account){
-        _pay_account = pay_account;
-    }
-    NSString *key = @"pay_account";
-    NSString *cachesPay_account = [CTAppManager valueForUserInfoWithKey:key];
-    if(![cachesPay_account isEqualToString:pay_account]){
-        [CTAppManager updateUserInfoValue:_pay_account key:key];
-    }
-}
 
 @end

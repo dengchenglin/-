@@ -31,8 +31,8 @@
         return;
     }
     self.moneyTextField.text = [CTAppManager user].money;
-    if(self.withDrawActionBlock){
-        self.withDrawActionBlock();
+    if(self.withDrawAllBlock){
+        self.withDrawAllBlock();
     }
 }
 

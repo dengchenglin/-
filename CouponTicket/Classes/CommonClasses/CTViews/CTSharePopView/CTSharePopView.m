@@ -88,8 +88,10 @@ ViewInstance(setUp)
         if(index == 2){
             [MBProgressHUD showHUDAddedTo:[UIApplication sharedApplication].keyWindow animated:YES];
             [self.image saveToPhotosWithCompleted:^(BOOL success) {
-                [MBProgressHUD hideHUDForView:[UIApplication sharedApplication].keyWindow animated:YES];
-                [MBProgressHUD showMBProgressHudWithTitle:success?@"保存成功":@"保存失败"];
+                if(success){
+                   [MBProgressHUD hideHUDForView:[UIApplication sharedApplication].keyWindow animated:YES];
+                    [MBProgressHUD showMBProgressHudWithTitle:@"保存成功"];
+                }
             }];
         }
 

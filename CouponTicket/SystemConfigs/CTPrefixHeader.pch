@@ -39,6 +39,7 @@
 #import "UINavigationBar+handle.h"
 #import "LMDataResultView.h"
 #import "UIAlertView+Helper.h"
+#import "RegalurUtil.h"
 //弱业务通用功能
 #import "CTModule.h"
 #import "CTMarco.h"

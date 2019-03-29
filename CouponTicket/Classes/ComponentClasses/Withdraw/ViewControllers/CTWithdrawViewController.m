@@ -22,6 +22,8 @@
 
 #import "CTWithdrawModifyAlipayView.h"
 
+#import "CTNetworkEngine+Cash.h"
+
 @interface CTWithdrawViewController ()
 
 @property (nonatomic, strong) CTWithdrawAlipayInfoView *alipayInfoView;
@@ -33,6 +35,8 @@
 @property (nonatomic, strong) CTWithdrawModifyAlipayView *modifyView;
 
 @property (nonatomic, strong) CTWithdrawViewModel *viewModel;
+
+@property (nonatomic, strong) CTUser *withdrawInfo;
 
 @end
 
@@ -116,8 +120,19 @@
 }
 
 - (void)reloadView{
-    self.viewModel.withdrawAccount = [CTAppManager user].pay_account;
-    self.viewModel.withdrawName = [CTAppManager user].pay_name;
+    [self reloadViewWithInfo:[CTAppManager user]];
+}
+
+- (void)request{
+    [CTRequest cashIndexWithCallback:^(id data, CLRequest *request, CTNetError error) {
+        self.withdrawInfo = [CTUser yy_modelWithDictionary:data];
+        [self reloadViewWithInfo:_withdrawInfo];
+    }];
+}
+- (void)reloadViewWithInfo:(CTUser *)user{
+    self.viewModel.withdrawAccount = user.cash_account;
+    self.viewModel.withdrawName = user.cash_name;
+    [CTAppManager user].money = user.money;
 }
 
 - (void)bindViewModel{
@@ -127,13 +142,23 @@
     RAC(self.viewModel,money) = self.withDrawInputView.moneyTextField.cl_textSignal;
     self.withDrawInputView.balanceNoticeLabel.text = [NSString stringWithFormat:@"可用余额 %.2f元",[CTAppManager user].money.floatValue];
     RAC(self.doneButton,enabled) = [self.withDrawInputView.moneyTextField.cl_textSignal map:^id _Nullable(NSString * value) {
-        return @(value.length && [CTAppManager user].money.floatValue >= value.floatValue);
+        return @(value.length && [CTAppManager user].money.floatValue >= value.floatValue && value.floatValue != 0);
     }];
     
     [self.withDrawInputView.moneyTextField.cl_textSignal subscribeNext:^(NSString * _Nullable x) {
         @strongify(self)
-        self.withDrawInputView.balanceNoticeLabel.text = (x.floatValue > [CTAppManager user].money.floatValue)?@"金额已超过可提现余额":[NSString stringWithFormat:@"可用余额 %.2f元",[CTAppManager user].money.floatValue];
-        self.withDrawInputView.balanceNoticeLabel.textColor = (x.floatValue > [CTAppManager user].money.floatValue)?[UIColor colorWithHexString:@"#F5A623"]:[UIColor colorWithHexString:@"#6F6F6F"];
+        if(x.floatValue > [CTAppManager user].money.floatValue){
+            self.withDrawInputView.balanceNoticeLabel.text = @"金额已超过可提现余额";
+        }
+        else{
+            self.withDrawInputView.balanceNoticeLabel.text = [NSString stringWithFormat:@"可用余额 %.2f元",[CTAppManager user].money.floatValue];
+        }
+        if(x.floatValue > [CTAppManager user].money.floatValue || x.floatValue == 0){
+            self.withDrawInputView.balanceNoticeLabel.textColor = [UIColor colorWithHexString:@"#F5A623"];
+        }
+        else{
+            self.withDrawInputView.balanceNoticeLabel.textColor= [UIColor colorWithHexString:@"#6F6F6F"];
+        }
     }];
 
     
@@ -141,37 +166,50 @@
 
 - (void)setUpEvent{
     @weakify(self)
-    [self.doneButton touchUpInsideSubscribeNext:^(id x) {
+    
+    void (^withdrawActionBlock)(void) = ^{
         @strongify(self)
         [self.view endEditing:YES];
         [CTAlertHelper showPayPasswordViewWithCallback:^(NSString *password) {
-            NSLog(@"%@",password);
-            dispatch_async(dispatch_get_main_queue(), ^{
-                [CTAlertHelper showWithdrawSuccessViewWithCallback:^(NSUInteger buttonIndex) {
-                    @strongify(self)
-                    [self.navigationController popViewControllerAnimated:YES];
-                }];
-            });
+            @strongify(self)
+            [CTRequest cashSaveWithPaypwd:password money:self.viewModel.money callback:^(id data, CLRequest *request, CTNetError error) {
+                if(!error){
+                    [CTAlertHelper showWithdrawSuccessViewWithCallback:^(NSUInteger buttonIndex) {
+                        @strongify(self)
+                        [self.navigationController popViewControllerAnimated:YES];
+                    }];
+                }
+            }];
         }];
+    };
+    
+    //提现按钮触发
+    [self.doneButton touchUpInsideSubscribeNext:^(id x) {
+        withdrawActionBlock();
     }];
-
+    
+    //修改支付账号
     [self.alipayInfoView addActionWithBlock:^(id target) {
         @strongify(self)
         [self.view endEditing:YES];
         [[CTModuleManager loginService]pushBoundAlipayFromViewController:self completed:^{
             @strongify(self)
             [self.navigationController popToViewController:self animated:YES];
-            [self reloadView];
+            [self request];
         }];
     }];
+  
     [self.modifyView addActionWithBlock:^(id target) {
         @strongify(self)
         [self.view endEditing:YES];
         [[CTModuleManager loginService]pushBoundAlipayFromViewController:self completed:^{
             @strongify(self)
             [self.navigationController popToViewController:self animated:YES];
-            [self reloadView];
+            [self request];
         }];
+    }];
+    [self.withDrawInputView setWithDrawAllBlock:^{
+        withdrawActionBlock();
     }];
 }
 

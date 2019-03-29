@@ -91,14 +91,21 @@
             }];
         }
         else{
-            CTSetPasswordViewController *vc = [CTSetPasswordViewController new];
-            vc.eventKind = self.eventKind;
-            vc.mobile = self.viewModel.mobile;
-            vc.inviteCode = self.inviteCode;
-            vc.verCode = self.viewModel.code;
-            vc.response = self.response;
-            vc.completed = self.completed;
-            [self.navigationController pushViewController:vc animated:YES];
+            [CTRequest checkSmsCodeWithPhone:self.viewModel.mobile smsCode:self.viewModel.code callback:^(id data, CLRequest *request, CTNetError error) {
+                if(error){
+                    [MBProgressHUD showMBProgressHudWithTitle:@"验证码错误!"];
+                }
+                else{
+                    CTSetPasswordViewController *vc = [CTSetPasswordViewController new];
+                    vc.eventKind = self.eventKind;
+                    vc.mobile = self.viewModel.mobile;
+                    vc.inviteCode = self.inviteCode;
+                    vc.verCode = self.viewModel.code;
+                    vc.response = self.response;
+                    vc.completed = self.completed;
+                    [self.navigationController pushViewController:vc animated:YES];
+                }
+            }];
         }
     }];
     

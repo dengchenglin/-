@@ -24,4 +24,6 @@
 
 @property (nonatomic, copy) NSString *withdrawName;
 
+@property (nonatomic, copy) NSString *balanceNoticeText;
+
 @end

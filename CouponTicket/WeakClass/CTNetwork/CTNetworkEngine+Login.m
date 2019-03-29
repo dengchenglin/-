@@ -77,6 +77,22 @@ NSString * GetSendCodeStr(CTSendCodeType type){
     [params setValue:smsCode forKey:@"sms_code"];
     return [self postWithPath:CTLogin(@"reset_pwd") params:params callback:callback];
 }
+
+- (CLRequest *)checkSmsCodeWithPhone:(NSString *)phone smsCode:(NSString *)smsCode callback:(CTResponseBlock)callback{
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    [params setValue:phone forKey:@"phone"];
+    [params setValue:smsCode forKey:@"sms_code"];
+    return [self postWithPath:CTLogin(@"check_sms_code") params:params callback:callback];
+}
+
+//校验邀请码或者手机号
+- (CLRequest *)checkIvcodeOrPhoneWithIvCode:(NSString *)ivCode phone:(NSString *)phone callback:(CTResponseBlock)callback{
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    [params setValue:phone forKey:@"phone"];
+    [params setValue:ivCode forKey:@"iv_code"];
+    return [self postWithPath:CTLogin(@"check_ivcode_or_phone") params:params callback:callback];
+}
+
 - (CLRequest *)bindPhoneWithPhone:(NSString *)phone 
                              type:(CTLoginType)type ivCode:(NSString *)ivCode smsCode:(NSString *)smsCode openid:(NSString *)openid nickname:(NSString *)nickname headicon:(NSString *)headicon unionid:(NSString *)unionid callback:(CTResponseBlock)callback{
         NSMutableDictionary *params = [NSMutableDictionary dictionary];

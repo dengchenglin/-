@@ -21,13 +21,14 @@
 @property (nonatomic, copy) NSString *create_at;
 @property (nonatomic, copy) NSString *level_txt;
 @property (nonatomic, copy) NSString *tbk_relation_id;
-@property (nonatomic, copy) NSString *pay_pwd;
-@property (nonatomic, copy) NSString *pay_account;
-@property (nonatomic, copy) NSString *pay_name;
 @property (nonatomic, copy) NSString *tbk_account_name;
 @property (nonatomic, copy) NSString *pid;
 @property (nonatomic, copy) NSString *pwd;
 @property (nonatomic, copy) NSString *type;
+@property (nonatomic, assign) BOOL ishas_pay_pwd;
+@property (nonatomic, assign) BOOL ishas_cash_account;
+@property (nonatomic, copy) NSString *cash_account;
+@property (nonatomic, copy) NSString *cash_name;
 @end
 
 @interface CTAppManager : NSObject

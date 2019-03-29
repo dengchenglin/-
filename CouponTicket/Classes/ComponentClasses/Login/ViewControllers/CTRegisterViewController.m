@@ -67,7 +67,7 @@
         @strongify(self)
         [QCodeHelper showQcodeFromViewController:self discernCallback:^(NSString *result) {
             @strongify(self)
-            self.registerView.inviteCodeTfd.text = result;
+            self.registerView.inviteCodeTfd.text = [RegalurUtil jiexi:@"iv_code" webaddress:result];
         }];
     }];
     //下一步
@@ -81,7 +81,7 @@
             [MBProgressHUD showMBProgressHudWithTitle:@"手机格式不正确"];
             return ;
         }
-        [CTRequest checkPhoneWithPhone:self.viewModel.mobile callback:^(id data, CLRequest *request, CTNetError error) {
+        [CTRequest checkIvcodeOrPhoneWithIvCode:self.viewModel.inviteCode phone:self.viewModel.mobile callback:^(id data, CLRequest *request, CTNetError error) {
             if(!error){
                 CTGetCodeViewController *vc = [CTGetCodeViewController new];
                 vc.mobile = self.viewModel.mobile.wipSpace;

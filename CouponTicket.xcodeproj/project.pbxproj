@@ -158,6 +158,7 @@
 		326AC20D21FB15C8008C154B /* CTMemberLevelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 326AC20C21FB15C8008C154B /* CTMemberLevelView.m */; };
 		326AC21021FB1710008C154B /* CTMemberManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 326AC20F21FB1710008C154B /* CTMemberManager.m */; };
 		327282F1224B6DE200CF5D01 /* LMNoOrderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 327282F0224B6DE200CF5D01 /* LMNoOrderView.xib */; };
+		32738E84224DF84400B9C80D /* CTNetworkEngine+Cash.m in Sources */ = {isa = PBXBuildFile; fileRef = 32738E83224DF84400B9C80D /* CTNetworkEngine+Cash.m */; };
 		3280738B21FEE7B7009CABEC /* CTMineHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3280738A21FEE7B7009CABEC /* CTMineHeadView.m */; };
 		3280738D21FEE7C1009CABEC /* CTMineHeadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3280738C21FEE7C0009CABEC /* CTMineHeadView.xib */; };
 		3280739021FEEC74009CABEC /* CTMineEarnView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3280738F21FEEC74009CABEC /* CTMineEarnView.m */; };
@@ -753,6 +754,8 @@
 		326AC20E21FB1710008C154B /* CTMemberManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTMemberManager.h; sourceTree = "<group>"; };
 		326AC20F21FB1710008C154B /* CTMemberManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTMemberManager.m; sourceTree = "<group>"; };
 		327282F0224B6DE200CF5D01 /* LMNoOrderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LMNoOrderView.xib; sourceTree = "<group>"; };
+		32738E82224DF84400B9C80D /* CTNetworkEngine+Cash.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CTNetworkEngine+Cash.h"; sourceTree = "<group>"; };
+		32738E83224DF84400B9C80D /* CTNetworkEngine+Cash.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CTNetworkEngine+Cash.m"; sourceTree = "<group>"; };
 		3280738921FEE7B7009CABEC /* CTMineHeadView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTMineHeadView.h; sourceTree = "<group>"; };
 		3280738A21FEE7B7009CABEC /* CTMineHeadView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTMineHeadView.m; sourceTree = "<group>"; };
 		3280738C21FEE7C0009CABEC /* CTMineHeadView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CTMineHeadView.xib; sourceTree = "<group>"; };
@@ -3299,6 +3302,8 @@
 				3249614D2248E856002D9383 /* CTNetworkEngine+Message.m */,
 				32DE090F224A042800474058 /* CTNetworkEngine+H5Url.h */,
 				32DE0910224A042800474058 /* CTNetworkEngine+H5Url.m */,
+				32738E82224DF84400B9C80D /* CTNetworkEngine+Cash.h */,
+				32738E83224DF84400B9C80D /* CTNetworkEngine+Cash.m */,
 			);
 			path = CTNetwork;
 			sourceTree = "<group>";
@@ -3743,6 +3748,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				32DB93D0221573E400300ACC /* CTUserInfoView.m in Sources */,
+				32738E84224DF84400B9C80D /* CTNetworkEngine+Cash.m in Sources */,
 				32E7EE7521F3320900191789 /* CTSalesItem.m in Sources */,
 				32CD9AD62223B9ED000D733B /* CTHandpickDescView.m in Sources */,
 				32BE614B21EDDBBB00BA52EF /* CTHomeViewController.m in Sources */,
@@ -4220,6 +4226,7 @@
 			baseConfigurationReference = 6AA14B2C43C4DB99B1D60D47 /* Pods-CouponTicket.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
@@ -4335,6 +4342,7 @@
 			baseConfigurationReference = 7665215356141A688CE2B40E /* Pods-CouponTicket.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;

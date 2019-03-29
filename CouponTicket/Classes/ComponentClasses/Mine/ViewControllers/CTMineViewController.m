@@ -164,7 +164,7 @@
             make.bottom.mas_equalTo(-20);
         }];
         config.sectioView = sectionView1;
-        config.sectionHeight = 290; //338 + NAVBAR_TOP;
+        config.sectionHeight = 338 + NAVBAR_TOP;//290 + NAVBAR_TOP;
     }];
     
     [self.containerView addConfig:^(CLSectionConfig *config) {
@@ -185,6 +185,11 @@
     @weakify(self)
     [self.containerView.tableView addHeaderRefreshWithCallBack:^{
         @strongify(self);
+        [self request];
+    }];
+    //登录注册后刷新
+    [[[[NSNotificationCenter defaultCenter]rac_addObserverForName:CTDidLoginNotification object:nil] takeUntil:self.rac_willDeallocSignal] subscribeNext:^(NSNotification * _Nullable x) {
+        @strongify(self)
         [self request];
     }];
     //我的信息
@@ -284,14 +289,15 @@
         [self.navigationController pushViewController:vc animated:YES];
     }];
     
-    //立即提现
+    //跳转到提现页面
     void(^withdrawBlock)(void) = ^{
         @strongify(self)
         UIViewController *vc = [[CTModuleManager withdrawService] rootViewController];
         [self.navigationController pushViewController:vc animated:YES];
     };
+    //提现
     [self.earnView.withdrawButton touchUpInsideSubscribeNext:^(id x) {
-        if([CTAppManager user].pay_account){
+        if([CTAppManager user].ishas_cash_account){
             withdrawBlock();
         }
         else{

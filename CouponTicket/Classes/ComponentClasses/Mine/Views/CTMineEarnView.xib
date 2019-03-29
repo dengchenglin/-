@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -181,10 +181,10 @@
                                 <constraint firstItem="z30-2V-uZH" firstAttribute="leading" secondItem="DPp-7p-Tqe" secondAttribute="leading" id="zML-8Q-ozP"/>
                             </constraints>
                         </view>
-                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q8r-sV-nkt">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q8r-sV-nkt">
                             <rect key="frame" x="0.0" y="110" width="373" height="133"/>
                             <subviews>
-                                <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eHA-RC-1r4">
+                                <button hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eHA-RC-1r4">
                                     <rect key="frame" x="22" y="49.5" width="147" height="34"/>
                                     <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
@@ -200,7 +200,7 @@
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                 </button>
-                                <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6cE-uc-Gc0">
+                                <button hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6cE-uc-Gc0">
                                     <rect key="frame" x="204" y="49.5" width="147" height="34"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="34" id="4yx-WR-CpH"/>
@@ -215,14 +215,32 @@
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                 </button>
+                                <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YKG-AP-mt3">
+                                    <rect key="frame" x="20" y="46" width="333" height="40"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="40" id="xkm-u6-POB"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    <state key="normal" title="立即提现" backgroundImage="pic_bt_bg">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                            <integer key="value" value="20"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </button>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstItem="eHA-RC-1r4" firstAttribute="centerY" secondItem="q8r-sV-nkt" secondAttribute="centerY" id="2c3-Az-pDX"/>
+                                <constraint firstAttribute="trailing" secondItem="YKG-AP-mt3" secondAttribute="trailing" constant="20" id="BNi-2V-EBS"/>
                                 <constraint firstItem="6cE-uc-Gc0" firstAttribute="width" secondItem="eHA-RC-1r4" secondAttribute="width" id="Cpb-Ol-3QT"/>
                                 <constraint firstItem="eHA-RC-1r4" firstAttribute="leading" secondItem="q8r-sV-nkt" secondAttribute="leading" constant="22" id="HxY-Gx-NvO"/>
                                 <constraint firstItem="6cE-uc-Gc0" firstAttribute="leading" secondItem="eHA-RC-1r4" secondAttribute="trailing" constant="35" id="bnd-Uj-zwd"/>
                                 <constraint firstItem="6cE-uc-Gc0" firstAttribute="centerY" secondItem="q8r-sV-nkt" secondAttribute="centerY" id="dng-O2-R8x"/>
+                                <constraint firstItem="YKG-AP-mt3" firstAttribute="centerY" secondItem="q8r-sV-nkt" secondAttribute="centerY" id="izN-5l-lb3"/>
+                                <constraint firstItem="YKG-AP-mt3" firstAttribute="leading" secondItem="q8r-sV-nkt" secondAttribute="leading" constant="20" id="uVe-Sh-XbP"/>
                                 <constraint firstAttribute="trailing" secondItem="6cE-uc-Gc0" secondAttribute="trailing" constant="22" id="ygk-Tn-Mb4"/>
                             </constraints>
                         </view>
@@ -262,9 +280,9 @@
                 <outlet property="priceLabel2" destination="9vu-W1-tei" id="QId-vT-Fxp"/>
                 <outlet property="priceLabel3" destination="VAT-yL-Rvb" id="gRs-aH-0Wc"/>
                 <outlet property="priceLabel4" destination="jEC-pA-1KJ" id="ndx-yG-Qew"/>
-                <outlet property="withdrawButton" destination="6cE-uc-Gc0" id="YDy-f8-cSo"/>
+                <outlet property="withdrawButton" destination="YKG-AP-mt3" id="fYn-JW-nRM"/>
             </connections>
-            <point key="canvasLocation" x="-2.5" y="160.5"/>
+            <point key="canvasLocation" x="32" y="165"/>
         </view>
     </objects>
     <resources>

@@ -87,7 +87,13 @@
     [params setValue:@(size) forKey:@"size"];
     return [self postWithPath:CTUser(@"my_goods_favorite") params:params showHud:page>1?NO:YES callback:callback];
 }
-
+- (CLRequest *)setPaypwdWithPhone:(NSString *)phone pwd:(NSString *)pwd smsCode:(NSString *)smsCode callback:(CTResponseBlock)callback{
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    [params setValue:phone forKey:@"phone"];
+    [params setValue:pwd forKey:@"pwd"];
+    [params setValue:smsCode forKey:@"sms_code"];
+    return [self postWithPath:CTUser(@"set_paypwd") params:params callback:callback];
+}
 //意见反馈
 - (CLRequest *)viewSaveWithDetail:(NSString *)detail img:(NSArray <NSString *>*)imgs callback:(CTResponseBlock)callback{
     NSMutableString *imgStr = [NSMutableString string];

@@ -10,7 +10,9 @@
 
 @interface RegalurUtil : NSObject
 
-+(BOOL)isMatchString:(NSString *)string withRule:(NSString *)rule;
++ (BOOL)isMatchString:(NSString *)string withRule:(NSString *)rule;
 
-+(NSArray *)resultsWithMatchString:(NSString *)string withRule:(NSString *)rule;
++ (NSArray *)resultsWithMatchString:(NSString *)string withRule:(NSString *)rule;
+
++ (NSString *)jiexi:(NSString *)CS webaddress:(NSString *)webaddress;
 @end

@@ -92,7 +92,7 @@
                                     <rect key="frame" x="0.0" y="23" width="368" height="49"/>
                                     <color key="textColor" red="0.078431372550000003" green="0.078431372550000003" blue="0.078431372550000003" alpha="1" colorSpace="calibratedRGB"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                    <textInputTraits key="textInputTraits" keyboardType="alphabet"/>
+                                    <textInputTraits key="textInputTraits"/>
                                 </textField>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7Cz-fq-j8S">
                                     <rect key="frame" x="0.0" y="71" width="368" height="1"/>
@@ -160,7 +160,7 @@
                 <outlet property="boundButton" destination="Cnc-Qz-4cu" id="Z8c-QS-DBy"/>
                 <outlet property="nameTfd" destination="wQW-tM-lgf" id="4Iz-Wp-ypM"/>
             </connections>
-            <point key="canvasLocation" x="218" y="-134"/>
+            <point key="canvasLocation" x="-20" y="-158"/>
         </view>
     </objects>
     <resources>

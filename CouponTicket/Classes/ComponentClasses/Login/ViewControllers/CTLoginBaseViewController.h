@@ -20,6 +20,7 @@ typedef NS_ENUM(NSInteger,CTEventKind) {
     CTEventKindQQBind,
     CTEventKindWechatBind,
     CTEventKindWithDraw,
+    CTEventKindBindAlipay
 };
 
 NSString *GetEventTitleStr(CTEventKind eventKind);

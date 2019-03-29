@@ -69,9 +69,6 @@
             [MBProgressHUD showMBProgressHudWithTitle:@"密码不一致"];
             return ;
         }
-        if(self.completed){
-            self.completed();
-        }
         switch (self.eventKind) {
             case CTEventKindRegister:
                 {
@@ -124,7 +121,13 @@
     [CTRequest resetPwdWithPhone:self.mobile pwd:self.viewModel.password smsCode:self.verCode callback:^(id data, CLRequest *request, CTNetError error) {
         if(!error){
             [MBProgressHUD showMBProgressHudWithTitle:@"设置成功"];
-            [self.navigationController popToRootViewControllerAnimated:YES];
+            if(self.completed){
+                self.completed();
+            }
+            else{
+             
+                [self.navigationController popToRootViewControllerAnimated:YES];
+            }
         }
     }];
 }
@@ -133,9 +136,15 @@
 - (void)resetWithDrawPwd{
     [CTRequest setPaypwdWithPhone:self.mobile pwd:self.viewModel.password smsCode:self.verCode callback:^(id data, CLRequest *request, CTNetError error) {
         if(!error){
-            [CTAppManager user].pay_pwd = self.viewModel.password;
             [MBProgressHUD showMBProgressHudWithTitle:@"设置成功"];
-            [self.navigationController popToRootViewControllerAnimated:YES];
+            [CTAppManager user].ishas_pay_pwd = YES;
+            if(self.completed){
+                self.completed();
+            }
+            else{
+              
+                [self.navigationController popToRootViewControllerAnimated:YES];
+            }
         }
     }];
 }

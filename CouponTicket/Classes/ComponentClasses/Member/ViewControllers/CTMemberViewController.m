@@ -265,8 +265,8 @@
         }
         self.navBar.alpha = alpha;
     }];
-    //登录后刷新
-    [[[NSNotificationCenter defaultCenter]rac_addObserverForName:CTDidLoginNotification object:nil] subscribeNext:^(NSNotification * _Nullable x) {
+    //登录注册后刷新
+    [[[[NSNotificationCenter defaultCenter]rac_addObserverForName:CTDidLoginNotification object:nil]takeUntil:self.rac_willDeallocSignal] subscribeNext:^(NSNotification * _Nullable x) {
         @strongify(self)
         [self request];
     }];

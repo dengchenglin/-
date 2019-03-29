@@ -38,6 +38,16 @@
    {
        completed(error?NO:YES);
    }
+    if(error){
+        UIAlertView *alt = [[UIAlertView alloc]initWithTitle:@"保存失败！\n请前往“设置-隐私-照片”中检查是否开启访问权限" message:nil delegate:nil cancelButtonTitle:@"取消" otherButtonTitles:@"去设置", nil];
+        [alt show];
+        [alt.rac_buttonClickedSignal subscribeNext:^(NSNumber * _Nullable x) {
+            if(x.integerValue == 1){
+                [[UIApplication sharedApplication]openURL:[NSURL URLWithString:UIApplicationOpenSettingsURLString]];
+            }
+        }];
+        
+    }
 }
 @end
 @implementation UIImage (Color)
