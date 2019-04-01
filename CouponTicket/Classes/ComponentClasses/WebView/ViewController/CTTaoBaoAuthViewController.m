@@ -81,7 +81,9 @@
         else{
             [UIAlertView showMessage:data[@"info"]];
         }
-        [self back];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self back];
+        });
     };
     context[@"closePage"] = ^(){
         dispatch_async(dispatch_get_main_queue(), ^{

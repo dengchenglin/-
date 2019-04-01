@@ -191,7 +191,7 @@
                 else{//如果未绑定过渠道id 事先通过淘宝H5授权绑定id同时通过js交互获取真正跳转的数据
                     NSInteger status = [data[@"status"] integerValue];
                     if(status == 403){
-                        NSString *tbAuthUrl = data[@"tbAuth_url"];
+                        NSString *tbAuthUrl = data[@"data"];
                         [[CTModuleManager webService]tbAuthFromViewController:self url:tbAuthUrl callback:^(id data) {
                             if(getFinalData){
                                 getFinalData(data);
