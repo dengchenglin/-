@@ -24,5 +24,9 @@
     _viewModel = viewModel;
     _containerView.viewModel = _viewModel;
 }
+- (void)setModel:(CTGoodsModel *)model{
+    _model = model;
+    _containerView.model = model;
+}
 
 @end

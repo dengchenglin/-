@@ -59,8 +59,8 @@
     CLSectionConfig *cfg = [CLSectionConfig new];
     if(config){
         config(cfg);
+        [self.configs addObject:cfg];
     }
-    [self.configs addObject:cfg];
     [self.tableView reloadData];
 }
 

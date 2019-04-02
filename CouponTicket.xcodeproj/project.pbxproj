@@ -253,6 +253,8 @@
 		3280739A21FF0928009CABEC /* CTMineToolView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3280739921FF0922009CABEC /* CTMineToolView.m */; };
 		3280739C21FF0969009CABEC /* CTMineToolView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3280739B21FF0969009CABEC /* CTMineToolView.xib */; };
 		32847007224E3B4100FE12A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32847006224E3B4000FE12A1 /* Assets.xcassets */; };
+		328A7B232253515D00735EB6 /* CTGoodsContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 328A7B222253515600735EB6 /* CTGoodsContentView.m */; };
+		328A7B252253517600735EB6 /* CTGoodsContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 328A7B242253517600735EB6 /* CTGoodsContentView.xib */; };
 		3297FDC22241EA7100B59746 /* CTTaoBaoAuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3297FDC12241EA7100B59746 /* CTTaoBaoAuthViewController.m */; };
 		3297FDC82241FA9800B59746 /* CTNetworkEngine+Order.m in Sources */ = {isa = PBXBuildFile; fileRef = 3297FDC72241FA9800B59746 /* CTNetworkEngine+Order.m */; };
 		3297FDCC2241FD2500B59746 /* CTOrderModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3297FDCB2241FD2500B59746 /* CTOrderModel.m */; };
@@ -306,6 +308,7 @@
 		32B4EE19221FC39900D2D71D /* CTSpreeShopItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32B4EE18221FC39900D2D71D /* CTSpreeShopItem.xib */; };
 		32B4EE1D221FD63500D2D71D /* CTSpreeShopListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32B4EE1C221FD63500D2D71D /* CTSpreeShopListViewController.m */; };
 		32B4EE20221FE9FF00D2D71D /* CTSpreeShopPageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32B4EE1F221FE9FF00D2D71D /* CTSpreeShopPageController.m */; };
+		32B8B94E225363B600F0D384 /* CTPlayerButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 32B8B94D225363B600F0D384 /* CTPlayerButton.m */; };
 		32BD0E23220171C500E99B86 /* CTNavBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 32BD0E22220171C500E99B86 /* CTNavBar.m */; };
 		32BD0E25220171D700E99B86 /* CTNavBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32BD0E24220171D700E99B86 /* CTNavBar.xib */; };
 		32BD0E28220172FE00E99B86 /* CTMineNavItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 32BD0E27220172FE00E99B86 /* CTMineNavItemView.m */; };
@@ -945,6 +948,9 @@
 		3280739921FF0922009CABEC /* CTMineToolView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTMineToolView.m; sourceTree = "<group>"; };
 		3280739B21FF0969009CABEC /* CTMineToolView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CTMineToolView.xib; sourceTree = "<group>"; };
 		32847006224E3B4000FE12A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		328A7B212253515600735EB6 /* CTGoodsContentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTGoodsContentView.h; sourceTree = "<group>"; };
+		328A7B222253515600735EB6 /* CTGoodsContentView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTGoodsContentView.m; sourceTree = "<group>"; };
+		328A7B242253517600735EB6 /* CTGoodsContentView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CTGoodsContentView.xib; sourceTree = "<group>"; };
 		3297FDC02241EA7100B59746 /* CTTaoBaoAuthViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTTaoBaoAuthViewController.h; sourceTree = "<group>"; };
 		3297FDC12241EA7100B59746 /* CTTaoBaoAuthViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTTaoBaoAuthViewController.m; sourceTree = "<group>"; };
 		3297FDC62241FA9800B59746 /* CTNetworkEngine+Order.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CTNetworkEngine+Order.h"; sourceTree = "<group>"; };
@@ -1041,6 +1047,8 @@
 		32B4EE1C221FD63500D2D71D /* CTSpreeShopListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTSpreeShopListViewController.m; sourceTree = "<group>"; };
 		32B4EE1E221FE9FF00D2D71D /* CTSpreeShopPageController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTSpreeShopPageController.h; sourceTree = "<group>"; };
 		32B4EE1F221FE9FF00D2D71D /* CTSpreeShopPageController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTSpreeShopPageController.m; sourceTree = "<group>"; };
+		32B8B94C225363B600F0D384 /* CTPlayerButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTPlayerButton.h; sourceTree = "<group>"; };
+		32B8B94D225363B600F0D384 /* CTPlayerButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTPlayerButton.m; sourceTree = "<group>"; };
 		32BD0E21220171C500E99B86 /* CTNavBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTNavBar.h; sourceTree = "<group>"; };
 		32BD0E22220171C500E99B86 /* CTNavBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTNavBar.m; sourceTree = "<group>"; };
 		32BD0E24220171D700E99B86 /* CTNavBar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CTNavBar.xib; sourceTree = "<group>"; };
@@ -1786,6 +1794,8 @@
 				326AC1EB21FAB8F4008C154B /* CTButton.m */,
 				32EA9E9C2201AB1B00D72291 /* CTDoneButton.h */,
 				32EA9E9D2201AB1B00D72291 /* CTDoneButton.m */,
+				32B8B94C225363B600F0D384 /* CTPlayerButton.h */,
+				32B8B94D225363B600F0D384 /* CTPlayerButton.m */,
 			);
 			path = CTViews;
 			sourceTree = "<group>";
@@ -3369,6 +3379,9 @@
 				3268B731224635E100330579 /* CTGoodsDescPreView.h */,
 				3268B732224635E100330579 /* CTGoodsDescPreView.m */,
 				3268B734224635EA00330579 /* CTGoodsDescPreView.xib */,
+				328A7B212253515600735EB6 /* CTGoodsContentView.h */,
+				328A7B222253515600735EB6 /* CTGoodsContentView.m */,
+				328A7B242253517600735EB6 /* CTGoodsContentView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -3618,6 +3631,7 @@
 				326AC1F421FADF08008C154B /* CTHotCatoryView.xib in Resources */,
 				326525FF21F5CF8100B63DD7 /* CTSetPasswordView_.xib in Resources */,
 				326AC20A21FB0DEF008C154B /* CTMemberHeadView.xib in Resources */,
+				328A7B252253517600735EB6 /* CTGoodsContentView.xib in Resources */,
 				326AC1E921FAB14C008C154B /* CTSearchTikcetPasteView.xib in Resources */,
 				32FD13C1223F9AA400CB85C1 /* yw_1222.jpg in Resources */,
 				32DB93D2221573EB00300ACC /* CTUserInfoView.xib in Resources */,
@@ -3699,6 +3713,7 @@
 				"${PODS_ROOT}/GPUImage/framework/Resources/lookup_soft_elegance_1.png",
 				"${PODS_ROOT}/GPUImage/framework/Resources/lookup_soft_elegance_2.png",
 				"${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle",
+				"${PODS_ROOT}/JPVideoPlayer/JPVideoPlayer/JPVideoPlayer.bundle",
 				"${PODS_ROOT}/SGQRCode/SGQRCode/SGQRCode.bundle",
 				"${PODS_ROOT}/ZLPhotoBrowser/PhotoBrowser/resource/ZLPhotoActionSheet.xib",
 				"${PODS_ROOT}/ZLPhotoBrowser/PhotoBrowser/resource/ZLPhotoBrowserCell.xib",
@@ -3712,6 +3727,7 @@
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/lookup_soft_elegance_1.png",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/lookup_soft_elegance_2.png",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/IQKeyboardManager.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/JPVideoPlayer.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SGQRCode.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ZLPhotoActionSheet.nib",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ZLPhotoBrowserCell.nib",
@@ -3770,6 +3786,7 @@
 				32BD0E28220172FE00E99B86 /* CTMineNavItemView.m in Sources */,
 				32A281172237DE5C007DF6C2 /* CTGoodsModel.m in Sources */,
 				32CA559421F7148800145E31 /* CTSearchPreviewView.m in Sources */,
+				32B8B94E225363B600F0D384 /* CTPlayerButton.m in Sources */,
 				32CD9ABE22239607000D733B /* CTVideoGoodListCell.m in Sources */,
 				32601479224E256000B7A1BE /* TZPhotoPreviewCell.m in Sources */,
 				32CA556E21F6C22600145E31 /* LMDataResultView.m in Sources */,
@@ -3873,6 +3890,7 @@
 				32601471224E256000B7A1BE /* CLRefreshNulMoreView.m in Sources */,
 				326014A3224E256000B7A1BE /* UIWebView+Category.m in Sources */,
 				32A281132237DCAB007DF6C2 /* CTHomeModel.m in Sources */,
+				328A7B232253515D00735EB6 /* CTGoodsContentView.m in Sources */,
 				3260149A224E256000B7A1BE /* UILabel+Helper.m in Sources */,
 				32FD13D3223FBD1700CB85C1 /* CTRecommendViewController.m in Sources */,
 				3297FDFE22426F5A00B59746 /* CTMemberRebateModel.m in Sources */,

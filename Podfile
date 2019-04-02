@@ -29,4 +29,6 @@ target 'CouponTicket' do
   pod 'SGQRCode', '~> 3.0.1'
   
   pod 'Qiniu',              '~> 7.2'
+  
+  pod 'JPVideoPlayer'
 end

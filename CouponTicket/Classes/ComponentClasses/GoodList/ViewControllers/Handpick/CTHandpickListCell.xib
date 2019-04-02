@@ -28,9 +28,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="THE BEAST/野兽派 心中的玫瑰永生花音乐水晶球 玫瑰花礼物礼品" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2jQ-tp-qmL">
-                                <rect key="frame" x="13" y="41" width="276" height="36"/>
+                                <rect key="frame" x="13" y="41" width="276" height="31"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="36" id="3yF-aN-USq"/>
+                                    <constraint firstAttribute="height" constant="31" id="3yF-aN-USq"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
                                 <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -46,14 +46,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AIp-Vb-cZb" customClass="CTPhotoView">
-                                <rect key="frame" x="13" y="84" width="276" height="75.5"/>
+                                <rect key="frame" x="13" y="80" width="276" height="79.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="2jQ-tp-qmL" firstAttribute="leading" secondItem="Zmx-TN-DBg" secondAttribute="leading" id="3UI-EH-mSG"/>
-                            <constraint firstItem="AIp-Vb-cZb" firstAttribute="top" secondItem="2jQ-tp-qmL" secondAttribute="bottom" constant="7" id="7QL-PP-2OG"/>
+                            <constraint firstItem="AIp-Vb-cZb" firstAttribute="top" secondItem="2jQ-tp-qmL" secondAttribute="bottom" constant="8" id="7QL-PP-2OG"/>
                             <constraint firstAttribute="trailing" secondItem="AIp-Vb-cZb" secondAttribute="trailing" constant="13" id="GcB-GQ-kee"/>
                             <constraint firstItem="Zmx-TN-DBg" firstAttribute="leading" secondItem="WoZ-gk-3gE" secondAttribute="leading" constant="13" id="ICm-sl-3q6"/>
                             <constraint firstItem="9W4-8B-on5" firstAttribute="top" secondItem="AIp-Vb-cZb" secondAttribute="bottom" constant="7" id="NMp-7U-UV2"/>

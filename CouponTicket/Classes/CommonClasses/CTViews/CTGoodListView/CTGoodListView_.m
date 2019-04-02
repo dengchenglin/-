@@ -24,22 +24,27 @@
 
 - (void)setViewModel:(CTGoodsViewModel *)viewModel{
     _viewModel = viewModel;
-    [_goodImageView sd_setImageWithURL:[NSURL URLWithString:_viewModel.model.goods_logo] placeholderImage:CTGoodsFailImage];
-    [_typeImageView sd_setImageWithURL:[NSURL URLWithString:_viewModel.model.type_logo]];
-    _titleLabel.text = [NSString stringWithFormat:@"...  %@",_viewModel.model.goods_title];
-    _disLabel1.text = [NSString stringWithFormat:@"赚%@元",_viewModel.model.commission_money];
+    self.model = _viewModel.model;
+}
 
-    _disLabel2.text = [NSString stringWithFormat:@"升级可赚%@元",_viewModel.model.upgrade_money];
-    _priceLabel.text = _viewModel.model.coupon_price;
-    _originPriceLabel.text = _viewModel.model.sale_price;
-    _couponPriceLabel.text = _viewModel.model.coupon_amount;
-    _salesLabel.text = _viewModel.model.package_sale;
-
-    _statusImageView.image = [UIImage imageNamed:GetTypeImageStr(_viewModel.model.status)];
-    _upgradeView.hidden = !_viewModel.model.upgrade_money.length;
-    _statusImageView.hidden = !_viewModel.model.status;
-    _salesView.hidden = !_viewModel.model.package_sale.length;
-    _couponView.hidden = !_viewModel.model.show_coupon;
+- (void)setModel:(CTGoodsModel *)model{
+    _model = model;
+    [_goodImageView sd_setImageWithURL:[NSURL URLWithString:_model.goods_logo] placeholderImage:CTGoodsFailImage];
+    [_typeImageView sd_setImageWithURL:[NSURL URLWithString:_model.type_logo]];
+    _titleLabel.text = [NSString stringWithFormat:@"...  %@",_model.goods_title];
+    _disLabel1.text = [NSString stringWithFormat:@"赚%@元",_model.commission_money];
+    
+    _disLabel2.text = [NSString stringWithFormat:@"升级可赚%@元",_model.upgrade_money];
+    _priceLabel.text = _model.coupon_price;
+    _originPriceLabel.text = _model.sale_price;
+    _couponPriceLabel.text = _model.coupon_amount;
+    _salesLabel.text = _model.package_sale;
+    
+    _statusImageView.image = [UIImage imageNamed:GetTypeImageStr(_model.status)];
+    _upgradeView.hidden = !_model.upgrade_money.length;
+    _statusImageView.hidden = !_model.status;
+    _salesView.hidden = !_model.package_sale.length;
+    _couponView.hidden = !_model.show_coupon;
 }
 
 @end

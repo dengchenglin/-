@@ -10,11 +10,23 @@
 
 #import "CTGoodListView_.h"
 
+#import "CTPlayerButton.h"
+
+@protocol CTVideoGoodListCellDelegate<NSObject>
+
+- (void)didClickVideoWithIndexPath:(NSIndexPath *)indexPath;
+
+@end
+
 @interface CTVideoGoodListCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *previewImageView;
-@property (weak, nonatomic) IBOutlet UIButton *playButton;
+@property (weak, nonatomic) IBOutlet CTPlayerButton *playButton;
 @property (weak, nonatomic) IBOutlet UIView *goodBackView;
 
 @property (nonatomic, strong) CTGoodListView_ *goodView;
-
+@property (nonatomic, strong) CTGoodsViewModel *viewModel;
+@property (nonatomic, weak) id <CTVideoGoodListCellDelegate>delegate;
+@property (nonatomic, copy) NSIndexPath *indexPath;
+- (void)stopPlay;
+- (void)removeVideoView;
 @end

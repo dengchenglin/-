@@ -23,4 +23,5 @@
 @property (weak, nonatomic) IBOutlet UIImageView *typeImageView;
 @property (weak, nonatomic) IBOutlet UIImageView *statusImageView;
 @property (nonatomic, strong) CTGoodsViewModel *viewModel;
+@property (nonatomic, strong) CTGoodsModel *model;
 @end

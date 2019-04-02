@@ -10,4 +10,6 @@
 
 @interface CTHandpickDetailViewController : CTBaseViewController
 
+@property (nonatomic, copy) NSString *Id;
+
 @end

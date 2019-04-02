@@ -44,4 +44,13 @@ NSString *GetTypeImageStr(NSInteger status);
 @property (nonatomic, copy) NSString *coupon_end_time;
 @property (nonatomic, copy) NSString *coupon_share_url;
 @property (nonatomic, assign) BOOL show_coupon;
+
+@property (nonatomic, copy) NSString *title;
+@property (nonatomic, copy) NSString *remark;
+@property (nonatomic, copy) NSString *detail;
+@property (nonatomic, copy) NSArray<NSString *> *imgs;
+@property (nonatomic, copy) NSArray <CTGoodsModel*> *goods;
+
+@property (nonatomic, copy) NSString *video;
+@property (nonatomic, copy) NSString *video_img;
 @end

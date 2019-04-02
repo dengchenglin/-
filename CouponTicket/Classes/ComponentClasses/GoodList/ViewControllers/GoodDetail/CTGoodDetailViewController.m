@@ -26,6 +26,7 @@
 
 #import "CTSharePopView.h"
 
+
 @interface CTGoodDetailViewController()<UIScrollViewDelegate>
 
 @property (nonatomic, strong) CTGoodDetailNavbar *navBar;

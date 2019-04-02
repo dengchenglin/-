@@ -8,8 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import "LMWebView.h"
+#import "CTGoodsViewModel.h"
 @interface CTHandpickDescView : UIView
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *dateLabel;
 @property (weak, nonatomic) IBOutlet LMWebView *webView;
+@property (nonatomic, strong) CTGoodsViewModel *viewModel;
+@property (nonatomic, copy) void(^heightChangedBlock)(CGFloat height);
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *webViewHeight;
+
 @end

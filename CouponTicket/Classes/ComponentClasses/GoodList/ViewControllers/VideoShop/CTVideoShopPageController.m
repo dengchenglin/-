@@ -12,9 +12,15 @@
 
 #import "CTVideoShopListViewController.h"
 
+#import "CTNetworkEngine+Recommend.h"
+
+#import "CTCategoryModel.h"
+
 @interface CTVideoShopPageController ()<LMSegmentedControlDelegate>
 
 @property (nonatomic, strong) LMSegmentedControl *segmentedControl;
+
+@property (nonatomic, copy) NSArray <CTCategoryModel *> *cates;
 
 @end
 
@@ -46,16 +52,32 @@
     }];
 }
 
-- (void)reloadView{
-    NSArray *titles = [[self testCategory] map:^id(NSInteger index, id element) {
-        return element[@"title"];
+- (void)request{
+    [CTRequest videoBuyCateWithCallback:^(id data, CLRequest *request, CTNetError error) {
+        [LMDataResultView hideDataResultOnView:self.view];
+        if(!error){
+            [self reloadData:data];
+        }
+        else if (!self.cates){
+            [LMDataResultView showNoNetErrorResultOnView:self.view clickRefreshBlock:^{
+                [self request];
+            }];
+        }
     }];
+}
+
+- (void)reloadData:(id)data{
+
+    self.cates = [CTCategoryModel yy_modelsWithDatas:data];
     dispatch_async(dispatch_get_main_queue(), ^{
-        self.segmentedControl.titles = titles;
+        self.segmentedControl.titles = [self.cates map:^id(NSInteger index, CTCategoryModel *element) {
+            return element.title;
+        }];
     });
     NSMutableArray *array = [NSMutableArray array];
-    for(int i = 0;i < titles.count;i ++){
+    for(int i = 0;i < self.cates.count;i ++){
         CTVideoShopListViewController *vc = [[CTVideoShopListViewController alloc]init];
+        vc.cateId = self.cates[i].uid;
         [array addObject:vc];
     }
     self.viewControllers = array;
@@ -68,7 +90,4 @@
     [self.segmentedControl scrollToIndex:index];
 }
 
-- (NSArray *)testCategory{
-    return @[@{@"title":@"今日精选"},@{@"title":@"女装"},@{@"title":@"母婴儿童"},@{@"title":@"内衣"},@{@"title":@"居家"},@{@"title":@"男装"},@{@"title":@"女装"},@{@"title":@"内裤"},@{@"title":@"电器"},@{@"title":@"酒水"},@{@"title":@"玩具"}];
-}
 @end

@@ -10,4 +10,6 @@
 
 @interface CTVideoShopListViewController : CTBaseListViewController
 
+@property (nonatomic, copy) NSString *cateId;
+
 @end

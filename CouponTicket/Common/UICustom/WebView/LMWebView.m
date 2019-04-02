@@ -27,20 +27,14 @@ ViewInstance(setUp)
     [_webView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.mas_equalTo(UIEdgeInsetsZero);
     }];
-//    @weakify(self)
-//    [RACObserve(self.webView.scrollView,contentSize) subscribeNext:^(id  _Nullable x) {
-//       @strongify(self)
-//        CGFloat height = [x CGSizeValue].height;
-//        if(height > 0){
-//            [self mas_updateConstraints:^(MASConstraintMaker *make) {
-//                make.height.mas_equalTo(height);
-//            }];
-//            [self.superview layoutIfNeeded];
-//        }
-//        if(self.heightChangedBlock){
-//            self.heightChangedBlock(height);
-//        }
-//    }];
+    @weakify(self)
+    [RACObserve(self.webView.scrollView,contentSize) subscribeNext:^(id  _Nullable x) {
+       @strongify(self)
+        CGFloat height = [x CGSizeValue].height;
+        if(self.heightChangedBlock){
+            self.heightChangedBlock(height);
+        }
+    }];
 }
 
 - (void)setUrl:(NSString *)url{

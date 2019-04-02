@@ -7,7 +7,7 @@
 //
 
 #import "CTVideoGoodListCell.h"
-
+#import <JPVideoPlayer/UIView+WebVideoCache.h>
 @implementation CTVideoGoodListCell
 
 - (void)awakeFromNib {
@@ -17,7 +17,33 @@
     [_goodView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.mas_equalTo(UIEdgeInsetsZero);
     }];
+    
+    @weakify(self)
+    [self.playButton touchUpInsideSubscribeNext:^(UIButton *x) {
+        @strongify(self)
+        if(self.delegate && [self.delegate respondsToSelector:@selector(didClickVideoWithIndexPath:)]){
+            [self.delegate didClickVideoWithIndexPath:self.indexPath];
+        }
+    }];
 }
 
+- (void)setViewModel:(CTGoodsViewModel *)viewModel{
+    _viewModel = viewModel;
+    [_previewImageView sd_setImageWithURL:[NSURL URLWithString:_viewModel.model.video_img]];
+    _goodView.viewModel = _viewModel;
+}
 
+- (void)stopPlay{
+    [self.playButton jp_stopPlay];
+    self.playButton.selected = NO;
+    if(self.playButton.jp_videoPlayerView.superview){
+        [self.playButton.jp_videoPlayerView removeFromSuperview];
+    }
+}
+- (void)removeVideoView{
+    self.playButton.selected = NO;
+    if(self.playButton.jp_videoPlayerView.superview){
+        [self.playButton.jp_videoPlayerView removeFromSuperview];
+    }
+}
 @end

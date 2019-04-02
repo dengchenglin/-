@@ -10,10 +10,12 @@
 
 #import "CTPhotoView.h"
 
+#import "CTGoodsViewModel.h"
+
 @interface CTHandpickListCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *descLabel;
 @property (weak, nonatomic) IBOutlet CTPhotoView *photoViews;
 @property (weak, nonatomic) IBOutlet UILabel *dateLabel;
-
+@property (nonatomic, strong) CTGoodsViewModel *viewModel;
 @end

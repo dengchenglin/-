@@ -205,13 +205,13 @@
         config.space = 20;
     }];
     //升级条件
-    [self.containerView addConfig:^(CLSectionConfig *config) {
+    [self.containerView addConfig:self.model.showUpgrade?^(CLSectionConfig *config) {
         @strongify(self)
 
         config.sectioView = self.upgradeView;
         config.sectionHeight = [self.upgradeView systemLayoutSizeFittingSize:CGSizeMake(SCREEN_WIDTH, CGFLOAT_MAX)].height;
         config.space = 30;
-    }];
+    }:nil];
 //    //会员精选
 //    [self.containerView addConfig:^(CLSectionConfig *config) {
 //        @strongify(self)

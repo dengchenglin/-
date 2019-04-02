@@ -12,11 +12,15 @@
 
 #import "CTGoodListCell.h"
 
+#import "CTNetworkEngine+Recommend.h"
+
 @interface CTHandpickDetailViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic, strong) UITableView *tableView;
 
 @property (nonatomic, strong) CTHandpickDescView *descView;
+
+@property (nonatomic, strong) CTGoodsViewModel *viewModel;
 
 @end
 
@@ -54,12 +58,25 @@
     }];
 }
 
+- (void)request{
+    [CTRequest officialBuyDetailWithMarkeId:self.Id callback:^(id data, CLRequest *request, CTNetError error) {
+        if(!error){
+            self.viewModel = [CTGoodsViewModel bindModel:[CTGoodsModel yy_modelWithDictionary:data]];
+            self.descView.viewModel = _viewModel;
+            [self.tableView reloadData];
+        }
+    }];
+    
+}
+
 - (void)setUpEvent{
-//    @weakify(self)
-//    [self.descView.webView setHeightChangedBlock:^(CGFloat height) {
-//        @strongify(self)
-//        [self.tableView reloadData];
-//    }];
+    @weakify(self)
+    [self.descView setHeightChangedBlock:^(CGFloat height) {
+        @strongify(self)
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.tableView reloadData];
+        });
+    }];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
@@ -76,17 +93,18 @@
     return [UIView new];
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 10;
+    return self.viewModel.model.goods.count;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 112;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     CTGoodListCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(CTGoodListCell.class)];
+    cell.model = self.viewModel.model.goods[indexPath.row];
     return cell;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    UIViewController *vc = [[CTModuleManager goodListService] goodDetailViewControllerWithGoodId:nil];
+    UIViewController *vc = [[CTModuleManager goodListService] goodDetailViewControllerWithGoodId:self.viewModel.model.goods[indexPath.row].uid];
     [self.navigationController pushViewController:vc animated:YES];
 }
 @end

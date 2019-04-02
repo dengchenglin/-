@@ -19,4 +19,8 @@
 + (NSDictionary *)modelContainerPropertyGenericClass{
     return @{@"user":CTUser.class,@"user_rebate":CTMemberRebateModel.class,@"grade_power":CTMemberGradePowerModel.class,@"upgrade_condition":CTMemberUpgradeConditionModel.class};
 }
+
+- (BOOL)showUpgrade{
+    return _upgrade_condition.txt1.length || _upgrade_condition.txt2.length || _upgrade_condition.txt3.length;
+}
 @end

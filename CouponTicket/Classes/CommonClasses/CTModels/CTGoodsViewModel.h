@@ -12,5 +12,5 @@
 
 @interface CTGoodsViewModel : CTViewModel
 @property (nonatomic, strong) CTGoodsModel *model;
-
+@property (nonatomic, assign) BOOL isPlay;
 @end

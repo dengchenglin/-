@@ -23,4 +23,5 @@
 @property (nonatomic, copy) NSArray <CTMemberRebateModel *> *user_rebate;
 @property (nonatomic, copy) NSArray <CTMemberGradePowerModel *> *grade_power;
 @property (nonatomic, strong) CTMemberUpgradeConditionModel *upgrade_condition;
+@property (nonatomic, assign, readonly) BOOL showUpgrade;
 @end
