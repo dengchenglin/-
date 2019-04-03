@@ -57,9 +57,25 @@
         make.edges.mas_equalTo(UIEdgeInsetsZero);
     }];
 }
+- (void)setUpEvent{
+    @weakify(self)
+    [self.tableView addHeaderRefreshWithCallBack:^{
+        @strongify(self)
+        [self request];
+    }];
+    [self.descView setHeightChangedBlock:^(CGFloat height) {
+        @strongify(self)
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.tableView reloadData];
+        });
+    }];
+}
 
 - (void)request{
+    self.tableView.hidden = YES;
     [CTRequest officialBuyDetailWithMarkeId:self.Id callback:^(id data, CLRequest *request, CTNetError error) {
+        self.tableView.hidden = NO;
+        [self.tableView endRefreshing];
         if(!error){
             self.viewModel = [CTGoodsViewModel bindModel:[CTGoodsModel yy_modelWithDictionary:data]];
             self.descView.viewModel = _viewModel;
@@ -69,15 +85,7 @@
     
 }
 
-- (void)setUpEvent{
-    @weakify(self)
-    [self.descView setHeightChangedBlock:^(CGFloat height) {
-        @strongify(self)
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [self.tableView reloadData];
-        });
-    }];
-}
+
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
     CGFloat height = [self.descView systemLayoutSizeFittingSize:CGSizeMake(SCREEN_WIDTH, CGFLOAT_MAX)].height;

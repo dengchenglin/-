@@ -414,6 +414,8 @@
 		32ED00D6222CF242008A1640 /* CTNetworkEngine+Login.m in Sources */ = {isa = PBXBuildFile; fileRef = 32ED00D5222CF242008A1640 /* CTNetworkEngine+Login.m */; };
 		32ED00DB222D0F89008A1640 /* UMShareManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 32ED00DA222D0F89008A1640 /* UMShareManager.m */; };
 		32EDC59F2221186C00AFF766 /* UIScrollView+CTPagePanGes.m in Sources */ = {isa = PBXBuildFile; fileRef = 32EDC59E2221186C00AFF766 /* UIScrollView+CTPagePanGes.m */; };
+		32F55ECE2254C9DE0057EDEC /* CTEarnIndexModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 32F55ECD2254C9DE0057EDEC /* CTEarnIndexModel.m */; };
+		32F55ED12254CA420057EDEC /* CTEarnTrendModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 32F55ED02254CA420057EDEC /* CTEarnTrendModel.m */; };
 		32FD1252223F2C3F00CB85C1 /* CTGoodsImgsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 32FD1251223F2C3F00CB85C1 /* CTGoodsImgsView.m */; };
 		32FD1255223F2C4C00CB85C1 /* CTGoodsDescView.m in Sources */ = {isa = PBXBuildFile; fileRef = 32FD1254223F2C4C00CB85C1 /* CTGoodsDescView.m */; };
 		32FD125B223F2C7E00CB85C1 /* CTGoodsBuyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 32FD125A223F2C7E00CB85C1 /* CTGoodsBuyView.m */; };
@@ -1234,6 +1236,10 @@
 		32EDC59D2221186C00AFF766 /* UIScrollView+CTPagePanGes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+CTPagePanGes.h"; sourceTree = "<group>"; };
 		32EDC59E2221186C00AFF766 /* UIScrollView+CTPagePanGes.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+CTPagePanGes.m"; sourceTree = "<group>"; };
 		32F47E5E2244B011001BBD4A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		32F55ECC2254C9DE0057EDEC /* CTEarnIndexModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTEarnIndexModel.h; sourceTree = "<group>"; };
+		32F55ECD2254C9DE0057EDEC /* CTEarnIndexModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTEarnIndexModel.m; sourceTree = "<group>"; };
+		32F55ECF2254CA420057EDEC /* CTEarnTrendModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTEarnTrendModel.h; sourceTree = "<group>"; };
+		32F55ED02254CA420057EDEC /* CTEarnTrendModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTEarnTrendModel.m; sourceTree = "<group>"; };
 		32FD1250223F2C3F00CB85C1 /* CTGoodsImgsView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTGoodsImgsView.h; sourceTree = "<group>"; };
 		32FD1251223F2C3F00CB85C1 /* CTGoodsImgsView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTGoodsImgsView.m; sourceTree = "<group>"; };
 		32FD1253223F2C4C00CB85C1 /* CTGoodsDescView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTGoodsDescView.h; sourceTree = "<group>"; };
@@ -2679,6 +2685,12 @@
 				3297FDCB2241FD2500B59746 /* CTOrderModel.m */,
 				325946172243B8F700775AA3 /* CTTeamCateModel.h */,
 				325946182243B8F700775AA3 /* CTTeamCateModel.m */,
+				32F55ECC2254C9DE0057EDEC /* CTEarnIndexModel.h */,
+				32F55ECD2254C9DE0057EDEC /* CTEarnIndexModel.m */,
+				32F55ECF2254CA420057EDEC /* CTEarnTrendModel.h */,
+				32F55ED02254CA420057EDEC /* CTEarnTrendModel.m */,
+				325946132243AA4400775AA3 /* CTMyEarnModel.h */,
+				325946142243AA4400775AA3 /* CTMyEarnModel.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -2688,8 +2700,6 @@
 			children = (
 				3297FDCE2241FD3800B59746 /* CTOrderViewModel.h */,
 				3297FDCF2241FD3800B59746 /* CTOrderViewModel.m */,
-				325946132243AA4400775AA3 /* CTMyEarnModel.h */,
-				325946142243AA4400775AA3 /* CTMyEarnModel.m */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -3907,6 +3917,7 @@
 				32CA556221F6B0E700145E31 /* CTMessageService.m in Sources */,
 				2405AEDA21FC0E20000E5081 /* CTMemberEquityItem.m in Sources */,
 				32601490224E256000B7A1BE /* SelVideoSlider.m in Sources */,
+				32F55ED12254CA420057EDEC /* CTEarnTrendModel.m in Sources */,
 				3260149C224E256000B7A1BE /* UIPasteboard+Helper.m in Sources */,
 				326014AE224E256000B7A1BE /* UIButton+Create.m in Sources */,
 				326AC1FE21FAF368008C154B /* CTYourLikedHeadView.m in Sources */,
@@ -4065,6 +4076,7 @@
 				32601473224E256000B7A1BE /* ImagePicker.m in Sources */,
 				326014AA224E256000B7A1BE /* NSDictionary+Log.m in Sources */,
 				322453D921F2BFC200471059 /* CTView.m in Sources */,
+				32F55ECE2254C9DE0057EDEC /* CTEarnIndexModel.m in Sources */,
 				32CA55AF21F7253600145E31 /* CTSearchTextfield.m in Sources */,
 				322453B521F2BE6F00471059 /* CTSearchTicketService.m in Sources */,
 				3268B7302246328B00330579 /* CTGoodsPreViewController.m in Sources */,

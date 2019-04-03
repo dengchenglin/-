@@ -8,14 +8,33 @@
 
 #import "CTThirtyTrendView.h"
 
+@interface CTThirtyTrendView()
+@property (weak, nonatomic) IBOutlet UIWebView *webView;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *contentHeight;
+
+@end
+
 @implementation CTThirtyTrendView
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
+ViewInstance(setUp)
+
+- (void)setUp{
+    @weakify(self)
+    [RACObserve(self.webView.scrollView, contentSize) subscribeNext:^(id  _Nullable x) {
+        @strongify(self)
+        CGFloat height = [x CGSizeValue].height;
+        self.contentHeight.constant = height;
+        if(self.heightDidChangeBlock){
+            self.heightDidChangeBlock(height);
+        }
+    }];
 }
-*/
+
+- (void)setUrl:(NSString *)url{
+    _url = url;
+    self.contentHeight.constant = _url.length?1:0;
+    [self.superview layoutIfNeeded];
+    [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:_url]]];
+}
 
 @end

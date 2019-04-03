@@ -10,4 +10,8 @@
 
 @interface CTGoodsContentView : UIView
 
+@property (weak, nonatomic) IBOutlet UIWebView *contentView;
+
+@property (nonatomic, copy) NSString *htmlString;
+
 @end

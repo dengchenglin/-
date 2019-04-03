@@ -26,6 +26,7 @@
 
 #import "CTSharePopView.h"
 
+#import "CTGoodsContentView.h"
 
 @interface CTGoodDetailViewController()<UIScrollViewDelegate>
 
@@ -36,6 +37,8 @@
 @property (nonatomic, strong) CTGoodsDescView *descView;
 
 @property (nonatomic, strong) CTGoodsCouponView *couponView;
+
+@property (nonatomic, strong) CTGoodsContentView *contentView;
 
 @property (nonatomic, strong) CTGoodsBuyView *buyView;
 
@@ -68,6 +71,12 @@
     }
     return _couponView;
 }
+- (CTGoodsContentView *)contentView{
+    if(!_contentView){
+        _contentView = NSMainBundleClass(CTGoodsContentView.class);
+    }
+    return _contentView;
+}
 - (CTGoodsBuyView *)buyView{
     if(!_buyView){
         _buyView = NSMainBundleClass(CTGoodsBuyView.class);
@@ -77,11 +86,12 @@
 - (void)setUpUI{
     self.title = @"商品详情";
     self.hideSystemNavBarWhenAppear = YES;
-   
     self.scrollViewAvailable = YES;
+    self.scrollView.backgroundColor = CTBackGroundGrayColor;
     [self.autoLayoutContainerView addSubview:self.imgsView];
     [self.autoLayoutContainerView addSubview:self.descView];
     [self.autoLayoutContainerView addSubview:self.couponView];
+    [self.autoLayoutContainerView addSubview:self.contentView];
     [self.view addSubview:self.buyView];
     [self.view addSubview:self.navBar];
 }
@@ -92,9 +102,9 @@
         make.left.top.right.mas_equalTo(0);
         make.height.mas_equalTo(NAVBAR_HEIGHT);
     }];
-    [self.scrollView mas_makeConstraints:^(MASConstraintMaker *make) {
+    [self.scrollView mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.left.top.right.mas_equalTo(0);
-        make.bottom.mas_equalTo(45);
+        make.bottom.mas_equalTo(-45);
     }];
     [self.imgsView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.top.mas_equalTo(0);
@@ -109,7 +119,11 @@
         make.top.mas_equalTo(self.descView.mas_bottom);
         make.left.right.mas_equalTo(0);
         make.height.mas_equalTo(127);
-        make.bottom.mas_equalTo(40);
+    }];
+    [self.contentView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(self.couponView.mas_bottom).offset(10);
+        make.left.right.mas_equalTo(0);
+        make.bottom.mas_equalTo(-10);
     }];
     [self.buyView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.bottom.mas_equalTo(0);
@@ -137,7 +151,7 @@
         self.descView.viewModel = _viewModel;
         self.couponView.viewModel = _viewModel;
         self.buyView.viewModel = _viewModel;
-        
+        self.contentView.htmlString = _viewModel.model.goods_content;
         [self.couponView mas_updateConstraints:^(MASConstraintMaker *make) {
             make.height.mas_equalTo(self.viewModel.model.show_coupon?127:0);
         }];

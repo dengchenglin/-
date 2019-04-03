@@ -10,4 +10,8 @@
 
 @interface CTThirtyTrendView : UIView
 
+@property (nonatomic, copy) NSString *url;
+
+@property (nonatomic, copy) void(^heightDidChangeBlock)(CGFloat height);
+
 @end

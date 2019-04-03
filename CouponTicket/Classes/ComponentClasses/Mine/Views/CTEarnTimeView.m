@@ -10,12 +10,10 @@
 
 @implementation CTEarnTimeView
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
+- (void)setInfo:(CTEarnInfo *)info{
+    _info = info;
+    _profitLabel.text = [NSString stringWithFormat:@"¥%@",_info.money];
+    _countLabel.text = _info.order_num;
 }
-*/
 
 @end

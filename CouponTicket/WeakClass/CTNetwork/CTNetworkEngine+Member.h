@@ -32,4 +32,10 @@
 - (CLRequest *)setPaypwdWithPhone:(NSString *)phone pwd:(NSString *)pwd smsCode:(NSString *)smsCode callback:(CTResponseBlock)callback;
 //意见反馈
 - (CLRequest *)viewSaveWithDetail:(NSString *)detail img:(NSArray <NSString *>*)imgs callback:(CTResponseBlock)callback;
+//收益明细
+- (CLRequest *)incomeDetailWithCallback:(CTResponseBlock)callback;
+//收益走势
+- (CLRequest *)incomeTrendWithCallback:(CTResponseBlock)callback;
+//用户详情
+- (CLRequest *)teamUserDetailWithUid:(NSString *)uid callback:(CTResponseBlock)callback;
 @end

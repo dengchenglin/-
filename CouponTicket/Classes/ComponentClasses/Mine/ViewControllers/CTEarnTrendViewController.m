@@ -16,6 +16,10 @@
 
 #import "CTEarnTrendCell.h"
 
+#import "CTNetworkEngine+Member.h"
+
+#import "CTEarnTrendModel.h"
+
 @interface CTEarnTrendViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic, strong) UITableView *tableView;
@@ -27,6 +31,8 @@
 @property (nonatomic, strong) CTThirtyProfitHeadView *profitHeadView;
 
 @property (nonatomic, strong) UIView *headView;
+
+@property (nonatomic, strong) CTEarnTrendModel *model;
 
 @end
 
@@ -79,12 +85,12 @@
         [self.trendView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.mas_equalTo(self.profitView.mas_bottom);
             make.left.right.mas_equalTo(0);
-            make.height.mas_equalTo(240);
         }];
         [self.profitHeadView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.mas_equalTo(self.trendView.mas_bottom);
             make.left.right.mas_equalTo(0);
             make.height.mas_equalTo(45);
+            make.bottom.mas_equalTo(0);
         }];
     }
     return _headView;
@@ -103,8 +109,34 @@
     }];
 }
 
+- (void)request{
+    [CTRequest incomeTrendWithCallback:^(id data, CLRequest *request, CTNetError error) {
+        if(!error){
+            self.model = [CTEarnTrendModel yy_modelWithDictionary:data];
+            if(!self.model.day30_lists.count){
+                [MBProgressHUD showMBProgressHudWithTitle:@"您暂无收益记录" hideAfterDelay:1.0 complited:^{
+                    [self.navigationController popViewControllerAnimated:YES];
+                }];
+                return ;
+            }
+            self.profitView.model = _model;
+            self.trendView.url = _model.trend_chart_url;
+            [self.tableView reloadData];
+        }
+    }];
+}
+
+- (void)setUpEvent{
+    @weakify(self)
+    [self.trendView setHeightDidChangeBlock:^(CGFloat height) {
+        @strongify(self)
+        [self.tableView reloadData];
+    }];
+}
+
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-    return 325;
+    CGFloat height = [self.headView systemLayoutSizeFittingSize:CGSizeMake(SCREEN_WIDTH, 1000)].height;
+    return height;
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
@@ -118,7 +150,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 30;
+    return self.model.day30_lists.count;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -127,6 +159,8 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     CTEarnTrendCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(CTEarnTrendCell.class)];
+    cell.model = self.model.day30_lists[indexPath.row];
     return cell;
 }
+
 @end

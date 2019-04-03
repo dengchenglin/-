@@ -195,8 +195,8 @@
     //我的信息
     [self.headView.iconImageView addActionWithBlock:^(id  _Nonnull target) {
         @strongify(self)
-//        UIViewController *vc = [[CTModuleManager userInfoService] viewControllerForUserId:nil];
-//        [self.navigationController pushViewController:vc animated:YES];
+        UIViewController *vc = [[CTModuleManager userInfoService] viewControllerForUserId:nil];
+        [self.navigationController pushViewController:vc animated:YES];
     }];
     //收益排行
     [self.earnView.earnButton touchUpInsideSubscribeNext:^(id x) {
@@ -289,25 +289,10 @@
         [self.navigationController pushViewController:vc animated:YES];
     }];
     
-    //跳转到提现页面
-    void(^withdrawBlock)(void) = ^{
-        @strongify(self)
-        UIViewController *vc = [[CTModuleManager withdrawService] rootViewController];
-        [self.navigationController pushViewController:vc animated:YES];
-    };
     //提现
     [self.earnView.withdrawButton touchUpInsideSubscribeNext:^(id x) {
-        if([CTAppManager user].ishas_cash_account){
-            withdrawBlock();
-        }
-        else{
-            [[CTModuleManager loginService] pushBoundAlipayFromViewController:self completed:^{
-                @strongify(self)
-                [self.navigationController popToViewController:self animated:YES];
-                
-                withdrawBlock();
-            }];
-        }
+        @strongify(self)
+       [[CTModuleManager withdrawService] pushCashFromViewController:self];
         
     }];
     //导航渐变效果

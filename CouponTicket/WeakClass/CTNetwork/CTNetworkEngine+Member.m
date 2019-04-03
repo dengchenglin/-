@@ -108,4 +108,20 @@
     [params setValue:imgStr forKey:@"imgs"];
     return [self postWithPath:CTUser(@"view_save") params:params callback:callback];
 }
+
+//收益明细
+- (CLRequest *)incomeDetailWithCallback:(CTResponseBlock)callback{
+    return [self postWithPath:CTUser(@"income_detail") params:nil callback:callback];
+}
+//收益走势
+- (CLRequest *)incomeTrendWithCallback:(CTResponseBlock)callback{
+     return [self postWithPath:CTUser(@"income_trend") params:nil callback:callback];
+}
+//用户详情
+- (CLRequest *)teamUserDetailWithUid:(NSString *)uid callback:(CTResponseBlock)callback{
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    [params setValue:uid forKey:@"uid"];
+    return [self postWithPath:CTUser(@"team_user_detail") params:params callback:callback];
+}
+
 @end

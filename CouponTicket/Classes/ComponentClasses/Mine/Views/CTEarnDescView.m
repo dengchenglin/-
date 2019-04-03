@@ -10,5 +10,11 @@
 
 @implementation CTEarnDescView
 
+- (void)setModel:(CTMyEarnModel *)model{
+    _model = model;
+    _balanceLabel.text = _model.money;
+    _lastMonthProfitLabel.text = [NSString stringWithFormat:@"¥%@",_model.lm_all_money];
+    _totalProfitLabel.text = [NSString stringWithFormat:@"¥%@",_model.all_money];
+}
 
 @end

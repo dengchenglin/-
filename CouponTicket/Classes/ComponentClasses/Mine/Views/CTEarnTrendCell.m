@@ -10,15 +10,12 @@
 
 @implementation CTEarnTrendCell
 
-- (void)awakeFromNib {
-    [super awakeFromNib];
-    // Initialization code
-}
-
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
+- (void)setModel:(CTEarnIndexModel *)model{
+    _model = model;
+    _dateLabel.text = _model.date;
+    _profitLabel.text = [NSString stringWithFormat:@"¥%@",_model.money];
+    _contributionLabel.text = [NSString stringWithFormat:@"¥%@",_model.branch_money];
+    _countLabel.text = _model.order_num;
 }
 
 @end

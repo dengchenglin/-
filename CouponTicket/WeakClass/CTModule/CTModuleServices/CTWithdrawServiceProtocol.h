@@ -12,4 +12,6 @@
 
 @protocol CTWithdrawServiceProtocol <NSObject,CLModuleServiceProtocol>
 
+- (UIViewController *)pushCashFromViewController:(UIViewController *)viewController;
+
 @end

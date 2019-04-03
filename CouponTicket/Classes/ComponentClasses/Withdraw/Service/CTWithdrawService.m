@@ -18,4 +18,21 @@ CL_EXPORT_MODULE(CTWithdrawServiceProtocol)
     return [CTWithdrawViewController new];
 }
 
+- (UIViewController *)pushCashFromViewController:(UIViewController *)viewController{
+    CTWithdrawViewController *vc = [CTWithdrawViewController new];
+    void(^cashBlock)(void) = ^{
+        [viewController.navigationController pushViewController:vc animated:YES];
+    };
+    if([CTAppManager user].ishas_cash_account){
+        cashBlock();
+    }
+    else{
+        [[CTModuleManager loginService] pushBoundAlipayFromViewController:viewController completed:^{
+            [viewController.navigationController popToViewController:viewController animated:YES];
+            cashBlock();
+        }];
+    }
+    return vc;
+}
+
 @end

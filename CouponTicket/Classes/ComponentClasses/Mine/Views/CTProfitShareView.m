@@ -31,6 +31,7 @@
 }
 - (void)setUsericon:(NSString *)usericon{
     _usericon = usericon;
+    [_userheadImageView sd_setImageWithURL:[NSURL URLWithString:_usericon]];
 }
 - (void)setUserlevel:(NSString *)userlevel{
     _userlevel = userlevel;
@@ -38,15 +39,28 @@
 }
 - (void)setProfit:(NSString *)profit{
     _profit = profit;
-    NSString *str = [NSString stringWithFormat:@"还赚了%@元",_profit];
-    NSMutableAttributedString *string = [[NSMutableAttributedString alloc] initWithString:str];
-    [string addAttributes:@{NSFontAttributeName:CTPsbFont(45)} range:[str rangeOfString:_profit]];
-    _attractiveProfitLabel.attributedText = string;
+    if([_profit floatValue]){
+        NSString *str = [NSString stringWithFormat:@"还赚了%@元",_profit];
+        NSMutableAttributedString *string = [[NSMutableAttributedString alloc] initWithString:str];
+        [string addAttributes:@{NSFontAttributeName:CTPsbFont(45)} range:[str rangeOfString:_profit]];
+        _attractiveProfitLabel.attributedText = string;
+        _attractiveProfitLabel.hidden = NO;
+    }
+    else{
+        _attractiveProfitLabel.hidden = YES;
+    }
+
 }
 - (void)setBalance:(NSString *)balance{
     _balance = balance;
-    NSString *str = [NSString stringWithFormat:@"还有%@元即将到账",_balance];
-    _attractiveBalanceLabel.text = str;
+    if(_balance.integerValue){
+        _attractiveBalanceLabel.hidden = NO;
+        NSString *str = [NSString stringWithFormat:@"还有%@元即将到账",_balance];
+        _attractiveBalanceLabel.text = str;
+    }
+    else{
+        _attractiveBalanceLabel.hidden = YES;
+    }
 }
 
 - (void)setQrCode:(NSString *)qrCode{

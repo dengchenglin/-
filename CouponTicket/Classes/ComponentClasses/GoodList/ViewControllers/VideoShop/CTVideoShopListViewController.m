@@ -68,26 +68,16 @@
     
 }
 
-- (void)viewWillAppear:(BOOL)animated{
-    [super viewWillAppear:animated];
-    //[self resumeVideo];
-}
 - (void)viewDidDisappear:(BOOL)animated{
     [super viewDidDisappear:animated];
-    //[self pauseVideo];
+    [self pauseVideo];
 }
 
 - (void)request{
     [[JPVideoPlayerManager sharedManager]stopPlay];
     _currentIndexPath = nil;
     [CTRequest videoBuyGoodsWithPage:self.pageIndex size:self.pageSize cateId:self.cateId order:GetGoodsOrderStr(self.sortView.currentType) callback:^(id data, CLRequest *request, CTNetError error) {
-        [self.tableView endRefreshing];
-//        [self analysisAndReloadWithData:data error:error modelClass:CTGoodsModel.class viewModelClass:CTGoodsViewModel.class];
-   
-        for(int i = 0;i < 20;i ++){
-            [self.dataSources addObject:[CTGoodsViewModel new]];
-        }
-        [self.tableView reloadData];
+        [self analysisAndReloadWithData:data error:error modelClass:CTGoodsModel.class viewModelClass:CTGoodsViewModel.class];
     }];
 }
 
@@ -107,6 +97,11 @@
             [cell stopPlay];
         }
     }
+    else{
+        if(![indexPath isEqual:_currentIndexPath]){
+            [cell removeVideoView];
+        }
+    }
     return cell;
 }
 
@@ -116,12 +111,16 @@
 }
 
 #pragma mark - CTVideoGoodListCellDelegate
+//触发播放
 - (void)didClickVideoWithIndexPath:(NSIndexPath *)indexPath{
+    [self removeCurrentVideo];//先停止当前播放的cell
     _currentIndexPath = indexPath;
     CTVideoGoodListCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
     cell.playButton.selected = YES;
-    [cell.playButton jp_playVideoWithURL:[NSURL URLWithString:@"http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"]bufferingIndicator:nil controlView:nil progressView:nil configuration:nil];
+    [cell.playButton jp_playVideoWithURL:[NSURL URLWithString:self.dataSources[indexPath.row].model.video] bufferingIndicator:nil controlView:nil progressView:nil configuration:nil];
     cell.playButton.jp_videoPlayerDelegate = self;
+    
+    //防止cell状态被重用，事先还原所有未播放cell的状态
     NSArray <CTVideoGoodListCell *>*cells = [self.tableView visibleCells];
     for(CTVideoGoodListCell *cell in cells){
         if(![cell.indexPath isEqual:_currentIndexPath]){
@@ -130,6 +129,7 @@
     }
 }
 
+//滑动过程中检测cell是否有被回收 如果有则停止所有播放
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
     if(!_currentIndexPath)return;//如果没有任何播放的视频直接返回
     NSArray <CTVideoGoodListCell *>*cells = [self.tableView visibleCells];
@@ -145,11 +145,12 @@
         //如果不可见 停止播放器
         //还原播放视图的状态并删除对应的播放器View
          NSLog(@"播放的cell被回收了.....");
-        [self removeAllVideoCell];
+        [self stopAllVideoCell];
        
     }
 }
-- (void)removeAllVideoCell{
+//停止所有播放cell （手动调用）
+- (void)stopAllVideoCell{
     NSArray <CTVideoGoodListCell *>*cells = [self.tableView visibleCells];
     for(CTVideoGoodListCell *cell in cells){
         [cell stopPlay];
@@ -160,33 +161,38 @@
     }
 }
 
-- (void)resumeVideo{
-    for(int i = 0;i < self.dataSources.count;i ++){
-        CTGoodsViewModel *viewModel = self.dataSources[i];
-        if(viewModel.isPlay){
-            CTVideoGoodListCell *cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:1 inSection:0]];
-            [cell.playButton jp_resume];
-        }
+//还原播放cell的状态 (内部因素导致播放停止时需要调用)
+- (void)resetAllVideoCellStatus{
+    NSArray <CTVideoGoodListCell *>*cells = [self.tableView visibleCells];
+    for(CTVideoGoodListCell *cell in cells){
+        [cell removeVideoView];
+    }
+    _currentIndexPath = nil;
+    for(CTGoodsViewModel *viewModel in self.dataSources){
+        viewModel.isPlay = NO;
     }
 }
+//停止当前播放的cell
+- (void)removeCurrentVideo{
+    if(_currentIndexPath){
+        CTVideoGoodListCell *cell = [self.tableView cellForRowAtIndexPath:_currentIndexPath];
+        [cell stopPlay];
+    }
+}
+
+//暂停当前播放的cell
 - (void)pauseVideo{
-    for(int i = 0;i < self.dataSources.count;i ++){
-        CTGoodsViewModel *viewModel = self.dataSources[i];
-        if(viewModel.isPlay){
-            CTVideoGoodListCell *cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:1 inSection:0]];
-            [cell.playButton jp_pause];
-        }
+    if(_currentIndexPath){
+         CTVideoGoodListCell *cell = [self.tableView cellForRowAtIndexPath:_currentIndexPath];
+        [cell.playButton jp_pause];
     }
 }
 
-
+//播放器内部因素导致播放停止（网络错误，音频出错，播放结束等）
 - (void)playerStatusDidChanged:(JPVideoPlayerStatus)playerStatus{
     if(playerStatus == JPVideoPlayerStatusStop){
-        [self removeAllVideoCell];
+        [self resetAllVideoCellStatus];
     }
 }
-- (void)playVideoFailWithError:(NSError *)error
-                      videoURL:(NSURL *)videoURL{
-    NSLog(@"%@",error);
-}
+
 @end

@@ -7,7 +7,10 @@
 //
 
 #import "CTBaseViewController.h"
+#import "CTMyEarnModel.h"
 
 @interface CTProfitShareViewController : CTBaseViewController
+
+@property (nonatomic, strong) CTMyEarnModel *model;
 
 @end

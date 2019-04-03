@@ -12,11 +12,30 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="jxB-HI-aqe" customClass="CTThirtyTrendView">
-            <rect key="frame" x="0.0" y="0.0" width="441" height="294"/>
+            <rect key="frame" x="0.0" y="0.0" width="413" height="1"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3wJ-nI-WQA">
+                    <rect key="frame" x="0.0" y="0.0" width="413" height="1"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="8O5-fj-qQa"/>
+                    </constraints>
+                </webView>
+            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="3wJ-nI-WQA" secondAttribute="bottom" id="4kt-Dy-dkL"/>
+                <constraint firstAttribute="trailing" secondItem="3wJ-nI-WQA" secondAttribute="trailing" id="8fP-2g-pKS"/>
+                <constraint firstItem="3wJ-nI-WQA" firstAttribute="top" secondItem="jxB-HI-aqe" secondAttribute="top" id="BP6-KS-1GS"/>
+                <constraint firstItem="3wJ-nI-WQA" firstAttribute="leading" secondItem="jxB-HI-aqe" secondAttribute="leading" id="JGp-lw-T7c"/>
+            </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="261" y="242"/>
+            <connections>
+                <outlet property="contentHeight" destination="8O5-fj-qQa" id="3bh-JE-NcW"/>
+                <outlet property="webView" destination="3wJ-nI-WQA" id="NZr-Ea-v2U"/>
+            </connections>
+            <point key="canvasLocation" x="31.5" y="91.5"/>
         </view>
     </objects>
 </document>

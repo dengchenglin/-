@@ -7,12 +7,10 @@
 //
 
 #import "CTProfitShareViewController.h"
-
 #import "CTProfitShareView.h"
-
 #import "CTSharePopView.h"
-
 #import "UIView+YYAdd.h"
+#import "CTNetworkEngine+Member.h"
 
 @interface CTProfitShareViewController ()
 
@@ -43,8 +41,14 @@
 }
 
 - (void)reloadView{
-    self.shareView.profit = @"105.1";
-    self.shareView.balance = @"15.09";
+    NSString *qCodeUrl = [CTRequest qCodeUrl];
+    [self.shareView.qrCodeImageView sd_setImageWithURL:[NSURL URLWithString:qCodeUrl]];
+    self.shareView.qrCodeLabel.text = [NSString stringWithFormat:@"邀请码 %@",[CTAppManager user].iv_code];
+    self.shareView.usericon = [CTAppManager user].headimg;
+    self.shareView.username = [CTAppManager user].nickname;
+    self.shareView.userlevel = [CTAppManager user].level_txt;
+    self.shareView.profit = _model.all_money;
+    self.shareView.balance = _model.cashing_money;
 }
 
 - (void)share{

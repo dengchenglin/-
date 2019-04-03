@@ -10,12 +10,9 @@
 
 @implementation CTThirtyProfitView
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
+- (void)setModel:(CTEarnTrendModel *)model{
+    _model = model;
+    _profitLabel.text = [NSString stringWithFormat:@"%@元",_model.day30_money];
 }
-*/
 
 @end

@@ -64,12 +64,16 @@
     [self.tableView reloadData];
 }
 
+- (void)reloadData{
+    [self.tableView reloadData];
+}
+
 #pragma mark - UITableViewDelegate
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return self.configs.count;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-    return self.configs[section].sectionHeight;
+    return self.configs[section].sectionHeight?:0.00001;
 }
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
     return self.configs[section].sectioView;

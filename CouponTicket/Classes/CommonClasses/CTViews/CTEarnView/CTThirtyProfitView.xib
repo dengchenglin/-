@@ -19,7 +19,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="397" height="65"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CQ5-rh-2Nb">
-                            <rect key="frame" x="122.5" y="18" width="152.5" height="30"/>
+                            <rect key="frame" x="126.5" y="18" width="144.5" height="30"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="近30天预估收益" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CJB-xx-EGB">
                                     <rect key="frame" x="0.0" y="5" width="101" height="20"/>
@@ -27,8 +27,8 @@
                                     <color key="textColor" red="0.078431372549019607" green="0.078431372549019607" blue="0.078431372549019607" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="288.0元" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6zB-mi-J1v">
-                                    <rect key="frame" x="101" y="5" width="51.5" height="20"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00元" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6zB-mi-J1v">
+                                    <rect key="frame" x="101" y="5" width="43.5" height="20"/>
                                     <fontDescription key="fontDescription" name="PingFangSC-Medium" family="PingFang SC" pointSize="14"/>
                                     <color key="textColor" red="1" green="0.38039215686274508" blue="0.14117647058823529" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="highlightedColor" red="1" green="0.38039215686274508" blue="0.14117647058823529" alpha="1" colorSpace="calibratedRGB"/>
@@ -60,7 +60,10 @@
                 <constraint firstItem="xjd-9K-MaE" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="vGc-6M-X0s"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="42.5" y="310.5"/>
+            <connections>
+                <outlet property="profitLabel" destination="6zB-mi-J1v" id="8s8-2z-YBu"/>
+            </connections>
+            <point key="canvasLocation" x="-159" y="229"/>
         </view>
     </objects>
 </document>

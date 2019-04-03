@@ -16,9 +16,15 @@
 
 #import "CTEarnTimeView.h"
 
+#import "CLContainerView.h"
+
+#import "CTNetworkEngine+Member.h"
+
 #import "CTProfitShareViewController.h"
 
 @interface CTEarnDetailViewController ()
+
+@property (nonatomic, strong) CLContainerView *containerView;
 
 @property (nonatomic, strong) CTEarnDescView *descView;
 
@@ -32,9 +38,19 @@
 
 @property (nonatomic, strong) CTEarnTimeView *lastMonthView;
 
+@property (nonatomic, strong) CTMyEarnModel *model;
+
 @end
 
 @implementation CTEarnDetailViewController
+
+- (CLContainerView *)containerView{
+    if(!_containerView){
+        _containerView = [[CLContainerView alloc]init];
+        _containerView.backgroundColor = CTBackGroundGrayColor;
+    }
+    return _containerView;
+}
 
 - (CTEarnDescView *)descView{
     if(!_descView){
@@ -83,80 +99,121 @@
     self.title = @"收益明细";
     self.navigationBarStyle = CTNavigationBarWhite;
     [self setRightButtonWithTitle:@"分享" font:[UIFont systemFontOfSize:14] titleColor:RGBColor(20, 20, 20) selector:@selector(share)];
-    self.scrollViewAvailable = YES;
-    self.scrollView.backgroundColor = CTBackGroundGrayColor;
-    [self.autoLayoutContainerView addSubview:self.descView];
-    [self.autoLayoutContainerView addSubview:self.trendView];
-    [self.autoLayoutContainerView addSubview:self.todayView];
-    [self.autoLayoutContainerView addSubview:self.yesterdayView];
-    [self.autoLayoutContainerView addSubview:self.thisMonthView];
-    [self.autoLayoutContainerView addSubview:self.lastMonthView];
+    [self.view addSubview:self.containerView];
+
 }
 
 - (void)autoLayout{
-    [self.descView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.left.right.mas_equalTo(0);
-        make.height.mas_equalTo(258);
+    [self.containerView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.mas_equalTo(UIEdgeInsetsZero);
     }];
-    [self.trendView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(self.descView.mas_bottom).offset(10);
-        make.left.right.mas_equalTo(0);
-        make.height.mas_equalTo(235);
+}
+
+- (void)request{
+    [CTRequest incomeDetailWithCallback:^(id data, CLRequest *request, CTNetError error) {
+        [self.containerView.tableView endRefreshing];
+        if(!error){
+            self.model = [CTMyEarnModel yy_modelWithDictionary:data];
+            [self reloadView];
+        }
     }];
-    [self.todayView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(self.trendView.mas_bottom).offset(10);
-        make.left.right.mas_equalTo(0);
-        make.height.mas_equalTo(127);
-    }];
-    [self.yesterdayView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(self.todayView.mas_bottom).offset(10);
-        make.left.right.mas_equalTo(0);
-        make.height.mas_equalTo(127);
-    }];
-    [self.thisMonthView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(self.yesterdayView.mas_bottom).offset(10);
-        make.left.right.mas_equalTo(0);
-        make.height.mas_equalTo(127);
-    }];
-    [self.lastMonthView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(self.thisMonthView.mas_bottom).offset(10);
-        make.left.right.mas_equalTo(0);
-        make.height.mas_equalTo(127);
-        make.bottom.mas_equalTo(-10);
-    }];
+}
+
+- (void)reloadView{
+    [self.containerView removeAllObjects];
+    if(self.model){
+        @weakify(self)
+       
+        [self.containerView addConfig:^(CLSectionConfig *config) {
+            @strongify(self)
+            config.sectioView = self.descView;
+            config.sectionHeight = 258;
+            config.space = 10;
+        }];
+        [self.containerView addConfig:^(CLSectionConfig *config) {
+            @strongify(self)
+            config.sectioView = self.trendView;
+            config.sectionHeight = 1;//保证webView能加载内容
+            config.space = 0;
+            __weak CLSectionConfig *weakConfig = config;
+            [self.trendView setHeightDidChangeBlock:^(CGFloat height) {
+                @strongify(self)
+                weakConfig.sectionHeight = height;
+                weakConfig.space = height?10:0;
+                [self.containerView reloadData];
+            }];
+        }];
+        if(self.model.today){
+            [self.containerView addConfig:^(CLSectionConfig *config) {
+                @strongify(self)
+                config.sectioView = self.todayView;
+                config.sectionHeight = 127;
+                config.space = 10;
+            }];
+        }
+        if(self.model.yesterday){
+            [self.containerView addConfig:^(CLSectionConfig *config) {
+                @strongify(self)
+                config.sectioView = self.yesterdayView;
+                config.sectionHeight = 127;
+                config.space = 10;
+            }];
+        }
+        if(self.model.month){
+            [self.containerView addConfig:^(CLSectionConfig *config) {
+                @strongify(self)
+                config.sectioView = self.thisMonthView;
+                config.sectionHeight = 127;
+                config.space = 10;
+            }];
+        }
+        if(self.model.last_month){
+            [self.containerView addConfig:^(CLSectionConfig *config) {
+                @strongify(self)
+                config.sectioView = self.lastMonthView;
+                config.sectionHeight = 127;
+                config.space = 10;
+            }];
+        }
+        
+        self.descView.model = self.model;
+        self.trendView.url = self.model.trend_chart_url;
+        self.todayView.info = self.model.today;
+        self.yesterdayView.info = self.model.yesterday;
+        self.thisMonthView.info = self.model.month;
+        self.lastMonthView.info = self.model.last_month;
+    }
 }
 
 - (void)setUpEvent{
     @weakify(self)
+    [self.containerView.tableView addHeaderRefreshWithCallBack:^{
+        @strongify(self)
+        [self request];
+    }];
     [self.trendView.headView addActionWithBlock:^(id target) {
         @strongify(self)
         CTEarnTrendViewController *vc = [[CTEarnTrendViewController alloc]init];
+        
         [self.navigationController pushViewController:vc animated:YES];
     }];
-    void(^withdrawBlock)(void) = ^{
-        @strongify(self)
-        UIViewController *vc = [[CTModuleManager withdrawService] rootViewController];
-        [self.navigationController pushViewController:vc animated:YES];
-    };
     [self.descView.withdrawButton touchUpInsideSubscribeNext:^(id x) {
-        if([CTAppManager user].ishas_cash_account){
-            withdrawBlock();
-        }
-        else{
-            [[CTModuleManager loginService] pushBoundAlipayFromViewController:self completed:^{
-                @strongify(self)
-                [self.navigationController popToViewController:self animated:YES];
-                
-                withdrawBlock();
-            }];
-        }
+        @strongify(self)
+        [[CTModuleManager withdrawService] pushCashFromViewController:self];
         
     }];
 
 }
 - (void)share{
-    CTProfitShareViewController *vc = [[CTProfitShareViewController alloc]init];
-    [self.navigationController pushViewController:vc animated:YES];
+    if([self.model.all_money integerValue]){
+        CTProfitShareViewController *vc = [[CTProfitShareViewController alloc]init];
+        vc.model = _model;
+        [self.navigationController pushViewController:vc animated:YES];
+    }
+    else{
+        [[CTModuleManager shareService] pushShareFromViewController:self];
+    }
+ 
 }
 
 @end

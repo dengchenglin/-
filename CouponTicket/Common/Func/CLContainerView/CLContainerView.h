@@ -28,4 +28,5 @@
 
 - (void)addConfig:(void(^)(CLSectionConfig *config))config;
 
+- (void)reloadData;
 @end
