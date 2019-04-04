@@ -17,7 +17,7 @@
 @end
 @implementation CTMemberInfoModel
 + (NSDictionary *)modelContainerPropertyGenericClass{
-    return @{@"user":CTUser.class,@"user_rebate":CTMemberRebateModel.class,@"grade_power":CTMemberGradePowerModel.class,@"upgrade_condition":CTMemberUpgradeConditionModel.class};
+    return @{@"user":CTUser.class,@"user_rebate":CTMemberRebateModel.class,@"grade_power":CTMemberGradePowerModel.class,@"upgrade_condition":CTMemberUpgradeConditionModel.class,@"advs":CTActivityModel.class};
 }
 
 - (BOOL)showUpgrade{

@@ -10,6 +10,7 @@
 
 @interface CTNavBar : UIView
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UIButton *backButton;
 @property (nonatomic, copy)NSString  *title;
 
 @end

@@ -18,6 +18,10 @@
 
 #import "CTEarnTrendCell.h"
 
+#import "CTNetworkEngine+Member.h"
+
+#import "CTUserInfoModel.h"
+
 @interface CTUserDetailViewController ()<UITableViewDataSource,UITableViewDelegate>
 
 @property (nonatomic, strong) CTUserInfoView *infoView;
@@ -31,6 +35,8 @@
 @property (nonatomic, strong) CTThirtyProfitHeadView *profitHeadView;
 
 @property (nonatomic, strong) UIView *headView;
+
+@property (nonatomic, strong) CTUserInfoModel *model;
 
 @end
 
@@ -80,13 +86,13 @@
 - (UIView *)headView{
     if(!_headView){
         _headView = [UIView new];
+        _headView.backgroundColor = CTBackGroundGrayColor;
         [_headView addSubview:self.infoView];
         [_headView addSubview:self.profitHeadView];
         [_headView addSubview:self.profitView];
         [_headView addSubview:self.trendView];
         [self.infoView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.left.right.mas_equalTo(0);
-            make.height.mas_equalTo(318);
         }];
         [self.profitHeadView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.mas_equalTo(self.infoView.mas_bottom);
@@ -101,7 +107,7 @@
         [self.trendView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.mas_equalTo(self.profitView.mas_bottom);
             make.left.right.mas_equalTo(0);
-            make.height.mas_equalTo(240);
+            make.bottom.mas_equalTo(-10);
         }];
      
     }
@@ -120,8 +126,29 @@
     }];
 }
 
+- (void)setUpEvent{
+    @weakify(self)
+    [self.trendView setHeightDidChangeBlock:^(CGFloat height) {
+        @strongify(self)
+        [self.tableView reloadData];
+    }];
+}
+
+- (void)request{
+    [CTRequest teamUserDetailWithUid:_userId callback:^(id data, CLRequest *request, CTNetError error) {
+        if(!error){
+            self.model = [CTUserInfoModel yy_modelWithDictionary:data];
+            self.infoView.user = self.model.user;
+            self.profitView.userInfo = self.model;
+            self.trendView.url = self.model.trend_chart_url;
+            [self.tableView reloadData];
+        }
+    }];
+}
+
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-    return 653;
+    CGFloat height = [self.headView systemLayoutSizeFittingSize:CGSizeMake(SCREEN_WIDTH, CGFLOAT_MAX)].height;
+    return height;
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
@@ -135,7 +162,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 30;
+    return self.model.day30_lists.count;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -144,6 +171,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     CTEarnTrendCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(CTEarnTrendCell.class)];
+    cell.model = self.model.day30_lists[indexPath.row];
     return cell;
 }
 @end

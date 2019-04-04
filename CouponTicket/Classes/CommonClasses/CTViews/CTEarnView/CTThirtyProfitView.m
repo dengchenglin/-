@@ -14,5 +14,9 @@
     _model = model;
     _profitLabel.text = [NSString stringWithFormat:@"%@元",_model.day30_money];
 }
+- (void)setUserInfo:(CTUserInfoModel *)userInfo{
+    _userInfo = userInfo;
+     _profitLabel.text = [NSString stringWithFormat:@"%@元",_userInfo.day30_money];
+}
 
 @end

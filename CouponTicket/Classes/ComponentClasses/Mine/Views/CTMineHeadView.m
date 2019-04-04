@@ -9,7 +9,10 @@
 #import "CTMineHeadView.h"
 
 @implementation CTMineHeadView
-
+- (void)awakeFromNib{
+    [super awakeFromNib];
+    _memberView.layer.contents = (__bridge id)[UIImage imageNamed:@"pic_equity3"].CGImage;
+}
 - (void)setUser:(CTUser *)user{
     _user = user;
     [_iconImageView sd_setImageWithURL:[NSURL URLWithString:_user.headimg] placeholderImage:[UIImage imageNamed:@"pic_head_placeholder"]];

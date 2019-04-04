@@ -16,4 +16,6 @@
 
 @property (nonatomic, copy) NSArray <NSString *>*imgs;
 
+@property (nonatomic, copy) void(^clickItemBlock)(NSInteger index);
+
 @end

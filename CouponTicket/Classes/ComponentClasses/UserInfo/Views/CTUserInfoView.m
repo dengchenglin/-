@@ -7,15 +7,86 @@
 //
 
 #import "CTUserInfoView.h"
+#import "CTUserInfoItem.h"
+@interface CTUserInfoView ()
+@property (weak, nonatomic) IBOutlet UIView *otherInfoView;
+
+@end
 
 @implementation CTUserInfoView
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
+- (void)awakeFromNib{
+    [super awakeFromNib];
+    [self.otherInfoView mas_updateConstraints:^(MASConstraintMaker *make) {
+        make.height.mas_equalTo(0);
+    }];
 }
-*/
+
+- (void)setUser:(CTUser *)user{
+    _user = user;
+    [_userheadImageView sd_setImageWithURL:[NSURL URLWithString:_user.headimg]];
+    _usernameLabel.text = _user.nickname;
+    _userlevelLabel.text = _user.level_txt;
+    _userkindLabel.text = _user.fx_txt;
+    _userkindLabel.hidden = !_user.fx_txt.length;
+}
+
+- (void)reloadView{
+    [self.otherInfoView removeAllSubViews];
+    UIView *topView = nil;
+    CGFloat height = 0;
+    if(_user.phone.length){
+        CTUserInfoItem *item = NSMainBundleClass(CTUserInfoItem.class);
+        item.keyLabel.text = @"手机号";
+        item.valueLabel.text = _user.phone;
+        [self.otherInfoView addSubview:item];
+        [item mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.mas_equalTo(0);
+            make.left.right.mas_equalTo(0);
+            make.height.mas_equalTo(44);
+        }];
+        topView = item;
+        height += 44;
+    }
+    if(_user.weixin.length){
+        CTUserInfoItem *item = NSMainBundleClass(CTUserInfoItem.class);
+        item.keyLabel.text = @"微信号";
+        item.valueLabel.text = _user.weixin;
+        [self.otherInfoView addSubview:item];
+        [item mas_makeConstraints:^(MASConstraintMaker *make) {
+            if(topView){
+                make.top.mas_equalTo(topView.mas_bottom);
+            }
+            else{
+                make.top.mas_equalTo(0);
+            }
+            make.left.right.mas_equalTo(0);
+            make.height.mas_equalTo(44);
+        }];
+        topView = item;
+        height += 44;
+    }
+    if(_user.qq.length){
+        CTUserInfoItem *item = NSMainBundleClass(CTUserInfoItem.class);
+        item.keyLabel.text = @"QQ号";
+        item.valueLabel.text = _user.qq;
+        [self.otherInfoView addSubview:item];
+        [item mas_makeConstraints:^(MASConstraintMaker *make) {
+            if(topView){
+                make.top.mas_equalTo(topView.mas_bottom);
+            }
+            else{
+                make.top.mas_equalTo(0);
+            }
+            make.left.right.mas_equalTo(0);
+            make.height.mas_equalTo(44);
+        }];
+        topView = item;
+        height += 44;
+    }
+    [self.otherInfoView mas_updateConstraints:^(MASConstraintMaker *make) {
+        make.height.mas_equalTo(height);
+    }];
+}
 
 @end

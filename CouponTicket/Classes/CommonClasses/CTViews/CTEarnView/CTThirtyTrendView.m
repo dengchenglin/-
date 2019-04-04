@@ -19,6 +19,7 @@
 ViewInstance(setUp)
 
 - (void)setUp{
+    self.contentHeight.constant = 0;
     @weakify(self)
     [RACObserve(self.webView.scrollView, contentSize) subscribeNext:^(id  _Nullable x) {
         @strongify(self)
@@ -35,6 +36,9 @@ ViewInstance(setUp)
     self.contentHeight.constant = _url.length?1:0;
     [self.superview layoutIfNeeded];
     [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:_url]]];
+    if(self.heightDidChangeBlock){
+        self.heightDidChangeBlock(self.contentHeight.constant);
+    }
 }
 
 @end

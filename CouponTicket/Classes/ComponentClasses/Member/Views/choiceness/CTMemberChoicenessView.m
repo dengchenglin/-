@@ -12,6 +12,8 @@
 
 #import "CTMemberChoicenessCell.h"
 
+#import "UIView+YYAdd.h"
+
 @interface CTMemberChoicenessView()<SDCycleScrollViewDelegate>
 
 @property (nonatomic, strong) SDCycleScrollView *cycleScrollView;
@@ -37,6 +39,23 @@ ViewInstance(setUp)
     _cycleScrollView.delegate = self;
     _cycleScrollView.pageControlStyle = SDCycleScrollViewPageContolStyleAnimated;
     _cycleScrollView.autoScrollTimeInterval = 5.0;
+ 
+    _cycleScrollView.pageControlDotSize = CGSizeMake(7, 7);
+    
+    UIView *currentPageDotView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 10, 10)];
+    currentPageDotView.opaque = 0;
+    currentPageDotView.layer.cornerRadius = 5;
+    currentPageDotView.backgroundColor = RGBColor(255, 97, 36);
+    UIImage *currentPageDotImage = [currentPageDotView snapshotImage];
+    
+    UIView *pageDotView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 10, 10)];
+    pageDotView.opaque = 0;
+    pageDotView.layer.cornerRadius = 5;
+    pageDotView.backgroundColor = RGBAColor(20, 20, 20, 0.2);
+    UIImage *pageDotImage = [pageDotView snapshotImage];
+    
+    _cycleScrollView.currentPageDotImage = currentPageDotImage;
+    _cycleScrollView.pageDotImage = pageDotImage;
     [self addSubview:_cycleScrollView];
     [_cycleScrollView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(self.titleView.mas_bottom);
@@ -52,17 +71,19 @@ ViewInstance(setUp)
 }
 
 - (UINib *)customCollectionViewCellNibForCycleScrollView:(SDCycleScrollView *)view{
-    return [UINib nibWithNibName:NSStringFromClass(CTMemberChoicenessCell.class) bundle:nil];
+    return [UINib nibWithNibName:NSStringFromClass(CTMemberChoicenessCell.class) bundle:nil];
 }
 
 - (void)setupCustomCell:(UICollectionViewCell *)cell forIndex:(NSInteger)index cycleScrollView:(SDCycleScrollView *)view{
     CTMemberChoicenessCell *myCell = (CTMemberChoicenessCell *)cell;
-    [myCell.imageView cl_setImageWithImg:[UIImage imageWithColor:RGBColor(245, 245, 245)]];
+    [myCell.imageView cl_setImageWithImg:self.imgs[index]];
 }
 
 
 - (void)cycleScrollView:(SDCycleScrollView *)cycleScrollView didSelectItemAtIndex:(NSInteger)index{
-    
+    if(self.clickItemBlock){
+        self.clickItemBlock(index);
+    }
 }
 
 @end

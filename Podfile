@@ -26,9 +26,12 @@ target 'CouponTicket' do
   pod 'UMCSecurityPlugins'
   pod 'UMCShare/Social/ReducedWeChat'
   pod 'UMCShare/Social/ReducedQQ'
+  pod 'UMCPush'
+  
   pod 'SGQRCode', '~> 3.0.1'
   
   pod 'Qiniu',              '~> 7.2'
   
   pod 'JPVideoPlayer'
+  
 end

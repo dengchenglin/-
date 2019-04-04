@@ -13,8 +13,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *userlevelLabel;
 @property (weak, nonatomic) IBOutlet UILabel *usernameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *userkindLabel;
-@property (weak, nonatomic) IBOutlet UILabel *phoneLabel;
-@property (weak, nonatomic) IBOutlet UILabel *wechatLabel;
-@property (weak, nonatomic) IBOutlet UILabel *qqLabel;
 
+@property (nonatomic, strong) CTUser *user;
 @end

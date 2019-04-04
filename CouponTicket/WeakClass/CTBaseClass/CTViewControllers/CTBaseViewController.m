@@ -150,7 +150,6 @@
     }
     [self configureNavBar];
    
-    
 }
 
 
@@ -307,6 +306,7 @@
         self.navigationItem.leftBarButtonItem = nil;
     }
 }
+
 - (void)initialize{}
 
 - (void)setUpUI{}
@@ -324,6 +324,7 @@
 - (void)bindViewModel{}
 
 - (void)reloadData:(id)data{};
+
 
 
 @end

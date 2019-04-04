@@ -20,6 +20,7 @@
 @property (nonatomic, assign) NSInteger level;
 @property (nonatomic, copy) NSString *create_at;
 @property (nonatomic, copy) NSString *level_txt;
+@property (nonatomic, copy) NSString *fx_txt;
 @property (nonatomic, copy) NSString *tbk_relation_id;
 @property (nonatomic, copy) NSString *tbk_account_name;
 @property (nonatomic, copy) NSString *pid;
@@ -29,6 +30,8 @@
 @property (nonatomic, assign) BOOL ishas_cash_account;
 @property (nonatomic, copy) NSString *cash_account;
 @property (nonatomic, copy) NSString *cash_name;
+@property (nonatomic, copy) NSString *qq;
+@property (nonatomic, copy) NSString *weixin;
 @end
 
 @interface CTAppManager : NSObject
@@ -38,6 +41,8 @@
 @property (nonatomic, strong,readonly) CTUser *user;
 
 @property (nonatomic, copy,readonly) NSString *token;
+
+@property (nonatomic, copy) NSString *apns_token;
 
 SINGLETON_FOR_CLASS_DEF
 

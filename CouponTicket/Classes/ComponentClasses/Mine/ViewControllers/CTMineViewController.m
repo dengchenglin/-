@@ -127,7 +127,7 @@
         make.height.mas_equalTo(NAVBAR_HEIGHT);
     }];
     [self.navItemView mas_makeConstraints:^(MASConstraintMaker *make) {
-        CGFloat top = (188 + NAVBAR_TOP)/2 - 35;
+        CGFloat top = (130 + NAVBAR_TOP)/2 - 35;
         make.top.mas_equalTo(top);
         make.size.mas_equalTo(CGSizeMake(72, 30));
         make.right.mas_equalTo(-15);
@@ -192,10 +192,15 @@
         @strongify(self)
         [self request];
     }];
+    [self.headView.memberView addActionWithBlock:^(id target) {
+        @strongify(self)
+        UIViewController *vc = [[CTModuleManager memberService]rootViewController];
+        [self.navigationController pushViewController:vc animated:YES];
+    }];
     //我的信息
     [self.headView.iconImageView addActionWithBlock:^(id  _Nonnull target) {
         @strongify(self)
-        UIViewController *vc = [[CTModuleManager userInfoService] viewControllerForUserId:nil];
+        UIViewController *vc = [[CTModuleManager userInfoService] viewControllerForUserId:[CTAppManager user].uid];
         [self.navigationController pushViewController:vc animated:YES];
     }];
     //收益排行
@@ -298,7 +303,7 @@
     //导航渐变效果
     [self.containerView setScrollBlock:^(CGPoint contentOffest) {
         @strongify(self)
-        CGFloat top = (188 + NAVBAR_TOP)/2 - 35;
+        CGFloat top = (130 + NAVBAR_TOP)/2 - 35;
         CGFloat endTop = NAVBAR_HEIGHT - 37;
         CGFloat nowTop = top - contentOffest.y;
         if(nowTop <= endTop){

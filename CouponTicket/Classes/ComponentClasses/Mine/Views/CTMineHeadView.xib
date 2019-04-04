@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -29,7 +29,7 @@
                             </constraints>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="---" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dhp-l4-zMa">
-                            <rect key="frame" x="75" y="7" width="29.5" height="22.5"/>
+                            <rect key="frame" x="75" y="8" width="29.5" height="22.5"/>
                             <fontDescription key="fontDescription" name="PingFangSC-Medium" family="PingFang SC" pointSize="16"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
@@ -40,13 +40,38 @@
                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hpi-Vi-34P">
+                            <rect key="frame" x="347" y="36" width="79.5" height="24"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="会员中心" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ch-4e-ebO">
+                                    <rect key="frame" x="15" y="5" width="49.5" height="14.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="2ch-4e-ebO" firstAttribute="leading" secondItem="hpi-Vi-34P" secondAttribute="leading" constant="15" id="1DL-St-NcJ"/>
+                                <constraint firstAttribute="trailing" secondItem="2ch-4e-ebO" secondAttribute="trailing" constant="15" id="3Zl-1X-z5R"/>
+                                <constraint firstItem="2ch-4e-ebO" firstAttribute="centerY" secondItem="hpi-Vi-34P" secondAttribute="centerY" id="TvR-Vb-jud"/>
+                                <constraint firstAttribute="height" constant="24" id="y9D-47-3Fm"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="12"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="Dhp-l4-zMa" firstAttribute="centerY" secondItem="yNf-wt-uDb" secondAttribute="centerY" constant="-11" id="4oV-5d-Gu5"/>
                         <constraint firstItem="2zf-ZU-Eay" firstAttribute="centerY" secondItem="yNf-wt-uDb" secondAttribute="centerY" constant="12" id="8jD-I3-4cv"/>
+                        <constraint firstItem="hpi-Vi-34P" firstAttribute="bottom" secondItem="1C7-Iv-SIA" secondAttribute="bottom" id="JAf-YB-zeU"/>
                         <constraint firstItem="Dhp-l4-zMa" firstAttribute="leading" secondItem="1C7-Iv-SIA" secondAttribute="trailing" constant="15" id="JhZ-2Q-hle"/>
                         <constraint firstItem="1C7-Iv-SIA" firstAttribute="centerY" secondItem="yNf-wt-uDb" secondAttribute="centerY" id="cyw-3g-64u"/>
+                        <constraint firstAttribute="trailing" secondItem="hpi-Vi-34P" secondAttribute="trailing" constant="0.5" id="dbv-WU-pgb"/>
                         <constraint firstItem="2zf-ZU-Eay" firstAttribute="leading" secondItem="Dhp-l4-zMa" secondAttribute="leading" id="mWi-ZI-HOH"/>
                         <constraint firstItem="1C7-Iv-SIA" firstAttribute="leading" secondItem="yNf-wt-uDb" secondAttribute="leading" id="uLe-cC-Z7N"/>
                         <constraint firstAttribute="height" constant="60" id="vUs-bL-eaB"/>
@@ -67,9 +92,10 @@
             <connections>
                 <outlet property="iconImageView" destination="1C7-Iv-SIA" id="JDl-m2-JIM"/>
                 <outlet property="jobLabel" destination="2zf-ZU-Eay" id="XRZ-nS-zZz"/>
+                <outlet property="memberView" destination="hpi-Vi-34P" id="doL-qF-Ih7"/>
                 <outlet property="nameLabel" destination="Dhp-l4-zMa" id="fOu-dA-pYL"/>
             </connections>
-            <point key="canvasLocation" x="197" y="-195.5"/>
+            <point key="canvasLocation" x="-971.20000000000005" y="-179.46026986506749"/>
         </view>
     </objects>
     <resources>

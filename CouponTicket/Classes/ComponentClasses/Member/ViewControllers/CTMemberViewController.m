@@ -63,6 +63,7 @@
 - (CTNavBar *)navBar{
     if(!_navBar){
         _navBar = NSMainBundleClass(CTNavBar.class);
+        _navBar.backButton.hidden = NO;
         _navBar.alpha = 0;
         _navBar.title = @"会员中心";
     }
@@ -138,7 +139,7 @@
 - (void)autoLayout{
     [self.containerView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.left.right.mas_equalTo(0);
-        make.height.mas_equalTo(SCREEN_HEIGHT - TABBAR_HEIGHT);
+        make.height.mas_equalTo(SCREEN_HEIGHT);
     }];
     [self.navBar mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.top.mas_equalTo(0);
@@ -212,14 +213,19 @@
         config.sectionHeight = [self.upgradeView systemLayoutSizeFittingSize:CGSizeMake(SCREEN_WIDTH, CGFLOAT_MAX)].height;
         config.space = 30;
     }:nil];
-//    //会员精选
-//    [self.containerView addConfig:^(CLSectionConfig *config) {
-//        @strongify(self)
-//        config.sectioView = self.choicenessView;
-//        self.choicenessView.imgs = @[@"",@"",@""];
-//        config.sectionHeight = [self.choicenessView systemLayoutSizeFittingSize:CGSizeMake(SCREEN_WIDTH, CGFLOAT_MAX)].height;
-//        config.space = 20;
-//    }];
+    //会员精选
+    if(self.model.advs.count){
+        [self.containerView addConfig:^(CLSectionConfig *config) {
+            @strongify(self)
+            config.sectioView = self.choicenessView;
+            self.choicenessView.imgs = [self.model.advs map:^id(NSInteger index, CTActivityModel *element) {
+                return element.img?:@"";
+            }];
+            config.sectionHeight = [self.choicenessView systemLayoutSizeFittingSize:CGSizeMake(SCREEN_WIDTH, CGFLOAT_MAX)].height;
+            config.space = 20;
+        }];
+    }
+   
     //赚钱攻略
     [self.containerView addConfig:^(CLSectionConfig *config) {
         @strongify(self)
@@ -238,6 +244,10 @@
         @strongify(self);
         [self request];
     }];
+    [self.navBar.backButton touchUpInsideSubscribeNext:^(id x) {
+        @strongify(self)
+        [self back];
+    }];
     //会员权益
     [self.headView.equityBackgroundView addActionWithBlock:^(id target) {
         @strongify(self)
@@ -250,6 +260,10 @@
         NSArray *urls = @[CTH5UrlForType(CTH5UrlMakeMoneyStrategy),CTH5UrlForType(CTH5UrlSaveMoneyStrategy)];
         UIViewController *webVc = [[CTModuleManager webService]pushWebFromViewController:self url:urls[index]];
         webVc.title = self.strategyView.titles[index];
+    }];
+    [self.choicenessView setClickItemBlock:^(NSInteger index) {
+        @strongify(self)
+        [CTModuleHelper showCtVcFromViewController:self model:self.model.advs[index]];
     }];
     
     //scrollView偏移导航效果

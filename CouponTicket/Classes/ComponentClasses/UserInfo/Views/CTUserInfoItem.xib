@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="OKk-Ba-fVW" customClass="CTUserInfoItem">
+            <rect key="frame" x="0.0" y="0.0" width="498" height="69"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="手机号" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bNl-ct-DbH">
+                    <rect key="frame" x="18" y="26" width="43" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="0.078431372550000003" green="0.078431372550000003" blue="0.078431372550000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="18228708667" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BMQ-tG-t5c">
+                    <rect key="frame" x="388.5" y="26" width="91.5" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="0.078431372550000003" green="0.078431372550000003" blue="0.078431372550000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1Cr-qD-OwR">
+                    <rect key="frame" x="0.0" y="68" width="498" height="1"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="spR-YB-V4R"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="1Cr-qD-OwR" firstAttribute="leading" secondItem="OKk-Ba-fVW" secondAttribute="leading" id="1Tf-Ln-X6p"/>
+                <constraint firstAttribute="trailing" secondItem="BMQ-tG-t5c" secondAttribute="trailing" constant="18" id="42P-zj-zRN"/>
+                <constraint firstAttribute="bottom" secondItem="1Cr-qD-OwR" secondAttribute="bottom" id="8CQ-YC-dgk"/>
+                <constraint firstItem="bNl-ct-DbH" firstAttribute="leading" secondItem="OKk-Ba-fVW" secondAttribute="leading" constant="18" id="BvV-fZ-qvu"/>
+                <constraint firstAttribute="trailing" secondItem="1Cr-qD-OwR" secondAttribute="trailing" id="CNc-kd-gkw"/>
+                <constraint firstItem="BMQ-tG-t5c" firstAttribute="centerY" secondItem="OKk-Ba-fVW" secondAttribute="centerY" id="hEu-om-H70"/>
+                <constraint firstItem="bNl-ct-DbH" firstAttribute="centerY" secondItem="OKk-Ba-fVW" secondAttribute="centerY" id="nLF-VA-DZf"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="keyLabel" destination="bNl-ct-DbH" id="92E-7p-Qkg"/>
+                <outlet property="valueLabel" destination="BMQ-tG-t5c" id="yib-G4-vDC"/>
+            </connections>
+            <point key="canvasLocation" x="964" y="777"/>
+        </view>
+    </objects>
+</document>

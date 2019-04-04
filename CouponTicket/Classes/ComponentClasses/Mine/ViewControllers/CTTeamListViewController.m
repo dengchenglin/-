@@ -57,9 +57,8 @@
     return cell;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-//    CTUserDetailViewController *vc = [CTUserDetailViewController new];
-//    vc.userId = self.dataSources[indexPath.row].uid;
-//    [self.navigationController pushViewController:vc animated:YES];
+    UIViewController *vc = [[CTModuleManager userInfoService]viewControllerForUserId:  self.dataSources[indexPath.row].uid];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 @end
