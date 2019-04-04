@@ -14,7 +14,7 @@
 
 + (UIViewController *)showCtVcFromViewController:(UIViewController *)viewController model:(CTActivityModel *)model;
 
-
++ (UIViewController *)showViewControllerWithModel:(CTActivityModel *)model;
 
 @end
 

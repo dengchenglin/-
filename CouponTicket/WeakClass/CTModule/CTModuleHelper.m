@@ -41,4 +41,12 @@ static const int linkActions_assoc_key;
     return nil;
 }
 
++ (UIViewController *)showViewControllerWithModel:(CTActivityModel *)model{
+    UIViewController *vc = [UIUtil getCurrentViewController];
+    if(vc){
+        return [self showCtVcFromViewController:vc model:model];
+    }
+    return nil;
+}
+
 @end

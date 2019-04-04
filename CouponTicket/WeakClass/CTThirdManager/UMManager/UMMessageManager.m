@@ -99,6 +99,10 @@
 
 + (void)didReceiveRemoteNotification:(nullable NSDictionary *)userInfo{
     NSLog(@"%@",userInfo);
+    CTActivityModel *linkModel = [CTActivityModel yy_modelWithDictionary:userInfo];
+    if(linkModel){
+        [CTModuleHelper showViewControllerWithModel:linkModel];
+    }
 }
 
 
