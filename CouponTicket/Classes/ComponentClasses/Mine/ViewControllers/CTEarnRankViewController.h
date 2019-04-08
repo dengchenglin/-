@@ -7,9 +7,9 @@
 //
 
 #import "CTBaseViewController.h"
-
 #import "CTNestPageController.h"
+#import "CTEarnRankModel.h"
 
 @interface CTEarnRankViewController : CTBaseViewController<CTNestSubControllerProtocol>
-
+@property (nonatomic, copy) NSArray <CTEarnRankIndexModel *>*models;
 @end

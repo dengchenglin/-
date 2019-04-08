@@ -31,7 +31,7 @@
 @property (nonatomic, copy) NSString *cash_account;
 @property (nonatomic, copy) NSString *cash_name;
 @property (nonatomic, copy) NSString *qq;
-@property (nonatomic, copy) NSString *weixin;
+@property (nonatomic, copy) NSString *wx;
 @end
 
 @interface CTAppManager : NSObject

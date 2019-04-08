@@ -7,12 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "CTEarnRankIndexViewModel.h"
 @interface CTEarnRankCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *rankLogo;
 @property (weak, nonatomic) IBOutlet UILabel *rankLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *userIconImageView;
 @property (weak, nonatomic) IBOutlet UILabel *mobileLabel;
 @property (weak, nonatomic) IBOutlet UILabel *earnLabel;
-
+@property (nonatomic, strong) CTEarnRankIndexViewModel *viewModel;
 @end

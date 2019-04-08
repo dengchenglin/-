@@ -7,15 +7,11 @@
 //
 
 #import "UMMessageManager.h"
-
 #import <objc/runtime.h>
-
 #import <UMPush/UMessage.h>
-
 #import <UMCommon/UMConfigure.h>
-
 #import "Aspects.h"
-
+#import "CTNetworkEngine+Message.h"
 
 @interface UMMessageManager()<UNUserNotificationCenterDelegate>
 
@@ -57,6 +53,7 @@
      stringByReplacingOccurrencesOfString: @" " withString: @""];
     [CTAppManager sharedInstance].apns_token = _deviceToken;
     [UMessage registerDeviceToken:deviceToken];
+    [CTRequest updateDeviceToken:_deviceToken callback:nil];
 }
 
 //iOS10以下使用这两个方法接收通知

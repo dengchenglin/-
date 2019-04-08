@@ -37,5 +37,10 @@ NSString *GetMessageStr(CTMessageType type){
     [params setValue:@(type) forKey:@"type"];
     return [self postWithPath:CTMessage(@"index") params:params showHud:page>1?NO:YES callback:callback];
 }
-
+//推送设备token
+- (CLRequest *)updateDeviceToken:(NSString *)deviceToken callback:(CTResponseBlock)callback{
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    [params setValue:deviceToken forKey:@"device_token"];
+    return [self postWithPath:CTMessage(@"update_device_token") params:params callback:callback];
+}
 @end

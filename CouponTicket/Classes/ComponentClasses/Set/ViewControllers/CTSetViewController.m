@@ -48,7 +48,7 @@
 
 - (NSArray <NSString *>*)datas{
     if(!_datas){
-        _datas = @[@"意见反馈",@"关于我们",@"清除缓存",@"安全设置"];
+        _datas = @[@"意见反馈",@"关于我们",@"清除缓存",@"安全设置",@"微信号",@"QQ号"];
     }
     return _datas;
 }
@@ -136,6 +136,16 @@
             }];
         }
         break;
+        case 4:{
+            UIViewController *vc = [[CTModuleManager userInfoService]viewControllerForType:CTUserEditWX];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
+        case 5:{
+            UIViewController *vc = [[CTModuleManager userInfoService]viewControllerForType:CTUserEditQQ];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
         default:
             break;
     }

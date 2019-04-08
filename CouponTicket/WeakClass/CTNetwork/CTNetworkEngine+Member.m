@@ -123,5 +123,12 @@
     [params setValue:uid forKey:@"uid"];
     return [self postWithPath:CTUser(@"team_user_detail") params:params callback:callback];
 }
-
+//会员编辑信息
+- (CLRequest *)userInfoSaveWithInfo:(NSDictionary *)info callback:(CTResponseBlock)callback{
+    return [self postWithPath:CTUser(@"userinfo_save") params:info callback:callback];
+}
+//收益排行
+- (CLRequest *)icomenRankWithCallback:(CTResponseBlock)callback{
+      return [self postWithPath:CTUser(@"income_rank") params:nil callback:callback];
+}
 @end

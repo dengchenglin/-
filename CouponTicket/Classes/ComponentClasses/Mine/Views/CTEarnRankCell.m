@@ -10,15 +10,23 @@
 
 @implementation CTEarnRankCell
 
-- (void)awakeFromNib {
-    [super awakeFromNib];
-    // Initialization code
-}
-
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
+- (void)setViewModel:(CTEarnRankIndexViewModel *)viewModel{
+    _viewModel = viewModel;
+    
+    [_userIconImageView sd_setImageWithURL:[NSURL URLWithString:_viewModel.headimg]];
+    _mobileLabel.text = _viewModel.phone;
+    _earnLabel.text = _viewModel.money;
+    if(_viewModel.showRankImage){
+        _rankLogo.hidden = NO;
+        _rankLabel.hidden = YES;
+        _rankLogo.image = _viewModel.rankImage;
+    }
+    else{
+        _rankLogo.hidden = YES;
+        _rankLabel.hidden = NO;
+        _rankLabel.text = _viewModel.rank;
+    }
+    
 }
 
 @end

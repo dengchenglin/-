@@ -7,24 +7,20 @@
 //
 
 #import "CTEarnRankPageController.h"
-
 #import "LMSegmentedControl.h"
-
 #import "CTEarnRankHeadView.h"
-
 #import "CTEarnRankViewController.h"
-
 #import "CTEarnRankNavBar.h"
+#import "CTNetworkEngine+Member.h"
+#import "CTEarnRankModel.h"
 
 @interface CTEarnRankPageController ()<LMSegmentedControlDelegate>
 
 @property (nonatomic, strong) CTEarnRankNavBar *navBar;
-
 @property (nonatomic, copy) NSArray <CTNestSubControllerProtocol>*_viewControllers;
-
 @property (nonatomic, strong) CTEarnRankHeadView *rankHeadView;
-
 @property (nonatomic, strong) LMSegmentedControl *segmentedControl;
+@property (nonatomic, strong) CTEarnRankModel *model;
 
 @end
 
@@ -115,13 +111,49 @@
     }];
 }
 
+
+
 - (void)setUpEvent{
     @weakify(self)
+    [self.scrollView addHeaderRefreshWithCallBack:^{
+        @strongify(self)
+        [self request];
+    }];
     [self.navBar.backButton touchUpInsideSubscribeNext:^(id x) {
         @strongify(self)
         [self back];
     }];
 }
+- (void)request{
+    [CTRequest icomenRankWithCallback:^(id data, CLRequest *request, CTNetError error) {
+        [self.scrollView endRefreshing];
+        self.model = [CTEarnRankModel yy_modelWithDictionary:data];
+        for(int i = 0;i < self.viewControllers.count;i ++){
+            CTEarnRankViewController *vc = self.viewControllers[i];
+            switch (i) {
+                case 0:{
+                    vc.models = _model.yesterday;
+                }
+                    break;
+                case 1:{
+                    vc.models = _model.month;
+                }
+                    break;
+                case 2:{
+                    vc.models = _model.last_month;
+                }
+                    break;
+                case 3:{
+                    vc.models = _model.all;
+                }
+                    break;
+                default:
+                    break;
+            }
+        }
+    }];
+}
+
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
     [super scrollViewDidScroll:scrollView];

@@ -335,6 +335,11 @@
 		32BE601321EDC5E500BA52EF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 32BE601221EDC5E500BA52EF /* main.m */; };
 		32BE601D21EDC5E500BA52EF /* CouponTicketTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 32BE601C21EDC5E500BA52EF /* CouponTicketTests.m */; };
 		32BE614B21EDDBBB00BA52EF /* CTHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32BE614A21EDDBBB00BA52EF /* CTHomeViewController.m */; };
+		32C64EF1225AE86000DDC0F9 /* CTEarnRankModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 32C64EF0225AE85F00DDC0F9 /* CTEarnRankModel.m */; };
+		32C64EF4225AED5D00DDC0F9 /* CTEarnRankIndexViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 32C64EF3225AED5D00DDC0F9 /* CTEarnRankIndexViewModel.m */; };
+		32C64EF7225AFB2100DDC0F9 /* CTUserEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32C64EF6225AFB2100DDC0F9 /* CTUserEditViewController.m */; };
+		32C64EFA225AFC7700DDC0F9 /* CTEditInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 32C64EF9225AFC7700DDC0F9 /* CTEditInputView.m */; };
+		32C64EFC225AFC8700DDC0F9 /* CTEditInputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32C64EFB225AFC8700DDC0F9 /* CTEditInputView.xib */; };
 		32CA555521F6AD1600145E31 /* CTShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32CA555421F6AD1600145E31 /* CTShareViewController.m */; };
 		32CA555A21F6B07000145E31 /* CTShareService.m in Sources */ = {isa = PBXBuildFile; fileRef = 32CA555921F6B07000145E31 /* CTShareService.m */; };
 		32CA555F21F6B0DA00145E31 /* CTMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32CA555E21F6B0DA00145E31 /* CTMessageViewController.m */; };
@@ -1103,6 +1108,15 @@
 		32BE613421EDD04A00BA52EF /* CTPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTPrefixHeader.pch; sourceTree = "<group>"; };
 		32BE614921EDDBBB00BA52EF /* CTHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTHomeViewController.h; sourceTree = "<group>"; };
 		32BE614A21EDDBBB00BA52EF /* CTHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTHomeViewController.m; sourceTree = "<group>"; wrapsLines = 0; };
+		32C64EEF225AE85F00DDC0F9 /* CTEarnRankModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTEarnRankModel.h; sourceTree = "<group>"; };
+		32C64EF0225AE85F00DDC0F9 /* CTEarnRankModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTEarnRankModel.m; sourceTree = "<group>"; };
+		32C64EF2225AED5D00DDC0F9 /* CTEarnRankIndexViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTEarnRankIndexViewModel.h; sourceTree = "<group>"; };
+		32C64EF3225AED5D00DDC0F9 /* CTEarnRankIndexViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTEarnRankIndexViewModel.m; sourceTree = "<group>"; };
+		32C64EF5225AFB2100DDC0F9 /* CTUserEditViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTUserEditViewController.h; sourceTree = "<group>"; };
+		32C64EF6225AFB2100DDC0F9 /* CTUserEditViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTUserEditViewController.m; sourceTree = "<group>"; };
+		32C64EF8225AFC7700DDC0F9 /* CTEditInputView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTEditInputView.h; sourceTree = "<group>"; };
+		32C64EF9225AFC7700DDC0F9 /* CTEditInputView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTEditInputView.m; sourceTree = "<group>"; };
+		32C64EFB225AFC8700DDC0F9 /* CTEditInputView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CTEditInputView.xib; sourceTree = "<group>"; };
 		32CA555321F6AD1600145E31 /* CTShareViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTShareViewController.h; sourceTree = "<group>"; };
 		32CA555421F6AD1600145E31 /* CTShareViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTShareViewController.m; sourceTree = "<group>"; };
 		32CA555621F6AD3700145E31 /* CTShareServiceProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTShareServiceProtocol.h; sourceTree = "<group>"; };
@@ -1460,6 +1474,9 @@
 				3294C07522559CAA00AB0DB2 /* CTUserInfoItem.h */,
 				3294C07622559CAA00AB0DB2 /* CTUserInfoItem.m */,
 				3294C07822559CB500AB0DB2 /* CTUserInfoItem.xib */,
+				32C64EF8225AFC7700DDC0F9 /* CTEditInputView.h */,
+				32C64EF9225AFC7700DDC0F9 /* CTEditInputView.m */,
+				32C64EFB225AFC8700DDC0F9 /* CTEditInputView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1469,6 +1486,8 @@
 			children = (
 				32DB93D32215771900300ACC /* CTUserDetailViewController.h */,
 				32DB93D42215771900300ACC /* CTUserDetailViewController.m */,
+				32C64EF5225AFB2100DDC0F9 /* CTUserEditViewController.h */,
+				32C64EF6225AFB2100DDC0F9 /* CTUserEditViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -2717,6 +2736,8 @@
 				32F55ED02254CA420057EDEC /* CTEarnTrendModel.m */,
 				325946132243AA4400775AA3 /* CTMyEarnModel.h */,
 				325946142243AA4400775AA3 /* CTMyEarnModel.m */,
+				32C64EEF225AE85F00DDC0F9 /* CTEarnRankModel.h */,
+				32C64EF0225AE85F00DDC0F9 /* CTEarnRankModel.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -2726,6 +2747,8 @@
 			children = (
 				3297FDCE2241FD3800B59746 /* CTOrderViewModel.h */,
 				3297FDCF2241FD3800B59746 /* CTOrderViewModel.m */,
+				32C64EF2225AED5D00DDC0F9 /* CTEarnRankIndexViewModel.h */,
+				32C64EF3225AED5D00DDC0F9 /* CTEarnRankIndexViewModel.m */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -3645,6 +3668,7 @@
 			files = (
 				3249614B2248BF7A002D9383 /* CTGoodDetailNavbar.xib in Resources */,
 				32BE601021EDC5E500BA52EF /* LaunchScreen.storyboard in Resources */,
+				32C64EFC225AFC8700DDC0F9 /* CTEditInputView.xib in Resources */,
 				32CA55A721F71D6900145E31 /* CTHistoryKeywordCell.xib in Resources */,
 				32A28E9E220288080049B003 /* CTAlipayBoundView_.xib in Resources */,
 				24FF626221F41D1700488860 /* CTHomeNewestHeadView.xib in Resources */,
@@ -3882,6 +3906,7 @@
 				322453C121F2BEBC00471059 /* CTMineService.m in Sources */,
 				32601491224E256000B7A1BE /* LMWebView.m in Sources */,
 				32A28EC42202CA260049B003 /* CTAlertHelper+WithdrawPsd.m in Sources */,
+				32C64EFA225AFC7700DDC0F9 /* CTEditInputView.m in Sources */,
 				32601467224E256000B7A1BE /* CLTaskRequest.m in Sources */,
 				326014B5224E256000B7A1BE /* NSObject+YYModels.m in Sources */,
 				3260149F224E256000B7A1BE /* UITextView+Helper.m in Sources */,
@@ -3959,6 +3984,7 @@
 				32BE600521EDC5E100BA52EF /* AppDelegate.m in Sources */,
 				3280739021FEEC74009CABEC /* CTMineEarnView.m in Sources */,
 				32E7A5942240D9890074069D /* CTMemberInfoModel.m in Sources */,
+				32C64EF7225AFB2100DDC0F9 /* CTUserEditViewController.m in Sources */,
 				32BD0E5C2201A19E00E99B86 /* CTUpdateImageView.m in Sources */,
 				326AC1FB21FAE6C9008C154B /* CTSearchTicketViewModel.m in Sources */,
 				32E7EE6A21F32CC700191789 /* CTHomeAdvertView.m in Sources */,
@@ -3983,8 +4009,10 @@
 				324CE75A22336EC60052A029 /* CTBindPhoneView.m in Sources */,
 				240E189121F5F4C6004A4BCB /* CTLoginBaseViewController.m in Sources */,
 				326525C121F57BE900B63DD7 /* UIImageView+CTHelper.m in Sources */,
+				32C64EF1225AE86000DDC0F9 /* CTEarnRankModel.m in Sources */,
 				322453D721F2BFC200471059 /* CTViewModel.m in Sources */,
 				3297FDFB22426EB700B59746 /* CTMemberEquityModel.m in Sources */,
+				32C64EF4225AED5D00DDC0F9 /* CTEarnRankIndexViewModel.m in Sources */,
 				32601465224E256000B7A1BE /* CLNetworkManager.m in Sources */,
 				32DB93D52215771900300ACC /* CTUserDetailViewController.m in Sources */,
 				3294C0742255988400AB0DB2 /* CTUserInfoModel.m in Sources */,

@@ -16,12 +16,12 @@ typedef NS_ENUM(NSInteger,CTMessageType){
 
 NSString *GetMessageStr(CTMessageType type);
 
-NS_ASSUME_NONNULL_BEGIN
 
 @interface CTNetworkEngine (Message)
 
+//消息列表
 - (CLRequest *)messageIndexWithType:(CTMessageType)type page:(NSInteger)page size:(NSInteger)size callback:(CTResponseBlock)callback;
-
+//推送设备token
+- (CLRequest *)updateDeviceToken:(NSString *)deviceToken callback:(CTResponseBlock)callback;
 @end
 
-NS_ASSUME_NONNULL_END

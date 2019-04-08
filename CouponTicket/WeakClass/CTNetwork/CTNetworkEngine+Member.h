@@ -38,4 +38,8 @@
 - (CLRequest *)incomeTrendWithCallback:(CTResponseBlock)callback;
 //用户详情
 - (CLRequest *)teamUserDetailWithUid:(NSString *)uid callback:(CTResponseBlock)callback;
+//会员编辑信息
+- (CLRequest *)userInfoSaveWithInfo:(NSDictionary *)info callback:(CTResponseBlock)callback;
+//收益排行
+- (CLRequest *)icomenRankWithCallback:(CTResponseBlock)callback;
 @end

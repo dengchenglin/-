@@ -29,6 +29,7 @@
     _userlevelLabel.text = _user.level_txt;
     _userkindLabel.text = _user.fx_txt;
     _userkindLabel.hidden = !_user.fx_txt.length;
+    [self reloadView];
 }
 
 - (void)reloadView{
@@ -48,10 +49,10 @@
         topView = item;
         height += 44;
     }
-    if(_user.weixin.length){
+    if(_user.wx.length){
         CTUserInfoItem *item = NSMainBundleClass(CTUserInfoItem.class);
         item.keyLabel.text = @"微信号";
-        item.valueLabel.text = _user.weixin;
+        item.valueLabel.text = _user.wx;
         [self.otherInfoView addSubview:item];
         [item mas_makeConstraints:^(MASConstraintMaker *make) {
             if(topView){

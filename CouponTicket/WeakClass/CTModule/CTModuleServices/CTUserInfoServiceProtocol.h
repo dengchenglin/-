@@ -10,8 +10,16 @@
 
 #import "CLModuleServiceProtocol.h"
 
+typedef NS_ENUM(NSInteger,CTUserEditType){
+    CTUserEditIcon,
+    CTUserEditWX,
+    CTUserEditQQ
+};
+
 @protocol CTUserInfoServiceProtocol <NSObject,CLModuleServiceProtocol>
 
 - (UIViewController *)viewControllerForUserId:(NSString *)userId;
+
+- (UIViewController *)viewControllerForType:(CTUserEditType)type;
 
 @end

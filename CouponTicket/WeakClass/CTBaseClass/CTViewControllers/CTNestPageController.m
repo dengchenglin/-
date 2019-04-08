@@ -8,11 +8,29 @@
 
 #import "CTNestPageController.h"
 
+@interface CTNestScrollView:UIScrollView<UIGestureRecognizerDelegate>
+@end
+@implementation CTNestScrollView
+- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer{
+    if([NSStringFromClass([gestureRecognizer.delegate class]) isEqualToString:@"_UIQueuingScrollView"]){
+        return NO;
+    }
+    return YES;
+}
+
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer{
+    
+    return YES;
+}
+
+@end
 @interface CTNestPageController ()<UIPageViewControllerDataSource,UIPageViewControllerDelegate>
 
-@property (nonatomic, strong) UIScrollView *scrollView;
+@property (nonatomic, strong) CTNestScrollView *scrollView;
 
 @property (nonatomic,strong) UIPageViewController *pageController;
+
+@property (nonatomic, weak) UIScrollView *currentSubScrollView;
 
 @end
 
@@ -34,7 +52,7 @@
 
 - (void)viewDidLoad{
     [super viewDidLoad];
-    _scrollView = [[UIScrollView alloc]initWithFrame:self.view.bounds];
+    _scrollView = [[CTNestScrollView alloc]initWithFrame:self.view.bounds];
     _scrollView.delegate = self;
     _scrollView.alwaysBounceVertical = YES;
     if (@available(iOS 11.0, *)) {
@@ -70,7 +88,7 @@
             protocol.delegate = self;
         }
         [self.pageController setViewControllers:@[self.viewControllers[0]] direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
-       
+        self.currentSubScrollView = [self.viewControllers[0] nestScrollView];
     }
 }
 
@@ -102,6 +120,7 @@
     if(completed && finished){
         NSInteger index = [self.viewControllers indexOfObject:[pageViewController.viewControllers objectAtIndex:0]];
         [self pageViewControllerDidScrollToIndex:index];
+        self.currentSubScrollView = [self.viewControllers[index] nestScrollView];
     }
 }
 
@@ -149,42 +168,89 @@
 }
 
 
+//嵌套scrollView方案二
+static BOOL canMainScroll = YES;
+static BOOL canChildScroll = NO;
+
+- (void)initialize{
+    canMainScroll = YES;
+    canChildScroll = NO;
+}
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
     CGFloat maxOffest = self.heightForHeadView - (self.ignoreNavBar?0:NAVBAR_HEIGHT);
-    //由于系统的contentOffset只精确到了一位 故这里也只能保留一位小数并且不能四舍五入
-    maxOffest = ((NSInteger)(maxOffest*10))/10.0;
-    if(scrollView == self.scrollView){
-        if(self.scrollView.contentOffset.y >= maxOffest){
+    
+    if (scrollView == self.scrollView){
+        if(!canMainScroll){
             self.scrollView.contentOffset = CGPointMake(0, maxOffest);
+            canChildScroll = YES;
         }
-        else if(self.scrollView.contentOffset.y < 0 && !self.scrollView.dragging && !self.scrollView.decelerating){
-            self.scrollView.contentOffset = CGPointZero;
+        else if(scrollView.contentOffset.y >= maxOffest){
+            self.scrollView.contentOffset = CGPointMake(0, maxOffest);
+            canMainScroll = NO;
+            canChildScroll = YES;
         }
     }
     else{
-        CGFloat offestY = scrollView.contentOffset.y + self.scrollView.contentOffset.y;
-
-        if(self.scrollView.contentOffset.y < maxOffest){
-            self.scrollView.contentOffset = CGPointMake(0, offestY);
-            if(scrollView.isDragging){
-                if(self.scrollView.contentOffset.y > 0 || scrollView.contentOffset.y > 0){
-                    scrollView.contentOffset = CGPointZero;
+        if(!canChildScroll && self.currentSubScrollView.isDragging){
+            self.currentSubScrollView.contentOffset = CGPointMake(-self.currentSubScrollView.contentInset.left, -self.currentSubScrollView.contentInset.top);
+        }
+        else if(scrollView.contentOffset.y <= -self.currentSubScrollView.contentInset.top){
+            canChildScroll = NO;
+            canMainScroll = YES;
+            if(self.currentSubScrollView.isDragging){
+                for( UIViewController <CTNestSubControllerProtocol> *vc in self.viewControllers){
+                    if(vc.isViewLoaded){
+                        UIScrollView *nestScrollView = [vc nestScrollView];
+                        if(nestScrollView.contentOffset.y >= -nestScrollView.contentInset.top){
+                            nestScrollView.contentOffset = CGPointMake(-nestScrollView.contentInset.left, -nestScrollView.contentInset.top);
+                        }
+                    }
                 }
             }
-        }
-        else if(scrollView.contentOffset.y < 0){
-            self.scrollView.contentOffset = CGPointMake(0, offestY);
-            for(UIViewController <CTNestSubControllerProtocol>*viewController in self.viewControllers){
-                if(viewController.isViewLoaded){
-                    viewController.nestScrollView.contentOffset = CGPointZero;
-                }
-            }
-        }
-        else if (scrollView.contentOffset.y == 0){
-            self.scrollView.contentOffset = CGPointMake(0, offestY);
         }
     }
+    
 }
+
+//嵌套scrollView方案一
+
+//- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
+//    CGFloat maxOffest = self.heightForHeadView - (self.ignoreNavBar?0:NAVBAR_HEIGHT);
+//    //由于系统的contentOffset只精确到了一位 故这里也只能保留一位小数并且不能四舍五入
+//    maxOffest = ((NSInteger)(maxOffest*10))/10.0;
+//    if(scrollView == self.scrollView){
+//        if(self.scrollView.contentOffset.y >= maxOffest){
+//            self.scrollView.contentOffset = CGPointMake(0, maxOffest);
+//        }
+//        else if(self.scrollView.contentOffset.y < 0 && !self.scrollView.dragging && !self.scrollView.decelerating){
+//            self.scrollView.contentOffset = CGPointZero;
+//        }
+//    }
+//    else{
+//        CGFloat offestY = scrollView.contentOffset.y + self.scrollView.contentOffset.y;
+//
+//        if(self.scrollView.contentOffset.y < maxOffest){
+//            self.scrollView.contentOffset = CGPointMake(0, offestY);
+//            if(scrollView.isDragging){
+//                if(self.scrollView.contentOffset.y > 0 || scrollView.contentOffset.y > 0){
+//                    scrollView.contentOffset = CGPointZero;
+//                }
+//            }
+//        }
+//        else if(scrollView.contentOffset.y < 0){
+//            self.scrollView.contentOffset = CGPointMake(0, offestY);
+//            for(UIViewController <CTNestSubControllerProtocol>*viewController in self.viewControllers){
+//                if(viewController.isViewLoaded){
+//                    viewController.nestScrollView.contentOffset = CGPointZero;
+//                }
+//            }
+//        }
+//        else if (scrollView.contentOffset.y == 0){
+//            self.scrollView.contentOffset = CGPointMake(0, offestY);
+//        }
+//    }
+//}
+
 
 
 @end
