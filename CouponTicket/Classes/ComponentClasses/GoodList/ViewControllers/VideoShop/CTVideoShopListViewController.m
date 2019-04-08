@@ -77,7 +77,12 @@
     [[JPVideoPlayerManager sharedManager]stopPlay];
     _currentIndexPath = nil;
     [CTRequest videoBuyGoodsWithPage:self.pageIndex size:self.pageSize cateId:self.cateId order:GetGoodsOrderStr(self.sortView.currentType) callback:^(id data, CLRequest *request, CTNetError error) {
-        [self analysisAndReloadWithData:data error:error modelClass:CTGoodsModel.class viewModelClass:CTGoodsViewModel.class];
+        [self.tableView endRefreshing];
+        for(int i = 0;i < 20;i ++){
+            [self.dataSources addObject:[CTGoodsViewModel new]];
+        }
+        [self.tableView reloadData];
+//        [self analysisAndReloadWithData:data error:error modelClass:CTGoodsModel.class viewModelClass:CTGoodsViewModel.class];
     }];
 }
 
@@ -116,10 +121,10 @@
     [self removeCurrentVideo];//先停止当前播放的cell
     _currentIndexPath = indexPath;
     CTVideoGoodListCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
-    cell.playButton.selected = YES;
-    [cell.playButton jp_playVideoWithURL:[NSURL URLWithString:self.dataSources[indexPath.row].model.video] bufferingIndicator:nil controlView:nil progressView:nil configuration:nil];
     cell.playButton.jp_videoPlayerDelegate = self;
-    
+    NSString *video = @"http://upload.youquan8888888.com//17f127d94edaa3ee/997559726ca14229.mp4";//self.dataSources[indexPath.row].model.video;
+    [cell.playButton jp_playVideoWithURL:[NSURL URLWithString:video] bufferingIndicator:nil controlView:nil progressView:nil configuration:nil];
+   
     //防止cell状态被重用，事先还原所有未播放cell的状态
     NSArray <CTVideoGoodListCell *>*cells = [self.tableView visibleCells];
     for(CTVideoGoodListCell *cell in cells){
@@ -167,7 +172,6 @@
     for(CTVideoGoodListCell *cell in cells){
         [cell removeVideoView];
     }
-    _currentIndexPath = nil;
     for(CTGoodsViewModel *viewModel in self.dataSources){
         viewModel.isPlay = NO;
     }
@@ -190,9 +194,21 @@
 
 //播放器内部因素导致播放停止（网络错误，音频出错，播放结束等）
 - (void)playerStatusDidChanged:(JPVideoPlayerStatus)playerStatus{
+    CTVideoGoodListCell *cell;
+    if(_currentIndexPath){
+        cell = [self.tableView cellForRowAtIndexPath:_currentIndexPath];
+        
+    }
     if(playerStatus == JPVideoPlayerStatusStop){
+        [cell.playButton jp_gotoPortrait];
         [self resetAllVideoCellStatus];
     }
+    if(playerStatus == JPVideoPlayerStatusPlaying){
+       cell.playButton.selected = YES;
+    }
+}
+- (BOOL)shouldAutoReplayForURL:(NSURL *)videoURL{
+    return NO;
 }
 
 @end
