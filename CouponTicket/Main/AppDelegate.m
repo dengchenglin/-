@@ -9,12 +9,10 @@
 #import "AppDelegate.h"
 
 #import "CTAppConfig.h"
-
 #import "UMShareManager.h"
-
 #import "UMMessageManager.h"
-
 #import "AliTradeManager.h"
+#import "MWManager.h"
 
 @interface AppDelegate ()
 
@@ -29,10 +27,14 @@
     self.window.rootViewController = service.rootViewController;
     [self.window makeKeyAndVisible];
     [CTAppConfig config];
+    //友盟分享
     [UMShareManager config];
+    //友盟推送
     [UMMessageManager application:application didFinishLaunchingWithOptions:launchOptions];
+    //阿里百川
     [AliTradeManager initSDK];
-    
+    //极光魔链
+    [MWManager initSDK];
 
     return YES;
 }
@@ -45,6 +47,7 @@
 
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
 {
+    [MWManager routeMlink:url];
     if([UMShareManager application:application openURL:url sourceApplication:sourceApplication annotation:application]){
         return YES;
     }
@@ -64,10 +67,14 @@
 }
 
 - (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url{
+    [MWManager routeMlink:url];
     if([UMShareManager application:application handleOpenURL:url]){
         return YES;
     }
     return NO;
+}
+- (BOOL)application:(UIApplication *)application continueUserActivity:(NSUserActivity *)userActivity restorationHandler:(void (^)(NSArray * _Nullable))restorationHandler{
+    return [MWManager continueUserActivity:userActivity];
 }
 
 

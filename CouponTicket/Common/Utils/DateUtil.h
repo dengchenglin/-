@@ -20,6 +20,7 @@
 +(NSString *)getTimeStringFromDateTimestamp:(NSString *)timestamp;
 
 // 获得当前时间。
++ (NSDate *)nowDate;
 + (NSString *)getNowDate;
 
 //获取当天年月日

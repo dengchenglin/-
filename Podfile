@@ -33,5 +33,5 @@ target 'CouponTicket' do
   pod 'Qiniu',              '~> 7.2'
   
   pod 'JPVideoPlayer'
-  
+  pod 'MagicWindowSDK'
 end

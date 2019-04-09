@@ -75,6 +75,18 @@
         vc.model = self.cates[i];
         [array addObject:vc];
     }
+    
+    //当前时间戳
+    NSString *nowTimeStamp = [DateUtil getNowDateTimestamp];
+    __block NSInteger index = 0;
+    [self.cates enumerateObjectsUsingBlock:^(CTTimeBuyCateModel * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        if([obj.start_time integerValue] >= [nowTimeStamp integerValue]){
+            index = idx;
+            *stop = YES;
+        }
+    }];
+    self.toIndex = index;
+    
     self.viewControllers = array;
 
 }
@@ -85,5 +97,6 @@
 }
 - (void)pageController:(CTPageController *)pageController didScrollToIndex:(NSInteger)index{
     [self.segmentedControl scrollToIndex:index];
+    
 }
 @end

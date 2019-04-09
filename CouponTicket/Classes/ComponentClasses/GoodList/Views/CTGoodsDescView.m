@@ -14,8 +14,8 @@
     _viewModel = viewModel;
     [_typeImageView sd_setImageWithURL:[NSURL URLWithString:_viewModel.model.type_logo]];
     _titleLabel.text = [NSString stringWithFormat:@"%@",_viewModel.model.goods_title];
-    _disLabel1.text = [NSString stringWithFormat:@"赚%@元",_viewModel.model.commission_money];
-    _disLabel2.text = [NSString stringWithFormat:@"升级可赚%@元",_viewModel.model.upgrade_money];
+    _disLabel1.text = [NSString stringWithFormat:@"返%@元",_viewModel.model.commission_money];
+    _disLabel2.text = [NSString stringWithFormat:@"升级可返%@元",_viewModel.model.upgrade_money];
     _priceLabel.text = _viewModel.model.coupon_price;
     _originPriceLabel.text = _viewModel.model.sale_price;
     _shopTitleLabel.text = _viewModel.model.shop_title;

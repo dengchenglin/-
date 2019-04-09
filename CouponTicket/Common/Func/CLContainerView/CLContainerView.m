@@ -56,6 +56,7 @@
 }
 
 - (void)addConfig:(void(^)(CLSectionConfig *config))config{
+    if(!config)return;
     CLSectionConfig *cfg = [CLSectionConfig new];
     if(config){
         config(cfg);

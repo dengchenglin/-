@@ -69,34 +69,34 @@
 - (CTEarnTimeView *)todayView{
     if(!_todayView){
         _todayView = NSMainBundleClass(CTEarnTimeView.class);
-        _todayView.timeTitleLabel.text = @"今日收益";
+        _todayView.timeTitleLabel.text = @"今日返利";
     }
     return _todayView;
 }
 - (CTEarnTimeView *)yesterdayView{
     if(!_yesterdayView){
         _yesterdayView = NSMainBundleClass(CTEarnTimeView.class);
-        _yesterdayView.timeTitleLabel.text = @"昨日收益";
+        _yesterdayView.timeTitleLabel.text = @"昨日返利";
     }
     return _yesterdayView;
 }
 - (CTEarnTimeView *)thisMonthView{
     if(!_thisMonthView){
         _thisMonthView = NSMainBundleClass(CTEarnTimeView.class);
-        _thisMonthView.timeTitleLabel.text = @"本月收益";
+        _thisMonthView.timeTitleLabel.text = @"本月返利";
     }
     return _thisMonthView;
 }
 - (CTEarnTimeView *)lastMonthView{
     if(!_lastMonthView){
         _lastMonthView = NSMainBundleClass(CTEarnTimeView.class);
-        _lastMonthView.timeTitleLabel.text = @"上月收益";
+        _lastMonthView.timeTitleLabel.text = @"上月返利";
     }
     return _lastMonthView;
 }
 
 - (void)setUpUI{
-    self.title = @"收益明细";
+    self.title = @"返利明细";
     self.navigationBarStyle = CTNavigationBarWhite;
     [self setRightButtonWithTitle:@"分享" font:[UIFont systemFontOfSize:14] titleColor:RGBColor(20, 20, 20) selector:@selector(share)];
     [self.view addSubview:self.containerView];

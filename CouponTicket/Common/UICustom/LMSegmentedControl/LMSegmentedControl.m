@@ -190,6 +190,7 @@ ViewInstance(setUp)
     else if (_segmentedControlType == LMSegmentedControlConstant){
         _scrollContainerView = [UIView new];
         [_scrollView addSubview:_scrollContainerView];
+        _scrollView.contentSize = CGSizeMake(_itemSize.width * _titles.count, 0);
         [_scrollContainerView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.edges.mas_equalTo(UIEdgeInsetsZero);
             make.height.mas_equalTo(self->_containerView.height);

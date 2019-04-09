@@ -267,6 +267,7 @@
 		3297FDFE22426F5A00B59746 /* CTMemberRebateModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3297FDFD22426F5A00B59746 /* CTMemberRebateModel.m */; };
 		329B36FF223B91F60003AD30 /* CTGoodsViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 329B36FE223B91F60003AD30 /* CTGoodsViewModel.m */; };
 		329B3706223BAF130003AD30 /* CTTimeBuyCateModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 329B3705223BAF100003AD30 /* CTTimeBuyCateModel.m */; };
+		329D8E1D225C44F9001BFE60 /* MWManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 329D8E1C225C44F9001BFE60 /* MWManager.m */; };
 		32A281092237D2F2007DF6C2 /* CTNetworkEngine+Recommend.m in Sources */ = {isa = PBXBuildFile; fileRef = 32A281082237D2F2007DF6C2 /* CTNetworkEngine+Recommend.m */; };
 		32A2810C2237D50C007DF6C2 /* CTNetworkEngine+Member.m in Sources */ = {isa = PBXBuildFile; fileRef = 32A2810B2237D50C007DF6C2 /* CTNetworkEngine+Member.m */; };
 		32A2810F2237D58E007DF6C2 /* CTNetworkEngine+Goods.m in Sources */ = {isa = PBXBuildFile; fileRef = 32A2810E2237D58E007DF6C2 /* CTNetworkEngine+Goods.m */; };
@@ -986,6 +987,8 @@
 		329B36FE223B91F60003AD30 /* CTGoodsViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTGoodsViewModel.m; sourceTree = "<group>"; };
 		329B3704223BAF100003AD30 /* CTTimeBuyCateModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTTimeBuyCateModel.h; sourceTree = "<group>"; };
 		329B3705223BAF100003AD30 /* CTTimeBuyCateModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTTimeBuyCateModel.m; sourceTree = "<group>"; };
+		329D8E1B225C44F9001BFE60 /* MWManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MWManager.h; sourceTree = "<group>"; };
+		329D8E1C225C44F9001BFE60 /* MWManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MWManager.m; sourceTree = "<group>"; };
 		32A281072237D2F2007DF6C2 /* CTNetworkEngine+Recommend.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CTNetworkEngine+Recommend.h"; sourceTree = "<group>"; };
 		32A281082237D2F2007DF6C2 /* CTNetworkEngine+Recommend.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CTNetworkEngine+Recommend.m"; sourceTree = "<group>"; };
 		32A2810A2237D50C007DF6C2 /* CTNetworkEngine+Member.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CTNetworkEngine+Member.h"; sourceTree = "<group>"; };
@@ -2773,6 +2776,15 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		329D8E1A225C44E0001BFE60 /* MWManager */ = {
+			isa = PBXGroup;
+			children = (
+				329D8E1B225C44F9001BFE60 /* MWManager.h */,
+				329D8E1C225C44F9001BFE60 /* MWManager.m */,
+			);
+			path = MWManager;
+			sourceTree = "<group>";
+		};
 		32A281102237DC86007DF6C2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -3419,6 +3431,7 @@
 		32ED00D7222D0F63008A1640 /* CTThirdManager */ = {
 			isa = PBXGroup;
 			children = (
+				329D8E1A225C44E0001BFE60 /* MWManager */,
 				32FD1265223F762300CB85C1 /* AliTradeManager */,
 				32ED00D8222D0F7A008A1640 /* UMManager */,
 			);
@@ -3475,7 +3488,6 @@
 		32FD1266223F784600CB85C1 /* ThirdLib */ = {
 			isa = PBXGroup;
 			children = (
-				32FD133B223F909F00CB85C1 /* UMShare */,
 				32FD1312223F8B0000CB85C1 /* AlibcTradeSDK */,
 			);
 			path = ThirdLib;
@@ -3488,13 +3500,6 @@
 				32FD1398223F94A100CB85C1 /* Resources */,
 			);
 			path = AlibcTradeSDK;
-			sourceTree = "<group>";
-		};
-		32FD133B223F909F00CB85C1 /* UMShare */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = UMShare;
 			sourceTree = "<group>";
 		};
 		32FD1398223F94A100CB85C1 /* Resources */ = {
@@ -3632,6 +3637,9 @@
 						CreatedOnToolsVersion = 9.4.1;
 						SystemCapabilities = {
 							com.apple.Push = {
+								enabled = 1;
+							};
+							com.apple.SafariKeychain = {
 								enabled = 1;
 							};
 						};
@@ -3795,6 +3803,7 @@
 				"${PODS_ROOT}/GPUImage/framework/Resources/lookup_soft_elegance_2.png",
 				"${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle",
 				"${PODS_ROOT}/JPVideoPlayer/JPVideoPlayer/JPVideoPlayer.bundle",
+				"${PODS_ROOT}/MagicWindowSDK/MagicWindowSDK/MagicWindowSDK/MagicWindow.bundle",
 				"${PODS_ROOT}/SGQRCode/SGQRCode/SGQRCode.bundle",
 				"${PODS_ROOT}/ZLPhotoBrowser/PhotoBrowser/resource/ZLPhotoActionSheet.xib",
 				"${PODS_ROOT}/ZLPhotoBrowser/PhotoBrowser/resource/ZLPhotoBrowserCell.xib",
@@ -3809,6 +3818,7 @@
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/lookup_soft_elegance_2.png",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/IQKeyboardManager.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/JPVideoPlayer.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MagicWindow.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SGQRCode.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ZLPhotoActionSheet.nib",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ZLPhotoBrowserCell.nib",
@@ -3943,6 +3953,7 @@
 				32601493224E256000B7A1BE /* WSDatePickerView.m in Sources */,
 				3260147A224E256000B7A1BE /* UIView+Layout.m in Sources */,
 				32CA55A621F71D6900145E31 /* CTHistoryKeywordCell.m in Sources */,
+				329D8E1D225C44F9001BFE60 /* MWManager.m in Sources */,
 				3220EA2E21F99A20004E0422 /* CTPageController.m in Sources */,
 				32601460224E256000B7A1BE /* Aspects.m in Sources */,
 				32A28ED42202EC630049B003 /* CTWithdrawModifyAlipayView.m in Sources */,

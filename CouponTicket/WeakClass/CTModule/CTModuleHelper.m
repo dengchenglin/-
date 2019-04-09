@@ -43,7 +43,7 @@ static const int linkActions_assoc_key;
 
 + (UIViewController *)showViewControllerWithModel:(CTActivityModel *)model{
     UIViewController *vc = [UIUtil getCurrentViewController];
-    if(vc){
+    if(vc && vc.tabBarController){
         return [self showCtVcFromViewController:vc model:model];
     }
     return nil;

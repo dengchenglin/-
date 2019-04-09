@@ -77,12 +77,7 @@
     [[JPVideoPlayerManager sharedManager]stopPlay];
     _currentIndexPath = nil;
     [CTRequest videoBuyGoodsWithPage:self.pageIndex size:self.pageSize cateId:self.cateId order:GetGoodsOrderStr(self.sortView.currentType) callback:^(id data, CLRequest *request, CTNetError error) {
-        [self.tableView endRefreshing];
-        for(int i = 0;i < 20;i ++){
-            [self.dataSources addObject:[CTGoodsViewModel new]];
-        }
-        [self.tableView reloadData];
-//        [self analysisAndReloadWithData:data error:error modelClass:CTGoodsModel.class viewModelClass:CTGoodsViewModel.class];
+        [self analysisAndReloadWithData:data error:error modelClass:CTGoodsModel.class viewModelClass:CTGoodsViewModel.class];
     }];
 }
 
@@ -122,7 +117,7 @@
     _currentIndexPath = indexPath;
     CTVideoGoodListCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
     cell.playButton.jp_videoPlayerDelegate = self;
-    NSString *video = @"http://upload.youquan8888888.com//17f127d94edaa3ee/997559726ca14229.mp4";//self.dataSources[indexPath.row].model.video;
+    NSString *video = self.dataSources[indexPath.row].model.video;
     [cell.playButton jp_playVideoWithURL:[NSURL URLWithString:video] bufferingIndicator:nil controlView:nil progressView:nil configuration:nil];
    
     //防止cell状态被重用，事先还原所有未播放cell的状态

@@ -73,6 +73,12 @@ NSString *GetInfoKey(CTUserEditType type){
     self.title = GetEditTitleStr(_type);
     [self.view addSubview:self.infoTextView];
     [self.view addSubview:self.doneButton];
+    if(_type == CTUserEditQQ){
+        self.infoTextView.textField.keyboardType = UIKeyboardTypeNumberPad;
+    }
+    else if (_type == CTUserEditWX){
+        self.infoTextView.textField.keyboardType = UIKeyboardTypeASCIICapable;
+    }
 }
 - (void)autoLayout{
     [self.infoTextView mas_makeConstraints:^(MASConstraintMaker *make) {

@@ -48,6 +48,9 @@ ViewInstance(setUp)
     }
     [self.superview layoutIfNeeded];
     [_trendView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:_url]]];
+    if(self.heightDidChangeBlock){
+        self.heightDidChangeBlock(_headHeight.constant);
+    }
 }
 
 @end

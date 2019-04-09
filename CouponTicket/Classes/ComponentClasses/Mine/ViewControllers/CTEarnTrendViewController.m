@@ -97,7 +97,7 @@
 }
 
 - (void)setUpUI{
-    self.title = @"收益走势";
+    self.title = @"返利走势";
     self.navigationBarStyle = CTNavigationBarWhite;
     [self.view addSubview:self.tableView];
 }
@@ -114,7 +114,7 @@
         if(!error){
             self.model = [CTEarnTrendModel yy_modelWithDictionary:data];
             if(!self.model.day30_lists.count){
-                [MBProgressHUD showMBProgressHudWithTitle:@"您暂无收益记录" hideAfterDelay:1.0 complited:^{
+                [MBProgressHUD showMBProgressHudWithTitle:@"您暂无返利记录" hideAfterDelay:1.0 complited:^{
                     [self.navigationController popViewControllerAnimated:YES];
                 }];
                 return ;

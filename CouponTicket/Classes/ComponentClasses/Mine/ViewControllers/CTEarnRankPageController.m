@@ -45,7 +45,7 @@
         _segmentedControl.selectedLineColor = HexColor(@"#FFC726");
         _segmentedControl.titleNormalColor = RGBColor(207, 199, 255);
         _segmentedControl.titleSelectedColor = [UIColor whiteColor];
-        _segmentedControl.titles = @[@"昨日收益",@"本月收益",@"上月收益",@"总收益"];
+        _segmentedControl.titles = @[@"昨日返利",@"本月返利",@"上月返利",@"总返利"];
     }
     return _segmentedControl;
 }
@@ -53,7 +53,7 @@
 - (CTEarnRankNavBar *)navBar{
     if(!_navBar){
         _navBar = NSMainBundleClass(CTEarnRankNavBar.class);
-        _navBar.titleLabel.text = @"收益排行榜";
+        _navBar.titleLabel.text = @"返利排行榜";
         _navBar.backgroundAlpha = 0;
     }
     return _navBar;

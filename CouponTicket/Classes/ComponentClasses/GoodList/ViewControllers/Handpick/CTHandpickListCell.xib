@@ -80,9 +80,9 @@
                 <outlet property="dateLabel" destination="9W4-8B-on5" id="3LZ-9k-psl"/>
                 <outlet property="descLabel" destination="2jQ-tp-qmL" id="OqM-9d-gQj"/>
                 <outlet property="photoViews" destination="AIp-Vb-cZb" id="PXE-tr-kTA"/>
-                <outlet property="titleLabel" destination="2jQ-tp-qmL" id="eZn-iT-GDL"/>
+                <outlet property="titleLabel" destination="Zmx-TN-DBg" id="tgg-tC-IVr"/>
             </connections>
-            <point key="canvasLocation" x="-220" y="-44"/>
+            <point key="canvasLocation" x="-427" y="-51"/>
         </tableViewCell>
     </objects>
 </document>
