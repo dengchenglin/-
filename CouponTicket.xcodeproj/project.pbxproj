@@ -268,6 +268,7 @@
 		329B36FF223B91F60003AD30 /* CTGoodsViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 329B36FE223B91F60003AD30 /* CTGoodsViewModel.m */; };
 		329B3706223BAF130003AD30 /* CTTimeBuyCateModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 329B3705223BAF100003AD30 /* CTTimeBuyCateModel.m */; };
 		329D8E1D225C44F9001BFE60 /* MWManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 329D8E1C225C44F9001BFE60 /* MWManager.m */; };
+		32A12F75225D7BC6002D5189 /* CTNetworkEngine+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 32A12F74225D7BC6002D5189 /* CTNetworkEngine+Common.m */; };
 		32A281092237D2F2007DF6C2 /* CTNetworkEngine+Recommend.m in Sources */ = {isa = PBXBuildFile; fileRef = 32A281082237D2F2007DF6C2 /* CTNetworkEngine+Recommend.m */; };
 		32A2810C2237D50C007DF6C2 /* CTNetworkEngine+Member.m in Sources */ = {isa = PBXBuildFile; fileRef = 32A2810B2237D50C007DF6C2 /* CTNetworkEngine+Member.m */; };
 		32A2810F2237D58E007DF6C2 /* CTNetworkEngine+Goods.m in Sources */ = {isa = PBXBuildFile; fileRef = 32A2810E2237D58E007DF6C2 /* CTNetworkEngine+Goods.m */; };
@@ -328,7 +329,7 @@
 		32BD0E4622018CB600E99B86 /* CTContentInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 32BD0E4522018CB600E99B86 /* CTContentInputView.m */; };
 		32BD0E4822018D7100E99B86 /* CTContentInputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32BD0E4722018D7100E99B86 /* CTContentInputView.xib */; };
 		32BD0E552201919500E99B86 /* LMPhotoBrower.m in Sources */ = {isa = PBXBuildFile; fileRef = 32BD0E542201919500E99B86 /* LMPhotoBrower.m */; };
-		32BD0E5922019D9300E99B86 /* LMUpdateData.m in Sources */ = {isa = PBXBuildFile; fileRef = 32BD0E5822019D9300E99B86 /* LMUpdateData.m */; };
+		32BD0E5922019D9300E99B86 /* DKUpdateData.m in Sources */ = {isa = PBXBuildFile; fileRef = 32BD0E5822019D9300E99B86 /* DKUpdateData.m */; };
 		32BD0E5C2201A19E00E99B86 /* CTUpdateImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 32BD0E5B2201A19E00E99B86 /* CTUpdateImageView.m */; };
 		32BD0E5E2201A1AA00E99B86 /* CTUpdateImageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32BD0E5D2201A1AA00E99B86 /* CTUpdateImageView.xib */; };
 		32BE600521EDC5E100BA52EF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 32BE600421EDC5E100BA52EF /* AppDelegate.m */; };
@@ -989,6 +990,8 @@
 		329B3705223BAF100003AD30 /* CTTimeBuyCateModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTTimeBuyCateModel.m; sourceTree = "<group>"; };
 		329D8E1B225C44F9001BFE60 /* MWManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MWManager.h; sourceTree = "<group>"; };
 		329D8E1C225C44F9001BFE60 /* MWManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MWManager.m; sourceTree = "<group>"; };
+		32A12F73225D7BC6002D5189 /* CTNetworkEngine+Common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CTNetworkEngine+Common.h"; sourceTree = "<group>"; };
+		32A12F74225D7BC6002D5189 /* CTNetworkEngine+Common.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CTNetworkEngine+Common.m"; sourceTree = "<group>"; };
 		32A281072237D2F2007DF6C2 /* CTNetworkEngine+Recommend.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CTNetworkEngine+Recommend.h"; sourceTree = "<group>"; };
 		32A281082237D2F2007DF6C2 /* CTNetworkEngine+Recommend.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CTNetworkEngine+Recommend.m"; sourceTree = "<group>"; };
 		32A2810A2237D50C007DF6C2 /* CTNetworkEngine+Member.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CTNetworkEngine+Member.h"; sourceTree = "<group>"; };
@@ -1096,8 +1099,8 @@
 		32BD0E4722018D7100E99B86 /* CTContentInputView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CTContentInputView.xib; sourceTree = "<group>"; };
 		32BD0E532201919500E99B86 /* LMPhotoBrower.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMPhotoBrower.h; sourceTree = "<group>"; };
 		32BD0E542201919500E99B86 /* LMPhotoBrower.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMPhotoBrower.m; sourceTree = "<group>"; };
-		32BD0E5722019D9300E99B86 /* LMUpdateData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMUpdateData.h; sourceTree = "<group>"; };
-		32BD0E5822019D9300E99B86 /* LMUpdateData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMUpdateData.m; sourceTree = "<group>"; };
+		32BD0E5722019D9300E99B86 /* DKUpdateData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKUpdateData.h; sourceTree = "<group>"; };
+		32BD0E5822019D9300E99B86 /* DKUpdateData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKUpdateData.m; sourceTree = "<group>"; };
 		32BD0E5A2201A19E00E99B86 /* CTUpdateImageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTUpdateImageView.h; sourceTree = "<group>"; };
 		32BD0E5B2201A19E00E99B86 /* CTUpdateImageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTUpdateImageView.m; sourceTree = "<group>"; };
 		32BD0E5D2201A1AA00E99B86 /* CTUpdateImageView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CTUpdateImageView.xib; sourceTree = "<group>"; };
@@ -2682,10 +2685,10 @@
 				3280739621FEF4DF009CABEC /* CTMineOrderView.xib */,
 				3280739821FF0922009CABEC /* CTMineToolView.h */,
 				3280739921FF0922009CABEC /* CTMineToolView.m */,
+				3280739B21FF0969009CABEC /* CTMineToolView.xib */,
 				32DB93B322150D9A00300ACC /* CTEarnTrendCell.h */,
 				32DB93B422150D9A00300ACC /* CTEarnTrendCell.m */,
 				32DB93B522150D9A00300ACC /* CTEarnTrendCell.xib */,
-				3280739B21FF0969009CABEC /* CTMineToolView.xib */,
 				32BD0E26220172FE00E99B86 /* CTMineNavItemView.h */,
 				32BD0E27220172FE00E99B86 /* CTMineNavItemView.m */,
 				32BD0E292201730700E99B86 /* CTMineNavItemView.xib */,
@@ -3025,8 +3028,8 @@
 		32BD0E5622019D9300E99B86 /* LMUpdateData */ = {
 			isa = PBXGroup;
 			children = (
-				32BD0E5722019D9300E99B86 /* LMUpdateData.h */,
-				32BD0E5822019D9300E99B86 /* LMUpdateData.m */,
+				32BD0E5722019D9300E99B86 /* DKUpdateData.h */,
+				32BD0E5822019D9300E99B86 /* DKUpdateData.m */,
 			);
 			path = LMUpdateData;
 			sourceTree = "<group>";
@@ -3424,6 +3427,8 @@
 				32DE0910224A042800474058 /* CTNetworkEngine+H5Url.m */,
 				32738E82224DF84400B9C80D /* CTNetworkEngine+Cash.h */,
 				32738E83224DF84400B9C80D /* CTNetworkEngine+Cash.m */,
+				32A12F73225D7BC6002D5189 /* CTNetworkEngine+Common.h */,
+				32A12F74225D7BC6002D5189 /* CTNetworkEngine+Common.m */,
 			);
 			path = CTNetwork;
 			sourceTree = "<group>";
@@ -3932,6 +3937,7 @@
 				329B3706223BAF130003AD30 /* CTTimeBuyCateModel.m in Sources */,
 				32AE799822166DD500E29FC3 /* CTProfitShareViewController.m in Sources */,
 				326525ED21F5CE7F00B63DD7 /* CTGetCodeViewController.m in Sources */,
+				32A12F75225D7BC6002D5189 /* CTNetworkEngine+Common.m in Sources */,
 				32E7EE6121F30AB500191789 /* CTBaseListViewController.m in Sources */,
 				326525F321F5CEF600B63DD7 /* CTRegisterView.m in Sources */,
 				3297FDC22241EA7100B59746 /* CTTaoBaoAuthViewController.m in Sources */,
@@ -4157,7 +4163,7 @@
 				32DB93BA2215391800300ACC /* CTOrderPageController.m in Sources */,
 				325D3B7421F1E67200465B91 /* CTMainController.m in Sources */,
 				3260146A224E256000B7A1BE /* CLRefreshFactory.m in Sources */,
-				32BD0E5922019D9300E99B86 /* LMUpdateData.m in Sources */,
+				32BD0E5922019D9300E99B86 /* DKUpdateData.m in Sources */,
 				32DB93B622150D9A00300ACC /* CTEarnTrendCell.m in Sources */,
 				2405AEDD21FC0E34000E5081 /* CTMemberEquityView.m in Sources */,
 				32A28EBE2202C8B10049B003 /* CTAlertView.m in Sources */,
@@ -4452,7 +4458,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = cn.dankal.coupon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "ca772441-6872-4b13-bf12-3b01e0ed047d";
+				PROVISIONING_PROFILE = "2d955f92-d2d3-4e66-aa8f-de680945f0af";
 				PROVISIONING_PROFILE_SPECIFIER = Development;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -4466,7 +4472,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
 				CODE_SIGN_ENTITLEMENTS = CouponTicket/CouponTicket.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Shenzhen youquan network technology co. LTD (W9PQTS6Q34)";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = W9PQTS6Q34;
 				ENABLE_BITCODE = NO;
@@ -4569,8 +4575,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = cn.dankal.coupon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "ca772441-6872-4b13-bf12-3b01e0ed047d";
-				PROVISIONING_PROFILE_SPECIFIER = Development;
+				PROVISIONING_PROFILE = "bd13e928-4f02-49f8-a084-07c4e8c9f22c";
+				PROVISIONING_PROFILE_SPECIFIER = distribution;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

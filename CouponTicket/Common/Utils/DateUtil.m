@@ -84,7 +84,7 @@
 // 获得当前时间戳
 + (NSString *)getNowDateTimestamp
 {
-    NSDate *date = [DateUtil getDateFromString:[DateUtil getNowDate]];
+    NSDate *date = [NSDate date];
     NSTimeInterval timeInterval = [date timeIntervalSince1970];
     NSNumber *timeIntervalNumber = [NSNumber numberWithDouble:timeInterval];
     return [timeIntervalNumber stringValue];

@@ -35,7 +35,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jf7-Te-RzY">
                     <rect key="frame" x="0.0" y="60" width="376" height="277"/>
                     <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oCX-eE-0db">
+                        <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oCX-eE-0db">
                             <rect key="frame" x="0.0" y="0.0" width="376" height="46"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_my_team" translatesAutoresizingMaskIntoConstraints="NO" id="hp9-wf-WdN">
@@ -247,6 +247,7 @@
                 <outlet property="guideView" destination="1Sh-Kd-8YC" id="zuf-JP-gS9"/>
                 <outlet property="inviteCodeView" destination="WWx-nB-gDy" id="Ok3-7N-3Nw"/>
                 <outlet property="questionView" destination="kBP-XB-oSU" id="cL6-Dd-F5X"/>
+                <outlet property="teamHeight" destination="puJ-9F-Irn" id="SUG-wu-UAw"/>
                 <outlet property="teamView" destination="oCX-eE-0db" id="X9D-uI-amc"/>
             </connections>
             <point key="canvasLocation" x="-88" y="-41"/>

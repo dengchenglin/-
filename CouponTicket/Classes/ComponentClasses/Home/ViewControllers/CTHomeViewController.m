@@ -214,6 +214,10 @@
         @strongify(self)
         [self loadData];
     }];
+    [[[[NSNotificationCenter defaultCenter]rac_addObserverForName:CTRefreshHomeNotification object:nil] takeUntil:self.rac_willDeallocSignal] subscribeNext:^(NSNotification * _Nullable x) {
+        @strongify(self)
+        [self loadData];
+    }];
     //轮播
     [self.bannerView setClickItemBlock:^(NSInteger index) {
         @strongify(self)

@@ -50,6 +50,7 @@ NSString * GetDifferTimeStrWithNextUpdateTimestamp(NSTimeInterval nextUpdateTime
             [timer invalidate];
             timer = nil;
             POST_NOTIFICATION(CTRefreshHotGoodsNotification);
+            POST_NOTIFICATION(CTRefreshHomeNotification);
         }
        
     } repeats:YES];

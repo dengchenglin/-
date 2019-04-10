@@ -36,7 +36,7 @@
 
 - (UIWebView *)webView{
     if(!_webView){
-        _webView = [[UIWebView alloc]initWithFrame:self.view.bounds];
+        _webView = [[UIWebView alloc]init];
         _webView.delegate = self;
     }
     return _webView;
@@ -47,6 +47,11 @@
     [self.view addSubview:self.webView];
     self.webView.scalesPageToFit = YES;
     self.webView.scrollView.delegate = self;
+}
+- (void)autoLayout{
+    [self.webView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.mas_equalTo(UIEdgeInsetsZero);
+    }];
 }
 - (void)reloadView{
     NSURL *URL = [NSURL URLWithString:_url];

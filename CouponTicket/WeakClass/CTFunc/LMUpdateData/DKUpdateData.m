@@ -1,12 +1,12 @@
 //
-//  LMUpdateData.m
+//  DKUpdateData.m
 //  LightMaster
 //
 //  Created by Dankal on 2019/1/5.
 //  Copyright © 2019 Qianmeng. All rights reserved.
 //
 
-#import "LMUpdateData.h"
+#import "DKUpdateData.h"
 
 #import <Qiniu/QiniuSDK.h>
 
@@ -14,11 +14,11 @@
 
 #import "KeychainTool.h"
 
-#define LMQiniuTokenKey @"LMQiniuTokenKey"
+#define DKQiniuTokenKey @"DKQiniuTokenKey"
 
-#define LMQiniuTokenUrl @"http://api-lighting-dev.dankal.cn/v1/Communal/qiniu"
+#define DKQiniuTokenUrl @"http://api-lighting-dev.dankal.cn/v1/Communal/qiniu"
 
-@interface LMUpdateHelper: NSObject
+@interface DKUpdateHelper: NSObject
 
 @property (nonatomic, copy)NSString *token;
 
@@ -32,7 +32,7 @@
 
 @end
 
-@implementation LMUpdateHelper
+@implementation DKUpdateHelper
 
 - (instancetype)init
 {
@@ -44,7 +44,7 @@
     return self;
 }
 
-- (void)updateDataWithcallback:(void(^)(LMUpdateHelper *downloader))callback{
+- (void)updateDataWithcallback:(void(^)(DKUpdateHelper *downloader))callback{
     if(!_data.length || !_requestKey.length || !_token.length)return;
     [_upManager putData:_data key:_requestKey token:_token complete:^(QNResponseInfo *info, NSString *key, NSDictionary *resp) {
         self.hashKey = resp[@"hash"];
@@ -56,7 +56,7 @@
 
 @end
 
-@implementation LMUpdateData
+@implementation DKUpdateData
 
 + (void)load{
     //获取七牛token
@@ -67,12 +67,12 @@
 
 + (NSString *)token{
     
-    __block NSString *_token = objc_getAssociatedObject(self, LMQiniuTokenKey);
+    __block NSString *_token = objc_getAssociatedObject(self, DKQiniuTokenKey);
     if(_token)return _token;
     
-     _token = [KeychainTool load:LMQiniuTokenKey];
+     _token = [KeychainTool load:DKQiniuTokenKey];
     if(_token){
-        objc_setAssociatedObject(self, LMQiniuTokenKey, _token, OBJC_ASSOCIATION_COPY_NONATOMIC);
+        objc_setAssociatedObject(self, DKQiniuTokenKey, _token, OBJC_ASSOCIATION_COPY_NONATOMIC);
         return _token;
     }
     
@@ -89,7 +89,7 @@
 }
 
 + (void)getToken:(void(^)(NSString *token))callback{
-    NSString *getTokenUrl = LMQiniuTokenUrl;
+    NSString *getTokenUrl = DKQiniuTokenUrl;
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:getTokenUrl]];
     NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
     NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
@@ -101,7 +101,7 @@
                     callback(token);
                 }
                 
-                [KeychainTool save:LMQiniuTokenKey data:token];
+                [KeychainTool save:DKQiniuTokenKey data:token];
             }
         }
    
@@ -137,11 +137,11 @@ NSData *CompressedImage(UIImage *image){
         keys = [array copy];
     }
     
-    NSMutableArray <LMUpdateHelper *>*downloaders = [NSMutableArray array];
+    NSMutableArray <DKUpdateHelper *>*downloaders = [NSMutableArray array];
     for(int i = 0;i < images.count;i ++){
         NSString *imgKey = [keys safe_objectAtIndex:i];
         NSData *imageData = CompressedImage(images[i]);
-        LMUpdateHelper *updater = [[LMUpdateHelper alloc]init];
+        DKUpdateHelper *updater = [[DKUpdateHelper alloc]init];
         updater.requestKey = imgKey;
         updater.data = imageData;
         updater.token = token;
@@ -154,16 +154,16 @@ NSData *CompressedImage(UIImage *image){
     dispatch_group_t group = dispatch_group_create();
     for(int i = 0; i< downloaders.count;i ++){
         
-        LMUpdateHelper *updater = downloaders[i];
+        DKUpdateHelper *updater = downloaders[i];
          dispatch_group_enter(group);
-        [updater updateDataWithcallback:^(LMUpdateHelper *downloader) {
+        [updater updateDataWithcallback:^(DKUpdateHelper *downloader) {
              dispatch_group_leave(group);
         }];
     }
     dispatch_group_notify(group, dispatch_get_main_queue(), ^{
         [MBProgressHUD hideHUDForView:viewController.view animated:YES];
  
-        NSArray <NSString *>*hashKeys = [downloaders map:^id(NSInteger index, LMUpdateHelper *element) {
+        NSArray <NSString *>*hashKeys = [downloaders map:^id(NSInteger index, DKUpdateHelper *element) {
             return element.requestKey;
         }];
         __block BOOL result = YES;

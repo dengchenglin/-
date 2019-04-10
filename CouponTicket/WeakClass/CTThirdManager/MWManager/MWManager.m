@@ -17,8 +17,10 @@
 + (void)initSDK{
     [MWApi registerApp:MagicKey];
     [MWApi registerMLinkHandlerWithKey:@"test" handler:^(NSURL *url, NSDictionary *params) {
-         UIAlertView *alt = [[UIAlertView alloc]initWithTitle:@"魔窗test" message:[params yy_modelToJSONString] delegate:nil cancelButtonTitle:nil otherButtonTitles:@"知道了", nil];
-         [alt show];
+#ifdef DEBUG
+        UIAlertView *alt = [[UIAlertView alloc]initWithTitle:@"魔窗test" message:[params yy_modelToJSONString] delegate:nil cancelButtonTitle:nil otherButtonTitles:@"知道了", nil];
+        [alt show];
+#endif
         if(params[@"json"]){
             CTActivityModel *info = [CTActivityModel yy_modelWithDictionary:params[@"json"]];
             [CTModuleHelper showViewControllerWithModel:info];

@@ -72,29 +72,47 @@ NSString *const CLRefreshFooterKeyPathContentSize = @"contentSize";
     if ([keyPath isEqualToString:CLRefreshFooterKeyPathContentOffset]) {
         
         CGPoint contentOffset = [[change valueForKey:NSKeyValueChangeNewKey] CGPointValue];
-        CGFloat originOffest = minTop - self.scrollView.bounds.size.height;
-        if (contentOffset.y >= originOffest) {
-            CGFloat progress = MAX(0.0, MIN((contentOffset.y - originOffest)/_refreshDistance, 1.0));
-            if(!_loading){
-                self.progress = progress;
-            }
-            if(self.progress >= 1.0 && !self.scrollView.isDragging && !self.loading){
-                self.loading = YES;
-                self.scrollView.decelerationRate = 0.01;
-                [UIView animateWithDuration:0.5 animations:^{
-                    self.scrollView.contentInset = UIEdgeInsetsMake(self.scrollView.contentInset.top, self.scrollView.contentInset.left, self.bounds.size.height, self.scrollView.contentInset.right);
-                   
-                }];
-                if(self.refreshBlock){
-                    self.refreshBlock();
+        if([CLRefreshManager shareInsatnce].config.autoLoadMore){
+            if(self.scrollView.contentSize.height > self.scrollView.bounds.size.height && contentOffset.y >= self.scrollView.contentSize.height - self.scrollView.bounds.size.height - 100){
+                if(!_loading){
+                    self.progress = 1.0;
+                }
+                if(self.progress >= 1.0 && !self.loading){
+                    self.loading = YES;
+                    [UIView animateWithDuration:0.5 animations:^{
+                        self.scrollView.contentInset = UIEdgeInsetsMake(self.scrollView.contentInset.top, self.scrollView.contentInset.left, self.bounds.size.height, self.scrollView.contentInset.right);
+                        
+                    }];
+                    if(self.refreshBlock){
+                        self.refreshBlock();
+                    }
                 }
             }
-            CGFloat diff = contentOffset.y - originOffest - _refreshDistance;
-            if(diff > 0 && !_loading){
-                self.diff = diff;
+        }
+        else{
+            CGFloat originOffest = minTop - self.scrollView.bounds.size.height;
+            if (contentOffset.y >= originOffest && self.scrollView.contentSize.height > self.scrollView.bounds.size.height) {
+                CGFloat progress = MAX(0.0, MIN((contentOffset.y - originOffest)/_refreshDistance, 1.0));
+                if(!_loading){
+                    self.progress = progress;
+                }
+                if(self.progress >= 1.0 && !self.scrollView.isDragging && !self.loading){
+                    self.loading = YES;
+                    self.scrollView.decelerationRate = 0.01;
+                    [UIView animateWithDuration:0.5 animations:^{
+                        self.scrollView.contentInset = UIEdgeInsetsMake(self.scrollView.contentInset.top, self.scrollView.contentInset.left, self.bounds.size.height, self.scrollView.contentInset.right);
+                        
+                    }];
+                    if(self.refreshBlock){
+                        self.refreshBlock();
+                    }
+                }
+                CGFloat diff = contentOffset.y - originOffest - _refreshDistance;
+                if(diff > 0 && !_loading){
+                    self.diff = diff;
+                }
             }
         }
-
     }
     
 }
@@ -108,6 +126,7 @@ NSString *const CLRefreshFooterKeyPathContentSize = @"contentSize";
         self.scrollView.contentInset = UIEdgeInsetsMake(self.scrollView.contentInset.top, self.scrollView.contentInset.left, 0, self.scrollView.contentInset.right);
     } completion:^(BOOL finished) {
         self.loading = NO;
+        self.progress = 0;
         self.scrollView.decelerationRate = self-> _originDecelerationRate;
     }];
 

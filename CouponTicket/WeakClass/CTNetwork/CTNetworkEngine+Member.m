@@ -8,7 +8,7 @@
 
 #import "CTNetworkEngine+Member.h"
 
-#import "LMUpdateData.h"
+#import "DKUpdateData.h"
 
 #define CTUser(path)   [CTUrlPath(@"user") stringByAppendingPathComponent:path]
 
@@ -98,7 +98,7 @@
 - (CLRequest *)viewSaveWithDetail:(NSString *)detail img:(NSArray <NSString *>*)imgs callback:(CTResponseBlock)callback{
     NSMutableString *imgStr = [NSMutableString string];
     for(NSString *img in imgs){
-        [imgStr appendFormat:@"%@,",LMImageUrlForKey(img)];
+        [imgStr appendFormat:@"%@,",DKImageUrlForKey(img)];
     }
     if(imgStr.length){
         [imgStr deleteCharactersInRange:NSMakeRange(imgStr.length - 1, 1)];

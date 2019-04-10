@@ -7,7 +7,7 @@
 //
 
 #import "CTAppConfig.h"
-
+#import "CTNetworkEngine+Common.h"
 #ifdef DEBUG
 #import "PLeakSniffer.h"
 #endif
@@ -18,7 +18,7 @@
 + (void)config{
 
     [self configSniffer];
-
+    [CTRequest iosFunctionIo];
 }
 
 + (void)configSniffer{

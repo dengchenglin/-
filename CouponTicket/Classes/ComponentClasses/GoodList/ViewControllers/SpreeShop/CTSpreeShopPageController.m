@@ -81,8 +81,10 @@
     __block NSInteger index = 0;
     [self.cates enumerateObjectsUsingBlock:^(CTTimeBuyCateModel * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         if([obj.start_time integerValue] >= [nowTimeStamp integerValue]){
-            index = idx;
             *stop = YES;
+        }
+        if(!(*stop)){
+           index = idx;
         }
     }];
     self.toIndex = index;

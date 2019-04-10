@@ -16,6 +16,7 @@
     _profitLabel.text = [NSString stringWithFormat:@"¥%@",_model.money];
     _contributionLabel.text = [NSString stringWithFormat:@"¥%@",_model.branch_money];
     _countLabel.text = _model.order_num;
+    _contributionView.hidden = ![CTAppManager sharedInstance].showMember;
 }
 
 @end

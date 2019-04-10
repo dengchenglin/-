@@ -178,6 +178,14 @@
         config.sectioView = self.toolView;
         config.sectionHeight = 299;
         config.space = 10;
+        if([CTAppManager sharedInstance].showMember){
+            self.toolView.teamHeight.constant = 46;
+            config.sectionHeight = 299;
+        }
+        else{
+            self.toolView.teamHeight.constant = 0;
+            config.sectionHeight = 253;
+        }
     }];
 }
 
@@ -244,12 +252,6 @@
         CTOrderPageController *vc = [[CTOrderPageController alloc]init];
         vc.toIndex = 4;
         [self.navigationController pushViewController:vc animated:YES];
-    }];
-    //邀请券友
-    [self.toolView.inviteView addActionWithBlock:^(id target) {
-        @strongify(self)
-        UIViewController *shareVc = [[CTModuleManager shareService] rootViewController];
-        [self.navigationController pushViewController:shareVc animated:YES];
     }];
     //设置
     [self.navItemView.setButton touchUpInsideSubscribeNext:^(id x) {

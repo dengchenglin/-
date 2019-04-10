@@ -35,5 +35,5 @@ typedef NS_ENUM(NSUInteger,CLRefreshFooterType){
 
 @property (nonatomic, assign) CGFloat loadMoreDistance;
 
-
+@property (nonatomic, assign) BOOL autoLoadMore;
 @end

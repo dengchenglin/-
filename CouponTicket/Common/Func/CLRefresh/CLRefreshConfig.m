@@ -20,6 +20,7 @@ CGFloat const CLRefreshLoadMoreDistance = 60.0f;
     if (self) {
         _refreshDistance = CLRefreshingDistance;
         _loadMoreDistance = CLRefreshLoadMoreDistance;
+        _autoLoadMore = YES;
     }
     return self;
 }

@@ -91,7 +91,7 @@
                 <outlet property="playButton" destination="aJX-c4-TBm" id="4um-lo-Xx2"/>
                 <outlet property="previewImageView" destination="IVH-aD-ZL4" id="M66-N8-hi7"/>
             </connections>
-            <point key="canvasLocation" x="-11" y="68"/>
+            <point key="canvasLocation" x="433" y="-20"/>
         </tableViewCell>
     </objects>
     <resources>

@@ -44,6 +44,8 @@
 
 @property (nonatomic, copy) NSString *apns_token;
 
+@property (nonatomic, assign) BOOL showMember;
+
 SINGLETON_FOR_CLASS_DEF
 
 + (void)showLogin;

@@ -12,7 +12,7 @@
 
 - (void)awakeFromNib{
     [super awakeFromNib];
-    
+    self.earnButton.hidden = ![CTAppManager sharedInstance].showMember;
     self.layer.cornerRadius = 10;
     self.layer.backgroundColor = [UIColor colorWithRed:255/255.0 green:255/255.0 blue:255/255.0 alpha:1.0].CGColor;
     self.layer.shadowColor = [UIColor colorWithRed:153/255.0 green:153/255.0 blue:153/255.0 alpha:0.3].CGColor;

@@ -13,5 +13,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *profitLabel;
 @property (weak, nonatomic) IBOutlet UILabel *contributionLabel;
 @property (weak, nonatomic) IBOutlet UILabel *countLabel;
+@property (weak, nonatomic) IBOutlet UIView *contributionView;
 @property (nonatomic, strong) CTEarnIndexModel *model;
 @end

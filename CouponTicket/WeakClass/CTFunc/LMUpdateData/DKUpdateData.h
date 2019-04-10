@@ -1,5 +1,5 @@
 //
-//  LMUpdateData.h
+//  DKUpdateData.h
 //  LightMaster
 //
 //  Created by Dankal on 2019/1/5.
@@ -8,9 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-#define LMImageUrlForKey(key) [@"http://lighting.dankal.cn/" stringByAppendingPathComponent:key]
+#define DKImageUrlForKey(key) [@"http://lighting.dankal.cn/" stringByAppendingPathComponent:key]
 
-@interface LMUpdateData : NSObject
+@interface DKUpdateData : NSObject
 
 + (void)updateImages:(NSArray <UIImage *>*)images callback:(void(^)(NSArray <NSString *> *hashKeys))callback;
 
