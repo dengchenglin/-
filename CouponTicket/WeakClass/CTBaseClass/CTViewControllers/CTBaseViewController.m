@@ -141,12 +141,11 @@
     self.automaticallyAdjustsScrollViewInsets = NO;
     self.view.backgroundColor = [UIColor whiteColor];
    self.navigationController.interactivePopGestureRecognizer.delegate = (id)self;
-    if([self.navigationController.viewControllers indexOfObject:self] > 0){
-        self.edgesForExtendedLayout = UIRectEdgeBottom;
+    if(self.hideSystemNavBarWhenAppear){
+        self.edgesForExtendedLayout = UIRectEdgeAll;
     }
     else{
-        self.edgesForExtendedLayout = UIRectEdgeNone;
-        
+        self.edgesForExtendedLayout = UIRectEdgeLeft|UIRectEdgeBottom|UIRectEdgeRight;
     }
     [self configureNavBar];
    

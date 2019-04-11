@@ -36,6 +36,7 @@
 
 - (void)setUpUI{
     self.navigationItem.titleView = self.segmentedControl;
+    self.contentInsets = UIEdgeInsetsMake(0, 0, TABBAR_HEIGHT, 0);
 }
 
 - (void)autoLayout{

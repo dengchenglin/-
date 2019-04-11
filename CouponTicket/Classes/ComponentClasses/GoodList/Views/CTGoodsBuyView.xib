@@ -16,10 +16,10 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DgL-bi-h0g">
-                    <rect key="frame" x="0.0" y="0.0" width="430" height="163"/>
+                    <rect key="frame" x="0.0" y="0.0" width="430" height="45"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cew-gG-qO4">
-                            <rect key="frame" x="19" y="66.5" width="30" height="30"/>
+                            <rect key="frame" x="19" y="7.5" width="30" height="30"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="30" id="Gde-2H-zEe"/>
                                 <constraint firstAttribute="height" constant="30" id="fOA-rK-kvF"/>
@@ -28,7 +28,7 @@
                             <state key="selected" image="ic_collect_highlight"/>
                         </button>
                         <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CE7-gh-ZCk">
-                            <rect key="frame" x="261" y="64" width="159" height="35"/>
+                            <rect key="frame" x="261" y="5" width="159" height="35"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="159" id="3dy-K5-K9C"/>
                                 <constraint firstAttribute="height" constant="35" id="MbY-AX-WaK"/>
@@ -42,7 +42,7 @@
                             </userDefinedRuntimeAttributes>
                         </button>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vfh-Uf-2kU">
-                            <rect key="frame" x="186.5" y="66.5" width="59.5" height="30"/>
+                            <rect key="frame" x="186.5" y="7.5" width="59.5" height="30"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="返利" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UKS-bv-ZfW">
                                     <rect key="frame" x="0.0" y="7" width="29" height="17"/>
@@ -80,6 +80,7 @@
                     <constraints>
                         <constraint firstItem="cew-gG-qO4" firstAttribute="centerY" secondItem="DgL-bi-h0g" secondAttribute="centerY" id="4Fh-6s-ebG"/>
                         <constraint firstItem="CE7-gh-ZCk" firstAttribute="leading" secondItem="Vfh-Uf-2kU" secondAttribute="trailing" constant="15" id="FMU-5f-GRD"/>
+                        <constraint firstAttribute="height" constant="45" id="IYD-4u-Jn3"/>
                         <constraint firstItem="Vfh-Uf-2kU" firstAttribute="centerY" secondItem="DgL-bi-h0g" secondAttribute="centerY" id="UFI-ua-mjU"/>
                         <constraint firstItem="CE7-gh-ZCk" firstAttribute="centerY" secondItem="DgL-bi-h0g" secondAttribute="centerY" id="qNs-Fo-IsH"/>
                         <constraint firstItem="cew-gG-qO4" firstAttribute="leading" secondItem="DgL-bi-h0g" secondAttribute="leading" constant="19" id="vVg-Do-gFs"/>
@@ -89,7 +90,6 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="DgL-bi-h0g" secondAttribute="bottom" id="3qS-g6-mnh"/>
                 <constraint firstItem="DgL-bi-h0g" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="J0X-ZC-Web"/>
                 <constraint firstAttribute="trailing" secondItem="DgL-bi-h0g" secondAttribute="trailing" id="Pq6-XV-cDg"/>
                 <constraint firstItem="DgL-bi-h0g" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="nkI-8S-9dC"/>
@@ -101,7 +101,7 @@
                 <outlet property="buyButton" destination="CE7-gh-ZCk" id="3H7-Fe-VXO"/>
                 <outlet property="collectButton" destination="cew-gG-qO4" id="rwW-kn-rcb"/>
             </connections>
-            <point key="canvasLocation" x="-209" y="106"/>
+            <point key="canvasLocation" x="-13" y="53"/>
         </view>
     </objects>
     <resources>

@@ -104,7 +104,7 @@
     }];
     [self.scrollView mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.left.top.right.mas_equalTo(0);
-        make.bottom.mas_equalTo(-45);
+        make.bottom.mas_equalTo(-45-BOTTOM_HEIGHT);
     }];
     [self.imgsView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.top.mas_equalTo(0);
@@ -127,7 +127,7 @@
     }];
     [self.buyView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.bottom.mas_equalTo(0);
-        make.height.mas_equalTo(45);
+        make.height.mas_equalTo(45 + BOTTOM_HEIGHT);
     }];
 }
 
