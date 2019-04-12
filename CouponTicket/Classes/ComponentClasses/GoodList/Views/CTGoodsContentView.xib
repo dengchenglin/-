@@ -30,7 +30,7 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vo5-Yh-D9e" customClass="UIWebView">
-                    <rect key="frame" x="0.0" y="45" width="372" height="0.0"/>
+                    <rect key="frame" x="10" y="45" width="352" height="0.0"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="height" id="o01-Lf-dGy"/>
@@ -39,10 +39,10 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="vo5-Yh-D9e" secondAttribute="trailing" id="28i-dM-njy"/>
+                <constraint firstAttribute="trailing" secondItem="vo5-Yh-D9e" secondAttribute="trailing" constant="10" id="28i-dM-njy"/>
                 <constraint firstAttribute="trailing" secondItem="2zG-bm-FIA" secondAttribute="trailing" id="7Ed-NJ-0uh"/>
                 <constraint firstItem="vo5-Yh-D9e" firstAttribute="top" secondItem="2zG-bm-FIA" secondAttribute="bottom" id="D8C-ds-sBt"/>
-                <constraint firstItem="vo5-Yh-D9e" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="H0I-B1-0jq"/>
+                <constraint firstItem="vo5-Yh-D9e" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="H0I-B1-0jq"/>
                 <constraint firstItem="2zG-bm-FIA" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Lie-70-sRl"/>
                 <constraint firstAttribute="bottom" secondItem="vo5-Yh-D9e" secondAttribute="bottom" id="RSd-fc-2ud"/>
                 <constraint firstItem="2zG-bm-FIA" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="X9c-th-XVq"/>

@@ -32,9 +32,9 @@
     [_goodImageView sd_setImageWithURL:[NSURL URLWithString:_model.goods_logo] placeholderImage:CTGoodsFailImage];
     [_typeImageView sd_setImageWithURL:[NSURL URLWithString:_model.type_logo]];
     _titleLabel.text = [NSString stringWithFormat:@"...  %@",_model.goods_title];
-    _disLabel1.text = [NSString stringWithFormat:@"返%@元",_model.commission_money];
+    _disLabel1.text = [NSString stringWithFormat:@"省%@元",_model.commission_money];
     
-    _disLabel2.text = [NSString stringWithFormat:@"升级可返%@元",_model.upgrade_money];
+    _disLabel2.text = [NSString stringWithFormat:@"升级可省%@元",_model.upgrade_money];
     _priceLabel.text = _model.coupon_price;
     _originPriceLabel.text = _model.sale_price;
     _couponPriceLabel.text = _model.coupon_amount;

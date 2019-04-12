@@ -17,15 +17,21 @@ typedef NS_ENUM(NSInteger,CTNavigationBarStyle) {
     CTNavigationBarWhite
 };
 
+@interface CTScrollView:UIScrollView
+
+@end
+
 @interface CTBaseViewController : UIViewController<CTBaseControllerProtocol>
 
-@property (nonatomic, strong, readonly) UIScrollView *scrollView;
+@property (nonatomic, strong, readonly) CTScrollView *scrollView;
 
 @property (nonatomic, strong, readonly) UIView *autoLayoutContainerView;
 
 @property (nonatomic, assign) BOOL hideSystemNavBarWhenAppear;
 
 @property (nonatomic, assign) BOOL scrollViewAvailable;
+
+@property (nonatomic, assign) BOOL scrollViewAllowMultiGes;
 
 @property (nonatomic, assign) BOOL hideNavBarBottomLine;
 

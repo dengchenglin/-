@@ -9,9 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface CTGoodsContentView : UIView
-
 @property (weak, nonatomic) IBOutlet UIWebView *contentView;
-
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *titleHeight;
 @property (nonatomic, copy) NSString *htmlString;
-
+@property (nonatomic, copy) NSString *url;
 @end

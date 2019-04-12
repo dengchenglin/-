@@ -8,6 +8,22 @@
 
 #import "CTBaseViewController.h"
 
+@interface CTScrollView()<UIGestureRecognizerDelegate>
+
+@property (nonatomic, assign) BOOL scrollViewAllowMultiGes;
+
+@end
+@implementation CTScrollView
+
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer{
+    if(_scrollViewAllowMultiGes){
+      return YES;
+    }
+    return NO;
+}
+
+@end
+
 @interface CTBaseViewController ()
 
 @property (nonatomic, strong) UIView *autoLayoutContainerView;
@@ -56,7 +72,7 @@
         _autoLayoutContainerView = [[UIView alloc]init];
         if(_scrollViewAvailable){
             if(!_scrollView){
-                _scrollView = [[UIScrollView alloc]initWithFrame:self.view.bounds];
+                _scrollView = [[CTScrollView alloc]initWithFrame:self.view.bounds];
                 
             }
             [_scrollView addSubview:_autoLayoutContainerView];
@@ -71,13 +87,19 @@
     }
     return _autoLayoutContainerView;
 }
+- (void)setScrollViewAllowMultiGes:(BOOL)scrollViewAllowMultiGes{
+    _scrollViewAllowMultiGes = scrollViewAllowMultiGes;
+    if(_scrollView){
+       _scrollView.scrollViewAllowMultiGes = _scrollViewAllowMultiGes;
+    }
+}
 
 - (void)setScrollViewAvailable:(BOOL)scrollViewAvailable{
     _scrollViewAvailable = scrollViewAvailable;
     if(!self.viewLoaded)return;
     if(!_scrollView)
     {
-        _scrollView = [[UIScrollView alloc]initWithFrame:self.view.bounds];
+        _scrollView = [[CTScrollView alloc]initWithFrame:self.view.bounds];
         
         _scrollView.contentSize = CGSizeMake(self.view.width, self.view.height + 10);
         _scrollView.delegate = (id<UIScrollViewDelegate>)self;

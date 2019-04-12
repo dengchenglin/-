@@ -8,8 +8,8 @@
 
 #import "CTGoodsContentView.h"
 
-@interface CTGoodsContentView()
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *titleHeight;
+@interface CTGoodsContentView()<UIScrollViewDelegate>
+
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *contentHeight;
 
 @end
@@ -18,10 +18,17 @@
 ViewInstance(setUp)
 
 - (void)setUp{
+    self.contentView.scalesPageToFit = YES;
     @weakify(self)
     [RACObserve(self.contentView.scrollView, contentSize) subscribeNext:^(id  _Nullable x) {
         @strongify(self)
+        if(!_htmlString.length && _url.length){
+            return ;
+        }
         CGFloat contentHeight = [x CGSizeValue].height;
+        if(contentHeight > SCREEN_HEIGHT - TABBAR_HEIGHT){
+            contentHeight = SCREEN_HEIGHT - TABBAR_HEIGHT;
+        }
         self.contentHeight.constant = contentHeight;
         [self layoutIfNeeded];
     }];
@@ -42,5 +49,22 @@ ViewInstance(setUp)
     
     [self.contentView loadHTMLString:_htmlString baseURL:nil];
 }
-
+- (void)setUrl:(NSString *)url{
+    _url = url;
+    if(_url.length){
+        self.contentHeight.constant = SCREEN_HEIGHT - TABBAR_HEIGHT;
+        self.titleHeight.constant = 45;
+    }
+    else{
+        self.titleHeight.constant = 0;
+        self.contentHeight.constant = 0;
+    }
+    [self.superview layoutIfNeeded];
+    
+    [self.contentView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:_url]]];
+}
+- (void)dealloc
+{
+    
+}
 @end

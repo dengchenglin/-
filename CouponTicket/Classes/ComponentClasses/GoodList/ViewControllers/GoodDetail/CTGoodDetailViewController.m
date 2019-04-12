@@ -87,7 +87,10 @@
     self.title = @"商品详情";
     self.hideSystemNavBarWhenAppear = YES;
     self.scrollViewAvailable = YES;
+    self.scrollView.delegate = self;
+    self.scrollViewAllowMultiGes = YES;
     self.scrollView.backgroundColor = CTBackGroundGrayColor;
+    self.contentView.contentView.scrollView.delegate = self;
     [self.autoLayoutContainerView addSubview:self.imgsView];
     [self.autoLayoutContainerView addSubview:self.descView];
     [self.autoLayoutContainerView addSubview:self.couponView];
@@ -132,15 +135,18 @@
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
-    CGFloat startOffest = SCREEN_WIDTH;
-    CGFloat alpha = 0;
-    if(scrollView.contentOffset.y > startOffest){
-        alpha = (scrollView.contentOffset.y - startOffest)/80;
+    if(scrollView == self.scrollView){
+        CGFloat startOffest = SCREEN_WIDTH;
+        CGFloat alpha = 0;
+        if(scrollView.contentOffset.y > startOffest){
+            alpha = (scrollView.contentOffset.y - startOffest)/80;
+        }
+        else{
+            alpha = 0;
+        }
+        self.navBar.backgroundAlpha = alpha;
     }
-    else{
-        alpha = 0;
-    }
-    self.navBar.backgroundAlpha = alpha;
+    [self ges_scrollViewDidScroll:scrollView];
 }
 
 - (void)reloadView{
@@ -151,7 +157,12 @@
         self.descView.viewModel = _viewModel;
         self.couponView.viewModel = _viewModel;
         self.buyView.viewModel = _viewModel;
-        self.contentView.htmlString = _viewModel.model.goods_content;
+        if(_viewModel.model.goods_content.length){
+            self.contentView.htmlString = _viewModel.model.goods_content;
+        }
+        else{
+            self.contentView.url = _viewModel.model.goods_content_url;
+        }
         [self.couponView mas_updateConstraints:^(MASConstraintMaker *make) {
             make.height.mas_equalTo(self.viewModel.model.show_coupon?127:0);
         }];
@@ -289,9 +300,50 @@
 }
 
 
+//手势效果
+static BOOL canMainScroll = YES;
+static BOOL canChildScroll = NO;
+- (void)initialize{
+    canMainScroll = YES;
+    canChildScroll = NO;
+}
+- (void)ges_scrollViewDidScroll:(UIScrollView *)scrollView{
+
+    if(!self.contentView.titleHeight.constant)return;
+    
+    UIScrollView *mainScrollView = self.scrollView;
+    UIScrollView *childScrollView = self.contentView.contentView.scrollView;
+    
+    CGFloat maxOffest = CGRectGetMinY(self.contentView.frame) + self.contentView.titleHeight.constant;
+    
+    if (scrollView == mainScrollView){
+        if(!canMainScroll){
+            mainScrollView.contentOffset = CGPointMake(0, maxOffest);
+            canChildScroll = YES;
+        }
+        else if(scrollView.contentOffset.y >= maxOffest){
+            mainScrollView.contentOffset = CGPointMake(0, maxOffest);
+            canMainScroll = NO;
+            canChildScroll = YES;
+        }
+    }
+    else{
+        if(!canChildScroll && childScrollView.isDragging){
+            childScrollView.contentOffset = CGPointMake(-childScrollView.contentInset.left, -childScrollView.contentInset.top);
+        }
+        else if(scrollView.contentOffset.y <= -childScrollView.contentInset.top){
+            canChildScroll = NO;
+            canMainScroll = YES;
+        }
+    }
+    
+}
+
+
 
 - (void)dealloc
 {
-    
+    self.contentView.contentView.scrollView.delegate = nil;
+    self.contentView.contentView.delegate = nil;
 }
 @end
