@@ -18,11 +18,11 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MkH-AV-Rac">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pic_bg_share" translatesAutoresizingMaskIntoConstraints="NO" id="EYd-Je-IaG">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pic_bg_posters" translatesAutoresizingMaskIntoConstraints="NO" id="EYd-Je-IaG">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         </imageView>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hGU-gs-xT7">
-                            <rect key="frame" x="20" y="294" width="335" height="279"/>
+                            <rect key="frame" x="20" y="170" width="335" height="279"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="邀请码" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mM6-lY-Fr9">
                                     <rect key="frame" x="145" y="233" width="45" height="21"/>
@@ -43,7 +43,7 @@
                             </userDefinedRuntimeAttributes>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qJa-cf-ZYW">
-                            <rect key="frame" x="100" y="279" width="175" height="28"/>
+                            <rect key="frame" x="100" y="155" width="175" height="28"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="长按扫码 下载省钱好物" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZeG-Ca-aNh">
                                     <rect key="frame" x="10" y="3.5" width="155" height="21"/>
@@ -66,17 +66,27 @@
                             </userDefinedRuntimeAttributes>
                         </view>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qDO-D4-EUj">
-                            <rect key="frame" x="100" y="336" width="175" height="175"/>
+                            <rect key="frame" x="100" y="212" width="175" height="175"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="175" id="Gbh-DR-Qgx"/>
                                 <constraint firstAttribute="width" constant="175" id="isk-z4-9ec"/>
+                            </constraints>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="youquan_icon" translatesAutoresizingMaskIntoConstraints="NO" id="eRY-nK-dqN">
+                            <rect key="frame" x="147.5" y="60" width="80" height="80"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="80" id="i6b-96-XKi"/>
+                                <constraint firstAttribute="width" constant="80" id="yCL-GJ-NcK"/>
                             </constraints>
                         </imageView>
                     </subviews>
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="bottom" secondItem="EYd-Je-IaG" secondAttribute="bottom" id="2PG-k1-LQ8"/>
+                        <constraint firstItem="hGU-gs-xT7" firstAttribute="top" secondItem="eRY-nK-dqN" secondAttribute="bottom" constant="30" id="9m3-P6-qX5"/>
                         <constraint firstItem="mM6-lY-Fr9" firstAttribute="top" secondItem="qDO-D4-EUj" secondAttribute="bottom" constant="16" id="BQg-aV-k2T"/>
+                        <constraint firstItem="eRY-nK-dqN" firstAttribute="centerX" secondItem="EYd-Je-IaG" secondAttribute="centerX" id="CIL-HG-Ung"/>
+                        <constraint firstItem="eRY-nK-dqN" firstAttribute="top" secondItem="EYd-Je-IaG" secondAttribute="top" constant="60" id="CZI-rT-ehn"/>
                         <constraint firstItem="qJa-cf-ZYW" firstAttribute="centerX" secondItem="hGU-gs-xT7" secondAttribute="centerX" id="D7r-hP-UCr"/>
                         <constraint firstItem="qDO-D4-EUj" firstAttribute="centerY" secondItem="hGU-gs-xT7" secondAttribute="centerY" constant="-10" id="I0c-UN-AqO"/>
                         <constraint firstItem="hGU-gs-xT7" firstAttribute="top" secondItem="qJa-cf-ZYW" secondAttribute="bottom" constant="-13" id="Ife-vX-WBk"/>
@@ -84,13 +94,12 @@
                         <constraint firstAttribute="trailing" secondItem="hGU-gs-xT7" secondAttribute="trailing" constant="20" id="Pu9-kU-5gM"/>
                         <constraint firstItem="hGU-gs-xT7" firstAttribute="leading" secondItem="MkH-AV-Rac" secondAttribute="leading" constant="20" id="eOh-pT-9vO"/>
                         <constraint firstItem="EYd-Je-IaG" firstAttribute="top" secondItem="MkH-AV-Rac" secondAttribute="top" id="fYu-VH-YaJ"/>
-                        <constraint firstAttribute="bottom" secondItem="hGU-gs-xT7" secondAttribute="bottom" constant="94" id="kRg-E4-ncu"/>
                         <constraint firstItem="EYd-Je-IaG" firstAttribute="leading" secondItem="MkH-AV-Rac" secondAttribute="leading" id="sX6-x3-QcR"/>
                         <constraint firstItem="qDO-D4-EUj" firstAttribute="centerX" secondItem="hGU-gs-xT7" secondAttribute="centerX" id="yWe-90-QIJ"/>
                     </constraints>
                 </view>
                 <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xTS-R6-zl0">
-                    <rect key="frame" x="20" y="593" width="335" height="46"/>
+                    <rect key="frame" x="20" y="469" width="335" height="46"/>
                     <color key="backgroundColor" red="1" green="0.78039215689999997" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="46" id="HTM-xT-ire"/>
@@ -111,7 +120,7 @@
                 <constraint firstAttribute="trailing" secondItem="xTS-R6-zl0" secondAttribute="trailing" constant="20" id="BVd-NA-5kX"/>
                 <constraint firstItem="MkH-AV-Rac" firstAttribute="top" secondItem="GPD-rB-BKI" secondAttribute="top" id="NEk-e5-Uak"/>
                 <constraint firstAttribute="trailing" secondItem="MkH-AV-Rac" secondAttribute="trailing" id="TRu-je-KEf"/>
-                <constraint firstAttribute="bottom" secondItem="xTS-R6-zl0" secondAttribute="bottom" constant="28" id="Xqg-Hm-gLP"/>
+                <constraint firstItem="xTS-R6-zl0" firstAttribute="top" secondItem="hGU-gs-xT7" secondAttribute="bottom" constant="20" id="ryD-4C-fPz"/>
                 <constraint firstAttribute="bottom" secondItem="MkH-AV-Rac" secondAttribute="bottom" id="we1-Us-MxY"/>
             </constraints>
             <connections>
@@ -121,10 +130,11 @@
                 <outlet property="qrCodeImageView" destination="qDO-D4-EUj" id="THv-PU-UQK"/>
                 <outlet property="titleLabel" destination="ZeG-Ca-aNh" id="W6F-bc-WEu"/>
             </connections>
-            <point key="canvasLocation" x="61" y="-5"/>
+            <point key="canvasLocation" x="60" y="-5.8470764617691158"/>
         </view>
     </objects>
     <resources>
-        <image name="pic_bg_share" width="450" height="800"/>
+        <image name="pic_bg_posters" width="375" height="603.5"/>
+        <image name="youquan_icon" width="180" height="180"/>
     </resources>
 </document>

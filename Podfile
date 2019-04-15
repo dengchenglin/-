@@ -1,6 +1,6 @@
 source 'https://github.com/CocoaPods/Specs.git'
 source 'http://repo.baichuan-ios.taobao.com/baichuanSDK/AliBCSpecs.git'
-target 'CouponTicket' do
+target 'YouQuan' do
   platform :ios, '8.0'
   inhibit_all_warnings!
   #pod 'AlibcTradeSDK'

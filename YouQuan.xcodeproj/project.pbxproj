@@ -54,6 +54,25 @@
 		24B1C56E223CCAF900831ACC /* CTHotGoodsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B1C56D223CCAF900831ACC /* CTHotGoodsModel.m */; };
 		24B1C571223CD29900831ACC /* CTNoticeAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B1C570223CD29900831ACC /* CTNoticeAlertView.m */; };
 		24B1C573223CD2C800831ACC /* CTNoticeAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24B1C572223CD2C700831ACC /* CTNoticeAlertView.xib */; };
+		24FE7F082264AA34001CE794 /* AlibabaAuthSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 24FE7EF42264AA34001CE794 /* AlibabaAuthSDK.bundle */; };
+		24FE7F092264AA34001CE794 /* AlipaySDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 24FE7EF52264AA34001CE794 /* AlipaySDK.bundle */; };
+		24FE7F0A2264AA34001CE794 /* ALPLinkPartnerSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 24FE7EF62264AA34001CE794 /* ALPLinkPartnerSDK.bundle */; };
+		24FE7F0B2264AA34001CE794 /* NBResource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 24FE7EF72264AA34001CE794 /* NBResource.bundle */; };
+		24FE7F0C2264AA34001CE794 /* AlibabaAuthExt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24FE7EF92264AA34001CE794 /* AlibabaAuthExt.framework */; };
+		24FE7F0D2264AA34001CE794 /* AlibabaAuthSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24FE7EFA2264AA34001CE794 /* AlibabaAuthSDK.framework */; };
+		24FE7F0E2264AA34001CE794 /* AlibcTradeSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24FE7EFB2264AA34001CE794 /* AlibcTradeSDK.framework */; };
+		24FE7F0F2264AA34001CE794 /* AlibcLinkPartnerSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24FE7EFC2264AA34001CE794 /* AlibcLinkPartnerSDK.framework */; };
+		24FE7F102264AA34001CE794 /* SecurityGuardSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24FE7EFD2264AA34001CE794 /* SecurityGuardSDK.framework */; };
+		24FE7F112264AA34001CE794 /* UTDID.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24FE7EFE2264AA34001CE794 /* UTDID.framework */; };
+		24FE7F122264AA34001CE794 /* AlibcTradeBiz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24FE7EFF2264AA34001CE794 /* AlibcTradeBiz.framework */; };
+		24FE7F132264AA34001CE794 /* SGMain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24FE7F002264AA34001CE794 /* SGMain.framework */; };
+		24FE7F142264AA34001CE794 /* AlibcTradeCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24FE7F012264AA34001CE794 /* AlibcTradeCommon.framework */; };
+		24FE7F152264AA34001CE794 /* UTMini.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24FE7F022264AA34001CE794 /* UTMini.framework */; };
+		24FE7F162264AA34001CE794 /* OpenMtopSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24FE7F032264AA34001CE794 /* OpenMtopSDK.framework */; };
+		24FE7F172264AA34001CE794 /* SGNoCaptcha.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24FE7F042264AA34001CE794 /* SGNoCaptcha.framework */; };
+		24FE7F182264AA34001CE794 /* AlipaySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24FE7F052264AA34001CE794 /* AlipaySDK.framework */; };
+		24FE7F192264AA34001CE794 /* SGSecurityBody.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24FE7F062264AA34001CE794 /* SGSecurityBody.framework */; };
+		24FE7F1A2264AA34001CE794 /* OpenMtopExt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24FE7F072264AA34001CE794 /* OpenMtopExt.framework */; };
 		24FF625D21F40F0B00488860 /* CTHomeSalesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24FF625C21F40F0B00488860 /* CTHomeSalesView.xib */; };
 		24FF626021F41D1000488860 /* CTHomeNewestHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 24FF625F21F41D1000488860 /* CTHomeNewestHeadView.m */; };
 		24FF626221F41D1700488860 /* CTHomeNewestHeadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24FF626121F41D1700488860 /* CTHomeNewestHeadView.xib */; };
@@ -339,7 +358,6 @@
 		32BE600521EDC5E100BA52EF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 32BE600421EDC5E100BA52EF /* AppDelegate.m */; };
 		32BE601021EDC5E500BA52EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32BE600E21EDC5E500BA52EF /* LaunchScreen.storyboard */; };
 		32BE601321EDC5E500BA52EF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 32BE601221EDC5E500BA52EF /* main.m */; };
-		32BE601D21EDC5E500BA52EF /* CouponTicketTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 32BE601C21EDC5E500BA52EF /* CouponTicketTests.m */; };
 		32BE614B21EDDBBB00BA52EF /* CTHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32BE614A21EDDBBB00BA52EF /* CTHomeViewController.m */; };
 		32C64EF1225AE86000DDC0F9 /* CTEarnRankModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 32C64EF0225AE85F00DDC0F9 /* CTEarnRankModel.m */; };
 		32C64EF4225AED5D00DDC0F9 /* CTEarnRankIndexViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 32C64EF3225AED5D00DDC0F9 /* CTEarnRankIndexViewModel.m */; };
@@ -444,25 +462,6 @@
 		32FD136B223F917600CB85C1 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 32FD136A223F917600CB85C1 /* libsqlite3.0.tbd */; };
 		32FD136D223F917D00CB85C1 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32FD136C223F917D00CB85C1 /* CoreTelephony.framework */; };
 		32FD136F223F918500CB85C1 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32FD136E223F918500CB85C1 /* SystemConfiguration.framework */; };
-		32FD13AD223F94A400CB85C1 /* AlibabaAuthSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 32FD1399223F94A100CB85C1 /* AlibabaAuthSDK.bundle */; };
-		32FD13AE223F94A400CB85C1 /* AlipaySDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 32FD139A223F94A100CB85C1 /* AlipaySDK.bundle */; };
-		32FD13AF223F94A400CB85C1 /* ALPLinkPartnerSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 32FD139B223F94A100CB85C1 /* ALPLinkPartnerSDK.bundle */; };
-		32FD13B0223F94A400CB85C1 /* NBResource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 32FD139C223F94A100CB85C1 /* NBResource.bundle */; };
-		32FD13B1223F94A400CB85C1 /* AlibabaAuthExt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32FD139E223F94A400CB85C1 /* AlibabaAuthExt.framework */; };
-		32FD13B2223F94A400CB85C1 /* AlibabaAuthSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32FD139F223F94A400CB85C1 /* AlibabaAuthSDK.framework */; };
-		32FD13B3223F94A400CB85C1 /* AlibcLinkPartnerSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32FD13A0223F94A400CB85C1 /* AlibcLinkPartnerSDK.framework */; };
-		32FD13B4223F94A400CB85C1 /* AlibcTradeBiz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32FD13A1223F94A400CB85C1 /* AlibcTradeBiz.framework */; };
-		32FD13B5223F94A400CB85C1 /* AlibcTradeCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32FD13A2223F94A400CB85C1 /* AlibcTradeCommon.framework */; };
-		32FD13B6223F94A400CB85C1 /* AlibcTradeSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32FD13A3223F94A400CB85C1 /* AlibcTradeSDK.framework */; };
-		32FD13B7223F94A400CB85C1 /* AlipaySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32FD13A4223F94A400CB85C1 /* AlipaySDK.framework */; };
-		32FD13B8223F94A400CB85C1 /* OpenMtopExt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32FD13A5223F94A400CB85C1 /* OpenMtopExt.framework */; };
-		32FD13B9223F94A400CB85C1 /* OpenMtopSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32FD13A6223F94A400CB85C1 /* OpenMtopSDK.framework */; };
-		32FD13BA223F94A400CB85C1 /* SecurityGuardSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32FD13A7223F94A400CB85C1 /* SecurityGuardSDK.framework */; };
-		32FD13BB223F94A400CB85C1 /* SGMain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32FD13A8223F94A400CB85C1 /* SGMain.framework */; };
-		32FD13BC223F94A400CB85C1 /* SGNoCaptcha.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32FD13A9223F94A400CB85C1 /* SGNoCaptcha.framework */; };
-		32FD13BD223F94A400CB85C1 /* SGSecurityBody.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32FD13AA223F94A400CB85C1 /* SGSecurityBody.framework */; };
-		32FD13BE223F94A400CB85C1 /* UTDID.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32FD13AB223F94A400CB85C1 /* UTDID.framework */; };
-		32FD13BF223F94A400CB85C1 /* UTMini.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32FD13AC223F94A400CB85C1 /* UTMini.framework */; };
 		32FD13C1223F9AA400CB85C1 /* yw_1222.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 32FD13C0223F9AA400CB85C1 /* yw_1222.jpg */; };
 		32FD13D2223FBD1700CB85C1 /* CTRecommendService.m in Sources */ = {isa = PBXBuildFile; fileRef = 32FD13CE223FBD1700CB85C1 /* CTRecommendService.m */; };
 		32FD13D3223FBD1700CB85C1 /* CTRecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32FD13D1223FBD1700CB85C1 /* CTRecommendViewController.m */; };
@@ -478,7 +477,7 @@
 		32FEAA0A22142388001156CC /* CTEarnDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32FEAA0922142388001156CC /* CTEarnDetailViewController.m */; };
 		32FEAA0D221426EC001156CC /* CTEarnDescView.m in Sources */ = {isa = PBXBuildFile; fileRef = 32FEAA0C221426EC001156CC /* CTEarnDescView.m */; };
 		32FEAA0F221426F4001156CC /* CTEarnDescView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32FEAA0E221426F4001156CC /* CTEarnDescView.xib */; };
-		AAE7F6FFBF4288319E9610C9 /* libPods-CouponTicket.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F51AA050F5801C0FBDEE117 /* libPods-CouponTicket.a */; };
+		787EA795B06BE98A1034D295 /* libPods-YouQuan.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F8C6FD3AAACC4E73C5C1877A /* libPods-YouQuan.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -574,6 +573,25 @@
 		24B1C56F223CD29900831ACC /* CTNoticeAlertView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTNoticeAlertView.h; sourceTree = "<group>"; };
 		24B1C570223CD29900831ACC /* CTNoticeAlertView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTNoticeAlertView.m; sourceTree = "<group>"; };
 		24B1C572223CD2C700831ACC /* CTNoticeAlertView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CTNoticeAlertView.xib; sourceTree = "<group>"; };
+		24FE7EF42264AA34001CE794 /* AlibabaAuthSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AlibabaAuthSDK.bundle; sourceTree = "<group>"; };
+		24FE7EF52264AA34001CE794 /* AlipaySDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AlipaySDK.bundle; sourceTree = "<group>"; };
+		24FE7EF62264AA34001CE794 /* ALPLinkPartnerSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ALPLinkPartnerSDK.bundle; sourceTree = "<group>"; };
+		24FE7EF72264AA34001CE794 /* NBResource.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = NBResource.bundle; sourceTree = "<group>"; };
+		24FE7EF92264AA34001CE794 /* AlibabaAuthExt.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AlibabaAuthExt.framework; sourceTree = "<group>"; };
+		24FE7EFA2264AA34001CE794 /* AlibabaAuthSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AlibabaAuthSDK.framework; sourceTree = "<group>"; };
+		24FE7EFB2264AA34001CE794 /* AlibcTradeSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AlibcTradeSDK.framework; sourceTree = "<group>"; };
+		24FE7EFC2264AA34001CE794 /* AlibcLinkPartnerSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AlibcLinkPartnerSDK.framework; sourceTree = "<group>"; };
+		24FE7EFD2264AA34001CE794 /* SecurityGuardSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SecurityGuardSDK.framework; sourceTree = "<group>"; };
+		24FE7EFE2264AA34001CE794 /* UTDID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UTDID.framework; sourceTree = "<group>"; };
+		24FE7EFF2264AA34001CE794 /* AlibcTradeBiz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AlibcTradeBiz.framework; sourceTree = "<group>"; };
+		24FE7F002264AA34001CE794 /* SGMain.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SGMain.framework; sourceTree = "<group>"; };
+		24FE7F012264AA34001CE794 /* AlibcTradeCommon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AlibcTradeCommon.framework; sourceTree = "<group>"; };
+		24FE7F022264AA34001CE794 /* UTMini.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UTMini.framework; sourceTree = "<group>"; };
+		24FE7F032264AA34001CE794 /* OpenMtopSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OpenMtopSDK.framework; sourceTree = "<group>"; };
+		24FE7F042264AA34001CE794 /* SGNoCaptcha.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SGNoCaptcha.framework; sourceTree = "<group>"; };
+		24FE7F052264AA34001CE794 /* AlipaySDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AlipaySDK.framework; sourceTree = "<group>"; };
+		24FE7F062264AA34001CE794 /* SGSecurityBody.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SGSecurityBody.framework; sourceTree = "<group>"; };
+		24FE7F072264AA34001CE794 /* OpenMtopExt.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OpenMtopExt.framework; sourceTree = "<group>"; };
 		24FF625C21F40F0B00488860 /* CTHomeSalesView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CTHomeSalesView.xib; sourceTree = "<group>"; };
 		24FF625E21F41D1000488860 /* CTHomeNewestHeadView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTHomeNewestHeadView.h; sourceTree = "<group>"; };
 		24FF625F21F41D1000488860 /* CTHomeNewestHeadView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTHomeNewestHeadView.m; sourceTree = "<group>"; };
@@ -1072,7 +1090,7 @@
 		32AE79AC2216926F00E29FC3 /* CTSharePopContainerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CTSharePopContainerView.xib; sourceTree = "<group>"; };
 		32B0EF972255B5FC00F8A758 /* UMMessageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMMessageManager.h; sourceTree = "<group>"; };
 		32B0EF982255B5FC00F8A758 /* UMMessageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UMMessageManager.m; sourceTree = "<group>"; };
-		32B0EFA722560AEB00F8A758 /* CouponTicket.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CouponTicket.entitlements; sourceTree = "<group>"; };
+		32B0EFA722560AEB00F8A758 /* YouQuan.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = YouQuan.entitlements; sourceTree = "<group>"; };
 		32B0EFA922560C0A00F8A758 /* CTBaseViewController+Debug.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CTBaseViewController+Debug.h"; sourceTree = "<group>"; };
 		32B0EFAA22560C0A00F8A758 /* CTBaseViewController+Debug.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CTBaseViewController+Debug.m"; sourceTree = "<group>"; };
 		32B4EE10221FA09300D2D71D /* CTHomeSpreeShopView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTHomeSpreeShopView.h; sourceTree = "<group>"; };
@@ -1114,13 +1132,12 @@
 		32BD0E5A2201A19E00E99B86 /* CTUpdateImageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTUpdateImageView.h; sourceTree = "<group>"; };
 		32BD0E5B2201A19E00E99B86 /* CTUpdateImageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTUpdateImageView.m; sourceTree = "<group>"; };
 		32BD0E5D2201A1AA00E99B86 /* CTUpdateImageView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CTUpdateImageView.xib; sourceTree = "<group>"; };
-		32BE600021EDC5E100BA52EF /* CouponTicket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CouponTicket.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		32BE600021EDC5E100BA52EF /* YouQuan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YouQuan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		32BE600321EDC5E100BA52EF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		32BE600421EDC5E100BA52EF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		32BE600F21EDC5E500BA52EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		32BE601221EDC5E500BA52EF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		32BE601821EDC5E500BA52EF /* CouponTicketTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CouponTicketTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		32BE601C21EDC5E500BA52EF /* CouponTicketTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CouponTicketTests.m; sourceTree = "<group>"; };
+		32BE601821EDC5E500BA52EF /* YouQuanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YouQuanTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		32BE613421EDD04A00BA52EF /* CTPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTPrefixHeader.pch; sourceTree = "<group>"; };
 		32BE614921EDDBBB00BA52EF /* CTHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTHomeViewController.h; sourceTree = "<group>"; };
 		32BE614A21EDDBBB00BA52EF /* CTHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTHomeViewController.m; sourceTree = "<group>"; wrapsLines = 0; };
@@ -1302,25 +1319,6 @@
 		32FD136A223F917600CB85C1 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		32FD136C223F917D00CB85C1 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		32FD136E223F918500CB85C1 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		32FD1399223F94A100CB85C1 /* AlibabaAuthSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AlibabaAuthSDK.bundle; sourceTree = "<group>"; };
-		32FD139A223F94A100CB85C1 /* AlipaySDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AlipaySDK.bundle; sourceTree = "<group>"; };
-		32FD139B223F94A100CB85C1 /* ALPLinkPartnerSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ALPLinkPartnerSDK.bundle; sourceTree = "<group>"; };
-		32FD139C223F94A100CB85C1 /* NBResource.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = NBResource.bundle; sourceTree = "<group>"; };
-		32FD139E223F94A400CB85C1 /* AlibabaAuthExt.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AlibabaAuthExt.framework; sourceTree = "<group>"; };
-		32FD139F223F94A400CB85C1 /* AlibabaAuthSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AlibabaAuthSDK.framework; sourceTree = "<group>"; };
-		32FD13A0223F94A400CB85C1 /* AlibcLinkPartnerSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AlibcLinkPartnerSDK.framework; sourceTree = "<group>"; };
-		32FD13A1223F94A400CB85C1 /* AlibcTradeBiz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AlibcTradeBiz.framework; sourceTree = "<group>"; };
-		32FD13A2223F94A400CB85C1 /* AlibcTradeCommon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AlibcTradeCommon.framework; sourceTree = "<group>"; };
-		32FD13A3223F94A400CB85C1 /* AlibcTradeSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AlibcTradeSDK.framework; sourceTree = "<group>"; };
-		32FD13A4223F94A400CB85C1 /* AlipaySDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AlipaySDK.framework; sourceTree = "<group>"; };
-		32FD13A5223F94A400CB85C1 /* OpenMtopExt.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OpenMtopExt.framework; sourceTree = "<group>"; };
-		32FD13A6223F94A400CB85C1 /* OpenMtopSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OpenMtopSDK.framework; sourceTree = "<group>"; };
-		32FD13A7223F94A400CB85C1 /* SecurityGuardSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SecurityGuardSDK.framework; sourceTree = "<group>"; };
-		32FD13A8223F94A400CB85C1 /* SGMain.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SGMain.framework; sourceTree = "<group>"; };
-		32FD13A9223F94A400CB85C1 /* SGNoCaptcha.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SGNoCaptcha.framework; sourceTree = "<group>"; };
-		32FD13AA223F94A400CB85C1 /* SGSecurityBody.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SGSecurityBody.framework; sourceTree = "<group>"; };
-		32FD13AB223F94A400CB85C1 /* UTDID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UTDID.framework; sourceTree = "<group>"; };
-		32FD13AC223F94A400CB85C1 /* UTMini.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UTMini.framework; sourceTree = "<group>"; };
 		32FD13C0223F9AA400CB85C1 /* yw_1222.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = yw_1222.jpg; sourceTree = "<group>"; };
 		32FD13CD223FBD1700CB85C1 /* CTRecommendService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTRecommendService.h; sourceTree = "<group>"; };
 		32FD13CE223FBD1700CB85C1 /* CTRecommendService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTRecommendService.m; sourceTree = "<group>"; };
@@ -1346,9 +1344,9 @@
 		32FEAA0B221426EC001156CC /* CTEarnDescView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTEarnDescView.h; sourceTree = "<group>"; };
 		32FEAA0C221426EC001156CC /* CTEarnDescView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTEarnDescView.m; sourceTree = "<group>"; };
 		32FEAA0E221426F4001156CC /* CTEarnDescView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CTEarnDescView.xib; sourceTree = "<group>"; };
-		6AA14B2C43C4DB99B1D60D47 /* Pods-CouponTicket.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CouponTicket.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CouponTicket/Pods-CouponTicket.debug.xcconfig"; sourceTree = "<group>"; };
-		7665215356141A688CE2B40E /* Pods-CouponTicket.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CouponTicket.release.xcconfig"; path = "Pods/Target Support Files/Pods-CouponTicket/Pods-CouponTicket.release.xcconfig"; sourceTree = "<group>"; };
-		9F51AA050F5801C0FBDEE117 /* libPods-CouponTicket.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CouponTicket.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B2C6AC9E2204D1937CF8350 /* Pods-YouQuan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YouQuan.release.xcconfig"; path = "Pods/Target Support Files/Pods-YouQuan/Pods-YouQuan.release.xcconfig"; sourceTree = "<group>"; };
+		DCEF77F37F0F1CD294680974 /* Pods-YouQuan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YouQuan.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YouQuan/Pods-YouQuan.debug.xcconfig"; sourceTree = "<group>"; };
+		F8C6FD3AAACC4E73C5C1877A /* libPods-YouQuan.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YouQuan.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1356,26 +1354,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				32FD13B3223F94A400CB85C1 /* AlibcLinkPartnerSDK.framework in Frameworks */,
+				24FE7F1A2264AA34001CE794 /* OpenMtopExt.framework in Frameworks */,
 				32FD136F223F918500CB85C1 /* SystemConfiguration.framework in Frameworks */,
+				24FE7F0E2264AA34001CE794 /* AlibcTradeSDK.framework in Frameworks */,
+				24FE7F182264AA34001CE794 /* AlipaySDK.framework in Frameworks */,
+				24FE7F152264AA34001CE794 /* UTMini.framework in Frameworks */,
 				32FD136D223F917D00CB85C1 /* CoreTelephony.framework in Frameworks */,
-				32FD13B2223F94A400CB85C1 /* AlibabaAuthSDK.framework in Frameworks */,
-				32FD13B4223F94A400CB85C1 /* AlibcTradeBiz.framework in Frameworks */,
-				32FD13B9223F94A400CB85C1 /* OpenMtopSDK.framework in Frameworks */,
+				24FE7F172264AA34001CE794 /* SGNoCaptcha.framework in Frameworks */,
+				24FE7F132264AA34001CE794 /* SGMain.framework in Frameworks */,
+				24FE7F142264AA34001CE794 /* AlibcTradeCommon.framework in Frameworks */,
+				24FE7F192264AA34001CE794 /* SGSecurityBody.framework in Frameworks */,
+				24FE7F162264AA34001CE794 /* OpenMtopSDK.framework in Frameworks */,
+				24FE7F0C2264AA34001CE794 /* AlibabaAuthExt.framework in Frameworks */,
 				32FD136B223F917600CB85C1 /* libsqlite3.0.tbd in Frameworks */,
-				32FD13B1223F94A400CB85C1 /* AlibabaAuthExt.framework in Frameworks */,
-				32FD13BE223F94A400CB85C1 /* UTDID.framework in Frameworks */,
+				24FE7F112264AA34001CE794 /* UTDID.framework in Frameworks */,
+				24FE7F0D2264AA34001CE794 /* AlibabaAuthSDK.framework in Frameworks */,
+				24FE7F102264AA34001CE794 /* SecurityGuardSDK.framework in Frameworks */,
+				24FE7F0F2264AA34001CE794 /* AlibcLinkPartnerSDK.framework in Frameworks */,
 				32FD1369223F916D00CB85C1 /* libz.tbd in Frameworks */,
-				32FD13B6223F94A400CB85C1 /* AlibcTradeSDK.framework in Frameworks */,
-				32FD13BC223F94A400CB85C1 /* SGNoCaptcha.framework in Frameworks */,
-				32FD13B5223F94A400CB85C1 /* AlibcTradeCommon.framework in Frameworks */,
-				32FD13BB223F94A400CB85C1 /* SGMain.framework in Frameworks */,
-				32FD13BF223F94A400CB85C1 /* UTMini.framework in Frameworks */,
-				32FD13B8223F94A400CB85C1 /* OpenMtopExt.framework in Frameworks */,
-				32FD13BA223F94A400CB85C1 /* SecurityGuardSDK.framework in Frameworks */,
-				AAE7F6FFBF4288319E9610C9 /* libPods-CouponTicket.a in Frameworks */,
-				32FD13BD223F94A400CB85C1 /* SGSecurityBody.framework in Frameworks */,
-				32FD13B7223F94A400CB85C1 /* AlipaySDK.framework in Frameworks */,
+				24FE7F122264AA34001CE794 /* AlibcTradeBiz.framework in Frameworks */,
+				787EA795B06BE98A1034D295 /* libPods-YouQuan.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1636,6 +1634,48 @@
 				32CA558421F6F23A00145E31 /* CTSortButton.xib */,
 			);
 			path = CTMainCategoryView;
+			sourceTree = "<group>";
+		};
+		24FE7EF22264AA34001CE794 /* AlibcTradeSDK */ = {
+			isa = PBXGroup;
+			children = (
+				24FE7EF32264AA34001CE794 /* Resources */,
+				24FE7EF82264AA34001CE794 /* Frameworks */,
+			);
+			path = AlibcTradeSDK;
+			sourceTree = "<group>";
+		};
+		24FE7EF32264AA34001CE794 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				24FE7EF42264AA34001CE794 /* AlibabaAuthSDK.bundle */,
+				24FE7EF52264AA34001CE794 /* AlipaySDK.bundle */,
+				24FE7EF62264AA34001CE794 /* ALPLinkPartnerSDK.bundle */,
+				24FE7EF72264AA34001CE794 /* NBResource.bundle */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		24FE7EF82264AA34001CE794 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				24FE7EF92264AA34001CE794 /* AlibabaAuthExt.framework */,
+				24FE7EFA2264AA34001CE794 /* AlibabaAuthSDK.framework */,
+				24FE7EFB2264AA34001CE794 /* AlibcTradeSDK.framework */,
+				24FE7EFC2264AA34001CE794 /* AlibcLinkPartnerSDK.framework */,
+				24FE7EFD2264AA34001CE794 /* SecurityGuardSDK.framework */,
+				24FE7EFE2264AA34001CE794 /* UTDID.framework */,
+				24FE7EFF2264AA34001CE794 /* AlibcTradeBiz.framework */,
+				24FE7F002264AA34001CE794 /* SGMain.framework */,
+				24FE7F012264AA34001CE794 /* AlibcTradeCommon.framework */,
+				24FE7F022264AA34001CE794 /* UTMini.framework */,
+				24FE7F032264AA34001CE794 /* OpenMtopSDK.framework */,
+				24FE7F042264AA34001CE794 /* SGNoCaptcha.framework */,
+				24FE7F052264AA34001CE794 /* AlipaySDK.framework */,
+				24FE7F062264AA34001CE794 /* SGSecurityBody.framework */,
+				24FE7F072264AA34001CE794 /* OpenMtopExt.framework */,
+			);
+			path = Frameworks;
 			sourceTree = "<group>";
 		};
 		3220EA1121F95E22004E0422 /* Views */ = {
@@ -3053,8 +3093,7 @@
 		32BE5FF721EDC5E100BA52EF = {
 			isa = PBXGroup;
 			children = (
-				32BE600221EDC5E100BA52EF /* CouponTicket */,
-				32BE601B21EDC5E500BA52EF /* CouponTicketTests */,
+				32BE600221EDC5E100BA52EF /* YouQuan */,
 				32BE600121EDC5E100BA52EF /* Products */,
 				81B790F6F60DCAA925C30A30 /* Pods */,
 				EE852392595567F7ACDC605A /* Frameworks */,
@@ -3064,16 +3103,16 @@
 		32BE600121EDC5E100BA52EF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				32BE600021EDC5E100BA52EF /* CouponTicket.app */,
-				32BE601821EDC5E500BA52EF /* CouponTicketTests.xctest */,
+				32BE600021EDC5E100BA52EF /* YouQuan.app */,
+				32BE601821EDC5E500BA52EF /* YouQuanTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		32BE600221EDC5E100BA52EF /* CouponTicket */ = {
+		32BE600221EDC5E100BA52EF /* YouQuan */ = {
 			isa = PBXGroup;
 			children = (
-				32B0EFA722560AEB00F8A758 /* CouponTicket.entitlements */,
+				32B0EFA722560AEB00F8A758 /* YouQuan.entitlements */,
 				32B0EFA822560BE000F8A758 /* Debug */,
 				32BE602C21EDCEFE00BA52EF /* Main */,
 				32BE602B21EDCEAF00BA52EF /* Classes */,
@@ -3084,15 +3123,7 @@
 				32FD1266223F784600CB85C1 /* ThirdLib */,
 				32BE602721EDCE6C00BA52EF /* ReSource */,
 			);
-			path = CouponTicket;
-			sourceTree = "<group>";
-		};
-		32BE601B21EDC5E500BA52EF /* CouponTicketTests */ = {
-			isa = PBXGroup;
-			children = (
-				32BE601C21EDC5E500BA52EF /* CouponTicketTests.m */,
-			);
-			path = CouponTicketTests;
+			path = YouQuan;
 			sourceTree = "<group>";
 		};
 		32BE602721EDCE6C00BA52EF /* ReSource */ = {
@@ -3106,6 +3137,7 @@
 		32BE602821EDCE7500BA52EF /* SystemConfigs */ = {
 			isa = PBXGroup;
 			children = (
+				24FE7EF22264AA34001CE794 /* AlibcTradeSDK */,
 				32BE600E21EDC5E500BA52EF /* LaunchScreen.storyboard */,
 				32F47E5E2244B011001BBD4A /* Info.plist */,
 				32BE613421EDD04A00BA52EF /* CTPrefixHeader.pch */,
@@ -3509,51 +3541,8 @@
 		32FD1266223F784600CB85C1 /* ThirdLib */ = {
 			isa = PBXGroup;
 			children = (
-				32FD1312223F8B0000CB85C1 /* AlibcTradeSDK */,
 			);
 			path = ThirdLib;
-			sourceTree = "<group>";
-		};
-		32FD1312223F8B0000CB85C1 /* AlibcTradeSDK */ = {
-			isa = PBXGroup;
-			children = (
-				32FD139D223F94A400CB85C1 /* Frameworks */,
-				32FD1398223F94A100CB85C1 /* Resources */,
-			);
-			path = AlibcTradeSDK;
-			sourceTree = "<group>";
-		};
-		32FD1398223F94A100CB85C1 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				32FD1399223F94A100CB85C1 /* AlibabaAuthSDK.bundle */,
-				32FD139A223F94A100CB85C1 /* AlipaySDK.bundle */,
-				32FD139B223F94A100CB85C1 /* ALPLinkPartnerSDK.bundle */,
-				32FD139C223F94A100CB85C1 /* NBResource.bundle */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
-		32FD139D223F94A400CB85C1 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				32FD139E223F94A400CB85C1 /* AlibabaAuthExt.framework */,
-				32FD139F223F94A400CB85C1 /* AlibabaAuthSDK.framework */,
-				32FD13A0223F94A400CB85C1 /* AlibcLinkPartnerSDK.framework */,
-				32FD13A1223F94A400CB85C1 /* AlibcTradeBiz.framework */,
-				32FD13A2223F94A400CB85C1 /* AlibcTradeCommon.framework */,
-				32FD13A3223F94A400CB85C1 /* AlibcTradeSDK.framework */,
-				32FD13A4223F94A400CB85C1 /* AlipaySDK.framework */,
-				32FD13A5223F94A400CB85C1 /* OpenMtopExt.framework */,
-				32FD13A6223F94A400CB85C1 /* OpenMtopSDK.framework */,
-				32FD13A7223F94A400CB85C1 /* SecurityGuardSDK.framework */,
-				32FD13A8223F94A400CB85C1 /* SGMain.framework */,
-				32FD13A9223F94A400CB85C1 /* SGNoCaptcha.framework */,
-				32FD13AA223F94A400CB85C1 /* SGSecurityBody.framework */,
-				32FD13AB223F94A400CB85C1 /* UTDID.framework */,
-				32FD13AC223F94A400CB85C1 /* UTMini.framework */,
-			);
-			path = Frameworks;
 			sourceTree = "<group>";
 		};
 		32FD13CB223FBD1700CB85C1 /* Recommend */ = {
@@ -3586,8 +3575,8 @@
 		81B790F6F60DCAA925C30A30 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				6AA14B2C43C4DB99B1D60D47 /* Pods-CouponTicket.debug.xcconfig */,
-				7665215356141A688CE2B40E /* Pods-CouponTicket.release.xcconfig */,
+				DCEF77F37F0F1CD294680974 /* Pods-YouQuan.debug.xcconfig */,
+				4B2C6AC9E2204D1937CF8350 /* Pods-YouQuan.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -3599,7 +3588,7 @@
 				32FD136C223F917D00CB85C1 /* CoreTelephony.framework */,
 				32FD136A223F917600CB85C1 /* libsqlite3.0.tbd */,
 				32FD1368223F916D00CB85C1 /* libz.tbd */,
-				9F51AA050F5801C0FBDEE117 /* libPods-CouponTicket.a */,
+				F8C6FD3AAACC4E73C5C1877A /* libPods-YouQuan.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -3607,9 +3596,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		32BE5FFF21EDC5E100BA52EF /* CouponTicket */ = {
+		32BE5FFF21EDC5E100BA52EF /* YouQuan */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 32BE602121EDC5E600BA52EF /* Build configuration list for PBXNativeTarget "CouponTicket" */;
+			buildConfigurationList = 32BE602121EDC5E600BA52EF /* Build configuration list for PBXNativeTarget "YouQuan" */;
 			buildPhases = (
 				94689452BF3059935C60187D /* [CP] Check Pods Manifest.lock */,
 				32BE5FFC21EDC5E100BA52EF /* Sources */,
@@ -3621,14 +3610,14 @@
 			);
 			dependencies = (
 			);
-			name = CouponTicket;
+			name = YouQuan;
 			productName = CouponTicket;
-			productReference = 32BE600021EDC5E100BA52EF /* CouponTicket.app */;
+			productReference = 32BE600021EDC5E100BA52EF /* YouQuan.app */;
 			productType = "com.apple.product-type.application";
 		};
-		32BE601721EDC5E500BA52EF /* CouponTicketTests */ = {
+		32BE601721EDC5E500BA52EF /* YouQuanTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 32BE602421EDC5E600BA52EF /* Build configuration list for PBXNativeTarget "CouponTicketTests" */;
+			buildConfigurationList = 32BE602421EDC5E600BA52EF /* Build configuration list for PBXNativeTarget "YouQuanTests" */;
 			buildPhases = (
 				32BE601421EDC5E500BA52EF /* Sources */,
 				32BE601521EDC5E500BA52EF /* Frameworks */,
@@ -3639,9 +3628,9 @@
 			dependencies = (
 				32BE601A21EDC5E500BA52EF /* PBXTargetDependency */,
 			);
-			name = CouponTicketTests;
+			name = YouQuanTests;
 			productName = CouponTicketTests;
-			productReference = 32BE601821EDC5E500BA52EF /* CouponTicketTests.xctest */;
+			productReference = 32BE601821EDC5E500BA52EF /* YouQuanTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -3671,7 +3660,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 32BE5FFB21EDC5E100BA52EF /* Build configuration list for PBXProject "CouponTicket" */;
+			buildConfigurationList = 32BE5FFB21EDC5E100BA52EF /* Build configuration list for PBXProject "YouQuan" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -3684,8 +3673,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				32BE5FFF21EDC5E100BA52EF /* CouponTicket */,
-				32BE601721EDC5E500BA52EF /* CouponTicketTests */,
+				32BE5FFF21EDC5E100BA52EF /* YouQuan */,
+				32BE601721EDC5E500BA52EF /* YouQuanTests */,
 			);
 		};
 /* End PBXProject section */
@@ -3701,16 +3690,17 @@
 				32CA55A721F71D6900145E31 /* CTHistoryKeywordCell.xib in Resources */,
 				32A28E9E220288080049B003 /* CTAlipayBoundView_.xib in Resources */,
 				24FF626221F41D1700488860 /* CTHomeNewestHeadView.xib in Resources */,
+				24FE7F092264AA34001CE794 /* AlipaySDK.bundle in Resources */,
 				3294C07922559CB500AB0DB2 /* CTUserInfoItem.xib in Resources */,
 				326AC20021FAF370008C154B /* CTYourLikedHeadView.xib in Resources */,
 				240F513321F9DBC100BFDD2D /* CTPasteCheckPopView.xib in Resources */,
 				3220EA1621F95E8F004E0422 /* CTMessageTypeView.xib in Resources */,
+				24FE7F082264AA34001CE794 /* AlibabaAuthSDK.bundle in Resources */,
 				245CAE5721F42E8000496052 /* CTMainCategoryItem.xib in Resources */,
 				32CA556821F6B6DB00145E31 /* CTShareView_.xib in Resources */,
 				32601485224E256000B7A1BE /* bg_image.png in Resources */,
 				2405AED621FC0CAD000E5081 /* CTMemberTitleView.xib in Resources */,
 				324CE75C22336ECF0052A029 /* CTBindPhoneView.xib in Resources */,
-				32FD13AF223F94A400CB85C1 /* ALPLinkPartnerSDK.bundle in Resources */,
 				24FF625D21F40F0B00488860 /* CTHomeSalesView.xib in Resources */,
 				326525FA21F5CF5800B63DD7 /* CTGetCodeView_.xib in Resources */,
 				32BD0E3F2201890C00E99B86 /* CTSetLogoutView.xib in Resources */,
@@ -3756,11 +3746,11 @@
 				32DB93B222150C4200300ACC /* CTThirtyProfitHeadView.xib in Resources */,
 				32FEA9FA2213CC29001156CC /* CTEarnRankHeadView.xib in Resources */,
 				240F74712201C9BD00A2DFFC /* CTQuestionListCell.xib in Resources */,
+				24FE7F0A2264AA34001CE794 /* ALPLinkPartnerSDK.bundle in Resources */,
 				24B1C573223CD2C800831ACC /* CTNoticeAlertView.xib in Resources */,
 				32A28EB62202A3CA0049B003 /* CTWithDrawInputView.xib in Resources */,
-				32FD13AD223F94A400CB85C1 /* AlibabaAuthSDK.bundle in Resources */,
+				24FE7F0B2264AA34001CE794 /* NBResource.bundle in Resources */,
 				32601494224E256000B7A1BE /* WSDatePickerView.xib in Resources */,
-				32FD13B0223F94A400CB85C1 /* NBResource.bundle in Resources */,
 				3260147C224E256000B7A1BE /* area.plist in Resources */,
 				32601487224E256000B7A1BE /* SGQRCodeFlashlightOpenImage.png in Resources */,
 				326525C721F595D300B63DD7 /* CTGoodListView_.xib in Resources */,
@@ -3793,7 +3783,6 @@
 				32A28EB12202A2CD0049B003 /* CTWithdrawAlipayInfoView.xib in Resources */,
 				32FD125D223F2D5100CB85C1 /* CTGoodsDescView.xib in Resources */,
 				32601486224E256000B7A1BE /* SGQRCodeFlashlightCloseImage.png in Resources */,
-				32FD13AE223F94A400CB85C1 /* AlipaySDK.bundle in Resources */,
 				32FEAA0722141ACB001156CC /* CTEarnRankCell.xib in Resources */,
 				32CA55AC21F7242300145E31 /* CTSearchBar.xib in Resources */,
 				32CD9AD82223B9F5000D733B /* CTHandpickDescView.xib in Resources */,
@@ -3818,7 +3807,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-CouponTicket/Pods-CouponTicket-resources.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-YouQuan/Pods-YouQuan-resources.sh",
 				"${PODS_ROOT}/GPUImage/framework/Resources/lookup.png",
 				"${PODS_ROOT}/GPUImage/framework/Resources/lookup_amatorka.png",
 				"${PODS_ROOT}/GPUImage/framework/Resources/lookup_miss_etikate.png",
@@ -3849,7 +3838,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CouponTicket/Pods-CouponTicket-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YouQuan/Pods-YouQuan-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		94689452BF3059935C60187D /* [CP] Check Pods Manifest.lock */ = {
@@ -3863,7 +3852,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-CouponTicket-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-YouQuan-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -4230,7 +4219,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				32BE601D21EDC5E500BA52EF /* CouponTicketTests.m in Sources */,
 				240A8EF422158AD9006E4DED /* CTWebService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -4240,7 +4228,7 @@
 /* Begin PBXTargetDependency section */
 		32BE601A21EDC5E500BA52EF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 32BE5FFF21EDC5E100BA52EF /* CouponTicket */;
+			target = 32BE5FFF21EDC5E100BA52EF /* YouQuan */;
 			targetProxy = 32BE601921EDC5E500BA52EF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -4369,12 +4357,12 @@
 		};
 		32BE602221EDC5E600BA52EF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6AA14B2C43C4DB99B1D60D47 /* Pods-CouponTicket.debug.xcconfig */;
+			baseConfigurationReference = DCEF77F37F0F1CD294680974 /* Pods-YouQuan.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
-				CODE_SIGN_ENTITLEMENTS = CouponTicket/CouponTicket.entitlements;
+				CODE_SIGN_ENTITLEMENTS = YouQuan/YouQuan.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = W9PQTS6Q34;
@@ -4388,10 +4376,12 @@
 					"$(PROJECT_DIR)/CouponTicket/ThirdLib/UMShare/UMCShare/UMShare",
 					"$(PROJECT_DIR)/CouponTicket/ThirdLib/UMShare/UMCCommon",
 					"$(PROJECT_DIR)/CouponTicket/ThirdLib/UMShare/UMCSecurityPlugins/thirdparties",
+					"$(PROJECT_DIR)/YouQuan/ThirdLib/AlibcTradeSDK/Frameworks",
+					"$(PROJECT_DIR)/YouQuan/SystemConfigs/AlibcTradeSDK/Frameworks",
 				);
-				GCC_PREFIX_HEADER = "$(SRCROOT)/CouponTicket/SystemConfigs/CTPrefixHeader.pch";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/YouQuan/SystemConfigs/CTPrefixHeader.pch";
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = NO;
-				INFOPLIST_FILE = "$(SRCROOT)/CouponTicket/SystemConfigs/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/YouQuan/SystemConfigs/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -4483,12 +4473,12 @@
 		};
 		32BE602321EDC5E600BA52EF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7665215356141A688CE2B40E /* Pods-CouponTicket.release.xcconfig */;
+			baseConfigurationReference = 4B2C6AC9E2204D1937CF8350 /* Pods-YouQuan.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
-				CODE_SIGN_ENTITLEMENTS = CouponTicket/CouponTicket.entitlements;
+				CODE_SIGN_ENTITLEMENTS = YouQuan/YouQuan.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Shenzhen youquan network technology co. LTD (W9PQTS6Q34)";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = W9PQTS6Q34;
@@ -4502,10 +4492,12 @@
 					"$(PROJECT_DIR)/CouponTicket/ThirdLib/UMShare/UMCShare/UMShare",
 					"$(PROJECT_DIR)/CouponTicket/ThirdLib/UMShare/UMCCommon",
 					"$(PROJECT_DIR)/CouponTicket/ThirdLib/UMShare/UMCSecurityPlugins/thirdparties",
+					"$(PROJECT_DIR)/YouQuan/ThirdLib/AlibcTradeSDK/Frameworks",
+					"$(PROJECT_DIR)/YouQuan/SystemConfigs/AlibcTradeSDK/Frameworks",
 				);
-				GCC_PREFIX_HEADER = "$(SRCROOT)/CouponTicket/SystemConfigs/CTPrefixHeader.pch";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/YouQuan/SystemConfigs/CTPrefixHeader.pch";
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = NO;
-				INFOPLIST_FILE = "$(SRCROOT)/CouponTicket/SystemConfigs/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/YouQuan/SystemConfigs/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -4609,7 +4601,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Danke.CouponTicketTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CouponTicket.app/CouponTicket";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YouQuan.app/YouQuan";
 			};
 			name = Debug;
 		};
@@ -4627,14 +4619,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Danke.CouponTicketTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CouponTicket.app/CouponTicket";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YouQuan.app/YouQuan";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		32BE5FFB21EDC5E100BA52EF /* Build configuration list for PBXProject "CouponTicket" */ = {
+		32BE5FFB21EDC5E100BA52EF /* Build configuration list for PBXProject "YouQuan" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				32BE601F21EDC5E500BA52EF /* Debug */,
@@ -4643,7 +4635,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		32BE602121EDC5E600BA52EF /* Build configuration list for PBXNativeTarget "CouponTicket" */ = {
+		32BE602121EDC5E600BA52EF /* Build configuration list for PBXNativeTarget "YouQuan" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				32BE602221EDC5E600BA52EF /* Debug */,
@@ -4652,7 +4644,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		32BE602421EDC5E600BA52EF /* Build configuration list for PBXNativeTarget "CouponTicketTests" */ = {
+		32BE602421EDC5E600BA52EF /* Build configuration list for PBXNativeTarget "YouQuanTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				32BE602521EDC5E600BA52EF /* Debug */,

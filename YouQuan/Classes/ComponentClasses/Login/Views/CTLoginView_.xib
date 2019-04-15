@@ -15,7 +15,7 @@
             <rect key="frame" x="0.0" y="0.0" width="408" height="683"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pic_logo_cicle" translatesAutoresizingMaskIntoConstraints="NO" id="GJX-aS-hQQ">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="youquan_icon" translatesAutoresizingMaskIntoConstraints="NO" id="GJX-aS-hQQ">
                     <rect key="frame" x="164" y="25" width="80" height="80"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="80" id="S16-sO-gn2"/>
@@ -289,8 +289,8 @@
         </view>
     </objects>
     <resources>
-        <image name="ic_login_qq" width="45" height="45"/>
-        <image name="ic_login_wechat" width="45" height="45"/>
-        <image name="pic_logo_cicle" width="96" height="96"/>
+        <image name="ic_login_qq" width="45.5" height="45.5"/>
+        <image name="ic_login_wechat" width="45.5" height="45.5"/>
+        <image name="youquan_icon" width="180" height="180"/>
     </resources>
 </document>
