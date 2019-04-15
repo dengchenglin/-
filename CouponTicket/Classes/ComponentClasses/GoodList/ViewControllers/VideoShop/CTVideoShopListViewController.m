@@ -116,6 +116,7 @@
     [self removeCurrentVideo];//先停止当前播放的cell
     _currentIndexPath = indexPath;
     CTVideoGoodListCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
+    cell.playButton.selected = YES;
     cell.playButton.jp_videoPlayerDelegate = self;
     NSString *video = self.dataSources[indexPath.row].model.video;
     [cell.playButton jp_playVideoWithURL:[NSURL URLWithString:video] bufferingIndicator:nil controlView:nil progressView:nil configuration:nil];
