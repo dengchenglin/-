@@ -109,8 +109,6 @@
             if(message){
                [MBProgressHUD showMBProgressHudWithTitle:message];
             }
-        }else{
-            [MBProgressHUD showMBProgressHudWithTitle:@"分享成功"];
         }
     }];
 }
