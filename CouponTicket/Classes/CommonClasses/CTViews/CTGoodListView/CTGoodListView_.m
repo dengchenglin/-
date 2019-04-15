@@ -19,7 +19,7 @@
 - (void)awakeFromNib{
     [super awakeFromNib];
     _couponBgView.image = [[UIImage imageNamed:@"pic_list_coupon_bg1"] resizableImageWithCapInsets:UIEdgeInsetsMake(10, 20, 10, 45)];
-    _upgradeView.hidden = ![CTAppManager sharedInstance].showMember;
+
 }
 
 - (void)setViewModel:(CTGoodsViewModel *)viewModel{
@@ -45,6 +45,10 @@
     _statusImageView.hidden = !_model.status;
     _salesView.hidden = !_model.package_sale.length;
     _couponView.hidden = !_model.show_coupon;
+    
+    if(![CTAppManager sharedInstance].showMember){
+        _upgradeView.hidden = YES;
+    }
 }
 
 @end

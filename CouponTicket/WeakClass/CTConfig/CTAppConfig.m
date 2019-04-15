@@ -19,8 +19,6 @@
 
     [self configSniffer];
     [CTRequest iosFunctionIo];
-//    [IQKeyboardManager sharedManager].enable = NO;
-//    [IQKeyboardManager sharedManager].enableAutoToolbar = NO;
 }
 
 + (void)configSniffer{

@@ -8,7 +8,7 @@ target 'CouponTicket' do
   pod 'ReactiveObjC',       '~>3.1.0'
   pod 'YYModel',            '~>1.0.4'
   pod 'Masonry',            '~>1.1.0'
-  #pod 'IQKeyboardManager',  '~>6.1.1'
+  pod 'IQKeyboardManager',  '~>6.1.1'
   pod 'MBProgressHUD',      '~>1.1.0'
   pod 'YYText',             '~>1.0.7'
   pod 'SDWebImage',         '~>4.4.2'
@@ -18,7 +18,6 @@ target 'CouponTicket' do
   #pod 'FLEX',               '~>2.4.0'
   pod 'ZLPhotoBrowser',     '~>2.7.6'
   pod 'Qiniu',              '~> 7.2'
-  pod 'JPush',              '~>3.1.0'
   pod 'SDCycleScrollView',   '~>1.75'
   #pod 'FDFullscreenPopGesture', '~>1.1'
   

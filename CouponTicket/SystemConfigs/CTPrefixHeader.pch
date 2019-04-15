@@ -19,7 +19,7 @@
 #import "MBProgressHUD+Helper.h"
 #import "UIImageView+WebCache.h"
 #import "UIButton+WebCache.h"
-//#import "IQKeyboardManager.h"
+#import "IQKeyboardManager.h"
 #import "NSDictionary+Category.h"
 #import "NSArray+Category.h"
 #import "UIButton+Helper.h"

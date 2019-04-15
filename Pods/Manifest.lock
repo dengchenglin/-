@@ -15,10 +15,8 @@ PODS:
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
   - GPUImage (0.1.7)
-  - HappyDNS (0.3.14)
-  - JCore (1.2.5)
-  - JPush (3.1.1.1):
-    - JCore (~> 1.2.5)
+  - HappyDNS (0.3.15)
+  - IQKeyboardManager (6.1.1)
   - JPVideoPlayer (3.1.1)
   - MagicWindowSDK (4.2.180824):
     - WechatOpenSDK
@@ -30,12 +28,12 @@ PODS:
   - ReactiveObjC (3.1.0)
   - SDCycleScrollView (1.75):
     - SDWebImage (>= 4.0.0)
-  - SDWebImage (4.4.3):
-    - SDWebImage/Core (= 4.4.3)
-  - SDWebImage/Core (4.4.3)
+  - SDWebImage (4.4.6):
+    - SDWebImage/Core (= 4.4.6)
+  - SDWebImage/Core (4.4.6)
   - SGQRCode (3.0.1)
   - "UITableView+FDTemplateLayoutCell (1.6)"
-  - UMCCommon (2.0.0)
+  - UMCCommon (2.0.1)
   - UMCPush (3.2.4):
     - UMCCommon
   - UMCSecurityPlugins (1.0.6)
@@ -50,14 +48,14 @@ PODS:
   - WechatOpenSDK (1.8.4)
   - YYModel (1.0.4)
   - YYText (1.0.7)
-  - ZLPhotoBrowser (2.7.6):
+  - ZLPhotoBrowser (2.7.8):
     - GPUImage
     - SDWebImage
 
 DEPENDENCIES:
   - AFNetworking (~> 3.2.1)
   - GPUImage (~> 0.1.7)
-  - JPush (~> 3.1.0)
+  - IQKeyboardManager (~> 6.1.1)
   - JPVideoPlayer
   - MagicWindowSDK
   - Masonry (~> 1.1.0)
@@ -79,12 +77,11 @@ DEPENDENCIES:
   - ZLPhotoBrowser (~> 2.7.6)
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  https://github.com/cocoapods/specs.git:
     - AFNetworking
     - GPUImage
     - HappyDNS
-    - JCore
-    - JPush
+    - IQKeyboardManager
     - JPVideoPlayer
     - MagicWindowSDK
     - Masonry
@@ -108,9 +105,8 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   GPUImage: 733a5f0fab92df9de1c37ba9df520a833ccb406d
-  HappyDNS: dc6a164ee81979093123c241c6353bcf0218add6
-  JCore: 14706de2640b25fb77dbd02332696491407f37c9
-  JPush: 25dd9013fbe106082c14f9f30a82364ee98852fb
+  HappyDNS: 00c15e651a347206e58a20503a32a5564589b56a
+  IQKeyboardManager: 79c57795f5c2408d259d37b9da2ed07efcbb5225
   JPVideoPlayer: 234c2fc5c9dfd67b969a5dd8233815eb872472c6
   MagicWindowSDK: 10bd573da4b652b0dc58fe7866091c249a69803d
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
@@ -119,18 +115,18 @@ SPEC CHECKSUMS:
   Qiniu: 909b408ee489ea54827e9717be90b94bc9dfbc48
   ReactiveObjC: 2a38ea15335de4119d8b17caf1db1484f61db902
   SDCycleScrollView: 884b88f0266dd4708a0e1934975c69cb971707b1
-  SDWebImage: c5594f1a19c48d526d321e548902b56b479cd508
+  SDWebImage: 3f3f0c02f09798048c47a5ed0a13f17b063572d8
   SGQRCode: bf02d60e18d6660a9d75ff1c8b9b467f064f054e
   "UITableView+FDTemplateLayoutCell": 5c949b4a5059c404b442926c0e80f81d10a2d66f
-  UMCCommon: 79b5a614c958db367113eed5740109d9a98e1223
+  UMCCommon: 0263a057a2e1ae1da4c8308541e56904a493ce13
   UMCPush: 1edd856027dcf905333effb4040ace5d236a7316
   UMCSecurityPlugins: 0831a08f3988f3cea9f1d3a7626cd9bee4fef150
   UMCShare: 552b29753f1b4da87b51d96545ed19e6263df397
   WechatOpenSDK: 9b721089507c895d05f997408c30bb6e6f5f9b60
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
   YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
-  ZLPhotoBrowser: 6dfadc4706429424f0a851fe40752aff076689ab
+  ZLPhotoBrowser: ee7cb33620dc338cece3b0e49abf78e7558abfb2
 
-PODFILE CHECKSUM: f0aad9160ae2420041192ff37f3a6a8ccd87c3d7
+PODFILE CHECKSUM: e9d788a5f061f30ad511ddad7e56af8e38a5e47f
 
-COCOAPODS: 1.5.0
+COCOAPODS: 1.5.3

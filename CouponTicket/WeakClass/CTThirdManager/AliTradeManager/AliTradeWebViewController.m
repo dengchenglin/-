@@ -53,6 +53,7 @@
     if (self) {
         _webView = [[UIWebView alloc]init];
         _webView.delegate = self;
+        _webView.scalesPageToFit = YES;
     }
     return self;
 }
@@ -61,6 +62,13 @@
     self.webView.scalesPageToFit = YES;
     self.webView.opaque = YES;
     [self.view addSubview:self.webView];
+    
+    NSURL *URL = [NSURL URLWithString:_url];
+    if(URL){
+        [MBProgressHUD showMBProgressHudOnView:self.view];
+        [_webView loadRequest:[NSURLRequest requestWithURL:URL]];
+        DBLog(@"url is %@",_url);
+    }
 }
 
 - (void)autoLayout{
@@ -71,10 +79,11 @@
 
 
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error{
-    
+    [MBProgressHUD hideHUDForView:self.view animated:YES];
 }
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView{
+     [MBProgressHUD hideHUDForView:self.view animated:YES];
     NSString *title = [webView stringByEvaluatingJavaScriptFromString:@"document.title"];
     if(title){
         self.title = title;

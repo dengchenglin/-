@@ -14,6 +14,8 @@
 
 #import "AliTradeWebViewController.h"
 
+#define CTTBBackScheme @"tbopen25632501"
+
 @implementation AliTradeManager
 
 + (void)initSDK{
@@ -68,17 +70,24 @@
 //    else{
 //        [MBProgressHUD showMBProgressHudWithTitle:@"链接错误"];
 //    }
-    
-    AlibcTradeShowParams* showParam = [[AlibcTradeShowParams alloc] init];
-    showParam.openType = AlibcOpenTypeNative;
-    showParam.backUrl = @"tbopen25632501";
-    id<AlibcTradePage> page = [AlibcTradePageFactory page:url];
+    if([self isInstallTb]){
+        AlibcTradeShowParams* showParam = [[AlibcTradeShowParams alloc] init];
+        showParam.openType = AlibcOpenTypeNative;
+        showParam.backUrl = CTTBBackScheme;
+        id<AlibcTradePage> page = [AlibcTradePageFactory page:url];
 
-    [[AlibcTradeSDK sharedInstance].tradeService show: viewController.navigationController page:page showParams:showParam taoKeParams: nil trackParam: nil tradeProcessSuccessCallback:^(AlibcTradeResult * _Nullable result) {
-        NSLog(@"%@",result);
-    } tradeProcessFailedCallback:^(NSError * _Nullable error) {
-        NSLog(@"%@",error);
-    }];
+        [[AlibcTradeSDK sharedInstance].tradeService show: viewController.navigationController page:page showParams:showParam taoKeParams: nil trackParam: nil tradeProcessSuccessCallback:^(AlibcTradeResult * _Nullable result) {
+            NSLog(@"%@",result);
+        } tradeProcessFailedCallback:^(NSError * _Nullable error) {
+            NSLog(@"%@",error);
+        }];
+    }
+    else{
+         AliTradeWebViewController *vc = [[AliTradeWebViewController alloc]init];
+         vc.url = url;
+        [viewController.navigationController pushViewController:vc animated:YES];
+    }
+
 }
 
 

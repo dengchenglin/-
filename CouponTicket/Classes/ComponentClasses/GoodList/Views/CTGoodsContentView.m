@@ -19,6 +19,7 @@ ViewInstance(setUp)
 
 - (void)setUp{
     self.contentView.scalesPageToFit = YES;
+    self.contentView.scrollView.showsVerticalScrollIndicator = NO;
     @weakify(self)
     [RACObserve(self.contentView.scrollView, contentSize) subscribeNext:^(id  _Nullable x) {
         @strongify(self)
@@ -60,7 +61,6 @@ ViewInstance(setUp)
         self.contentHeight.constant = 0;
     }
     [self.superview layoutIfNeeded];
-    
     [self.contentView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:_url]]];
 }
 - (void)dealloc
