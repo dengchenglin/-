@@ -25,5 +25,7 @@
 
 +(void)logOut;
 
++ (BOOL)isInstallTb;
+
 + (void)autoWithViewController:(UIViewController *)viewController successCallback:(void(^)(ALBBSession *session))successCallback;
 @end

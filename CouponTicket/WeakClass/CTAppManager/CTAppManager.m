@@ -31,6 +31,8 @@ SINGLETON_FOR_CLASS_IMP(CTAppManager)
     }
 }
 
+
+
 + (BOOL)logined{
     return [CTAppManager sharedInstance].token;
 }

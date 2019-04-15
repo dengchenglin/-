@@ -16,7 +16,7 @@
 
 + (void)initSDK{
     [MWApi registerApp:MagicKey];
-    [MWApi registerMLinkHandlerWithKey:@"test" handler:^(NSURL *url, NSDictionary *params) {
+    [MWApi registerMLinkHandlerWithKey:@"youquan" handler:^(NSURL *url, NSDictionary *params) {
 #ifdef DEBUG
         UIAlertView *alt = [[UIAlertView alloc]initWithTitle:@"魔窗test" message:[params yy_modelToJSONString] delegate:nil cancelButtonTitle:nil otherButtonTitles:@"知道了", nil];
         [alt show];

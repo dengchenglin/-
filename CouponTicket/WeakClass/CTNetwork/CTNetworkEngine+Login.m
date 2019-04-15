@@ -67,7 +67,7 @@ NSString * GetSendCodeStr(CTSendCodeType type){
 - (CLRequest *)checkPhoneWithPhone:(NSString *)phone callback:(CTResponseBlock)callback{
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     [params setValue:phone forKey:@"phone"];
-    return [self postWithPath:CTLogin(@"check_phone") params:params callback:callback];
+    return [self postWithPath:CTLogin(@"check_phone") params:params showHud:YES showErrorHud:NO callback:callback];
 }
 
 - (CLRequest *)checkPhoneWithPhone:(NSString *)phone showErrorHud:(BOOL)showErrorHud callback:(CTResponseBlock)callback{

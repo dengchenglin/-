@@ -20,5 +20,8 @@
 
 + (void)showNoticeAlertViewWithTitle:(NSString *)title callback:(void(^)(NSUInteger buttonIndex))callback;
 
++ (void)showTbauthAlertViewWithCallback:(void(^)(NSUInteger buttonIndex))callback;
+
++ (void)showTbauthFailAlertViewWithTitle:(NSString *)title callback:(void(^)(NSUInteger buttonIndex))callback;
 + (void)hideAlertView;
 @end

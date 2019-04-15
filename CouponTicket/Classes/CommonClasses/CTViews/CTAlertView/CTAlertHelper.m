@@ -7,10 +7,10 @@
 //
 
 #import "CTAlertHelper.h"
-
 #import <objc/runtime.h>
-
 #import "CTNoticeAlertView.h"
+#import "CTTbAuthAlertView.h"
+#import "CTTbAuthFailAlertView.h"
 
 static const int CTAlertViewKey;
 
@@ -60,6 +60,16 @@ static const int CTAlertViewKey;
     CTNoticeAlertView *alertView = NSMainBundleClass(CTNoticeAlertView.class);
     alertView.titleLabel.text = title;
     [self showAlertView:alertView onView:[UIApplication sharedApplication].keyWindow callback:callback];
+}
+
++ (void)showTbauthAlertViewWithCallback:(void(^)(NSUInteger buttonIndex))callback{
+    CTTbAuthAlertView *alertView = NSMainBundleClass(CTTbAuthAlertView.class);
+    [self showAlertView:alertView callback:callback];
+}
++ (void)showTbauthFailAlertViewWithTitle:(NSString *)title callback:(void(^)(NSUInteger buttonIndex))callback{
+    CTTbAuthFailAlertView *alertView = NSMainBundleClass(CTTbAuthFailAlertView.class);
+    alertView.titleLabel.text = title;
+    [self showAlertView:alertView callback:callback];
 }
 
 + (void)showAlertView:(CTAlertView *)alertView onView:(UIView *)view callback:(void(^)(NSUInteger buttonIndex))callback{

@@ -19,7 +19,7 @@
 - (void)awakeFromNib{
     [super awakeFromNib];
     _couponBgView.image = [[UIImage imageNamed:@"pic_list_coupon_bg1"] resizableImageWithCapInsets:UIEdgeInsetsMake(10, 20, 10, 45)];
-
+    _upgradeView.hidden = ![CTAppManager sharedInstance].showMember;
 }
 
 - (void)setViewModel:(CTGoodsViewModel *)viewModel{
@@ -36,7 +36,7 @@
     
     _disLabel2.text = [NSString stringWithFormat:@"升级可省%@元",_model.upgrade_money];
     _priceLabel.text = _model.coupon_price;
-    _originPriceLabel.text = _model.sale_price;
+    _originPriceLabel.text = [NSString stringWithFormat:@"¥%@",_model.sale_price];
     _couponPriceLabel.text = _model.coupon_amount;
     _salesLabel.text = _model.package_sale;
     

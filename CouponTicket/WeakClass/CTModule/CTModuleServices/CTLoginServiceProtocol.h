@@ -23,4 +23,6 @@
 - (void)pushBoundAlipayFromViewController:(UIViewController *)viewController completed:(void(^)(void))completed;
 
 - (void)judgeLoginWithViewController:(UIViewController *)viewController completed:(void(^)(void))completed;
+
+- (void)showRegisterFromViewController:(UIViewController *)viewController  inviteCode:(NSString *)inviteCode callback:(void(^)(BOOL logined))callback;
 @end

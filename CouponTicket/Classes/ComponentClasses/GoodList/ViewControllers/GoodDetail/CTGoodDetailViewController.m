@@ -201,34 +201,35 @@
     //通过转链接口获取真正的click_url数据
     void (^goodsUrlConvertBlock)(void(^)(id data)) = ^(void(^getFinalData)(id data)){
         @strongify(self)
-        [AliTradeManager autoWithViewController:self successCallback:^(ALBBSession *session) {
+        NSMutableDictionary *params = [NSMutableDictionary dictionary];
+        [params setValue:self.viewModel.model.goods_title forKey:@"goods_title"];
+        [params setValue:self.viewModel.model.goods_logo forKey:@"goods_logo"];
+        [params setValue:self.viewModel.model.coupon_share_url forKey:@"coupon_share_url"];
+        //判断当前用户是否绑定过渠道id
+        [CTRequest goodsUrlConvertWithTbGoodsInfo:params callback:^(id data, CLRequest *request, CTNetError error) {
             @strongify(self)
-            NSMutableDictionary *params = [NSMutableDictionary dictionary];
-            [params setValue:self.viewModel.model.goods_title forKey:@"goods_title"];
-            [params setValue:self.viewModel.model.goods_logo forKey:@"goods_logo"];
-            [params setValue:self.viewModel.model.coupon_share_url forKey:@"coupon_share_url"];
-            [CTRequest goodsUrlConvertWithTbGoodsInfo:params callback:^(id data, CLRequest *request, CTNetError error) {
-                @strongify(self)
-                if(!error){//绑定过渠道id 直接返回最终数据
+            if(!error){//绑定过渠道id 直接返回最终数据
+                //先百川授权
+                [AliTradeManager autoWithViewController:self successCallback:^(ALBBSession *session) {
                     if(getFinalData){
                         getFinalData(data);
                     }
+                }];
+            }
+            else{//如果未绑定过渠道id 需要先进行淘宝授权
+                NSInteger status = [data[@"status"] integerValue];
+                if(status == 403){
+                    NSString *tbAuthUrl = data[@"data"];
+                    [[CTModuleManager webService]tbAuthFromViewController:self url:tbAuthUrl callback:^(id data) {
+                        if(getFinalData){
+                            getFinalData(data);
+                        }
+                    }];
                 }
-                else{//如果未绑定过渠道id 事先通过淘宝H5授权绑定id同时通过js交互获取真正跳转的数据
-                    NSInteger status = [data[@"status"] integerValue];
-                    if(status == 403){
-                        NSString *tbAuthUrl = data[@"data"];
-                        [[CTModuleManager webService]tbAuthFromViewController:self url:tbAuthUrl callback:^(id data) {
-                            if(getFinalData){
-                                getFinalData(data);
-                            }
-                        }];
-                    }
-                    else{
-                        [MBProgressHUD showMBProgressHudWithTitle:data[@"info"]];
-                    }
+                else{
+                    [MBProgressHUD showMBProgressHudWithTitle:data[@"info"]];
                 }
-            }];
+            }
         }];
     };
 
@@ -300,7 +301,7 @@
 }
 
 
-//手势效果
+//解决与商品详情Web手势效果
 static BOOL canMainScroll = YES;
 static BOOL canChildScroll = NO;
 - (void)initialize{

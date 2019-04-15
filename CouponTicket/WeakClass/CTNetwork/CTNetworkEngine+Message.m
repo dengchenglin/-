@@ -39,6 +39,7 @@ NSString *GetMessageStr(CTMessageType type){
 }
 //推送设备token
 - (CLRequest *)updateDeviceToken:(NSString *)deviceToken callback:(CTResponseBlock)callback{
+    if(![CTAppManager logined])return nil;
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     [params setValue:deviceToken forKey:@"device_token"];
     return [self postWithPath:CTMessage(@"update_device_token") params:params callback:callback];

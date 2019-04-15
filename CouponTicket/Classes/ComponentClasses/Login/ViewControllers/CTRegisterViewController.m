@@ -45,6 +45,7 @@
     [self setLeftDefaultItem];
     self.title = GetEventTitleStr(_eventKind);
     [self.view addSubview:self.registerView];
+    self.registerView.inviteCodeTfd.text = _inviteCode;
 }
 
 - (void)autoLayout{

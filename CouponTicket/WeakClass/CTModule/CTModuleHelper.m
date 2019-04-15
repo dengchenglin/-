@@ -25,6 +25,11 @@ static const int linkActions_assoc_key;
             UIViewController *vc = [[CTModuleManager goodListService]goodDetailViewControllerWithGoodId:info.href];
             [pushingVc.navigationController pushViewController:vc animated:YES];
             return vc;
+        },@(CTLinkRegister):^UIViewController *(CTActivityModel *info,UIViewController *pushingVc){
+            [CTAppManager logout];
+            UIViewController *vc = [UIUtil getCurrentViewController];
+            [[CTModuleManager loginService]showRegisterFromViewController:vc inviteCode:info.href callback:nil];
+            return nil;
         }};
         objc_setAssociatedObject(self, &linkActions_assoc_key, actions, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     }
@@ -35,15 +40,23 @@ static const int linkActions_assoc_key;
 + (UIViewController *)showCtVcFromViewController:(UIViewController *)viewController model:(CTActivityModel *)model{
     if(!viewController)return nil;
     UIViewController *(^actionBlock)(CTActivityModel*info,UIViewController *pushingVc) = [self linkActions][@(model.link_type)];
-    if(actionBlock){
-       return actionBlock(model,viewController);
+    if(model.link_type == CTLinkRegister){
+        if(actionBlock){
+            return actionBlock(model,viewController);
+        }
     }
+    else if(viewController.tabBarController){
+        if(actionBlock){
+            return actionBlock(model,viewController);
+        }
+    }
+  
     return nil;
 }
 
 + (UIViewController *)showViewControllerWithModel:(CTActivityModel *)model{
     UIViewController *vc = [UIUtil getCurrentViewController];
-    if(vc && vc.tabBarController){
+    if(vc){
         return [self showCtVcFromViewController:vc model:model];
     }
     return nil;

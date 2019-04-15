@@ -184,6 +184,7 @@
     if(_currentIndexPath){
          CTVideoGoodListCell *cell = [self.tableView cellForRowAtIndexPath:_currentIndexPath];
         [cell.playButton jp_pause];
+        cell.playButton.jp_controlView.superview.alpha = 1.0;
     }
 }
 

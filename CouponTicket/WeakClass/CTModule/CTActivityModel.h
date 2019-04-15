@@ -10,7 +10,8 @@
 
 typedef NS_ENUM(NSInteger,CTLinkType) {
     CTLinkWeb = 1,
-    CTLinkGoodsDetail
+    CTLinkGoodsDetail,
+    CTLinkRegister
 };
 
 @interface CTActivityModel : NSObject

@@ -105,9 +105,12 @@
     //调用分享接口
     [[UMSocialManager defaultManager] shareToPlatform:platformType messageObject:messageObject currentViewController:vc completion:^(id data, NSError *error) {
         if (error) {
-            NSLog(@"************Share fail with error %@*********",error);
+            NSString *message = error.userInfo[@"message"];
+            if(message){
+               [MBProgressHUD showMBProgressHudWithTitle:message];
+            }
         }else{
-            NSLog(@"response data is %@",data);
+            [MBProgressHUD showMBProgressHudWithTitle:@"分享成功"];
         }
     }];
 }

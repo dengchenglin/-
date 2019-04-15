@@ -258,6 +258,10 @@
 		3294C0742255988400AB0DB2 /* CTUserInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3294C0732255988400AB0DB2 /* CTUserInfoModel.m */; };
 		3294C07722559CAA00AB0DB2 /* CTUserInfoItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3294C07622559CAA00AB0DB2 /* CTUserInfoItem.m */; };
 		3294C07922559CB500AB0DB2 /* CTUserInfoItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3294C07822559CB500AB0DB2 /* CTUserInfoItem.xib */; };
+		32969DE722642440006E2B68 /* CTTbAuthAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 32969DE622642440006E2B68 /* CTTbAuthAlertView.m */; };
+		32969DE922642463006E2B68 /* CTTbAuthAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32969DE822642463006E2B68 /* CTTbAuthAlertView.xib */; };
+		32969DEC226429FF006E2B68 /* CTTbAuthFailAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 32969DEB226429FF006E2B68 /* CTTbAuthFailAlertView.m */; };
+		32969DEE22642A08006E2B68 /* CTTbAuthFailAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32969DED22642A08006E2B68 /* CTTbAuthFailAlertView.xib */; };
 		3297FDC22241EA7100B59746 /* CTTaoBaoAuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3297FDC12241EA7100B59746 /* CTTaoBaoAuthViewController.m */; };
 		3297FDC82241FA9800B59746 /* CTNetworkEngine+Order.m in Sources */ = {isa = PBXBuildFile; fileRef = 3297FDC72241FA9800B59746 /* CTNetworkEngine+Order.m */; };
 		3297FDCC2241FD2500B59746 /* CTOrderModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3297FDCB2241FD2500B59746 /* CTOrderModel.m */; };
@@ -970,6 +974,12 @@
 		3294C07522559CAA00AB0DB2 /* CTUserInfoItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTUserInfoItem.h; sourceTree = "<group>"; };
 		3294C07622559CAA00AB0DB2 /* CTUserInfoItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTUserInfoItem.m; sourceTree = "<group>"; };
 		3294C07822559CB500AB0DB2 /* CTUserInfoItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CTUserInfoItem.xib; sourceTree = "<group>"; };
+		32969DE522642440006E2B68 /* CTTbAuthAlertView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTTbAuthAlertView.h; sourceTree = "<group>"; };
+		32969DE622642440006E2B68 /* CTTbAuthAlertView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTTbAuthAlertView.m; sourceTree = "<group>"; };
+		32969DE822642463006E2B68 /* CTTbAuthAlertView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CTTbAuthAlertView.xib; sourceTree = "<group>"; };
+		32969DEA226429FF006E2B68 /* CTTbAuthFailAlertView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTTbAuthFailAlertView.h; sourceTree = "<group>"; };
+		32969DEB226429FF006E2B68 /* CTTbAuthFailAlertView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTTbAuthFailAlertView.m; sourceTree = "<group>"; };
+		32969DED22642A08006E2B68 /* CTTbAuthFailAlertView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CTTbAuthFailAlertView.xib; sourceTree = "<group>"; };
 		3297FDC02241EA7100B59746 /* CTTaoBaoAuthViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTTaoBaoAuthViewController.h; sourceTree = "<group>"; };
 		3297FDC12241EA7100B59746 /* CTTaoBaoAuthViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTTaoBaoAuthViewController.m; sourceTree = "<group>"; };
 		3297FDC62241FA9800B59746 /* CTNetworkEngine+Order.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CTNetworkEngine+Order.h"; sourceTree = "<group>"; };
@@ -2877,13 +2887,19 @@
 		32A28EBB2202C88C0049B003 /* CTAlertView */ = {
 			isa = PBXGroup;
 			children = (
-				32A28EBC2202C8B10049B003 /* CTAlertView.h */,
-				32A28EBD2202C8B10049B003 /* CTAlertView.m */,
 				32A28EBF2202C97E0049B003 /* CTAlertHelper.h */,
 				32A28EC02202C97E0049B003 /* CTAlertHelper.m */,
+				32A28EBC2202C8B10049B003 /* CTAlertView.h */,
+				32A28EBD2202C8B10049B003 /* CTAlertView.m */,
 				24B1C56F223CD29900831ACC /* CTNoticeAlertView.h */,
 				24B1C570223CD29900831ACC /* CTNoticeAlertView.m */,
 				24B1C572223CD2C700831ACC /* CTNoticeAlertView.xib */,
+				32969DE522642440006E2B68 /* CTTbAuthAlertView.h */,
+				32969DE622642440006E2B68 /* CTTbAuthAlertView.m */,
+				32969DE822642463006E2B68 /* CTTbAuthAlertView.xib */,
+				32969DEA226429FF006E2B68 /* CTTbAuthFailAlertView.h */,
+				32969DEB226429FF006E2B68 /* CTTbAuthFailAlertView.m */,
+				32969DED22642A08006E2B68 /* CTTbAuthFailAlertView.xib */,
 			);
 			path = CTAlertView;
 			sourceTree = "<group>";
@@ -3720,6 +3736,7 @@
 				32FEAA0F221426F4001156CC /* CTEarnDescView.xib in Resources */,
 				32DB93A62215093600300ACC /* CTThirtyTrendView.xib in Resources */,
 				32AE79AD2216926F00E29FC3 /* CTSharePopContainerView.xib in Resources */,
+				32969DE922642463006E2B68 /* CTTbAuthAlertView.xib in Resources */,
 				32BD0E5E2201A1AA00E99B86 /* CTUpdateImageView.xib in Resources */,
 				32DB93B722150D9A00300ACC /* CTEarnTrendCell.xib in Resources */,
 				326AC1F421FADF08008C154B /* CTHotCatoryView.xib in Resources */,
@@ -3759,6 +3776,7 @@
 				32E7EE6F21F32E9800191789 /* CTHomeNavView.xib in Resources */,
 				327282F1224B6DE200CF5D01 /* LMNoOrderView.xib in Resources */,
 				32DE0915224A348500474058 /* LMNoResultView.xib in Resources */,
+				32969DEE22642A08006E2B68 /* CTTbAuthFailAlertView.xib in Resources */,
 				32B4EE19221FC39900D2D71D /* CTSpreeShopItem.xib in Resources */,
 				32DB93CD22156DDA00300ACC /* CTTeamListCell.xib in Resources */,
 				32847007224E3B4100FE12A1 /* Assets.xcassets in Resources */,
@@ -3920,6 +3938,7 @@
 				326525EA21F5CDE900B63DD7 /* CTAgreementViewController.m in Sources */,
 				322453C121F2BEBC00471059 /* CTMineService.m in Sources */,
 				32601491224E256000B7A1BE /* LMWebView.m in Sources */,
+				32969DE722642440006E2B68 /* CTTbAuthAlertView.m in Sources */,
 				32A28EC42202CA260049B003 /* CTAlertHelper+WithdrawPsd.m in Sources */,
 				32C64EFA225AFC7700DDC0F9 /* CTEditInputView.m in Sources */,
 				32601467224E256000B7A1BE /* CLTaskRequest.m in Sources */,
@@ -3950,6 +3969,7 @@
 				326AC20821FB0DDD008C154B /* CTMemberHeadView.m in Sources */,
 				32EA9E9E2201AB1B00D72291 /* CTDoneButton.m in Sources */,
 				3220EA2B21F98C6D004E0422 /* CTWebService.m in Sources */,
+				32969DEC226429FF006E2B68 /* CTTbAuthFailAlertView.m in Sources */,
 				32CA556621F6B4F700145E31 /* CTShareView.m in Sources */,
 				32A56866222FC162005E2AE6 /* CTNotificationName.m in Sources */,
 				3260148C224E256000B7A1BE /* SelPlayerConfiguration.m in Sources */,

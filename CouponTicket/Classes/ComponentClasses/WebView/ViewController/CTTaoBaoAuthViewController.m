@@ -9,8 +9,10 @@
 #import "CTTaoBaoAuthViewController.h"
 
 #import <JavaScriptCore/JavaScriptCore.h>
-
 #import "UIWebView+Category.h"
+
+#import "AliTradeManager.h"
+#import "CTAlertHelper.h"
 
 @interface CTTaoBaoAuthViewController()<UIWebViewDelegate>
 
@@ -19,6 +21,25 @@
 @end
 
 @implementation CTTaoBaoAuthViewController
+
++ (UIViewController *)tbAuthFromViewController:(UIViewController *)viewController url:(NSString *)url callback:(void (^)(id data))callback{
+    CTTaoBaoAuthViewController *tbVc = [[CTTaoBaoAuthViewController alloc]init];
+    tbVc.url = url;
+    tbVc.callback = callback;
+    [CTAlertHelper showTbauthAlertViewWithCallback:^(NSUInteger buttonIndex) {
+        if(buttonIndex == 1){
+            if([AliTradeManager isInstallTb]){
+                [AliTradeManager autoWithViewController:viewController successCallback:^(ALBBSession *session) {
+                    [viewController.navigationController pushViewController:tbVc animated:YES];
+                }];
+            }
+            else{
+                [viewController.navigationController pushViewController:tbVc animated:YES];
+            }
+        }
+    }];
+    return tbVc;
+}
 
 - (UIWebView *)webView{
     if(!_webView){
@@ -35,7 +56,7 @@
     self.navigationBarStyle = CTNavigationBarRed;
      [self.view addSubview:self.webView];
 }
-- (void)reloadView{
+- (void)request{
     if(_url){
         MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
         [hud hideAnimated:YES afterDelay:5.0];
@@ -77,18 +98,22 @@
             if(self.callback){
                 self.callback(data);
             }
+             [self back];
         }
         else{
-            [UIAlertView showMessage:data[@"info"]];
+            [CTAlertHelper showTbauthFailAlertViewWithTitle:data[@"info"] callback:^(NSUInteger buttonIndex) {
+                if(buttonIndex == 0){
+                    [self back];
+                }
+                else{
+                    [AliTradeManager logOut];
+                    [self request];
+                }
+            }];
         }
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [self back];
-        });
     };
     context[@"closePage"] = ^(){
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [self back];
-        });
+         [self back];
     };
 
 }
@@ -97,5 +122,10 @@
     [MBProgressHUD hideHUDForView:self.view animated:YES];
 }
 
+- (void)back{
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [super back];
+    });
+}
 
 @end

@@ -58,11 +58,14 @@
             return ;
         }
         [CTRequest checkPhoneWithPhone:self.viewModel.mobile callback:^(id data, CLRequest *request, CTNetError error) {
-            if(!error){
+            if(error){
                 CTGetCodeViewController *vc = [CTGetCodeViewController new];;
                 vc.mobile = self.viewModel.mobile;
                 vc.eventKind = CTEventKindForgetpsd;
                 [self.navigationController pushViewController:vc animated:YES];
+            }
+            else{
+                [MBProgressHUD showMBProgressHudWithTitle:@"手机号未注册"];
             }
         }];
     }];

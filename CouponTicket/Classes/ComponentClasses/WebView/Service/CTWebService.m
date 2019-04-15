@@ -7,9 +7,7 @@
 //
 
 #import "CTWebService.h"
-
 #import "CTWebViewController.h"
-
 #import "CTTaoBaoAuthViewController.h"
 
 @implementation CTWebService
@@ -36,11 +34,7 @@ CL_EXPORT_MODULE(CTWebServiceProtocol)
      return [CTWebViewController showWebFromViewController:viewController url:url htmlString:nil isPush:NO];
 }
 - (UIViewController *)tbAuthFromViewController:(UIViewController *)viewController url:(NSString *)url callback:(void (^)(id data))callback{
-    CTTaoBaoAuthViewController *vc = [[CTTaoBaoAuthViewController alloc]init];
-    vc.url = url;
-    vc.callback = callback;
-    [viewController.navigationController pushViewController:vc animated:YES];
-    return viewController;
+    return [CTTaoBaoAuthViewController tbAuthFromViewController:viewController url:url callback:callback];
 }
 
 @end

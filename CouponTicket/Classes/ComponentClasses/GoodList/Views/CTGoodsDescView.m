@@ -10,6 +10,11 @@
 
 @implementation CTGoodsDescView
 
+- (void)awakeFromNib{
+    [super awakeFromNib];
+    _upgradeView.hidden = ![CTAppManager sharedInstance].showMember;
+}
+
 - (void)setViewModel:(CTGoodsViewModel *)viewModel{
     _viewModel = viewModel;
     [_typeImageView sd_setImageWithURL:[NSURL URLWithString:_viewModel.model.type_logo]];

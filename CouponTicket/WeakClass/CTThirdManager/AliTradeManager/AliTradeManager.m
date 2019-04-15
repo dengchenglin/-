@@ -89,6 +89,9 @@
 +(void)logOut{
     [[ALBBSDK sharedInstance]logout];
 }
++ (BOOL)isInstallTb{
+    return [[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"tbopen://"]];
+}
 
 + (void)autoWithViewController:(UIViewController *)viewController successCallback:(void(^)(ALBBSession *session))successCallback{
     if([self isLogin]){

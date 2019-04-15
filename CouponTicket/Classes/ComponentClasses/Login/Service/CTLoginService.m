@@ -9,10 +9,9 @@
 #import "CTLoginService.h"
 
 #import "CTLoginViewController.h"
-
 #import "CTGetCodeViewController.h"
-
 #import "CTAlipayBoundViewController.h"
+#import "CTRegisterViewController.h"
 
 @implementation CTLoginService
 
@@ -69,6 +68,20 @@ CL_EXPORT_MODULE(CTLoginServiceProtocol)
                 }
             }
         }];
+    }
+}
+
+
+- (void)showRegisterFromViewController:(UIViewController *)viewController  inviteCode:(NSString *)inviteCode callback:(void(^)(BOOL logined))callback{
+    CTRegisterViewController *vc = [CTRegisterViewController new];
+    vc.eventKind = CTEventKindRegister;
+    vc.inviteCode = inviteCode;
+    if([viewController isKindOfClass:CTLoginBaseViewController.class]){
+        [viewController.navigationController pushViewController:vc animated:YES];
+    }
+    else{
+        CTNavigationController *nav = [[CTNavigationController alloc]initWithRootViewController:vc];
+        [viewController presentViewController:nav animated:YES completion:nil];
     }
 }
 @end
