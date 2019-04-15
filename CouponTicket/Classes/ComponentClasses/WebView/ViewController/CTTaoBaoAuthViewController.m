@@ -7,16 +7,17 @@
 //
 
 #import "CTTaoBaoAuthViewController.h"
-
+#import <WebKit/WebKit.h>
 #import <JavaScriptCore/JavaScriptCore.h>
 #import "UIWebView+Category.h"
 
 #import "AliTradeManager.h"
 #import "CTAlertHelper.h"
 
-@interface CTTaoBaoAuthViewController()<UIWebViewDelegate>
+@interface CTTaoBaoAuthViewController()<WKUIDelegate,WKNavigationDelegate,UIScrollViewDelegate>
 
-@property (nonatomic, strong) UIWebView *webView;
+@property (nonatomic, strong) WKWebView *webView;
+@property (nonatomic, strong) WKUserContentController *userContentController;
 
 @property (nonatomic, copy) NSString *currentUrl;
 
@@ -30,24 +31,21 @@
     tbVc.callback = callback;
     [CTAlertHelper showTbauthAlertViewWithCallback:^(NSUInteger buttonIndex) {
         if(buttonIndex == 1){
-            if([AliTradeManager isInstallTb]){
-                [AliTradeManager autoWithViewController:viewController successCallback:^(ALBBSession *session) {
-                    [viewController.navigationController pushViewController:tbVc animated:YES];
-                }];
-            }
-            else{
-                [viewController.navigationController pushViewController:tbVc animated:YES];
-            }
+            [viewController.navigationController pushViewController:tbVc animated:YES];
         }
     }];
+  
     return tbVc;
 }
 
-- (UIWebView *)webView{
+- (WKWebView *)webView{
     if(!_webView){
-        _webView = [[UIWebView alloc]init];
-        _webView.delegate = self;
-        _webView.scalesPageToFit = YES;
+        _userContentController = [[WKUserContentController alloc]init];
+        WKWebViewConfiguration *configuration = [WKWebViewConfiguration new];
+        configuration.userContentController = _userContentController;
+        _webView = [[WKWebView alloc]initWithFrame:self.view.bounds configuration:configuration];
+        _webView.UIDelegate = self;
+        _webView.navigationDelegate = self;
         _webView.opaque = YES;
     }
     return _webView;
@@ -56,13 +54,16 @@
 - (void)setUpUI{
     self.title = @"淘宝授权";
     self.navigationBarStyle = CTNavigationBarRed;
-     [self.view addSubview:self.webView];
+    [self.view addSubview:self.webView];
+    [self registerMessage];
 }
+
 - (void)request{
     if(_url){
         MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
         [hud hideAnimated:YES afterDelay:5.0];
         [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:_url]]];
+        
     }
 
 }
@@ -73,35 +74,50 @@
     }];
 }
 
-
-
-- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType{
-    NSLog(@"%@",request.URL.absoluteString);
-    self.currentUrl = request.URL.absoluteString;
-    return YES;
+- (void)registerMessage{
+    [_userContentController addScriptMessageHandler:self name:@"objectcSelector"];
+    [_userContentController addScriptMessageHandler:self name:@"closePage"];
 }
 
-- (void)webViewDidFinishLoad:(UIWebView *)webView{
+- (void)removeMessage{
+    [_userContentController removeScriptMessageHandlerForName:@"objectcSelector"];
+    [_userContentController removeScriptMessageHandlerForName:@"closePage"];
+}
+
+
+- (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler{
+    self.currentUrl = navigationAction.request.URL.absoluteString;
+    decisionHandler(WKNavigationActionPolicyAllow);
+    NSLog(@"%@", navigationAction.request.URL.absoluteString);
+}
+
+- (void)webView:(WKWebView *)webView didFailNavigation:(null_unspecified WKNavigation *)navigation withError:(NSError *)error{
+    [MBProgressHUD hideHUDForView:self.view animated:YES];
+}
+- (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation
+{
     [NSTimer scheduledTimerWithTimeInterval:0.1 block:^(NSTimer *timer) {
-          [MBProgressHUD hideHUDForView:self.view animated:YES];
+        [MBProgressHUD hideHUDForView:self.view animated:YES];
     } repeats:NO];
-  
-    NSString *title = [webView stringByEvaluatingJavaScriptFromString:@"document.title"];
-    if(title){
-        self.title = title;
-    }
-    JSContext *context = [self.webView valueForKeyPath:@"documentView.webView.mainFrame.javaScriptContext"];
-    context[@"objectcSelector"] = ^(){
-        NSArray *args = [JSContext currentArguments];
-        JSValue *jsVal = [args objectAtIndex:0];
-        NSString *jsStr = [jsVal toString];
-        NSDictionary *data = [jsStr jsonValueDecoded];
+    
+    //设置标题
+    __weak typeof(self) weakSelf = self;
+    [webView evaluateJavaScript:@"document.title" completionHandler:^(id _Nullable htmlSoure, NSError * _Nullable error) {
+        if(htmlSoure){
+            weakSelf.title = htmlSoure;
+        }
+    }];
+}
+
+- (void)userContentController:(WKUserContentController *)userContentController didReceiveScriptMessage:(WKScriptMessage *)message{
+    if([message.name isEqualToString:@"objectcSelector"]){
+        NSDictionary *data = [message.body jsonValueDecoded];
         NSString *result = data[@"status"];
         if(result.integerValue == 200){
             if(self.callback){
                 self.callback(data);
             }
-             [self close];
+            [self close];
         }
         else{
             [CTAlertHelper showTbauthFailAlertViewWithTitle:data[@"info"] callback:^(NSUInteger buttonIndex) {
@@ -114,16 +130,12 @@
                 }
             }];
         }
-    };
-    context[@"closePage"] = ^(){
-         [self close];
-    };
-
+    }
+    if([message.name isEqualToString:@"closePage"]){
+        [self close];
+    }
 }
 
-- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error{
-    [MBProgressHUD hideHUDForView:self.view animated:YES];
-}
 
 - (void)close{
     dispatch_async(dispatch_get_main_queue(), ^{
@@ -143,6 +155,16 @@
             [super back];
         }
     }
+}
+
+- (void)didMoveToParentViewController:(UIViewController *)parent{
+    if(!parent){
+        [self removeMessage];
+    }
+}
+- (void)dealloc
+{
+    
 }
 
 @end

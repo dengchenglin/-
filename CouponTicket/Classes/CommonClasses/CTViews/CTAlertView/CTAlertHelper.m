@@ -97,8 +97,9 @@ static const int CTAlertViewKey;
         make.centerY.mas_equalTo(background.mas_centerY);
         make.width.mas_equalTo(280);
     }];
+    __weak UIView *weakBackground = background;
     [alertView setCloseBlock:^{
-        [background removeFromSuperview];
+        [weakBackground removeFromSuperview];
     }];
     objc_setAssociatedObject([UIApplication sharedApplication].keyWindow, &CTAlertViewKey, background, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     
@@ -123,6 +124,7 @@ static const int CTAlertViewKey;
     CTAlertBackground *alertBackground = objc_getAssociatedObject(view, &CTAlertViewKey);
     if(alertBackground){
         [alertBackground removeFromSuperview];
+        objc_setAssociatedObject(view, &CTAlertViewKey, nil, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     }
 }
 

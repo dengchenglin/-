@@ -103,7 +103,7 @@
     UIViewController *vc = [UIUtil getCurrentViewController];
     
     //调用分享接口
-    [[UMSocialManager defaultManager] shareToPlatform:platformType messageObject:messageObject currentViewController:vc completion:^(id data, NSError *error) {
+    [[UMSocialManager defaultManager] shareToPlatform:platformType messageObject:messageObject currentViewController:vc completion:^(UMSocialShareResponse *data, NSError *error) {
         if (error) {
             NSString *message = error.userInfo[@"message"];
             if(message){
