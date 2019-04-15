@@ -18,6 +18,8 @@
 
 @property (nonatomic, strong) UIWebView *webView;
 
+@property (nonatomic, copy) NSString *currentUrl;
+
 @end
 
 @implementation CTTaoBaoAuthViewController
@@ -75,6 +77,7 @@
 
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType{
     NSLog(@"%@",request.URL.absoluteString);
+    self.currentUrl = request.URL.absoluteString;
     return YES;
 }
 
@@ -98,12 +101,12 @@
             if(self.callback){
                 self.callback(data);
             }
-             [self back];
+             [self close];
         }
         else{
             [CTAlertHelper showTbauthFailAlertViewWithTitle:data[@"info"] callback:^(NSUInteger buttonIndex) {
                 if(buttonIndex == 0){
-                    [self back];
+                    [self close];
                 }
                 else{
                     [AliTradeManager logOut];
@@ -113,7 +116,7 @@
         }
     };
     context[@"closePage"] = ^(){
-         [self back];
+         [self close];
     };
 
 }
@@ -122,10 +125,24 @@
     [MBProgressHUD hideHUDForView:self.view animated:YES];
 }
 
-- (void)back{
+- (void)close{
     dispatch_async(dispatch_get_main_queue(), ^{
         [super back];
     });
+}
+
+- (void)back{
+    if([self.currentUrl isEqualToString:_url]){
+        [super back];
+    }
+    else{
+        if([self.webView canGoBack]){
+            [self.webView goBack];
+        }
+        else{
+            [super back];
+        }
+    }
 }
 
 @end
