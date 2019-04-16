@@ -10,6 +10,29 @@
 
 #define CTGoods(path)   [CTUrlPath(@"goods") stringByAppendingPathComponent:path]
 
+@implementation CTGoodsImgModel
++ (CTGoodsImgModel *)modelWithData:(NSDictionary *)data{
+    CTGoodsImgModel *model = [CTGoodsImgModel new];
+    model.img = data[@"img"];
+   
+    NSString *sizeStr = data[@"size"];
+    if(sizeStr.length){
+        NSArray *sizes = [sizeStr componentsSeparatedByString:@"x"];
+        if(sizes.count == 2){
+            CGSize size = CGSizeMake([sizes[0] floatValue], [sizes[1] floatValue]);
+            model.size = [NSValue valueWithCGSize:size];
+        }
+    }
+    return model;
+}
++ (NSArray <CTGoodsImgModel *>*)modelsWithDatas:(NSDictionary *)datas{
+    NSMutableArray *array = [NSMutableArray array];
+    for(NSDictionary *d in datas){
+        [array addObject:[self modelWithData:d]];
+    }
+    return array;
+}
+@end
 @implementation CTNetworkEngine (Goods)
 
 //商品详情
@@ -61,4 +84,44 @@
    
 }
 
+
+//获取商品图片
+- (CLRequest *)goodsImgWithItemId:(NSString *)itemId callback:(CTResponseBlock)callback{
+    if(!itemId.length)return nil;
+    NSString *jsonStr = [@{@"id":itemId,@"type":@"1"} yy_modelToJSONString];
+    NSString *url = @"https://h5api.m.taobao.com/h5/mtop.taobao.detail.getdesc/6.0/?jsv=2.4.11&api=mtop.taobao.detail.getdesc&v=6.0&type=jsonp&dataType=jsonp";
+    [[CLURLRequest request].setCustomUrl(url).setMethod(GET).setParams(@{@"data":jsonStr}).setCallBack(^(CLURLRequest * __nonnull request, id __nullable responseObject, NSError * __nullable error){
+        if(!error){
+            NSDictionary *contentData = responseObject[@"data"];
+            if(contentData){
+                NSString *html5 = contentData[@"pcDescContent"];
+            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+                NSArray <NSString *>*firstResults = [RegalurUtil resultsWithMatchString:html5 withRule:@"src=\"(.*?)\"\\s[^>]+size=\"(.*?)\""];
+                NSMutableArray *secondResults = [NSMutableArray array];
+                for(NSString *firstResult in firstResults){
+                    NSMutableDictionary *dic = [NSMutableDictionary dictionary];
+                    [secondResults addObject:dic];
+                    NSArray *result1s = [RegalurUtil resultsWithMatchString:firstResult withRule:@"src=\"(.*?)\""];
+                    if(result1s.count){
+                        [dic setValue:[@"http:" stringByAppendingString:result1s.firstObject] forKey:@"img"];
+                    }
+                    NSArray *result2s = [RegalurUtil resultsWithMatchString:firstResult withRule:@"size=\"(.*?)\""];
+                    if(result2s.count){
+                        NSString *sizeStr = result2s.firstObject;
+                        [dic setValue:sizeStr forKey:@"size"];
+                        
+                    }
+                }
+                NSLog(@"%@",secondResults);
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    if(callback){
+                        callback(secondResults,nil,CTNetErrorNone);
+                    }
+                });
+                });
+            }
+        }
+    }) start];
+    return nil;
+}
 @end

@@ -95,7 +95,6 @@ SINGLETON_FOR_CLASS_IMP(CTAppManager)
     _token = nil;
     [KeychainTool save:CTLoginInfoKey data:nil];
     [KeychainTool save:CTUserTokenKey data:nil];
-    [AliTradeManager logOut];
 }
 @end
 @implementation CTUser

@@ -42,6 +42,8 @@
 
 @property (nonatomic, strong) CTGoodsBuyView *buyView;
 
+@property (nonatomic, copy) NSArray <CTGoodsImgModel *> *imgs;
+
 @end
 
 @implementation CTGoodDetailViewController
@@ -157,11 +159,8 @@
         self.descView.viewModel = _viewModel;
         self.couponView.viewModel = _viewModel;
         self.buyView.viewModel = _viewModel;
-        if(_viewModel.model.goods_content.length){
-            self.contentView.htmlString = _viewModel.model.goods_content;
-        }
-        else{
-            self.contentView.url = _viewModel.model.goods_content_url;
+        if(self.viewModel.model.goods_content.length){
+            self.contentView.htmlString = self.viewModel.model.goods_content;
         }
         [self.couponView mas_updateConstraints:^(MASConstraintMaker *make) {
             make.height.mas_equalTo(self.viewModel.model.show_coupon?127:0);
@@ -177,6 +176,12 @@
         if(!error){
              self.viewModel = [CTGoodsViewModel bindModel:[CTGoodsModel yy_modelWithDictionary:data]];
             [self reloadView];
+            if(self.viewModel.model.goods_rich_url.length && !self.viewModel.model.goods_content.length){
+                [CTRequest goodsImgWithItemId:self.viewModel.model.item_id callback:^(id data, CLRequest *request, CTNetError error) {
+                    self.imgs = [CTGoodsImgModel modelsWithDatas:data];
+                }];
+            }
+          
         }
     }];
 }

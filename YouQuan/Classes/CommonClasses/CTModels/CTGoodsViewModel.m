@@ -15,6 +15,9 @@
     viewModel.model = model;
     return viewModel;
 }
-
++ (NSString *)reconstructionHtml5:(NSString *)html5{
+    if(!html5)return nil;
+    return [html5 stringByReplacingOccurrencesOfString:@"\"//img.alicdn.com" withString:@"\"http://img.alicdn.com"];
+}
 
 @end

@@ -21,6 +21,7 @@ NSString *GetTypeImageStr(NSInteger status);
 @property (nonatomic, copy) NSString *goods_short_title;
 @property (nonatomic, copy) NSString *goods_content;
 @property (nonatomic, copy) NSString *goods_content_url;
+@property (nonatomic, copy) NSString *goods_rich_url;
 @property (nonatomic, copy) NSString *goods_logo;
 @property (nonatomic, copy) NSString *market_price;
 @property (nonatomic, copy) NSString *coupon_amount;
