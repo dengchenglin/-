@@ -7,46 +7,60 @@
 //
 
 #import "CTGoodDetailViewController.h"
-
 #import "CTGoodsImgsView.h"
-
 #import "CTGoodsDescView.h"
-
 #import "CTGoodsCouponView.h"
-
 #import "CTGoodsBuyView.h"
-
 #import "CTNetworkEngine+Goods.h"
-
 #import "CTGoodsViewModel.h"
-
 #import "CTGoodsPreViewController.h"
-
 #import "CTGoodDetailNavbar.h"
-
 #import "CTSharePopView.h"
-
 #import "CTGoodsContentView.h"
+#import "CTGoodsImgsHeadView.h"
+#import "CTGoodsImgCell.h"
+@interface CTGoodsTableView:UITableView
+@property (nonatomic, assign) BOOL scrollViewAllowMultiGes;
+@end
+@implementation CTGoodsTableView
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer{
+    if(_scrollViewAllowMultiGes){
+       return YES;
+    }
+    return NO;
+}
 
-@interface CTGoodDetailViewController()<UIScrollViewDelegate>
-
+@end
+@interface CTGoodDetailViewController()<UIScrollViewDelegate,UITableViewDelegate,UITableViewDataSource>
+@property (nonatomic, strong) CTGoodsTableView *tableView;
+@property (nonatomic, strong) UIView *headView;
 @property (nonatomic, strong) CTGoodDetailNavbar *navBar;
-
 @property (nonatomic, strong) CTGoodsImgsView *imgsView;
-
 @property (nonatomic, strong) CTGoodsDescView *descView;
-
 @property (nonatomic, strong) CTGoodsCouponView *couponView;
-
 @property (nonatomic, strong) CTGoodsContentView *contentView;
-
 @property (nonatomic, strong) CTGoodsBuyView *buyView;
-
+@property (nonatomic, strong) CTGoodsImgsHeadView *imgsHeadView;
 @property (nonatomic, copy) NSArray <CTGoodsImgModel *> *imgs;
 
 @end
 
 @implementation CTGoodDetailViewController
+
+- (CTGoodsTableView *)tableView{
+    if(!_tableView){
+        _tableView = [[CTGoodsTableView alloc]initWithFrame:CGRectZero  style:UITableViewStyleGrouped];
+        _tableView.showsVerticalScrollIndicator = NO;
+        _tableView.delegate = self;
+        _tableView.dataSource = self;
+        _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+        [_tableView registerNib:[UINib nibWithNibName:NSStringFromClass(CTGoodsImgCell.class) bundle:nil] forCellReuseIdentifier:NSStringFromClass(CTGoodsImgCell.class)];
+        if (@available(iOS 11.0, *)) {
+            _tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+        } 
+    }
+    return _tableView;
+}
 
 - (CTGoodDetailNavbar *)navBar{
     if(!_navBar){
@@ -85,20 +99,33 @@
     }
     return _buyView;
 }
+- (CTGoodsImgsHeadView *)imgsHeadView{
+    if(!_imgsHeadView){
+        _imgsHeadView = NSMainBundleClass(CTGoodsImgsHeadView.class);
+    }
+    return _imgsHeadView;
+}
+
+- (UIView *)headView{
+    if(!_headView){
+        _headView = [UIView new];
+        [_headView addSubview:self.imgsView];
+        [_headView addSubview:self.descView];
+        [_headView addSubview:self.couponView];
+        [_headView addSubview:self.contentView];
+    }
+    return _headView;
+}
 - (void)setUpUI{
     self.title = @"商品详情";
     self.hideSystemNavBarWhenAppear = YES;
-    self.scrollViewAvailable = YES;
-    self.scrollView.delegate = self;
-    self.scrollViewAllowMultiGes = YES;
-    self.scrollView.backgroundColor = CTBackGroundGrayColor;
+    self.tableView.backgroundColor = CTBackGroundGrayColor;
+    [self.view addSubview:self.tableView];
     self.contentView.contentView.scrollView.delegate = self;
-    [self.autoLayoutContainerView addSubview:self.imgsView];
-    [self.autoLayoutContainerView addSubview:self.descView];
-    [self.autoLayoutContainerView addSubview:self.couponView];
-    [self.autoLayoutContainerView addSubview:self.contentView];
+    [self.view addSubview:self.tableView];
     [self.view addSubview:self.buyView];
     [self.view addSubview:self.navBar];
+    [self.headView class];
 }
 
 
@@ -107,10 +134,11 @@
         make.left.top.right.mas_equalTo(0);
         make.height.mas_equalTo(NAVBAR_HEIGHT);
     }];
-    [self.scrollView mas_remakeConstraints:^(MASConstraintMaker *make) {
+    [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.top.right.mas_equalTo(0);
-        make.bottom.mas_equalTo(-45-BOTTOM_HEIGHT);
+        make.bottom.mas_equalTo(self.buyView.mas_top);
     }];
+  
     [self.imgsView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.top.mas_equalTo(0);
         make.height.mas_equalTo(SCREEN_WIDTH);
@@ -126,18 +154,64 @@
         make.height.mas_equalTo(127);
     }];
     [self.contentView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(self.couponView.mas_bottom).offset(10);
+        make.top.mas_equalTo(self.couponView.mas_bottom).offset(7);
         make.left.right.mas_equalTo(0);
-        make.bottom.mas_equalTo(-10);
+        make.bottom.mas_equalTo(0);
     }];
     [self.buyView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.bottom.mas_equalTo(0);
         make.height.mas_equalTo(45 + BOTTOM_HEIGHT);
     }];
+    @weakify(self)
+    [self.contentView setHeightChangeBlock:^(CGFloat height) {
+        @strongify(self)
+        [self.tableView reloadData];
+    }];
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return self.imgs.count?2:1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    if(section == 0){
+        return 0;
+    }
+    return self.imgs.count;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    if(section == 0){
+        CGSize size = [self.headView systemLayoutSizeFittingSize:CGSizeMake(SCREEN_WIDTH, 3000)];
+        return size.height;
+    }
+    return 45;
+}
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+    if(section == 0){
+        return self.headView;
+    }
+    return self.imgsHeadView;
+}
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
+    return 0.000001;
+}
+- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
+    return [UIView new];
+}
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    CTGoodsImgModel *model = self.imgs[indexPath.row];
+    CGSize size = [model.size CGSizeValue];
+    return [CTGoodsImgCell heightForImgSize:size];
+}
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    CTGoodsImgCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(CTGoodsImgCell.class)];
+    [cell.goodImageView sd_setImageWithURL:[NSURL URLWithString:self.imgs[indexPath.row].img]];
+    return cell;
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
-    if(scrollView == self.scrollView){
+    if(scrollView == self.tableView){
         CGFloat startOffest = SCREEN_WIDTH;
         CGFloat alpha = 0;
         if(scrollView.contentOffset.y > startOffest){
@@ -152,15 +226,21 @@
 }
 
 - (void)reloadView{
-    self.scrollView.hidden = YES;
+    self.tableView.hidden = YES;
     if(self.viewModel){
-        self.scrollView.hidden = NO;
+        self.tableView.hidden = NO;
         self.imgsView.banner_imgs = _viewModel.model.goods_image;
         self.descView.viewModel = _viewModel;
         self.couponView.viewModel = _viewModel;
         self.buyView.viewModel = _viewModel;
+        self.contentView.htmlString = self.viewModel.model.goods_content;
         if(self.viewModel.model.goods_content.length){
-            self.contentView.htmlString = self.viewModel.model.goods_content;
+            self.tableView.scrollViewAllowMultiGes = YES;
+            self.contentView.hidden = NO;
+        }
+        else{
+            self.contentView.hidden = YES;
+            self.tableView.scrollViewAllowMultiGes = NO;
         }
         [self.couponView mas_updateConstraints:^(MASConstraintMaker *make) {
             make.height.mas_equalTo(self.viewModel.model.show_coupon?127:0);
@@ -179,6 +259,7 @@
             if(self.viewModel.model.goods_rich_url.length && !self.viewModel.model.goods_content.length){
                 [CTRequest goodsImgWithItemId:self.viewModel.model.item_id callback:^(id data, CLRequest *request, CTNetError error) {
                     self.imgs = [CTGoodsImgModel modelsWithDatas:data];
+                    [self.tableView reloadData];
                 }];
             }
           
@@ -188,6 +269,7 @@
 
 - (void)setUpEvent{
     @weakify(self)
+    
     //收藏
     void(^collectBlock)(void) = ^{
          @strongify(self);
@@ -317,7 +399,7 @@ static BOOL canChildScroll = NO;
 
     if(!self.contentView.titleHeight.constant)return;
     
-    UIScrollView *mainScrollView = self.scrollView;
+    UIScrollView *mainScrollView = self.tableView;
     UIScrollView *childScrollView = self.contentView.contentView.scrollView;
     
     CGFloat maxOffest = CGRectGetMinY(self.contentView.frame) + self.contentView.titleHeight.constant;

@@ -12,25 +12,25 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clipsSubviews="YES" contentMode="scaleToFill" id="iN0-l3-epB" customClass="CTGoodsContentView">
-            <rect key="frame" x="0.0" y="0.0" width="372" height="45"/>
+            <rect key="frame" x="0.0" y="0.0" width="372" height="1"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2zG-bm-FIA">
-                    <rect key="frame" x="0.0" y="0.0" width="372" height="45"/>
+                    <rect key="frame" x="0.0" y="0.0" width="372" height="1"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_title_3" translatesAutoresizingMaskIntoConstraints="NO" id="I0l-hy-LFh">
-                            <rect key="frame" x="102.5" y="15" width="167" height="15"/>
+                            <rect key="frame" x="102.5" y="-7" width="167" height="15"/>
                         </imageView>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="45" id="6id-Fa-MRj"/>
+                        <constraint firstAttribute="height" constant="1" id="6id-Fa-MRj"/>
                         <constraint firstItem="I0l-hy-LFh" firstAttribute="centerX" secondItem="2zG-bm-FIA" secondAttribute="centerX" id="juA-y8-GP9"/>
                         <constraint firstItem="I0l-hy-LFh" firstAttribute="centerY" secondItem="2zG-bm-FIA" secondAttribute="centerY" id="kYW-AQ-eJe"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vo5-Yh-D9e" customClass="UIWebView">
-                    <rect key="frame" x="0.0" y="45" width="372" height="0.0"/>
+                    <rect key="frame" x="0.0" y="1" width="372" height="0.0"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="height" id="o01-Lf-dGy"/>

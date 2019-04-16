@@ -13,4 +13,5 @@
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *titleHeight;
 @property (nonatomic, copy) NSString *htmlString;
 @property (nonatomic, copy) NSString *url;
+@property (nonatomic, copy) void (^heightChangeBlock)(CGFloat height);
 @end

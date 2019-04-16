@@ -62,4 +62,5 @@ NSString *GetTypeImageStr(NSInteger status){
 + (NSDictionary *)modelContainerPropertyGenericClass{
     return @{@"goods":CTGoodsModel.class};
 }
+
 @end

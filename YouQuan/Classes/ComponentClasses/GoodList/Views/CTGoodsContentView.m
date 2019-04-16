@@ -32,6 +32,9 @@ ViewInstance(setUp)
         }
         self.contentHeight.constant = contentHeight;
         [self layoutIfNeeded];
+        if(self.heightChangeBlock){
+            self.heightChangeBlock(self.contentHeight.constant + self.titleHeight.constant);
+        }
     }];
 }
 
@@ -49,6 +52,9 @@ ViewInstance(setUp)
     [self.superview layoutIfNeeded];
     
     [self.contentView loadHTMLString:_htmlString baseURL:nil];
+    if(_heightChangeBlock){
+        _heightChangeBlock(self.contentHeight.constant + self.titleHeight.constant);
+    }
 }
 - (void)setUrl:(NSString *)url{
     _url = url;
@@ -62,6 +68,9 @@ ViewInstance(setUp)
     }
     [self.superview layoutIfNeeded];
     [self.contentView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:_url]]];
+    if(_heightChangeBlock){
+        _heightChangeBlock(self.contentHeight.constant + self.titleHeight.constant);
+    }
 }
 - (void)dealloc
 {

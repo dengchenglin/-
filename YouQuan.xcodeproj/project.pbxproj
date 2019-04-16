@@ -291,6 +291,10 @@
 		329B36FF223B91F60003AD30 /* CTGoodsViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 329B36FE223B91F60003AD30 /* CTGoodsViewModel.m */; };
 		329B3706223BAF130003AD30 /* CTTimeBuyCateModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 329B3705223BAF100003AD30 /* CTTimeBuyCateModel.m */; };
 		329D8E1D225C44F9001BFE60 /* MWManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 329D8E1C225C44F9001BFE60 /* MWManager.m */; };
+		32A0B4C02265C4EC006ADB0E /* CTGoodsImgsHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 32A0B4BF2265C4EC006ADB0E /* CTGoodsImgsHeadView.m */; };
+		32A0B4C22265C4F4006ADB0E /* CTGoodsImgsHeadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32A0B4C12265C4F4006ADB0E /* CTGoodsImgsHeadView.xib */; };
+		32A0B4C62265C697006ADB0E /* CTGoodsImgCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 32A0B4C42265C697006ADB0E /* CTGoodsImgCell.m */; };
+		32A0B4C72265C697006ADB0E /* CTGoodsImgCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32A0B4C52265C697006ADB0E /* CTGoodsImgCell.xib */; };
 		32A12F75225D7BC6002D5189 /* CTNetworkEngine+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 32A12F74225D7BC6002D5189 /* CTNetworkEngine+Common.m */; };
 		32A281092237D2F2007DF6C2 /* CTNetworkEngine+Recommend.m in Sources */ = {isa = PBXBuildFile; fileRef = 32A281082237D2F2007DF6C2 /* CTNetworkEngine+Recommend.m */; };
 		32A2810C2237D50C007DF6C2 /* CTNetworkEngine+Member.m in Sources */ = {isa = PBXBuildFile; fileRef = 32A2810B2237D50C007DF6C2 /* CTNetworkEngine+Member.m */; };
@@ -1018,6 +1022,12 @@
 		329B3705223BAF100003AD30 /* CTTimeBuyCateModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTTimeBuyCateModel.m; sourceTree = "<group>"; };
 		329D8E1B225C44F9001BFE60 /* MWManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MWManager.h; sourceTree = "<group>"; };
 		329D8E1C225C44F9001BFE60 /* MWManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MWManager.m; sourceTree = "<group>"; };
+		32A0B4BE2265C4EC006ADB0E /* CTGoodsImgsHeadView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTGoodsImgsHeadView.h; sourceTree = "<group>"; };
+		32A0B4BF2265C4EC006ADB0E /* CTGoodsImgsHeadView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTGoodsImgsHeadView.m; sourceTree = "<group>"; };
+		32A0B4C12265C4F4006ADB0E /* CTGoodsImgsHeadView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CTGoodsImgsHeadView.xib; sourceTree = "<group>"; };
+		32A0B4C32265C697006ADB0E /* CTGoodsImgCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTGoodsImgCell.h; sourceTree = "<group>"; };
+		32A0B4C42265C697006ADB0E /* CTGoodsImgCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTGoodsImgCell.m; sourceTree = "<group>"; };
+		32A0B4C52265C697006ADB0E /* CTGoodsImgCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CTGoodsImgCell.xib; sourceTree = "<group>"; };
 		32A12F73225D7BC6002D5189 /* CTNetworkEngine+Common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CTNetworkEngine+Common.h"; sourceTree = "<group>"; };
 		32A12F74225D7BC6002D5189 /* CTNetworkEngine+Common.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CTNetworkEngine+Common.m"; sourceTree = "<group>"; };
 		32A281072237D2F2007DF6C2 /* CTNetworkEngine+Recommend.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CTNetworkEngine+Recommend.h"; sourceTree = "<group>"; };
@@ -3522,6 +3532,12 @@
 				328A7B212253515600735EB6 /* CTGoodsContentView.h */,
 				328A7B222253515600735EB6 /* CTGoodsContentView.m */,
 				328A7B242253517600735EB6 /* CTGoodsContentView.xib */,
+				32A0B4BE2265C4EC006ADB0E /* CTGoodsImgsHeadView.h */,
+				32A0B4BF2265C4EC006ADB0E /* CTGoodsImgsHeadView.m */,
+				32A0B4C12265C4F4006ADB0E /* CTGoodsImgsHeadView.xib */,
+				32A0B4C32265C697006ADB0E /* CTGoodsImgCell.h */,
+				32A0B4C42265C697006ADB0E /* CTGoodsImgCell.m */,
+				32A0B4C52265C697006ADB0E /* CTGoodsImgCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -3761,9 +3777,11 @@
 				32CA557021F6C22600145E31 /* LMNoDataView.xib in Resources */,
 				32AE799D22166DF600E29FC3 /* CTProfitShareView_.xib in Resources */,
 				2405AEEA21FC18E3000E5081 /* CTMemberPrivilegeItem.xib in Resources */,
+				32A0B4C22265C4F4006ADB0E /* CTGoodsImgsHeadView.xib in Resources */,
 				2405AEDF21FC0E3C000E5081 /* CTMemberEquityItem.xib in Resources */,
 				32A28ECE2202D5230049B003 /* CTWithdrawSuccessView.xib in Resources */,
 				32E7EE6F21F32E9800191789 /* CTHomeNavView.xib in Resources */,
+				32A0B4C72265C697006ADB0E /* CTGoodsImgCell.xib in Resources */,
 				327282F1224B6DE200CF5D01 /* LMNoOrderView.xib in Resources */,
 				32DE0915224A348500474058 /* LMNoResultView.xib in Resources */,
 				32969DEE22642A08006E2B68 /* CTTbAuthFailAlertView.xib in Resources */,
@@ -3945,6 +3963,7 @@
 				329B3706223BAF130003AD30 /* CTTimeBuyCateModel.m in Sources */,
 				32AE799822166DD500E29FC3 /* CTProfitShareViewController.m in Sources */,
 				326525ED21F5CE7F00B63DD7 /* CTGetCodeViewController.m in Sources */,
+				32A0B4C62265C697006ADB0E /* CTGoodsImgCell.m in Sources */,
 				32A12F75225D7BC6002D5189 /* CTNetworkEngine+Common.m in Sources */,
 				32E7EE6121F30AB500191789 /* CTBaseListViewController.m in Sources */,
 				326525F321F5CEF600B63DD7 /* CTRegisterView.m in Sources */,
@@ -4164,6 +4183,7 @@
 				240E189A21F5FA39004A4BCB /* CTForgetPsdView.m in Sources */,
 				326525DE21F5C60B00B63DD7 /* CTLoginViewModel.m in Sources */,
 				32BD0E312201844000E99B86 /* CTSetService.m in Sources */,
+				32A0B4C02265C4EC006ADB0E /* CTGoodsImgsHeadView.m in Sources */,
 				32601496224E256000B7A1BE /* UIActionSheet+Category.m in Sources */,
 				322453F021F2CF1100471059 /* CTAppConfig.m in Sources */,
 				32CA555521F6AD1600145E31 /* CTShareViewController.m in Sources */,

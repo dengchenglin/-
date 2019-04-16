@@ -103,12 +103,14 @@
                     [secondResults addObject:dic];
                     NSArray *result1s = [RegalurUtil resultsWithMatchString:firstResult withRule:@"src=\"(.*?)\""];
                     if(result1s.count){
-                        [dic setValue:[@"http:" stringByAppendingString:result1s.firstObject] forKey:@"img"];
+                        NSString *newResult = [[result1s.firstObject stringByReplacingOccurrencesOfString:@"\"" withString:@""] stringByReplacingOccurrencesOfString:@"src=" withString:@""];
+                        [dic setValue:[@"http:" stringByAppendingString:newResult] forKey:@"img"];
                     }
                     NSArray *result2s = [RegalurUtil resultsWithMatchString:firstResult withRule:@"size=\"(.*?)\""];
                     if(result2s.count){
                         NSString *sizeStr = result2s.firstObject;
-                        [dic setValue:sizeStr forKey:@"size"];
+                        NSString *newSizeStr = [[sizeStr stringByReplacingOccurrencesOfString:@"\"" withString:@""] stringByReplacingOccurrencesOfString:@"size=" withString:@""];
+                        [dic setValue:newSizeStr forKey:@"size"];
                         
                     }
                 }
