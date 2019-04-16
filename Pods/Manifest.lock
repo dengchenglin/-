@@ -33,7 +33,10 @@ PODS:
   - SDWebImage/Core (4.4.6)
   - SGQRCode (3.0.1)
   - "UITableView+FDTemplateLayoutCell (1.6)"
+  - UMCAnalytics (6.0.3):
+    - UMCCommon
   - UMCCommon (2.0.1)
+  - UMCCommonLog (1.0.0)
   - UMCPush (3.2.4):
     - UMCCommon
   - UMCSecurityPlugins (1.0.6)
@@ -67,7 +70,9 @@ DEPENDENCIES:
   - SDWebImage (~> 4.4.2)
   - SGQRCode (~> 3.0.1)
   - "UITableView+FDTemplateLayoutCell (~> 1.6)"
+  - UMCAnalytics
   - UMCCommon
+  - UMCCommonLog
   - UMCPush
   - UMCSecurityPlugins
   - UMCShare/Social/ReducedQQ
@@ -77,7 +82,7 @@ DEPENDENCIES:
   - ZLPhotoBrowser (~> 2.7.6)
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - AFNetworking
     - GPUImage
     - HappyDNS
@@ -93,7 +98,9 @@ SPEC REPOS:
     - SDWebImage
     - SGQRCode
     - "UITableView+FDTemplateLayoutCell"
+    - UMCAnalytics
     - UMCCommon
+    - UMCCommonLog
     - UMCPush
     - UMCSecurityPlugins
     - UMCShare
@@ -118,7 +125,9 @@ SPEC CHECKSUMS:
   SDWebImage: 3f3f0c02f09798048c47a5ed0a13f17b063572d8
   SGQRCode: bf02d60e18d6660a9d75ff1c8b9b467f064f054e
   "UITableView+FDTemplateLayoutCell": 5c949b4a5059c404b442926c0e80f81d10a2d66f
+  UMCAnalytics: ff58714ada407682c4a07548156f94bcec92f055
   UMCCommon: 0263a057a2e1ae1da4c8308541e56904a493ce13
+  UMCCommonLog: 05a2d5de21858e3d870551562cff405c1366d244
   UMCPush: 1edd856027dcf905333effb4040ace5d236a7316
   UMCSecurityPlugins: 0831a08f3988f3cea9f1d3a7626cd9bee4fef150
   UMCShare: 552b29753f1b4da87b51d96545ed19e6263df397
@@ -127,6 +136,6 @@ SPEC CHECKSUMS:
   YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
   ZLPhotoBrowser: ee7cb33620dc338cece3b0e49abf78e7558abfb2
 
-PODFILE CHECKSUM: 7d4c0ecc3fa68ad60c5a6e49e9200062652bf880
+PODFILE CHECKSUM: fe2d2c975e49fe2031955af52ce3a97cd013d84c
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.5.0

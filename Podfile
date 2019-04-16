@@ -26,6 +26,8 @@ target 'YouQuan' do
   pod 'UMCShare/Social/ReducedWeChat'
   pod 'UMCShare/Social/ReducedQQ'
   pod 'UMCPush'
+  pod 'UMCCommonLog'
+  pod 'UMCAnalytics'
   
   pod 'SGQRCode', '~> 3.0.1'
   

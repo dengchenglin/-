@@ -13,7 +13,7 @@
 #import "UMMessageManager.h"
 #import "AliTradeManager.h"
 #import "MWManager.h"
-
+#import "UMMobcClickManager.h"
 @interface AppDelegate ()
 
 @end
@@ -29,6 +29,8 @@
     [CTAppConfig config];
     //友盟分享
     [UMShareManager config];
+    //友盟统计
+    [UMMobcClickManager config];
     //友盟推送
     [UMMessageManager application:application didFinishLaunchingWithOptions:launchOptions];
     //阿里百川

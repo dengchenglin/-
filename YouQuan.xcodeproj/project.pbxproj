@@ -295,6 +295,7 @@
 		32A0B4C22265C4F4006ADB0E /* CTGoodsImgsHeadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32A0B4C12265C4F4006ADB0E /* CTGoodsImgsHeadView.xib */; };
 		32A0B4C62265C697006ADB0E /* CTGoodsImgCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 32A0B4C42265C697006ADB0E /* CTGoodsImgCell.m */; };
 		32A0B4C72265C697006ADB0E /* CTGoodsImgCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32A0B4C52265C697006ADB0E /* CTGoodsImgCell.xib */; };
+		32A0B4CA2265D7CB006ADB0E /* UMMobcClickManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 32A0B4C92265D7CB006ADB0E /* UMMobcClickManager.m */; };
 		32A12F75225D7BC6002D5189 /* CTNetworkEngine+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 32A12F74225D7BC6002D5189 /* CTNetworkEngine+Common.m */; };
 		32A281092237D2F2007DF6C2 /* CTNetworkEngine+Recommend.m in Sources */ = {isa = PBXBuildFile; fileRef = 32A281082237D2F2007DF6C2 /* CTNetworkEngine+Recommend.m */; };
 		32A2810C2237D50C007DF6C2 /* CTNetworkEngine+Member.m in Sources */ = {isa = PBXBuildFile; fileRef = 32A2810B2237D50C007DF6C2 /* CTNetworkEngine+Member.m */; };
@@ -1028,6 +1029,8 @@
 		32A0B4C32265C697006ADB0E /* CTGoodsImgCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTGoodsImgCell.h; sourceTree = "<group>"; };
 		32A0B4C42265C697006ADB0E /* CTGoodsImgCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTGoodsImgCell.m; sourceTree = "<group>"; };
 		32A0B4C52265C697006ADB0E /* CTGoodsImgCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CTGoodsImgCell.xib; sourceTree = "<group>"; };
+		32A0B4C82265D7CB006ADB0E /* UMMobcClickManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UMMobcClickManager.h; sourceTree = "<group>"; };
+		32A0B4C92265D7CB006ADB0E /* UMMobcClickManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UMMobcClickManager.m; sourceTree = "<group>"; };
 		32A12F73225D7BC6002D5189 /* CTNetworkEngine+Common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CTNetworkEngine+Common.h"; sourceTree = "<group>"; };
 		32A12F74225D7BC6002D5189 /* CTNetworkEngine+Common.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CTNetworkEngine+Common.m"; sourceTree = "<group>"; };
 		32A281072237D2F2007DF6C2 /* CTNetworkEngine+Recommend.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CTNetworkEngine+Recommend.h"; sourceTree = "<group>"; };
@@ -3508,6 +3511,8 @@
 				32ED00DA222D0F89008A1640 /* UMShareManager.m */,
 				32B0EF972255B5FC00F8A758 /* UMMessageManager.h */,
 				32B0EF982255B5FC00F8A758 /* UMMessageManager.m */,
+				32A0B4C82265D7CB006ADB0E /* UMMobcClickManager.h */,
+				32A0B4C92265D7CB006ADB0E /* UMMobcClickManager.m */,
 			);
 			path = UMManager;
 			sourceTree = "<group>";
@@ -3835,6 +3840,7 @@
 				"${PODS_ROOT}/JPVideoPlayer/JPVideoPlayer/JPVideoPlayer.bundle",
 				"${PODS_ROOT}/MagicWindowSDK/MagicWindowSDK/MagicWindowSDK/MagicWindow.bundle",
 				"${PODS_ROOT}/SGQRCode/SGQRCode/SGQRCode.bundle",
+				"${PODS_ROOT}/UMCCommonLog/UMCommonLog/UMCommonLog.bundle",
 				"${PODS_ROOT}/ZLPhotoBrowser/PhotoBrowser/resource/ZLPhotoActionSheet.xib",
 				"${PODS_ROOT}/ZLPhotoBrowser/PhotoBrowser/resource/ZLPhotoBrowserCell.xib",
 				"${PODS_ROOT}/ZLPhotoBrowser/PhotoBrowser/resource/ZLPhotoBrowser.bundle",
@@ -3850,6 +3856,7 @@
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/JPVideoPlayer.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MagicWindow.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SGQRCode.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/UMCommonLog.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ZLPhotoActionSheet.nib",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ZLPhotoBrowserCell.nib",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ZLPhotoBrowser.bundle",
@@ -4062,6 +4069,7 @@
 				32DB93D52215771900300ACC /* CTUserDetailViewController.m in Sources */,
 				3294C0742255988400AB0DB2 /* CTUserInfoModel.m in Sources */,
 				32FD12C5223F7B3800CB85C1 /* AliTradeManager.m in Sources */,
+				32A0B4CA2265D7CB006ADB0E /* UMMobcClickManager.m in Sources */,
 				3260146B224E256000B7A1BE /* CLRefreshFooter.m in Sources */,
 				326014B1224E256000B7A1BE /* UIUtil.m in Sources */,
 				24B1C571223CD29900831ACC /* CTNoticeAlertView.m in Sources */,

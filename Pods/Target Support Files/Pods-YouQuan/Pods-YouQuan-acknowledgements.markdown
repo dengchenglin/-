@@ -534,9 +534,19 @@ SOFTWARE.
 
 
 
+## UMCAnalytics
+
+Copyright 2011 - 2019 umeng.com. All rights reserved.
+
+
 ## UMCCommon
 
 Copyright 2011 - 2019 umeng.com. All rights reserved.
+
+
+## UMCCommonLog
+
+Copyright 2011 - 2018 umeng.com. All rights reserved.
 
 
 ## UMCPush
