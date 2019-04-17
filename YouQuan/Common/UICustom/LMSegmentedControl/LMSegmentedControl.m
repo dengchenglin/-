@@ -211,6 +211,8 @@ ViewInstance(setUp)
             [itemBtn setTitleColor:_titleNormalColor forState:UIControlStateNormal];
             [itemBtn setTitleColor:_titleSelectedColor forState:UIControlStateSelected];
             itemBtn.titleLabel.font = _textFont;
+            itemBtn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentCenter;
+            itemBtn.titleLabel.textAlignment =NSTextAlignmentCenter;
             [itemBtn addTarget:self action:@selector(selectAction:) forControlEvents:UIControlEventTouchUpInside];
             [_scrollContainerView addSubview:itemBtn];
             [itemBtn mas_makeConstraints:^(MASConstraintMaker *make) {
