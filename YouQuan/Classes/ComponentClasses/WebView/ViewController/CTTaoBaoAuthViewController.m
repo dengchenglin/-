@@ -64,7 +64,13 @@
         [hud hideAnimated:YES afterDelay:5.0];
         [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:_url]]];
     }
-    
+}
+
+- (void)reloadData{
+    [self.webView removeFromSuperview];
+    [self.view addSubview:self.webView];
+    [self autoLayout];
+    [self request];
 }
 
 - (void)autoLayout{
@@ -109,8 +115,7 @@
                     [self close];
                 }
                 else{
-                    [AliTradeManager logOut];
-                    [self request];
+                    [self reloadData];
                 }
             }];
         }
