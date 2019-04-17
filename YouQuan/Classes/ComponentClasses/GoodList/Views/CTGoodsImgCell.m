@@ -11,6 +11,7 @@
 @implementation CTGoodsImgCell
 
 + (CGFloat)heightForImgSize:(CGSize)imgSize{
+    if(imgSize.width==0|| imgSize.height==0)return 0;
     CGSize size = CGSizeMake(CTGoodsImgCellWidth, CTGoodsImgCellWidth/imgSize.width * imgSize.height);
     return size.height + 5;
 }

@@ -11,7 +11,9 @@
 @interface CTGoodsImgModel:NSObject
 @property (nonatomic, copy) NSString *img;
 @property (nonatomic, strong) NSValue *size;
+@property (nonatomic, assign) BOOL checked;
 + (NSArray <CTGoodsImgModel *>*)modelsWithDatas:(NSDictionary *)datas;
+- (void)checkAndAmendWithRealSize:(CGSize)realSize;
 @end
 
 @interface CTNetworkEngine (Goods)

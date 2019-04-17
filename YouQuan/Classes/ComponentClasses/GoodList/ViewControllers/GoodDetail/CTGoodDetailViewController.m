@@ -206,7 +206,13 @@
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     CTGoodsImgCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(CTGoodsImgCell.class)];
-    [cell.goodImageView sd_setImageWithURL:[NSURL URLWithString:self.imgs[indexPath.row].img]];
+    CTGoodsImgModel *model = self.imgs[indexPath.row];
+    [cell.goodImageView sd_setImageWithURL:[NSURL URLWithString:model.img] completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
+        [model checkAndAmendWithRealSize:image.size];
+        if(!model.checked){
+            [tableView reloadData];
+        }
+    }];
     return cell;
 }
 
@@ -250,21 +256,25 @@
 
 - (void)request{
     if(!self.goog_id.length){
+        [self requestGoodsImg];
         return;
     }
     [CTRequest goodsDetailWithId:self.goog_id callback:^(id data, CLRequest *request, CTNetError error) {
         if(!error){
              self.viewModel = [CTGoodsViewModel bindModel:[CTGoodsModel yy_modelWithDictionary:data]];
             [self reloadView];
-            if(self.viewModel.model.goods_rich_url.length && !self.viewModel.model.goods_content.length){
-                [CTRequest goodsImgWithItemId:self.viewModel.model.item_id callback:^(id data, CLRequest *request, CTNetError error) {
-                    self.imgs = [CTGoodsImgModel modelsWithDatas:data];
-                    [self.tableView reloadData];
-                }];
-            }
-          
+            [self requestGoodsImg];
         }
     }];
+}
+
+- (void)requestGoodsImg{
+    if(self.viewModel.model.goods_rich_url.length && !self.viewModel.model.goods_content.length){
+        [CTRequest goodsImgWithItemId:self.viewModel.model.item_id callback:^(id data, CLRequest *request, CTNetError error) {
+            self.imgs = [CTGoodsImgModel modelsWithDatas:data];
+            [self.tableView reloadData];
+        }];
+    }
 }
 
 - (void)setUpEvent{

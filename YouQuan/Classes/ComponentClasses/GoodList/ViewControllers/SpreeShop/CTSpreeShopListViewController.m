@@ -57,9 +57,13 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     CTGoodsModel *model = self.dataSources[indexPath.row].model;
-   if (model.status == 3 || model.status == 1){
-         [CTAlertHelper showNoticeAlertViewWithTitle:@"商品还未到开抢时间哦!\n请耐心等待商品开抢～"];
+   if (model.status == 1){
+        [CTAlertHelper showNoticeAlertViewWithTitle:@"商品已结束!\n请选择其他商品～"];
     }
+   else if(model.status == 3){
+       [CTAlertHelper showNoticeAlertViewWithTitle:@"商品还未到开抢时间哦!\n请耐心等待商品开抢～"];
+      
+   }
     else if (model.status == 2){
         UIViewController *vc = [[CTModuleManager goodListService] goodDetailViewControllerWithGoodId:model.uid];
         [self.navigationController pushViewController:vc animated:YES];

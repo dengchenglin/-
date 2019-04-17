@@ -32,6 +32,12 @@
     }
     return array;
 }
+- (void)checkAndAmendWithRealSize:(CGSize)realSize{
+    if(realSize.width < 50 || realSize.height < 50){
+        _size = nil;
+    }
+    _checked = YES;
+}
 @end
 @implementation CTNetworkEngine (Goods)
 
@@ -99,22 +105,23 @@
                 NSArray <NSString *>*firstResults = [RegalurUtil resultsWithMatchString:html5 withRule:@"src=\"(.*?)\"\\s[^>]+size=\"(.*?)\""];
                 NSMutableArray *secondResults = [NSMutableArray array];
                 for(NSString *firstResult in firstResults){
-                    NSMutableDictionary *dic = [NSMutableDictionary dictionary];
-                    [secondResults addObject:dic];
                     NSArray *result1s = [RegalurUtil resultsWithMatchString:firstResult withRule:@"src=\"(.*?)\""];
-                    if(result1s.count){
+                    if(result1s.count && [result1s.firstObject rangeOfString:@"assets.alicdn.com"].location == NSNotFound){
+                        NSMutableDictionary *dic = [NSMutableDictionary dictionary];
+                        [secondResults addObject:dic];
                         NSString *newResult = [[result1s.firstObject stringByReplacingOccurrencesOfString:@"\"" withString:@""] stringByReplacingOccurrencesOfString:@"src=" withString:@""];
                         [dic setValue:[@"http:" stringByAppendingString:newResult] forKey:@"img"];
-                    }
-                    NSArray *result2s = [RegalurUtil resultsWithMatchString:firstResult withRule:@"size=\"(.*?)\""];
-                    if(result2s.count){
-                        NSString *sizeStr = result2s.firstObject;
-                        NSString *newSizeStr = [[sizeStr stringByReplacingOccurrencesOfString:@"\"" withString:@""] stringByReplacingOccurrencesOfString:@"size=" withString:@""];
-                        [dic setValue:newSizeStr forKey:@"size"];
                         
+                        NSArray *result2s = [RegalurUtil resultsWithMatchString:firstResult withRule:@"size=\"(.*?)\""];
+                        if(result2s.count){
+                            NSString *sizeStr = result2s.firstObject;
+                            NSString *newSizeStr = [[sizeStr stringByReplacingOccurrencesOfString:@"\"" withString:@""] stringByReplacingOccurrencesOfString:@"size=" withString:@""];
+                            [dic setValue:newSizeStr forKey:@"size"];
+                            
+                        }
                     }
                 }
-                NSLog(@"%@",secondResults);
+                DBLog(@"%@",secondResults);
                 dispatch_async(dispatch_get_main_queue(), ^{
                     if(callback){
                         callback(secondResults,nil,CTNetErrorNone);
