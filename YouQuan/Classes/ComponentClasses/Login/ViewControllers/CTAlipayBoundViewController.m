@@ -84,6 +84,7 @@
             return ;
         }
         [CTRequest accountSaveWithAccount:self.viewModel.account username:self.viewModel.name phone:nil smsCode:nil callback:^(id data, CLRequest *request, CTNetError error) {
+            @strongify(self)
             if(!error){
                 [CTAppManager user].ishas_cash_account = YES;
                 if([CTAppManager user].ishas_pay_pwd){

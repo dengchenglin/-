@@ -15,5 +15,5 @@
 @property (nonatomic, strong) CTUMSocialUserInfoResponse *response;
 
 @property (nonatomic, copy) NSString *inviteCode;
-
+@property (nonatomic, copy) void(^completed)(void);
 @end

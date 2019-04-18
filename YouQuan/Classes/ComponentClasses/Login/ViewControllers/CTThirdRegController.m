@@ -88,6 +88,7 @@
             return ;
         }
         [CTRequest checkIvcodeOrPhoneWithIvCode:self.viewModel.inviteCode phone:self.viewModel.mobile callback:^(id data, CLRequest *request, CTNetError error) {
+            @strongify(self)
             if(!error){
                 CTGetCodeViewController *vc = [CTGetCodeViewController new];
                 vc.mobile = self.viewModel.mobile.wipSpace;
@@ -99,7 +100,7 @@
             else{
                NSInteger status = [data[@"status"] integerValue];
                 if(status == 102){
-                        [[[UIAlertView alloc]initWithTitle:@"该账号已被注册，请选择“老用户绑定”" message:nil delegate:nil cancelButtonTitle:nil otherButtonTitles:@"知道了", nil] show];
+                    [[[UIAlertView alloc]initWithTitle:@"该账号已被注册，请选择“老用户绑定”" message:nil delegate:nil cancelButtonTitle:nil otherButtonTitles:@"知道了", nil] show];
                 }
             }
         }];
@@ -156,6 +157,7 @@
             return ;
         }
         [CTRequest checkPhoneWithPhone:self.viewModel.mobile showErrorHud:NO callback:^(id data, CLRequest *request, CTNetError error) {
+            @strongify(self)
             if(error){
                 CTGetCodeViewController *vc = [CTGetCodeViewController new];;
                 vc.mobile = self.viewModel.mobile;

@@ -58,6 +58,7 @@
             return ;
         }
         [CTRequest checkPhoneWithPhone:self.viewModel.mobile callback:^(id data, CLRequest *request, CTNetError error) {
+            @strongify(self)
             if(error){
                 CTGetCodeViewController *vc = [CTGetCodeViewController new];;
                 vc.mobile = self.viewModel.mobile;

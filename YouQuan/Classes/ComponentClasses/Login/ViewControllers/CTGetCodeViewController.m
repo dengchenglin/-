@@ -100,6 +100,7 @@
         }
         else{
             [CTRequest checkSmsCodeWithPhone:self.viewModel.mobile smsCode:self.viewModel.code callback:^(id data, CLRequest *request, CTNetError error) {
+                @strongify(self)
                 if(error){
                     [MBProgressHUD showMBProgressHudWithTitle:@"验证码错误!"];
                 }

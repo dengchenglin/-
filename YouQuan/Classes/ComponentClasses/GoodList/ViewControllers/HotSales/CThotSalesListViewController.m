@@ -27,7 +27,7 @@
 @end
 
 @implementation CThotSalesListViewController
-
+@synthesize dataSources = _dataSources;
 - (CTHotSalesNoticeView *)noticeView{
     if(!_noticeView){
         _noticeView = NSMainBundleClass(CTHotSalesNoticeView.class);

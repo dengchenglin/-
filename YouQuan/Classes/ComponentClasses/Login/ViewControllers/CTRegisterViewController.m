@@ -83,12 +83,15 @@
             return ;
         }
         [CTRequest checkIvcodeOrPhoneWithIvCode:self.viewModel.inviteCode phone:self.viewModel.mobile callback:^(id data, CLRequest *request, CTNetError error) {
+            @strongify(self)
             if(!error){
+                
                 CTGetCodeViewController *vc = [CTGetCodeViewController new];
                 vc.mobile = self.viewModel.mobile.wipSpace;
                 vc.inviteCode = self.viewModel.inviteCode.wipSpace;
-                vc.eventKind = _eventKind;
+                vc.eventKind = self.eventKind;
                 vc.response = self.response;
+                vc.completed = self.completed;
                 [self.navigationController pushViewController:vc animated:YES];
             }
         }];
@@ -96,4 +99,5 @@
     }];
     
 }
+
 @end

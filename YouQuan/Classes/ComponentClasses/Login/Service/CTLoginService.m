@@ -82,6 +82,11 @@ CL_EXPORT_MODULE(CTLoginServiceProtocol)
     else{
         CTNavigationController *nav = [[CTNavigationController alloc]initWithRootViewController:vc];
         [viewController presentViewController:nav animated:YES completion:nil];
+        
+        __weak UIViewController *weakVc = vc;
+        [vc setCompleted:^{
+            [weakVc dismissViewControllerAnimated:YES completion:nil];
+        }];
     }
 }
 @end

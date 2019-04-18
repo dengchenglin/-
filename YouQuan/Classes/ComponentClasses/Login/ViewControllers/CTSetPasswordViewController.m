@@ -113,6 +113,9 @@
             [CTAppManager saveUserWithInfo:data];
             [CTAppManager saveToken:data[@"token"]];
             POST_NOTIFICATION(CTDidLoginNotification);
+            if(self.completed){
+                self.completed();
+            }
         }
     }];
 }

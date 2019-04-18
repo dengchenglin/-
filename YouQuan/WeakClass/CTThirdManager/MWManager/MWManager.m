@@ -22,7 +22,9 @@
         [alt show];
 #endif
         if(params[@"json"]){
-            CTActivityModel *info = [CTActivityModel yy_modelWithDictionary:params[@"json"]];
+            NSString *jsonString = [params objectForKey:@"json"];
+            NSDictionary *json = [jsonString jsonValueDecoded];
+            CTActivityModel *info = [CTActivityModel yy_modelWithDictionary:json];
             [CTModuleHelper showViewControllerWithModel:info];
         }
     }];
