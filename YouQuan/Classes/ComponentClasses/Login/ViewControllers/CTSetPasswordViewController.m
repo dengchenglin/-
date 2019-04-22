@@ -41,8 +41,14 @@
 - (void)setUpUI{
     self.title = GetEventTitleStr(_eventKind);
     [self.view addSubview:self.passwordView];
+    
     if(_eventKind == CTEventKindWithDraw){
         self.passwordView.doneButton.layer.cornerRadius = 23;
+        self.passwordView.passwordTfd.maxCount = 6;
+        self.passwordView.passwordTfd.keyboardType = UIKeyboardTypeNumberPad;
+        self.passwordView.repasswordTfd.maxCount = 6;
+        self.passwordView.repasswordTfd.keyboardType = UIKeyboardTypeNumberPad;
+        self.passwordView.passwordTfd.placeholder = @"请输入六位数纯数字密码";
     }
 }
 

@@ -10,21 +10,11 @@
 
 @implementation CLTextField
 
-- (void)awakeFromNib{
-    [super awakeFromNib];
-    [self setUp];
-}
-- (instancetype)init
-{
-    self = [super init];
-    if (self) {
-        [self setUp];
-    }
-    return self;
-}
+ViewInstance(setUp)
 
 - (void)setUp{
-        [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(cl_textFiledEditChanged) name:@"UITextFieldTextDidChangeNotification" object:nil];
+    _maxCount = 32;
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(cl_textFiledEditChanged) name:@"UITextFieldTextDidChangeNotification" object:nil];
 }
 
 - (void)cl_textFiledEditChanged{

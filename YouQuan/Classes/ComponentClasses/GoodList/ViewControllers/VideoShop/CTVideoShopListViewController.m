@@ -208,4 +208,9 @@
     return NO;
 }
 
+- (void)dealloc
+{
+    [self removeCurrentVideo];
+}
+
 @end

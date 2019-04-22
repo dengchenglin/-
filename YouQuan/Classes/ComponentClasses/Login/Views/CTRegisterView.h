@@ -8,9 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "CTCanValidButton.h"
+#import "CTPhoneTextField.h"
 @interface CTRegisterView : UIView
 @property (weak, nonatomic) IBOutlet UITextField *inviteCodeTfd;
-@property (weak, nonatomic) IBOutlet UITextField *phoneTfd;
+@property (weak, nonatomic) IBOutlet CTPhoneTextField *phoneTfd;
 @property (weak, nonatomic) IBOutlet CTCanValidButton *nextButton;
 @property (weak, nonatomic) IBOutlet UIButton *scanButton;
 

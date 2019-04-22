@@ -9,10 +9,10 @@
 #import <UIKit/UIKit.h>
 
 #import "CTCanValidButton.h"
-
+#import "CTPhoneTextField.h"
 @interface CTForgetPsdView : UIView
 
-@property (weak, nonatomic) IBOutlet UITextField *mobileTfd;
+@property (weak, nonatomic) IBOutlet CTPhoneTextField *mobileTfd;
 @property (weak, nonatomic) IBOutlet CTCanValidButton *nextButton;
 
 @end

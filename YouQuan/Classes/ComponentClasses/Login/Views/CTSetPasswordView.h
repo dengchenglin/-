@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "CTCanValidButton.h"
+#import "CLTextField.h"
 @interface CTSetPasswordView : UIView
-@property (weak, nonatomic) IBOutlet UITextField *passwordTfd;
-@property (weak, nonatomic) IBOutlet UITextField *repasswordTfd;
+@property (weak, nonatomic) IBOutlet CLTextField *passwordTfd;
+@property (weak, nonatomic) IBOutlet CLTextField *repasswordTfd;
 @property (weak, nonatomic) IBOutlet CTCanValidButton *doneButton;
 @end

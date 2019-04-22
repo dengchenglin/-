@@ -8,9 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "CTCanValidButton.h"
-
+#import "CTPhoneTextField.h"
 @interface CTLoginView : UIView
-@property (weak, nonatomic) IBOutlet UITextField *accountTfd;
+@property (weak, nonatomic) IBOutlet CTPhoneTextField *accountTfd;
 @property (weak, nonatomic) IBOutlet UITextField *passwordTfd;
 @property (weak, nonatomic) IBOutlet CTCanValidButton *loginButton;
 @property (weak, nonatomic) IBOutlet UIButton *registerButton;
