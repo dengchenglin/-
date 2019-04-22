@@ -19,17 +19,29 @@ CL_EXPORT_MODULE(CTWithdrawServiceProtocol)
 }
 
 - (UIViewController *)pushCashFromViewController:(UIViewController *)viewController{
-    CTWithdrawViewController *vc = [CTWithdrawViewController new];
+    __block CTWithdrawViewController *vc;
     void(^cashBlock)(void) = ^{
+        vc = [CTWithdrawViewController new];
         [viewController.navigationController pushViewController:vc animated:YES];
     };
+    void(^checkPaypwdBlock)(void) = ^{
+        if([CTAppManager user].ishas_pay_pwd){
+            cashBlock();
+        }
+        else{
+            [[CTModuleManager loginService]pushWithdrawSetpsdFromViewController:viewController mobile:[CTAppManager user].phone completed:^{
+                [viewController.navigationController popToViewController:viewController animated:NO];
+                cashBlock();
+            }];
+        }
+    };
     if([CTAppManager user].ishas_cash_account){
-        cashBlock();
+        checkPaypwdBlock();
     }
     else{
         [[CTModuleManager loginService] pushBoundAlipayFromViewController:viewController completed:^{
-            [viewController.navigationController popToViewController:viewController animated:YES];
-            cashBlock();
+            [viewController.navigationController popToViewController:viewController animated:NO];
+            checkPaypwdBlock();
         }];
     }
     return vc;

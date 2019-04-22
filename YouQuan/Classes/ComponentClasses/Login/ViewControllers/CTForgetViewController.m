@@ -74,7 +74,7 @@
 
 
 - (void)bindViewModel{
-    RAC(self.viewModel,mobile) = self.forgetPsdView.mobileTfd.rac_textSignal;
+    RAC(self.viewModel,mobile) = self.forgetPsdView.mobileTfd.cl_textSignal;
     RAC(self.forgetPsdView.nextButton,enabled) = self.viewModel.validNextSignal;
 }
 @end

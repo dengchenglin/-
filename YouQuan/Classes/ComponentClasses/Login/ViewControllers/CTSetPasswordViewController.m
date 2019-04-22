@@ -106,8 +106,8 @@
 }
 
 - (void)bindViewModel{
-    RAC(self.viewModel,password) = self.passwordView.passwordTfd.rac_textSignal;
-    RAC(self.viewModel,repassword) = self.passwordView.repasswordTfd.rac_textSignal;
+    RAC(self.viewModel,password) = self.passwordView.passwordTfd.cl_textSignal;
+    RAC(self.viewModel,repassword) = self.passwordView.repasswordTfd.cl_textSignal;
     RAC(self.passwordView.doneButton,enabled) = self.viewModel.validRegisterSignal;
 }
 

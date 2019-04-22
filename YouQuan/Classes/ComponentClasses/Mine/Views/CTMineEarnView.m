@@ -34,6 +34,7 @@
     _priceLabel1.text = [@"¥" stringByAppendingString:_model.today_money];
     _priceLabel2.text = [@"¥" stringByAppendingString:_model.month_money];
     _priceLabel3.text = [@"¥" stringByAppendingString:_model.all_money];
+        self.earnButton.hidden = !([CTAppManager sharedInstance].showMember && _model.showRanking);
 }
 - (void)setUser:(CTUser *)user{
     _user = user;

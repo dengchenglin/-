@@ -13,6 +13,7 @@
 #import "CTGetCodeView.h"
 
 #import "CTGetCodeViewModel.h"
+#import "CTNetworkEngine+Cash.h"
 
 @interface CTGetCodeViewController ()
 
@@ -94,9 +95,9 @@
                     POST_NOTIFICATION(CTDidLoginNotification);
                 }
             }];
-        }
+        }//支付宝账号绑定
         else if (self.eventKind == CTEventKindBindAlipay){
-            
+            [self bindApliay];
         }
         else{
             [CTRequest checkSmsCodeWithPhone:self.viewModel.mobile smsCode:self.viewModel.code callback:^(id data, CLRequest *request, CTNetError error) {
@@ -121,11 +122,18 @@
 }
 
 - (void)bindApliay{
-    
+    [CTRequest accountSaveWithAccount:self.cashAccount username:self.cashName phone:nil smsCode:self.viewModel.code callback:^(id data, CLRequest *request, CTNetError error) {
+        if(!error){
+            [CTAppManager user].ishas_cash_account = YES;
+            if(self.completed){
+                self.completed();
+            }
+        }
+    }];
 }
 
 - (void)bindViewModel{
-    RAC(self.viewModel,code) = self.getCodeView.codeTfd.rac_textSignal;
+    RAC(self.viewModel,code) = self.getCodeView.codeTfd.cl_textSignal;
     RAC(self.viewModel,mobile) = self.getCodeView.phoneTfd.cl_textSignal;
     RAC(self.getCodeView.nextButton,enabled) = self.viewModel.validNextSignal;
 }

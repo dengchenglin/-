@@ -68,8 +68,8 @@
 }
 
 - (void)bindViewModel{
-    RAC(self.viewModel,account) = self.loginView.accountTfd.rac_textSignal;
-    RAC(self.viewModel,password) = self.loginView.passwordTfd.rac_textSignal;
+    RAC(self.viewModel,account) = self.loginView.accountTfd.cl_textSignal;
+    RAC(self.viewModel,password) = self.loginView.passwordTfd.cl_textSignal;
     RAC(self.loginView.loginButton,enabled) = self.viewModel.validLoginSignal;
 }
 

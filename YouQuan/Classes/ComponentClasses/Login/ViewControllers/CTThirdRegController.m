@@ -61,7 +61,7 @@
 
 - (void)bindViewModel{
     RAC(self.viewModel,inviteCode) = self.registerView.inviteCodeTfd.cl_textSignal;
-    RAC(self.viewModel,mobile) = self.registerView.phoneTfd.rac_textSignal;
+    RAC(self.viewModel,mobile) = self.registerView.phoneTfd.cl_textSignal;
     RAC(self.registerView.nextButton,enabled) = self.viewModel.validNextSignal;
 }
 
@@ -174,7 +174,7 @@
 
 
 - (void)bindViewModel{
-    RAC(self.viewModel,mobile) = self.bindPhoneView.mobileTfd.rac_textSignal;
+    RAC(self.viewModel,mobile) = self.bindPhoneView.mobileTfd.cl_textSignal;
     RAC(self.bindPhoneView.nextButton,enabled) = self.viewModel.validNextSignal;
 }
 

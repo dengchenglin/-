@@ -10,8 +10,7 @@
 
 @implementation CLTextField
 
-ViewInstance(setUp)self.passwordView.passwordTfd.keyboardType = UIKeyboardTypeNumberPad;
-self.passwordView.repasswordTfd.maxCount = 6;
+ViewInstance(setUp)
 
 - (void)setUp{
     _maxCount = 32;

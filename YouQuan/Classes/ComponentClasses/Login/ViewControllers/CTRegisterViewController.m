@@ -56,7 +56,7 @@
 
 - (void)bindViewModel{
     RAC(self.viewModel,inviteCode) = self.registerView.inviteCodeTfd.cl_textSignal;
-    RAC(self.viewModel,mobile) = self.registerView.phoneTfd.rac_textSignal;
+    RAC(self.viewModel,mobile) = self.registerView.phoneTfd.cl_textSignal;
     RAC(self.registerView.nextButton,enabled) = self.viewModel.validNextSignal;
 }
 
@@ -82,7 +82,7 @@
             [MBProgressHUD showMBProgressHudWithTitle:@"手机格式不正确"];
             return ;
         }
-        [CTRequest checkIvcodeOrPhoneWithIvCode:self.viewModel.inviteCode phone:self.viewModel.mobile callback:^(id data, CLRequest *request, CTNetError error) {
+        [CTRequest checkIvcodeOrPhoneWithIvCode:self.viewModel.inviteCode phone:self.viewModel.mobile.wipSpace callback:^(id data, CLRequest *request, CTNetError error) {
             @strongify(self)
             if(!error){
                 
