@@ -48,7 +48,7 @@
         self.passwordView.passwordTfd.keyboardType = UIKeyboardTypeNumberPad;
         self.passwordView.repasswordTfd.maxCount = 6;
         self.passwordView.repasswordTfd.keyboardType = UIKeyboardTypeNumberPad;
-        self.passwordView.passwordTfd.placeholder = @"请输入六位数纯数字密码";
+        self.passwordView.passwordTfd.placeholder = @"请输入六位纯数字密码";
     }
 }
 
