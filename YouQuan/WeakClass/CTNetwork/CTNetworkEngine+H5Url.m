@@ -26,6 +26,9 @@ NSString *GetH5UrlPath(CTH5UrlType type){
         case CTH5UrlGetTikcetAuide:
             return @"lqzn";
             break;
+        case CTH5UrlWithdrawIntro:
+            return @"txsm";
+            break;
         default:
             break;
     }

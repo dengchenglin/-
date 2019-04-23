@@ -15,8 +15,8 @@ typedef NS_ENUM(NSInteger,CTH5UrlType){
     CTH5UrlAbountUs,          //关于我们
     CTH5UrlMakeMoneyStrategy, //赚钱攻略
     CTH5UrlSaveMoneyStrategy, //省钱攻略
-    CTH5UrlGetTikcetAuide     //领券指南
-    
+    CTH5UrlGetTikcetAuide,     //领券指南
+    CTH5UrlWithdrawIntro      //查看提现说明
 };
 NSString *GetH5UrlPath(CTH5UrlType type);
 

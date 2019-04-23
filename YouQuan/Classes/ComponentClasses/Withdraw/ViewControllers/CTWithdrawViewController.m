@@ -23,6 +23,7 @@
 #import "CTWithdrawModifyAlipayView.h"
 
 #import "CTNetworkEngine+Cash.h"
+#import "CTNetworkEngine+H5Url.h"
 
 @interface CTWithdrawViewController ()
 
@@ -31,6 +32,8 @@
 @property (nonatomic, strong) CTWithDrawInputView *withDrawInputView;
 
 @property (nonatomic, strong) CTCanValidButton *doneButton;
+
+@property (nonatomic, strong) UIButton *withdrawIntroButton;
 
 @property (nonatomic, strong) CTWithdrawModifyAlipayView *modifyView;
 
@@ -67,6 +70,15 @@
     }
     return _doneButton;
 }
+- (UIButton *)withdrawIntroButton{
+    if(!_withdrawIntroButton){
+        _withdrawIntroButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        [_withdrawIntroButton setTitle:@"查看提现说明" forState:UIControlStateNormal];
+        _withdrawIntroButton.titleLabel.font = [UIFont systemFontOfSize:12];
+        [_withdrawIntroButton setTitleColor:CTColor forState:UIControlStateNormal];
+    }
+    return _withdrawIntroButton;
+}
 
 - (CTWithdrawModifyAlipayView *)modifyView{
     if(!_modifyView){
@@ -90,6 +102,7 @@
     [self.autoLayoutContainerView addSubview:self.alipayInfoView];
     [self.autoLayoutContainerView addSubview:self.withDrawInputView];
     [self.autoLayoutContainerView addSubview:self.doneButton];
+    [self.view addSubview:self.withdrawIntroButton];
     [self.autoLayoutContainerView addSubview:self.modifyView];
 
 }
@@ -110,8 +123,15 @@
         make.right.mas_equalTo(-28);
         make.height.mas_equalTo(44);
     }];
+    
+    [self.withdrawIntroButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(self.doneButton.mas_bottom);
+        make.centerX.mas_equalTo(0);
+        make.height.mas_equalTo(30);
+    }];
+    
     [self.modifyView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(self.doneButton.mas_bottom).offset(40);
+        make.top.mas_equalTo(self.withdrawIntroButton.mas_bottom).offset(40);
         make.width.mas_equalTo(200);
         make.centerX.mas_equalTo(0);
         make.height.mas_equalTo(30);
@@ -198,7 +218,7 @@
             [self request];
         }];
     }];
-  
+    //修改支付宝账号
     [self.modifyView addActionWithBlock:^(id target) {
         @strongify(self)
         [self.view endEditing:YES];
@@ -210,6 +230,13 @@
     }];
     [self.withDrawInputView setWithDrawAllBlock:^{
         withdrawActionBlock();
+    }];
+    //查看提现说明
+    [self.withdrawIntroButton touchUpInsideSubscribeNext:^(id x) {
+        @strongify(self)
+        UIViewController *webVc = [[CTModuleManager webService] pushWebFromViewController:self url:CTH5UrlForType(CTH5UrlWithdrawIntro)];
+        webVc.title = @"提现说明";
+
     }];
 }
 
