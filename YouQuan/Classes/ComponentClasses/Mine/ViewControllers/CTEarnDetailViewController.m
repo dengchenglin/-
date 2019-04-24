@@ -205,7 +205,7 @@
 
 }
 - (void)share{
-    if([self.model.all_money integerValue]){
+    if([self.model.all_money integerValue] || [self.model.valuation_money integerValue]){
         CTProfitShareViewController *vc = [[CTProfitShareViewController alloc]init];
         vc.model = _model;
         [self.navigationController pushViewController:vc animated:YES];

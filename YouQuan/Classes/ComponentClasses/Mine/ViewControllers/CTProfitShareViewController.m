@@ -48,7 +48,7 @@
     self.shareView.username = [CTAppManager user].nickname;
     self.shareView.userlevel = [CTAppManager user].level_txt;
     self.shareView.profit = _model.all_money;
-    self.shareView.balance = _model.cashing_money;
+    self.shareView.balance = _model.valuation_money;
 }
 
 - (void)share{

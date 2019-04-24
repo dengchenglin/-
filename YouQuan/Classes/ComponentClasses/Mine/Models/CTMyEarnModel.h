@@ -18,7 +18,7 @@
 @property (nonatomic, copy) NSString *all_money;
 @property (nonatomic, copy) NSString *lm_all_money;
 @property (nonatomic, copy) NSString *money;
-@property (nonatomic, copy) NSString *cashing_money;
+@property (nonatomic, copy) NSString *valuation_money;
 @property (nonatomic, strong) CTEarnInfo *today;
 @property (nonatomic, strong) CTEarnInfo *yesterday;
 @property (nonatomic, strong) CTEarnInfo *month;
