@@ -28,7 +28,7 @@
 }
 
 - (void)setUpUI{
-    self.title = @"邀请码";
+    self.title = @"分享收益";
     self.navigationBarStyle = CTNavigationBarWhite;
     [self setRightButtonWithTitle:@"分享海报" font:CTPsmFont(14) titleColor:CTColor selector:@selector(share)];
     [self.view addSubview:self.shareView];
@@ -56,6 +56,7 @@
     [MBProgressHUD showHUDAddedTo:self.view animated:YES]; dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         image = [self.view snapshotImage];
         dispatch_async(dispatch_get_main_queue(), ^{
+            [MBProgressHUD hideHUDForView:self.view animated:YES];
             if(!image){
                 [MBProgressHUD showMBProgressHudWithTitle:@"图片出错"];
                 return;

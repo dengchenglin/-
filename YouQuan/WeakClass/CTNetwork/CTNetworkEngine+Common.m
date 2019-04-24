@@ -15,7 +15,7 @@
 - (void)iosFunctionIo{
     NSString *showMemberKey = @"ios_function_io";
   
-    [self postWithPath:CTCommon(@"ios_function_io") params:nil callback:^(id data, CLRequest *request, CTNetError error) {
+    [self postWithPath:CTCommon(@"ios_function_io") params:nil showHud:NO callback:^(id data, CLRequest *request, CTNetError error) {
         if(!error && data){
             BOOL showMember = [[NSString stringWithFormat:@"%@",data] boolValue];
             [[NSUserDefaults standardUserDefaults]setValue:@(showMember) forKey:showMemberKey];
