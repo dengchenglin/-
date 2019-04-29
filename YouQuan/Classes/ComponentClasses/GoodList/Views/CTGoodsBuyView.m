@@ -9,7 +9,10 @@
 #import "CTGoodsBuyView.h"
 
 @implementation CTGoodsBuyView
-
+- (void)awakeFromNib{
+    [super awakeFromNib];
+    _awardView.layer.contents = (__bridge id)[UIImage imageNamed:@"pic_bt_bg"].CGImage;
+}
 - (void)setViewModel:(CTGoodsViewModel *)viewModel{
     _viewModel = viewModel;
     _collectButton.selected = _viewModel.model.is_favorite;

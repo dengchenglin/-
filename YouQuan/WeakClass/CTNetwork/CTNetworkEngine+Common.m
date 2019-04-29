@@ -31,7 +31,7 @@
     [self postWithPath:CTCommon(@"app_function_io") params:nil showHud:NO callback:^(id data, CLRequest *request, CTNetError error) {
         if(!error && data){
             BOOL showRecom = [[NSString stringWithFormat:@"%@",data[@"recom_show"]] boolValue];
-            BOOL showRanking = [[NSString stringWithFormat:@"%@",data[@"rp_showRanking"]] boolValue];
+            BOOL showRanking = [[NSString stringWithFormat:@"%@",data[@"showRanking"]] boolValue];
             [[NSUserDefaults standardUserDefaults]setValue:@(showRecom) forKey:showRecomKey];
             [[NSUserDefaults standardUserDefaults]setValue:@(showRanking) forKey:showRankingKey];
             [CTAppManager sharedInstance].showRecom = showRecom;

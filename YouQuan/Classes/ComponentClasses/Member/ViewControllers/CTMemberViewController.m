@@ -63,7 +63,7 @@
 - (CTNavBar *)navBar{
     if(!_navBar){
         _navBar = NSMainBundleClass(CTNavBar.class);
-        _navBar.backButton.hidden = NO;
+        _navBar.backButton.hidden = YES;
         _navBar.alpha = 0;
         _navBar.title = @"会员中心";
     }

@@ -74,12 +74,21 @@
     return self.configs.count;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    if(!self.configs.count){
+        return 0.00001;
+    }
     return self.configs[section].sectionHeight?:0.00001;
 }
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+    if(!self.configs.count){
+        return nil;
+    }
     return self.configs[section].sectioView;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
+    if(!self.configs.count){
+        return 0.00001;
+    }
     return self.configs[section].space?:0.00001;
 }
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
