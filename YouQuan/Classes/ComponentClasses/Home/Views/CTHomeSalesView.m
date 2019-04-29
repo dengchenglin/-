@@ -63,19 +63,27 @@
         [_timer invalidate];
         _timer = nil;
     }
-    _timer = [NSTimer scheduledTimerWithTimeInterval:1.0 block:^(NSTimer *timer) {
-        NSString *displayText = GetdifferTimeStrWithNextUpdateTimestamp(_model.next_update_timestamp);
-        if(displayText.length){
-            _timeLabel.text = [NSString stringWithFormat:@"%@后更新",displayText];
-        }
-        else{
-            _timeLabel.text = @"最新";
-            [timer invalidate];
-            timer = nil;
-            POST_NOTIFICATION(CTRefreshHomeNotification);
-        }
-    } repeats:YES];
-    [[NSRunLoop currentRunLoop]addTimer:_timer forMode:NSRunLoopCommonModes];
+    
+    __block NSString *displayText = GetdifferTimeStrWithNextUpdateTimestamp(_model.next_update_timestamp);
+    if(displayText.length){
+        _timer = [NSTimer scheduledTimerWithTimeInterval:1.0 block:^(NSTimer *timer) {
+            displayText = GetdifferTimeStrWithNextUpdateTimestamp(_model.next_update_timestamp);
+            if(displayText.length){
+                _timeLabel.text = [NSString stringWithFormat:@"%@后更新",displayText];
+            }
+            else{
+                _timeLabel.text = @"最新";
+                [timer invalidate];
+                timer = nil;
+                POST_NOTIFICATION(CTRefreshHomeNotification);
+            }
+        } repeats:YES];
+        [[NSRunLoop currentRunLoop]addTimer:_timer forMode:NSRunLoopCommonModes];
+    }
+    else{
+         _timeLabel.text = @"最新";
+    }
+
 }
 
 NSString *GetdifferTimeStrWithNextUpdateTimestamp(NSTimeInterval nextUpdateTimestamp){

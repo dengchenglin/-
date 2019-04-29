@@ -60,5 +60,15 @@
     return cell;
 }
 
-
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    NSString *goods_id = self.dataSources[indexPath.row].model.goods_id;
+    if([goods_id integerValue]){
+        UIViewController *vc = [[CTModuleManager goodListService
+          ]goodDetailViewControllerWithGoodId:goods_id];
+        [self.navigationController pushViewController:vc animated:YES];
+    }
+    else{
+        [MBProgressHUD showMBProgressHudWithTitle:@"商品已失效"];
+    }
+}
 @end

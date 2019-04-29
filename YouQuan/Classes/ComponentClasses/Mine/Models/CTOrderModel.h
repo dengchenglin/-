@@ -21,5 +21,5 @@
 @property (nonatomic, copy) NSString *nickname;
 @property (nonatomic, copy) NSString *phone;
 @property (nonatomic, copy) NSString *headimg;
-
+@property (nonatomic, copy) NSString *goods_id;
 @end

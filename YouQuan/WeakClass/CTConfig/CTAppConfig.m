@@ -19,6 +19,7 @@
 
     [self configSniffer];
     [CTRequest iosFunctionIo];
+    [CTRequest appFunctionIo];
 }
 
 + (void)configSniffer{

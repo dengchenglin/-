@@ -11,4 +11,6 @@
 @interface CTNetworkEngine (Common)
 //会员中心隐藏开关
 - (void)iosFunctionIo;
+//app功能开关
+- (void)appFunctionIo;
 @end

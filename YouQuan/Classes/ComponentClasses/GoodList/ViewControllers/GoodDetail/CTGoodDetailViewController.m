@@ -228,7 +228,6 @@
         }
         self.navBar.backgroundAlpha = alpha;
     }
-    [self ges_scrollViewDidScroll:scrollView];
 }
 
 - (void)reloadView{
@@ -279,7 +278,7 @@
 
 - (void)setUpEvent{
     @weakify(self)
-    
+
     //收藏
     void(^collectBlock)(void) = ^{
          @strongify(self);
@@ -379,62 +378,27 @@
         });
     }];
     //点击分享
-    [self.navBar.shareButton touchUpInsideSubscribeNext:^(id x) {
-        @strongify(self)
+    void(^toShareBlock)(void) = ^{
         judgeLoginBlock(^{
             goodsUrlConvertBlock(^(id data){
                 @strongify(self)
                 [CTGoodsPreViewController pushGoodPreFromViewController:self viewModel:self.viewModel qCodeContent:data[@"qcode_content"]];
             });
         });
+    };
+    [self.navBar.shareButton touchUpInsideSubscribeNext:^(id x) {
+        toShareBlock();
     }];
-    
+    //分享
+    [self.buyView.awardView addActionWithBlock:^(id target) {
+        toShareBlock();
+    }];
     //点击返回
     [self.navBar.backButton touchUpInsideSubscribeNext:^(id x) {
         @strongify(self)
         [self back];
     }];
 
-}
-
-
-//解决与商品详情Web手势效果
-static BOOL canMainScroll = YES;
-static BOOL canChildScroll = NO;
-- (void)initialize{
-    canMainScroll = YES;
-    canChildScroll = NO;
-}
-- (void)ges_scrollViewDidScroll:(UIScrollView *)scrollView{
-
-    if(!self.contentView.titleHeight.constant)return;
-    
-    UIScrollView *mainScrollView = self.tableView;
-    UIScrollView *childScrollView = self.contentView.contentView.scrollView;
-    
-    CGFloat maxOffest = CGRectGetMinY(self.contentView.frame) + self.contentView.titleHeight.constant;
-    
-    if (scrollView == mainScrollView){
-        if(!canMainScroll){
-            mainScrollView.contentOffset = CGPointMake(0, maxOffest);
-            canChildScroll = YES;
-        }
-        else if(scrollView.contentOffset.y >= maxOffest){
-            mainScrollView.contentOffset = CGPointMake(0, maxOffest);
-            canMainScroll = NO;
-            canChildScroll = YES;
-        }
-    }
-    else{
-        if(!canChildScroll && childScrollView.isDragging){
-            childScrollView.contentOffset = CGPointMake(-childScrollView.contentInset.left, -childScrollView.contentInset.top);
-        }
-        else if(scrollView.contentOffset.y <= -childScrollView.contentInset.top){
-            canChildScroll = NO;
-            canMainScroll = YES;
-        }
-    }
-    
 }
 
 

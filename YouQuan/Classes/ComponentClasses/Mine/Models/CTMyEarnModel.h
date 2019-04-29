@@ -24,5 +24,5 @@
 @property (nonatomic, strong) CTEarnInfo *month;
 @property (nonatomic, strong) CTEarnInfo *last_month;
 @property (nonatomic, copy) NSString *trend_chart_url;
-@property (nonatomic, assign) BOOL showRanking;
+
 @end

@@ -18,7 +18,7 @@
     _goodTitleLabel.text = _viewModel.model.item_title;
     [_goodImageView sd_setImageWithURL:[NSURL URLWithString:_viewModel.model.item_img]];
     _createTimeLabel.text = _viewModel.model.create_time;
-    _priceLabel.text  = _viewModel.model.alipay_total_price;
+    _priceLabel.text  = [NSString stringWithFormat:@"¥%@",_viewModel.model.alipay_total_price];
     _rebateDescLabel.text = [NSString stringWithFormat:@"返利%@元",_viewModel.model.money];
     [_userheadImageView sd_setImageWithURL:[NSURL URLWithString:_viewModel.model.headimg]];
     _rebateDescLabel.hidden = !_viewModel.model.money.length;

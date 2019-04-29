@@ -45,6 +45,8 @@
 @property (nonatomic, copy) NSString *apns_token;
 
 @property (nonatomic, assign) BOOL showMember;
+@property (nonatomic, assign) BOOL showRanking;
+@property (nonatomic, assign) BOOL showRecom;
 
 SINGLETON_FOR_CLASS_DEF
 

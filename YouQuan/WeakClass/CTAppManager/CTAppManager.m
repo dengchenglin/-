@@ -71,6 +71,7 @@ SINGLETON_FOR_CLASS_IMP(CTAppManager)
 {
     self = [super init];
     if (self) {
+        _showRecom = YES;
         id data = [KeychainTool load:CTLoginInfoKey];
          _token = [KeychainTool load:CTUserTokenKey];
         if(data && _token.length){

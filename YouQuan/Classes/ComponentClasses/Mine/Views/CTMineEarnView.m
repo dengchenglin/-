@@ -12,7 +12,7 @@
 
 - (void)awakeFromNib{
     [super awakeFromNib];
-    self.earnButton.hidden = ![CTAppManager sharedInstance].showMember;
+    self.earnButton.hidden = !([CTAppManager sharedInstance].showMember && [CTAppManager sharedInstance].showRanking);
     self.layer.cornerRadius = 10;
     self.layer.backgroundColor = [UIColor colorWithRed:255/255.0 green:255/255.0 blue:255/255.0 alpha:1.0].CGColor;
     self.layer.shadowColor = [UIColor colorWithRed:153/255.0 green:153/255.0 blue:153/255.0 alpha:0.3].CGColor;
@@ -34,7 +34,7 @@
     _priceLabel1.text = [@"¥" stringByAppendingString:_model.today_money];
     _priceLabel2.text = [@"¥" stringByAppendingString:_model.month_money];
     _priceLabel3.text = [@"¥" stringByAppendingString:_model.all_money];
-        self.earnButton.hidden = !([CTAppManager sharedInstance].showMember && _model.showRanking);
+        self.earnButton.hidden = !([CTAppManager sharedInstance].showMember && [CTAppManager sharedInstance].showRanking);
 }
 - (void)setUser:(CTUser *)user{
     _user = user;

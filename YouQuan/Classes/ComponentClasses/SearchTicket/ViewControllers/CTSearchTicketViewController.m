@@ -34,6 +34,8 @@
 
 @property (nonatomic, strong) CTHotCatoryView *categoryView;
 
+@property (nonatomic, strong) CTYourLikedHeadView *yourLikedView;
+
 @property (nonatomic, strong) UIView *headView;
 
 @property (nonatomic, strong) CTSearchTicketViewModel *viewModel;
@@ -78,6 +80,13 @@
     }
     return _categoryView;
 }
+- (CTYourLikedHeadView *)yourLikedView{
+    if(!_yourLikedView){
+        _yourLikedView  = NSMainBundleClass(CTYourLikedHeadView.class);
+        _yourLikedView.hidden = YES;
+    }
+    return _yourLikedView;
+}
 
 - (UIView *)headView{
     if(!_headView){
@@ -85,8 +94,8 @@
         [_headView addSubview:self.pasteView];
         [_headView addSubview:self.categoryView];
         
-        CTYourLikedHeadView *yourLikedView = NSMainBundleClass(CTYourLikedHeadView.class);
-        [_headView addSubview:yourLikedView];
+        
+        [_headView addSubview:self.yourLikedView];
         
         [self.pasteView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.right.mas_equalTo(0);
@@ -96,7 +105,7 @@
             make.top.mas_equalTo(self.pasteView.mas_bottom);
             make.left.right.mas_equalTo(0);
         }];
-        [yourLikedView mas_makeConstraints:^(MASConstraintMaker *make) {
+        [self.yourLikedView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.mas_equalTo(self.categoryView.mas_bottom);
             make.height.mas_equalTo(44);
             make.left.right.bottom.mas_equalTo(0);
@@ -193,6 +202,7 @@
     self.viewModel.categoryModels = models;
     self.viewModel.likes = [CTGoodsViewModel bindModels:[CTGoodsModel yy_modelsWithDatas:data[@"list"]]];
     [self.tableView reloadData];
+    self.yourLikedView.hidden = !self.viewModel.likes.count;
 }
 
 #pragma mark - UITableViewDelegate

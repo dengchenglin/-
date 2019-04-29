@@ -11,8 +11,6 @@
 @implementation CTMineHeadView
 - (void)awakeFromNib{
     [super awakeFromNib];
-    self.memberView.hidden = ![CTAppManager sharedInstance].showMember;
-    _memberView.layer.contents = (__bridge id)[UIImage imageNamed:@"pic_equity3"].CGImage;
 }
 - (void)setUser:(CTUser *)user{
     _user = user;

@@ -22,11 +22,12 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [CTAppConfig config];
+    
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     id<CLModuleServiceProtocol> service = [CTModuleManager mainService];
     self.window.rootViewController = service.rootViewController;
     [self.window makeKeyAndVisible];
-    [CTAppConfig config];
     //友盟分享
     [UMShareManager config];
     //友盟统计

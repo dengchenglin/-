@@ -30,5 +30,9 @@
  * vc参数
  */
 @property (nonatomic, strong) id parm;
+/**
+ * 是否需要登录
+ */
+@property (nonatomic, assign) BOOL is_login;
 
 @end

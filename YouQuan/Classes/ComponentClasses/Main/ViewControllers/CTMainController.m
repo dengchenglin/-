@@ -75,7 +75,7 @@
 
 - (NSArray <UIViewController *>*)main_viewControllers{
     
-    return [[self tabbar_models] map:^id(NSInteger index, CTTabBarModel* element) {
+    return [self.tabbar_models map:^id(NSInteger index, CTTabBarModel* element) {
         id<CLModuleServiceProtocol> service = [CTModuleManager serviceForStr:element.service];
         UIViewController *rootVc = [service rootViewController];
         
@@ -84,14 +84,14 @@
 }
 
 - (void)setSelectedIndex:(NSUInteger)selectedIndex{
-    if(selectedIndex == 3){
+    if(self.tabbar_models[selectedIndex].is_login){
         if(![CTAppManager logined]){
             [[CTModuleManager loginService] showLoginFromViewController:self callback:^(BOOL logined) {
                 if(logined){
                     [self setSelectedIndex:selectedIndex];
                 }
             }];
-             return ;
+            return ;
         }
     }
     [super setSelectedIndex:selectedIndex];
@@ -144,13 +144,19 @@
 
 
 - (NSArray *)tabbar_plist{
-   //@{@"tabbar_normal_image":@"ic_tab_vip",@"tabbar_selected_image":@"ic_tab_vip_highlight",@"title":@"会员中心",@"service":@"ct_member"},
-    return @[@{@"tabbar_normal_image":@"ic_tab_home",@"tabbar_selected_image":@"ic_tab_home_highlight",@"title":@"首页",@"service":@"ct_home"},
-             @{@"tabbar_normal_image":@"ic_tab_recommend",@"tabbar_selected_image":@"ic_tab_recommend_highlight",@"title":@"推荐",@"service":@"ct_recommend"},
-             @{@"tabbar_normal_image":@"ic_tab_search",@"tabbar_selected_image":@"ic_tab_search_highlight",@"title":@"查券",@"service":@"ct_search_ticket"},
-             
-             @{@"tabbar_normal_image":@"ic_tab_my",@"tabbar_selected_image":@"ic_tab_my_highlight",@"title":@"我的",@"service":@"ct_mine"},
-             ];
+   //,
+    NSMutableArray *tabDatas = [NSMutableArray array];
+    [tabDatas addObject:@{@"tabbar_normal_image":@"ic_tab_home",@"tabbar_selected_image":@"ic_tab_home_highlight",@"title":@"首页",@"service":@"ct_home",@"is_login":@"0"}];
+    if([CTAppManager sharedInstance].showRecom){
+        [tabDatas addObject:@{@"tabbar_normal_image":@"ic_tab_recommend",@"tabbar_selected_image":@"ic_tab_recommend_highlight",@"title":@"推荐",@"service":@"ct_recommend",@"is_login":@"0"}];
+    }
+    [tabDatas addObject:@{@"tabbar_normal_image":@"ic_tab_search",@"tabbar_selected_image":@"ic_tab_search_highlight",@"title":@"查券",@"service":@"ct_search_ticket",@"is_login":@"0"}];
+    if([CTAppManager sharedInstance].showMember){
+        [tabDatas addObject:@{@"tabbar_normal_image":@"ic_tab_vip",@"tabbar_selected_image":@"ic_tab_vip_highlight",@"title":@"会员中心",@"service":@"ct_member",@"is_login":@"1"}];
+    }
+    [tabDatas addObject:@{@"tabbar_normal_image":@"ic_tab_my",@"tabbar_selected_image":@"ic_tab_my_highlight",@"title":@"我的",@"service":@"ct_mine",@"is_login":@"1"}];
+    
+    return [tabDatas copy];
     
 }
 
