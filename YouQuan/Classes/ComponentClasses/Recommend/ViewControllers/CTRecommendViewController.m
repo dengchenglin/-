@@ -45,9 +45,7 @@
     }];
 }
 - (void)reloadView{
-    dispatch_async(dispatch_get_main_queue(), ^{
-        self.segmentedControl.titles = @[@"官方精选",@"视频购",@"整点抢购"];
-    });
+    self.segmentedControl.titles = @[@"官方精选",@"视频购",@"整点抢购"];
     NSMutableArray *array = [NSMutableArray array];
     [array addObject:[[CTModuleManager goodListService] handpickShopViewController]];
     [array addObject:[[CTModuleManager goodListService] videoShopViewController]];

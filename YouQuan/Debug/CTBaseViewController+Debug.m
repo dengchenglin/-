@@ -9,7 +9,9 @@
 #import "CTBaseViewController+Debug.h"
 
 #import "NSObject+YYAdd.h"
-
+#ifdef DEBUG
+#import "PLeakSniffer.h"
+#endif
 @implementation CTBaseViewController (Debug)
 
 #ifdef DEBUG
@@ -21,9 +23,15 @@
 
 - (void)cl_debug_viewDidLoad{
     [self cl_debug_viewDidLoad];
+    [self configSniffer];
     [[UIApplication sharedApplication]setApplicationSupportsShakeToEdit:YES];
+    
 }
+- (void)configSniffer{
 
+    [[PLeakSniffer sharedInstance]installLeakSniffer];
+
+}
 
 - (void) motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event
 {

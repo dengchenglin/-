@@ -8,24 +8,18 @@
 
 #import "CTAppConfig.h"
 #import "CTNetworkEngine+Common.h"
-#ifdef DEBUG
-#import "PLeakSniffer.h"
-#endif
+
 
 
 @implementation CTAppConfig
 
 + (void)config{
 
-    [self configSniffer];
+
     [CTRequest iosFunctionIo];
     [CTRequest appFunctionIo];
 }
 
-+ (void)configSniffer{
-#ifdef DEBUG
-    [[PLeakSniffer sharedInstance]installLeakSniffer];
-#endif
-}
+
 
 @end
