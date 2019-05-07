@@ -57,9 +57,13 @@ NSString *const CLRefreshKeyPathContentOffset = @"contentOffset";
             }
             if(self.progress >= 1.0 && !self.scrollView.isDragging && !self.loading){
                 self.loading = YES;
-                [UIView animateWithDuration:0.3 animations:^{
-                    self.scrollView.contentInset = UIEdgeInsetsMake(self.bounds.size.height, 0, 0, 0);
-                }];
+                
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [UIView animateWithDuration:0.3 animations:^{
+                        self.scrollView.contentInset = UIEdgeInsetsMake(self.bounds.size.height, _originEdgeInsets.left, _originEdgeInsets.bottom, _originEdgeInsets.right);
+                        [self.scrollView setContentOffset:CGPointMake(0,  -_refreshDistance) animated:NO];
+                    }];
+                });
                 if(self.refreshBlock){
                     self.refreshBlock();
                 }

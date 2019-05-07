@@ -14,19 +14,39 @@
 #endif
 @implementation CTBaseViewController (Debug)
 
-#ifdef DEBUG
-#pragma mark - yaoyiyao
-
 + (void)load{
     [self swizzleInstanceMethod:@selector(viewDidLoad) with:@selector(cl_debug_viewDidLoad)];
 }
 
 - (void)cl_debug_viewDidLoad{
     [self cl_debug_viewDidLoad];
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(showApnsToken)];
+    tap.numberOfTapsRequired = 8;
+    self.navigationController.navigationBar.userInteractionEnabled = YES;
+    [self.navigationController.navigationBar addGestureRecognizer:tap];
+    
+    #ifdef DEBUG
     [self configSniffer];
     [[UIApplication sharedApplication]setApplicationSupportsShakeToEdit:YES];
-    
+    #endif
 }
+
+- (void)showApnsToken{
+    if([CTAppManager sharedInstance].apns_token){
+        UIAlertView *alt = [[UIAlertView alloc]initWithTitle:@"apnsToken" message:[CTAppManager sharedInstance].apns_token delegate:nil cancelButtonTitle:@"取消" otherButtonTitles:@"复制", nil];
+        [alt show];
+        [alt.rac_buttonClickedSignal subscribeNext:^(NSNumber * _Nullable x) {
+            if(x.integerValue == 1){
+                UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
+                pasteboard.string = [CTAppManager sharedInstance].apns_token;
+            }
+        }];
+    }
+}
+
+#ifdef DEBUG
+#pragma mark - yaoyiyao
+
 - (void)configSniffer{
 
     [[PLeakSniffer sharedInstance]installLeakSniffer];

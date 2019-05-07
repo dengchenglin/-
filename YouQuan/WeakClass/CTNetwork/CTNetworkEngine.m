@@ -166,9 +166,9 @@ static const int request_vc_key;
     [dic setValue:CT_SIGN_SYSTEM_VERSION forKey:@"system_version"];
     [dic setValue:CT_SIGN_DEVICE_ID forKey:@"device_id"];
     
-//#ifdef DEBUG
-//    [dic setValue:@"1" forKey:@"app_test"];
-//#endif
+#ifdef DEBUG
+    [dic setValue:@"1" forKey:@"ios_debug"];
+#endif
     return dic;
 }
 
