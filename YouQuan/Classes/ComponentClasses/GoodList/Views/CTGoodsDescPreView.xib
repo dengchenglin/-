@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -34,13 +33,13 @@
                                     <color key="textColor" red="0.90196078430000004" green="0.25490196079999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BTP-nC-C7j">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BTP-nC-C7j">
                                     <rect key="frame" x="8" y="47.5" width="12" height="25.5"/>
                                     <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="21"/>
                                     <color key="textColor" red="0.90196078430000004" green="0.25490196079999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¥0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E1P-9l-I7Y">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¥0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E1P-9l-I7Y">
                                     <rect key="frame" x="26" y="55" width="15.5" height="14.5"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                     <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -61,13 +60,13 @@
                                     </constraints>
                                 </imageView>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HvF-Lb-imd">
-                                    <rect key="frame" x="234" y="45.5" width="74" height="30"/>
+                                    <rect key="frame" x="246" y="45.5" width="62" height="30"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="21Z-nc-O9k">
-                                            <rect key="frame" x="0.0" y="0.0" width="74" height="30"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="62" height="30"/>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00元券" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bWh-QL-oVd">
-                                            <rect key="frame" x="16" y="0.0" width="42" height="30"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00元券" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bWh-QL-oVd">
+                                            <rect key="frame" x="10" y="0.0" width="42" height="30"/>
                                             <fontDescription key="fontDescription" name="PingFangSC-Medium" family="PingFang SC" pointSize="13"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
@@ -77,12 +76,12 @@
                                     <constraints>
                                         <constraint firstAttribute="bottom" secondItem="21Z-nc-O9k" secondAttribute="bottom" id="9ge-3e-nG5"/>
                                         <constraint firstItem="21Z-nc-O9k" firstAttribute="top" secondItem="HvF-Lb-imd" secondAttribute="top" id="AmQ-dX-fxT"/>
-                                        <constraint firstAttribute="trailing" secondItem="bWh-QL-oVd" secondAttribute="trailing" constant="16" id="MJE-hj-bKz"/>
+                                        <constraint firstAttribute="trailing" secondItem="bWh-QL-oVd" secondAttribute="trailing" constant="10" id="MJE-hj-bKz"/>
                                         <constraint firstAttribute="height" constant="30" id="Nyo-uo-Lud"/>
                                         <constraint firstAttribute="trailing" secondItem="21Z-nc-O9k" secondAttribute="trailing" id="UB4-H3-iE1"/>
                                         <constraint firstItem="bWh-QL-oVd" firstAttribute="top" secondItem="HvF-Lb-imd" secondAttribute="top" id="W7Y-aW-aHl"/>
                                         <constraint firstItem="21Z-nc-O9k" firstAttribute="leading" secondItem="HvF-Lb-imd" secondAttribute="leading" id="Ywd-VZ-7eY"/>
-                                        <constraint firstItem="bWh-QL-oVd" firstAttribute="leading" secondItem="HvF-Lb-imd" secondAttribute="leading" constant="16" id="ZQJ-cs-iAA"/>
+                                        <constraint firstItem="bWh-QL-oVd" firstAttribute="leading" secondItem="HvF-Lb-imd" secondAttribute="leading" constant="10" id="ZQJ-cs-iAA"/>
                                         <constraint firstAttribute="bottom" secondItem="bWh-QL-oVd" secondAttribute="bottom" id="yTk-cC-Umm"/>
                                     </constraints>
                                 </view>

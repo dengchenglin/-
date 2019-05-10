@@ -40,7 +40,12 @@
     }];
     NSString *showRecom = [[NSUserDefaults standardUserDefaults]objectForKey:showRecomKey];
     NSString *showRanking = [[NSUserDefaults standardUserDefaults]objectForKey:showRankingKey];
-    [CTAppManager sharedInstance].showRecom = [showRecom boolValue];
-    [CTAppManager sharedInstance].showRanking = [showRanking boolValue];
+    if(showRecom){
+        [CTAppManager sharedInstance].showRecom = [showRecom boolValue];
+    }
+    if(showRanking){
+        [CTAppManager sharedInstance].showRanking = [showRanking boolValue];
+    }
+    
 }
 @end

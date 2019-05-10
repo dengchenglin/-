@@ -58,7 +58,7 @@
     self = [super init];
     if (self) {
         _pageIndex = 1;
-        _pageSize = 15;
+        _pageSize = 30;
     }
     return self;
 }

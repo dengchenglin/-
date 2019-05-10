@@ -120,6 +120,7 @@
             
         } failureCallback:^(ALBBSession *session, NSError *error) {
             NSLog(@"%@",error);
+            [MBProgressHUD showMBProgressHudWithTitle:@"淘宝授权失败!"];
         }];
     }
 }

@@ -34,7 +34,7 @@ SINGLETON_FOR_CLASS_IMP(CTAppManager)
 
 
 + (BOOL)logined{
-    return [CTAppManager sharedInstance].token;
+    return [CTAppManager sharedInstance].token?YES:NO;
 }
 
 + (void)logout{

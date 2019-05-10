@@ -329,7 +329,7 @@
         }];
     };
 
-    //下单最后一步 唤起手淘
+    //下单 唤起手淘
     void (^goShop)(void) = ^{
         //先获取最终的数据
         goodsUrlConvertBlock(^(id data){
