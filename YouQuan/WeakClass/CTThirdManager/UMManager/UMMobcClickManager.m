@@ -8,8 +8,8 @@
 //
 
 #import "UMMobcClickManager.h"
-#import <UMCAnalytics/UMAnalytics/MobClick.h>
-#import <UMCCommonLog/UMCommonLog/UMCommonLogManager.h>
+#import <UMAnalytics/MobClick.h>
+#import <UMCommonLog/UMCommonLogManager.h>
 @implementation UMMobcClickManager
 
 + (void)config{

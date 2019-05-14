@@ -82,7 +82,7 @@ DEPENDENCIES:
   - ZLPhotoBrowser (~> 2.7.6)
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  https://github.com/cocoapods/specs.git:
     - AFNetworking
     - GPUImage
     - HappyDNS
@@ -138,4 +138,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: fe2d2c975e49fe2031955af52ce3a97cd013d84c
 
-COCOAPODS: 1.5.0
+COCOAPODS: 1.6.1

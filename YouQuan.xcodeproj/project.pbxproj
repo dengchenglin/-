@@ -3138,7 +3138,6 @@
 				32601389224E256000B7A1BE /* Common */,
 				325D3B6A21F1E53600465B91 /* CTConfigs */,
 				32BE602821EDCE7500BA52EF /* SystemConfigs */,
-				32FD1266223F784600CB85C1 /* ThirdLib */,
 				32BE602721EDCE6C00BA52EF /* ReSource */,
 			);
 			path = YouQuan;
@@ -3564,13 +3563,6 @@
 			path = AliTradeManager;
 			sourceTree = "<group>";
 		};
-		32FD1266223F784600CB85C1 /* ThirdLib */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ThirdLib;
-			sourceTree = "<group>";
-		};
 		32FD13CB223FBD1700CB85C1 /* Recommend */ = {
 			isa = PBXGroup;
 			children = (
@@ -3835,7 +3827,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-YouQuan/Pods-YouQuan-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-YouQuan/Pods-YouQuan-resources.sh",
 				"${PODS_ROOT}/GPUImage/framework/Resources/lookup.png",
 				"${PODS_ROOT}/GPUImage/framework/Resources/lookup_amatorka.png",
 				"${PODS_ROOT}/GPUImage/framework/Resources/lookup_miss_etikate.png",
@@ -3868,7 +3860,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YouQuan/Pods-YouQuan-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-YouQuan/Pods-YouQuan-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		94689452BF3059935C60187D /* [CP] Check Pods Manifest.lock */ = {

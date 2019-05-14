@@ -73,18 +73,7 @@
          vc.url = url;
         [viewController.navigationController pushViewController:vc animated:YES];
     }
-    
-    
-//    AlibcTradeShowParams* showParam = [[AlibcTradeShowParams alloc] init];
-//    showParam.openType = AlibcOpenTypeAuto;
-//    showParam.backUrl = CTTBBackScheme;
-//    id<AlibcTradePage> page = [AlibcTradePageFactory page:url];
-//
-//    [[AlibcTradeSDK sharedInstance].tradeService show: viewController.navigationController page:page showParams:showParam taoKeParams: nil trackParam: nil tradeProcessSuccessCallback:^(AlibcTradeResult * _Nullable result) {
-//        NSLog(@"%@",result);
-//    } tradeProcessFailedCallback:^(NSError * _Nullable error) {
-//        NSLog(@"%@",error);
-//    }];
+
 
 }
 
