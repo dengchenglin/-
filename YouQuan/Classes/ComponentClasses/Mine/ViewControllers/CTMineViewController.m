@@ -38,6 +38,8 @@
 
 #import "CTMyEarnModel.h"
 
+#import "CTMineBalanceView.h"
+
 @interface CTMineViewController ()
 
 @property (nonatomic, strong) CTNavBar *navBar;
@@ -49,6 +51,8 @@
 @property (nonatomic, strong) CTMineHeadView *headView;
 
 @property (nonatomic, strong) CTMineEarnView *earnView;
+
+@property (nonatomic, strong) CTMineBalanceView *balanceView;
 
 @property (nonatomic, strong) CTMineOrderView *orderView;
 
@@ -96,6 +100,13 @@
     return _earnView;
 }
 
+- (CTMineBalanceView *)balanceView{
+    if(!_balanceView){
+        _balanceView = NSMainBundleClass(CTMineBalanceView.class);
+    }
+    return _balanceView;
+}
+
 - (CTMineOrderView *)orderView{
     if(!_orderView){
         _orderView = NSMainBundleClass(CTMineOrderView.class);
@@ -140,6 +151,7 @@
             [CTAppManager saveUserWithInfo:data[@"user"]];
             self.headView.user = [CTAppManager user];
             self.earnView.user = [CTAppManager user];
+            self.balanceView.user = [CTAppManager user];
             self.earnView.model = [CTMyEarnModel yy_modelWithDictionary:data];
         }
     }];
@@ -161,12 +173,26 @@
             make.top.mas_equalTo(self.headView.mas_bottom).offset(-60);
             make.left.mas_equalTo(10);
             make.right.mas_equalTo(-10);
-            make.bottom.mas_equalTo(-20);
+            make.bottom.mas_equalTo(-10);
         }];
         config.sectioView = sectionView1;
         config.sectionHeight = 338 + NAVBAR_TOP;//290 + NAVBAR_TOP;
     }];
-    
+ 
+    [self.containerView addConfig:^(CLSectionConfig *config) {
+        @strongify(self)
+        UIView *sectionView2 = [UIView new];
+        sectionView2.backgroundColor = CTBackGroundGrayColor;
+        [sectionView2 addSubview:self.balanceView];
+        [self.balanceView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.mas_equalTo(0);
+            make.left.mas_equalTo(10);
+            make.right.mas_equalTo(-10);
+            make.bottom.mas_equalTo(-20);
+        }];
+        config.sectioView = sectionView2;
+        config.sectionHeight = 124;
+    }];
     [self.containerView addConfig:^(CLSectionConfig *config) {
         @strongify(self)
         config.sectioView = self.orderView;
@@ -214,10 +240,18 @@
         [self.navigationController pushViewController:vc animated:YES];
     }];
     //收益明细
-    [self.earnView.earndetailButton touchUpInsideSubscribeNext:^(id x) {
+    [self.balanceView.earndetailButton addActionWithBlock:^(id target) {
         @strongify(self)
         CTEarnDetailViewController *vc = [[CTEarnDetailViewController alloc]init];
         [self.navigationController pushViewController:vc animated:YES];
+    }];
+    
+    
+    //提现
+    [self.balanceView.withdrawButton touchUpInsideSubscribeNext:^(id x) {
+        @strongify(self)
+        [[CTModuleManager withdrawService] pushCashFromViewController:self];
+        
     }];
     //推广订单
     [self.orderView.lookMoreView addActionWithBlock:^(id target) {
@@ -291,13 +325,7 @@
         UIViewController *vc = [[CTModuleManager toolService]questionViewController];
         [self.navigationController pushViewController:vc animated:YES];
     }];
-    
-    //提现
-    [self.earnView.withdrawButton touchUpInsideSubscribeNext:^(id x) {
-        @strongify(self)
-       [[CTModuleManager withdrawService] pushCashFromViewController:self];
-        
-    }];
+
     //导航渐变效果
     [self.containerView setScrollBlock:^(CGPoint contentOffest) {
         @strongify(self)

@@ -187,7 +187,7 @@
 - (void)setUpEvent{
     @weakify(self)
     
-    void (^withdrawActionBlock)(void) = ^{
+    void (^__block withdrawActionBlock)(void) = ^{
         @strongify(self)
         [self.view endEditing:YES];
         [CTAlertHelper showPayPasswordViewWithCallback:^(NSString *password) {
@@ -197,6 +197,23 @@
                     [CTAlertHelper showWithdrawSuccessViewWithCallback:^(NSUInteger buttonIndex) {
                         @strongify(self)
                         [self.navigationController popViewControllerAnimated:YES];
+                    }];
+                }
+                else if([data[@"status"] integerValue] == 101){
+                    UIAlertView *alt =[[UIAlertView alloc]initWithTitle:@"密码错误" message:nil delegate:nil cancelButtonTitle:nil otherButtonTitles:@"忘记密码",@"重试", nil];
+                    [alt show];
+                    [alt.rac_buttonClickedSignal subscribeNext:^(NSNumber * _Nullable x) {
+                        if([x integerValue] == 0){
+                            [[CTModuleManager loginService]pushWithdrawSetpsdFromViewController:self mobile:[CTAppManager user].phone completed:^{
+                                [self.navigationController popToViewController:self animated:YES];
+                            }];
+                        }
+                        if([x integerValue] == 1){
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Warc-retain-cycles"
+                            withdrawActionBlock();
+#pragma clang diagnostic pop
+                        }
                     }];
                 }
             }];

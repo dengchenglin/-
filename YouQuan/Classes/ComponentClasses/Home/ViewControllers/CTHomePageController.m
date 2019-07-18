@@ -22,6 +22,8 @@
 
 #import "CTNetworkEngine+Index.h"
 
+#import "CTNetworkEngine+H5Url.h"
+
 @interface CTHomePageController ()<UIPageControlManagerDataSoure,UIPageControlManagerDelegate>
 
 @property (nonatomic, strong) CTHomeTopView *topView;
@@ -61,17 +63,18 @@
 
 
 - (void)autoLayout{
-    self.pageControlManager.pageViewControllerFrame = CGRectMake(0, NAVBAR_HEIGHT + 40, SCREEN_WIDTH, SCREEN_HEIGHT - NAVBAR_HEIGHT - TABBAR_HEIGHT - 40);
+    self.pageControlManager.pageViewControllerFrame = CGRectMake(0, NAVBAR_HEIGHT + 80, SCREEN_WIDTH, SCREEN_HEIGHT - NAVBAR_HEIGHT - TABBAR_HEIGHT - 80);
     [self.topView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.top.right.mas_equalTo(0);
-        make.height.mas_equalTo(NAVBAR_HEIGHT + 40);
+        make.height.mas_equalTo(NAVBAR_HEIGHT + 80);
     }];
 }
 
 - (void)setUpEvent{
     @weakify(self)
+    
     //消息
-    [self.topView.navBar.messageButton touchUpInsideSubscribeNext:^(id x) {
+    [self.topView.searchBar.messageButton touchUpInsideSubscribeNext:^(id x) {
         @strongify(self)
         [[CTModuleManager messageService]pushMessageFromViewController:self];
     }];
@@ -81,7 +84,7 @@
         [[CTModuleManager shareService]pushShareFromViewController:self];
     }];
     //搜索
-    [self.topView.navBar setClickSearchBarBlock:^{
+    [self.topView.searchBar setClickSearchBarBlock:^{
         @strongify(self)
         UIViewController *searchVc = [[CTModuleManager searchService]rootViewController];
         [self.navigationController pushViewController:searchVc animated:YES];
@@ -91,7 +94,19 @@
         @strongify(self)
         [self.pageControlManager scrollPageToIndex:index];
     }];
-    //
+    //省钱攻略
+    [self.topView.navBar.sqglView addActionWithBlock:^(id target) {
+        @strongify(self)
+   
+        UIViewController *webVc = [[CTModuleManager webService]pushWebFromViewController:self url:CTH5UrlForType(CTH5UrlSaveMoneyStrategy)];
+        webVc.title = @"省钱攻略";
+    }];
+    //领券
+    [self.topView.navBar.lqView addActionWithBlock:^(id target) {
+        @strongify(self)
+        UIViewController *webVc = [[CTModuleManager webService] pushWebFromViewController:self url:CTH5UrlForType(CTH5UrlGetTikcetAuide)];
+        webVc.title = @"领券指南";
+    }];
 }
 
 

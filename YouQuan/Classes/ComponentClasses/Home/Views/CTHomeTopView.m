@@ -175,6 +175,9 @@ ViewInstance(setUp)
     _navBar = NSMainBundleClass(CTHomeNavBar.class);
     [_containerView addSubview:_navBar];
     
+    _searchBar = NSMainBundleClass(CTHomeSearchBar.class);
+    [_containerView addSubview:_searchBar];
+    
     _categoryControl = [[CTMainCategoryControl alloc]init];
     _categoryControl.segmentedControl.delegate = self;
     _categoryControl.backgroundColor = [UIColor clearColor];
@@ -189,8 +192,13 @@ ViewInstance(setUp)
         make.height.mas_equalTo(NAVBAR_HEIGHT);
 
     }];
-    [_categoryControl mas_makeConstraints:^(MASConstraintMaker *make) {
+    [_searchBar mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(self.navBar.mas_bottom);
+        make.height.mas_equalTo(40);
+        make.left.right.mas_equalTo(0);
+    }];
+    [_categoryControl mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(self.searchBar.mas_bottom);
         make.bottom.left.right.mas_equalTo(0);
     }];
 }

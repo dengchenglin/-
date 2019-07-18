@@ -10,11 +10,15 @@
 
 #import "CTHomeNavBar.h"
 
+#import "CTHomeSearchBar.h"
+
 #import "CTMainCategoryControl.h"
 
 @interface CTHomeTopView : UIView
 
 @property (nonatomic, strong) CTHomeNavBar *navBar;
+
+@property (nonatomic, strong) CTHomeSearchBar *searchBar;
 
 @property (nonatomic, strong) CTMainCategoryControl *categoryControl;
 

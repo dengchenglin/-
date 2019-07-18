@@ -213,12 +213,22 @@
                                 <constraint firstAttribute="height" constant="1" id="NNU-4U-gd6"/>
                             </constraints>
                         </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g3U-Ie-Arq">
+                            <rect key="frame" x="255" y="91" width="30" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="NCK-oo-L6R"/>
+                                <constraint firstAttribute="width" constant="30" id="ygc-Ft-JQb"/>
+                            </constraints>
+                            <state key="normal" image="ic_home_directions"/>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="QAT-nA-4p7" firstAttribute="leading" secondItem="5YZ-zJ-Ohz" secondAttribute="trailing" constant="12" id="623-sX-lGy"/>
+                        <constraint firstItem="g3U-Ie-Arq" firstAttribute="leading" secondItem="l4c-Gi-QmW" secondAttribute="trailing" id="7pb-9B-kDA"/>
                         <constraint firstItem="Big-sF-MJ4" firstAttribute="bottom" secondItem="5YZ-zJ-Ohz" secondAttribute="bottom" id="Caw-B1-IZc"/>
                         <constraint firstItem="p59-bX-ZsG" firstAttribute="leading" secondItem="Alv-wX-JD5" secondAttribute="trailing" constant="6" id="D1w-kV-g1q"/>
+                        <constraint firstItem="g3U-Ie-Arq" firstAttribute="centerY" secondItem="l4c-Gi-QmW" secondAttribute="centerY" id="DDT-Ll-jGZ"/>
                         <constraint firstItem="Alv-wX-JD5" firstAttribute="leading" secondItem="Vm4-en-3qd" secondAttribute="trailing" id="EJl-Eb-shB"/>
                         <constraint firstItem="EQX-KM-ttT" firstAttribute="bottom" secondItem="5YZ-zJ-Ohz" secondAttribute="bottom" constant="-5" id="IU1-xZ-PYQ"/>
                         <constraint firstItem="p59-bX-ZsG" firstAttribute="centerY" secondItem="Alv-wX-JD5" secondAttribute="centerY" id="IcP-nJ-mFq"/>
@@ -268,12 +278,14 @@
                 <outlet property="statusImageView" destination="Big-sF-MJ4" id="D7R-5v-YGu"/>
                 <outlet property="titleLabel" destination="QAT-nA-4p7" id="oQC-Ep-kC4"/>
                 <outlet property="typeImageView" destination="8vE-uF-COr" id="VFs-Be-sV6"/>
+                <outlet property="upgradeDescBtn" destination="g3U-Ie-Arq" id="Yt2-P0-o4k"/>
                 <outlet property="upgradeView" destination="l4c-Gi-QmW" id="iBt-r6-w8Z"/>
             </connections>
-            <point key="canvasLocation" x="-522" y="-410"/>
+            <point key="canvasLocation" x="-946" y="-453"/>
         </view>
     </objects>
     <resources>
+        <image name="ic_home_directions" width="14" height="14"/>
         <image name="pic_list_coupon_bg2" width="42" height="32"/>
     </resources>
 </document>

@@ -9,9 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface CTHomeNavBar : UIView
+@property (weak, nonatomic) IBOutlet UIView *lqView;
+@property (weak, nonatomic) IBOutlet UIView *sqglView;
 
 @property (weak, nonatomic) IBOutlet UIButton *scanButton;
-@property (weak, nonatomic) IBOutlet UITextField *searchTextField;
-@property (weak, nonatomic) IBOutlet UIButton *messageButton;
-@property (nonatomic, copy) void (^clickSearchBarBlock)(void);
+
 @end

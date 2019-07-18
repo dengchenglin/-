@@ -23,5 +23,9 @@
 + (void)showTbauthAlertViewWithCallback:(void(^)(NSUInteger buttonIndex))callback;
 
 + (void)showTbauthFailAlertViewWithTitle:(NSString *)title callback:(void(^)(NSUInteger buttonIndex))callback;
+
+//升级说明
++ (void)showUpgradePopViewWithInfoConfig:(void(^)(NSString **text1,NSString **text2,NSString **text3))infoConfig;
+
 + (void)hideAlertView;
 @end

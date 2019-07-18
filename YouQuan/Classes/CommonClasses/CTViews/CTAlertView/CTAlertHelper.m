@@ -11,6 +11,7 @@
 #import "CTNoticeAlertView.h"
 #import "CTTbAuthAlertView.h"
 #import "CTTbAuthFailAlertView.h"
+#import "CTUpgradePopView.h"
 
 static const int CTAlertViewKey;
 
@@ -70,6 +71,21 @@ static const int CTAlertViewKey;
     CTTbAuthFailAlertView *alertView = NSMainBundleClass(CTTbAuthFailAlertView.class);
     alertView.titleLabel.text = title;
     [self showAlertView:alertView callback:callback];
+}
+
+
++ (void)showUpgradePopViewWithInfoConfig:(void(^)(NSString **text1,NSString **text2,NSString **text3))infoConfig{
+    NSString *txt1;
+    NSString *txt2;
+    NSString *txt3;
+    if(infoConfig){
+        infoConfig(&txt1,&txt2,&txt3);
+    }
+    CTUpgradePopView *alertView = NSMainBundleClass(CTUpgradePopView.class);
+    alertView.label1.text = txt1;
+    alertView.label2.text = txt2;
+    alertView.label3.text = txt3;
+    [self showAlertView:alertView callback:nil];
 }
 
 + (void)showAlertView:(CTAlertView *)alertView onView:(UIView *)view callback:(void(^)(NSUInteger buttonIndex))callback{

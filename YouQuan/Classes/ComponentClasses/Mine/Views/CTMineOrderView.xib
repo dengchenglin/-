@@ -12,11 +12,11 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CTMineOrderView">
-            <rect key="frame" x="0.0" y="0.0" width="420" height="304"/>
+            <rect key="frame" x="0.0" y="0.0" width="507" height="324"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9E2-Tz-xyv">
-                    <rect key="frame" x="0.0" y="0.0" width="420" height="60"/>
+                    <rect key="frame" x="0.0" y="0.0" width="507" height="60"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="推广订单" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xHu-iV-R9Q">
                             <rect key="frame" x="18" y="19.5" width="60" height="21"/>
@@ -25,7 +25,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QJu-bq-jo1">
-                            <rect key="frame" x="337.5" y="14" width="64.5" height="32"/>
+                            <rect key="frame" x="424.5" y="14" width="64.5" height="32"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="查看更多" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oiN-4m-5hn">
                                     <rect key="frame" x="0.0" y="9" width="49.5" height="14.5"/>
@@ -62,20 +62,20 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N4P-UN-CyK">
-                    <rect key="frame" x="0.0" y="60" width="420" height="244"/>
+                    <rect key="frame" x="0.0" y="60" width="507" height="264"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VYN-c3-fvy">
-                            <rect key="frame" x="0.0" y="0.0" width="140" height="244"/>
+                            <rect key="frame" x="0.0" y="0.0" width="169" height="264"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_payment" translatesAutoresizingMaskIntoConstraints="NO" id="dZj-cm-UIM">
-                                    <rect key="frame" x="45" y="83" width="50" height="50"/>
+                                    <rect key="frame" x="59.5" y="93" width="50" height="50"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="50" id="GB5-2R-Z9q"/>
                                         <constraint firstAttribute="width" constant="50" id="Hp2-kM-y2x"/>
                                     </constraints>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="已付款" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eyx-YU-xOt">
-                                    <rect key="frame" x="51.5" y="141" width="37" height="14.5"/>
+                                    <rect key="frame" x="66" y="151" width="37" height="14.5"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                     <color key="textColor" red="0.078431372550000003" green="0.078431372550000003" blue="0.078431372550000003" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
@@ -90,17 +90,17 @@
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gdZ-bd-Pbo">
-                            <rect key="frame" x="140" y="0.0" width="140" height="244"/>
+                            <rect key="frame" x="169" y="0.0" width="169" height="264"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_already" translatesAutoresizingMaskIntoConstraints="NO" id="K3M-vK-8XW">
-                                    <rect key="frame" x="45" y="83" width="50" height="50"/>
+                                    <rect key="frame" x="59.5" y="93" width="50" height="50"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="50" id="1V4-4C-7qC"/>
                                         <constraint firstAttribute="width" constant="50" id="lRx-JO-fyp"/>
                                     </constraints>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="已结算" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kOP-Yc-jmc">
-                                    <rect key="frame" x="51.5" y="141" width="37" height="14.5"/>
+                                    <rect key="frame" x="66" y="151" width="37" height="14.5"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                     <color key="textColor" red="0.078431372550000003" green="0.078431372550000003" blue="0.078431372550000003" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
@@ -115,17 +115,17 @@
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ydp-Ae-oX4">
-                            <rect key="frame" x="280" y="0.0" width="140" height="244"/>
+                            <rect key="frame" x="338" y="0.0" width="169" height="264"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_lose_efficacy" translatesAutoresizingMaskIntoConstraints="NO" id="0BF-1d-Rh6">
-                                    <rect key="frame" x="45" y="83" width="50" height="50"/>
+                                    <rect key="frame" x="59.5" y="93" width="50" height="50"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="50" id="Efn-8g-sHk"/>
                                         <constraint firstAttribute="height" constant="50" id="oTO-Tu-A2g"/>
                                     </constraints>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="已失效" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y14-HJ-4ip">
-                                    <rect key="frame" x="51.5" y="141" width="37" height="14.5"/>
+                                    <rect key="frame" x="66" y="151" width="37" height="14.5"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                     <color key="textColor" red="0.078431372550000003" green="0.078431372550000003" blue="0.078431372550000003" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
@@ -174,7 +174,7 @@
                 <outlet property="lookMoreView" destination="QJu-bq-jo1" id="9Ah-3O-ur4"/>
                 <outlet property="payedView" destination="VYN-c3-fvy" id="rUh-ww-fSk"/>
             </connections>
-            <point key="canvasLocation" x="16" y="-70"/>
+            <point key="canvasLocation" x="85.599999999999994" y="-61.169415292353825"/>
         </view>
     </objects>
     <resources>

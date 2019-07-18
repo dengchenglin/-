@@ -31,13 +31,11 @@
 }
 - (void)setModel:(CTMyEarnModel *)model{
     _model = model;
-    _priceLabel1.text = [@"¥" stringByAppendingString:_model.today_money];
-    _priceLabel2.text = [@"¥" stringByAppendingString:_model.month_money];
-    _priceLabel3.text = [@"¥" stringByAppendingString:_model.all_money];
+//    _priceLabel1.text = [@"¥" stringByAppendingString:_model.today_money];
+//    _priceLabel2.text = [@"¥" stringByAppendingString:_model.month_money];
+//    _priceLabel3.text = [@"¥" stringByAppendingString:_model.all_money];
         self.earnButton.hidden = !([CTAppManager sharedInstance].showMember && [CTAppManager sharedInstance].showRanking);
+     _totalRebateLabel.text = [@"¥" stringByAppendingString:_model.all_money];;
 }
-- (void)setUser:(CTUser *)user{
-    _user = user;
-    _priceLabel4.text = [@"¥" stringByAppendingString:_user.money];;
-}
+
 @end

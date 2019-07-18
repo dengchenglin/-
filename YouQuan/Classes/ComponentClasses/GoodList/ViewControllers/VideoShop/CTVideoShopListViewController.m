@@ -68,10 +68,7 @@
     
 }
 
-- (void)viewDidDisappear:(BOOL)animated{
-    [super viewDidDisappear:animated];
-    [self pauseVideo];
-}
+
 
 - (void)request{
     [[JPVideoPlayerManager sharedManager]stopPlay];
@@ -206,6 +203,11 @@
 }
 - (BOOL)shouldAutoReplayForURL:(NSURL *)videoURL{
     return NO;
+}
+
+- (void)viewDidDisappear:(BOOL)animated{
+    [super viewDidDisappear:animated];
+    [self pauseVideo];
 }
 
 - (void)dealloc

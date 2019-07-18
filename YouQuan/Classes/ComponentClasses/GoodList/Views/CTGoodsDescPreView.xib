@@ -163,7 +163,7 @@
                 <outlet property="qCodeImageView" destination="fFx-YJ-Zxc" id="bAU-wC-xKo"/>
                 <outlet property="titleLabel" destination="PEl-g3-fgk" id="kIf-Sp-h6y"/>
             </connections>
-            <point key="canvasLocation" x="41" y="83"/>
+            <point key="canvasLocation" x="-104" y="76"/>
         </view>
     </objects>
     <resources>
