@@ -15,6 +15,9 @@
 @property (weak, nonatomic) IBOutlet UIView *guideView;
 @property (weak, nonatomic) IBOutlet UIView *inviteCodeView;
 @property (weak, nonatomic) IBOutlet UIView *questionView;
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *teamHeight;
+@property (weak, nonatomic) IBOutlet UIView *memberEquityView;
+@property (weak, nonatomic) IBOutlet UIView *sxyView;
+
+@property (weak, nonatomic) IBOutlet UIView *cashLogView;
 
 @end

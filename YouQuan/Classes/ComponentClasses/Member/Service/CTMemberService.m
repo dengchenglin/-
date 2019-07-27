@@ -10,6 +10,8 @@
 
 #import "CTMemberViewController.h"
 
+#import "CTMemberEquityController.h"
+
 @implementation CTMemberService
 
 CL_EXPORT_MODULE(CTMemberServiceProtocol)
@@ -17,5 +19,7 @@ CL_EXPORT_MODULE(CTMemberServiceProtocol)
 - (UIViewController *)rootViewController{
     return [CTMemberViewController new];
 }
-
+- (UIViewController *)memberEquityViewController{
+    return [CTMemberEquityController new];
+}
 @end

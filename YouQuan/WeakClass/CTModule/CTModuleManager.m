@@ -28,7 +28,8 @@
              @"ct_set":[self setService],
              @"ct_tool":[self toolService],
              @"ct_withdraw":[self withdrawService],
-             @"ct_userinfo":[self userInfoService]
+             @"ct_userinfo":[self userInfoService],
+             @"ct_promotion":[self promotionService],
           };
 }
 

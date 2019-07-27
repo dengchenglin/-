@@ -202,16 +202,9 @@
     [self.containerView addConfig:^(CLSectionConfig *config) {
         @strongify(self)
         config.sectioView = self.toolView;
-        config.sectionHeight = 299;
+        config.sectionHeight = 220;
         config.space = 10;
-        if([CTAppManager sharedInstance].showMember){
-            self.toolView.teamHeight.constant = 46;
-            config.sectionHeight = 299;
-        }
-        else{
-            self.toolView.teamHeight.constant = 0;
-            config.sectionHeight = 253;
-        }
+        self.toolView.memberEquityView.hidden = ![CTAppManager sharedInstance].showMember;
     }];
 }
 
@@ -323,6 +316,12 @@
     [self.toolView.questionView addActionWithBlock:^(id target) {
         @strongify(self)
         UIViewController *vc = [[CTModuleManager toolService]questionViewController];
+        [self.navigationController pushViewController:vc animated:YES];
+    }];
+    //会员权益
+    [self.toolView.memberEquityView addActionWithBlock:^(id target) {
+        @strongify(self)
+        UIViewController *vc = [[CTModuleManager memberService]memberEquityViewController];
         [self.navigationController pushViewController:vc animated:YES];
     }];
 

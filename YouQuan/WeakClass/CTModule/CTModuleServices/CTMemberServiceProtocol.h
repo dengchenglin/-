@@ -11,5 +11,5 @@
 #import "CLModuleServiceProtocol.h"
 
 @protocol CTMemberServiceProtocol <NSObject,CLModuleServiceProtocol>
-
+- (UIViewController *)memberEquityViewController;
 @end

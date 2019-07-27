@@ -111,7 +111,7 @@
                 <outlet property="earndetailButton" destination="EvV-3Z-O2n" id="idm-Qh-JeG"/>
                 <outlet property="withdrawButton" destination="xrB-4t-al8" id="58K-LZ-dLe"/>
             </connections>
-            <point key="canvasLocation" x="-1146" y="42"/>
+            <point key="canvasLocation" x="-706" y="-2"/>
         </view>
     </objects>
     <resources>
