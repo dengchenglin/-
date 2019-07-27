@@ -10,9 +10,19 @@
 
 #import "CTGoodDefine.h"
 
+#import "CTGlobalConst.h"
+
 NSString *GetGoodsOrderStr(CTGoodSortType type);
 
 NSString *GetTypeImageStr(NSInteger status);
+
+NSString *GetGrabTypeStr(NSInteger type);
+
+@interface CTSeckillContentModel:NSObject
+@property (nonatomic, copy) NSString *img;
+@property (nonatomic, copy) NSString *text;
+@end
+
 
 @interface CTGoodsModel : NSObject
 @property (nonatomic, copy) NSString *uid;
@@ -56,4 +66,48 @@ NSString *GetTypeImageStr(NSInteger status);
 
 @property (nonatomic, copy) NSString *video;
 @property (nonatomic, copy) NSString *video_img;
+
+//快抢
+@property (nonatomic, copy) NSString *start_time;
+@property (nonatomic, assign) NSInteger grab_type;
+@property (nonatomic, copy) NSString *main_video_cover;
+@property (nonatomic, copy) NSString *main_video_url;
+@property (nonatomic, copy) NSString *start_time_txt;
+@property (nonatomic, copy) NSArray <CTSeckillContentModel *> *seckill_content;
+
+//发圈
+
+@property (nonatomic, copy) NSString *commission_rate;
+@property (nonatomic, copy) NSString *url;
+
+@property (nonatomic, copy) NSArray <NSString *> *itempics;
+@property (nonatomic, copy) NSString *content;
+@property (nonatomic, copy) NSString *show_content;
+@property (nonatomic, copy) NSString *cpy_content;
+@property (nonatomic, copy) NSArray <NSString *>*comments;
+@property (nonatomic, copy) NSArray <NSString *>*cpy_comments;
+@property (nonatomic, copy) NSArray <NSString *>*show_comments;
+@property (nonatomic, copy) NSString *add_time;
+@property (nonatomic, copy) NSString *app_name;
+@property (nonatomic, copy) NSString *app_logo;
+
+//分享
+@property (nonatomic, copy) NSString *order_url;
+@property (nonatomic, copy) NSString *iv_code;
+@property (nonatomic, copy) NSString *tpwd;
+@property (nonatomic, copy) NSString *qr_create_url;
+
+@property (nonatomic, assign) BOOL imgAnimated;
+@property (nonatomic, copy) UIImage *image;
+
+@property (nonatomic, copy) NSArray<CTGoodsModel*> *item_data;
+
+//新人专享相关
+@property (nonatomic, copy) NSString *price_desc;
+@property (nonatomic, copy) NSString *stock;
+@property (nonatomic, assign) NSInteger type;
+@property (nonatomic, assign) CTShopKind shopKind;
+
+
+
 @end

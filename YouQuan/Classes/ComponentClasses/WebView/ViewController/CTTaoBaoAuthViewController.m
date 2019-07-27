@@ -14,6 +14,8 @@
 #import "AliTradeManager.h"
 #import "CTAlertHelper.h"
 
+#import "CTNetworkEngine+Member.h"
+
 @interface CTTaoBaoAuthViewController()<UIWebViewDelegate>
 
 @property (nonatomic, strong) UIWebView *webView;
@@ -41,6 +43,18 @@
         }
     }];
     return tbVc;
+}
+
++ (void)tbAuthFromViewController:(UIViewController *)viewController callback:(void (^)(id data))callback{
+    [CTRequest tbAuthWithCallback:^(id data, CLRequest *request, CTNetError error) {
+        if(!error){
+            [self tbAuthFromViewController:viewController url:data callback:^(id data) {
+                if(callback){
+                    callback(data);
+                }
+            }];
+        }
+    }];
 }
 
 - (UIWebView *)webView{

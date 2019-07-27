@@ -26,6 +26,8 @@ typedef NS_ENUM(NSInteger,LMSegmentedControlSilderStyle) {
 
 @protocol LMSegmentedControlDelegate <NSObject>
 
+@optional
+
 - (void)segmentedControl:(LMSegmentedControl *)segmentedControl didSelectedInbdex:(NSUInteger)index;
 
 @end
@@ -33,6 +35,8 @@ typedef NS_ENUM(NSInteger,LMSegmentedControlSilderStyle) {
 @interface LMSegmentedControl : UIView
 
 @property (nonatomic, copy) NSArray <NSString *>*titles;
+
+@property (nonatomic, copy) UIImage *backgroundImage;
 
 @property (nonatomic, assign) NSUInteger currentIndex;
 
@@ -50,11 +54,15 @@ typedef NS_ENUM(NSInteger,LMSegmentedControlSilderStyle) {
 
 @property (nonatomic, assign) CGSize itemSize;
 
+@property (nonatomic, assign) BOOL showBottomLine;
+
 @property (nonatomic, weak) id <LMSegmentedControlDelegate>delegate;
 
 @property (nonatomic, assign) LMSegmentedControlType segmentedControlType;
 
 @property (nonatomic, assign) LMSegmentedControlSilderStyle silderStyle;
+
+@property (nonatomic, copy) void(^clickItemBlock)(NSInteger index);
 
 - (void)scrollToIndex:(NSUInteger)index;
 

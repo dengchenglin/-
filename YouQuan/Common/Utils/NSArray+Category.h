@@ -8,16 +8,16 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSArray (Category)
+@interface NSArray <ObjectType>(Category)
 
-- (id)safe_objectAtIndex:(NSUInteger)index;
+- (ObjectType)safe_objectAtIndex:(NSUInteger)index;
 
 - (NSString *)toString;
 
 @end
 
-@interface NSArray (Map)
+@interface NSArray<ObjectType> (Map)
 
-- (NSArray *)map:(id(^)(NSInteger index, id element))block;
+- (NSArray *)map:(id(^)(NSInteger index, ObjectType element))block;
 
 @end

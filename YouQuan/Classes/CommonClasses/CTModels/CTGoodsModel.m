@@ -53,14 +53,39 @@ NSString *GetTypeImageStr(NSInteger status){
     return @"";
 }
 
+NSString *GetGrabTypeStr(NSInteger type){
+    switch (type) {
+        case 1:
+            return @"即将开始";
+            break;
+        case 2:
+            return @"商品已抢光";
+            break;
+        case 3:
+            return @"商品正在快抢中";
+            break;
+        default:
+            break;
+    }
+    return @"";
+}
+@implementation CTSeckillContentModel
+
+
+@end
+
 @implementation CTGoodsModel
 
+
 + (NSDictionary *)modelCustomPropertyMapper{
-    return @{@"uid":@"id"};
+    return @{@"uid":@"id",@"cpy_content":@"copy_content",@"itempics":@"itempic",@"comments":@"comment",@"cpy_comments":@"copy_comment",@"show_comments":@"show_comment",@"video":@"video_url"};
 }
 
 + (NSDictionary *)modelContainerPropertyGenericClass{
-    return @{@"goods":CTGoodsModel.class};
+    return @{@"goods":CTGoodsModel.class,@"seckill_content":CTSeckillContentModel.class,@"item_data":CTGoodsModel.class};
 }
 
+- (CTShopKind)shopKind{
+    return _type - 1;
+}
 @end

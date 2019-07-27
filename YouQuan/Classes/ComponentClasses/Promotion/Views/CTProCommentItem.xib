@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8nO-DM-ghh" customClass="CTProCommentItem">
+            <rect key="frame" x="0.0" y="0.0" width="382" height="47"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="https://huaban.com/boards/33472480/" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2LI-7k-Gtp">
+                    <rect key="frame" x="7" y="0.0" width="253" height="47"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Zf2-Xk-qBm">
+                    <rect key="frame" x="338" y="3.5" width="40" height="40"/>
+                    <color key="backgroundColor" red="1" green="0.78039215689999997" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="NiS-73-gqG"/>
+                        <constraint firstAttribute="width" constant="40" id="gsf-dc-RyP"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <state key="normal">
+                        <string key="title">复制
+评论</string>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <real key="value" value="2.5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="copyAction:" destination="8nO-DM-ghh" eventType="touchUpInside" id="qJZ-9z-0pc"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.96470588239999999" green="0.96862745100000003" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="2LI-7k-Gtp" firstAttribute="top" secondItem="8nO-DM-ghh" secondAttribute="top" id="5Vk-2H-eEB"/>
+                <constraint firstAttribute="bottom" secondItem="2LI-7k-Gtp" secondAttribute="bottom" id="IVo-Kf-wHH"/>
+                <constraint firstItem="2LI-7k-Gtp" firstAttribute="leading" secondItem="8nO-DM-ghh" secondAttribute="leading" constant="7" id="XDG-46-1QX"/>
+                <constraint firstItem="Zf2-Xk-qBm" firstAttribute="centerY" secondItem="8nO-DM-ghh" secondAttribute="centerY" id="fVo-Jd-Wn6"/>
+                <constraint firstItem="Zf2-Xk-qBm" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="2LI-7k-Gtp" secondAttribute="trailing" constant="10" id="gaH-E0-afE"/>
+                <constraint firstAttribute="trailing" secondItem="Zf2-Xk-qBm" secondAttribute="trailing" constant="4" id="y1c-BD-4ef"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                    <integer key="value" value="4"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="cpyButton" destination="Zf2-Xk-qBm" id="Rye-rn-IJT"/>
+                <outlet property="titleLabel" destination="2LI-7k-Gtp" id="N75-FR-BVr"/>
+            </connections>
+            <point key="canvasLocation" x="64" y="339.58020989505252"/>
+        </view>
+    </objects>
+</document>

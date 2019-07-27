@@ -21,7 +21,7 @@
     hud.bezelView.backgroundColor = [UIColor blackColor];
     hud.contentColor = [UIColor whiteColor];
     [hud showAnimated:YES];
-
+    
 }
 
 + (void)showMBProgressHudWithTitle:(NSString *)title top:(CGFloat)top{
@@ -36,9 +36,13 @@
     [self showMBProgressHudOnView:view top:0 title:title hideAfterDelay:1.0];
 }
 
++ (void)showMBProgressHudOnView:(UIView *)view hideAfterDelay:(NSTimeInterval)hideAfterDelay{
+    [self showMBProgressHudOnView:view top:0 title:nil hideAfterDelay:hideAfterDelay];
+}
+
 + (void)showMBProgressHudWithTitle:(NSString *)title hideAfterDelay:(NSTimeInterval)hideAfterDelay{
     [self showMBProgressHudOnView:nil top:0 title:title hideAfterDelay:hideAfterDelay];
-
+    
 }
 
 
@@ -59,7 +63,7 @@
     if(!view){
         view = [UIApplication sharedApplication].keyWindow;
     }
- 
+    
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
     
     if(top >= 0){
@@ -71,7 +75,7 @@
     hud.contentColor = [UIColor whiteColor];
     hud.mode = MBProgressHUDModeText;
     [hud hideAnimated:YES afterDelay:hideAfterDelay];
-
+    
 }
 
 

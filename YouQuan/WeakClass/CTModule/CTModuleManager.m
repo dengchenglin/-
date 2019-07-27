@@ -102,5 +102,7 @@
     return [CLModuleManager moduleServiceInstanceForProtocol:@protocol(CTUserInfoServiceProtocol)];
 }
 
-
++ (id)promotionService{
+    return [CLModuleManager moduleServiceInstanceForProtocol:@protocol(CTPromotionServiceProtocol)];
+}
 @end

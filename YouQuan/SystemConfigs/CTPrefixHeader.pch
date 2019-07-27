@@ -40,6 +40,8 @@
 #import "LMDataResultView.h"
 #import "UIAlertView+Helper.h"
 #import "RegalurUtil.h"
+#import "UIPasteboard+Helper.h"
+#import "CTModuleHelper+GoShop.h"
 //弱业务通用功能
 #import "CTModule.h"
 #import "CTMarco.h"

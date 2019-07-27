@@ -42,4 +42,8 @@
 - (CLRequest *)userInfoSaveWithInfo:(NSDictionary *)info callback:(CTResponseBlock)callback;
 //收益排行
 - (CLRequest *)icomenRankWithCallback:(CTResponseBlock)callback;
+//邀请分享
+- (CLRequest *)shareInfoWithCallback:(CTResponseBlock)callback;
+//获取淘宝授权链接
+- (CLRequest *)tbAuthWithCallback:(CTResponseBlock)callback;
 @end

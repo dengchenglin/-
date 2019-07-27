@@ -133,4 +133,35 @@
     }) start];
     return nil;
 }
+
+//获取店铺信息
+- (CLRequest *)storeInfoWithItemId:(NSString *)itemId callback:(CTResponseBlock)callback{
+    if(!itemId)return nil;
+    NSString *url = [NSString stringWithFormat:@"http://h5api.m.taobao.com/h5/mtop.taobao.detail.getdetail/6.0?data=%@",EnCodingNSString([@{@"itemNumId":itemId} yy_modelToJSONString])];
+    
+    CLRequest *urlRequest = [CLURLRequest request].setMethod(GET).setCustomUrl(url).setCallBack(^(id __nonnull request, id __nullable responseObject, NSError * __nullable error){
+        if(!error && callback){
+            callback(responseObject?responseObject[@"data"]:nil,request,error?CTNetErrorNet:CTNetErrorNone);
+        }
+    });
+    [urlRequest start];
+    return urlRequest;
+}
+
+
+//商品分享编辑页面
+- (CLRequest *)goodsShareWithId:(NSString *)Id callback:(CTResponseBlock)callback{
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    [params setValue:Id forKey:@"id"];
+    return [self postWithPath:CTGoods(@"goods_share") params:params callback:callback];
+}
+
+
+//商品分享编辑页面
+- (CLRequest *)goodsShareWithId:(NSString *)Id kind:(CTShopKind)kind callback:(CTResponseBlock)callback{
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    [params setValue:Id forKey:@"id"];
+    [params setValue:@(kind + 1) forKey:@"type"];
+    return [self postWithPath:CTGoods(@"goods_share") params:params callback:callback];
+}
 @end

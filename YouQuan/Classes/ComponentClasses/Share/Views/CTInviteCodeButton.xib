@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CTInviteCodeButton">
+            <rect key="frame" x="0.0" y="0.0" width="394" height="188"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Ht-pa-oyu">
+                    <rect key="frame" x="0.0" y="0.0" width="197" height="188"/>
+                    <subviews>
+                        <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LM0-ZQ-qeQ">
+                            <rect key="frame" x="47" y="73" width="140" height="42"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="42" id="2Ur-CX-bl9"/>
+                                <constraint firstAttribute="width" constant="140" id="udF-fq-Z4u"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <state key="normal" title="复制链接" backgroundImage="ic_home_service_bot2"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="21"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="LM0-ZQ-qeQ" secondAttribute="trailing" constant="10" id="7Co-pS-mN7"/>
+                        <constraint firstItem="LM0-ZQ-qeQ" firstAttribute="centerY" secondItem="2Ht-pa-oyu" secondAttribute="centerY" id="kK4-5J-NYJ"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mpk-kH-pT1">
+                    <rect key="frame" x="197" y="0.0" width="197" height="188"/>
+                    <subviews>
+                        <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pTb-KY-1mu">
+                            <rect key="frame" x="10" y="73" width="140" height="42"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="42" id="J0R-vt-9pM"/>
+                                <constraint firstAttribute="width" constant="140" id="dq7-6s-3fL"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <state key="normal" title="分享邀请海报" backgroundImage="ic_home_service_bot"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="21"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="pTb-KY-1mu" firstAttribute="leading" secondItem="mpk-kH-pT1" secondAttribute="leading" constant="10" id="5G2-lu-MBU"/>
+                        <constraint firstItem="pTb-KY-1mu" firstAttribute="centerY" secondItem="mpk-kH-pT1" secondAttribute="centerY" id="dsD-hJ-RAT"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="mpk-kH-pT1" firstAttribute="width" secondItem="2Ht-pa-oyu" secondAttribute="width" id="BfB-5f-Yt2"/>
+                <constraint firstItem="mpk-kH-pT1" firstAttribute="leading" secondItem="2Ht-pa-oyu" secondAttribute="trailing" id="ECr-u6-fRz"/>
+                <constraint firstItem="mpk-kH-pT1" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="UgX-LK-MPh"/>
+                <constraint firstAttribute="bottom" secondItem="2Ht-pa-oyu" secondAttribute="bottom" id="Y4h-rY-pfl"/>
+                <constraint firstItem="2Ht-pa-oyu" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="aZR-5S-783"/>
+                <constraint firstAttribute="bottom" secondItem="mpk-kH-pT1" secondAttribute="bottom" id="bX9-QJ-k6Q"/>
+                <constraint firstItem="2Ht-pa-oyu" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="iPz-Yi-jel"/>
+                <constraint firstAttribute="trailing" secondItem="mpk-kH-pT1" secondAttribute="trailing" id="xfx-xy-ETa"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="cpyButton" destination="LM0-ZQ-qeQ" id="cXY-wB-FAK"/>
+                <outlet property="shareButton" destination="pTb-KY-1mu" id="e1X-ND-LuB"/>
+            </connections>
+            <point key="canvasLocation" x="145.59999999999999" y="368.81559220389806"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_home_service_bot" width="141" height="43"/>
+        <image name="ic_home_service_bot2" width="141" height="43"/>
+    </resources>
+</document>

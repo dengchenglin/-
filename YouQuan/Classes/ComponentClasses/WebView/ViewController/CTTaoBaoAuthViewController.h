@@ -16,4 +16,6 @@
 
 + (UIViewController *)tbAuthFromViewController:(UIViewController *)viewController url:(NSString *)url callback:(void (^)(id data))callback;
 
++ (void)tbAuthFromViewController:(UIViewController *)viewController callback:(void (^)(id data))callback;
+
 @end

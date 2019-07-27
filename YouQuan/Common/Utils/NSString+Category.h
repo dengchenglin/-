@@ -50,3 +50,16 @@
 - (CGSize)sizeWithFont:(UIFont*)font  maxSize:(CGSize)size;
 
 @end
+
+@interface NSString (Emoji)
+
+- (NSString *)emojiEncode;
+- (NSString *)emojiDecode;
+
+@end
+@interface NSString (HTML)
+- (NSString *) unescapeHTML;
+- (NSString *) escapeHTML;
+- (NSString *) stripHTML: (BOOL) replaceBlockTagsWithNewLine;
+- (NSString *)justReplaceHtmlTags;
+@end

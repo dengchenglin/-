@@ -21,5 +21,8 @@
     }
     return nil;
 }
-
+- (void)updateCount{
+    UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
+    [[NSUserDefaults standardUserDefaults]setValue:@(pasteboard.changeCount) forKey:CTPasteTextChangeCountKey];
+}
 @end

@@ -131,4 +131,13 @@
 - (CLRequest *)icomenRankWithCallback:(CTResponseBlock)callback{
       return [self postWithPath:CTUser(@"income_rank") params:nil callback:callback];
 }
+//邀请分享
+- (CLRequest *)shareInfoWithCallback:(CTResponseBlock)callback{
+    return [self postWithPath:CTUser(@"share") params:nil callback:callback];
+}
+
+//获取淘宝授权链接
+- (CLRequest *)tbAuthWithCallback:(CTResponseBlock)callback{
+    return [self postWithPath:CTUser(@"tb_oauth") params:nil callback:callback];
+}
 @end

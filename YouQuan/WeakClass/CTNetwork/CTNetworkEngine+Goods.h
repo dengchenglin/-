@@ -31,4 +31,12 @@
 - (CLRequest *)searchHistoryWithCallback:(CTResponseBlock)callback;
 //获取商品图片
 - (CLRequest *)goodsImgWithItemId:(NSString *)itemId callback:(CTResponseBlock)callback;
+
+//获取店铺信息
+- (CLRequest *)storeInfoWithItemId:(NSString *)itemId callback:(CTResponseBlock)callback;
+//商品分享编辑页面
+- (CLRequest *)goodsShareWithId:(NSString *)Id callback:(CTResponseBlock)callback;
+
+//商品分享编辑页面
+- (CLRequest *)goodsShareWithId:(NSString *)Id kind:(CTShopKind)kind callback:(CTResponseBlock)callback;
 @end

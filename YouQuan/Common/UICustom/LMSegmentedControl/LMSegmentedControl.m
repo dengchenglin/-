@@ -32,11 +32,14 @@
 
 @property (nonatomic, copy) NSArray<LMSegmentedModel*> *models;
 
+@property (nonatomic, strong) UIImageView *backgroundView;
+
 @end
 
 @implementation LMSegmentedControl{
     UIView *_containerView;
     UIView *_scrollContainerView;
+    UIView *_bottomLine;
     CGFloat _itemWidth;
 }
 
@@ -48,22 +51,57 @@ ViewInstance(setUp)
     [_containerView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.mas_equalTo(UIEdgeInsetsZero);
     }];
+    _backgroundView = [UIImageView new];
+    [_containerView addSubview:_backgroundView];
+    [_backgroundView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.mas_equalTo(UIEdgeInsetsZero);
+    }];
+    
     _titleNormalColor = [UIColor colorWithHexString:@"#999999"];
     _titleSelectedColor = [UIColor redColor];
     _selectedLineColor = [UIColor redColor];
     _selectedLineWidth = 20;
     _selectedLineHeight = 2;
     _textFont = [UIFont systemFontOfSize:14];
-
+    _showBottomLine = NO;
+   
+}
+- (void)setBackgroundImage:(UIImage *)backgroundImage{
+    _backgroundImage = backgroundImage;
+    _backgroundView.image = _backgroundImage;
 }
 
 - (void)setTitles:(NSArray<NSString *> *)titles{
     _titles = [titles copy];
+    _currentIndex = 0;
     dispatch_async(dispatch_get_main_queue(), ^{
          [self reloadView];
     });
 }
+- (void)setShowBottomLine:(BOOL)showBottomLine{
+    _showBottomLine = showBottomLine;
+    if(_bottomLine){
+        [_bottomLine removeFromSuperview];
+    }
+    if(_showBottomLine){
+        if(!_bottomLine){
+            _bottomLine = [UIImageView new];
+            _bottomLine.backgroundColor = RGBColor(240, 240, 240);
+        }
+        [self addSubview:_bottomLine];
+        [_bottomLine mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.right.bottom.mas_equalTo(0);
+            make.height.mas_equalTo(LINE_WIDTH);
+        }];
+    }
+}
 - (void)reloadView{
+    if(!self.width){
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self reloadView];
+        });
+        return;
+    }
     if(!_scrollView){
         _scrollView = [[UIScrollView alloc]initWithFrame:_containerView.bounds];
         _scrollView.scrollsToTop = NO;
@@ -207,12 +245,13 @@ ViewInstance(setUp)
             UIButton *itemBtn = [UIButton buttonWithType:UIButtonTypeCustom];
             itemBtn.tag = 100 + i;
             [itemBtn setTitle:_titles[i] forState:UIControlStateNormal];
-            itemBtn.titleLabel.numberOfLines = 0;
+            itemBtn.titleLabel.numberOfLines = 2;
             [itemBtn setTitleColor:_titleNormalColor forState:UIControlStateNormal];
             [itemBtn setTitleColor:_titleSelectedColor forState:UIControlStateSelected];
             itemBtn.titleLabel.font = _textFont;
             itemBtn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentCenter;
             itemBtn.titleLabel.textAlignment =NSTextAlignmentCenter;
+            itemBtn.titleLabel.adjustsFontSizeToFitWidth = YES;
             [itemBtn addTarget:self action:@selector(selectAction:) forControlEvents:UIControlEventTouchUpInside];
             [_scrollContainerView addSubview:itemBtn];
             [itemBtn mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -250,6 +289,9 @@ ViewInstance(setUp)
     if(_delegate && [_delegate respondsToSelector:@selector(segmentedControl:didSelectedInbdex:)])
     {
         [_delegate segmentedControl:self didSelectedInbdex:button.tag - 100];
+    }
+    if(self.clickItemBlock){
+        self.clickItemBlock(button.tag - 100);
     }
 }
 
@@ -309,26 +351,34 @@ ViewInstance(setUp)
             tempWidth += self.models[i].width;
         }
         CGFloat left = centerX - _selectedLineWidth/2;
-        [UIView animateWithDuration:0.3 animations:^{
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
             button.layer.transformScale = 1.1;
             [_silder mas_updateConstraints:^(MASConstraintMaker *make) {
                 make.left.mas_equalTo(left);
             }];
-            [_scrollContainerView layoutIfNeeded];
-        }];
-        CGFloat offest = centerX - _scrollView.width/2;
-        CGFloat min = 0;
-        CGFloat max = _scrollView.contentSize.width - _scrollView.width;
-        if(offest <= min){
-            [_scrollView setContentOffset:CGPointZero animated:YES];
-           
-        }
-        else if(offest <= max){
-              [_scrollView setContentOffset:CGPointMake(offest, 0) animated:YES];
-        }
-        else{
-            [_scrollView setContentOffset:CGPointMake(max, 0) animated:YES];
-        }
+            [UIView animateWithDuration:0.3 animations:^{
+                [_scrollContainerView layoutIfNeeded];
+            }];
+       
+            CGFloat offest = centerX - _scrollView.width/2;
+            CGFloat min = 0;
+            CGFloat max = _scrollView.contentSize.width - _scrollView.width;
+            if(max < 0){
+                max = 0;
+            }
+            if(offest <= min){
+                [_scrollView setContentOffset:CGPointZero animated:YES];
+                
+            }
+            else if(offest <= max){
+                [_scrollView setContentOffset:CGPointMake(offest, 0) animated:YES];
+            }
+            else{
+                [_scrollView setContentOffset:CGPointMake(max, 0) animated:YES];
+            }
+        });
+
     }
     else if (_segmentedControlType == LMSegmentedControlConstant){
         

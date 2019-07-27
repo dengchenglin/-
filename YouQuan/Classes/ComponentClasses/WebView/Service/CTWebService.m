@@ -36,5 +36,20 @@ CL_EXPORT_MODULE(CTWebServiceProtocol)
 - (UIViewController *)tbAuthFromViewController:(UIViewController *)viewController url:(NSString *)url callback:(void (^)(id data))callback{
     return [CTTaoBaoAuthViewController tbAuthFromViewController:viewController url:url callback:callback];
 }
-
+- (void)tbAuthFromViewController:(UIViewController *)viewController completed:(void (^)(void))completed{
+    if([CTAppManager user].tbk_relation_id.length){
+        if(completed){
+            completed();
+        }
+        return;
+    }
+    [CTTaoBaoAuthViewController tbAuthFromViewController:viewController callback:^(id data) {
+        if(data){
+            [CTAppManager user].tbk_relation_id = data[@"data"][@"tbk_relation_id"];
+            if(completed){
+                completed();
+            }
+        }
+    }];
+}
 @end

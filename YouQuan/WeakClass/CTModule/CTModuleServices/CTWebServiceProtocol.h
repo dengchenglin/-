@@ -21,4 +21,6 @@
 - (UIViewController *)showWebFromViewController:(UIViewController *)viewController url:(NSString *)url;
 
 - (UIViewController *)tbAuthFromViewController:(UIViewController *)viewController url:(NSString *)url callback:(void(^)(id data))callback;
+
+- (void)tbAuthFromViewController:(UIViewController *)viewController completed:(void(^)(void))completed;
 @end

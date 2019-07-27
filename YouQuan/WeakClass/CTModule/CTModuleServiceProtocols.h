@@ -9,6 +9,8 @@
 #ifndef CTModuleServiceProtocols_h
 #define CTModuleServiceProtocols_h
 
+#import "CTGlobalConst.h"
+
 #import "CTMineServiceProtocol.h"
 #import "CTMemberServiceProtocol.h"
 #import "CTRecommendServiceProtocol.h"
@@ -25,4 +27,8 @@
 #import "CTToolServiceProtocol.h"
 #import "CTWithdrawServiceProtocol.h"
 #import "CTUserInfoServiceProtocol.h"
+
+#import "CTPromotionServiceProtocol.h"
+
+
 #endif /* CTModuleServiceProtocols_h */

@@ -47,4 +47,7 @@
 
 + (id<CTUserInfoServiceProtocol>)userInfoService;
 
++ (id<CTPromotionServiceProtocol>)promotionService;
+
+
 @end
