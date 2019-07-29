@@ -13,11 +13,7 @@
 @property (nonatomic, copy) NSString *img;
 @property (nonatomic, copy) NSString *name;
 @end
-@interface CTMemberUpgradeConditionModel:NSObject
-@property (nonatomic, copy) NSString *txt1;
-@property (nonatomic, copy) NSString *txt2;
-@property (nonatomic, copy) NSString *txt3;
-@end
+
 @interface CTMemberInfoModel : NSObject
 @property (nonatomic, strong) CTUser *user;
 @property (nonatomic, copy) NSArray <CTMemberRebateModel *> *user_rebate;

@@ -377,14 +377,10 @@
             goShop();
         });
     }];
+    
     //点击分享
     void(^toShareBlock)(void) = ^{
-        judgeLoginBlock(^{
-            goodsUrlConvertBlock(^(id data){
-                @strongify(self)
-                [CTGoodsPreViewController pushGoodPreFromViewController:self viewModel:self.viewModel qCodeContent:data[@"qcode_content"]];
-            });
-        });
+        [CTModuleHelper shareShopFromViewController:self viewModel:self.viewModel];
     };
     [self.navBar.shareButton touchUpInsideSubscribeNext:^(id x) {
         toShareBlock();

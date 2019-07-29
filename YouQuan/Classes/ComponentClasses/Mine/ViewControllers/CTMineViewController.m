@@ -306,11 +306,10 @@
         UIViewController *webVc = [[CTModuleManager webService] pushWebFromViewController:self url:CTH5UrlForType(CTH5UrlGetTikcetAuide)];
         webVc.title = @"领券指南";
     }];
-    //我的邀请码
+    //邀请券友
     [self.toolView.inviteCodeView addActionWithBlock:^(id target) {
         @strongify(self)
-        UIViewController *shareVc = [[CTModuleManager shareService] rootViewController];
-        [self.navigationController pushViewController:shareVc animated:YES];
+          [[CTModuleManager shareService] pushMyInviteCodeFromViewController:self];
     }];
     //常见问题
     [self.toolView.questionView addActionWithBlock:^(id target) {
@@ -324,7 +323,13 @@
         UIViewController *vc = [[CTModuleManager memberService]memberEquityViewController];
         [self.navigationController pushViewController:vc animated:YES];
     }];
-
+    //商学院
+    [self.toolView.sxyView addActionWithBlock:^(id target) {
+        @strongify(self)
+        UIViewController *vc = [[CTModuleManager toolService]syxViewController];
+        [self.navigationController pushViewController:vc animated:YES];
+    }];
+    
     //导航渐变效果
     [self.containerView setScrollBlock:^(CGPoint contentOffest) {
         @strongify(self)

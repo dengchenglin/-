@@ -23,6 +23,10 @@
 
 - (CLRequest *)cateGoodsWithPage:(NSInteger)page size:(NSInteger)size cateId:(NSString *)cateId order:(NSString *)order showHud:(BOOL)showHud callback:(CTResponseBlock)callback;
 
+//分类获取
+- (CLRequest *)_cateWithPid:(NSString *)pid callback:(CTResponseBlock)callback;
+- (CLRequest *)cateWithPid:(NSString *)pid callback:(CTResponseBlock)callback cachesType:(CTNetCachesType)cachesType;
+
 
 
 //活动商品列表

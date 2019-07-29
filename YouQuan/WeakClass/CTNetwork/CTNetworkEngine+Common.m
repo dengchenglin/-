@@ -10,6 +10,11 @@
 
 #define CTCommon(path)   [CTUrlPath(@"common") stringByAppendingPathComponent:path]
 
+@implementation CTAppFunctionIo
+
+
+@end
+
 @implementation CTNetworkEngine (Common)
 
 - (void)iosFunctionIo{
@@ -30,12 +35,14 @@
     NSString *showRankingKey = @"showRankingKey";
     [self postWithPath:CTCommon(@"app_function_io") params:nil showHud:NO callback:^(id data, CLRequest *request, CTNetError error) {
         if(!error && data){
-            BOOL showRecom = [[NSString stringWithFormat:@"%@",data[@"recom_show"]] boolValue];
-            BOOL showRanking = [[NSString stringWithFormat:@"%@",data[@"showRanking"]] boolValue];
-            [[NSUserDefaults standardUserDefaults]setValue:@(showRecom) forKey:showRecomKey];
-            [[NSUserDefaults standardUserDefaults]setValue:@(showRanking) forKey:showRankingKey];
-            [CTAppManager sharedInstance].showRecom = showRecom;
-            [CTAppManager sharedInstance].showRanking = showRanking;
+            CTAppFunctionIo *io = [CTAppFunctionIo yy_modelWithDictionary:data];
+     
+            [[NSUserDefaults standardUserDefaults]setValue:@(io.recom_show) forKey:showRecomKey];
+            [[NSUserDefaults standardUserDefaults]setValue:@(io.showRanking) forKey:showRankingKey];
+            [CTAppManager sharedInstance].showRecom = io.recom_show;
+            [CTAppManager sharedInstance].showRanking = io.showRanking;
+            
+            [self checkVersionWithIo:io];
         }
     }];
     NSString *showRecom = [[NSUserDefaults standardUserDefaults]objectForKey:showRecomKey];
@@ -47,5 +54,18 @@
         [CTAppManager sharedInstance].showRanking = [showRanking boolValue];
     }
     
+}
+
+- (void)checkVersionWithIo:(CTAppFunctionIo *)io{
+    NSString *currentVs = [[NSBundle mainBundle] infoDictionary][@"CFBundleShortVersionString"];
+    if(io.app_ios_version.floatValue>currentVs.floatValue){
+        UIAlertView *alt =  [[UIAlertView alloc]initWithTitle:@"" message:nil delegate:nil cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
+        [alt show];
+        [alt.rac_buttonClickedSignal subscribeNext:^(NSNumber * _Nullable x) {
+            if(x.integerValue == 1){
+                [[UIApplication sharedApplication]openURL:[NSURL URLWithString:io.app_ios_url]];
+            }
+        }];
+    }
 }
 @end

@@ -7,9 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
-
-
-
+@interface CTMemberUpgradeConditionModel:NSObject
+@property (nonatomic, copy) NSString *txt1;
+@property (nonatomic, copy) NSString *txt2;
+@property (nonatomic, copy) NSString *txt3;
+@end
 @interface CTUser  :NSObject
 @property (nonatomic, copy) NSString *uid;
 @property (nonatomic, copy) NSString *phone;
@@ -32,6 +34,10 @@
 @property (nonatomic, copy) NSString *cash_name;
 @property (nonatomic, copy) NSString *qq;
 @property (nonatomic, copy) NSString *wx;
+@property (nonatomic, copy) NSString *all_money;
+@property (nonatomic, copy) NSString *valuation_money;
+
+@property (nonatomic, strong) CTMemberUpgradeConditionModel *upgrade_condition;
 @end
 
 @interface CTAppManager : NSObject

@@ -15,4 +15,5 @@
 
 - (UIViewController *)questionViewController;
 
+- (UIViewController *)syxViewController;
 @end

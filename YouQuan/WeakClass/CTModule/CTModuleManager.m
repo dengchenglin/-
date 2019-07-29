@@ -30,6 +30,7 @@
              @"ct_withdraw":[self withdrawService],
              @"ct_userinfo":[self userInfoService],
              @"ct_promotion":[self promotionService],
+             @"ct_cate":[self cateService],
           };
 }
 
@@ -105,5 +106,9 @@
 
 + (id)promotionService{
     return [CLModuleManager moduleServiceInstanceForProtocol:@protocol(CTPromotionServiceProtocol)];
+}
+
++ (id)cateService{
+     return [CLModuleManager moduleServiceInstanceForProtocol:@protocol(CTCateServiceProtocol)];
 }
 @end

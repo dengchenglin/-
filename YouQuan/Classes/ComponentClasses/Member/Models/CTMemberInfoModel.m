@@ -13,8 +13,7 @@
     return @{@"Id":@"id"};
 }
 @end
-@implementation CTMemberUpgradeConditionModel
-@end
+
 @implementation CTMemberInfoModel
 + (NSDictionary *)modelContainerPropertyGenericClass{
     return @{@"user":CTUser.class,@"user_rebate":CTMemberRebateModel.class,@"grade_power":CTMemberGradePowerModel.class,@"upgrade_condition":CTMemberUpgradeConditionModel.class,@"advs":CTActivityModel.class};

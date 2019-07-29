@@ -49,5 +49,5 @@
 
 + (id<CTPromotionServiceProtocol>)promotionService;
 
-
++ (id<CTCateServiceProtocol>)cateService;
 @end

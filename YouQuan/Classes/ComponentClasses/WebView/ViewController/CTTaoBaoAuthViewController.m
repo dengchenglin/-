@@ -102,9 +102,9 @@
 }
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView{
-    [NSTimer scheduledTimerWithTimeInterval:0.1 block:^(NSTimer *timer) {
+    dispatch_async(dispatch_get_main_queue(), ^{
         [MBProgressHUD hideHUDForView:self.view animated:YES];
-    } repeats:NO];
+    });
     
     NSString *title = [webView stringByEvaluatingJavaScriptFromString:@"document.title"];
     if(title){
@@ -112,30 +112,35 @@
     }
     JSContext *context = [self.webView valueForKeyPath:@"documentView.webView.mainFrame.javaScriptContext"];
     context[@"objectcSelector"] = ^(){
-        NSArray *args = [JSContext currentArguments];
-        JSValue *jsVal = [args objectAtIndex:0];
-        NSString *jsStr = [jsVal toString];
-        NSDictionary *data = [jsStr jsonValueDecoded];
-        NSString *result = data[@"status"];
-        if(result.integerValue == 200){
-            if(self.callback){
-                self.callback(data);
+        dispatch_async(dispatch_get_main_queue(), ^{
+            NSArray *args = [JSContext currentArguments];
+            JSValue *jsVal = [args objectAtIndex:0];
+            NSString *jsStr = [jsVal toString];
+            NSDictionary *data = [jsStr jsonValueDecoded];
+            NSString *result = data[@"status"];
+            if(result.integerValue == 200){
+                if(self.callback){
+                    self.callback(data);
+                }
+                [self close];
             }
-            [self close];
-        }
-        else{
-            [CTAlertHelper showTbauthFailAlertViewWithTitle:data[@"info"] callback:^(NSUInteger buttonIndex) {
-                if(buttonIndex == 0){
-                    [self close];
-                }
-                else{
-                    [self reloadData];
-                }
-            }];
-        }
+            else{
+                [CTAlertHelper showTbauthFailAlertViewWithTitle:data[@"info"] callback:^(NSUInteger buttonIndex) {
+                    if(buttonIndex == 0){
+                        [self close];
+                    }
+                    else{
+                        [self reloadData];
+                    }
+                }];
+            }
+        });
     };
     context[@"closePage"] = ^(){
-        [self close];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self close];
+        });
+        
     };
     
 }

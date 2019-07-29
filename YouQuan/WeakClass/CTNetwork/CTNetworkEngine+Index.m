@@ -55,6 +55,29 @@
     return [self postWithPath:CTIndex(@"cate_goods") params:params showHud:showHud callback:callback];
 }
 
+- (CLRequest *)_cateWithPid:(NSString *)pid callback:(CTResponseBlock)callback{
+    return [self cateWithPid:pid callback:callback cachesType:CTNetCachesNone];
+}
+- (CLRequest *)cateWithPid:(NSString *)pid callback:(CTResponseBlock)callback cachesType:(CTNetCachesType)cachesType{
+    NSString *cachesPath = CLDocumentPath(@"index_cate");
+    NSArray *cachesData = [[NSArray alloc]initWithContentsOfFile:cachesPath];
+    if(callback && cachesData &&  (cachesType != CTNetCachesNone)){
+        callback(cachesData,nil,0);
+    }
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    [params setValue:pid forKey:@"pid"];
+    return [self postWithPath:CTIndex(@"cate") params:params showHud:NO callback:^(id data, CLRequest *request, CTNetError error) {
+        if(callback){
+            if((cachesType != CTNetCachesJust) || !cachesData){
+                callback(data,request,error);
+            }
+        }
+        if(!error && !pid.length){
+            [((NSArray *)data) writeToFile:cachesPath atomically:YES];
+        }
+    }];
+}
+
 //活动列表数据
 - (CLRequest *)activityGoodsWithPage:(NSInteger)page size:(NSInteger)size activityId:(NSString *)activityId order:(NSString *)order callback:(CTResponseBlock)callback{
     NSMutableDictionary *params = [NSMutableDictionary dictionary];

@@ -20,13 +20,12 @@
     [super awakeFromNib];
     _couponBgView.image = [[UIImage imageNamed:@"pic_list_coupon_bg1"] resizableImageWithCapInsets:UIEdgeInsetsMake(10, 20, 10, 45)];
 
-    @weakify(self)
+   
     [self.upgradeDescBtn touchUpInsideSubscribeNext:^(id x) {
-        @strongify(self)
         [CTAlertHelper showUpgradePopViewWithInfoConfig:^(NSString *__autoreleasing *text1, NSString *__autoreleasing *text2, NSString *__autoreleasing *text3) {
-            *text1 = @"满足以下条件即可升级为优券导师";
-            *text2 = @"15";
-            *text3 = @"test....";
+            *text1 = [CTAppManager user].upgrade_condition.txt1;
+            *text2 = [CTAppManager user].upgrade_condition.txt2;
+            *text3 = [CTAppManager user].upgrade_condition.txt3;
         }];
     }];
 }

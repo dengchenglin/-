@@ -10,7 +10,7 @@
 
 #import "LMPhotoBrower.h"
 
-#import "DKUpdateData.h"
+#import "DKUploadData.h"
 
 @interface CTPhotoItemView:UIView
 
@@ -193,7 +193,7 @@ ViewInstance(setUp)
     [self.superview.superview endEditing:YES];
     CGFloat currentMaxCount = _maxCount - self.imageItems.count;
     [LMPhotoBrower showPhotoActionSheetWithMaxCount:currentMaxCount callback:^(NSArray<LMPhotoImageItem *> *imageItems) {
-        [DKUpdateData updateImages:[imageItems map:^id(NSInteger index, LMPhotoImageItem *element) {
+        [DKUploadData uploadImages:[imageItems map:^id(NSInteger index, LMPhotoImageItem *element) {
             return element.thumbImage?:[UIImage new];
         }] callback:^(NSArray<NSString *> *hashKeys) {
             [imageItems enumerateObjectsUsingBlock:^(LMPhotoImageItem * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {

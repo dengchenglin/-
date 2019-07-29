@@ -9,7 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface CTSearchTextfield : UITextField
+@property (nonatomic, copy) UIColor *logoColor;
 
+@property (nonatomic, copy) void(^searchBlock)(NSString *keyword);
 
+@property (nonatomic, copy) void(^clickSeachBlock)(void);
 
 @end

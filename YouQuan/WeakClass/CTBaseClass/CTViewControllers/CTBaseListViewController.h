@@ -14,7 +14,7 @@
 
 #import "CTViewModel.h"
 
-@interface CTBaseListViewController : CTBaseViewController<UITableViewDataSource,UITableViewDelegate>
+@interface CTBaseListViewController : CTBaseViewController<UITableViewDataSource,UITableViewDelegate,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
 
 @property (nonatomic, strong) CTTableView *tableView;
 

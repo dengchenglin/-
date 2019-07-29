@@ -7,64 +7,80 @@
 //
 
 #import "CTProfitShareViewController.h"
-#import "CTProfitShareView.h"
-#import "CTSharePopView.h"
+#import "CTShareProfitView.h"
+#import "CTShareProfitContainerView.h"
 #import "UIView+YYAdd.h"
 #import "CTNetworkEngine+Member.h"
 
+#import "CTSharePopupView.h"
+
 @interface CTProfitShareViewController ()
 
-@property (nonatomic, strong) CTProfitShareView *shareView;
+@property (nonatomic, strong) CTShareProfitContainerView *imgContainerView;
+
+@property (nonatomic, strong) UIButton *shareButton;
 
 @end
 
 @implementation CTProfitShareViewController
 
-- (CTProfitShareView *)shareView{
-    if(!_shareView){
-        _shareView = NSMainBundleName(@"CTProfitShareView_");
+- (CTShareProfitContainerView *)imgContainerView{
+    if(!_imgContainerView){
+        _imgContainerView = [[CTShareProfitContainerView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT - NAVBAR_HEIGHT - 100)];
     }
-    return _shareView;
+    return _imgContainerView;
+}
+- (UIButton *)shareButton{
+    if(!_shareButton){
+        _shareButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        [_shareButton setTitle:@"立即分享" forState:UIControlStateNormal];
+        [_shareButton setBackgroundImage:[UIImage imageNamed:@"pic_rectangle2"] forState:UIControlStateNormal];
+        [_shareButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        _shareButton.clipsToBounds = YES;
+        _shareButton.titleLabel.font = [UIFont systemFontOfSize:15];
+    }
+    return _shareButton;
 }
 
 - (void)setUpUI{
     self.title = @"分享收益";
     self.navigationBarStyle = CTNavigationBarWhite;
     [self setRightButtonWithTitle:@"分享海报" font:CTPsmFont(14) titleColor:CTColor selector:@selector(share)];
-    [self.view addSubview:self.shareView];
+    [self.view addSubview:self.imgContainerView];
+    [self.view addSubview:self.shareButton];
+    
 }
 
 - (void)autoLayout{
-    [self.shareView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.mas_equalTo(UIEdgeInsetsZero);
+    [self.shareButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.size.mas_equalTo(CGSizeMake(210, 48));
+        make.centerX.mas_equalTo(self.view.mas_centerX);
+        make.bottom.mas_equalTo((48 - 100)/2);
     }];
 }
 
-- (void)reloadView{
-    NSString *qCodeUrl = [CTRequest qCodeUrl];
-    [self.shareView.qrCodeImageView sd_setImageWithURL:[NSURL URLWithString:qCodeUrl]];
-    self.shareView.qrCodeLabel.text = [NSString stringWithFormat:@"邀请码 %@",[CTAppManager user].iv_code];
-    self.shareView.usericon = [CTAppManager user].headimg;
-    self.shareView.username = [CTAppManager user].nickname;
-    self.shareView.userlevel = [CTAppManager user].level_txt;
-    self.shareView.profit = _model.all_money;
-    self.shareView.balance = _model.valuation_money;
+- (void)request{
+    [CTRequest shareInfoWithCallback:^(id data, CLRequest *request, CTNetError error) {
+        if(!error){
+            [CTShareProfitView createImagesWithBackgroundImgs:data[@"imgs"] ivCodeImg:data[@"iv_code_img"] ivCode:data[@"iv_code"] user:[CTAppManager user] completed:^(NSArray<UIImage *> * images) {
+              
+                self.imgContainerView.images = images;
+            }];
+        }
+    }];
 }
 
-- (void)share{
-    __block UIImage *image;
-    [MBProgressHUD showHUDAddedTo:[UIApplication sharedApplication].keyWindow animated:YES]; dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        image = [self.view snapshotImage];
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [MBProgressHUD hideHUDForView:[UIApplication sharedApplication].keyWindow animated:YES];
-            if(!image){
-                [MBProgressHUD showMBProgressHudWithTitle:@"图片出错"];
-                return;
-            }
-              [CTSharePopView showSharePopViewWithTypes:@[CTShareTypeWeChat,CTShareTypeQQ,CTShareTypeSaveImg] image:image imageUrl:nil title:nil url:nil];
-        });
-    });
-    
-  
+- (void)setUpEvent{
+    @weakify(self)
+    [self.shareButton touchUpInsideSubscribeNext:^(id x) {
+        @strongify(self)
+        if(self.imgContainerView.currentImage){
+            [CTSharePopupView showSharePopupWithImages:@[self.imgContainerView.currentImage] onView:self.view contentInset:UIEdgeInsetsMake(NAVBAR_HEIGHT, 0, 0, 0 )];
+        }
+        else{
+            [MBProgressHUD showMBProgressHudWithTitle:@"图片出错,请刷新重新操作~"];
+        }
+    }];
 }
+
 @end

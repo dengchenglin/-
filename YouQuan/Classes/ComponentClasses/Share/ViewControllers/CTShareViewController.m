@@ -14,7 +14,7 @@
 
 #import "UIView+YYAdd.h"
 
-#import "DKUpdateData.h"
+#import "DKUploadData.h"
 
 #import "CTNetworkEngine+Member.h"
 

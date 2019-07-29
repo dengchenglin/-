@@ -29,6 +29,6 @@
 #import "CTUserInfoServiceProtocol.h"
 
 #import "CTPromotionServiceProtocol.h"
-
+#import "CTCateServiceProtocol.h"
 
 #endif /* CTModuleServiceProtocols_h */

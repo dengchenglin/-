@@ -147,7 +147,7 @@
    //,
     NSMutableArray *tabDatas = [NSMutableArray array];
     [tabDatas addObject:@{@"tabbar_normal_image":@"ic_tab_home",@"tabbar_selected_image":@"ic_tab_home_highlight",@"title":@"首页",@"service":@"ct_home",@"is_login":@"0"}];
-    [tabDatas addObject:@{@"tabbar_normal_image":@"ic_tab_cate",@"tabbar_selected_image":@"ic_tab_cate_highlight",@"title":@"分类",@"service":@"ct_member",@"is_login":@"1"}];
+    [tabDatas addObject:@{@"tabbar_normal_image":@"ic_tab_cate",@"tabbar_selected_image":@"ic_tab_cate_highlight",@"title":@"分类",@"service":@"ct_cate",@"is_login":@"0"}];
     [tabDatas addObject:@{@"tabbar_normal_image":@"ic_tab_search",@"tabbar_selected_image":@"ic_tab_search_highlight",@"title":@"查券",@"service":@"ct_search_ticket",@"is_login":@"0"}];
     [tabDatas addObject:@{@"tabbar_normal_image":@"ic_tab_promotion",@"tabbar_selected_image":@"ic_tab_promotion_highlight",@"title":@"发圈",@"service":@"ct_promotion",@"is_login":@"0"}];
     [tabDatas addObject:@{@"tabbar_normal_image":@"ic_tab_my",@"tabbar_selected_image":@"ic_tab_my_highlight",@"title":@"我的",@"service":@"ct_mine",@"is_login":@"1"}];

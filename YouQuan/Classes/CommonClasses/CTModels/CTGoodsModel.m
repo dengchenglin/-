@@ -85,7 +85,5 @@ NSString *GetGrabTypeStr(NSInteger type){
     return @{@"goods":CTGoodsModel.class,@"seckill_content":CTSeckillContentModel.class,@"item_data":CTGoodsModel.class};
 }
 
-- (CTShopKind)shopKind{
-    return _type - 1;
-}
+
 @end

@@ -26,7 +26,7 @@
     if (self) {
         _imageView = [[UIImageView alloc]init];
         _imageView.clipsToBounds = YES;
-        _imageView.contentMode = UIViewContentModeScaleAspectFill;
+        //_imageView.contentMode = UIViewContentModeScaleAspectFill;
         _imageView.backgroundColor = RGBColor(245, 245, 245);
         [self.contentView addSubview:_imageView];
   

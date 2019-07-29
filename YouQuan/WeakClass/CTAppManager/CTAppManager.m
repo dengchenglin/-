@@ -99,6 +99,10 @@ SINGLETON_FOR_CLASS_IMP(CTAppManager)
 }
 @end
 @implementation CTUser
++ (NSDictionary *)modelContainerPropertyGenericClass{
+    return @{@"upgrade_condition":CTMemberUpgradeConditionModel.class};
+}
 
-
+@end
+@implementation CTMemberUpgradeConditionModel
 @end

@@ -31,7 +31,7 @@
 }
 
 - (CTTableView *)tableView{
-    if(!_tableView){
+    if(!_tableView && !self.isCollectionView){
         _tableView = [[CTTableView alloc]init];
         _tableView.dataSource = self;
         _tableView.delegate = self;
@@ -49,7 +49,7 @@
 }
 
 - (UICollectionView *)collectionView{
-    if(!_collectionView){
+    if(!_collectionView && self.isCollectionView){
         LineLayout *layout = [[LineLayout alloc]init];
         _collectionView = [[UICollectionView alloc]initWithFrame:self.view.bounds collectionViewLayout:layout];
         _collectionView.backgroundColor = [UIColor clearColor];

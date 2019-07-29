@@ -34,27 +34,27 @@
 - (void)setUpUI{
     self.title = @"发圈";
     [self.view addSubview:self.segmentedControl];
-//    self.segmentedControl.titles = @[@"每日单品",@"多品推荐",@"宣传素材"];
+    self.segmentedControl.titles = @[@"每日单品",@"多品推荐",@"宣传素材"];
     NSMutableArray *array = [NSMutableArray array];
     [array addObject:[CTOneGoodListViewController new]];
-//    [array addObject:[CTMultipleGoodListViewController new]];
-//    [array addObject:[CTMaterialListViewController new]];
+    [array addObject:[CTMultipleGoodListViewController new]];
+    [array addObject:[CTMaterialListViewController new]];
     self.viewControllers = array;
 
 }
 - (void)autoLayout{
-//    [self.segmentedControl mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.top.left.right.mas_equalTo(0);
-//        make.height.mas_equalTo(48);
-//    }];
-//    self.contentInsets = UIEdgeInsetsMake(48, 0, 0, 0);
+    [self.segmentedControl mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.left.right.mas_equalTo(0);
+        make.height.mas_equalTo(48);
+    }];
+    self.contentInsets = UIEdgeInsetsMake(48, 0, 0, 0);
 }
 
-//- (void)segmentedControl:(LMSegmentedControl *)segmentedControl didSelectedInbdex:(NSUInteger)index{
-//    [self scrollToIndex:index];
-//}
-//
-//- (void)pageController:(CTPageController *)pageController didScrollToIndex:(NSInteger)index{
-//    [self.segmentedControl scrollToIndex:index];
-//}
+- (void)segmentedControl:(LMSegmentedControl *)segmentedControl didSelectedInbdex:(NSUInteger)index{
+    [self scrollToIndex:index];
+}
+
+- (void)pageController:(CTPageController *)pageController didScrollToIndex:(NSInteger)index{
+    [self.segmentedControl scrollToIndex:index];
+}
 @end
