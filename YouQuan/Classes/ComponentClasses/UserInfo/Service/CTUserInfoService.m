@@ -28,5 +28,18 @@ CL_EXPORT_MODULE(CTUserInfoServiceProtocol)
     vc.type = type;
     return vc;
 }
+- (UIViewController *)viewControllerForType:(CTUserEditType)type success:(void(^)(id value))success{
+    CTUserEditViewController *vc = [CTUserEditViewController new];
+    vc.type = type;
+    vc.success = success;
+    return vc;
+}
 
+- (UIViewController *)viewControllerForType:(CTUserEditType)type Id:(NSString *)Id success:(void(^)(id value))success{
+    CTUserEditViewController *vc = [CTUserEditViewController new];
+    vc.type = type;
+    vc.success = success;
+    vc.Id = Id;
+    return vc;
+}
 @end

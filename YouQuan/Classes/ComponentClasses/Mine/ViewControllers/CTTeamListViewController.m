@@ -14,7 +14,9 @@
 
 #import "CTNetworkEngine+Member.h"
 
-@interface CTTeamListViewController ()
+#import "CTRecListViewController.h"
+
+@interface CTTeamListViewController ()<CTTeamListCellDelegate>
 
 @property (nonatomic, strong) NSMutableArray <CTUser *> *dataSources;
 
@@ -54,11 +56,19 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     CTTeamListCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(CTTeamListCell.class)];
     cell.user = self.dataSources[indexPath.row];
+    cell.delegate = self;
+    cell.index = indexPath.row;
     return cell;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     UIViewController *vc = [[CTModuleManager userInfoService]viewControllerForUserId:  self.dataSources[indexPath.row].uid];
     [self.navigationController pushViewController:vc animated:YES];
 }
+
+- (void)didClickRecWithIndex:(NSInteger)index{
+    CTRecListViewController *vc = [CTRecListViewController new];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
 
 @end

@@ -22,7 +22,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UIImageView *qrCodeImageView;
 @property (weak, nonatomic) IBOutlet UILabel *qrCodeLabel;
 @property (nonatomic, strong) CTUser *user;
-
+@property (nonatomic, copy) NSString *profit;
+@property (nonatomic, copy) NSString *balance;
+@property (nonatomic, copy) NSString *qrCode;
 
 + (void)createImagesWithBackgroundImgs:(NSArray <NSString *>*)backgroundImgs ivCodeImg:(NSString *)ivCodeImg ivCode:(NSString *)ivCode user:(CTUser *)user completed:(void(^)(NSArray <UIImage *>*images))completed;
 @end

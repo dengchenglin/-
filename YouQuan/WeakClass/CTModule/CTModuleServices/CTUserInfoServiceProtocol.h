@@ -13,7 +13,8 @@
 typedef NS_ENUM(NSInteger,CTUserEditType){
     CTUserEditIcon,
     CTUserEditWX,
-    CTUserEditQQ
+    CTUserEditQQ,
+    CTUserEditRemark
 };
 
 @protocol CTUserInfoServiceProtocol <NSObject,CLModuleServiceProtocol>
@@ -22,4 +23,7 @@ typedef NS_ENUM(NSInteger,CTUserEditType){
 
 - (UIViewController *)viewControllerForType:(CTUserEditType)type;
 
+- (UIViewController *)viewControllerForType:(CTUserEditType)type success:(void(^)(id value))success;
+
+- (UIViewController *)viewControllerForType:(CTUserEditType)type Id:(NSString *)Id success:(void(^)(id value))success;
 @end

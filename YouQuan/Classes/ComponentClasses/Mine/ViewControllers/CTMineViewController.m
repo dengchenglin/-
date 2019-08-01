@@ -149,10 +149,12 @@
         [self.containerView.tableView endRefreshing];
         if(!error){
             [CTAppManager saveUserWithInfo:data[@"user"]];
+          
             self.headView.user = [CTAppManager user];
             self.earnView.user = [CTAppManager user];
             self.balanceView.user = [CTAppManager user];
             self.earnView.model = [CTMyEarnModel yy_modelWithDictionary:data];
+            
         }
     }];
 }
@@ -216,6 +218,10 @@
     }];
     //登录注册后刷新
     [[[[NSNotificationCenter defaultCenter]rac_addObserverForName:CTDidLoginNotification object:nil] takeUntil:self.rac_willDeallocSignal] subscribeNext:^(NSNotification * _Nullable x) {
+        @strongify(self)
+        [self request];
+    }];
+    [[[[NSNotificationCenter defaultCenter]rac_addObserverForName:CTRefreshMineNotification object:nil] takeUntil:self.rac_willDeallocSignal] subscribeNext:^(NSNotification * _Nullable x) {
         @strongify(self)
         [self request];
     }];

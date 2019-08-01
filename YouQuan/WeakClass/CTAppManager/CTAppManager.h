@@ -33,11 +33,15 @@
 @property (nonatomic, copy) NSString *cash_account;
 @property (nonatomic, copy) NSString *cash_name;
 @property (nonatomic, copy) NSString *qq;
+@property (nonatomic, copy) NSString *remark;
 @property (nonatomic, copy) NSString *wx;
 @property (nonatomic, copy) NSString *all_money;
 @property (nonatomic, copy) NSString *valuation_money;
 
 @property (nonatomic, strong) CTMemberUpgradeConditionModel *upgrade_condition;
+
+//直属用户
+@property (nonatomic, copy) NSString *people_num;
 @end
 
 @interface CTAppManager : NSObject

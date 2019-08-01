@@ -311,6 +311,7 @@
                         getFinalData(data);
                     }
                 }];
+                
             }
             else{//如果未绑定过渠道id 需要先进行淘宝h5授权  h5授权成功后js返回数据与绑定成功后的数据一样
                 NSInteger status = [data[@"status"] integerValue];

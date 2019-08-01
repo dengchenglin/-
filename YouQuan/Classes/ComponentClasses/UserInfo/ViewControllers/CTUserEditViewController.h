@@ -11,6 +11,7 @@
 NSString *GetEditTitleStr(CTUserEditType type);
 
 @interface CTUserEditViewController : CTBaseViewController
+@property (nonatomic, copy) NSString *Id;
 @property (nonatomic, assign) CTUserEditType type;
-
+@property (nonatomic, copy) void (^success)(id value);
 @end

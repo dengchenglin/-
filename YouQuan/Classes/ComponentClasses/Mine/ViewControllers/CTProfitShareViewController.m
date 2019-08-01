@@ -27,6 +27,7 @@
 - (CTShareProfitContainerView *)imgContainerView{
     if(!_imgContainerView){
         _imgContainerView = [[CTShareProfitContainerView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT - NAVBAR_HEIGHT - 100)];
+       
     }
     return _imgContainerView;
 }
@@ -45,7 +46,7 @@
 - (void)setUpUI{
     self.title = @"分享收益";
     self.navigationBarStyle = CTNavigationBarWhite;
-    [self setRightButtonWithTitle:@"分享海报" font:CTPsmFont(14) titleColor:CTColor selector:@selector(share)];
+
     [self.view addSubview:self.imgContainerView];
     [self.view addSubview:self.shareButton];
     
@@ -62,6 +63,7 @@
 - (void)request{
     [CTRequest shareInfoWithCallback:^(id data, CLRequest *request, CTNetError error) {
         if(!error){
+       
             [CTShareProfitView createImagesWithBackgroundImgs:data[@"imgs"] ivCodeImg:data[@"iv_code_img"] ivCode:data[@"iv_code"] user:[CTAppManager user] completed:^(NSArray<UIImage *> * images) {
               
                 self.imgContainerView.images = images;
@@ -74,8 +76,9 @@
     @weakify(self)
     [self.shareButton touchUpInsideSubscribeNext:^(id x) {
         @strongify(self)
+        
         if(self.imgContainerView.currentImage){
-            [CTSharePopupView showSharePopupWithImages:@[self.imgContainerView.currentImage] onView:self.view contentInset:UIEdgeInsetsMake(NAVBAR_HEIGHT, 0, 0, 0 )];
+            [CTSharePopupView showSharePopupWithImages:@[self.imgContainerView.currentImage] onView:self.view contentInset:UIEdgeInsetsMake(0, 0, 0, 0 )];
         }
         else{
             [MBProgressHUD showMBProgressHudWithTitle:@"图片出错,请刷新重新操作~"];

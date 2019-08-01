@@ -22,6 +22,9 @@ NSString *GetEditTitleStr(CTUserEditType type){
         case CTUserEditQQ:
             return @"QQ号";
             break;
+        case CTUserEditRemark:
+            return @"添加备注";
+            break;
         default:
             break;
    }
@@ -49,6 +52,7 @@ NSString *GetInfoKey(CTUserEditType type){
 @property (nonatomic, strong) CTEditInputView *infoTextView;
 
 @property (nonatomic, strong) CTDoneButton *doneButton;
+
 @end
 
 @implementation CTUserEditViewController
@@ -109,13 +113,22 @@ NSString *GetInfoKey(CTUserEditType type){
             [MBProgressHUD showMBProgressHudWithTitle:[NSString stringWithFormat:@"请输入%@",GetEditTitleStr(_type)]];
             return ;
         }
-        [CTRequest userInfoSaveWithInfo:@{GetInfoKey(_type):self.infoTextView.textField.text} callback:^(id data, CLRequest *request, CTNetError error) {
-            if(!error){
-                [MBProgressHUD showMBProgressHudWithTitle:@"保存成功" hideAfterDelay:1.0 complited:^{
-                    [self.navigationController popViewControllerAnimated:YES];
-                }];
-            }
-        }];
+        if(_type == CTUserEditRemark){
+            
+        }
+        else{
+            [CTRequest userInfoSaveWithInfo:@{GetInfoKey(_type):self.infoTextView.textField.text} callback:^(id data, CLRequest *request, CTNetError error) {
+                if(!error){
+                    [MBProgressHUD showMBProgressHudWithTitle:@"保存成功" hideAfterDelay:1.0 complited:^{
+                        [self.navigationController popViewControllerAnimated:YES];
+                    }];
+                    if(self.success){
+                        self.success(self.infoTextView.textField.text);
+                    }
+                    POST_NOTIFICATION(CTRefreshMineNotification);
+                }
+            }];
+        }
     }];
 }
 
