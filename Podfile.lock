@@ -25,7 +25,7 @@ PODS:
   - PLeakSniffer (0.1.0)
   - Qiniu (7.2.5):
     - HappyDNS (~> 0.3)
-  - ReactiveObjC (3.1.0)
+  - ReactiveObjC (3.1.1)
   - SDCycleScrollView (1.75):
     - SDWebImage (>= 4.0.0)
   - SDWebImage (4.4.6):
@@ -120,7 +120,7 @@ SPEC CHECKSUMS:
   MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
   PLeakSniffer: f7eb13cd3a36150e0a2fd5fe8a33ca83bd2646d4
   Qiniu: 909b408ee489ea54827e9717be90b94bc9dfbc48
-  ReactiveObjC: 2a38ea15335de4119d8b17caf1db1484f61db902
+  ReactiveObjC: 011caa393aa0383245f2dcf9bf02e86b80b36040
   SDCycleScrollView: 884b88f0266dd4708a0e1934975c69cb971707b1
   SDWebImage: 3f3f0c02f09798048c47a5ed0a13f17b063572d8
   SGQRCode: bf02d60e18d6660a9d75ff1c8b9b467f064f054e
@@ -136,6 +136,6 @@ SPEC CHECKSUMS:
   YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
   ZLPhotoBrowser: ee7cb33620dc338cece3b0e49abf78e7558abfb2
 
-PODFILE CHECKSUM: fe2d2c975e49fe2031955af52ce3a97cd013d84c
+PODFILE CHECKSUM: 7a288b70233859174e6b4f89c48f109e8188ccde
 
 COCOAPODS: 1.6.1
