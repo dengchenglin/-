@@ -18,20 +18,20 @@
     _selected = selected;
     if(_selected){
         self.backgroundImageView.image = [UIImage imageNamed:@"pic_bt_bg"];
-        [self.containerView recursive:^(UIView *subView) {
-            if([subView isKindOfClass:UILabel.class]){
-                ((UILabel *)subView).textColor = [UIColor whiteColor];
-            }
-        }];
+//        [self.containerView recursive:^(UIView *subView) {
+//            if([subView isKindOfClass:UILabel.class]){
+//                ((UILabel *)subView).textColor = [UIColor whiteColor];
+//            }
+//        }];
     }
     else{
         self.backgroundImageView.image = nil;
         
-        [self.containerView recursive:^(UIView *subView) {
-            if([subView isKindOfClass:UILabel.class]){
-                ((UILabel *)subView).textColor = RGBColor(100, 100, 100);
-            }
-        }];
+//        [self.containerView recursive:^(UIView *subView) {
+//            if([subView isKindOfClass:UILabel.class]){
+//                ((UILabel *)subView).textColor = RGBColor(100, 100, 100);
+//            }
+//        }];
     }
 }
 

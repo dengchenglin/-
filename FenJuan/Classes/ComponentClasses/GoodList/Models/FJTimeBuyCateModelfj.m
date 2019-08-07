@@ -6,9 +6,9 @@
 //  Copyright © 2019年 Danke. All rights reserved.
 //
 
-#import "CTTimeBuyCateModel.h"
+#import "FJTimeBuyCateModelfj.h"
 
-@implementation CTTimeBuyCateModel
+@implementation FJTimeBuyCateModelfj
 + (NSDictionary *)modelCustomPropertyMapper{
     return @{@"Id":@"id"};
 }

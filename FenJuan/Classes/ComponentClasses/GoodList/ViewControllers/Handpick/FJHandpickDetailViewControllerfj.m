@@ -6,25 +6,25 @@
 //  Copyright © 2019年 Danke. All rights reserved.
 //
 
-#import "CTHandpickDetailViewController.h"
+#import "FJHandpickDetailViewControllerfj.h"
 
-#import "CTHandpickDescView.h"
+#import "FJHandpickDescViewfj.h"
 
 #import "CTGoodListCell.h"
 
 #import "CTNetworkEngine+Recommend.h"
 
-@interface CTHandpickDetailViewController ()<UITableViewDelegate,UITableViewDataSource>
+@interface FJHandpickDetailViewControllerfj ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic, strong) UITableView *tableView;
 
-@property (nonatomic, strong) CTHandpickDescView *descView;
+@property (nonatomic, strong) FJHandpickDescViewfj *descView;
 
 @property (nonatomic, strong) CTGoodsViewModel *viewModel;
 
 @end
 
-@implementation CTHandpickDetailViewController
+@implementation FJHandpickDetailViewControllerfj
 
 - (UITableView *)tableView{
     if(!_tableView){
@@ -39,9 +39,9 @@
     return _tableView;
 }
 
-- (CTHandpickDescView *)descView{
+- (FJHandpickDescViewfj *)descView{
     if(!_descView){
-        _descView = NSMainBundleClass(CTHandpickDescView.class);
+        _descView = NSMainBundleClass(FJHandpickDescViewfj.class);
 
     }
     return _descView;

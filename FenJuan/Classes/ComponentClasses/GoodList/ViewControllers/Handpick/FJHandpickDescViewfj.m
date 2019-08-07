@@ -6,9 +6,9 @@
 //  Copyright © 2019年 Danke. All rights reserved.
 //
 
-#import "CTHandpickDescView.h"
+#import "FJHandpickDescViewfj.h"
 
-@implementation CTHandpickDescView
+@implementation FJHandpickDescViewfj
 
 - (void)awakeFromNib{
     [super awakeFromNib];

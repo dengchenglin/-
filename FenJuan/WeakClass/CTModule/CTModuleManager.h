@@ -50,4 +50,10 @@
 + (id<CTPromotionServiceProtocol>)promotionService;
 
 + (id<CTCateServiceProtocol>)cateService;
+
++ (id<CTJudapaiServiceProtocol>)judapaiService;
+
++ (id<CTShipingouServiceProtocol>)shipingouService;
+
++ (id<CTMrdkServiceProtocol>)mrdkService;
 @end

@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "CTMrdkIndexModel.h"
+#import "FJMrdkIndexModel_fj.h"
 NS_ASSUME_NONNULL_BEGIN
 
 @interface CTMrdkAmountView : UIView
@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UILabel *amountLabel;
 @property (weak, nonatomic) IBOutlet UILabel *countLabel;
 @property (weak, nonatomic) IBOutlet UIButton *doneButton;
-@property (nonatomic, strong) CTMrdkIndexModel *model;
+@property (nonatomic, strong) FJMrdkIndexModel_fj *model;
 @end
 
 NS_ASSUME_NONNULL_END

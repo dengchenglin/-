@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "CTMrdkIndexModel.h"
+#import "FJMrdkIndexModel_fj.h"
 NS_ASSUME_NONNULL_BEGIN
 
 @interface CTMrdkMoneyContainerView : UIView

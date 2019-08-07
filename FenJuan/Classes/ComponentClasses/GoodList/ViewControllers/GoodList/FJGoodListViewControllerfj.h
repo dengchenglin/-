@@ -8,7 +8,7 @@
 
 #import "CTBaseListViewController.h"
 
-@interface CTGoodListViewController : CTBaseListViewController
+@interface FJGoodListViewControllerfj : CTBaseListViewController
 
 @property (nonatomic, copy) NSString *category_id;
 

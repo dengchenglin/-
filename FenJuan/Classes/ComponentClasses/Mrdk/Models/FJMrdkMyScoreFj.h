@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface CTMrdkMyScore : NSObject
+@interface FJMrdkMyScoreFj : NSObject
 @property (nonatomic, copy) NSString *morning_times;
 @property (nonatomic, copy) NSString *gain_money;
 @property (nonatomic, copy) NSString *enroll_money;

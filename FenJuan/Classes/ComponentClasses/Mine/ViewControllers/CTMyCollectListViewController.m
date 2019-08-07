@@ -14,7 +14,7 @@
 
 #import "CTNetworkEngine+Goods.h"
 
-#import "CTGoodsPreViewController.h"
+#import "FJGoodsPreViewControllerfj.h"
 
 @interface CTMyCollectListViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -100,7 +100,7 @@
     
    void(^toShare)(id) = ^(id data){
         @strongify(self)
-        [CTGoodsPreViewController pushGoodPreFromViewController:self viewModel:viewModel qCodeContent:data[@"qcode_content"]];
+        [FJGoodsPreViewControllerfj pushGoodPreFromViewController:self viewModel:viewModel qCodeContent:data[@"qcode_content"]];
     };
     
     //通过转链接口获取真正的click_url数据

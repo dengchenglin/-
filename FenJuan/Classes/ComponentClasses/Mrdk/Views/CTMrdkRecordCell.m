@@ -10,7 +10,7 @@
 
 @implementation CTMrdkRecordCell
 
-- (void)setModel:(CTMrdkRecordModel *)model{
+- (void)setModel:(FJMrdkRecordModelfj *)model{
     _model = model;
     
     NSString *enroll_money = _model.enroll_money;

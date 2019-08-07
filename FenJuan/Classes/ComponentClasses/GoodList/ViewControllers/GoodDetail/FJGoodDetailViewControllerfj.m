@@ -6,14 +6,14 @@
 //  Copyright © 2019年 Danke. All rights reserved.
 //
 
-#import "CTGoodDetailViewController.h"
+#import "FJGoodDetailViewControllerfj.h"
 #import "CTGoodsImgsView.h"
 #import "CTGoodsDescView.h"
 #import "CTGoodsCouponView.h"
 #import "CTGoodsBuyView.h"
 #import "CTNetworkEngine+Goods.h"
 #import "CTGoodsViewModel.h"
-#import "CTGoodsPreViewController.h"
+#import "FJGoodsPreViewControllerfj.h"
 #import "CTGoodDetailNavbar.h"
 #import "CTSharePopView.h"
 #import "CTGoodsContentView.h"
@@ -31,7 +31,7 @@
 }
 
 @end
-@interface CTGoodDetailViewController()<UIScrollViewDelegate,UITableViewDelegate,UITableViewDataSource>
+@interface FJGoodDetailViewControllerfj()<UIScrollViewDelegate,UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic, strong) CTGoodsTableView *tableView;
 @property (nonatomic, strong) UIView *headView;
 @property (nonatomic, strong) CTGoodDetailNavbar *navBar;
@@ -45,7 +45,7 @@
 
 @end
 
-@implementation CTGoodDetailViewController
+@implementation FJGoodDetailViewControllerfj
 
 - (CTGoodsTableView *)tableView{
     if(!_tableView){

@@ -13,3 +13,6 @@ NSString * const CTDidLogoutNotification = @"CTDidLogoutNotification";
 NSString * const CTRefreshHotGoodsNotification = @"CTRefreshHotGoodsNotification";
 NSString * const CTRefreshHomeNotification = @"CTRefreshHomeNotification";
 NSString * const CTRefreshMineNotification = @"CTRefreshMineNotification";
+
+
+

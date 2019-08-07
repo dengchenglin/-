@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface CTHotGoodsModel : NSObject
+@interface FJHotGoodsModelfj : NSObject
 @property (nonatomic, assign) double update_timestamp;
 @property (nonatomic, copy) NSString *update_time;
 @property (nonatomic, assign) double next_update_timestamp;

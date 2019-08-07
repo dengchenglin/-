@@ -14,15 +14,15 @@
 @implementation CTMarkPayHelper
 + (void)payWithType:(CTMrdkPayType)type amount:(NSString *)amount activityId:(NSString *)activityId success:(void(^)(id value))success{
     if(type == CTMrdkPayAmount){
-        [CTAlertHelper showPayPasswordViewWithTitle:@"输入支付密码" callback:^(NSString *password) {
-            [CTRequest sa_regWithPayType:CTMrdkPayAmount money:amount password:password activityId:activityId callback:^(id data, CLRequest *request, CTNetError error) {
-                if(!error){
-                    if(success){
-                        success(data);
-                    }
-                }
-            }];
-        }];
+//        [CTAlertHelper showPayPasswordViewWithTitle:@"输入支付密码" callback:^(NSString *password) {
+//            [CTRequest sa_regWithPayType:CTMrdkPayAmount money:amount password:password activityId:activityId callback:^(id data, CLRequest *request, CTNetError error) {
+//                if(!error){
+//                    if(success){
+//                        success(data);
+//                    }
+//                }
+//            }];
+//        }];
     }
     if(type == CTMrdkPayAlipay){
         [CTRequest sa_regWithPayType:CTMrdkPayAlipay money:amount password:nil activityId:activityId callback:^(id data, CLRequest *request, CTNetError error) {

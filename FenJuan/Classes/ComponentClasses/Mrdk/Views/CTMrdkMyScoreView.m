@@ -10,7 +10,7 @@
 
 @implementation CTMrdkMyScoreView
 
-- (void)setModel:(CTMrdkMyScore *)model{
+- (void)setModel:(FJMrdkMyScoreFj *)model{
     _model = model;
     _enrollLabel.text = _model.enroll_money;
     _gainLabel.text = _model.gain_money;

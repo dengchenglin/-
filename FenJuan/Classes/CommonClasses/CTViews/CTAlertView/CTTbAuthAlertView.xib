@@ -15,6 +15,10 @@
             <rect key="frame" x="0.0" y="0.0" width="352" height="280"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rc4-VO-eec">
+                    <rect key="frame" x="0.0" y="0.0" width="352" height="280"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
                 <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cjt-WD-XJv">
                     <rect key="frame" x="0.0" y="0.0" width="352" height="280"/>
                     <subviews>
@@ -91,8 +95,12 @@
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="Cjt-WD-XJv" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="MEu-hZ-xiT"/>
+                <constraint firstItem="rc4-VO-eec" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="SWa-XZ-eDy"/>
+                <constraint firstItem="rc4-VO-eec" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Twb-Ka-Azp"/>
                 <constraint firstAttribute="bottom" secondItem="Cjt-WD-XJv" secondAttribute="bottom" id="YTj-k6-Vbu"/>
+                <constraint firstAttribute="trailing" secondItem="rc4-VO-eec" secondAttribute="trailing" id="ZZe-Ok-PiD"/>
                 <constraint firstItem="Cjt-WD-XJv" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="emu-KS-yhx"/>
+                <constraint firstAttribute="bottom" secondItem="rc4-VO-eec" secondAttribute="bottom" id="pDN-wF-EZb"/>
                 <constraint firstAttribute="trailing" secondItem="Cjt-WD-XJv" secondAttribute="trailing" id="smZ-iM-HoN"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>

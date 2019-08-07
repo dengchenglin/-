@@ -6,8 +6,8 @@
 //  Copyright © 2019年 Danke. All rights reserved.
 //
 
-#import "CTMrdkMyScore.h"
+#import "FJMrdkMyScoreFj.h"
 
-@implementation CTMrdkMyScore
+@implementation FJMrdkMyScoreFj
 
 @end

@@ -6,7 +6,7 @@
 //  Copyright © 2019年 Danke. All rights reserved.
 //
 
-#import "CTMrdkIndexModel.h"
+#import "FJMrdkIndexModel_fj.h"
 
 @implementation CTMrdkMoneyCate
 
@@ -35,10 +35,10 @@
 
 @end
 
-@implementation CTMrdkIndexModel
+@implementation FJMrdkIndexModel_fj
 
 + (NSDictionary *)modelContainerPropertyGenericClass{
-    return @{@"money_cate":CTMrdkMoneyCate.class,@"activity":CTMrdkActivity.class,@"my_score":CTMrdkMyScore.class,@"today_activity_record":CTMrdkTodayActivityRecord.class};
+    return @{@"money_cate":CTMrdkMoneyCate.class,@"activity":CTMrdkActivity.class,@"my_score":FJMrdkMyScoreFj.class,@"today_activity_record":CTMrdkTodayActivityRecord.class};
 }
 
 @end

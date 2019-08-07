@@ -34,7 +34,7 @@ NSString * GetDifferTimeStrWithNextUpdateTimestamp(NSTimeInterval nextUpdateTime
 {
     NSTimer *_timer;
 }
-- (void)setModel:(CTHotGoodsModel *)model{
+- (void)setModel:(FJHotGoodsModelfj *)model{
     _model = model;
     if(_timer && [_timer isValid]){
         [_timer invalidate];

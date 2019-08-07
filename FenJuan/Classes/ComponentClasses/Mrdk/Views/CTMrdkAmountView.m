@@ -12,7 +12,7 @@
 {
     NSTimer *_timer;
 }
-- (void)setModel:(CTMrdkIndexModel *)model{
+- (void)setModel:(FJMrdkIndexModel_fj *)model{
     _model = model;
     _amountDescLabel.text = _model.tip_txt1;
     _amountLabel.text = _model.activity.total_money;
@@ -42,14 +42,14 @@
                     [weakSelf.doneButton setTitle:ts forState:UIControlStateNormal];
                 }
                 else{
-                    POST_NOTIFICATION(CTRefrehMrdkIndexNotification);
+//                    POST_NOTIFICATION(CTRefrehMrdkIndexNotification);
                    
                 }
             } repeats:YES];
             [[NSRunLoop currentRunLoop]addTimer:_timer forMode:NSRunLoopCommonModes];
         }
         else{
-            POST_NOTIFICATION(CTRefrehMrdkIndexNotification);
+//            POST_NOTIFICATION(CTRefrehMrdkIndexNotification);
         }
     }else if (_model.activity.activity_user_status == 3){
        

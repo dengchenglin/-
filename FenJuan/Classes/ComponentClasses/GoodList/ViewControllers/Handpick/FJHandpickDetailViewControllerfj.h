@@ -8,7 +8,7 @@
 
 #import "CTBaseViewController.h"
 
-@interface CTHandpickDetailViewController : CTBaseViewController
+@interface FJHandpickDetailViewControllerfj : CTBaseViewController
 
 @property (nonatomic, copy) NSString *Id;
 

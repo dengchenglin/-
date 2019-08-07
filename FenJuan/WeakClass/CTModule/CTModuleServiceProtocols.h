@@ -31,4 +31,13 @@
 #import "CTPromotionServiceProtocol.h"
 #import "CTCateServiceProtocol.h"
 
+#import "CTShopTypeServiceProtocol.h"
+#import "CTShopKindServiceProtocol.h"
+#import "CTXrzxServiceProtocol.h"
+#import "CTHotGoodsServiceProtocol.h"
+#import "CTEarnTableServiceProtocol.h"
+#import "CTDarenServiceProtocol.h"
+#import "CTJudapaiServiceProtocol.h"
+#import "CTShipingouServiceProtocol.h"
+#import "CTMrdkServiceProtocol.h"
 #endif /* CTModuleServiceProtocols_h */

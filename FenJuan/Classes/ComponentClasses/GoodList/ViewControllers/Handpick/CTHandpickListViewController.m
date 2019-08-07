@@ -10,7 +10,7 @@
 
 #import "CTHandpickListCell.h"
 
-#import "CTHandpickDetailViewController.h"
+#import "FJHandpickDetailViewControllerfj.h"
 
 #import "CTNetworkEngine+Recommend.h"
 
@@ -52,7 +52,7 @@
     return cell;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    CTHandpickDetailViewController *vc = [[CTHandpickDetailViewController alloc]init];
+    FJHandpickDetailViewControllerfj *vc = [[FJHandpickDetailViewControllerfj alloc]init];
     vc.Id = self.dataSources[indexPath.row].model.uid;
     [self.navigationController pushViewController:vc animated:YES];
 }

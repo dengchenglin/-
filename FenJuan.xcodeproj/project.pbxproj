@@ -79,15 +79,15 @@
 		324EC4D722FA74EC00CBC988 /* CTCateSearchBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 324EC07522FA74EA00CBC988 /* CTCateSearchBar.xib */; };
 		324EC4D822FA74EC00CBC988 /* CTCateSubCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 324EC07622FA74EA00CBC988 /* CTCateSubCollectionCell.xib */; };
 		324EC4D922FA74EC00CBC988 /* CTCateSubListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EC07822FA74EA00CBC988 /* CTCateSubListView.m */; };
-		324EC4DA22FA74EC00CBC988 /* CTHotGoodsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EC07C22FA74EA00CBC988 /* CTHotGoodsModel.m */; };
-		324EC4DB22FA74EC00CBC988 /* CTTimeBuyCateModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EC07E22FA74EA00CBC988 /* CTTimeBuyCateModel.m */; };
+		324EC4DA22FA74EC00CBC988 /* FJHotGoodsModelfj.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EC07C22FA74EA00CBC988 /* FJHotGoodsModelfj.m */; };
+		324EC4DB22FA74EC00CBC988 /* FJTimeBuyCateModelfj.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EC07E22FA74EA00CBC988 /* FJTimeBuyCateModelfj.m */; };
 		324EC4DC22FA74EC00CBC988 /* CTGoodService.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EC08122FA74EA00CBC988 /* CTGoodService.m */; };
-		324EC4DD22FA74EC00CBC988 /* CTGoodDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EC08522FA74EA00CBC988 /* CTGoodDetailViewController.m */; };
-		324EC4DE22FA74EC00CBC988 /* CTGoodsPreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EC08722FA74EA00CBC988 /* CTGoodsPreViewController.m */; };
-		324EC4DF22FA74EC00CBC988 /* CTGoodListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EC08A22FA74EA00CBC988 /* CTGoodListViewController.m */; };
-		324EC4E022FA74EC00CBC988 /* CTHandpickDescView.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EC08D22FA74EA00CBC988 /* CTHandpickDescView.m */; };
-		324EC4E122FA74EC00CBC988 /* CTHandpickDescView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 324EC08E22FA74EA00CBC988 /* CTHandpickDescView.xib */; };
-		324EC4E222FA74EC00CBC988 /* CTHandpickDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EC09022FA74EA00CBC988 /* CTHandpickDetailViewController.m */; };
+		324EC4DD22FA74EC00CBC988 /* FJGoodDetailViewControllerfj.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EC08522FA74EA00CBC988 /* FJGoodDetailViewControllerfj.m */; };
+		324EC4DE22FA74EC00CBC988 /* FJGoodsPreViewControllerfj.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EC08722FA74EA00CBC988 /* FJGoodsPreViewControllerfj.m */; };
+		324EC4DF22FA74EC00CBC988 /* FJGoodListViewControllerfj.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EC08A22FA74EA00CBC988 /* FJGoodListViewControllerfj.m */; };
+		324EC4E022FA74EC00CBC988 /* FJHandpickDescViewfj.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EC08D22FA74EA00CBC988 /* FJHandpickDescViewfj.m */; };
+		324EC4E122FA74EC00CBC988 /* FJHandpickDescViewfj.xib in Resources */ = {isa = PBXBuildFile; fileRef = 324EC08E22FA74EA00CBC988 /* FJHandpickDescViewfj.xib */; };
+		324EC4E222FA74EC00CBC988 /* FJHandpickDetailViewControllerfj.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EC09022FA74EA00CBC988 /* FJHandpickDetailViewControllerfj.m */; };
 		324EC4E322FA74EC00CBC988 /* CTHandpickListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EC09222FA74EA00CBC988 /* CTHandpickListCell.m */; };
 		324EC4E422FA74EC00CBC988 /* CTHandpickListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 324EC09322FA74EA00CBC988 /* CTHandpickListCell.xib */; };
 		324EC4E522FA74EC00CBC988 /* CTHandpickListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EC09522FA74EA00CBC988 /* CTHandpickListViewController.m */; };
@@ -580,9 +580,9 @@
 		324EC6ED22FAB02000CBC988 /* CTNetworkEngine+ThirldTk.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EC6EB22FAB02000CBC988 /* CTNetworkEngine+ThirldTk.m */; };
 		324EC70422FAB18B00CBC988 /* FJVideoGoodListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EC6FF22FAB18B00CBC988 /* FJVideoGoodListCell.m */; };
 		324EC70522FAB18B00CBC988 /* FJVideoGoodListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 324EC70022FAB18B00CBC988 /* FJVideoGoodListCell.xib */; };
-		324EC73F22FAB4D800CBC988 /* CTMrdkIndexModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EC70922FAB4D800CBC988 /* CTMrdkIndexModel.m */; };
-		324EC74022FAB4D800CBC988 /* CTMrdkMyScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EC70B22FAB4D800CBC988 /* CTMrdkMyScore.m */; };
-		324EC74122FAB4D800CBC988 /* CTMrdkRecordModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EC70D22FAB4D800CBC988 /* CTMrdkRecordModel.m */; };
+		324EC73F22FAB4D800CBC988 /* FJMrdkIndexModel_fj.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EC70922FAB4D800CBC988 /* FJMrdkIndexModel_fj.m */; };
+		324EC74022FAB4D800CBC988 /* FJMrdkMyScoreFj.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EC70B22FAB4D800CBC988 /* FJMrdkMyScoreFj.m */; };
+		324EC74122FAB4D800CBC988 /* FJMrdkRecordModelfj.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EC70D22FAB4D800CBC988 /* FJMrdkRecordModelfj.m */; };
 		324EC74222FAB4D800CBC988 /* CTAlertHelper+MrdkShareSuccess.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EC71022FAB4D800CBC988 /* CTAlertHelper+MrdkShareSuccess.m */; };
 		324EC74322FAB4D800CBC988 /* CTMarkPayHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EC71222FAB4D800CBC988 /* CTMarkPayHelper.m */; };
 		324EC74422FAB4D800CBC988 /* CTMrdkService.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EC71422FAB4D800CBC988 /* CTMrdkService.m */; };
@@ -746,23 +746,23 @@
 		324EC07622FA74EA00CBC988 /* CTCateSubCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CTCateSubCollectionCell.xib; sourceTree = "<group>"; };
 		324EC07722FA74EA00CBC988 /* CTCateSubListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTCateSubListView.h; sourceTree = "<group>"; };
 		324EC07822FA74EA00CBC988 /* CTCateSubListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTCateSubListView.m; sourceTree = "<group>"; };
-		324EC07B22FA74EA00CBC988 /* CTHotGoodsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTHotGoodsModel.h; sourceTree = "<group>"; };
-		324EC07C22FA74EA00CBC988 /* CTHotGoodsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTHotGoodsModel.m; sourceTree = "<group>"; };
-		324EC07D22FA74EA00CBC988 /* CTTimeBuyCateModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTTimeBuyCateModel.h; sourceTree = "<group>"; };
-		324EC07E22FA74EA00CBC988 /* CTTimeBuyCateModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTTimeBuyCateModel.m; sourceTree = "<group>"; };
+		324EC07B22FA74EA00CBC988 /* FJHotGoodsModelfj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FJHotGoodsModelfj.h; sourceTree = "<group>"; };
+		324EC07C22FA74EA00CBC988 /* FJHotGoodsModelfj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FJHotGoodsModelfj.m; sourceTree = "<group>"; };
+		324EC07D22FA74EA00CBC988 /* FJTimeBuyCateModelfj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FJTimeBuyCateModelfj.h; sourceTree = "<group>"; };
+		324EC07E22FA74EA00CBC988 /* FJTimeBuyCateModelfj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FJTimeBuyCateModelfj.m; sourceTree = "<group>"; };
 		324EC08022FA74EA00CBC988 /* CTGoodService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTGoodService.h; sourceTree = "<group>"; };
 		324EC08122FA74EA00CBC988 /* CTGoodService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTGoodService.m; sourceTree = "<group>"; };
-		324EC08422FA74EA00CBC988 /* CTGoodDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTGoodDetailViewController.h; sourceTree = "<group>"; };
-		324EC08522FA74EA00CBC988 /* CTGoodDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTGoodDetailViewController.m; sourceTree = "<group>"; };
-		324EC08622FA74EA00CBC988 /* CTGoodsPreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTGoodsPreViewController.h; sourceTree = "<group>"; };
-		324EC08722FA74EA00CBC988 /* CTGoodsPreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTGoodsPreViewController.m; sourceTree = "<group>"; };
-		324EC08922FA74EA00CBC988 /* CTGoodListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTGoodListViewController.h; sourceTree = "<group>"; };
-		324EC08A22FA74EA00CBC988 /* CTGoodListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTGoodListViewController.m; sourceTree = "<group>"; };
-		324EC08C22FA74EA00CBC988 /* CTHandpickDescView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTHandpickDescView.h; sourceTree = "<group>"; };
-		324EC08D22FA74EA00CBC988 /* CTHandpickDescView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTHandpickDescView.m; sourceTree = "<group>"; };
-		324EC08E22FA74EA00CBC988 /* CTHandpickDescView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CTHandpickDescView.xib; sourceTree = "<group>"; };
-		324EC08F22FA74EA00CBC988 /* CTHandpickDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTHandpickDetailViewController.h; sourceTree = "<group>"; };
-		324EC09022FA74EA00CBC988 /* CTHandpickDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTHandpickDetailViewController.m; sourceTree = "<group>"; };
+		324EC08422FA74EA00CBC988 /* FJGoodDetailViewControllerfj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FJGoodDetailViewControllerfj.h; sourceTree = "<group>"; };
+		324EC08522FA74EA00CBC988 /* FJGoodDetailViewControllerfj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FJGoodDetailViewControllerfj.m; sourceTree = "<group>"; };
+		324EC08622FA74EA00CBC988 /* FJGoodsPreViewControllerfj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FJGoodsPreViewControllerfj.h; sourceTree = "<group>"; };
+		324EC08722FA74EA00CBC988 /* FJGoodsPreViewControllerfj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FJGoodsPreViewControllerfj.m; sourceTree = "<group>"; };
+		324EC08922FA74EA00CBC988 /* FJGoodListViewControllerfj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FJGoodListViewControllerfj.h; sourceTree = "<group>"; };
+		324EC08A22FA74EA00CBC988 /* FJGoodListViewControllerfj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FJGoodListViewControllerfj.m; sourceTree = "<group>"; };
+		324EC08C22FA74EA00CBC988 /* FJHandpickDescViewfj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FJHandpickDescViewfj.h; sourceTree = "<group>"; };
+		324EC08D22FA74EA00CBC988 /* FJHandpickDescViewfj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FJHandpickDescViewfj.m; sourceTree = "<group>"; };
+		324EC08E22FA74EA00CBC988 /* FJHandpickDescViewfj.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FJHandpickDescViewfj.xib; sourceTree = "<group>"; };
+		324EC08F22FA74EA00CBC988 /* FJHandpickDetailViewControllerfj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FJHandpickDetailViewControllerfj.h; sourceTree = "<group>"; };
+		324EC09022FA74EA00CBC988 /* FJHandpickDetailViewControllerfj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FJHandpickDetailViewControllerfj.m; sourceTree = "<group>"; };
 		324EC09122FA74EA00CBC988 /* CTHandpickListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTHandpickListCell.h; sourceTree = "<group>"; };
 		324EC09222FA74EA00CBC988 /* CTHandpickListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTHandpickListCell.m; sourceTree = "<group>"; };
 		324EC09322FA74EA00CBC988 /* CTHandpickListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CTHandpickListCell.xib; sourceTree = "<group>"; };
@@ -1673,12 +1673,12 @@
 		324EC6FE22FAB18B00CBC988 /* FJVideoGoodListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FJVideoGoodListCell.h; sourceTree = "<group>"; };
 		324EC6FF22FAB18B00CBC988 /* FJVideoGoodListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FJVideoGoodListCell.m; sourceTree = "<group>"; };
 		324EC70022FAB18B00CBC988 /* FJVideoGoodListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FJVideoGoodListCell.xib; sourceTree = "<group>"; };
-		324EC70822FAB4D800CBC988 /* CTMrdkIndexModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTMrdkIndexModel.h; sourceTree = "<group>"; };
-		324EC70922FAB4D800CBC988 /* CTMrdkIndexModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTMrdkIndexModel.m; sourceTree = "<group>"; };
-		324EC70A22FAB4D800CBC988 /* CTMrdkMyScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTMrdkMyScore.h; sourceTree = "<group>"; };
-		324EC70B22FAB4D800CBC988 /* CTMrdkMyScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTMrdkMyScore.m; sourceTree = "<group>"; };
-		324EC70C22FAB4D800CBC988 /* CTMrdkRecordModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTMrdkRecordModel.h; sourceTree = "<group>"; };
-		324EC70D22FAB4D800CBC988 /* CTMrdkRecordModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTMrdkRecordModel.m; sourceTree = "<group>"; };
+		324EC70822FAB4D800CBC988 /* FJMrdkIndexModel_fj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FJMrdkIndexModel_fj.h; sourceTree = "<group>"; };
+		324EC70922FAB4D800CBC988 /* FJMrdkIndexModel_fj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FJMrdkIndexModel_fj.m; sourceTree = "<group>"; };
+		324EC70A22FAB4D800CBC988 /* FJMrdkMyScoreFj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FJMrdkMyScoreFj.h; sourceTree = "<group>"; };
+		324EC70B22FAB4D800CBC988 /* FJMrdkMyScoreFj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FJMrdkMyScoreFj.m; sourceTree = "<group>"; };
+		324EC70C22FAB4D800CBC988 /* FJMrdkRecordModelfj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FJMrdkRecordModelfj.h; sourceTree = "<group>"; };
+		324EC70D22FAB4D800CBC988 /* FJMrdkRecordModelfj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FJMrdkRecordModelfj.m; sourceTree = "<group>"; };
 		324EC70F22FAB4D800CBC988 /* CTAlertHelper+MrdkShareSuccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CTAlertHelper+MrdkShareSuccess.h"; sourceTree = "<group>"; };
 		324EC71022FAB4D800CBC988 /* CTAlertHelper+MrdkShareSuccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CTAlertHelper+MrdkShareSuccess.m"; sourceTree = "<group>"; };
 		324EC71122FAB4D800CBC988 /* CTMarkPayHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTMarkPayHelper.h; sourceTree = "<group>"; };
@@ -2106,10 +2106,10 @@
 		324EC07A22FA74EA00CBC988 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				324EC07B22FA74EA00CBC988 /* CTHotGoodsModel.h */,
-				324EC07C22FA74EA00CBC988 /* CTHotGoodsModel.m */,
-				324EC07D22FA74EA00CBC988 /* CTTimeBuyCateModel.h */,
-				324EC07E22FA74EA00CBC988 /* CTTimeBuyCateModel.m */,
+				324EC07B22FA74EA00CBC988 /* FJHotGoodsModelfj.h */,
+				324EC07C22FA74EA00CBC988 /* FJHotGoodsModelfj.m */,
+				324EC07D22FA74EA00CBC988 /* FJTimeBuyCateModelfj.h */,
+				324EC07E22FA74EA00CBC988 /* FJTimeBuyCateModelfj.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -2140,10 +2140,10 @@
 		324EC08322FA74EA00CBC988 /* GoodDetail */ = {
 			isa = PBXGroup;
 			children = (
-				324EC08422FA74EA00CBC988 /* CTGoodDetailViewController.h */,
-				324EC08522FA74EA00CBC988 /* CTGoodDetailViewController.m */,
-				324EC08622FA74EA00CBC988 /* CTGoodsPreViewController.h */,
-				324EC08722FA74EA00CBC988 /* CTGoodsPreViewController.m */,
+				324EC08422FA74EA00CBC988 /* FJGoodDetailViewControllerfj.h */,
+				324EC08522FA74EA00CBC988 /* FJGoodDetailViewControllerfj.m */,
+				324EC08622FA74EA00CBC988 /* FJGoodsPreViewControllerfj.h */,
+				324EC08722FA74EA00CBC988 /* FJGoodsPreViewControllerfj.m */,
 			);
 			path = GoodDetail;
 			sourceTree = "<group>";
@@ -2151,8 +2151,8 @@
 		324EC08822FA74EA00CBC988 /* GoodList */ = {
 			isa = PBXGroup;
 			children = (
-				324EC08922FA74EA00CBC988 /* CTGoodListViewController.h */,
-				324EC08A22FA74EA00CBC988 /* CTGoodListViewController.m */,
+				324EC08922FA74EA00CBC988 /* FJGoodListViewControllerfj.h */,
+				324EC08A22FA74EA00CBC988 /* FJGoodListViewControllerfj.m */,
 			);
 			path = GoodList;
 			sourceTree = "<group>";
@@ -2160,11 +2160,11 @@
 		324EC08B22FA74EA00CBC988 /* Handpick */ = {
 			isa = PBXGroup;
 			children = (
-				324EC08C22FA74EA00CBC988 /* CTHandpickDescView.h */,
-				324EC08D22FA74EA00CBC988 /* CTHandpickDescView.m */,
-				324EC08E22FA74EA00CBC988 /* CTHandpickDescView.xib */,
-				324EC08F22FA74EA00CBC988 /* CTHandpickDetailViewController.h */,
-				324EC09022FA74EA00CBC988 /* CTHandpickDetailViewController.m */,
+				324EC08C22FA74EA00CBC988 /* FJHandpickDescViewfj.h */,
+				324EC08D22FA74EA00CBC988 /* FJHandpickDescViewfj.m */,
+				324EC08E22FA74EA00CBC988 /* FJHandpickDescViewfj.xib */,
+				324EC08F22FA74EA00CBC988 /* FJHandpickDetailViewControllerfj.h */,
+				324EC09022FA74EA00CBC988 /* FJHandpickDetailViewControllerfj.m */,
 				324EC09122FA74EA00CBC988 /* CTHandpickListCell.h */,
 				324EC09222FA74EA00CBC988 /* CTHandpickListCell.m */,
 				324EC09322FA74EA00CBC988 /* CTHandpickListCell.xib */,
@@ -4319,12 +4319,12 @@
 		324EC70722FAB4D800CBC988 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				324EC70822FAB4D800CBC988 /* CTMrdkIndexModel.h */,
-				324EC70922FAB4D800CBC988 /* CTMrdkIndexModel.m */,
-				324EC70A22FAB4D800CBC988 /* CTMrdkMyScore.h */,
-				324EC70B22FAB4D800CBC988 /* CTMrdkMyScore.m */,
-				324EC70C22FAB4D800CBC988 /* CTMrdkRecordModel.h */,
-				324EC70D22FAB4D800CBC988 /* CTMrdkRecordModel.m */,
+				324EC70822FAB4D800CBC988 /* FJMrdkIndexModel_fj.h */,
+				324EC70922FAB4D800CBC988 /* FJMrdkIndexModel_fj.m */,
+				324EC70A22FAB4D800CBC988 /* FJMrdkMyScoreFj.h */,
+				324EC70B22FAB4D800CBC988 /* FJMrdkMyScoreFj.m */,
+				324EC70C22FAB4D800CBC988 /* FJMrdkRecordModelfj.h */,
+				324EC70D22FAB4D800CBC988 /* FJMrdkRecordModelfj.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -4655,7 +4655,7 @@
 				324EC61522FA74EC00CBC988 /* CTWithdrawAlipayInfoView.xib in Resources */,
 				324EC56622FA74EC00CBC988 /* CTMessageTypeView.xib in Resources */,
 				324EC4C222FA74EC00CBC988 /* LMNetErrorView.xib in Resources */,
-				324EC4E122FA74EC00CBC988 /* CTHandpickDescView.xib in Resources */,
+				324EC4E122FA74EC00CBC988 /* FJHandpickDescViewfj.xib in Resources */,
 				324EC74922FAB4D800CBC988 /* CTMrdkAmountView.xib in Resources */,
 				324EC64522FA74EC00CBC988 /* SGQRCodeFlashlightCloseImage.png in Resources */,
 				324EC4A122FA74EB00CBC988 /* CTContentInputView.xib in Resources */,
@@ -4771,7 +4771,7 @@
 				324EC4D422FA74EC00CBC988 /* CTCateViewController.m in Sources */,
 				324EC67C22FA74EC00CBC988 /* AppDelegate.m in Sources */,
 				324EC6E422FAAF6600CBC988 /* CTJdpGoodsItem.m in Sources */,
-				324EC4DF22FA74EC00CBC988 /* CTGoodListViewController.m in Sources */,
+				324EC4DF22FA74EC00CBC988 /* FJGoodListViewControllerfj.m in Sources */,
 				324EC59722FA74EC00CBC988 /* CTOrderListCell.m in Sources */,
 				324EC6B522FA74EC00CBC988 /* CTNetworkEngine+Recommend.m in Sources */,
 				324EC6AA22FA74EC00CBC988 /* CTActivityModel.m in Sources */,
@@ -4870,7 +4870,7 @@
 				324EC66D22FA74EC00CBC988 /* NSString+Log.m in Sources */,
 				324EC6B122FA74EC00CBC988 /* CTNetworkEngine+Member.m in Sources */,
 				324EC4A222FA74EB00CBC988 /* CTThirtyProfitHeadView.m in Sources */,
-				324EC4E022FA74EC00CBC988 /* CTHandpickDescView.m in Sources */,
+				324EC4E022FA74EC00CBC988 /* FJHandpickDescViewfj.m in Sources */,
 				324EC57222FA74EC00CBC988 /* CTMineViewController.m in Sources */,
 				324EC52D22FA74EC00CBC988 /* CTBindPhoneView.m in Sources */,
 				324EC58F22FA74EC00CBC988 /* CTMineHeadView.m in Sources */,
@@ -4899,7 +4899,7 @@
 				324EC5AD22FA74EC00CBC988 /* CTOneGoodIndexCell.m in Sources */,
 				324EC6A622FA74EC00CBC988 /* LMPhotoBrower.m in Sources */,
 				324EC75B22FAB4D800CBC988 /* CTPayTypeContainerView.m in Sources */,
-				324EC4DA22FA74EC00CBC988 /* CTHotGoodsModel.m in Sources */,
+				324EC4DA22FA74EC00CBC988 /* FJHotGoodsModelfj.m in Sources */,
 				324EC55922FA74EC00CBC988 /* CTMemberStrategyItem.m in Sources */,
 				324EC65B22FA74EC00CBC988 /* UILabel+Helper.m in Sources */,
 				324EC61122FA74EC00CBC988 /* CTAlertHelper+WithdrawSuccess.m in Sources */,
@@ -4908,7 +4908,7 @@
 				324EC4AA22FA74EB00CBC988 /* CTGoodIndexCell.m in Sources */,
 				324EC49322FA74EB00CBC988 /* CTEarnIndexModel.m in Sources */,
 				324EC75722FAB4D800CBC988 /* CTMrdkShareSuccessView.m in Sources */,
-				324EC4E222FA74EC00CBC988 /* CTHandpickDetailViewController.m in Sources */,
+				324EC4E222FA74EC00CBC988 /* FJHandpickDetailViewControllerfj.m in Sources */,
 				324EC6E622FAAF6600CBC988 /* CTJdpListCell.m in Sources */,
 				324EC54222FA74EC00CBC988 /* CTMemberEquityController.m in Sources */,
 				324EC5B322FA74EC00CBC988 /* CTRecommendViewController.m in Sources */,
@@ -4918,7 +4918,7 @@
 				324EC69822FA74EC00CBC988 /* CTNavigationController.m in Sources */,
 				324EC4FF22FA74EC00CBC988 /* CTHomeModel.m in Sources */,
 				324EC54C22FA74EC00CBC988 /* CTEquitySegmentedControl.m in Sources */,
-				324EC4DB22FA74EC00CBC988 /* CTTimeBuyCateModel.m in Sources */,
+				324EC4DB22FA74EC00CBC988 /* FJTimeBuyCateModelfj.m in Sources */,
 				324EC5FD22FA74EC00CBC988 /* CTUserInfoService.m in Sources */,
 				324EC63222FA74EC00CBC988 /* KeychainTool.m in Sources */,
 				324EC59322FA74EC00CBC988 /* CTMineOrderView.m in Sources */,
@@ -4991,7 +4991,7 @@
 				324EC6E122FAAF6600CBC988 /* CTJdpDetailViewController.m in Sources */,
 				324EC6C122FA74EC00CBC988 /* UIScrollView+CTPagePanGes.m in Sources */,
 				324EC6A322FA74EC00CBC988 /* CTView.m in Sources */,
-				324EC4DD22FA74EC00CBC988 /* CTGoodDetailViewController.m in Sources */,
+				324EC4DD22FA74EC00CBC988 /* FJGoodDetailViewControllerfj.m in Sources */,
 				324EC59122FA74EC00CBC988 /* CTMineNavItemView.m in Sources */,
 				324EC5EF22FA74EC00CBC988 /* CTQuestionViewController.m in Sources */,
 				324EC6DF22FAAF6600CBC988 /* CTJdpIndexModel.m in Sources */,
@@ -5011,7 +5011,7 @@
 				324EC5D822FA74EC00CBC988 /* CTShareService.m in Sources */,
 				324EC53E22FA74EC00CBC988 /* CTMemberEquityModel.m in Sources */,
 				324EC6AD22FA74EC00CBC988 /* CTNetworkEngine+Goods.m in Sources */,
-				324EC4DE22FA74EC00CBC988 /* CTGoodsPreViewController.m in Sources */,
+				324EC4DE22FA74EC00CBC988 /* FJGoodsPreViewControllerfj.m in Sources */,
 				324EC62722FA74EC00CBC988 /* CLRefreshConfig.m in Sources */,
 				324EC52822FA74EC00CBC988 /* CTLoginViewModel.m in Sources */,
 				324EC56022FA74EC00CBC988 /* CTMessageService.m in Sources */,
@@ -5101,11 +5101,11 @@
 				324EC5B822FA74EC00CBC988 /* CTSearchViewController.m in Sources */,
 				324EC74622FAB4D800CBC988 /* CTMrdkPaySuccessViewController.m in Sources */,
 				324EC5D222FA74EC00CBC988 /* CTSetListCell.m in Sources */,
-				324EC74122FAB4D800CBC988 /* CTMrdkRecordModel.m in Sources */,
+				324EC74122FAB4D800CBC988 /* FJMrdkRecordModelfj.m in Sources */,
 				324EC6A422FA74EC00CBC988 /* CTAppConfig.m in Sources */,
 				324EC4B422FA74EB00CBC988 /* CTGoodSortView.m in Sources */,
 				324EC56B22FA74EC00CBC988 /* CTOrderModel.m in Sources */,
-				324EC74022FAB4D800CBC988 /* CTMrdkMyScore.m in Sources */,
+				324EC74022FAB4D800CBC988 /* FJMrdkMyScoreFj.m in Sources */,
 				324EC56F22FA74EC00CBC988 /* CTEarnRankPageController.m in Sources */,
 				324EC50922FA74EC00CBC988 /* CTHomeNavBar.m in Sources */,
 				324EC6A822FA74EC00CBC988 /* CTModuleHelper.m in Sources */,
@@ -5159,7 +5159,7 @@
 				324EC50522FA74EC00CBC988 /* CTHomeCategoryViewModel.m in Sources */,
 				324EC64C22FA74EC00CBC988 /* UIPageControlManager.m in Sources */,
 				324EC65422FA74EC00CBC988 /* WSDatePickerView.m in Sources */,
-				324EC73F22FAB4D800CBC988 /* CTMrdkIndexModel.m in Sources */,
+				324EC73F22FAB4D800CBC988 /* FJMrdkIndexModel_fj.m in Sources */,
 				324EC49422FA74EB00CBC988 /* CTGoodsModel.m in Sources */,
 				324EC51B22FA74EC00CBC988 /* CTAgreementViewController.m in Sources */,
 				324EC63622FA74EC00CBC988 /* SDWaitingView.m in Sources */,

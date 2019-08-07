@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface CTMrdkRecordModel : NSObject
+@interface FJMrdkRecordModelfj : NSObject
 @property (nonatomic, copy) NSString *Id;
 @property (nonatomic, copy) NSString *pid;
 @property (nonatomic, copy) NSString *uid;

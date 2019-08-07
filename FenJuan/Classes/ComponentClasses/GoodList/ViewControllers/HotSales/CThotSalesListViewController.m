@@ -14,13 +14,13 @@
 
 #import "CTNetworkEngine+Index.h"
 
-#import "CTHotGoodsModel.h"
+#import "FJHotGoodsModelfj.h"
 
 @interface CThotSalesListViewController ()
 
 @property (nonatomic, strong) CTHotSalesNoticeView *noticeView;
 
-@property (nonatomic, strong) CTHotGoodsModel *model;
+@property (nonatomic, strong) FJHotGoodsModelfj *model;
 
 @property (nonatomic, copy) NSArray <CTGoodsViewModel *> *dataSources;
 
@@ -58,7 +58,7 @@
     [CTRequest hotGoodsWithCallback:^(id data, CLRequest *request, CTNetError error) {
         [self.tableView endRefreshing];
         if(!error){
-            self.model = [CTHotGoodsModel yy_modelWithDictionary:data];
+            self.model = [FJHotGoodsModelfj yy_modelWithDictionary:data];
             self.noticeView.model = _model;
             self.dataSources = [CTGoodsViewModel bindModels:[CTGoodsModel yy_modelsWithDatas:_model.goods]];
             [self.tableView reloadData];

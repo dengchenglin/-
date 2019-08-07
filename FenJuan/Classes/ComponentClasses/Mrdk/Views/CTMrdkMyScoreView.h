@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "CTMrdkMyScore.h"
+#import "FJMrdkMyScoreFj.h"
 NS_ASSUME_NONNULL_BEGIN
 
 @interface CTMrdkMyScoreView : UIView
@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UILabel *gainLabel;
 @property (weak, nonatomic) IBOutlet UILabel *morningTimesLabel;
 @property (weak, nonatomic) IBOutlet UIButton *doneButton;
-@property (nonatomic, strong) CTMrdkMyScore *model;
+@property (nonatomic, strong) FJMrdkMyScoreFj *model;
 @end
 
 NS_ASSUME_NONNULL_END

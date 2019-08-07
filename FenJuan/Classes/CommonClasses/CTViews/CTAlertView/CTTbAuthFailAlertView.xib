@@ -15,6 +15,10 @@
             <rect key="frame" x="0.0" y="0.0" width="352" height="280"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LeP-U0-IbE">
+                    <rect key="frame" x="0.0" y="0.0" width="352" height="280"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
                 <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aBh-eT-jwb">
                     <rect key="frame" x="0.0" y="0.0" width="352" height="280"/>
                     <subviews>
@@ -92,8 +96,12 @@
             <constraints>
                 <constraint firstItem="aBh-eT-jwb" firstAttribute="leading" secondItem="Bzt-WA-KE2" secondAttribute="leading" id="MXp-4X-JMS"/>
                 <constraint firstAttribute="bottom" secondItem="aBh-eT-jwb" secondAttribute="bottom" id="NWV-bU-GeE"/>
+                <constraint firstAttribute="bottom" secondItem="LeP-U0-IbE" secondAttribute="bottom" id="OHe-2h-Igs"/>
+                <constraint firstAttribute="trailing" secondItem="LeP-U0-IbE" secondAttribute="trailing" id="Qdj-Ot-oTI"/>
                 <constraint firstItem="aBh-eT-jwb" firstAttribute="top" secondItem="Bzt-WA-KE2" secondAttribute="top" id="Z5z-ib-PXE"/>
+                <constraint firstItem="LeP-U0-IbE" firstAttribute="top" secondItem="Bzt-WA-KE2" secondAttribute="top" id="fMe-et-q46"/>
                 <constraint firstAttribute="trailing" secondItem="aBh-eT-jwb" secondAttribute="trailing" id="yrk-yA-j1R"/>
+                <constraint firstItem="LeP-U0-IbE" firstAttribute="leading" secondItem="Bzt-WA-KE2" secondAttribute="leading" id="ysv-Wj-p05"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>

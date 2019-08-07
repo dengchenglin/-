@@ -8,10 +8,10 @@
 
 #import "CTBaseListViewController.h"
 
-#import "CTTimeBuyCateModel.h"
+#import "FJTimeBuyCateModelfj.h"
 
 @interface CTSpreeShopListViewController : CTBaseListViewController
 
-@property (nonatomic, strong) CTTimeBuyCateModel *model;
+@property (nonatomic, strong) FJTimeBuyCateModelfj *model;
 
 @end

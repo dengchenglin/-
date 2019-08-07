@@ -12,7 +12,7 @@
 
 @implementation CTMrdkShareView
 
-- (void)setModel:(CTMrdkIndexModel *)model{
+- (void)setModel:(FJMrdkIndexModel_fj *)model{
     _model = model;
     _titleLabel.text = _model.tip_txt1;
     _amountLabel.text = _model.activity.total_money;
@@ -27,7 +27,7 @@
     _phraseLabel.attributedText = phraseString;
 }
 
-+ (void)createImageWithModel:(CTMrdkIndexModel *)model completed:(void(^)(UIImage *image))completed{
++ (void)createImageWithModel:(FJMrdkIndexModel_fj *)model completed:(void(^)(UIImage *image))completed{
     CTMrdkShareView *shareView = NSMainBundleClass(CTMrdkShareView.class);
     shareView.model = model;
     UIView *containerView = [UIView new];

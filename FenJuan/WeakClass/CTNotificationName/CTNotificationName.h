@@ -11,3 +11,5 @@ UIKIT_EXTERN NSString * const CTDidLogoutNotification;
 UIKIT_EXTERN NSString * const CTRefreshHotGoodsNotification;
 UIKIT_EXTERN NSString * const CTRefreshHomeNotification;
 UIKIT_EXTERN NSString * const CTRefreshMineNotification;
+
+

@@ -111,4 +111,15 @@
 + (id)cateService{
      return [CLModuleManager moduleServiceInstanceForProtocol:@protocol(CTCateServiceProtocol)];
 }
+
++ (id)judapaiService{
+    return [CLModuleManager moduleServiceInstanceForProtocol:@protocol(CTJudapaiServiceProtocol)];
+}
++ (id)shipingouService{
+    return [CLModuleManager moduleServiceInstanceForProtocol:@protocol(CTShipingouServiceProtocol)];
+}
+
++ (id)mrdkService{
+    return [CLModuleManager moduleServiceInstanceForProtocol:@protocol(CTMrdkServiceProtocol)];
+}
 @end

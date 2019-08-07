@@ -6,7 +6,7 @@
 //  Copyright © 2019年 Danke. All rights reserved.
 //
 
-#import "CTGoodListViewController.h"
+#import "FJGoodListViewControllerfj.h"
 
 #import "CTGoodSortView.h"
 
@@ -14,7 +14,7 @@
 
 #import "CTNetworkEngine+Index.h"
 
-@interface CTGoodListViewController ()<UITableViewDelegate,UITableViewDataSource>
+@interface FJGoodListViewControllerfj ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic, strong) CTGoodSortView *sortView;
 
@@ -22,7 +22,7 @@
 
 @end
 
-@implementation CTGoodListViewController
+@implementation FJGoodListViewControllerfj
 
 @synthesize dataSources = _dataSources;
 

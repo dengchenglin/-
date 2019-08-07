@@ -6,12 +6,12 @@
 //  Copyright © 2019年 Danke. All rights reserved.
 //
 
-#import "CTGoodsPreViewController.h"
+#import "FJGoodsPreViewControllerfj.h"
 #import "CTGoodsImgsView.h"
 #import "CTGoodsDescPreView.h"
 #import "CTSharePopView.h"
 #import "UIView+YYAdd.h"
-@interface CTGoodsPreViewController ()
+@interface FJGoodsPreViewControllerfj ()
 @property (nonatomic, strong) UIView *containerView;
 @property (nonatomic, strong) CTGoodsImgsView *imgsView;
 @property (nonatomic, strong) CTGoodsDescPreView *descView;
@@ -19,10 +19,10 @@
 @property (nonatomic, copy) NSString *qCodeContent;
 @end
 
-@implementation CTGoodsPreViewController
+@implementation FJGoodsPreViewControllerfj
 
-+ (CTGoodsPreViewController *)pushGoodPreFromViewController:(UIViewController *)viewController viewModel:(CTGoodsViewModel *)viewModel qCodeContent:(NSString *)qCodeContent{
-    CTGoodsPreViewController *vc = [CTGoodsPreViewController new];
++ (FJGoodsPreViewControllerfj *)pushGoodPreFromViewController:(UIViewController *)viewController viewModel:(CTGoodsViewModel *)viewModel qCodeContent:(NSString *)qCodeContent{
+    FJGoodsPreViewControllerfj *vc = [FJGoodsPreViewControllerfj new];
     vc.viewModel = viewModel;
     vc.qCodeContent = qCodeContent;
     [viewController.navigationController pushViewController:vc animated:YES];

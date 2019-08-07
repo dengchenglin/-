@@ -10,7 +10,7 @@
 
 @implementation CTMrdkInfoView
 
-- (void)setModel:(CTMrdkIndexModel *)model{
+- (void)setModel:(FJMrdkIndexModel_fj *)model{
     _model = model;
     _countLabel.text = _model.my_score.morning_times;
     _amountLabel.text = _model.my_score.gain_money;

@@ -15,7 +15,7 @@
 
 #import "CTNetworkEngine+Mrdk.h"
 
-#import "CTMrdkIndexModel.h"
+#import "FJMrdkIndexModel_fj.h"
 
 #import "CTMarkPayHelper.h"
 
@@ -27,7 +27,7 @@
 @property (nonatomic, strong) UIImageView *titleImageView;
 @property (nonatomic, strong) CTMrdkAmountView *amountView;
 @property (nonatomic, strong) CTMrdkInfoView *infoView;
-@property (nonatomic, strong) CTMrdkIndexModel *model;
+@property (nonatomic, strong) FJMrdkIndexModel_fj *model;
 @end
 @implementation CTMrdkViewController
 - (UIImageView *)titleImageView{
@@ -51,7 +51,7 @@
 }
 - (void)initialize{
     @weakify(self)
-    [[[[NSNotificationCenter defaultCenter]rac_addObserverForName:CTRefrehMrdkIndexNotification object:nil] takeUntil:self.rac_willDeallocSignal] subscribeNext:^(NSNotification * _Nullable x) {
+    [[[[NSNotificationCenter defaultCenter]rac_addObserverForName:@"test" object:nil] takeUntil:self.rac_willDeallocSignal] subscribeNext:^(NSNotification * _Nullable x) {
         @strongify(self)
         [self request];
     }];
@@ -89,7 +89,7 @@
     [CTRequest mrdkIndexWithCallback:^(id data, CLRequest *request, CTNetError error) {
         [self.scrollView endRefreshing];
         if(!error){
-            self.model = [CTMrdkIndexModel yy_modelWithDictionary:data];
+            self.model = [FJMrdkIndexModel_fj yy_modelWithDictionary:data];
            
             self.amountView.model = _model;
             self.infoView.model = _model;
@@ -119,13 +119,13 @@
         }
         else if (self.model.activity.activity_user_status == 3){
             [CTMrdkShareView createImageWithModel:self.model completed:^(UIImage * _Nonnull image) {
-                [CTSharePopupView showSharePopupWithImages:@[image] onView:nil completed:^{
-                    [CTRequest sa_signInWithCallback:^(id data, CLRequest *request, CTNetError error) {
-                        if(!error){
-                            [CTAlertHelper showMrdkShareSuccessWithCallback:nil];
-                        }
-                    }];
-                }];
+//                [CTSharePopupView showSharePopupWithImages:@[image] onView:nil completed:^{
+//                    [CTRequest sa_signInWithCallback:^(id data, CLRequest *request, CTNetError error) {
+//                        if(!error){
+//                            [CTAlertHelper showMrdkShareSuccessWithCallback:nil];
+//                        }
+//                    }];
+//                }];
             }];
         }
      

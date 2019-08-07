@@ -1,5 +1,5 @@
 //
-//  CTVideoGoodListCell.h
+//  FJVideoGoodListCell.h
 //  CouponTicket
 //
 //  Created by dengchenglin on 2019/2/25.
@@ -12,13 +12,13 @@
 
 #import "CTPlayerButton.h"
 
-@protocol CTVideoGoodListCellDelegate<NSObject>
+@protocol FJVideoGoodListCellDelegate<NSObject>
 
 - (void)didClickVideoWithIndexPath:(NSIndexPath *)indexPath;
 
 @end
 
-@interface CTVideoGoodListCell : UITableViewCell
+@interface FJVideoGoodListCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *goodImageView;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *shopLogo;
@@ -38,7 +38,7 @@
 
 @property (nonatomic, strong) CTGoodsViewModel *viewModel;
 @property (nonatomic, strong) CTGoodsModel *model;
-@property (nonatomic, weak) id <CTVideoGoodListCellDelegate>delegate;
+@property (nonatomic, weak) id <FJVideoGoodListCellDelegate>delegate;
 @property (nonatomic, copy) NSIndexPath *indexPath;
 - (void)stopPlay;
 - (void)removeVideoView;

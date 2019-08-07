@@ -14,13 +14,13 @@
 
 #import "CTNetworkEngine+Recommend.h"
 
-#import "CTTimeBuyCateModel.h"
+#import "FJTimeBuyCateModelfj.h"
 
 @interface CTSpreeShopPageController ()<LMSegmentedControlDelegate>
 
 @property (nonatomic, strong) LMSegmentedControl *segmentedControl;
 
-@property (nonatomic, strong) NSArray <CTTimeBuyCateModel *> *cates;
+@property (nonatomic, strong) NSArray <FJTimeBuyCateModelfj *> *cates;
 
 @end
 
@@ -64,9 +64,9 @@
 
 - (void)reloadData:(id)data{
     
-    self.cates = [CTTimeBuyCateModel yy_modelsWithDatas:data];
+    self.cates = [FJTimeBuyCateModelfj yy_modelsWithDatas:data];
 
-    self.segmentedControl.titles = [self.cates map:^id(NSInteger index, CTTimeBuyCateModel *element) {
+    self.segmentedControl.titles = [self.cates map:^id(NSInteger index, FJTimeBuyCateModelfj *element) {
         return [NSString stringWithFormat:@"%@\n%@",element.time,element.text];;
     }];
     NSMutableArray *array = [NSMutableArray array];
@@ -79,7 +79,7 @@
     //当前时间戳
     NSString *nowTimeStamp = [DateUtil getNowDateTimestamp];
     __block NSInteger index = 0;
-    [self.cates enumerateObjectsUsingBlock:^(CTTimeBuyCateModel * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+    [self.cates enumerateObjectsUsingBlock:^(FJTimeBuyCateModelfj * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         if([obj.start_time integerValue] >= [nowTimeStamp integerValue]){
             *stop = YES;
         }

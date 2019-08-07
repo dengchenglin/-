@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "CTMrdkMyScore.h"
+#import "FJMrdkMyScoreFj.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -56,13 +56,13 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) CTMrdkUser *user3;
 @end
 
-@interface CTMrdkIndexModel : NSObject
+@interface FJMrdkIndexModel_fj : NSObject
 @property (nonatomic, copy) NSString *tip_txt1;
 @property (nonatomic, copy) NSArray <CTMrdkMoneyCate *> *money_cate;
 @property (nonatomic, strong) CTMrdkActivity *activity;
 @property (nonatomic, assign) NSInteger activity_user_status;
 @property (nonatomic, copy) NSString *pay_txt;
-@property (nonatomic, strong) CTMrdkMyScore *my_score;
+@property (nonatomic, strong) FJMrdkMyScoreFj *my_score;
 @property (nonatomic, strong) CTMrdkTodayActivityRecord *today_activity_record;
 @end
 

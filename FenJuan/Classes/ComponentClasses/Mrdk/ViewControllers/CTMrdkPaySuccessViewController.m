@@ -39,7 +39,7 @@
     [self.successView.doneButton touchUpInsideSubscribeNext:^(id x) {
         @strongify(self)
         [self.navigationController popViewControllerAnimated:YES];
-        POST_NOTIFICATION(CTRefrehMrdkIndexNotification);
+//        POST_NOTIFICATION(CTRefrehMrdkIndexNotification);
     }];
 }
 @end

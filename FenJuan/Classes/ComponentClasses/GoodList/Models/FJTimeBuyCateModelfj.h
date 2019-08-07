@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface CTTimeBuyCateModel : NSObject
+@interface FJTimeBuyCateModelfj : NSObject
 
 @property (nonatomic, copy) NSString *Id;
 

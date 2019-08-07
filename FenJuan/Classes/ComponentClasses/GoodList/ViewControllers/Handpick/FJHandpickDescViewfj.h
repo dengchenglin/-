@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "LMWebView.h"
 #import "CTGoodsViewModel.h"
-@interface CTHandpickDescView : UIView
+@interface FJHandpickDescViewfj : UIView
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *dateLabel;
 @property (weak, nonatomic) IBOutlet LMWebView *webView;

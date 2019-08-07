@@ -9,7 +9,7 @@
 #import "CTJdpPageViewController.h"
 #import "CTJdpListViewController.h"
 #import "LMSegmentedControl.h"
-
+#import "CTCategoryModel.h"
 #import "CTNetworkEngine+ThirldTk.h"
 @interface CTJdpPageViewController ()<LMSegmentedControlDelegate>
 @property (nonatomic, strong) LMSegmentedControl *segmentedControl;

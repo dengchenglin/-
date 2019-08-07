@@ -7,11 +7,11 @@
 //
 
 #import "CTBaseViewController.h"
-#import "CTMrdkIndexModel.h"
+#import "FJMrdkIndexModel_fj.h"
 NS_ASSUME_NONNULL_BEGIN
 
 @interface CTMrdkMyRecordViewController :CTBaseViewController
-@property (nonatomic, strong) CTMrdkIndexModel *indexModel;
+@property (nonatomic, strong) FJMrdkIndexModel_fj *indexModel;
 @end
 
 NS_ASSUME_NONNULL_END

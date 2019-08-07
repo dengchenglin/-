@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "CTMrdkIndexModel.h"
+#import "FJMrdkIndexModel_fj.h"
 NS_ASSUME_NONNULL_BEGIN
 
 @interface CTMrdkInfoView : UIView
@@ -23,7 +23,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UIImageView *zjiuIcon;
 @property (weak, nonatomic) IBOutlet UILabel *zjiuNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *zjiuDescLabel;
-@property (nonatomic, strong) CTMrdkIndexModel *model;
+@property (nonatomic, strong) FJMrdkIndexModel_fj *model;
 @end
 
 NS_ASSUME_NONNULL_END

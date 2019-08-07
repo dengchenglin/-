@@ -7,13 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "CTMrdkRecordModel.h"
+#import "FJMrdkRecordModelfj.h"
 NS_ASSUME_NONNULL_BEGIN
 
 @interface CTMrdkRecordCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *dateLabel;
-@property (nonatomic, strong) CTMrdkRecordModel *model;
+@property (nonatomic, strong) FJMrdkRecordModelfj *model;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "CTMrdkIndexModel.h"
+#import "FJMrdkIndexModel_fj.h"
 NS_ASSUME_NONNULL_BEGIN
 
 @interface CTMrdkShareView : UIView
@@ -15,9 +15,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UILabel *amountLabel;
 @property (weak, nonatomic) IBOutlet UILabel *acountLabel;
 @property (weak, nonatomic) IBOutlet UILabel *phraseLabel;
-@property (nonatomic, strong) CTMrdkIndexModel *model;
+@property (nonatomic, strong) FJMrdkIndexModel_fj *model;
 
-+ (void)createImageWithModel:(CTMrdkIndexModel *)model completed:(void(^)(UIImage *image))completed;
++ (void)createImageWithModel:(FJMrdkIndexModel_fj *)model completed:(void(^)(UIImage *image))completed;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -17,7 +17,7 @@
 @interface CTMrdkMyRecordViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic, strong) CTTableView *tableView;
 @property (nonatomic, strong) CTMrdkMyScoreView *scoreView;
-@property (nonatomic, copy) NSArray <CTMrdkRecordModel *> *dataSources;
+@property (nonatomic, copy) NSArray <FJMrdkRecordModelfj *> *dataSources;
 @end
 
 @implementation CTMrdkMyRecordViewController
@@ -49,10 +49,10 @@
     self.view.layer.contents = (__bridge id)[UIImage imageNamed:@"pic_punch_background"].CGImage;
     [self.view addSubview:self.tableView];
     self.tableView.backgroundColor = [UIColor clearColor];
-    [self.tableView config:^(CLRefreshConfig *config) {
-        config.headTitleColor = [UIColor whiteColor];
-        config.headProgressColor = [UIColor whiteColor];
-    }];
+//    [self.tableView config:^(CLRefreshConfig *config) {
+//        config.headTitleColor = [UIColor whiteColor];
+//        config.headProgressColor = [UIColor whiteColor];
+//    }];
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.mas_equalTo(UIEdgeInsetsZero);
     }];
@@ -66,7 +66,7 @@
     [self.scoreView.doneButton touchUpInsideSubscribeNext:^(id x) {
         @strongify(self)
         [CTMrdkShareView createImageWithModel:self.indexModel completed:^(UIImage * _Nonnull image) {
-            [CTSharePopupView showSharePopupWithImages:@[image] onView:nil completed:nil];
+//            [CTSharePopupView showSharePopupWithImages:@[image] onView:nil completed:nil];
         }];
     }];
 }
@@ -74,8 +74,8 @@
     [CTRequest mrdkRecordWithCallback:^(id data, CLRequest *request, CTNetError error) {
         [self.tableView endRefreshing];
         if(!error){
-            self.dataSources = [CTMrdkRecordModel yy_modelsWithDatas:data[@"list"]];
-            self.scoreView.model = [CTMrdkMyScore yy_modelWithDictionary:data[@"my_score"]];
+            self.dataSources = [FJMrdkRecordModelfj yy_modelsWithDatas:data[@"list"]];
+            self.scoreView.model = [FJMrdkMyScoreFj yy_modelWithDictionary:data[@"my_score"]];
             [self.tableView reloadData];
         }
         

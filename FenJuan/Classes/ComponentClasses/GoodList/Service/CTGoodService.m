@@ -8,9 +8,9 @@
 
 #import "CTGoodService.h"
 
-#import "CTGoodListViewController.h"
+#import "FJGoodListViewControllerfj.h"
 
-#import "CTGoodDetailViewController.h"
+#import "FJGoodDetailViewControllerfj.h"
 
 #import "CTNineNineListViewController.h"
 
@@ -27,24 +27,24 @@
 CL_EXPORT_MODULE(CTGoodListServiceProtocol)
 
 - (UIViewController *)goodListViewControllerWithCategoryId:(NSString *)categoryId{
-    CTGoodListViewController *vc = [CTGoodListViewController new];
+    FJGoodListViewControllerfj *vc = [FJGoodListViewControllerfj new];
     vc.category_id = categoryId;
     return vc;
 }
 
 - (UIViewController *)goodListViewControllerWithActivityId:(NSString *)activityId{
-    CTGoodListViewController *vc = [CTGoodListViewController new];
+    FJGoodListViewControllerfj *vc = [FJGoodListViewControllerfj new];
     vc.activity_id = activityId;
     return vc;
 }
 
 - (UIViewController *)goodDetailViewControllerWithGoodId:(NSString *)goodId{
-    CTGoodDetailViewController * vc = [CTGoodDetailViewController new];
+    FJGoodDetailViewControllerfj * vc = [FJGoodDetailViewControllerfj new];
     vc.goog_id = goodId;
     return vc;
 }
 - (UIViewController *)goodDetailViewControllerWithGoodViewModel:(id)viewModel{
-    CTGoodDetailViewController * vc = [CTGoodDetailViewController new];
+    FJGoodDetailViewControllerfj * vc = [FJGoodDetailViewControllerfj new];
     vc.viewModel = viewModel;
     return vc;
 }

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -15,6 +15,10 @@
             <rect key="frame" x="0.0" y="0.0" width="396" height="317"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dCk-9o-ifz">
+                    <rect key="frame" x="0.0" y="0.0" width="396" height="317"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
                 <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mpc-3b-eje">
                     <rect key="frame" x="0.0" y="0.0" width="396" height="317"/>
                     <subviews>
@@ -66,9 +70,13 @@
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="mpc-3b-eje" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="65g-89-B6c"/>
+                <constraint firstItem="dCk-9o-ifz" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="ANf-82-3xt"/>
+                <constraint firstAttribute="bottom" secondItem="dCk-9o-ifz" secondAttribute="bottom" id="OPZ-oR-ZbN"/>
+                <constraint firstAttribute="trailing" secondItem="dCk-9o-ifz" secondAttribute="trailing" id="OSG-yf-nnd"/>
                 <constraint firstItem="mpc-3b-eje" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="PiT-Ct-g4D"/>
                 <constraint firstAttribute="trailing" secondItem="mpc-3b-eje" secondAttribute="trailing" id="g2s-xa-cg0"/>
                 <constraint firstAttribute="bottom" secondItem="mpc-3b-eje" secondAttribute="bottom" id="lqO-qQ-Agd"/>
+                <constraint firstItem="dCk-9o-ifz" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="nX3-nc-nUI"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>

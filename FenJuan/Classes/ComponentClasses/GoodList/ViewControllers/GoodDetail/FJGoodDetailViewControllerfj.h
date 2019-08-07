@@ -10,7 +10,7 @@
 
 #import "CTGoodsViewModel.h"
 
-@interface CTGoodDetailViewController : CTBaseViewController
+@interface FJGoodDetailViewControllerfj : CTBaseViewController
 
 @property (nonatomic, copy) NSString *goog_id;
 

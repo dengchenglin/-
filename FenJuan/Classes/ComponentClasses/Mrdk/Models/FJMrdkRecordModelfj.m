@@ -6,8 +6,8 @@
 //  Copyright © 2019年 Danke. All rights reserved.
 //
 
-#import "CTMrdkRecordModel.h"
+#import "FJMrdkRecordModelfj.h"
 
-@implementation CTMrdkRecordModel
+@implementation FJMrdkRecordModelfj
 
 @end
