@@ -12,7 +12,7 @@
 
 #import "CTGoodsViewModel.h"
 
-@interface CTHandpickListCell : UITableViewCell
+@interface FJHandpickListCellfj : UITableViewCell
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *descLabel;
 @property (weak, nonatomic) IBOutlet CTPhotoView *photoViews;

@@ -15,6 +15,10 @@
             <rect key="frame" x="0.0" y="0.0" width="358" height="232"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lhN-av-ejy">
+                    <rect key="frame" x="0.0" y="0.0" width="358" height="232"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
                 <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1fG-qX-KXt">
                     <rect key="frame" x="0.0" y="0.0" width="358" height="232"/>
                     <subviews>
@@ -114,10 +118,14 @@
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
+                <constraint firstItem="lhN-av-ejy" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="0xi-Qc-K9v"/>
                 <constraint firstAttribute="bottom" secondItem="1fG-qX-KXt" secondAttribute="bottom" id="81y-Lu-gEr"/>
+                <constraint firstItem="lhN-av-ejy" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="EVk-iF-umT"/>
                 <constraint firstAttribute="trailing" secondItem="1fG-qX-KXt" secondAttribute="trailing" id="HMr-05-U2k"/>
                 <constraint firstItem="1fG-qX-KXt" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="JfK-IM-UkE"/>
                 <constraint firstItem="1fG-qX-KXt" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="LxM-CD-uhR"/>
+                <constraint firstAttribute="bottom" secondItem="lhN-av-ejy" secondAttribute="bottom" id="U1q-hj-Pln"/>
+                <constraint firstAttribute="trailing" secondItem="lhN-av-ejy" secondAttribute="trailing" id="wpK-LE-l4C"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>

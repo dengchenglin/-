@@ -18,6 +18,10 @@
                 <rect key="frame" x="0.0" y="0.0" width="440" height="162"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wq8-6y-ZbY">
+                        <rect key="frame" x="0.0" y="0.0" width="440" height="162"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rsh-94-LPF">
                         <rect key="frame" x="0.0" y="0.0" width="440" height="162"/>
                         <subviews>
@@ -220,6 +224,10 @@
                 <constraint firstAttribute="trailing" secondItem="Rsh-94-LPF" secondAttribute="trailing" id="B0K-fC-RrC"/>
                 <constraint firstAttribute="bottom" secondItem="Rsh-94-LPF" secondAttribute="bottom" id="KDC-TT-2sv"/>
                 <constraint firstItem="Rsh-94-LPF" firstAttribute="top" secondItem="Pyh-1n-2pf" secondAttribute="top" id="ON1-17-fGR"/>
+                <constraint firstItem="wq8-6y-ZbY" firstAttribute="leading" secondItem="Pyh-1n-2pf" secondAttribute="leading" id="RCo-Gp-hg5"/>
+                <constraint firstAttribute="trailing" secondItem="wq8-6y-ZbY" secondAttribute="trailing" id="Wg3-6M-e8F"/>
+                <constraint firstItem="wq8-6y-ZbY" firstAttribute="top" secondItem="Pyh-1n-2pf" secondAttribute="top" id="gNC-eH-gFE"/>
+                <constraint firstAttribute="bottom" secondItem="wq8-6y-ZbY" secondAttribute="bottom" id="pux-93-XJo"/>
                 <constraint firstItem="Rsh-94-LPF" firstAttribute="leading" secondItem="Pyh-1n-2pf" secondAttribute="leading" id="rgt-LN-jSs"/>
             </constraints>
             <size key="customSize" width="440" height="162"/>

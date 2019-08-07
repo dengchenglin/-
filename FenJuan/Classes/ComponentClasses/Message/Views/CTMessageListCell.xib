@@ -18,6 +18,61 @@
                 <rect key="frame" x="0.0" y="0.0" width="402" height="96.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GLT-Wp-1cg">
+                        <rect key="frame" x="0.0" y="0.0" width="402" height="96.5"/>
+                        <subviews>
+                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fuZ-AN-BMT">
+                                <rect key="frame" x="0.0" y="0.0" width="402" height="96.5"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="K7C-ci-KqI">
+                                        <rect key="frame" x="0.0" y="0.0" width="402" height="96.5"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="K7C-ci-KqI" firstAttribute="leading" secondItem="fuZ-AN-BMT" secondAttribute="leading" id="c0t-IQ-6nA"/>
+                                    <constraint firstItem="K7C-ci-KqI" firstAttribute="top" secondItem="fuZ-AN-BMT" secondAttribute="top" id="dKt-Ho-eUS"/>
+                                    <constraint firstAttribute="bottom" secondItem="K7C-ci-KqI" secondAttribute="bottom" id="kgc-yZ-mKI"/>
+                                    <constraint firstAttribute="trailing" secondItem="K7C-ci-KqI" secondAttribute="trailing" id="tNU-fy-DiP"/>
+                                </constraints>
+                            </view>
+                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pKM-4x-RzV">
+                                <rect key="frame" x="0.0" y="0.0" width="402" height="96.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QVB-1R-ddV">
+                                        <rect key="frame" x="0.0" y="0.0" width="402" height="96.5"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="QVB-1R-ddV" firstAttribute="leading" secondItem="pKM-4x-RzV" secondAttribute="leading" id="AsA-Ln-OJQ"/>
+                                    <constraint firstAttribute="bottom" secondItem="QVB-1R-ddV" secondAttribute="bottom" id="Dv3-iz-wMy"/>
+                                    <constraint firstAttribute="trailing" secondItem="QVB-1R-ddV" secondAttribute="trailing" id="M5C-0k-mcO"/>
+                                    <constraint firstItem="QVB-1R-ddV" firstAttribute="top" secondItem="pKM-4x-RzV" secondAttribute="top" id="WGC-XT-84M"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="pKM-4x-RzV" firstAttribute="leading" secondItem="GLT-Wp-1cg" secondAttribute="leading" id="5QP-DY-XzS"/>
+                            <constraint firstAttribute="trailing" secondItem="pKM-4x-RzV" secondAttribute="trailing" id="C1i-94-kA3"/>
+                            <constraint firstItem="pKM-4x-RzV" firstAttribute="top" secondItem="GLT-Wp-1cg" secondAttribute="top" id="FAq-el-Zoi"/>
+                            <constraint firstAttribute="bottom" secondItem="pKM-4x-RzV" secondAttribute="bottom" id="KYB-tq-vha"/>
+                            <constraint firstAttribute="trailing" secondItem="pKM-4x-RzV" secondAttribute="trailing" id="Qle-Ij-9oW"/>
+                            <constraint firstAttribute="bottom" secondItem="pKM-4x-RzV" secondAttribute="bottom" id="eXw-MS-SJB"/>
+                            <constraint firstItem="fuZ-AN-BMT" firstAttribute="leading" secondItem="GLT-Wp-1cg" secondAttribute="leading" id="gcA-rI-iLa"/>
+                            <constraint firstItem="fuZ-AN-BMT" firstAttribute="top" secondItem="GLT-Wp-1cg" secondAttribute="top" id="kBf-th-bNp"/>
+                            <constraint firstAttribute="bottom" secondItem="fuZ-AN-BMT" secondAttribute="bottom" id="knD-yY-q3D"/>
+                            <constraint firstItem="pKM-4x-RzV" firstAttribute="top" secondItem="GLT-Wp-1cg" secondAttribute="top" id="n47-hx-45u"/>
+                            <constraint firstItem="pKM-4x-RzV" firstAttribute="leading" secondItem="GLT-Wp-1cg" secondAttribute="leading" id="nL5-Ps-ewF"/>
+                            <constraint firstAttribute="trailing" secondItem="fuZ-AN-BMT" secondAttribute="trailing" id="tHo-rT-eUi"/>
+                        </constraints>
+                    </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qMo-lh-b0z">
                         <rect key="frame" x="15" y="18" width="372" height="64.5"/>
                         <subviews>
@@ -61,11 +116,15 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="qMo-lh-b0z" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="0mt-mj-bw8"/>
+                    <constraint firstAttribute="bottom" secondItem="GLT-Wp-1cg" secondAttribute="bottom" id="7JO-NL-HB5"/>
                     <constraint firstItem="qMo-lh-b0z" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="18" id="D75-bs-hgi"/>
                     <constraint firstAttribute="bottom" secondItem="VTW-Ab-Vva" secondAttribute="bottom" id="E2p-ZB-wfz"/>
                     <constraint firstAttribute="bottom" secondItem="qMo-lh-b0z" secondAttribute="bottom" constant="14" id="KWc-yN-RMt"/>
+                    <constraint firstItem="GLT-Wp-1cg" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="M1i-jl-6X2"/>
                     <constraint firstAttribute="trailing" secondItem="VTW-Ab-Vva" secondAttribute="trailing" id="RGw-iP-luy"/>
                     <constraint firstAttribute="trailing" secondItem="qMo-lh-b0z" secondAttribute="trailing" constant="15" id="aJJ-uN-YvC"/>
+                    <constraint firstItem="GLT-Wp-1cg" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="bkf-pI-Q1n"/>
+                    <constraint firstAttribute="trailing" secondItem="GLT-Wp-1cg" secondAttribute="trailing" id="ifl-6X-ztK"/>
                     <constraint firstItem="VTW-Ab-Vva" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="yW2-fo-Dty"/>
                 </constraints>
             </tableViewCellContentView>

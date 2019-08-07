@@ -18,6 +18,31 @@
                 <rect key="frame" x="0.0" y="0.0" width="305" height="457"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NZj-nl-9y6">
+                        <rect key="frame" x="0.0" y="0.0" width="305" height="457"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bsa-d3-nPG">
+                                <rect key="frame" x="0.0" y="0.0" width="305" height="457"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Ia-fU-Kyi">
+                                <rect key="frame" x="0.0" y="0.0" width="305" height="457"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="bsa-d3-nPG" firstAttribute="leading" secondItem="NZj-nl-9y6" secondAttribute="leading" id="61B-vw-UHL"/>
+                            <constraint firstItem="4Ia-fU-Kyi" firstAttribute="leading" secondItem="NZj-nl-9y6" secondAttribute="leading" id="6Ov-db-5nA"/>
+                            <constraint firstItem="4Ia-fU-Kyi" firstAttribute="top" secondItem="NZj-nl-9y6" secondAttribute="top" id="Dhh-2E-YZ6"/>
+                            <constraint firstAttribute="trailing" secondItem="bsa-d3-nPG" secondAttribute="trailing" id="IaT-ya-CqO"/>
+                            <constraint firstAttribute="bottom" secondItem="bsa-d3-nPG" secondAttribute="bottom" id="Lna-hG-yO1"/>
+                            <constraint firstItem="bsa-d3-nPG" firstAttribute="top" secondItem="NZj-nl-9y6" secondAttribute="top" id="OHf-kF-DCi"/>
+                            <constraint firstAttribute="trailing" secondItem="4Ia-fU-Kyi" secondAttribute="trailing" id="mPR-fP-4XG"/>
+                            <constraint firstAttribute="bottom" secondItem="4Ia-fU-Kyi" secondAttribute="bottom" id="ysN-8N-2Pd"/>
+                        </constraints>
+                    </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9XC-3F-bgR">
                         <rect key="frame" x="0.0" y="0.0" width="305" height="457"/>
                         <subviews>
@@ -208,9 +233,13 @@
             </view>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="9XC-3F-bgR" secondAttribute="bottom" id="7zY-uw-Roh"/>
+                <constraint firstAttribute="trailing" secondItem="NZj-nl-9y6" secondAttribute="trailing" id="D5n-JQ-O9l"/>
                 <constraint firstItem="9XC-3F-bgR" firstAttribute="top" secondItem="3vw-Cm-FsC" secondAttribute="top" id="TXr-6Z-raG"/>
+                <constraint firstAttribute="bottom" secondItem="NZj-nl-9y6" secondAttribute="bottom" id="ZLT-et-73i"/>
                 <constraint firstItem="9XC-3F-bgR" firstAttribute="leading" secondItem="3vw-Cm-FsC" secondAttribute="leading" id="de0-9z-Jj2"/>
+                <constraint firstItem="NZj-nl-9y6" firstAttribute="leading" secondItem="3vw-Cm-FsC" secondAttribute="leading" id="eAJ-Mq-FWj"/>
                 <constraint firstAttribute="trailing" secondItem="9XC-3F-bgR" secondAttribute="trailing" id="ekt-Jh-jSa"/>
+                <constraint firstItem="NZj-nl-9y6" firstAttribute="top" secondItem="3vw-Cm-FsC" secondAttribute="top" id="pPk-YB-4Ei"/>
             </constraints>
             <size key="customSize" width="305" height="457"/>
             <connections>

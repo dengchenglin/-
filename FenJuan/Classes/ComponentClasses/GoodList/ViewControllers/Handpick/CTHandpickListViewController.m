@@ -8,7 +8,7 @@
 
 #import "CTHandpickListViewController.h"
 
-#import "CTHandpickListCell.h"
+#import "FJHandpickListCellfj.h"
 
 #import "FJHandpickDetailViewControllerfj.h"
 
@@ -27,7 +27,7 @@
 @synthesize dataSources = _dataSources;
 
 - (void)setUpUI{
-    [self.tableView registerNibWithClass:CTHandpickListCell.class];
+    [self.tableView registerNibWithClass:FJHandpickListCellfj.class];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.backgroundColor = CTBackGroundGrayColor;
 }
@@ -47,7 +47,7 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    CTHandpickListCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(CTHandpickListCell.class)];
+    FJHandpickListCellfj *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(FJHandpickListCellfj.class)];
     cell.viewModel = self.dataSources[indexPath.row];
     return cell;
 }

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -15,6 +15,10 @@
             <rect key="frame" x="0.0" y="0.0" width="436" height="152"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hd3-yM-5Mc">
+                    <rect key="frame" x="0.0" y="0.0" width="436" height="152"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tOX-Xl-eB4">
                     <rect key="frame" x="139" y="75.5" width="20" height="1"/>
                     <color key="backgroundColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -24,7 +28,7 @@
                     </constraints>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="i7G-kg-Lgn">
-                    <rect key="frame" x="277" y="75" width="20" height="1"/>
+                    <rect key="frame" x="277" y="75.5" width="20" height="1"/>
                     <color key="backgroundColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="1" id="D1n-rl-DsD"/>
@@ -32,7 +36,7 @@
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="近30天返利" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="30n-kk-D7B">
-                    <rect key="frame" x="179" y="65" width="78" height="21"/>
+                    <rect key="frame" x="179" y="65.5" width="78" height="21"/>
                     <fontDescription key="fontDescription" name="PingFangSC-Medium" family="PingFang SC" pointSize="15"/>
                     <color key="textColor" red="0.078431372549019607" green="0.078431372549019607" blue="0.078431372549019607" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
@@ -40,7 +44,11 @@
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
+                <constraint firstItem="Hd3-yM-5Mc" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="0sF-dl-8YU"/>
                 <constraint firstItem="30n-kk-D7B" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="4a5-Qk-q7k"/>
+                <constraint firstAttribute="bottom" secondItem="Hd3-yM-5Mc" secondAttribute="bottom" id="6CE-KH-dfc"/>
+                <constraint firstItem="Hd3-yM-5Mc" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Bw8-kh-5Fx"/>
+                <constraint firstAttribute="trailing" secondItem="Hd3-yM-5Mc" secondAttribute="trailing" id="CLD-TG-kv2"/>
                 <constraint firstItem="i7G-kg-Lgn" firstAttribute="centerY" secondItem="30n-kk-D7B" secondAttribute="centerY" id="Q9b-eH-k31"/>
                 <constraint firstItem="i7G-kg-Lgn" firstAttribute="leading" secondItem="30n-kk-D7B" secondAttribute="trailing" constant="20" id="TQx-p9-Eow"/>
                 <constraint firstItem="tOX-Xl-eB4" firstAttribute="centerY" secondItem="30n-kk-D7B" secondAttribute="centerY" id="Ts1-II-R4X"/>

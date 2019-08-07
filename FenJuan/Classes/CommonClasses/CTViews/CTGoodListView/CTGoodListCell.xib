@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -18,8 +18,33 @@
                 <rect key="frame" x="0.0" y="0.0" width="368" height="161.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YD0-32-VX6">
+                        <rect key="frame" x="0.0" y="0.0" width="368" height="161.5"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RYU-wi-47z">
+                                <rect key="frame" x="0.0" y="0.0" width="368" height="161.5"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mzX-Qr-HIY">
+                                <rect key="frame" x="0.0" y="0.0" width="368" height="161.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="RYU-wi-47z" firstAttribute="top" secondItem="YD0-32-VX6" secondAttribute="top" id="8jq-dq-k91"/>
+                            <constraint firstAttribute="trailing" secondItem="mzX-Qr-HIY" secondAttribute="trailing" id="DAH-zb-faz"/>
+                            <constraint firstAttribute="trailing" secondItem="RYU-wi-47z" secondAttribute="trailing" id="K8e-FJ-gNk"/>
+                            <constraint firstItem="mzX-Qr-HIY" firstAttribute="leading" secondItem="YD0-32-VX6" secondAttribute="leading" id="d1q-3J-wc7"/>
+                            <constraint firstAttribute="bottom" secondItem="mzX-Qr-HIY" secondAttribute="bottom" id="gyh-tA-7Dm"/>
+                            <constraint firstItem="RYU-wi-47z" firstAttribute="leading" secondItem="YD0-32-VX6" secondAttribute="leading" id="jn4-PG-PDd"/>
+                            <constraint firstItem="mzX-Qr-HIY" firstAttribute="top" secondItem="YD0-32-VX6" secondAttribute="top" id="lQx-Bo-yZB"/>
+                            <constraint firstAttribute="bottom" secondItem="RYU-wi-47z" secondAttribute="bottom" id="oKf-bq-jbN"/>
+                        </constraints>
+                    </view>
                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lek-3r-ENM">
-                        <rect key="frame" x="18" y="160" width="332" height="1"/>
+                        <rect key="frame" x="18" y="160.5" width="332" height="1"/>
                         <color key="backgroundColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="1" id="pdP-nv-hdf"/>
@@ -29,6 +54,10 @@
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="Lek-3r-ENM" secondAttribute="bottom" id="7NJ-Y0-FPh"/>
                     <constraint firstAttribute="trailing" secondItem="Lek-3r-ENM" secondAttribute="trailing" constant="18" id="G85-dW-AHX"/>
+                    <constraint firstItem="YD0-32-VX6" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="GKS-ep-I3r"/>
+                    <constraint firstAttribute="trailing" secondItem="YD0-32-VX6" secondAttribute="trailing" id="GYD-jT-tbH"/>
+                    <constraint firstItem="YD0-32-VX6" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="JYS-wz-aiC"/>
+                    <constraint firstAttribute="bottom" secondItem="YD0-32-VX6" secondAttribute="bottom" id="WtN-5j-dYM"/>
                     <constraint firstItem="Lek-3r-ENM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="18" id="aWF-Rm-LpG"/>
                 </constraints>
             </tableViewCellContentView>

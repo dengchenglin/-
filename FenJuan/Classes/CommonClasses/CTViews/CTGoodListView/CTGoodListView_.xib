@@ -15,6 +15,31 @@
             <rect key="frame" x="0.0" y="0.0" width="399" height="196"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jfa-tg-HLO">
+                    <rect key="frame" x="0.0" y="0.0" width="399" height="196"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="POl-dq-VQ3">
+                            <rect key="frame" x="0.0" y="0.0" width="399" height="196"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b19-Vn-sxN">
+                            <rect key="frame" x="0.0" y="0.0" width="399" height="196"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="POl-dq-VQ3" secondAttribute="bottom" id="2Y9-gS-Cou"/>
+                        <constraint firstItem="POl-dq-VQ3" firstAttribute="leading" secondItem="jfa-tg-HLO" secondAttribute="leading" id="3bS-X2-lzX"/>
+                        <constraint firstItem="b19-Vn-sxN" firstAttribute="top" secondItem="jfa-tg-HLO" secondAttribute="top" id="5MP-Ay-FFz"/>
+                        <constraint firstAttribute="trailing" secondItem="b19-Vn-sxN" secondAttribute="trailing" id="7B8-Ac-myX"/>
+                        <constraint firstItem="POl-dq-VQ3" firstAttribute="top" secondItem="jfa-tg-HLO" secondAttribute="top" id="NIx-xc-mTA"/>
+                        <constraint firstAttribute="bottom" secondItem="b19-Vn-sxN" secondAttribute="bottom" id="OUT-SJ-HKs"/>
+                        <constraint firstAttribute="trailing" secondItem="POl-dq-VQ3" secondAttribute="trailing" id="amd-yF-E3U"/>
+                        <constraint firstItem="b19-Vn-sxN" firstAttribute="leading" secondItem="jfa-tg-HLO" secondAttribute="leading" id="fef-Su-NLF"/>
+                    </constraints>
+                </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Hc-AX-TKP">
                     <rect key="frame" x="0.0" y="0.0" width="399" height="196"/>
                     <subviews>
@@ -259,9 +284,13 @@
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="0Hc-AX-TKP" secondAttribute="trailing" id="2EY-kD-wvi"/>
+                <constraint firstItem="jfa-tg-HLO" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="3Nf-v1-yUi"/>
+                <constraint firstItem="jfa-tg-HLO" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="4Q0-X9-g7s"/>
+                <constraint firstAttribute="bottom" secondItem="jfa-tg-HLO" secondAttribute="bottom" id="7fl-Hv-8Yc"/>
                 <constraint firstItem="0Hc-AX-TKP" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Qmh-Wm-71F"/>
                 <constraint firstItem="0Hc-AX-TKP" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="UQH-YD-SGk"/>
                 <constraint firstAttribute="bottom" secondItem="0Hc-AX-TKP" secondAttribute="bottom" id="X7b-Ym-bNy"/>
+                <constraint firstAttribute="trailing" secondItem="jfa-tg-HLO" secondAttribute="trailing" id="wLY-Bv-p9T"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>

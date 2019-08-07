@@ -7,9 +7,9 @@
 //  Copyright © 2019年 Danke. All rights reserved.
 //
 
-#import "CTHandpickListCell.h"
+#import "FJHandpickListCellfj.h"
 
-@implementation CTHandpickListCell
+@implementation FJHandpickListCellfj
 
 - (void)awakeFromNib{
     [super awakeFromNib];

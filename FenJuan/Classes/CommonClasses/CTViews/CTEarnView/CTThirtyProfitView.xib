@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -15,11 +15,15 @@
             <rect key="frame" x="0.0" y="0.0" width="397" height="65"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0MO-7s-sf7">
+                    <rect key="frame" x="0.0" y="0.0" width="397" height="65"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xjd-9K-MaE">
                     <rect key="frame" x="0.0" y="0.0" width="397" height="65"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CQ5-rh-2Nb">
-                            <rect key="frame" x="126.5" y="18" width="144.5" height="30"/>
+                            <rect key="frame" x="126.5" y="17.5" width="144.5" height="30"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="近30天预估返利" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CJB-xx-EGB">
                                     <rect key="frame" x="0.0" y="5" width="101" height="20"/>
@@ -55,8 +59,12 @@
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="xjd-9K-MaE" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="50P-LO-CgP"/>
+                <constraint firstAttribute="trailing" secondItem="0MO-7s-sf7" secondAttribute="trailing" id="76E-hv-fzd"/>
+                <constraint firstItem="0MO-7s-sf7" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Fu5-52-KWZ"/>
                 <constraint firstAttribute="bottom" secondItem="xjd-9K-MaE" secondAttribute="bottom" id="QBC-cT-Ptr"/>
+                <constraint firstItem="0MO-7s-sf7" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="UlM-h5-Dbd"/>
                 <constraint firstAttribute="trailing" secondItem="xjd-9K-MaE" secondAttribute="trailing" id="Wxd-gN-MET"/>
+                <constraint firstAttribute="bottom" secondItem="0MO-7s-sf7" secondAttribute="bottom" id="iAn-Jg-h8n"/>
                 <constraint firstItem="xjd-9K-MaE" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="vGc-6M-X0s"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>

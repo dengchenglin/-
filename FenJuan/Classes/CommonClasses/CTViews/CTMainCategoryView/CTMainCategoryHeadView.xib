@@ -15,6 +15,31 @@
             <rect key="frame" x="0.0" y="0.0" width="340" height="162"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HUA-OI-sbY">
+                    <rect key="frame" x="0.0" y="0.0" width="340" height="162"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="svd-AN-DbF">
+                            <rect key="frame" x="0.0" y="0.0" width="340" height="162"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AYo-wj-u7q">
+                            <rect key="frame" x="0.0" y="0.0" width="340" height="162"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="AYo-wj-u7q" secondAttribute="bottom" id="Dfx-5Q-ef1"/>
+                        <constraint firstAttribute="bottom" secondItem="svd-AN-DbF" secondAttribute="bottom" id="Noe-ot-JWh"/>
+                        <constraint firstAttribute="trailing" secondItem="svd-AN-DbF" secondAttribute="trailing" id="ept-cA-4xD"/>
+                        <constraint firstItem="svd-AN-DbF" firstAttribute="leading" secondItem="HUA-OI-sbY" secondAttribute="leading" id="gPA-sM-g4k"/>
+                        <constraint firstItem="AYo-wj-u7q" firstAttribute="top" secondItem="HUA-OI-sbY" secondAttribute="top" id="jyn-Bk-euX"/>
+                        <constraint firstItem="AYo-wj-u7q" firstAttribute="leading" secondItem="HUA-OI-sbY" secondAttribute="leading" id="pWE-ae-OUX"/>
+                        <constraint firstAttribute="trailing" secondItem="AYo-wj-u7q" secondAttribute="trailing" id="vgV-tR-MHe"/>
+                        <constraint firstItem="svd-AN-DbF" firstAttribute="top" secondItem="HUA-OI-sbY" secondAttribute="top" id="zHL-Bb-gMq"/>
+                    </constraints>
+                </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ATb-Zs-OSd">
                     <rect key="frame" x="0.0" y="0.0" width="340" height="162"/>
                     <subviews>
@@ -48,7 +73,11 @@
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="ATb-Zs-OSd" secondAttribute="trailing" id="368-Wc-Tvw"/>
+                <constraint firstItem="HUA-OI-sbY" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="IxB-qN-J5c"/>
+                <constraint firstAttribute="trailing" secondItem="HUA-OI-sbY" secondAttribute="trailing" id="UeY-We-V3B"/>
+                <constraint firstItem="HUA-OI-sbY" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="VYQ-IT-45W"/>
                 <constraint firstItem="ATb-Zs-OSd" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="dgZ-jV-yNT"/>
+                <constraint firstAttribute="bottom" secondItem="HUA-OI-sbY" secondAttribute="bottom" id="lvA-gx-wjd"/>
                 <constraint firstAttribute="bottom" secondItem="ATb-Zs-OSd" secondAttribute="bottom" id="mGO-SG-Hfv"/>
                 <constraint firstItem="ATb-Zs-OSd" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="vqT-2R-oAH"/>
             </constraints>

@@ -15,6 +15,10 @@
             <rect key="frame" x="0.0" y="0.0" width="369" height="227"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1OI-ed-kpm">
+                    <rect key="frame" x="0.0" y="0.0" width="369" height="227"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j0i-Yi-f1l">
                     <rect key="frame" x="0.0" y="0.0" width="369" height="227"/>
                     <subviews>
@@ -75,8 +79,12 @@
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
+                <constraint firstAttribute="trailing" secondItem="1OI-ed-kpm" secondAttribute="trailing" id="1IG-27-iMN"/>
+                <constraint firstItem="1OI-ed-kpm" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="IZf-iG-Scd"/>
                 <constraint firstItem="j0i-Yi-f1l" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Pd5-Sx-nhW"/>
                 <constraint firstItem="j0i-Yi-f1l" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="TF6-Sw-gbm"/>
+                <constraint firstAttribute="bottom" secondItem="1OI-ed-kpm" secondAttribute="bottom" id="dLc-Tx-qTE"/>
+                <constraint firstItem="1OI-ed-kpm" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="f1o-nd-fzm"/>
                 <constraint firstAttribute="trailing" secondItem="j0i-Yi-f1l" secondAttribute="trailing" id="frC-8m-Md3"/>
                 <constraint firstAttribute="bottom" secondItem="j0i-Yi-f1l" secondAttribute="bottom" id="zar-xn-uzl"/>
             </constraints>

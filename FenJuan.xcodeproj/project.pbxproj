@@ -88,8 +88,8 @@
 		324EC4E022FA74EC00CBC988 /* FJHandpickDescViewfj.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EC08D22FA74EA00CBC988 /* FJHandpickDescViewfj.m */; };
 		324EC4E122FA74EC00CBC988 /* FJHandpickDescViewfj.xib in Resources */ = {isa = PBXBuildFile; fileRef = 324EC08E22FA74EA00CBC988 /* FJHandpickDescViewfj.xib */; };
 		324EC4E222FA74EC00CBC988 /* FJHandpickDetailViewControllerfj.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EC09022FA74EA00CBC988 /* FJHandpickDetailViewControllerfj.m */; };
-		324EC4E322FA74EC00CBC988 /* CTHandpickListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EC09222FA74EA00CBC988 /* CTHandpickListCell.m */; };
-		324EC4E422FA74EC00CBC988 /* CTHandpickListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 324EC09322FA74EA00CBC988 /* CTHandpickListCell.xib */; };
+		324EC4E322FA74EC00CBC988 /* FJHandpickListCellfj.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EC09222FA74EA00CBC988 /* FJHandpickListCellfj.m */; };
+		324EC4E422FA74EC00CBC988 /* FJHandpickListCellfj.xib in Resources */ = {isa = PBXBuildFile; fileRef = 324EC09322FA74EA00CBC988 /* FJHandpickListCellfj.xib */; };
 		324EC4E522FA74EC00CBC988 /* CTHandpickListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EC09522FA74EA00CBC988 /* CTHandpickListViewController.m */; };
 		324EC4E622FA74EC00CBC988 /* CThotSalesListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EC09822FA74EA00CBC988 /* CThotSalesListViewController.m */; };
 		324EC4E722FA74EC00CBC988 /* CTHotSalesNoticeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EC09A22FA74EA00CBC988 /* CTHotSalesNoticeView.m */; };
@@ -763,9 +763,9 @@
 		324EC08E22FA74EA00CBC988 /* FJHandpickDescViewfj.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FJHandpickDescViewfj.xib; sourceTree = "<group>"; };
 		324EC08F22FA74EA00CBC988 /* FJHandpickDetailViewControllerfj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FJHandpickDetailViewControllerfj.h; sourceTree = "<group>"; };
 		324EC09022FA74EA00CBC988 /* FJHandpickDetailViewControllerfj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FJHandpickDetailViewControllerfj.m; sourceTree = "<group>"; };
-		324EC09122FA74EA00CBC988 /* CTHandpickListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTHandpickListCell.h; sourceTree = "<group>"; };
-		324EC09222FA74EA00CBC988 /* CTHandpickListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTHandpickListCell.m; sourceTree = "<group>"; };
-		324EC09322FA74EA00CBC988 /* CTHandpickListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CTHandpickListCell.xib; sourceTree = "<group>"; };
+		324EC09122FA74EA00CBC988 /* FJHandpickListCellfj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FJHandpickListCellfj.h; sourceTree = "<group>"; };
+		324EC09222FA74EA00CBC988 /* FJHandpickListCellfj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FJHandpickListCellfj.m; sourceTree = "<group>"; };
+		324EC09322FA74EA00CBC988 /* FJHandpickListCellfj.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FJHandpickListCellfj.xib; sourceTree = "<group>"; };
 		324EC09422FA74EA00CBC988 /* CTHandpickListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTHandpickListViewController.h; sourceTree = "<group>"; };
 		324EC09522FA74EA00CBC988 /* CTHandpickListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTHandpickListViewController.m; sourceTree = "<group>"; };
 		324EC09722FA74EA00CBC988 /* CThotSalesListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CThotSalesListViewController.h; sourceTree = "<group>"; };
@@ -2165,9 +2165,9 @@
 				324EC08E22FA74EA00CBC988 /* FJHandpickDescViewfj.xib */,
 				324EC08F22FA74EA00CBC988 /* FJHandpickDetailViewControllerfj.h */,
 				324EC09022FA74EA00CBC988 /* FJHandpickDetailViewControllerfj.m */,
-				324EC09122FA74EA00CBC988 /* CTHandpickListCell.h */,
-				324EC09222FA74EA00CBC988 /* CTHandpickListCell.m */,
-				324EC09322FA74EA00CBC988 /* CTHandpickListCell.xib */,
+				324EC09122FA74EA00CBC988 /* FJHandpickListCellfj.h */,
+				324EC09222FA74EA00CBC988 /* FJHandpickListCellfj.m */,
+				324EC09322FA74EA00CBC988 /* FJHandpickListCellfj.xib */,
 				324EC09422FA74EA00CBC988 /* CTHandpickListViewController.h */,
 				324EC09522FA74EA00CBC988 /* CTHandpickListViewController.m */,
 			);
@@ -4540,7 +4540,7 @@
 				324EC4C422FA74EC00CBC988 /* LMNoOrderView.xib in Resources */,
 				324EC59422FA74EC00CBC988 /* CTMineOrderView.xib in Resources */,
 				324EC4A722FA74EB00CBC988 /* CTThirtyTrendView.xib in Resources */,
-				324EC4E422FA74EC00CBC988 /* CTHandpickListCell.xib in Resources */,
+				324EC4E422FA74EC00CBC988 /* FJHandpickListCellfj.xib in Resources */,
 				324EC4D122FA74EC00CBC988 /* CTSharePopupView.xib in Resources */,
 				324EC4F922FA74EC00CBC988 /* CTGoodsDescView.xib in Resources */,
 				324EC53922FA74EC00CBC988 /* CTSetPasswordView_.xib in Resources */,
@@ -5085,7 +5085,7 @@
 				324EC53322FA74EC00CBC988 /* CTLoginView.m in Sources */,
 				324EC5F822FA74EC00CBC988 /* CTSxyTypeView.m in Sources */,
 				324EC66322FA74EC00CBC988 /* UIViewController+Helper.m in Sources */,
-				324EC4E322FA74EC00CBC988 /* CTHandpickListCell.m in Sources */,
+				324EC4E322FA74EC00CBC988 /* FJHandpickListCellfj.m in Sources */,
 				324EC4E722FA74EC00CBC988 /* CTHotSalesNoticeView.m in Sources */,
 				324EC54F22FA74EC00CBC988 /* CTMemberEquityItemView.m in Sources */,
 				324EC57722FA74EC00CBC988 /* CTProfitShareViewController.m in Sources */,
