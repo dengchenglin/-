@@ -18,7 +18,7 @@
     shadow.shadowOffset =CGSizeMake(0,1);
 
     
-    NSMutableAttributedString *string = [[NSMutableAttributedString alloc] initWithString:@"用优券APP买东西\n简直太划算啦" attributes: @{NSFontAttributeName: [UIFont fontWithName:@"Helvetica-Bold" size:20],NSShadowAttributeName: shadow}];
+    NSMutableAttributedString *string = [[NSMutableAttributedString alloc] initWithString:@"用粉券APP买东西\n简直太划算啦" attributes: @{NSFontAttributeName: [UIFont fontWithName:@"Helvetica-Bold" size:20],NSShadowAttributeName: shadow}];
     
     _attractiveTitleLabel.attributedText = string;
     _attractiveTitleLabel.textAlignment = NSTextAlignmentCenter;

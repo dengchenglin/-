@@ -36,7 +36,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="优券" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RdQ-gG-kZ7">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="粉券" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RdQ-gG-kZ7">
                                         <rect key="frame" x="43" y="19" width="31" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="h2y-d2-wPy"/>
@@ -57,7 +57,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fKv-W9-Sy2">
                                         <rect key="frame" x="294" y="24" width="70" height="24"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_home_service_bot2" translatesAutoresizingMaskIntoConstraints="NO" id="6DE-6Z-JLO">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="i_home_service_l" translatesAutoresizingMaskIntoConstraints="NO" id="6DE-6Z-JLO">
                                                 <rect key="frame" x="0.0" y="0.0" width="70" height="24"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -219,8 +219,8 @@
         </tableViewCell>
     </objects>
     <resources>
+        <image name="i_home_service_l" width="141" height="43"/>
         <image name="ic_copy_text" width="11" height="11"/>
         <image name="ic_home_live_share" width="15" height="15"/>
-        <image name="ic_home_service_bot2" width="141" height="43"/>
     </resources>
 </document>

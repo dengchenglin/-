@@ -92,7 +92,7 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gdZ-bd-Pbo">
                             <rect key="frame" x="169" y="0.0" width="169" height="264"/>
                             <subviews>
-                                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_already" translatesAutoresizingMaskIntoConstraints="NO" id="K3M-vK-8XW">
+                                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="i_already" translatesAutoresizingMaskIntoConstraints="NO" id="K3M-vK-8XW">
                                     <rect key="frame" x="59.5" y="93" width="50" height="50"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="50" id="1V4-4C-7qC"/>
@@ -178,7 +178,7 @@
         </view>
     </objects>
     <resources>
-        <image name="ic_already" width="50" height="50"/>
+        <image name="i_already" width="50" height="50"/>
         <image name="ic_lose_efficacy" width="50" height="50"/>
         <image name="ic_more_gray" width="5" height="9"/>
         <image name="ic_payment" width="50" height="50"/>

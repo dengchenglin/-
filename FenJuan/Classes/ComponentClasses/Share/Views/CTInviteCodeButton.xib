@@ -25,7 +25,7 @@
                                 <constraint firstAttribute="width" constant="140" id="udF-fq-Z4u"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                            <state key="normal" title="复制链接" backgroundImage="ic_home_service_bot2"/>
+                            <state key="normal" title="复制链接" backgroundImage="i_home_service_l"/>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                     <integer key="value" value="21"/>
@@ -84,7 +84,7 @@
         </view>
     </objects>
     <resources>
+        <image name="i_home_service_l" width="141" height="43"/>
         <image name="ic_home_service_bot" width="141" height="43"/>
-        <image name="ic_home_service_bot2" width="141" height="43"/>
     </resources>
 </document>

@@ -18,7 +18,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j0i-Yi-f1l">
                     <rect key="frame" x="0.0" y="0.0" width="369" height="227"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pic_nav_bg" translatesAutoresizingMaskIntoConstraints="NO" id="x28-GS-VHs">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="p_nav_bg" translatesAutoresizingMaskIntoConstraints="NO" id="x28-GS-VHs">
                             <rect key="frame" x="0.0" y="0.0" width="369" height="227"/>
                         </imageView>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EIj-eC-Amn">
@@ -30,7 +30,7 @@
                                         <constraint firstAttribute="width" constant="30" id="Ocd-jp-J2g"/>
                                         <constraint firstAttribute="height" constant="30" id="m4x-bu-kvF"/>
                                     </constraints>
-                                    <state key="normal" image="four_detail_back_icon"/>
+                                    <state key="normal" image="f_detail_back_icon"/>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="32g-Ca-Uf5">
                                     <rect key="frame" x="321" y="7" width="30" height="30"/>
@@ -38,7 +38,7 @@
                                         <constraint firstAttribute="height" constant="30" id="FYB-Ov-B0r"/>
                                         <constraint firstAttribute="width" constant="30" id="X1i-fh-Oop"/>
                                     </constraints>
-                                    <state key="normal" title="Button" image="four_detail_share_icon"/>
+                                    <state key="normal" title="Button" image="f_detail_share_icon"/>
                                 </button>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="商品详情" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KMC-Fr-1c1">
                                     <rect key="frame" x="150" y="11.5" width="69.5" height="21"/>
@@ -91,8 +91,8 @@
         </view>
     </objects>
     <resources>
-        <image name="four_detail_back_icon" width="30" height="30"/>
-        <image name="four_detail_share_icon" width="30" height="30"/>
-        <image name="pic_nav_bg" width="450" height="131"/>
+        <image name="f_detail_back_icon" width="30" height="30"/>
+        <image name="f_detail_share_icon" width="30" height="30"/>
+        <image name="p_nav_bg" width="450" height="131"/>
     </resources>
 </document>

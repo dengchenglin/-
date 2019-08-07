@@ -113,7 +113,7 @@
 - (void)resetCopyText{
     NSMutableString *string = [NSMutableString string];
     NSString *text1 = [NSString stringWithFormat:@"【券后价】%@元\n",_viewModel.model.coupon_price];
-    NSString *text2 = [NSString stringWithFormat:@"【免费下载优券下单】再返还%@元\n",_viewModel.model.commission_money];
+    NSString *text2 = [NSString stringWithFormat:@"【免费下载粉券下单】再返还%@元\n",_viewModel.model.commission_money];
     NSString *text3 = [NSString stringWithFormat:@"【下单链接】%@",_viewModel.model.order_url];
     if(text3.length > 200){
         text3 = [text3 substringWithRange:NSMakeRange(0, 200)];

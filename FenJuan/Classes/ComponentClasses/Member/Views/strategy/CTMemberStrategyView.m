@@ -46,7 +46,7 @@ ViewInstance(setUp)
 }
 
 - (void)reloadView{
-    NSArray *imgs = @[@"ic_make_money",@"ic_save_money"];
+    NSArray *imgs = @[@"i_make_money",@"i_save_money"];
     CGFloat containerWidth = _containerView.width;
     if(!containerWidth)containerWidth = SCREEN_WIDTH - 60;
     NSInteger lineCount = (_titles.count<4?_titles.count:4);

@@ -15,7 +15,7 @@
             <rect key="frame" x="0.0" y="0.0" width="468" height="285"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pic_bg_vip" translatesAutoresizingMaskIntoConstraints="NO" id="g2u-9z-ccg">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="p_bg_vip" translatesAutoresizingMaskIntoConstraints="NO" id="g2u-9z-ccg">
                     <rect key="frame" x="0.0" y="0.0" width="468" height="285"/>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yNf-wt-uDb">
@@ -78,7 +78,7 @@
         </view>
     </objects>
     <resources>
-        <image name="pic_bg_vip" width="375" height="189"/>
+        <image name="p_bg_vip" width="375" height="189"/>
         <image name="pic_head_placeholder" width="90" height="90"/>
     </resources>
 </document>

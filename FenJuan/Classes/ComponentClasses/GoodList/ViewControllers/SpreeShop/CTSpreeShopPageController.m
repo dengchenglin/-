@@ -30,7 +30,7 @@
     if(!_segmentedControl){
         _segmentedControl = [[LMSegmentedControl alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 47)];
         _segmentedControl.delegate = self;
-        _segmentedControl.layer.contents = (__bridge id)[UIImage imageNamed:@"pic_bt_bg"].CGImage;
+        _segmentedControl.layer.contents = (__bridge id)[UIImage imageNamed:@"p_bt_bg"].CGImage;
         _segmentedControl.titleNormalColor = [UIColor whiteColor];
         _segmentedControl.titleSelectedColor = [UIColor whiteColor];
         _segmentedControl.selectedLineColor = RGBColor(255, 199, 38);

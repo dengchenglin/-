@@ -13,7 +13,7 @@
 - (void)awakeFromNib{
     [super awakeFromNib];
 
-    [self.backButton setImage:[[UIImage imageNamed:@"ic_return"] imageWithColor:[UIColor whiteColor]] forState:UIControlStateNormal];
+    [self.backButton setImage:[[UIImage imageNamed:@"i_return"] imageWithColor:[UIColor whiteColor]] forState:UIControlStateNormal];
     
 }
 

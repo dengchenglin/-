@@ -64,7 +64,7 @@
                                 <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UCx-Zw-Qg0">
                                     <rect key="frame" x="113" y="76" width="61.5" height="26"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" image="ic_home_service_bot2" translatesAutoresizingMaskIntoConstraints="NO" id="NAT-4H-2ed">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" image="i_home_service_l" translatesAutoresizingMaskIntoConstraints="NO" id="NAT-4H-2ed">
                                             <rect key="frame" x="0.0" y="0.0" width="61.5" height="26"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="0元券" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FwU-ZE-lyz">
@@ -164,7 +164,7 @@
         </view>
     </objects>
     <resources>
-        <image name="ic_home_service_bot2" width="141" height="43"/>
+        <image name="i_home_service_l" width="141" height="43"/>
         <image name="icon_bitmap" width="144" height="63"/>
     </resources>
 </document>

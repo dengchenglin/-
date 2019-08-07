@@ -11,7 +11,7 @@
 @implementation CTGoodsBuyView
 - (void)awakeFromNib{
     [super awakeFromNib];
-    _awardView.layer.contents = (__bridge id)[UIImage imageNamed:@"pic_bt_bg"].CGImage;
+    _awardView.layer.contents = (__bridge id)[UIImage imageNamed:@"p_bt_bg"].CGImage;
 }
 - (void)setViewModel:(CTGoodsViewModel *)viewModel{
     _viewModel = viewModel;

@@ -35,7 +35,7 @@
     if(!_shareButton){
         _shareButton = [UIButton buttonWithType:UIButtonTypeCustom];
         [_shareButton setTitle:@"立即分享" forState:UIControlStateNormal];
-        [_shareButton setBackgroundImage:[UIImage imageNamed:@"pic_rectangle2"] forState:UIControlStateNormal];
+        [_shareButton setBackgroundImage:[UIImage imageNamed:@"p_rectangle"] forState:UIControlStateNormal];
         [_shareButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         _shareButton.clipsToBounds = YES;
         _shareButton.titleLabel.font = [UIFont systemFontOfSize:15];

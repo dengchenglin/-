@@ -23,7 +23,7 @@
 - (CTGoodSortView *)sortView{
     if(!_sortView){
         _sortView = [[CTGoodSortView alloc]init];
-        _sortView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"pic_nav_bg"]];
+        _sortView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"p_nav_bg"]];
         _sortView.normalColor = [UIColor whiteColor];
         _sortView.selectedColor = [UIColor whiteColor];
         _sortView.upDownNormalColor = [UIColor whiteColor];

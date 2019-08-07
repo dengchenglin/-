@@ -37,7 +37,7 @@
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P5R-l0-pdm">
                                     <rect key="frame" x="0.0" y="0.0" width="87.5" height="87"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_home_pic" translatesAutoresizingMaskIntoConstraints="NO" id="m57-18-gJz">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="i_home_pic" translatesAutoresizingMaskIntoConstraints="NO" id="m57-18-gJz">
                                             <rect key="frame" x="18.5" y="0.0" width="50" height="50"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="50" id="Rqr-Iz-bEk"/>
@@ -93,7 +93,7 @@
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uAj-OH-0cw">
                                     <rect key="frame" x="175" y="0.0" width="87" height="87"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_home_friendsgroup" translatesAutoresizingMaskIntoConstraints="NO" id="6IV-Ky-fe6">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="i_home_friendsgroup" translatesAutoresizingMaskIntoConstraints="NO" id="6IV-Ky-fe6">
                                             <rect key="frame" x="18.5" y="0.0" width="50" height="50"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="50" id="Qwa-ID-cOn"/>
@@ -216,7 +216,7 @@
                     <constraints>
                         <constraint firstAttribute="height" constant="46" id="B5e-vU-gb9"/>
                     </constraints>
-                    <state key="normal" title="取消" backgroundImage="ic_home_service_bot2"/>
+                    <state key="normal" title="取消" backgroundImage="i_home_service_l"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                             <integer key="value" value="23"/>
@@ -253,11 +253,11 @@
         </view>
     </objects>
     <resources>
-        <image name="ic_home_friendsgroup" width="50" height="50"/>
-        <image name="ic_home_pic" width="50" height="50"/>
+        <image name="i_home_friendsgroup" width="50" height="50"/>
+        <image name="i_home_pic" width="50" height="50"/>
+        <image name="i_home_service_l" width="141" height="43"/>
         <image name="ic_home_qq" width="50" height="50"/>
         <image name="ic_home_qqspace" width="50" height="50"/>
-        <image name="ic_home_service_bot2" width="141" height="43"/>
         <image name="ic_home_wechat" width="50" height="50"/>
     </resources>
 </document>

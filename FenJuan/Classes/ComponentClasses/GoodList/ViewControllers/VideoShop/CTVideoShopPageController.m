@@ -30,7 +30,7 @@
     if(!_segmentedControl){
         _segmentedControl = [[LMSegmentedControl alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 40)];
         _segmentedControl.delegate = self;
-        _segmentedControl.layer.contents = (__bridge id)[UIImage imageNamed:@"pic_bt_bg"].CGImage;
+        _segmentedControl.layer.contents = (__bridge id)[UIImage imageNamed:@"p_bt_bg"].CGImage;
         _segmentedControl.segmentedControlType = LMSegmentedControlAuto;
         _segmentedControl.selectedLineWidth = 26;
         _segmentedControl.selectedLineHeight = 4;

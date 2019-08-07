@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -15,7 +15,7 @@
             <rect key="frame" x="0.0" y="0.0" width="408" height="683"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="youquan_icon" translatesAutoresizingMaskIntoConstraints="NO" id="GJX-aS-hQQ">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_icon" translatesAutoresizingMaskIntoConstraints="NO" id="GJX-aS-hQQ">
                     <rect key="frame" x="164" y="25" width="80" height="80"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="80" id="S16-sO-gn2"/>
@@ -190,7 +190,7 @@
                                 <constraint firstAttribute="height" constant="38" id="i3f-r9-ofW"/>
                                 <constraint firstAttribute="width" constant="38" id="oEx-J6-ix4"/>
                             </constraints>
-                            <state key="normal" image="ic_login_qq"/>
+                            <state key="normal" image="i_login_qq"/>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n9s-R8-kv1">
                             <rect key="frame" x="0.0" y="6" width="38" height="38"/>
@@ -198,7 +198,7 @@
                                 <constraint firstAttribute="width" constant="38" id="HZi-Zk-F5c"/>
                                 <constraint firstAttribute="height" constant="38" id="K9K-bs-sgk"/>
                             </constraints>
-                            <state key="normal" image="ic_login_wechat"/>
+                            <state key="normal" image="i_login_wecha"/>
                         </button>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -285,12 +285,12 @@
                 <outlet property="registerButton" destination="kky-tZ-j2n" id="Zur-CC-UH7"/>
                 <outlet property="wechatButton" destination="n9s-R8-kv1" id="0oU-p9-SGJ"/>
             </connections>
-            <point key="canvasLocation" x="25.600000000000001" y="-95.802098950524751"/>
+            <point key="canvasLocation" x="659" y="-116"/>
         </view>
     </objects>
     <resources>
-        <image name="ic_login_qq" width="45" height="45"/>
-        <image name="ic_login_wechat" width="45" height="45"/>
-        <image name="youquan_icon" width="90" height="90"/>
+        <image name="i_login_qq" width="45" height="45"/>
+        <image name="i_login_wecha" width="16" height="16"/>
+        <image name="logo_icon" width="180" height="180"/>
     </resources>
 </document>

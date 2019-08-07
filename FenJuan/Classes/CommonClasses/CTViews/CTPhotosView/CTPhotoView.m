@@ -100,7 +100,7 @@ ViewInstance(setUp)
 - (UIButton *)addButton{
     if(!_addButton){
         _addButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        [_addButton setImage:[UIImage imageNamed:@"ic_add"] forState:UIControlStateNormal];
+        [_addButton setImage:[UIImage imageNamed:@"i_add"] forState:UIControlStateNormal];
         [_addButton addTarget:self action:@selector(add) forControlEvents:UIControlEventTouchUpInside];
     }
     return _addButton;

@@ -14,7 +14,7 @@ ViewInstance(setUp)
 
 - (void)setUp{
     self.clipsToBounds = YES;
-    [self setBackgroundImage:[UIImage imageNamed:@"pic_bt_bg"] forState:UIControlStateNormal];
+    [self setBackgroundImage:[UIImage imageNamed:@"p_bt_bg"] forState:UIControlStateNormal];
     self.titleLabel.font = CTPsbFont(16);
     [self setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
 }

@@ -137,11 +137,11 @@
 - (void)setNavigationBarStyle:(CTNavigationBarStyle)navigationBarStyle{
     _navigationBarStyle = navigationBarStyle;
     if(_navigationBarStyle == CTNavigationBarRed){
-        [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"pic_nav_bg"] forBarMetrics:UIBarMetricsDefault];
+        [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"p_nav_bg"] forBarMetrics:UIBarMetricsDefault];
         [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor],NSFontAttributeName:CTCoarseFont(20)}];
         UIButton *backButton = self.navigationItem.leftBarButtonItem.customView;
         if(backButton){
-            UIImage *newImage = [[UIImage imageNamed:@"ic_return"] imageWithColor:[UIColor whiteColor]];
+            UIImage *newImage = [[UIImage imageNamed:@"i_return"] imageWithColor:[UIColor whiteColor]];
             [backButton setImage:newImage forState:UIControlStateNormal];
         }
     }
@@ -150,7 +150,7 @@
         [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor colorWithHexString:@"#141414"],NSFontAttributeName:CTCoarseFont(20)}];
         UIButton *backButton = self.navigationItem.leftBarButtonItem.customView;
         if(backButton){
-            UIImage *newImage = [UIImage imageNamed:@"ic_return"];
+            UIImage *newImage = [UIImage imageNamed:@"i_return"];
             [backButton setImage:newImage forState:UIControlStateNormal];
         }
     }
@@ -223,7 +223,7 @@
 - (void)setLeftDefaultItem{
     UIButton * backBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [backBtn setFrame:CGRectMake(0, 0, 40, 30)];
-    [backBtn setImage:[UIImage imageNamed:@"ic_return"] forState:UIControlStateNormal];
+    [backBtn setImage:[UIImage imageNamed:@"i_return"] forState:UIControlStateNormal];
     backBtn.imageView.contentMode = UIViewContentModeCenter;
     [backBtn setTitleColor:RGBColor(102, 102, 102) forState:UIControlStateNormal];
     backBtn.titleLabel.font = FONT_PFRG_SIZE(15);

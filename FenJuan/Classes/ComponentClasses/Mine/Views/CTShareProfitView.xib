@@ -68,7 +68,7 @@
                             <constraints>
                                 <constraint firstAttribute="height" constant="53" id="nHy-Cg-KMN"/>
                             </constraints>
-                            <string key="text">用优券APP买东西
+                            <string key="text">用粉券APP买东西
 简直太划算啦!</string>
                             <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="20"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

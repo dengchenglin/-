@@ -18,7 +18,7 @@
 
 - (void)awakeFromNib{
     [super awakeFromNib];
-    _couponBgView.image = [[UIImage imageNamed:@"pic_list_coupon_bg1"] resizableImageWithCapInsets:UIEdgeInsetsMake(10, 20, 10, 45)];
+    _couponBgView.image = [[UIImage imageNamed:@"p_list_coupon_bg"] resizableImageWithCapInsets:UIEdgeInsetsMake(10, 20, 10, 45)];
 
    
     [self.upgradeDescBtn touchUpInsideSubscribeNext:^(id x) {

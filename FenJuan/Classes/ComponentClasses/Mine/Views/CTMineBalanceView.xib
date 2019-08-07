@@ -33,7 +33,7 @@
                                     <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_next_gray" translatesAutoresizingMaskIntoConstraints="NO" id="vFG-rE-VDd">
+                                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="i_next_gray" translatesAutoresizingMaskIntoConstraints="NO" id="vFG-rE-VDd">
                                     <rect key="frame" x="105" y="4" width="6" height="10"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="10" id="hr0-9i-tOp"/>
@@ -70,7 +70,7 @@
                                 <constraint firstAttribute="width" constant="80" id="iIu-lk-xR3"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <state key="normal" title="立即提现" backgroundImage="pic_bt_bg"/>
+                            <state key="normal" title="立即提现" backgroundImage="p_bt_bg"/>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                     <integer key="value" value="15"/>
@@ -115,7 +115,7 @@
         </view>
     </objects>
     <resources>
-        <image name="ic_next_gray" width="6" height="9"/>
-        <image name="pic_bt_bg" width="200" height="32"/>
+        <image name="i_next_gray" width="6" height="9"/>
+        <image name="p_bt_bg" width="200" height="32"/>
     </resources>
 </document>

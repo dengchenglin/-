@@ -132,7 +132,7 @@
                         <constraint firstAttribute="height" constant="46" id="MfE-Vx-5f8"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                    <state key="normal" title="下一步" backgroundImage="pic_bt_bg"/>
+                    <state key="normal" title="下一步" backgroundImage="p_bt_bg"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                             <integer key="value" value="23"/>
@@ -164,7 +164,7 @@
         </view>
     </objects>
     <resources>
-        <image name="pic_bt_bg" width="200" height="32"/>
+        <image name="p_bt_bg" width="200" height="32"/>
         <image name="pic_zhifubao" width="70" height="70"/>
     </resources>
 </document>

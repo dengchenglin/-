@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -20,7 +20,7 @@
                         <constraint firstAttribute="height" constant="30" id="Xjr-Y2-AeU"/>
                         <constraint firstAttribute="width" constant="30" id="Ym3-JC-ZKO"/>
                     </constraints>
-                    <state key="normal" image="ic_message"/>
+                    <state key="normal" image="i_message"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xIE-Hs-T0O">
                     <rect key="frame" x="0.0" y="58" width="30" height="30"/>
@@ -47,7 +47,7 @@
         </view>
     </objects>
     <resources>
-        <image name="ic_message" width="20" height="20"/>
+        <image name="i_message" width="20" height="20"/>
         <image name="ic_set" width="20" height="20"/>
     </resources>
 </document>

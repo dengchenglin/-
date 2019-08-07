@@ -146,7 +146,7 @@
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5ST-cF-eRh">
                                     <rect key="frame" x="0.0" y="0.0" width="73" height="30"/>
                                 </imageView>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pic_list_coupon_bg2" translatesAutoresizingMaskIntoConstraints="NO" id="eyb-H0-Jir">
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="p_list_coupon_bg1" translatesAutoresizingMaskIntoConstraints="NO" id="eyb-H0-Jir">
                                     <rect key="frame" x="31" y="1" width="42" height="32"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="42" id="3n7-KL-sfl"/>
@@ -286,6 +286,6 @@
     </objects>
     <resources>
         <image name="ic_home_directions" width="14" height="14"/>
-        <image name="pic_list_coupon_bg2" width="42" height="32"/>
+        <image name="p_list_coupon_bg1" width="42" height="32"/>
     </resources>
 </document>

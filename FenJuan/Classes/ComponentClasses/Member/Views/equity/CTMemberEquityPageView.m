@@ -43,7 +43,7 @@ ViewInstance(setUp)
 - (void)setList:(NSArray *)list{
     _list = list;
     UIView *tempView;
-    NSArray *titles = @[@"优券小生",@"优券导师",@"优券大咖",@"优券合伙人"];
+    NSArray *titles = @[@"粉券小生",@"粉券导师",@"粉券大咖",@"粉券合伙人"];
     for(int i = 0;i < _list.count;i ++){
         NSArray *subList = _list[i];
 

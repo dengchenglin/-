@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -18,11 +18,11 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zq2-3a-0rn">
                     <rect key="frame" x="0.0" y="0.0" width="520" height="158"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pic_nav_bg" translatesAutoresizingMaskIntoConstraints="NO" id="yPd-ZK-u4y">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="p_nav_bg" translatesAutoresizingMaskIntoConstraints="NO" id="yPd-ZK-u4y">
                             <rect key="frame" x="0.0" y="0.0" width="520" height="158"/>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="查查您想要的优惠券" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c4L-L9-Kva">
-                            <rect key="frame" x="170.5" y="74" width="180" height="44"/>
+                            <rect key="frame" x="170" y="74" width="180" height="44"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="44" id="SN9-kQ-uAI"/>
                             </constraints>
@@ -54,6 +54,6 @@
         </view>
     </objects>
     <resources>
-        <image name="pic_nav_bg" width="450" height="131"/>
+        <image name="p_nav_bg" width="450" height="131"/>
     </resources>
 </document>

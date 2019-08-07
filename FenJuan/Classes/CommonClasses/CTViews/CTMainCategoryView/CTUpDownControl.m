@@ -30,8 +30,8 @@ ViewInstance(setUp)
     _status = CTSortStatusNormal;
     _normalColor = RGBColor(153, 153, 153);
     _selectedColor = CTColor;
-    _originUpImage = [UIImage imageNamed:@"ic_nav_up_gray"];
-    _originDownImage = [UIImage imageNamed:@"ic_nav_down_gray"];
+    _originUpImage = [UIImage imageNamed:@"i_nav_up_gray"];
+    _originDownImage = [UIImage imageNamed:@"i_nav_down_gray"];
     
     _normalUpImage = [_originUpImage imageWithColor:_normalColor];
     _selectedUpImage = [_originUpImage imageWithColor:_selectedColor];

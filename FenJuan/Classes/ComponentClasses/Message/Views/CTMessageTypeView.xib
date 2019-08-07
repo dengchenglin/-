@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -24,7 +24,7 @@
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u0j-Xh-jiU">
                                     <rect key="frame" x="0.0" y="1" width="151" height="83"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_system_messages" translatesAutoresizingMaskIntoConstraints="NO" id="tMY-jG-SBf">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="i_system_messages" translatesAutoresizingMaskIntoConstraints="NO" id="tMY-jG-SBf">
                                             <rect key="frame" x="57" y="11" width="37" height="37"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="37" id="l36-Lf-eyl"/>
@@ -50,7 +50,7 @@
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="heh-Si-ajs">
                                     <rect key="frame" x="151" y="1" width="151" height="83"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_notification_message" translatesAutoresizingMaskIntoConstraints="NO" id="Q4X-fL-8tz">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="i_notification_message" translatesAutoresizingMaskIntoConstraints="NO" id="Q4X-fL-8tz">
                                             <rect key="frame" x="57" y="11" width="37" height="37"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="37" id="PPJ-g3-3qT"/>
@@ -75,7 +75,7 @@
                                     </constraints>
                                 </view>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gwX-r3-YmS">
-                                    <rect key="frame" x="150" y="23.5" width="1" height="38"/>
+                                    <rect key="frame" x="150.5" y="23.5" width="1" height="38"/>
                                     <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="38" id="FOs-tE-Bz6"/>
@@ -121,7 +121,7 @@
         </view>
     </objects>
     <resources>
-        <image name="ic_notification_message" width="36" height="36"/>
-        <image name="ic_system_messages" width="36" height="36"/>
+        <image name="i_notification_message" width="36" height="36"/>
+        <image name="i_system_messages" width="36" height="36"/>
     </resources>
 </document>

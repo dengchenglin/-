@@ -18,7 +18,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pin-5E-QDX">
                     <rect key="frame" x="0.0" y="0.0" width="379" height="209"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_home_service_bot2" translatesAutoresizingMaskIntoConstraints="NO" id="gE0-9T-PoC">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="i_home_service_l" translatesAutoresizingMaskIntoConstraints="NO" id="gE0-9T-PoC">
                             <rect key="frame" x="0.0" y="0.0" width="379" height="209"/>
                         </imageView>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xk0-p5-iXj">
@@ -117,7 +117,7 @@
         </view>
     </objects>
     <resources>
-        <image name="ic_home_service_bot2" width="141" height="43"/>
+        <image name="i_home_service_l" width="141" height="43"/>
         <image name="pic_mine_voucher" width="331" height="108"/>
     </resources>
 </document>

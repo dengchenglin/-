@@ -14,7 +14,7 @@ ViewInstance(setUp)
 
 - (void)setUp{
     self.clipsToBounds = YES;
-    [self setBackgroundImage:[UIImage imageNamed:@"pic_bt_bg"] forState:UIControlStateNormal];
+    [self setBackgroundImage:[UIImage imageNamed:@"p_bt_bg"] forState:UIControlStateNormal];
     [self setBackgroundImage:[UIImage imageWithColor:CTLightGrayColor] forState:UIControlStateDisabled];
     [self setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [self setTitleColor:RGBColor(153, 153, 153) forState:UIControlStateDisabled];

@@ -26,7 +26,7 @@
         _segmentedControl.selectedLineWidth = 88;
         _segmentedControl.selectedLineHeight = 29;
         _segmentedControl.selectedLineColor = RGBColor(255, 199, 38);
-        _segmentedControl.backgroundImage = [UIImage imageNamed:@"pic_nav_bg"];
+        _segmentedControl.backgroundImage = [UIImage imageNamed:@"p_nav_bg"];
     }
     return _segmentedControl;
 }

@@ -48,7 +48,7 @@
     
     CGSize logoSize = CGSizeMake(14, 14);
     for(int i = 0;i < count;i ++){
-        UIImageView *imageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"ic_vip_level"]];
+        UIImageView *imageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"i_vip_level"]];
         imageView.tag = 200 + i;
         imageView.hidden = (i>_level-1);
         [self addSubview:imageView];
@@ -171,9 +171,9 @@ ViewInstance(setUp)
 }
 - (void)reloadView{
     [_containerView removeAllSubViews];
-    NSArray *titles = @[@"优券小生",@"优券导师",@"优券大咖"];
+    NSArray *titles = @[@"粉券小生",@"粉券导师",@"粉券大咖"];
     if(_level == CTMemberPartner){
-        titles = @[@"优券小生",@"优券导师",@"优券大咖",@"优券合伙人"];
+        titles = @[@"粉券小生",@"粉券导师",@"粉券大咖",@"粉券合伙人"];
     }
     CTMemberLevelTitleView *titleView = [CTMemberLevelTitleView new];
     titleView.titles = titles;

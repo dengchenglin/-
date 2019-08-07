@@ -37,7 +37,7 @@ ViewInstance(setUp)
     [self addSubview:_segmentedControl];
     
     _unfoldButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [_unfoldButton setImage:[UIImage imageNamed:@"ic_down_white"] forState:UIControlStateNormal];
+    [_unfoldButton setImage:[UIImage imageNamed:@"i_down_white"] forState:UIControlStateNormal];
     _unfoldButton.hidden = YES;
     [self addSubview:_unfoldButton];
 }

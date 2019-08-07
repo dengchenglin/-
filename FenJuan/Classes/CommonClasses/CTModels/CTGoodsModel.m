@@ -39,13 +39,13 @@ NSString *GetGoodsOrderStr(CTGoodSortType type){
 NSString *GetTypeImageStr(NSInteger status){
     switch (status) {
         case 1:
-            return @"ic_label_1";
+            return @"i_label_1";
             break;
         case 2:
-            return @"ic_label_2";
+            return @"i_label_2";
             break;
         case 3:
-            return @"ic_label_3";
+            return @"i_label_3";
             break;
         default:
             break;

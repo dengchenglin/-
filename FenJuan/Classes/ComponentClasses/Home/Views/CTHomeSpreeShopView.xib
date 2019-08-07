@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -27,7 +27,7 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6fS-tx-OTx">
                                             <rect key="frame" x="0.0" y="0.0" width="124" height="50"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pic_title_seckill-1" translatesAutoresizingMaskIntoConstraints="NO" id="8db-rt-29z">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="p_title_seckill" translatesAutoresizingMaskIntoConstraints="NO" id="8db-rt-29z">
                                                     <rect key="frame" x="0.0" y="0.0" width="124" height="50"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </imageView>
@@ -71,8 +71,8 @@
                                         <constraint firstItem="6fS-tx-OTx" firstAttribute="centerY" secondItem="Gpe-B0-JGh" secondAttribute="centerY" id="xJn-iu-1mO"/>
                                     </constraints>
                                 </view>
-                                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_next_gray" translatesAutoresizingMaskIntoConstraints="NO" id="18s-7U-cYb">
-                                    <rect key="frame" x="444" y="18" width="10" height="15"/>
+                                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="i_next_gray" translatesAutoresizingMaskIntoConstraints="NO" id="18s-7U-cYb">
+                                    <rect key="frame" x="444" y="17.5" width="10" height="15"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="10" id="fDo-4O-Qza"/>
                                         <constraint firstAttribute="height" constant="15" id="nx8-tp-bck"/>
@@ -120,11 +120,11 @@
                 <outlet property="headView" destination="Smh-jG-BWz" id="9x4-B5-iSk"/>
                 <outlet property="nextTimeLabel" destination="uAW-He-HB2" id="YSd-FS-odr"/>
             </connections>
-            <point key="canvasLocation" x="-26.5" y="203"/>
+            <point key="canvasLocation" x="122" y="208"/>
         </view>
     </objects>
     <resources>
-        <image name="ic_next_gray" width="6" height="9"/>
-        <image name="pic_title_seckill-1" width="124" height="40"/>
+        <image name="i_next_gray" width="6" height="9"/>
+        <image name="p_title_seckill" width="124" height="40"/>
     </resources>
 </document>

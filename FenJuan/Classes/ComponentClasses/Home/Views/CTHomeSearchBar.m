@@ -24,7 +24,7 @@
     [super awakeFromNib];
     UIImageView *searchLogo = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 40, 30)];
     searchLogo.contentMode = UIViewContentModeCenter;
-    searchLogo.image = [UIImage imageNamed:@"ic_home_search"];
+    searchLogo.image = [UIImage imageNamed:@"i_home_search"];
     _searchTextField.leftView = searchLogo;
     _searchTextField.leftViewMode = UITextFieldViewModeAlways;
     

@@ -169,7 +169,7 @@ ViewInstance(setUp)
 }
 - (void)setUpUI{
     _containerView = [UIView new];
-    _containerView.layer.contents = (__bridge id)[UIImage imageNamed:@"pic_nav_bg"].CGImage;
+    _containerView.layer.contents = (__bridge id)[UIImage imageNamed:@"p_nav_bg"].CGImage;
     [self addSubview:_containerView];
     
     _navBar = NSMainBundleClass(CTHomeNavBar.class);
