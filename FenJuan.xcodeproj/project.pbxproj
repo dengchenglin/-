@@ -566,6 +566,52 @@
 		324EC6BF22FA74EC00CBC988 /* UMShareManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EC48C22FA74EB00CBC988 /* UMShareManager.m */; };
 		324EC6C022FA74EC00CBC988 /* UIImageView+CTHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EC48F22FA74EB00CBC988 /* UIImageView+CTHelper.m */; };
 		324EC6C122FA74EC00CBC988 /* UIScrollView+CTPagePanGes.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EC49122FA74EB00CBC988 /* UIScrollView+CTPagePanGes.m */; };
+		324EC6C622FAA67E00CBC988 /* FJHxer.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EC6C522FAA67E00CBC988 /* FJHxer.m */; };
+		324EC6C922FAA88A00CBC988 /* CTHxer.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EC6C822FAA88A00CBC988 /* CTHxer.m */; };
+		324EC6DF22FAAF6600CBC988 /* CTJdpIndexModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EC6CD22FAAF6600CBC988 /* CTJdpIndexModel.m */; };
+		324EC6E022FAAF6600CBC988 /* CTJdpService.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EC6D022FAAF6600CBC988 /* CTJdpService.m */; };
+		324EC6E122FAAF6600CBC988 /* CTJdpDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EC6D322FAAF6600CBC988 /* CTJdpDetailViewController.m */; };
+		324EC6E222FAAF6600CBC988 /* CTJdpListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EC6D522FAAF6600CBC988 /* CTJdpListViewController.m */; };
+		324EC6E322FAAF6600CBC988 /* CTJdpPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EC6D722FAAF6600CBC988 /* CTJdpPageViewController.m */; };
+		324EC6E422FAAF6600CBC988 /* CTJdpGoodsItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EC6DA22FAAF6600CBC988 /* CTJdpGoodsItem.m */; };
+		324EC6E522FAAF6600CBC988 /* CTJdpGoodsItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 324EC6DB22FAAF6600CBC988 /* CTJdpGoodsItem.xib */; };
+		324EC6E622FAAF6600CBC988 /* CTJdpListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EC6DD22FAAF6600CBC988 /* CTJdpListCell.m */; };
+		324EC6E722FAAF6600CBC988 /* CTJdpListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 324EC6DE22FAAF6600CBC988 /* CTJdpListCell.xib */; };
+		324EC6ED22FAB02000CBC988 /* CTNetworkEngine+ThirldTk.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EC6EB22FAB02000CBC988 /* CTNetworkEngine+ThirldTk.m */; };
+		324EC70422FAB18B00CBC988 /* FJVideoGoodListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EC6FF22FAB18B00CBC988 /* FJVideoGoodListCell.m */; };
+		324EC70522FAB18B00CBC988 /* FJVideoGoodListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 324EC70022FAB18B00CBC988 /* FJVideoGoodListCell.xib */; };
+		324EC73F22FAB4D800CBC988 /* CTMrdkIndexModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EC70922FAB4D800CBC988 /* CTMrdkIndexModel.m */; };
+		324EC74022FAB4D800CBC988 /* CTMrdkMyScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EC70B22FAB4D800CBC988 /* CTMrdkMyScore.m */; };
+		324EC74122FAB4D800CBC988 /* CTMrdkRecordModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EC70D22FAB4D800CBC988 /* CTMrdkRecordModel.m */; };
+		324EC74222FAB4D800CBC988 /* CTAlertHelper+MrdkShareSuccess.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EC71022FAB4D800CBC988 /* CTAlertHelper+MrdkShareSuccess.m */; };
+		324EC74322FAB4D800CBC988 /* CTMarkPayHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EC71222FAB4D800CBC988 /* CTMarkPayHelper.m */; };
+		324EC74422FAB4D800CBC988 /* CTMrdkService.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EC71422FAB4D800CBC988 /* CTMrdkService.m */; };
+		324EC74522FAB4D800CBC988 /* CTMrdkMyRecordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EC71722FAB4D800CBC988 /* CTMrdkMyRecordViewController.m */; };
+		324EC74622FAB4D800CBC988 /* CTMrdkPaySuccessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EC71922FAB4D800CBC988 /* CTMrdkPaySuccessViewController.m */; };
+		324EC74722FAB4D800CBC988 /* CTMrdkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EC71B22FAB4D800CBC988 /* CTMrdkViewController.m */; };
+		324EC74822FAB4D800CBC988 /* CTMrdkAmountView.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EC71E22FAB4D800CBC988 /* CTMrdkAmountView.m */; };
+		324EC74922FAB4D800CBC988 /* CTMrdkAmountView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 324EC71F22FAB4D800CBC988 /* CTMrdkAmountView.xib */; };
+		324EC74A22FAB4D800CBC988 /* CTMrdkInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EC72122FAB4D800CBC988 /* CTMrdkInfoView.m */; };
+		324EC74B22FAB4D800CBC988 /* CTMrdkInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 324EC72222FAB4D800CBC988 /* CTMrdkInfoView.xib */; };
+		324EC74C22FAB4D800CBC988 /* CTMrdkMoneyContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EC72422FAB4D800CBC988 /* CTMrdkMoneyContainerView.m */; };
+		324EC74D22FAB4D800CBC988 /* CTMrdkMoneyItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EC72622FAB4D800CBC988 /* CTMrdkMoneyItem.m */; };
+		324EC74E22FAB4D800CBC988 /* CTMrdkMoneyItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 324EC72722FAB4D800CBC988 /* CTMrdkMoneyItem.xib */; };
+		324EC74F22FAB4D800CBC988 /* CTMrdkMyScoreView.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EC72922FAB4D800CBC988 /* CTMrdkMyScoreView.m */; };
+		324EC75022FAB4D800CBC988 /* CTMrdkMyScoreView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 324EC72A22FAB4D800CBC988 /* CTMrdkMyScoreView.xib */; };
+		324EC75122FAB4D800CBC988 /* CTMrdkPaySheetView.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EC72C22FAB4D800CBC988 /* CTMrdkPaySheetView.m */; };
+		324EC75222FAB4D800CBC988 /* CTMrdkPaySheetView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 324EC72D22FAB4D800CBC988 /* CTMrdkPaySheetView.xib */; };
+		324EC75322FAB4D800CBC988 /* CTMrdkPaySuccessView.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EC72F22FAB4D800CBC988 /* CTMrdkPaySuccessView.m */; };
+		324EC75422FAB4D800CBC988 /* CTMrdkPaySuccessView_.xib in Resources */ = {isa = PBXBuildFile; fileRef = 324EC73022FAB4D800CBC988 /* CTMrdkPaySuccessView_.xib */; };
+		324EC75522FAB4D800CBC988 /* CTMrdkRecordCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EC73222FAB4D800CBC988 /* CTMrdkRecordCell.m */; };
+		324EC75622FAB4D800CBC988 /* CTMrdkRecordCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 324EC73322FAB4D800CBC988 /* CTMrdkRecordCell.xib */; };
+		324EC75722FAB4D800CBC988 /* CTMrdkShareSuccessView.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EC73522FAB4D800CBC988 /* CTMrdkShareSuccessView.m */; };
+		324EC75822FAB4D800CBC988 /* CTMrdkShareSuccessView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 324EC73622FAB4D800CBC988 /* CTMrdkShareSuccessView.xib */; };
+		324EC75922FAB4D800CBC988 /* CTMrdkShareView.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EC73822FAB4D800CBC988 /* CTMrdkShareView.m */; };
+		324EC75A22FAB4D800CBC988 /* CTMrdkShareView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 324EC73922FAB4D800CBC988 /* CTMrdkShareView.xib */; };
+		324EC75B22FAB4D800CBC988 /* CTPayTypeContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EC73B22FAB4D800CBC988 /* CTPayTypeContainerView.m */; };
+		324EC75C22FAB4D800CBC988 /* CTPayTypeItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EC73D22FAB4D800CBC988 /* CTPayTypeItem.m */; };
+		324EC75D22FAB4D800CBC988 /* CTPayTypeItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 324EC73E22FAB4D800CBC988 /* CTPayTypeItem.xib */; };
+		324EC76022FAB52200CBC988 /* CTNetworkEngine+Mrdk.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EC75E22FAB52200CBC988 /* CTNetworkEngine+Mrdk.m */; };
 		32FD1369223F916D00CB85C1 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 32FD1368223F916D00CB85C1 /* libz.tbd */; };
 		32FD136B223F917600CB85C1 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 32FD136A223F917600CB85C1 /* libsqlite3.0.tbd */; };
 		32FD136D223F917D00CB85C1 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32FD136C223F917D00CB85C1 /* CoreTelephony.framework */; };
@@ -1593,6 +1639,94 @@
 		324EC49022FA74EB00CBC988 /* UIScrollView+CTPagePanGes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+CTPagePanGes.h"; sourceTree = "<group>"; };
 		324EC49122FA74EB00CBC988 /* UIScrollView+CTPagePanGes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+CTPagePanGes.m"; sourceTree = "<group>"; };
 		324EC6C222FA75D500CBC988 /* FenJuan.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FenJuan.entitlements; sourceTree = "<group>"; };
+		324EC6C422FAA67E00CBC988 /* FJHxer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FJHxer.h; sourceTree = "<group>"; };
+		324EC6C522FAA67E00CBC988 /* FJHxer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FJHxer.m; sourceTree = "<group>"; };
+		324EC6C722FAA88A00CBC988 /* CTHxer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTHxer.h; sourceTree = "<group>"; };
+		324EC6C822FAA88A00CBC988 /* CTHxer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTHxer.m; sourceTree = "<group>"; };
+		324EC6CC22FAAF6600CBC988 /* CTJdpIndexModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTJdpIndexModel.h; sourceTree = "<group>"; };
+		324EC6CD22FAAF6600CBC988 /* CTJdpIndexModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTJdpIndexModel.m; sourceTree = "<group>"; };
+		324EC6CF22FAAF6600CBC988 /* CTJdpService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTJdpService.h; sourceTree = "<group>"; };
+		324EC6D022FAAF6600CBC988 /* CTJdpService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTJdpService.m; sourceTree = "<group>"; };
+		324EC6D222FAAF6600CBC988 /* CTJdpDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTJdpDetailViewController.h; sourceTree = "<group>"; };
+		324EC6D322FAAF6600CBC988 /* CTJdpDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTJdpDetailViewController.m; sourceTree = "<group>"; };
+		324EC6D422FAAF6600CBC988 /* CTJdpListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTJdpListViewController.h; sourceTree = "<group>"; };
+		324EC6D522FAAF6600CBC988 /* CTJdpListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTJdpListViewController.m; sourceTree = "<group>"; };
+		324EC6D622FAAF6600CBC988 /* CTJdpPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTJdpPageViewController.h; sourceTree = "<group>"; };
+		324EC6D722FAAF6600CBC988 /* CTJdpPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTJdpPageViewController.m; sourceTree = "<group>"; };
+		324EC6D922FAAF6600CBC988 /* CTJdpGoodsItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTJdpGoodsItem.h; sourceTree = "<group>"; };
+		324EC6DA22FAAF6600CBC988 /* CTJdpGoodsItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTJdpGoodsItem.m; sourceTree = "<group>"; };
+		324EC6DB22FAAF6600CBC988 /* CTJdpGoodsItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CTJdpGoodsItem.xib; sourceTree = "<group>"; };
+		324EC6DC22FAAF6600CBC988 /* CTJdpListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTJdpListCell.h; sourceTree = "<group>"; };
+		324EC6DD22FAAF6600CBC988 /* CTJdpListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTJdpListCell.m; sourceTree = "<group>"; };
+		324EC6DE22FAAF6600CBC988 /* CTJdpListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CTJdpListCell.xib; sourceTree = "<group>"; };
+		324EC6E822FAAF9900CBC988 /* CTMrdkServiceProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTMrdkServiceProtocol.h; sourceTree = "<group>"; };
+		324EC6E922FAAF9900CBC988 /* CTShipingouServiceProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTShipingouServiceProtocol.h; sourceTree = "<group>"; };
+		324EC6EA22FAAF9A00CBC988 /* CTJudapaiServiceProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTJudapaiServiceProtocol.h; sourceTree = "<group>"; };
+		324EC6EB22FAB02000CBC988 /* CTNetworkEngine+ThirldTk.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CTNetworkEngine+ThirldTk.m"; sourceTree = "<group>"; };
+		324EC6EC22FAB02000CBC988 /* CTNetworkEngine+ThirldTk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CTNetworkEngine+ThirldTk.h"; sourceTree = "<group>"; };
+		324EC6EE22FAB07700CBC988 /* CTShopKindServiceProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTShopKindServiceProtocol.h; sourceTree = "<group>"; };
+		324EC6EF22FAB07700CBC988 /* CTShopTypeServiceProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTShopTypeServiceProtocol.h; sourceTree = "<group>"; };
+		324EC6F022FAB0D500CBC988 /* CTEarnTableServiceProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTEarnTableServiceProtocol.h; sourceTree = "<group>"; };
+		324EC6F122FAB0D500CBC988 /* CTXrzxServiceProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTXrzxServiceProtocol.h; sourceTree = "<group>"; };
+		324EC6F222FAB0D500CBC988 /* CTHotGoodsServiceProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTHotGoodsServiceProtocol.h; sourceTree = "<group>"; };
+		324EC6F322FAB0D600CBC988 /* CTDarenServiceProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTDarenServiceProtocol.h; sourceTree = "<group>"; };
+		324EC6FE22FAB18B00CBC988 /* FJVideoGoodListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FJVideoGoodListCell.h; sourceTree = "<group>"; };
+		324EC6FF22FAB18B00CBC988 /* FJVideoGoodListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FJVideoGoodListCell.m; sourceTree = "<group>"; };
+		324EC70022FAB18B00CBC988 /* FJVideoGoodListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FJVideoGoodListCell.xib; sourceTree = "<group>"; };
+		324EC70822FAB4D800CBC988 /* CTMrdkIndexModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTMrdkIndexModel.h; sourceTree = "<group>"; };
+		324EC70922FAB4D800CBC988 /* CTMrdkIndexModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTMrdkIndexModel.m; sourceTree = "<group>"; };
+		324EC70A22FAB4D800CBC988 /* CTMrdkMyScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTMrdkMyScore.h; sourceTree = "<group>"; };
+		324EC70B22FAB4D800CBC988 /* CTMrdkMyScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTMrdkMyScore.m; sourceTree = "<group>"; };
+		324EC70C22FAB4D800CBC988 /* CTMrdkRecordModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTMrdkRecordModel.h; sourceTree = "<group>"; };
+		324EC70D22FAB4D800CBC988 /* CTMrdkRecordModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTMrdkRecordModel.m; sourceTree = "<group>"; };
+		324EC70F22FAB4D800CBC988 /* CTAlertHelper+MrdkShareSuccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CTAlertHelper+MrdkShareSuccess.h"; sourceTree = "<group>"; };
+		324EC71022FAB4D800CBC988 /* CTAlertHelper+MrdkShareSuccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CTAlertHelper+MrdkShareSuccess.m"; sourceTree = "<group>"; };
+		324EC71122FAB4D800CBC988 /* CTMarkPayHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTMarkPayHelper.h; sourceTree = "<group>"; };
+		324EC71222FAB4D800CBC988 /* CTMarkPayHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTMarkPayHelper.m; sourceTree = "<group>"; };
+		324EC71322FAB4D800CBC988 /* CTMrdkService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTMrdkService.h; sourceTree = "<group>"; };
+		324EC71422FAB4D800CBC988 /* CTMrdkService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTMrdkService.m; sourceTree = "<group>"; };
+		324EC71622FAB4D800CBC988 /* CTMrdkMyRecordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTMrdkMyRecordViewController.h; sourceTree = "<group>"; };
+		324EC71722FAB4D800CBC988 /* CTMrdkMyRecordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTMrdkMyRecordViewController.m; sourceTree = "<group>"; };
+		324EC71822FAB4D800CBC988 /* CTMrdkPaySuccessViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTMrdkPaySuccessViewController.h; sourceTree = "<group>"; };
+		324EC71922FAB4D800CBC988 /* CTMrdkPaySuccessViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTMrdkPaySuccessViewController.m; sourceTree = "<group>"; };
+		324EC71A22FAB4D800CBC988 /* CTMrdkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTMrdkViewController.h; sourceTree = "<group>"; };
+		324EC71B22FAB4D800CBC988 /* CTMrdkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTMrdkViewController.m; sourceTree = "<group>"; };
+		324EC71D22FAB4D800CBC988 /* CTMrdkAmountView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTMrdkAmountView.h; sourceTree = "<group>"; };
+		324EC71E22FAB4D800CBC988 /* CTMrdkAmountView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTMrdkAmountView.m; sourceTree = "<group>"; };
+		324EC71F22FAB4D800CBC988 /* CTMrdkAmountView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CTMrdkAmountView.xib; sourceTree = "<group>"; };
+		324EC72022FAB4D800CBC988 /* CTMrdkInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTMrdkInfoView.h; sourceTree = "<group>"; };
+		324EC72122FAB4D800CBC988 /* CTMrdkInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTMrdkInfoView.m; sourceTree = "<group>"; };
+		324EC72222FAB4D800CBC988 /* CTMrdkInfoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CTMrdkInfoView.xib; sourceTree = "<group>"; };
+		324EC72322FAB4D800CBC988 /* CTMrdkMoneyContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTMrdkMoneyContainerView.h; sourceTree = "<group>"; };
+		324EC72422FAB4D800CBC988 /* CTMrdkMoneyContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTMrdkMoneyContainerView.m; sourceTree = "<group>"; };
+		324EC72522FAB4D800CBC988 /* CTMrdkMoneyItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTMrdkMoneyItem.h; sourceTree = "<group>"; };
+		324EC72622FAB4D800CBC988 /* CTMrdkMoneyItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTMrdkMoneyItem.m; sourceTree = "<group>"; };
+		324EC72722FAB4D800CBC988 /* CTMrdkMoneyItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CTMrdkMoneyItem.xib; sourceTree = "<group>"; };
+		324EC72822FAB4D800CBC988 /* CTMrdkMyScoreView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTMrdkMyScoreView.h; sourceTree = "<group>"; };
+		324EC72922FAB4D800CBC988 /* CTMrdkMyScoreView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTMrdkMyScoreView.m; sourceTree = "<group>"; };
+		324EC72A22FAB4D800CBC988 /* CTMrdkMyScoreView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CTMrdkMyScoreView.xib; sourceTree = "<group>"; };
+		324EC72B22FAB4D800CBC988 /* CTMrdkPaySheetView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTMrdkPaySheetView.h; sourceTree = "<group>"; };
+		324EC72C22FAB4D800CBC988 /* CTMrdkPaySheetView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTMrdkPaySheetView.m; sourceTree = "<group>"; };
+		324EC72D22FAB4D800CBC988 /* CTMrdkPaySheetView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CTMrdkPaySheetView.xib; sourceTree = "<group>"; };
+		324EC72E22FAB4D800CBC988 /* CTMrdkPaySuccessView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTMrdkPaySuccessView.h; sourceTree = "<group>"; };
+		324EC72F22FAB4D800CBC988 /* CTMrdkPaySuccessView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTMrdkPaySuccessView.m; sourceTree = "<group>"; };
+		324EC73022FAB4D800CBC988 /* CTMrdkPaySuccessView_.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CTMrdkPaySuccessView_.xib; sourceTree = "<group>"; };
+		324EC73122FAB4D800CBC988 /* CTMrdkRecordCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTMrdkRecordCell.h; sourceTree = "<group>"; };
+		324EC73222FAB4D800CBC988 /* CTMrdkRecordCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTMrdkRecordCell.m; sourceTree = "<group>"; };
+		324EC73322FAB4D800CBC988 /* CTMrdkRecordCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CTMrdkRecordCell.xib; sourceTree = "<group>"; };
+		324EC73422FAB4D800CBC988 /* CTMrdkShareSuccessView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTMrdkShareSuccessView.h; sourceTree = "<group>"; };
+		324EC73522FAB4D800CBC988 /* CTMrdkShareSuccessView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTMrdkShareSuccessView.m; sourceTree = "<group>"; };
+		324EC73622FAB4D800CBC988 /* CTMrdkShareSuccessView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CTMrdkShareSuccessView.xib; sourceTree = "<group>"; };
+		324EC73722FAB4D800CBC988 /* CTMrdkShareView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTMrdkShareView.h; sourceTree = "<group>"; };
+		324EC73822FAB4D800CBC988 /* CTMrdkShareView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTMrdkShareView.m; sourceTree = "<group>"; };
+		324EC73922FAB4D800CBC988 /* CTMrdkShareView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CTMrdkShareView.xib; sourceTree = "<group>"; };
+		324EC73A22FAB4D800CBC988 /* CTPayTypeContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTPayTypeContainerView.h; sourceTree = "<group>"; };
+		324EC73B22FAB4D800CBC988 /* CTPayTypeContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTPayTypeContainerView.m; sourceTree = "<group>"; };
+		324EC73C22FAB4D800CBC988 /* CTPayTypeItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTPayTypeItem.h; sourceTree = "<group>"; };
+		324EC73D22FAB4D800CBC988 /* CTPayTypeItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTPayTypeItem.m; sourceTree = "<group>"; };
+		324EC73E22FAB4D800CBC988 /* CTPayTypeItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CTPayTypeItem.xib; sourceTree = "<group>"; };
+		324EC75E22FAB52200CBC988 /* CTNetworkEngine+Mrdk.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CTNetworkEngine+Mrdk.m"; sourceTree = "<group>"; };
+		324EC75F22FAB52200CBC988 /* CTNetworkEngine+Mrdk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CTNetworkEngine+Mrdk.h"; sourceTree = "<group>"; };
 		32BE600021EDC5E100BA52EF /* FenJuan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FenJuan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		32BE601821EDC5E500BA52EF /* FenJuanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FenJuanTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		32FD1368223F916D00CB85C1 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
@@ -1890,6 +2024,9 @@
 		324EC06822FA74EA00CBC988 /* ComponentClasses */ = {
 			isa = PBXGroup;
 			children = (
+				324EC70622FAB4D800CBC988 /* Mrdk */,
+				324EC6F422FAB18B00CBC988 /* Shipingou */,
+				324EC6CA22FAAF6600CBC988 /* JuDapai */,
 				324EC06922FA74EA00CBC988 /* Cate */,
 				324EC07922FA74EA00CBC988 /* GoodList */,
 				324EC0C422FA74EA00CBC988 /* Home */,
@@ -3960,6 +4097,15 @@
 				324EC45722FA74EB00CBC988 /* CTUserInfoServiceProtocol.h */,
 				324EC45822FA74EB00CBC988 /* CTWebServiceProtocol.h */,
 				324EC45922FA74EB00CBC988 /* CTWithdrawServiceProtocol.h */,
+				324EC6EA22FAAF9A00CBC988 /* CTJudapaiServiceProtocol.h */,
+				324EC6E822FAAF9900CBC988 /* CTMrdkServiceProtocol.h */,
+				324EC6E922FAAF9900CBC988 /* CTShipingouServiceProtocol.h */,
+				324EC6EF22FAB07700CBC988 /* CTShopTypeServiceProtocol.h */,
+				324EC6EE22FAB07700CBC988 /* CTShopKindServiceProtocol.h */,
+				324EC6F322FAB0D600CBC988 /* CTDarenServiceProtocol.h */,
+				324EC6F022FAB0D500CBC988 /* CTEarnTableServiceProtocol.h */,
+				324EC6F222FAB0D500CBC988 /* CTHotGoodsServiceProtocol.h */,
+				324EC6F122FAB0D500CBC988 /* CTXrzxServiceProtocol.h */,
 			);
 			path = CTModuleServices;
 			sourceTree = "<group>";
@@ -4001,6 +4147,10 @@
 				324EC47422FA74EB00CBC988 /* CTNetworkEngine+Recommend.m */,
 				324EC47522FA74EB00CBC988 /* CTNetworkEngine+Rich.h */,
 				324EC47622FA74EB00CBC988 /* CTNetworkEngine+Rich.m */,
+				324EC6EC22FAB02000CBC988 /* CTNetworkEngine+ThirldTk.h */,
+				324EC6EB22FAB02000CBC988 /* CTNetworkEngine+ThirldTk.m */,
+				324EC75F22FAB52200CBC988 /* CTNetworkEngine+Mrdk.h */,
+				324EC75E22FAB52200CBC988 /* CTNetworkEngine+Mrdk.m */,
 				324EC47722FA74EB00CBC988 /* CTNetworkEngine.h */,
 				324EC47822FA74EB00CBC988 /* CTNetworkEngine.m */,
 			);
@@ -4071,9 +4221,185 @@
 			path = CTUtils;
 			sourceTree = "<group>";
 		};
+		324EC6C322FAA64800CBC988 /* HX */ = {
+			isa = PBXGroup;
+			children = (
+				324EC6C422FAA67E00CBC988 /* FJHxer.h */,
+				324EC6C522FAA67E00CBC988 /* FJHxer.m */,
+				324EC6C722FAA88A00CBC988 /* CTHxer.h */,
+				324EC6C822FAA88A00CBC988 /* CTHxer.m */,
+			);
+			path = HX;
+			sourceTree = "<group>";
+		};
+		324EC6CA22FAAF6600CBC988 /* JuDapai */ = {
+			isa = PBXGroup;
+			children = (
+				324EC6CB22FAAF6600CBC988 /* Models */,
+				324EC6CE22FAAF6600CBC988 /* Service */,
+				324EC6D122FAAF6600CBC988 /* ViewControllers */,
+				324EC6D822FAAF6600CBC988 /* Views */,
+			);
+			path = JuDapai;
+			sourceTree = "<group>";
+		};
+		324EC6CB22FAAF6600CBC988 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				324EC6CC22FAAF6600CBC988 /* CTJdpIndexModel.h */,
+				324EC6CD22FAAF6600CBC988 /* CTJdpIndexModel.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		324EC6CE22FAAF6600CBC988 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				324EC6CF22FAAF6600CBC988 /* CTJdpService.h */,
+				324EC6D022FAAF6600CBC988 /* CTJdpService.m */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		324EC6D122FAAF6600CBC988 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				324EC6D222FAAF6600CBC988 /* CTJdpDetailViewController.h */,
+				324EC6D322FAAF6600CBC988 /* CTJdpDetailViewController.m */,
+				324EC6D422FAAF6600CBC988 /* CTJdpListViewController.h */,
+				324EC6D522FAAF6600CBC988 /* CTJdpListViewController.m */,
+				324EC6D622FAAF6600CBC988 /* CTJdpPageViewController.h */,
+				324EC6D722FAAF6600CBC988 /* CTJdpPageViewController.m */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		324EC6D822FAAF6600CBC988 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				324EC6D922FAAF6600CBC988 /* CTJdpGoodsItem.h */,
+				324EC6DA22FAAF6600CBC988 /* CTJdpGoodsItem.m */,
+				324EC6DB22FAAF6600CBC988 /* CTJdpGoodsItem.xib */,
+				324EC6DC22FAAF6600CBC988 /* CTJdpListCell.h */,
+				324EC6DD22FAAF6600CBC988 /* CTJdpListCell.m */,
+				324EC6DE22FAAF6600CBC988 /* CTJdpListCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		324EC6F422FAB18B00CBC988 /* Shipingou */ = {
+			isa = PBXGroup;
+			children = (
+				324EC6FD22FAB18B00CBC988 /* Views */,
+			);
+			path = Shipingou;
+			sourceTree = "<group>";
+		};
+		324EC6FD22FAB18B00CBC988 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				324EC6FE22FAB18B00CBC988 /* FJVideoGoodListCell.h */,
+				324EC6FF22FAB18B00CBC988 /* FJVideoGoodListCell.m */,
+				324EC70022FAB18B00CBC988 /* FJVideoGoodListCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		324EC70622FAB4D800CBC988 /* Mrdk */ = {
+			isa = PBXGroup;
+			children = (
+				324EC70722FAB4D800CBC988 /* Models */,
+				324EC70E22FAB4D800CBC988 /* Service */,
+				324EC71522FAB4D800CBC988 /* ViewControllers */,
+				324EC71C22FAB4D800CBC988 /* Views */,
+			);
+			path = Mrdk;
+			sourceTree = "<group>";
+		};
+		324EC70722FAB4D800CBC988 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				324EC70822FAB4D800CBC988 /* CTMrdkIndexModel.h */,
+				324EC70922FAB4D800CBC988 /* CTMrdkIndexModel.m */,
+				324EC70A22FAB4D800CBC988 /* CTMrdkMyScore.h */,
+				324EC70B22FAB4D800CBC988 /* CTMrdkMyScore.m */,
+				324EC70C22FAB4D800CBC988 /* CTMrdkRecordModel.h */,
+				324EC70D22FAB4D800CBC988 /* CTMrdkRecordModel.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		324EC70E22FAB4D800CBC988 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				324EC70F22FAB4D800CBC988 /* CTAlertHelper+MrdkShareSuccess.h */,
+				324EC71022FAB4D800CBC988 /* CTAlertHelper+MrdkShareSuccess.m */,
+				324EC71122FAB4D800CBC988 /* CTMarkPayHelper.h */,
+				324EC71222FAB4D800CBC988 /* CTMarkPayHelper.m */,
+				324EC71322FAB4D800CBC988 /* CTMrdkService.h */,
+				324EC71422FAB4D800CBC988 /* CTMrdkService.m */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		324EC71522FAB4D800CBC988 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				324EC71622FAB4D800CBC988 /* CTMrdkMyRecordViewController.h */,
+				324EC71722FAB4D800CBC988 /* CTMrdkMyRecordViewController.m */,
+				324EC71822FAB4D800CBC988 /* CTMrdkPaySuccessViewController.h */,
+				324EC71922FAB4D800CBC988 /* CTMrdkPaySuccessViewController.m */,
+				324EC71A22FAB4D800CBC988 /* CTMrdkViewController.h */,
+				324EC71B22FAB4D800CBC988 /* CTMrdkViewController.m */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		324EC71C22FAB4D800CBC988 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				324EC71D22FAB4D800CBC988 /* CTMrdkAmountView.h */,
+				324EC71E22FAB4D800CBC988 /* CTMrdkAmountView.m */,
+				324EC71F22FAB4D800CBC988 /* CTMrdkAmountView.xib */,
+				324EC72022FAB4D800CBC988 /* CTMrdkInfoView.h */,
+				324EC72122FAB4D800CBC988 /* CTMrdkInfoView.m */,
+				324EC72222FAB4D800CBC988 /* CTMrdkInfoView.xib */,
+				324EC72322FAB4D800CBC988 /* CTMrdkMoneyContainerView.h */,
+				324EC72422FAB4D800CBC988 /* CTMrdkMoneyContainerView.m */,
+				324EC72522FAB4D800CBC988 /* CTMrdkMoneyItem.h */,
+				324EC72622FAB4D800CBC988 /* CTMrdkMoneyItem.m */,
+				324EC72722FAB4D800CBC988 /* CTMrdkMoneyItem.xib */,
+				324EC72822FAB4D800CBC988 /* CTMrdkMyScoreView.h */,
+				324EC72922FAB4D800CBC988 /* CTMrdkMyScoreView.m */,
+				324EC72A22FAB4D800CBC988 /* CTMrdkMyScoreView.xib */,
+				324EC72B22FAB4D800CBC988 /* CTMrdkPaySheetView.h */,
+				324EC72C22FAB4D800CBC988 /* CTMrdkPaySheetView.m */,
+				324EC72D22FAB4D800CBC988 /* CTMrdkPaySheetView.xib */,
+				324EC72E22FAB4D800CBC988 /* CTMrdkPaySuccessView.h */,
+				324EC72F22FAB4D800CBC988 /* CTMrdkPaySuccessView.m */,
+				324EC73022FAB4D800CBC988 /* CTMrdkPaySuccessView_.xib */,
+				324EC73122FAB4D800CBC988 /* CTMrdkRecordCell.h */,
+				324EC73222FAB4D800CBC988 /* CTMrdkRecordCell.m */,
+				324EC73322FAB4D800CBC988 /* CTMrdkRecordCell.xib */,
+				324EC73422FAB4D800CBC988 /* CTMrdkShareSuccessView.h */,
+				324EC73522FAB4D800CBC988 /* CTMrdkShareSuccessView.m */,
+				324EC73622FAB4D800CBC988 /* CTMrdkShareSuccessView.xib */,
+				324EC73722FAB4D800CBC988 /* CTMrdkShareView.h */,
+				324EC73822FAB4D800CBC988 /* CTMrdkShareView.m */,
+				324EC73922FAB4D800CBC988 /* CTMrdkShareView.xib */,
+				324EC73A22FAB4D800CBC988 /* CTPayTypeContainerView.h */,
+				324EC73B22FAB4D800CBC988 /* CTPayTypeContainerView.m */,
+				324EC73C22FAB4D800CBC988 /* CTPayTypeItem.h */,
+				324EC73D22FAB4D800CBC988 /* CTPayTypeItem.m */,
+				324EC73E22FAB4D800CBC988 /* CTPayTypeItem.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		32BE5FF721EDC5E100BA52EF = {
 			isa = PBXGroup;
 			children = (
+				324EC6C322FAA64800CBC988 /* HX */,
 				324EBFF022FA74E900CBC988 /* FenJuan */,
 				32BE600121EDC5E100BA52EF /* Products */,
 				81B790F6F60DCAA925C30A30 /* Pods */,
@@ -4206,6 +4532,7 @@
 				324EC51922FA74EC00CBC988 /* CTSpreeShopItem.xib in Resources */,
 				324EC4AE22FA74EB00CBC988 /* CTGoodIndexVerticalCell.xib in Resources */,
 				324EC49B22FA74EB00CBC988 /* CTTbAuthAlertView.xib in Resources */,
+				324EC75422FAB4D800CBC988 /* CTMrdkPaySuccessView_.xib in Resources */,
 				324EC55022FA74EC00CBC988 /* CTMemberEquityItemView.xib in Resources */,
 				324EC5A322FA74EC00CBC988 /* CTTeamListCell.xib in Resources */,
 				324EC5DF22FA74EC00CBC988 /* CTGoodsShareDescView.xib in Resources */,
@@ -4224,6 +4551,7 @@
 				324EC4D822FA74EC00CBC988 /* CTCateSubCollectionCell.xib in Resources */,
 				324EC58922FA74EC00CBC988 /* CTEarnTrendCell.xib in Resources */,
 				324EC5D122FA74EC00CBC988 /* CTSetHeadView.xib in Resources */,
+				324EC75622FAB4D800CBC988 /* CTMrdkRecordCell.xib in Resources */,
 				324EC5E822FA74EC00CBC988 /* CTShareImgsItem.xib in Resources */,
 				324EC55722FA74EC00CBC988 /* CTMemberPrivilegeItem.xib in Resources */,
 				324EC51722FA74EC00CBC988 /* CTSalesItem.xib in Resources */,
@@ -4247,12 +4575,14 @@
 				324EC49D22FA74EB00CBC988 /* CTTbAuthFailAlertView.xib in Resources */,
 				324EC5BA22FA74EC00CBC988 /* CTHistoryKeywordCell.xib in Resources */,
 				324EC58722FA74EC00CBC988 /* CTEarnTimeView.xib in Resources */,
+				324EC6E522FAAF6600CBC988 /* CTJdpGoodsItem.xib in Resources */,
 				324EC6BB22FA74EC00CBC988 /* yw_1222.jpg in Resources */,
 				324EC69022FA74EC00CBC988 /* ALPLinkPartnerSDK.bundle in Resources */,
 				324EC53422FA74EC00CBC988 /* CTLoginView_.xib in Resources */,
 				324EC4B222FA74EB00CBC988 /* CTGoodListView_.xib in Resources */,
 				324EC4C322FA74EC00CBC988 /* LMNoDataView.xib in Resources */,
 				324EC5EB22FA74EC00CBC988 /* CTShareView_.xib in Resources */,
+				324EC74E22FAB4D800CBC988 /* CTMrdkMoneyItem.xib in Resources */,
 				324EC49F22FA74EB00CBC988 /* CTUpgradePopView.xib in Resources */,
 				324EC54E22FA74EC00CBC988 /* CTMemberEquityItem.xib in Resources */,
 				324EC5AE22FA74EC00CBC988 /* CTOneGoodIndexCell.xib in Resources */,
@@ -4278,9 +4608,12 @@
 				324EC58522FA74EC00CBC988 /* CTEarnRankNavBar.xib in Resources */,
 				324EC59C22FA74EC00CBC988 /* CTRecListCell.xib in Resources */,
 				324EC5AC22FA74EC00CBC988 /* CTMultipleGoodsCell.xib in Resources */,
+				324EC70522FAB18B00CBC988 /* FJVideoGoodListCell.xib in Resources */,
 				324EC4FD22FA74EC00CBC988 /* CTGoodsImgsHeadView.xib in Resources */,
 				324EC60322FA74EC00CBC988 /* CTUserInfoItem.xib in Resources */,
+				324EC6E722FAAF6600CBC988 /* CTJdpListCell.xib in Resources */,
 				324EC4F322FA74EC00CBC988 /* CTGoodsContentView.xib in Resources */,
+				324EC74B22FAB4D800CBC988 /* CTMrdkInfoView.xib in Resources */,
 				324EC5C622FA74EC00CBC988 /* CTHotCatoryView.xib in Resources */,
 				324EC64622FA74EC00CBC988 /* SGQRCodeFlashlightOpenImage.png in Resources */,
 				324EC5B022FA74EC00CBC988 /* CTProCommentItem.xib in Resources */,
@@ -4301,6 +4634,7 @@
 				324EC4CB22FA74EC00CBC988 /* CTPasteCheckPopView.xib in Resources */,
 				324EC59822FA74EC00CBC988 /* CTOrderListCell.xib in Resources */,
 				324EC4BC22FA74EB00CBC988 /* CTSortButton.xib in Resources */,
+				324EC75D22FAB4D800CBC988 /* CTPayTypeItem.xib in Resources */,
 				324EC57F22FA74EC00CBC988 /* CTEarnDescView.xib in Resources */,
 				324EC55322FA74EC00CBC988 /* CTMemberEquityRowView.xib in Resources */,
 				324EC68E22FA74EC00CBC988 /* AlibabaAuthSDK.bundle in Resources */,
@@ -4308,11 +4642,13 @@
 				324EC5BC22FA74EC00CBC988 /* CTHistoryKeywordHeadView.xib in Resources */,
 				324EC4C022FA74EC00CBC988 /* CTNavBar.xib in Resources */,
 				324EC54B22FA74EC00CBC988 /* CTMemberTitleView.xib in Resources */,
+				324EC75022FAB4D800CBC988 /* CTMrdkMyScoreView.xib in Resources */,
 				324EC5E622FA74EC00CBC988 /* CTIvCodeImgView.xib in Resources */,
 				324EC61322FA74EC00CBC988 /* CTCashListCell.xib in Resources */,
 				324EC57D22FA74EC00CBC988 /* CTDirectUserView.xib in Resources */,
 				324EC4CF22FA74EC00CBC988 /* CTSharePopContainerView.xib in Resources */,
 				324EC4A322FA74EB00CBC988 /* CTThirtyProfitHeadView.xib in Resources */,
+				324EC75A22FAB4D800CBC988 /* CTMrdkShareView.xib in Resources */,
 				324EC49922FA74EB00CBC988 /* CTNoticeAlertView.xib in Resources */,
 				324EC58E22FA74EC00CBC988 /* CTMineEarnView.xib in Resources */,
 				324EC4ED22FA74EC00CBC988 /* CTVideoGoodListCell.xib in Resources */,
@@ -4320,11 +4656,14 @@
 				324EC56622FA74EC00CBC988 /* CTMessageTypeView.xib in Resources */,
 				324EC4C222FA74EC00CBC988 /* LMNetErrorView.xib in Resources */,
 				324EC4E122FA74EC00CBC988 /* CTHandpickDescView.xib in Resources */,
+				324EC74922FAB4D800CBC988 /* CTMrdkAmountView.xib in Resources */,
 				324EC64522FA74EC00CBC988 /* SGQRCodeFlashlightCloseImage.png in Resources */,
 				324EC4A122FA74EB00CBC988 /* CTContentInputView.xib in Resources */,
 				324EC59222FA74EC00CBC988 /* CTMineNavItemView.xib in Resources */,
 				324EC5C822FA74EC00CBC988 /* CTSearchTikcetNavView.xib in Resources */,
 				324EC56422FA74EC00CBC988 /* CTMessageListCell.xib in Resources */,
+				324EC75822FAB4D800CBC988 /* CTMrdkShareSuccessView.xib in Resources */,
+				324EC75222FAB4D800CBC988 /* CTMrdkPaySheetView.xib in Resources */,
 				324EC5FB22FA74EC00CBC988 /* CTXsjcCell.xib in Resources */,
 				324EC4D722FA74EC00CBC988 /* CTCateSearchBar.xib in Resources */,
 				324EC65522FA74EC00CBC988 /* WSDatePickerView.xib in Resources */,
@@ -4414,37 +4753,39 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				324EC6C622FAA67E00CBC988 /* FJHxer.m in Sources */,
 				324EC4A822FA74EB00CBC988 /* CTGoodDetailNavbar.m in Sources */,
 				324EC4C922FA74EC00CBC988 /* CTPicturesView.m in Sources */,
 				324EC63922FA74EC00CBC988 /* AddressPickerView.m in Sources */,
-				324EC5B522FA74EC00CBC988 /* CTSearchService.m in Sources */,
 				324EC6A922FA74EC00CBC988 /* CTModuleManager.m in Sources */,
-				324EC5BD22FA74EC00CBC988 /* CTHotKeywordHeadView.m in Sources */,
 				324EC60622FA74EC00CBC988 /* CTUserRemarkItem.m in Sources */,
 				324EC4A622FA74EB00CBC988 /* CTThirtyTrendView.m in Sources */,
 				324EC67722FA74EC00CBC988 /* NSObject+YYModels.m in Sources */,
 				324EC49C22FA74EB00CBC988 /* CTTbAuthFailAlertView.m in Sources */,
 				324EC51622FA74EC00CBC988 /* CTSalesItem.m in Sources */,
 				324EC5B222FA74EC00CBC988 /* CTRecommendService.m in Sources */,
+				324EC5B522FA74EC00CBC988 /* CTSearchService.m in Sources */,
 				324EC4D522FA74EC00CBC988 /* CTCateMainListView.m in Sources */,
 				324EC65622FA74EC00CBC988 /* MBProgressHUD+Helper.m in Sources */,
+				324EC4C822FA74EC00CBC988 /* CTPhotoView.m in Sources */,
 				324EC4D422FA74EC00CBC988 /* CTCateViewController.m in Sources */,
 				324EC67C22FA74EC00CBC988 /* AppDelegate.m in Sources */,
+				324EC6E422FAAF6600CBC988 /* CTJdpGoodsItem.m in Sources */,
 				324EC4DF22FA74EC00CBC988 /* CTGoodListViewController.m in Sources */,
 				324EC59722FA74EC00CBC988 /* CTOrderListCell.m in Sources */,
 				324EC6B522FA74EC00CBC988 /* CTNetworkEngine+Recommend.m in Sources */,
 				324EC6AA22FA74EC00CBC988 /* CTActivityModel.m in Sources */,
-				324EC4A422FA74EB00CBC988 /* CTThirtyProfitView.m in Sources */,
 				324EC63722FA74EC00CBC988 /* TZPhotoPreviewCell.m in Sources */,
 				324EC53822FA74EC00CBC988 /* CTSetPasswordView.m in Sources */,
+				324EC61E22FA74EC00CBC988 /* Aspects.m in Sources */,
 				324EC5C122FA74EC00CBC988 /* CTSearchPreviewView.m in Sources */,
-				324EC4C822FA74EC00CBC988 /* CTPhotoView.m in Sources */,
 				324EC69522FA74EC00CBC988 /* CTMemberManager.m in Sources */,
 				324EC6A522FA74EC00CBC988 /* DKUploadData.m in Sources */,
 				324EC6B022FA74EC00CBC988 /* CTNetworkEngine+Login.m in Sources */,
 				324EC6AF22FA74EC00CBC988 /* CTNetworkEngine+Index.m in Sources */,
 				324EC61222FA74EC00CBC988 /* CTCashListCell.m in Sources */,
 				324EC4B122FA74EB00CBC988 /* CTGoodListView_.m in Sources */,
+				324EC74F22FAB4D800CBC988 /* CTMrdkMyScoreView.m in Sources */,
 				324EC66722FA74EC00CBC988 /* NSArray+Category.m in Sources */,
 				324EC6B222FA74EC00CBC988 /* CTNetworkEngine+Message.m in Sources */,
 				324EC4CC22FA74EC00CBC988 /* CTShareItemView.m in Sources */,
@@ -4453,57 +4794,61 @@
 				324EC53F22FA74EC00CBC988 /* CTMemberInfoModel.m in Sources */,
 				324EC63422FA74EC00CBC988 /* SDBrowserImageView.m in Sources */,
 				324EC61622FA74EC00CBC988 /* CTWithdrawInputPsdView.m in Sources */,
-				324EC61E22FA74EC00CBC988 /* Aspects.m in Sources */,
 				324EC62322FA74EC00CBC988 /* CLNetworkManager.m in Sources */,
 				324EC65D22FA74EC00CBC988 /* UIPasteboard+Helper.m in Sources */,
-				324EC66D22FA74EC00CBC988 /* NSString+Log.m in Sources */,
-				324EC56122FA74EC00CBC988 /* CTMessageListViewController.m in Sources */,
+				324EC5EE22FA74EC00CBC988 /* CTToolService.m in Sources */,
 				324EC60922FA74EC00CBC988 /* CTTaoBaoAuthViewController.m in Sources */,
 				324EC59D22FA74EC00CBC988 /* CTSevenTrendView.m in Sources */,
 				324EC4C722FA74EC00CBC988 /* LMPageControl.m in Sources */,
+				324EC56922FA74EC00CBC988 /* CTIncomeShareModel.m in Sources */,
 				324EC58A22FA74EC00CBC988 /* CTEarnTrendView.m in Sources */,
+				324EC6E322FAAF6600CBC988 /* CTJdpPageViewController.m in Sources */,
 				324EC51F22FA74EC00CBC988 /* CTLoginBaseViewController.m in Sources */,
 				324EC5BF22FA74EC00CBC988 /* CTSearchBar.m in Sources */,
+				324EC5BD22FA74EC00CBC988 /* CTHotKeywordHeadView.m in Sources */,
 				324EC65E22FA74EC00CBC988 /* UITableView+Helper.m in Sources */,
 				324EC4FE22FA74EC00CBC988 /* CTGoodsImgsView.m in Sources */,
 				324EC56222FA74EC00CBC988 /* CTMessageViewController.m in Sources */,
 				324EC4E622FA74EC00CBC988 /* CThotSalesListViewController.m in Sources */,
+				324EC74222FAB4D800CBC988 /* CTAlertHelper+MrdkShareSuccess.m in Sources */,
 				324EC51A22FA74EC00CBC988 /* CTLoginService.m in Sources */,
-				324EC64F22FA74EC00CBC988 /* SelPlaybackControls.m in Sources */,
 				324EC57E22FA74EC00CBC988 /* CTEarnDescView.m in Sources */,
 				324EC67322FA74EC00CBC988 /* UIUtil.m in Sources */,
 				324EC56522FA74EC00CBC988 /* CTMessageTypeView.m in Sources */,
 				324EC53622FA74EC00CBC988 /* CTRegisterView.m in Sources */,
 				324EC67A22FA74EC00CBC988 /* YYCGUtilities.m in Sources */,
 				324EC66222FA74EC00CBC988 /* UIView+Helper.m in Sources */,
+				324EC56122FA74EC00CBC988 /* CTMessageListViewController.m in Sources */,
 				324EC4E522FA74EC00CBC988 /* CTHandpickListViewController.m in Sources */,
-				324EC5EE22FA74EC00CBC988 /* CTToolService.m in Sources */,
-				324EC56922FA74EC00CBC988 /* CTIncomeShareModel.m in Sources */,
 				324EC5D022FA74EC00CBC988 /* CTSetHeadView.m in Sources */,
 				324EC5EA22FA74EC00CBC988 /* CTShareView.m in Sources */,
 				324EC52422FA74EC00CBC988 /* CTAlipayBoundViewModel.m in Sources */,
 				324EC69E22FA74EC00CBC988 /* CTDoneButton.m in Sources */,
+				324EC4B622FA74EB00CBC988 /* CTMainCategoryHeadView.m in Sources */,
+				324EC6ED22FAB02000CBC988 /* CTNetworkEngine+ThirldTk.m in Sources */,
 				324EC5A022FA74EC00CBC988 /* CTShareProfitView.m in Sources */,
 				324EC5A522FA74EC00CBC988 /* CTMaterialListViewController.m in Sources */,
 				324EC69922FA74EC00CBC988 /* CTNestPageController.m in Sources */,
+				324EC64F22FA74EC00CBC988 /* SelPlaybackControls.m in Sources */,
+				324EC6C922FAA88A00CBC988 /* CTHxer.m in Sources */,
 				324EC56722FA74EC00CBC988 /* CTEarnRankModel.m in Sources */,
+				324EC75922FAB4D800CBC988 /* CTMrdkShareView.m in Sources */,
 				324EC65C22FA74EC00CBC988 /* UINavigationBar+handle.m in Sources */,
 				324EC62D22FA74EC00CBC988 /* CLRefreshCurveHeader.m in Sources */,
 				324EC57922FA74EC00CBC988 /* CTTeamListViewController.m in Sources */,
 				324EC51322FA74EC00CBC988 /* CTHomeSpreeShopView.m in Sources */,
-				324EC4DA22FA74EC00CBC988 /* CTHotGoodsModel.m in Sources */,
 				324EC62A22FA74EC00CBC988 /* CLRefreshHeader.m in Sources */,
-				324EC4B622FA74EB00CBC988 /* CTMainCategoryHeadView.m in Sources */,
 				324EC55222FA74EC00CBC988 /* CTMemberEquityRowView.m in Sources */,
 				324EC57822FA74EC00CBC988 /* CTRecListViewController.m in Sources */,
 				324EC58822FA74EC00CBC988 /* CTEarnTrendCell.m in Sources */,
-				324EC60E22FA74EC00CBC988 /* CTWithdrawViewController.m in Sources */,
 				324EC4F422FA74EC00CBC988 /* CTGoodsCouponView.m in Sources */,
 				324EC65722FA74EC00CBC988 /* UIActionSheet+Category.m in Sources */,
 				324EC67D22FA74EC00CBC988 /* main.m in Sources */,
 				324EC62922FA74EC00CBC988 /* CLRefreshFooter.m in Sources */,
 				324EC62F22FA74EC00CBC988 /* CLRefreshNulMoreView.m in Sources */,
+				324EC4A422FA74EB00CBC988 /* CTThirtyProfitView.m in Sources */,
 				324EC59522FA74EC00CBC988 /* CTMineToolView.m in Sources */,
+				324EC69D22FA74EC00CBC988 /* CTCanValidButton.m in Sources */,
 				324EC6AB22FA74EC00CBC988 /* CTNetworkEngine+Cash.m in Sources */,
 				324EC57A22FA74EC00CBC988 /* CTEarnRankIndexViewModel.m in Sources */,
 				324EC66822FA74EC00CBC988 /* NSArray+Log.m in Sources */,
@@ -4512,53 +4857,59 @@
 				324EC5B422FA74EC00CBC988 /* CTSearchHotModel.m in Sources */,
 				324EC5CB22FA74EC00CBC988 /* CTYourLikedHeadView.m in Sources */,
 				324EC6BF22FA74EC00CBC988 /* UMShareManager.m in Sources */,
+				324EC74322FAB4D800CBC988 /* CTMarkPayHelper.m in Sources */,
 				324EC52B22FA74EC00CBC988 /* CTAlipayBoundView.m in Sources */,
 				324EC55822FA74EC00CBC988 /* CTMemberPrivilegeView.m in Sources */,
-				324EC69D22FA74EC00CBC988 /* CTCanValidButton.m in Sources */,
+				324EC60E22FA74EC00CBC988 /* CTWithdrawViewController.m in Sources */,
 				324EC65122FA74EC00CBC988 /* SelVideoSlider.m in Sources */,
 				324EC67422FA74EC00CBC988 /* UIView+Category.m in Sources */,
 				324EC5C322FA74EC00CBC988 /* CTSearchTicketViewController.m in Sources */,
 				324EC56E22FA74EC00CBC988 /* CTEarnDetailViewController.m in Sources */,
 				324EC4BF22FA74EC00CBC988 /* CTNavBar.m in Sources */,
-				324EC4EE22FA74EC00CBC988 /* CTVideoShopListViewController.m in Sources */,
 				324EC51D22FA74EC00CBC988 /* CTForgetViewController.m in Sources */,
+				324EC66D22FA74EC00CBC988 /* NSString+Log.m in Sources */,
 				324EC6B122FA74EC00CBC988 /* CTNetworkEngine+Member.m in Sources */,
 				324EC4A222FA74EB00CBC988 /* CTThirtyProfitHeadView.m in Sources */,
 				324EC4E022FA74EC00CBC988 /* CTHandpickDescView.m in Sources */,
 				324EC57222FA74EC00CBC988 /* CTMineViewController.m in Sources */,
 				324EC52D22FA74EC00CBC988 /* CTBindPhoneView.m in Sources */,
+				324EC58F22FA74EC00CBC988 /* CTMineHeadView.m in Sources */,
 				324EC54D22FA74EC00CBC988 /* CTMemberEquityItem.m in Sources */,
+				324EC5B922FA74EC00CBC988 /* CTHistoryKeywordCell.m in Sources */,
 				324EC52A22FA74EC00CBC988 /* CTSetPasswordViewModel.m in Sources */,
 				324EC5CE22FA74EC00CBC988 /* CTAdviseViewController.m in Sources */,
-				324EC62222FA74EC00CBC988 /* CLNetworkEngine.m in Sources */,
 				324EC62B22FA74EC00CBC988 /* CLRefreshManager.m in Sources */,
 				324EC65922FA74EC00CBC988 /* UIButton+Helper.m in Sources */,
+				324EC4EE22FA74EC00CBC988 /* CTVideoShopListViewController.m in Sources */,
 				324EC64D22FA74EC00CBC988 /* SelPlayerConfiguration.m in Sources */,
 				324EC64122FA74EC00CBC988 /* LMSegmentedControl.m in Sources */,
 				324EC61822FA74EC00CBC988 /* CTWithDrawInputView.m in Sources */,
-				324EC49822FA74EB00CBC988 /* CTNoticeAlertView.m in Sources */,
 				324EC57022FA74EC00CBC988 /* CTEarnRankViewController.m in Sources */,
 				324EC64B22FA74EC00CBC988 /* SolidLayout.m in Sources */,
+				324EC75C22FAB4D800CBC988 /* CTPayTypeItem.m in Sources */,
 				324EC4FA22FA74EC00CBC988 /* CTGoodsImgCell.m in Sources */,
-				324EC5B922FA74EC00CBC988 /* CTHistoryKeywordCell.m in Sources */,
 				324EC66922FA74EC00CBC988 /* NSData+Category.m in Sources */,
+				324EC74522FAB4D800CBC988 /* CTMrdkMyRecordViewController.m in Sources */,
 				324EC64722FA74EC00CBC988 /* ScanSuccessJumpVC.m in Sources */,
 				324EC55522FA74EC00CBC988 /* CTMemberEquityView.m in Sources */,
-				324EC58F22FA74EC00CBC988 /* CTMineHeadView.m in Sources */,
 				324EC5F022FA74EC00CBC988 /* CTSxySpjxViewController.m in Sources */,
 				324EC4D322FA74EC00CBC988 /* CTCateService.m in Sources */,
+				324EC49822FA74EB00CBC988 /* CTNoticeAlertView.m in Sources */,
 				324EC64022FA74EC00CBC988 /* LineLayout.m in Sources */,
 				324EC5AD22FA74EC00CBC988 /* CTOneGoodIndexCell.m in Sources */,
 				324EC6A622FA74EC00CBC988 /* LMPhotoBrower.m in Sources */,
+				324EC75B22FAB4D800CBC988 /* CTPayTypeContainerView.m in Sources */,
+				324EC4DA22FA74EC00CBC988 /* CTHotGoodsModel.m in Sources */,
 				324EC55922FA74EC00CBC988 /* CTMemberStrategyItem.m in Sources */,
 				324EC65B22FA74EC00CBC988 /* UILabel+Helper.m in Sources */,
 				324EC61122FA74EC00CBC988 /* CTAlertHelper+WithdrawSuccess.m in Sources */,
 				324EC58022FA74EC00CBC988 /* CTEarnRankCell.m in Sources */,
 				324EC66F22FA74EC00CBC988 /* ShareUtil.m in Sources */,
 				324EC4AA22FA74EB00CBC988 /* CTGoodIndexCell.m in Sources */,
-				324EC56322FA74EC00CBC988 /* CTMessageListCell.m in Sources */,
-				324EC50F22FA74EC00CBC988 /* CTHomeSalesView.m in Sources */,
+				324EC49322FA74EB00CBC988 /* CTEarnIndexModel.m in Sources */,
+				324EC75722FAB4D800CBC988 /* CTMrdkShareSuccessView.m in Sources */,
 				324EC4E222FA74EC00CBC988 /* CTHandpickDetailViewController.m in Sources */,
+				324EC6E622FAAF6600CBC988 /* CTJdpListCell.m in Sources */,
 				324EC54222FA74EC00CBC988 /* CTMemberEquityController.m in Sources */,
 				324EC5B322FA74EC00CBC988 /* CTRecommendViewController.m in Sources */,
 				324EC69622FA74EC00CBC988 /* CTBaseListViewController.m in Sources */,
@@ -4570,10 +4921,11 @@
 				324EC4DB22FA74EC00CBC988 /* CTTimeBuyCateModel.m in Sources */,
 				324EC5FD22FA74EC00CBC988 /* CTUserInfoService.m in Sources */,
 				324EC63222FA74EC00CBC988 /* KeychainTool.m in Sources */,
-				324EC49322FA74EB00CBC988 /* CTEarnIndexModel.m in Sources */,
 				324EC59322FA74EC00CBC988 /* CTMineOrderView.m in Sources */,
+				324EC50F22FA74EC00CBC988 /* CTHomeSalesView.m in Sources */,
 				324EC6B422FA74EC00CBC988 /* CTNetworkEngine+ProGood.m in Sources */,
 				324EC5ED22FA74EC00CBC988 /* CTSxyModel.m in Sources */,
+				324EC75122FAB4D800CBC988 /* CTMrdkPaySheetView.m in Sources */,
 				324EC59F22FA74EC00CBC988 /* CTShareProfitContainerView.m in Sources */,
 				324EC63B22FA74EC00CBC988 /* CLHorizontalCompactLayout.m in Sources */,
 				324EC50822FA74EC00CBC988 /* CTHomeBannerView.m in Sources */,
@@ -4582,20 +4934,19 @@
 				324EC4BB22FA74EB00CBC988 /* CTSortButton.m in Sources */,
 				324EC61022FA74EC00CBC988 /* CTAlertHelper+WithdrawPsd.m in Sources */,
 				324EC4F222FA74EC00CBC988 /* CTGoodsContentView.m in Sources */,
+				324EC62222FA74EC00CBC988 /* CLNetworkEngine.m in Sources */,
 				324EC67122FA74EC00CBC988 /* UIColor+HexString.m in Sources */,
 				324EC6BA22FA74EC00CBC988 /* AliTradeWebViewController.m in Sources */,
 				324EC5FF22FA74EC00CBC988 /* CTUserEditViewController.m in Sources */,
 				324EC4F822FA74EC00CBC988 /* CTGoodsDescView.m in Sources */,
-				324EC52022FA74EC00CBC988 /* CTLoginViewController.m in Sources */,
 				324EC65822FA74EC00CBC988 /* UIAlertView+Helper.m in Sources */,
 				324EC50622FA74EC00CBC988 /* CTHomeViewModel.m in Sources */,
 				324EC63D22FA74EC00CBC988 /* CLTextField.m in Sources */,
 				324EC5D922FA74EC00CBC988 /* CTGoodsShareViewController.m in Sources */,
 				324EC58222FA74EC00CBC988 /* CTEarnRankHeadView.m in Sources */,
 				324EC5A622FA74EC00CBC988 /* CTMultipleGoodListViewController.m in Sources */,
-				324EC6C122FA74EC00CBC988 /* UIScrollView+CTPagePanGes.m in Sources */,
-				324EC5AA22FA74EC00CBC988 /* CTProGoodIndexViewModel.m in Sources */,
 				324EC4BA22FA74EB00CBC988 /* CTMainCategoryView.m in Sources */,
+				324EC53122FA74EC00CBC988 /* CTGetCodeView.m in Sources */,
 				324EC4AB22FA74EB00CBC988 /* CTGoodIndexHorizontalCell.m in Sources */,
 				324EC65322FA74EC00CBC988 /* NSDate+Extension.m in Sources */,
 				324EC63822FA74EC00CBC988 /* UIView+Layout.m in Sources */,
@@ -4603,55 +4954,59 @@
 				324EC4BD22FA74EB00CBC988 /* CTUpDownControl.m in Sources */,
 				324EC52722FA74EC00CBC988 /* CTGetCodeViewModel.m in Sources */,
 				324EC61422FA74EC00CBC988 /* CTWithdrawAlipayInfoView.m in Sources */,
-				324EC53122FA74EC00CBC988 /* CTGetCodeView.m in Sources */,
-				324EC52922FA74EC00CBC988 /* CTRegisterViewModel.m in Sources */,
 				324EC62822FA74EC00CBC988 /* CLRefreshFactory.m in Sources */,
 				324EC67022FA74EC00CBC988 /* UIButton+Create.m in Sources */,
+				324EC56322FA74EC00CBC988 /* CTMessageListCell.m in Sources */,
+				324EC5A222FA74EC00CBC988 /* CTTeamListCell.m in Sources */,
 				324EC60D22FA74EC00CBC988 /* CTWithdrawHistoryViewController.m in Sources */,
-				324EC60422FA74EC00CBC988 /* CTUserInfoView.m in Sources */,
-				324EC69422FA74EC00CBC988 /* CTAppManager.m in Sources */,
+				324EC5AA22FA74EC00CBC988 /* CTProGoodIndexViewModel.m in Sources */,
+				324EC53D22FA74EC00CBC988 /* CTTabBarItem.m in Sources */,
 				324EC63E22FA74EC00CBC988 /* CLTextView.m in Sources */,
 				324EC67822FA74EC00CBC988 /* NSTimer+YYAdd.m in Sources */,
+				324EC70422FAB18B00CBC988 /* FJVideoGoodListCell.m in Sources */,
 				324EC4EF22FA74EC00CBC988 /* CTVideoShopPageController.m in Sources */,
 				324EC54A22FA74EC00CBC988 /* CTMemberTitleView.m in Sources */,
 				324EC60022FA74EC00CBC988 /* CTEditInputView.m in Sources */,
 				324EC5B722FA74EC00CBC988 /* CTGoodSearchViewController.m in Sources */,
 				324EC4CA22FA74EC00CBC988 /* CTPasteCheckPopView.m in Sources */,
 				324EC55E22FA74EC00CBC988 /* CTMemberUpgradeView.m in Sources */,
-				324EC5A222FA74EC00CBC988 /* CTTeamListCell.m in Sources */,
+				324EC52922FA74EC00CBC988 /* CTRegisterViewModel.m in Sources */,
 				324EC67B22FA74EC00CBC988 /* CTBaseViewController+Debug.m in Sources */,
 				324EC5AB22FA74EC00CBC988 /* CTMultipleGoodsCell.m in Sources */,
 				324EC4D622FA74EC00CBC988 /* CTCateSearchBar.m in Sources */,
 				324EC54022FA74EC00CBC988 /* CTMemberRebateModel.m in Sources */,
 				324EC4C622FA74EC00CBC988 /* LMLaunchAdviseManager.m in Sources */,
-				324EC53D22FA74EC00CBC988 /* CTTabBarItem.m in Sources */,
 				324EC50122FA74EC00CBC988 /* CTHomeCatoryViewController.m in Sources */,
 				324EC5D622FA74EC00CBC988 /* CTUpdateImageView.m in Sources */,
+				324EC5C222FA74EC00CBC988 /* CTSearchTicketService.m in Sources */,
 				324EC5C522FA74EC00CBC988 /* CTHotCatoryView.m in Sources */,
+				324EC52022FA74EC00CBC988 /* CTLoginViewController.m in Sources */,
 				324EC5A722FA74EC00CBC988 /* CTMultipleGoodsDetailViewController.m in Sources */,
-				324EC59122FA74EC00CBC988 /* CTMineNavItemView.m in Sources */,
 				324EC58622FA74EC00CBC988 /* CTEarnTimeView.m in Sources */,
-				324EC69A22FA74EC00CBC988 /* CTPageController.m in Sources */,
 				324EC62422FA74EC00CBC988 /* CLRequest.m in Sources */,
 				324EC62022FA74EC00CBC988 /* CLModuleManager.m in Sources */,
 				324EC66A22FA74EC00CBC988 /* NSDictionary+Category.m in Sources */,
 				324EC63122FA74EC00CBC988 /* ImagePicker.m in Sources */,
 				324EC4EA22FA74EC00CBC988 /* CTSpreeShopListViewController.m in Sources */,
+				324EC6E122FAAF6600CBC988 /* CTJdpDetailViewController.m in Sources */,
+				324EC6C122FA74EC00CBC988 /* UIScrollView+CTPagePanGes.m in Sources */,
 				324EC6A322FA74EC00CBC988 /* CTView.m in Sources */,
-				324EC60A22FA74EC00CBC988 /* CTWebViewController.m in Sources */,
 				324EC4DD22FA74EC00CBC988 /* CTGoodDetailViewController.m in Sources */,
-				324EC5C222FA74EC00CBC988 /* CTSearchTicketService.m in Sources */,
+				324EC59122FA74EC00CBC988 /* CTMineNavItemView.m in Sources */,
 				324EC5EF22FA74EC00CBC988 /* CTQuestionViewController.m in Sources */,
-				324EC59B22FA74EC00CBC988 /* CTRecListCell.m in Sources */,
+				324EC6DF22FAAF6600CBC988 /* CTJdpIndexModel.m in Sources */,
 				324EC4D922FA74EC00CBC988 /* CTCateSubListView.m in Sources */,
 				324EC62122FA74EC00CBC988 /* CLNetworkConfig.m in Sources */,
 				324EC54922FA74EC00CBC988 /* CTMemberLevelView.m in Sources */,
+				324EC69A22FA74EC00CBC988 /* CTPageController.m in Sources */,
 				324EC50322FA74EC00CBC988 /* CTHomePageController.m in Sources */,
 				324EC57422FA74EC00CBC988 /* CTMyTeamPageController.m in Sources */,
-				324EC66522FA74EC00CBC988 /* DateUtil.m in Sources */,
-				324EC5C922FA74EC00CBC988 /* CTSearchTikcetPasteView.m in Sources */,
 				324EC53A22FA74EC00CBC988 /* CTTabBarModel.m in Sources */,
+				324EC60A22FA74EC00CBC988 /* CTWebViewController.m in Sources */,
+				324EC69422FA74EC00CBC988 /* CTAppManager.m in Sources */,
 				324EC4C122FA74EC00CBC988 /* LMDataResultView.m in Sources */,
+				324EC4AD22FA74EB00CBC988 /* CTGoodIndexVerticalCell.m in Sources */,
+				324EC60422FA74EC00CBC988 /* CTUserInfoView.m in Sources */,
 				324EC5DA22FA74EC00CBC988 /* CTInviteCodeViewController.m in Sources */,
 				324EC5D822FA74EC00CBC988 /* CTShareService.m in Sources */,
 				324EC53E22FA74EC00CBC988 /* CTMemberEquityModel.m in Sources */,
@@ -4661,71 +5016,75 @@
 				324EC52822FA74EC00CBC988 /* CTLoginViewModel.m in Sources */,
 				324EC56022FA74EC00CBC988 /* CTMessageService.m in Sources */,
 				324EC5E522FA74EC00CBC988 /* CTIvCodeImgView.m in Sources */,
-				324EC4AD22FA74EB00CBC988 /* CTGoodIndexVerticalCell.m in Sources */,
+				324EC66522FA74EC00CBC988 /* DateUtil.m in Sources */,
 				324EC4FC22FA74EC00CBC988 /* CTGoodsImgsHeadView.m in Sources */,
-				324EC64E22FA74EC00CBC988 /* UIViewController+PlayerRotation.m in Sources */,
 				324EC50D22FA74EC00CBC988 /* CTHomeNewestHeadView.m in Sources */,
 				324EC5C422FA74EC00CBC988 /* CTSearchTicketViewModel.m in Sources */,
 				324EC65F22FA74EC00CBC988 /* UITextField+Helper.m in Sources */,
+				324EC4E922FA74EC00CBC988 /* CTNineNineListViewController.m in Sources */,
 				324EC49722FA74EB00CBC988 /* CTAlertView.m in Sources */,
 				324EC6AC22FA74EC00CBC988 /* CTNetworkEngine+Common.m in Sources */,
 				324EC57622FA74EC00CBC988 /* CTOrderPageController.m in Sources */,
 				324EC65A22FA74EC00CBC988 /* UIImageView+Helper.m in Sources */,
 				324EC67222FA74EC00CBC988 /* UIImage+Category.m in Sources */,
+				324EC64E22FA74EC00CBC988 /* UIViewController+PlayerRotation.m in Sources */,
 				324EC66122FA74EC00CBC988 /* UITextView+ZWPlaceHolder.m in Sources */,
+				324EC59B22FA74EC00CBC988 /* CTRecListCell.m in Sources */,
 				324EC49A22FA74EB00CBC988 /* CTTbAuthAlertView.m in Sources */,
 				324EC63F22FA74EC00CBC988 /* CLTimerButton.m in Sources */,
-				324EC60B22FA74EC00CBC988 /* CTCashModel.m in Sources */,
+				324EC5C922FA74EC00CBC988 /* CTSearchTikcetPasteView.m in Sources */,
 				324EC56822FA74EC00CBC988 /* CTEarnTrendModel.m in Sources */,
+				324EC75522FAB4D800CBC988 /* CTMrdkRecordCell.m in Sources */,
 				324EC5F122FA74EC00CBC988 /* CTSxyTextListViewController.m in Sources */,
-				324EC4E922FA74EC00CBC988 /* CTNineNineListViewController.m in Sources */,
 				324EC55F22FA74EC00CBC988 /* CTMessageModel.m in Sources */,
-				324EC6AE22FA74EC00CBC988 /* CTNetworkEngine+H5Url.m in Sources */,
 				324EC6B322FA74EC00CBC988 /* CTNetworkEngine+Order.m in Sources */,
 				324EC59922FA74EC00CBC988 /* CTProfitShareView.m in Sources */,
+				324EC60B22FA74EC00CBC988 /* CTCashModel.m in Sources */,
 				324EC56A22FA74EC00CBC988 /* CTMyEarnModel.m in Sources */,
 				324EC51E22FA74EC00CBC988 /* CTGetCodeViewController.m in Sources */,
 				324EC65222FA74EC00CBC988 /* LMWebView.m in Sources */,
 				324EC5EC22FA74EC00CBC988 /* CTQuestionModel.m in Sources */,
+				324EC52322FA74EC00CBC988 /* CTThirdRegController.m in Sources */,
 				324EC4F022FA74EC00CBC988 /* CTGoodsBuyView.m in Sources */,
-				324EC63022FA74EC00CBC988 /* UIScrollView+CLRefresh.m in Sources */,
+				324EC6AE22FA74EC00CBC988 /* CTNetworkEngine+H5Url.m in Sources */,
 				324EC69F22FA74EC00CBC988 /* CTLeftTextButton.m in Sources */,
-				324EC5A822FA74EC00CBC988 /* CTOneGoodListViewController.m in Sources */,
 				324EC5F322FA74EC00CBC988 /* CTToolViewController.m in Sources */,
+				324EC74822FAB4D800CBC988 /* CTMrdkAmountView.m in Sources */,
 				324EC56C22FA74EC00CBC988 /* CTTeamCateModel.m in Sources */,
 				324EC55B22FA74EC00CBC988 /* CTMemberStrategyView.m in Sources */,
-				324EC52322FA74EC00CBC988 /* CTThirdRegController.m in Sources */,
 				324EC6A022FA74EC00CBC988 /* CTPlayerButton.m in Sources */,
+				324EC63022FA74EC00CBC988 /* UIScrollView+CLRefresh.m in Sources */,
 				324EC64A22FA74EC00CBC988 /* ReCarouselView.m in Sources */,
+				324EC49622FA74EB00CBC988 /* CTAlertHelper.m in Sources */,
 				324EC53C22FA74EC00CBC988 /* CTMainController.m in Sources */,
 				324EC4D222FA74EC00CBC988 /* CTSharePopView.m in Sources */,
 				324EC58D22FA74EC00CBC988 /* CTMineEarnView.m in Sources */,
-				324EC67622FA74EC00CBC988 /* NSObject+YYAdd.m in Sources */,
 				324EC5E022FA74EC00CBC988 /* CTInviteCodeButton.m in Sources */,
 				324EC51122FA74EC00CBC988 /* CTHomeSearchBar.m in Sources */,
 				324EC5CD22FA74EC00CBC988 /* CTSetService.m in Sources */,
 				324EC62E22FA74EC00CBC988 /* CLRefreshCurveLayer.m in Sources */,
+				324EC5A822FA74EC00CBC988 /* CTOneGoodListViewController.m in Sources */,
 				324EC66E22FA74EC00CBC988 /* RegalurUtil.m in Sources */,
 				324EC5D422FA74EC00CBC988 /* CTSetLogoutView.m in Sources */,
 				324EC6B622FA74EC00CBC988 /* CTNetworkEngine+Rich.m in Sources */,
 				324EC4B522FA74EB00CBC988 /* CTMainCategoryControl.m in Sources */,
+				324EC67622FA74EC00CBC988 /* NSObject+YYAdd.m in Sources */,
 				324EC54422FA74EC00CBC988 /* CTMemberChoicenessCell.m in Sources */,
-				324EC49622FA74EB00CBC988 /* CTAlertHelper.m in Sources */,
 				324EC5F422FA74EC00CBC988 /* CTQuestionListCell.m in Sources */,
 				324EC4B822FA74EB00CBC988 /* CTMainCategoryItem.m in Sources */,
 				324EC4B322FA74EB00CBC988 /* CTCategoryModel.m in Sources */,
 				324EC57122FA74EC00CBC988 /* CTEarnTrendViewController.m in Sources */,
-				324EC4AF22FA74EB00CBC988 /* CTGoodListCell.m in Sources */,
 				324EC57C22FA74EC00CBC988 /* CTDirectUserView.m in Sources */,
-				324EC4D022FA74EC00CBC988 /* CTSharePopupView.m in Sources */,
-				324EC5D222FA74EC00CBC988 /* CTSetListCell.m in Sources */,
 				324EC54322FA74EC00CBC988 /* CTMemberViewController.m in Sources */,
+				324EC4D022FA74EC00CBC988 /* CTSharePopupView.m in Sources */,
+				324EC52622FA74EC00CBC988 /* CTForgetpsdViewModel.m in Sources */,
 				324EC57322FA74EC00CBC988 /* CTMyCollectListViewController.m in Sources */,
+				324EC4AF22FA74EB00CBC988 /* CTGoodListCell.m in Sources */,
+				324EC74722FAB4D800CBC988 /* CTMrdkViewController.m in Sources */,
 				324EC4F622FA74EC00CBC988 /* CTGoodsDescPreView.m in Sources */,
 				324EC53322FA74EC00CBC988 /* CTLoginView.m in Sources */,
 				324EC5F822FA74EC00CBC988 /* CTSxyTypeView.m in Sources */,
 				324EC66322FA74EC00CBC988 /* UIViewController+Helper.m in Sources */,
-				324EC52622FA74EC00CBC988 /* CTForgetpsdViewModel.m in Sources */,
 				324EC4E322FA74EC00CBC988 /* CTHandpickListCell.m in Sources */,
 				324EC4E722FA74EC00CBC988 /* CTHotSalesNoticeView.m in Sources */,
 				324EC54F22FA74EC00CBC988 /* CTMemberEquityItemView.m in Sources */,
@@ -4737,92 +5096,105 @@
 				324EC61A22FA74EC00CBC988 /* CTWithdrawModifyAlipayView.m in Sources */,
 				324EC5BB22FA74EC00CBC988 /* CTHistoryKeywordHeadView.m in Sources */,
 				324EC66B22FA74EC00CBC988 /* NSDictionary+Log.m in Sources */,
+				324EC74C22FAB4D800CBC988 /* CTMrdkMoneyContainerView.m in Sources */,
 				324EC54622FA74EC00CBC988 /* CTMemberChoicenessView.m in Sources */,
 				324EC5B822FA74EC00CBC988 /* CTSearchViewController.m in Sources */,
+				324EC74622FAB4D800CBC988 /* CTMrdkPaySuccessViewController.m in Sources */,
+				324EC5D222FA74EC00CBC988 /* CTSetListCell.m in Sources */,
+				324EC74122FAB4D800CBC988 /* CTMrdkRecordModel.m in Sources */,
 				324EC6A422FA74EC00CBC988 /* CTAppConfig.m in Sources */,
 				324EC4B422FA74EB00CBC988 /* CTGoodSortView.m in Sources */,
 				324EC56B22FA74EC00CBC988 /* CTOrderModel.m in Sources */,
+				324EC74022FAB4D800CBC988 /* CTMrdkMyScore.m in Sources */,
+				324EC56F22FA74EC00CBC988 /* CTEarnRankPageController.m in Sources */,
 				324EC50922FA74EC00CBC988 /* CTHomeNavBar.m in Sources */,
 				324EC6A822FA74EC00CBC988 /* CTModuleHelper.m in Sources */,
 				324EC53B22FA74EC00CBC988 /* CTMainService.m in Sources */,
 				324EC50022FA74EC00CBC988 /* CTHomeService.m in Sources */,
 				324EC6B922FA74EC00CBC988 /* AliTradeManager.m in Sources */,
-				324EC56F22FA74EC00CBC988 /* CTEarnRankPageController.m in Sources */,
-				324EC5A422FA74EC00CBC988 /* CTPromotionService.m in Sources */,
 				324EC69C22FA74EC00CBC988 /* CTButton.m in Sources */,
 				324EC5AF22FA74EC00CBC988 /* CTProCommentItem.m in Sources */,
 				324EC65022FA74EC00CBC988 /* SelVideoPlayer.m in Sources */,
 				324EC52122FA74EC00CBC988 /* CTRegisterViewController.m in Sources */,
 				324EC64322FA74EC00CBC988 /* QCodeHelper.m in Sources */,
-				324EC5DC22FA74EC00CBC988 /* CTGoodsPreview.m in Sources */,
+				324EC54722FA74EC00CBC988 /* CTMemberHeadView.m in Sources */,
 				324EC56D22FA74EC00CBC988 /* CTMineService.m in Sources */,
+				324EC58422FA74EC00CBC988 /* CTEarnRankNavBar.m in Sources */,
 				324EC5C722FA74EC00CBC988 /* CTSearchTikcetNavView.m in Sources */,
 				324EC69B22FA74EC00CBC988 /* CTViewModel.m in Sources */,
+				324EC5A422FA74EC00CBC988 /* CTPromotionService.m in Sources */,
 				324EC55C22FA74EC00CBC988 /* CTMemberUpgradeContainerView.m in Sources */,
 				324EC4CE22FA74EC00CBC988 /* CTSharePopContainerView.m in Sources */,
 				324EC62C22FA74EC00CBC988 /* CLRefreshCurveFooter.m in Sources */,
 				324EC5E722FA74EC00CBC988 /* CTShareImgsItem.m in Sources */,
-				324EC54722FA74EC00CBC988 /* CTMemberHeadView.m in Sources */,
+				324EC5DC22FA74EC00CBC988 /* CTGoodsPreview.m in Sources */,
 				324EC6B722FA74EC00CBC988 /* CTNetworkEngine.m in Sources */,
+				324EC74D22FAB4D800CBC988 /* CTMrdkMoneyItem.m in Sources */,
 				324EC67922FA74EC00CBC988 /* UIView+YYAdd.m in Sources */,
+				324EC6A222FA74EC00CBC988 /* CTTableView.m in Sources */,
 				324EC61C22FA74EC00CBC988 /* CTWithdrawSuccessView.m in Sources */,
 				324EC66C22FA74EC00CBC988 /* NSString+Category.m in Sources */,
-				324EC58422FA74EC00CBC988 /* CTEarnRankNavBar.m in Sources */,
-				324EC4DC22FA74EC00CBC988 /* CTGoodService.m in Sources */,
+				324EC74422FAB4D800CBC988 /* CTMrdkService.m in Sources */,
 				324EC4EB22FA74EC00CBC988 /* CTSpreeShopPageController.m in Sources */,
 				324EC5B622FA74EC00CBC988 /* CTGoodResultViewController.m in Sources */,
-				324EC6A222FA74EC00CBC988 /* CTTableView.m in Sources */,
 				324EC60C22FA74EC00CBC988 /* CTWithdrawService.m in Sources */,
 				324EC64922FA74EC00CBC988 /* WCQRCodeVC.m in Sources */,
-				324EC5E422FA74EC00CBC988 /* CTIvCodeContainerView.m in Sources */,
 				324EC60222FA74EC00CBC988 /* CTUserInfoItem.m in Sources */,
+				324EC6BD22FA74EC00CBC988 /* UMMessageManager.m in Sources */,
 				324EC49522FA74EB00CBC988 /* CTGoodsViewModel.m in Sources */,
-				324EC66622FA74EC00CBC988 /* FileUtil.m in Sources */,
+				324EC6BC22FA74EC00CBC988 /* MWManager.m in Sources */,
+				324EC6E022FAAF6600CBC988 /* CTJdpService.m in Sources */,
 				324EC67522FA74EC00CBC988 /* CALayer+YYAdd.m in Sources */,
 				324EC5DE22FA74EC00CBC988 /* CTGoodsShareDescView.m in Sources */,
+				324EC5E422FA74EC00CBC988 /* CTIvCodeContainerView.m in Sources */,
 				324EC51C22FA74EC00CBC988 /* CTAlipayBoundViewController.m in Sources */,
-				324EC6BC22FA74EC00CBC988 /* MWManager.m in Sources */,
+				324EC4DC22FA74EC00CBC988 /* CTGoodService.m in Sources */,
+				324EC66622FA74EC00CBC988 /* FileUtil.m in Sources */,
+				324EC76022FAB52200CBC988 /* CTNetworkEngine+Mrdk.m in Sources */,
+				324EC6A722FA74EC00CBC988 /* CTModuleHelper+GoShop.m in Sources */,
 				324EC5FC22FA74EC00CBC988 /* CTUserInfoModel.m in Sources */,
 				324EC60822FA74EC00CBC988 /* CTWebService.m in Sources */,
 				324EC6C022FA74EC00CBC988 /* UIImageView+CTHelper.m in Sources */,
-				324EC6BD22FA74EC00CBC988 /* UMMessageManager.m in Sources */,
 				324EC52F22FA74EC00CBC988 /* CTForgetPsdView.m in Sources */,
 				324EC50522FA74EC00CBC988 /* CTHomeCategoryViewModel.m in Sources */,
 				324EC64C22FA74EC00CBC988 /* UIPageControlManager.m in Sources */,
 				324EC65422FA74EC00CBC988 /* WSDatePickerView.m in Sources */,
+				324EC73F22FAB4D800CBC988 /* CTMrdkIndexModel.m in Sources */,
 				324EC49422FA74EB00CBC988 /* CTGoodsModel.m in Sources */,
 				324EC51B22FA74EC00CBC988 /* CTAgreementViewController.m in Sources */,
 				324EC63622FA74EC00CBC988 /* SDWaitingView.m in Sources */,
 				324EC51522FA74EC00CBC988 /* CTHomeTopView.m in Sources */,
-				324EC54122FA74EC00CBC988 /* CTMemberService.m in Sources */,
 				324EC5E922FA74EC00CBC988 /* CTShareImgsView.m in Sources */,
-				324EC5B122FA74EC00CBC988 /* CTProCommentView.m in Sources */,
-				324EC6A722FA74EC00CBC988 /* CTModuleHelper+GoShop.m in Sources */,
 				324EC5F222FA74EC00CBC988 /* CTSxyViewController.m in Sources */,
 				324EC61F22FA74EC00CBC988 /* CLContainerView.m in Sources */,
+				324EC49E22FA74EB00CBC988 /* CTUpgradePopView.m in Sources */,
 				324EC5E222FA74EC00CBC988 /* CTInviteCodeView.m in Sources */,
 				324EC4A022FA74EB00CBC988 /* CTContentInputView.m in Sources */,
 				324EC69722FA74EC00CBC988 /* CTBaseViewController.m in Sources */,
 				324EC51822FA74EC00CBC988 /* CTSpreeShopItem.m in Sources */,
-				324EC6BE22FA74EC00CBC988 /* UMMobcClickManager.m in Sources */,
-				324EC63C22FA74EC00CBC988 /* CLPayPasswordView.m in Sources */,
-				324EC50722FA74EC00CBC988 /* CTHomeAdvertView.m in Sources */,
 				324EC64822FA74EC00CBC988 /* SGWebView.m in Sources */,
+				324EC75322FAB4D800CBC988 /* CTMrdkPaySuccessView.m in Sources */,
+				324EC6BE22FA74EC00CBC988 /* UMMobcClickManager.m in Sources */,
+				324EC54122FA74EC00CBC988 /* CTMemberService.m in Sources */,
+				324EC4EC22FA74EC00CBC988 /* CTVideoGoodListCell.m in Sources */,
+				324EC63C22FA74EC00CBC988 /* CLPayPasswordView.m in Sources */,
+				324EC5B122FA74EC00CBC988 /* CTProCommentView.m in Sources */,
+				324EC62522FA74EC00CBC988 /* CLTaskRequest.m in Sources */,
+				324EC5A922FA74EC00CBC988 /* CTPromotionPageController.m in Sources */,
+				324EC66422FA74EC00CBC988 /* UIWebView+Category.m in Sources */,
+				324EC6E222FAAF6600CBC988 /* CTJdpListViewController.m in Sources */,
+				324EC50722FA74EC00CBC988 /* CTHomeAdvertView.m in Sources */,
 				324EC5DB22FA74EC00CBC988 /* CTShareViewController.m in Sources */,
 				324EC53522FA74EC00CBC988 /* CTPhoneTextField.m in Sources */,
-				324EC49E22FA74EB00CBC988 /* CTUpgradePopView.m in Sources */,
 				324EC63322FA74EC00CBC988 /* PassWordTool.m in Sources */,
+				324EC58B22FA74EC00CBC988 /* CTMineBalanceView.m in Sources */,
 				324EC6A122FA74EC00CBC988 /* CTSearchTextfield.m in Sources */,
-				324EC4EC22FA74EC00CBC988 /* CTVideoGoodListCell.m in Sources */,
+				324EC50222FA74EC00CBC988 /* CTHomePageController+PopWindow.m in Sources */,
 				324EC57522FA74EC00CBC988 /* CTOrderListViewController.m in Sources */,
 				324EC5CF22FA74EC00CBC988 /* CTSetViewController.m in Sources */,
 				324EC52222FA74EC00CBC988 /* CTSetPasswordViewController.m in Sources */,
-				324EC62522FA74EC00CBC988 /* CLTaskRequest.m in Sources */,
-				324EC66422FA74EC00CBC988 /* UIWebView+Category.m in Sources */,
-				324EC5A922FA74EC00CBC988 /* CTPromotionPageController.m in Sources */,
-				324EC50222FA74EC00CBC988 /* CTHomePageController+PopWindow.m in Sources */,
+				324EC74A22FAB4D800CBC988 /* CTMrdkInfoView.m in Sources */,
 				324EC60F22FA74EC00CBC988 /* CTWithdrawViewModel.m in Sources */,
-				324EC58B22FA74EC00CBC988 /* CTMineBalanceView.m in Sources */,
 				324EC55622FA74EC00CBC988 /* CTMemberPrivilegeItem.m in Sources */,
 				324EC6B822FA74EC00CBC988 /* CTNotificationName.m in Sources */,
 			);
