@@ -11,7 +11,9 @@
 #import "CTActivityModel.h"
 
 @interface CTHomeNavView : UIView
-
+@property (nonatomic, strong) NSString *whx;
+@property (nonatomic, strong) NSString *wodefuk;
+@property (nonatomic, strong) NSString *yapnima;
 @property (nonatomic, copy) NSArray <CTActivityModel *> *activitys;
 
 @property (nonatomic, copy) void (^clickItemBlock)(CTActivityModel *model);

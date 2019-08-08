@@ -9,7 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface CTMineToolView : UIView
-
+@property (nonatomic, strong) UILabel *hhyuan;
+@property (nonatomic, strong) UIButton *logshah;
+@property (nonatomic, strong) NSString *wumento;
+@property (nonatomic, assign) NSInteger xibulaya;
 @property (weak, nonatomic) IBOutlet UIView *teamView;
 @property (weak, nonatomic) IBOutlet UIView *collectView;
 @property (weak, nonatomic) IBOutlet UIView *guideView;

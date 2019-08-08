@@ -116,7 +116,7 @@
 		324EC4FC22FA74EC00CBC988 /* FJGoodsImgsHeadViewfj.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EC0C022FA74EA00CBC988 /* FJGoodsImgsHeadViewfj.m */; };
 		324EC4FD22FA74EC00CBC988 /* FJGoodsImgsHeadViewfj.xib in Resources */ = {isa = PBXBuildFile; fileRef = 324EC0C122FA74EA00CBC988 /* FJGoodsImgsHeadViewfj.xib */; };
 		324EC4FE22FA74EC00CBC988 /* FJGoodsImgsViewfj.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EC0C322FA74EA00CBC988 /* FJGoodsImgsViewfj.m */; };
-		324EC4FF22FA74EC00CBC988 /* CTHomeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EC0C722FA74EA00CBC988 /* CTHomeModel.m */; };
+		324EC4FF22FA74EC00CBC988 /* FJHomeModelfj.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EC0C722FA74EA00CBC988 /* FJHomeModelfj.m */; };
 		324EC50022FA74EC00CBC988 /* CTHomeService.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EC0CA22FA74EA00CBC988 /* CTHomeService.m */; };
 		324EC50122FA74EC00CBC988 /* CTHomeCatoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EC0CD22FA74EA00CBC988 /* CTHomeCatoryViewController.m */; };
 		324EC50222FA74EC00CBC988 /* CTHomePageController+PopWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EC0CF22FA74EA00CBC988 /* CTHomePageController+PopWindow.m */; };
@@ -295,8 +295,6 @@
 		324EC5AF22FA74EC00CBC988 /* CTProCommentItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EC22122FA74EA00CBC988 /* CTProCommentItem.m */; };
 		324EC5B022FA74EC00CBC988 /* CTProCommentItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 324EC22222FA74EA00CBC988 /* CTProCommentItem.xib */; };
 		324EC5B122FA74EC00CBC988 /* CTProCommentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EC22422FA74EA00CBC988 /* CTProCommentView.m */; };
-		324EC5B222FA74EC00CBC988 /* CTRecommendService.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EC22822FA74EA00CBC988 /* CTRecommendService.m */; };
-		324EC5B322FA74EC00CBC988 /* CTRecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EC22B22FA74EA00CBC988 /* CTRecommendViewController.m */; };
 		324EC5B422FA74EC00CBC988 /* CTSearchHotModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EC22F22FA74EA00CBC988 /* CTSearchHotModel.m */; };
 		324EC5B522FA74EC00CBC988 /* CTSearchService.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EC23222FA74EA00CBC988 /* CTSearchService.m */; };
 		324EC5B622FA74EC00CBC988 /* CTGoodResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EC23522FA74EA00CBC988 /* CTGoodResultViewController.m */; };
@@ -809,8 +807,8 @@
 		324EC0C122FA74EA00CBC988 /* FJGoodsImgsHeadViewfj.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FJGoodsImgsHeadViewfj.xib; sourceTree = "<group>"; };
 		324EC0C222FA74EA00CBC988 /* FJGoodsImgsViewfj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FJGoodsImgsViewfj.h; sourceTree = "<group>"; };
 		324EC0C322FA74EA00CBC988 /* FJGoodsImgsViewfj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FJGoodsImgsViewfj.m; sourceTree = "<group>"; };
-		324EC0C622FA74EA00CBC988 /* CTHomeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTHomeModel.h; sourceTree = "<group>"; };
-		324EC0C722FA74EA00CBC988 /* CTHomeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTHomeModel.m; sourceTree = "<group>"; };
+		324EC0C622FA74EA00CBC988 /* FJHomeModelfj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FJHomeModelfj.h; sourceTree = "<group>"; };
+		324EC0C722FA74EA00CBC988 /* FJHomeModelfj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FJHomeModelfj.m; sourceTree = "<group>"; };
 		324EC0C922FA74EA00CBC988 /* CTHomeService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTHomeService.h; sourceTree = "<group>"; };
 		324EC0CA22FA74EA00CBC988 /* CTHomeService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTHomeService.m; sourceTree = "<group>"; };
 		324EC0CC22FA74EA00CBC988 /* CTHomeCatoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTHomeCatoryViewController.h; sourceTree = "<group>"; };
@@ -1120,10 +1118,6 @@
 		324EC22222FA74EA00CBC988 /* CTProCommentItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CTProCommentItem.xib; sourceTree = "<group>"; };
 		324EC22322FA74EA00CBC988 /* CTProCommentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTProCommentView.h; sourceTree = "<group>"; };
 		324EC22422FA74EA00CBC988 /* CTProCommentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTProCommentView.m; sourceTree = "<group>"; };
-		324EC22722FA74EA00CBC988 /* CTRecommendService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTRecommendService.h; sourceTree = "<group>"; };
-		324EC22822FA74EA00CBC988 /* CTRecommendService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTRecommendService.m; sourceTree = "<group>"; };
-		324EC22A22FA74EA00CBC988 /* CTRecommendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTRecommendViewController.h; sourceTree = "<group>"; };
-		324EC22B22FA74EA00CBC988 /* CTRecommendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTRecommendViewController.m; sourceTree = "<group>"; };
 		324EC22E22FA74EA00CBC988 /* CTSearchHotModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTSearchHotModel.h; sourceTree = "<group>"; };
 		324EC22F22FA74EA00CBC988 /* CTSearchHotModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTSearchHotModel.m; sourceTree = "<group>"; };
 		324EC23122FA74EA00CBC988 /* CTSearchService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTSearchService.h; sourceTree = "<group>"; };
@@ -2036,7 +2030,6 @@
 				324EC18722FA74EA00CBC988 /* Message */,
 				324EC19A22FA74EA00CBC988 /* Mine */,
 				324EC20722FA74EA00CBC988 /* Promotion */,
-				324EC22522FA74EA00CBC988 /* Recommend */,
 				324EC22C22FA74EA00CBC988 /* Search */,
 				324EC24922FA74EA00CBC988 /* SearchTicket */,
 				324EC26022FA74EA00CBC988 /* Set */,
@@ -2265,8 +2258,8 @@
 		324EC0C522FA74EA00CBC988 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				324EC0C622FA74EA00CBC988 /* CTHomeModel.h */,
-				324EC0C722FA74EA00CBC988 /* CTHomeModel.m */,
+				324EC0C622FA74EA00CBC988 /* FJHomeModelfj.h */,
+				324EC0C722FA74EA00CBC988 /* FJHomeModelfj.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -2888,33 +2881,6 @@
 				324EC22422FA74EA00CBC988 /* CTProCommentView.m */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		324EC22522FA74EA00CBC988 /* Recommend */ = {
-			isa = PBXGroup;
-			children = (
-				324EC22622FA74EA00CBC988 /* Service */,
-				324EC22922FA74EA00CBC988 /* ViewControllers */,
-			);
-			path = Recommend;
-			sourceTree = "<group>";
-		};
-		324EC22622FA74EA00CBC988 /* Service */ = {
-			isa = PBXGroup;
-			children = (
-				324EC22722FA74EA00CBC988 /* CTRecommendService.h */,
-				324EC22822FA74EA00CBC988 /* CTRecommendService.m */,
-			);
-			path = Service;
-			sourceTree = "<group>";
-		};
-		324EC22922FA74EA00CBC988 /* ViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-				324EC22A22FA74EA00CBC988 /* CTRecommendViewController.h */,
-				324EC22B22FA74EA00CBC988 /* CTRecommendViewController.m */,
-			);
-			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		324EC22C22FA74EA00CBC988 /* Search */ = {
@@ -4763,7 +4729,6 @@
 				324EC67722FA74EC00CBC988 /* NSObject+YYModels.m in Sources */,
 				324EC49C22FA74EB00CBC988 /* CTTbAuthFailAlertView.m in Sources */,
 				324EC51622FA74EC00CBC988 /* CTSalesItem.m in Sources */,
-				324EC5B222FA74EC00CBC988 /* CTRecommendService.m in Sources */,
 				324EC5B522FA74EC00CBC988 /* CTSearchService.m in Sources */,
 				324EC4D522FA74EC00CBC988 /* CTCateMainListView.m in Sources */,
 				324EC65622FA74EC00CBC988 /* MBProgressHUD+Helper.m in Sources */,
@@ -4911,12 +4876,11 @@
 				324EC4E222FA74EC00CBC988 /* FJHandpickDetailViewControllerfj.m in Sources */,
 				324EC6E622FAAF6600CBC988 /* CTJdpListCell.m in Sources */,
 				324EC54222FA74EC00CBC988 /* CTMemberEquityController.m in Sources */,
-				324EC5B322FA74EC00CBC988 /* CTRecommendViewController.m in Sources */,
 				324EC69622FA74EC00CBC988 /* CTBaseListViewController.m in Sources */,
 				324EC66022FA74EC00CBC988 /* UITextView+Helper.m in Sources */,
 				324EC55422FA74EC00CBC988 /* CTMemberEquityTypeView.m in Sources */,
 				324EC69822FA74EC00CBC988 /* CTNavigationController.m in Sources */,
-				324EC4FF22FA74EC00CBC988 /* CTHomeModel.m in Sources */,
+				324EC4FF22FA74EC00CBC988 /* FJHomeModelfj.m in Sources */,
 				324EC54C22FA74EC00CBC988 /* CTEquitySegmentedControl.m in Sources */,
 				324EC4DB22FA74EC00CBC988 /* FJTimeBuyCateModelfj.m in Sources */,
 				324EC5FD22FA74EC00CBC988 /* CTUserInfoService.m in Sources */,

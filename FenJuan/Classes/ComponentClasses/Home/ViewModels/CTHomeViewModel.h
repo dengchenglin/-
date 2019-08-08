@@ -10,13 +10,13 @@
 
 #import "CTCategoryModel.h"
 
-#import "CTHomeModel.h"
+#import "FJHomeModelfj.h"
 
 #import "CTGoodsViewModel.h"
 
 @interface CTHomeViewModel : CTViewModel
 
-@property (nonatomic, strong) CTHomeModel *model;
+@property (nonatomic, strong) FJHomeModelfj *model;
 
 @property (nonatomic, copy) NSArray <CTGoodsViewModel *> *now_goods;
 

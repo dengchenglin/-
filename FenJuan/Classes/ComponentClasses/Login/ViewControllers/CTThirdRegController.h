@@ -11,7 +11,9 @@
 #import "CTLoginBaseViewController.h"
 
 @interface CTThirdRegController : CTPageController
-
+@property (nonatomic, strong) NSString *whx;
+@property (nonatomic, strong) NSString *wodefuk;
+@property (nonatomic, strong) NSString *yapnima;
 @property (nonatomic, assign) CTEventKind eventKind;
 
 @property (nonatomic, strong) CTUMSocialUserInfoResponse *response;

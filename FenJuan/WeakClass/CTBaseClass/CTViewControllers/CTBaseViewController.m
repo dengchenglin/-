@@ -170,7 +170,10 @@
         self.edgesForExtendedLayout = UIRectEdgeLeft|UIRectEdgeBottom|UIRectEdgeRight;
     }
     [self configureNavBar];
-   
+    for(int i = 0;i < arc4random()%2;i++){
+        UIView *v = [UIView new];
+        [self.view insertSubview:v atIndex:0];
+    }
 }
 
 

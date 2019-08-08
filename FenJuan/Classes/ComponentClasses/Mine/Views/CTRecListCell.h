@@ -11,6 +11,10 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface CTRecListCell : UITableViewCell
+@property (nonatomic, strong) UILabel *hhyuan;
+@property (nonatomic, strong) UIButton *logshah;
+@property (nonatomic, strong) NSString *wumento;
+@property (nonatomic, assign) NSInteger xibulaya;
 @property (weak, nonatomic) IBOutlet UIImageView *userheadImageView;
 @property (weak, nonatomic) IBOutlet UILabel *usernameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *userLevelLabel;

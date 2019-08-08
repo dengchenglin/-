@@ -29,4 +29,9 @@
 @property (nonatomic, strong) CTEarnInfo *last_month;
 @property (nonatomic, copy) NSString *trend_chart_url;
 
+
+@property (nonatomic, strong) UILabel *hhyuan;
+@property (nonatomic, strong) UIButton *logshah;
+@property (nonatomic, strong) NSString *wumento;
+@property (nonatomic, assign) NSInteger xibulaya;
 @end

@@ -11,6 +11,10 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface CTMessageModel : NSObject
+@property (nonatomic, strong) NSString *hhwhy;
+@property (nonatomic, strong) NSString *nimazale;
+@property (nonatomic, strong) NSString *commonpp;
+@property (nonatomic, assign) NSInteger wodekahao;
 @property (nonatomic, copy) NSString *title;
 @property (nonatomic, copy) NSString *Id;
 @property (nonatomic, copy) NSString *intro;

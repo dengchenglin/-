@@ -9,6 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface CTMineHeadView : UIView
+@property (nonatomic, strong) UILabel *hhyuan;
+@property (nonatomic, strong) UIButton *logshah;
+@property (nonatomic, strong) NSString *wumento;
+@property (nonatomic, assign) NSInteger xibulaya;
 @property (weak, nonatomic) IBOutlet UIImageView *iconImageView;
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *jobLabel;

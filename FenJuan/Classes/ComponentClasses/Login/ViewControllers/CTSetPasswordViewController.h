@@ -9,7 +9,9 @@
 #import "CTLoginBaseViewController.h"
 
 @interface CTSetPasswordViewController : CTLoginBaseViewController
-
+@property (nonatomic, strong) NSString *whx;
+@property (nonatomic, strong) NSString *wodefuk;
+@property (nonatomic, strong) NSString *yapnima;
 @property (nonatomic, copy) NSString *mobile;
 
 @property (nonatomic, assign) CTEventKind eventKind;

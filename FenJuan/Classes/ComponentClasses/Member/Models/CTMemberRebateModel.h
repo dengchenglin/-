@@ -11,4 +11,8 @@
 @interface CTMemberRebateModel:NSObject
 @property (nonatomic, copy) NSString *fx_level;
 @property (nonatomic, copy) NSString *fx_scale;
+@property (nonatomic, strong) NSString *hhwhy;
+@property (nonatomic, strong) NSString *nimazale;
+@property (nonatomic, strong) NSString *commonpp;
+@property (nonatomic, assign) NSInteger wodekahao;
 @end

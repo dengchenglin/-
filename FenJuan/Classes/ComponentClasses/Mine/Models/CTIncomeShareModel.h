@@ -21,6 +21,11 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) NSString *txt4;
 @property (nonatomic, copy) NSArray <NSString *> *imgs;
 @property (nonatomic, copy) NSString *iv_code_img;
+
+@property (nonatomic, strong) UILabel *hhyuan;
+@property (nonatomic, strong) UIButton *logshah;
+@property (nonatomic, strong) NSString *wumento;
+@property (nonatomic, assign) NSInteger xibulaya;
 @end
 
 NS_ASSUME_NONNULL_END

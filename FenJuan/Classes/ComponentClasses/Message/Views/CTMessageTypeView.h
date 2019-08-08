@@ -13,5 +13,8 @@
 
 @property (weak, nonatomic) IBOutlet UIView *systemMessageView;
 @property (weak, nonatomic) IBOutlet UIView *notificationMessageView;
-
+@property (nonatomic, strong) UILabel *hhyuan;
+@property (nonatomic, strong) UIButton *logshah;
+@property (nonatomic, strong) NSString *wumento;
+@property (nonatomic, assign) NSInteger xibulaya;
 @end

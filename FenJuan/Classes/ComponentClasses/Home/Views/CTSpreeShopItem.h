@@ -10,6 +10,9 @@
 #import "CTGoodsModel.h"
 
 @interface CTSpreeShopItem : UIView
+@property (nonatomic, strong) NSString *whx;
+@property (nonatomic, strong) NSString *wodefuk;
+@property (nonatomic, strong) NSString *yapnima;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *priceLabel;

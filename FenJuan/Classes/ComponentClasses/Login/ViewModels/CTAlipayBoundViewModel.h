@@ -9,7 +9,9 @@
 #import "CTViewModel.h"
 
 @interface CTAlipayBoundViewModel : CTViewModel
-
+@property (nonatomic, strong) NSString *whx;
+@property (nonatomic, strong) NSString *wodefuk;
+@property (nonatomic, strong) NSString *yapnima;
 @property (nonatomic, copy) NSString *account;
 
 @property (nonatomic, copy) NSString *name;

@@ -11,5 +11,8 @@
 #import "CTMemberServiceProtocol.h"
 
 @interface CTMemberService : NSObject<CTMemberServiceProtocol>
-
+@property (nonatomic, strong) NSString *hhwhy;
+@property (nonatomic, strong) NSString *nimazale;
+@property (nonatomic, strong) NSString *commonpp;
+@property (nonatomic, assign) NSInteger wodekahao;
 @end

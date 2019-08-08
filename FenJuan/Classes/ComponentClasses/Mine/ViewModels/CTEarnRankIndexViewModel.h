@@ -9,6 +9,10 @@
 #import "CTViewModel.h"
 
 @interface CTEarnRankIndexViewModel : CTViewModel
+@property (nonatomic, strong) UILabel *hhyuan;
+@property (nonatomic, strong) UIButton *logshah;
+@property (nonatomic, strong) NSString *wumento;
+@property (nonatomic, assign) NSInteger xibulaya;
 @property (nonatomic, copy) NSString *uid;
 @property (nonatomic, copy) NSString *rank;
 @property (nonatomic, copy) UIImage *rankImage;

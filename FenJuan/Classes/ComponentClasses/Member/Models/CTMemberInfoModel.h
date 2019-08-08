@@ -12,6 +12,10 @@
 @property (nonatomic, copy) NSString *Id;
 @property (nonatomic, copy) NSString *img;
 @property (nonatomic, copy) NSString *name;
+@property (nonatomic, strong) NSString *hhwhy;
+@property (nonatomic, strong) NSString *nimazale;
+@property (nonatomic, strong) NSString *commonpp;
+@property (nonatomic, assign) NSInteger wodekahao;
 @end
 
 @interface CTMemberInfoModel : NSObject

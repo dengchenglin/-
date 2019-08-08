@@ -51,7 +51,7 @@
     id service = self.moduleServices[moduleServiceProtocolName];
     if(!service){
         NSLog(@"%@",[NSString stringWithFormat:@"%@ does not been registed", moduleServiceProtocolName]);
-        @throw [NSException exceptionWithName:NSInternalInconsistencyException reason:nil userInfo:nil];
+        //@throw [NSException exceptionWithName:NSInternalInconsistencyException reason:nil userInfo:nil];
     }
     return service;
 }

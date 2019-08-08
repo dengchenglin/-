@@ -9,6 +9,11 @@
 #import <UIKit/UIKit.h>
 
 @interface CTHistoryKeywordCell : UICollectionViewCell
+@property (nonatomic, assign) NSInteger nishuocuole;
+@property (nonatomic, strong) UIImageView *sharePotifter;
+@property (nonatomic, strong) UIButton *hepercf;
+@property (nonatomic, strong) UIView *haodade;
+
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 
 @end

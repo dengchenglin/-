@@ -7,7 +7,7 @@
 //  Copyright © 2019年 Danke. All rights reserved.
 //
 
-#import "CTHomeModel.h"
+#import "FJHomeModelfj.h"
 
 @implementation CTHomeCurTimeBuyModel
 + (NSDictionary *)modelCustomPropertyMapper{
@@ -24,7 +24,7 @@
 }
 @end
 
-@implementation CTHomeModel
+@implementation FJHomeModelfj
 
 + (NSDictionary *)modelContainerPropertyGenericClass{
     return @{@"cate":CTCategoryModel.class,@"activity":CTActivityModel.class,@"activity_banner":CTActivityModel.class,@"advs":CTActivityModel.class,@"cur_time_buy":CTHomeCurTimeBuyModel.class,@"now_goods":CTGoodsModel.class,@"hot_goods":CTHomeHotGoodsModel.class};

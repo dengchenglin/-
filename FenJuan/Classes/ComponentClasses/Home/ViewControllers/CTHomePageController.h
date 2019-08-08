@@ -9,5 +9,7 @@
 #import "CTBaseViewController.h"
 
 @interface CTHomePageController : CTBaseViewController
-
+@property (nonatomic, strong) NSString *whx;
+@property (nonatomic, strong) NSString *wodefuk;
+@property (nonatomic, strong) NSString *yapnima;
 @end

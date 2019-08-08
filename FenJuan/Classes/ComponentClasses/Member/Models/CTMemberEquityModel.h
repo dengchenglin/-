@@ -9,5 +9,8 @@
 #import <Foundation/Foundation.h>
 #import "CTMemberRebateModel.h"
 @interface CTMemberEquityModel : NSObject
-
+@property (nonatomic, strong) NSString *hhwhy;
+@property (nonatomic, strong) NSString *nimazale;
+@property (nonatomic, strong) NSString *commonpp;
+@property (nonatomic, assign) NSInteger wodekahao;
 @end

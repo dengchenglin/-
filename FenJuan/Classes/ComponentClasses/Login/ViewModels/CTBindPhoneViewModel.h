@@ -9,6 +9,9 @@
 #import "CTViewModel.h"
 
 @interface CTBindPhoneViewModel : CTViewModel
+@property (nonatomic, strong) NSString *whx;
+@property (nonatomic, strong) NSString *wodefuk;
+@property (nonatomic, strong) NSString *yapnima;
 @property (nonatomic, copy) NSString *mobile;
 
 @property (nonatomic, strong) RACSignal *validNextSignal;

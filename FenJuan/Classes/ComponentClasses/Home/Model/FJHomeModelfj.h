@@ -31,7 +31,7 @@
 @property (nonatomic, copy) NSArray <CTGoodsModel *> *goods;
 @end
 
-@interface CTHomeModel : NSObject
+@interface FJHomeModelfj : NSObject
 //一级分类
 @property (nonatomic, copy) NSArray <CTCategoryModel *> *cate;
 //活动数据

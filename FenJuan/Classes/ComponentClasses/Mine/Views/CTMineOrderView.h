@@ -9,6 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface CTMineOrderView : UIView
+@property (nonatomic, strong) UILabel *hhyuan;
+@property (nonatomic, strong) UIButton *logshah;
+@property (nonatomic, strong) NSString *wumento;
+@property (nonatomic, assign) NSInteger xibulaya;
 @property (weak, nonatomic) IBOutlet UIView *lookMoreView;
 @property (weak, nonatomic) IBOutlet UIView *payedView;
 @property (weak, nonatomic) IBOutlet UIView *calculatedView;

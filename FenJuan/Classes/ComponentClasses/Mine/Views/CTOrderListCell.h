@@ -9,6 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "CTOrderViewModel.h"
 @interface CTOrderListCell : UITableViewCell
+@property (nonatomic, strong) UILabel *hhyuan;
+@property (nonatomic, strong) UIButton *logshah;
+@property (nonatomic, strong) NSString *wumento;
+@property (nonatomic, assign) NSInteger xibulaya;
 @property (weak, nonatomic) IBOutlet UILabel *orderLabel;
 @property (weak, nonatomic) IBOutlet UILabel *statusLabel;
 @property (weak, nonatomic) IBOutlet UILabel *goodTitleLabel;

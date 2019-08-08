@@ -8,10 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-#import "CTHomeModel.h"
+#import "FJHomeModelfj.h"
 
 @interface CTHomeSpreeShopView : UIView
-
+@property (nonatomic, strong) NSString *whx;
+@property (nonatomic, strong) NSString *wodefuk;
+@property (nonatomic, strong) NSString *yapnima;
 @property (weak, nonatomic) IBOutlet UIView *headView;
 
 @property (weak, nonatomic) IBOutlet UIView *goodsView;

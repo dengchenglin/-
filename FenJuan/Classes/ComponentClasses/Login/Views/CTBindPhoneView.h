@@ -11,7 +11,9 @@
 #import "CTCanValidButton.h"
 #import "CTPhoneTextField.h"
 @interface CTBindPhoneView : UIView
-
+@property (nonatomic, strong) NSString *whx;
+@property (nonatomic, strong) NSString *wodefuk;
+@property (nonatomic, strong) NSString *yapnima;
 @property (weak, nonatomic) IBOutlet CTPhoneTextField *mobileTfd;
 @property (weak, nonatomic) IBOutlet CTCanValidButton *nextButton;
 

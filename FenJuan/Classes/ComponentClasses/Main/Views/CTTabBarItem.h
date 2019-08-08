@@ -9,7 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface CTTabBarItem : UIView
-
+@property (nonatomic, strong) NSString *hhwhy;
+@property (nonatomic, strong) NSString *nimazale;
+@property (nonatomic, strong) NSString *hehe;
+@property (nonatomic, assign) NSInteger xixi;
 @property (nonatomic, copy)   UIImage *image;
 
 @property (nonatomic, copy)   UIImage *selectedImage;

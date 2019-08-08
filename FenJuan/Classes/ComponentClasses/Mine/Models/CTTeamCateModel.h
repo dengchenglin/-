@@ -12,6 +12,11 @@
 @property (nonatomic, copy) NSString *count;
 @property (nonatomic, copy) NSString *cate_id;
 @property (nonatomic, copy) NSString *txt;
+
+@property (nonatomic, strong) UILabel *hhyuan;
+@property (nonatomic, strong) UIButton *logshah;
+@property (nonatomic, strong) NSString *wumento;
+@property (nonatomic, assign) NSInteger xibulaya;
 @end
 
 @interface CTTeamCateModel : NSObject

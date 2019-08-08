@@ -15,6 +15,17 @@
 #import "CTViewModel.h"
 
 @interface CTBaseListViewController : CTBaseViewController<UITableViewDataSource,UITableViewDelegate,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
+@property (nonatomic, assign) NSInteger hx1;
+@property (nonatomic, assign) NSInteger hx2;
+@property (nonatomic, copy) NSString *hx3;
+@property (nonatomic, copy) NSString *hx4;
+@property (nonatomic, copy) NSString *hx5;
+@property (nonatomic, copy) NSString *hx6;
+@property (nonatomic, copy) NSString *hx7;
+@property (nonatomic, copy) NSString *hx8;
+@property (nonatomic, copy) NSString *hx9;
+@property (nonatomic, copy) NSString *hx10;
+
 
 @property (nonatomic, strong) CTTableView *tableView;
 

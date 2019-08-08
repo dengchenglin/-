@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-#import "CTHomeModel.h"
+#import "FJHomeModelfj.h"
 
 @interface CTHomeSalesView : UIView
 @property (weak, nonatomic) IBOutlet UIView *titleheadView;
@@ -18,5 +18,7 @@
 @property (nonatomic, copy) void (^clickItemBlock)(NSInteger index);
 
 @property (nonatomic, strong) CTHomeHotGoodsModel *model;
-
+@property (nonatomic, strong) NSString *whx;
+@property (nonatomic, strong) NSString *wodefuk;
+@property (nonatomic, strong) NSString *yapnima;
 @end

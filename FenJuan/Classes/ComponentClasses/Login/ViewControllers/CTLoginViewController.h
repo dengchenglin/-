@@ -9,7 +9,9 @@
 #import "CTLoginBaseViewController.h"
 
 @interface CTLoginViewController : CTLoginBaseViewController
-
+@property (nonatomic, strong) NSString *whx;
+@property (nonatomic, strong) NSString *wodefuk;
+@property (nonatomic, strong) NSString *yapnima;
 + (void)showLoginFormViewController:(UIViewController *)viewController callback:(void(^)(BOOL logined))callback;
 
 @end

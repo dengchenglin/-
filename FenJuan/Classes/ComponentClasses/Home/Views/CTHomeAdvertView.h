@@ -15,5 +15,7 @@
 @property (nonatomic, strong) UIImageView *imageView;
 
 @property (nonatomic, strong) CTActivityModel *model;
-
+@property (nonatomic, strong) NSString *whx;
+@property (nonatomic, strong) NSString *wodefuk;
+@property (nonatomic, strong) NSString *yapnima;
 @end

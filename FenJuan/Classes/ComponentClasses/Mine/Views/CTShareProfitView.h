@@ -11,6 +11,11 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface CTShareProfitView : UIView
+@property (nonatomic, assign) NSInteger nishuocuole;
+@property (nonatomic, strong) UIImageView *sharePotifter;
+@property (nonatomic, strong) UIButton *hepercf;
+@property (nonatomic, strong) UIView *haodade;
+
 @property (weak, nonatomic) IBOutlet UIImageView *backgroundImageView;
 
 @property (weak, nonatomic) IBOutlet UIImageView *userheadImageView;

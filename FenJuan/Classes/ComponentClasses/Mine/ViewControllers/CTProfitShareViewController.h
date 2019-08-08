@@ -10,7 +10,10 @@
 #import "CTMyEarnModel.h"
 
 @interface CTProfitShareViewController : CTBaseViewController
-
+@property (nonatomic, strong) UILabel *hhyuan;
+@property (nonatomic, strong) UIButton *logshah;
+@property (nonatomic, strong) NSString *wumento;
+@property (nonatomic, assign) NSInteger xibulaya;
 @property (nonatomic, strong) CTMyEarnModel *model;
 
 @end

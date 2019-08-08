@@ -18,6 +18,12 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 @interface CTOneGoodIndexCell : UITableViewCell
+@property (nonatomic, assign) NSInteger nishuocuole;
+@property (nonatomic, strong) UIImageView *sharePotifter;
+@property (nonatomic, strong) UIButton *hepercf;
+@property (nonatomic, strong) UIView *haodade;
+
+
 @property (weak, nonatomic) IBOutlet UIImageView *userLogo;
 @property (weak, nonatomic) IBOutlet UILabel *usernameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *addTimeLabel;

@@ -19,6 +19,10 @@
 #import "CTNetworkEngine+Index.h"
 
 @interface CTHomeCatoryViewController ()<UITableViewDelegate,UITableViewDataSource>
+@property (nonatomic, strong) NSString *whx;
+@property (nonatomic, strong) NSString *wodefuk;
+@property (nonatomic, strong) NSString *yapnima;
+
 
 @property (nonatomic, strong) CTTableView *tableView;
 

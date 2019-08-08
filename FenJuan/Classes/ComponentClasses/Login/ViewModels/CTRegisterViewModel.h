@@ -9,7 +9,9 @@
 #import "CTViewModel.h"
 
 @interface CTRegisterViewModel : CTViewModel
-
+@property (nonatomic, strong) NSString *whx;
+@property (nonatomic, strong) NSString *wodefuk;
+@property (nonatomic, strong) NSString *yapnima;
 @property (nonatomic, copy) NSString *inviteCode;
 
 @property (nonatomic, copy) NSString *mobile;

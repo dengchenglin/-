@@ -17,6 +17,10 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 @interface CTXsjcCell : UITableViewCell
+@property (nonatomic, assign) NSInteger howmuch;
+@property (nonatomic, strong) UIImageView *sharePotifter;
+@property (nonatomic, strong) UIButton *closegelaozi;
+@property (nonatomic, copy) NSString *numberonen;
 @property (weak, nonatomic) IBOutlet UIImageView *previewImageView;
 @property (weak, nonatomic) IBOutlet CTPlayerButton *playButton;
 @property (nonatomic, strong) CTSxyModel *model;

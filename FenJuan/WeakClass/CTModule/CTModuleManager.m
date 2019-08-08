@@ -19,7 +19,6 @@
              @"ct_search_ticket":[self searchTicketService],
              @"ct_mine":[self mineService],
              @"ct_member":[self memberService],
-             @"ct_recommend":[self recommendService],
              @"ct_share":[self shareService],
              @"ct_message":[self shareService],
              @"ct_search":[self searchService],

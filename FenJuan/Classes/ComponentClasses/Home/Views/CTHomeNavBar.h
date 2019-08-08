@@ -13,5 +13,7 @@
 @property (weak, nonatomic) IBOutlet UIView *sqglView;
 
 @property (weak, nonatomic) IBOutlet UIButton *scanButton;
-
+@property (nonatomic, strong) NSString *whx;
+@property (nonatomic, strong) NSString *wodefuk;
+@property (nonatomic, strong) NSString *yapnima;
 @end

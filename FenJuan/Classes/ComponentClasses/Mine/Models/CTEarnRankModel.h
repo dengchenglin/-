@@ -20,4 +20,9 @@
 @property (nonatomic, copy) NSArray <CTEarnRankIndexModel *> *month;
 @property (nonatomic, copy) NSArray <CTEarnRankIndexModel *> *last_month;
 @property (nonatomic, copy) NSArray <CTEarnRankIndexModel *> *all;
+
+@property (nonatomic, strong) UILabel *hhyuan;
+@property (nonatomic, strong) UIButton *logshah;
+@property (nonatomic, strong) NSString *wumento;
+@property (nonatomic, assign) NSInteger xibulaya;
 @end

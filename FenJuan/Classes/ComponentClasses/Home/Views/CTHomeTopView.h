@@ -15,7 +15,9 @@
 #import "CTMainCategoryControl.h"
 
 @interface CTHomeTopView : UIView
-
+@property (nonatomic, strong) NSString *whx;
+@property (nonatomic, strong) NSString *wodefuk;
+@property (nonatomic, strong) NSString *yapnima;
 @property (nonatomic, strong) CTHomeNavBar *navBar;
 
 @property (nonatomic, strong) CTHomeSearchBar *searchBar;

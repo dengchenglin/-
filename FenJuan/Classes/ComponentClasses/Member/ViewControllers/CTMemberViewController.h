@@ -9,5 +9,8 @@
 #import "CTBaseViewController.h"
 
 @interface CTMemberViewController : CTBaseViewController
-
+@property (nonatomic, strong) NSString *hhwhy;
+@property (nonatomic, strong) NSString *nimazale;
+@property (nonatomic, strong) NSString *commonpp;
+@property (nonatomic, assign) NSInteger wodekahao;
 @end

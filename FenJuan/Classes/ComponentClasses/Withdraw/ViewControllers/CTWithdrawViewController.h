@@ -9,5 +9,8 @@
 #import "CTBaseViewController.h"
 
 @interface CTWithdrawViewController : CTBaseViewController
-
+@property (nonatomic, assign) NSInteger howmuch;
+@property (nonatomic, strong) UIImageView *sharePotifter;
+@property (nonatomic, strong) UIButton *closegelaozi;
+@property (nonatomic, copy) NSString *numberonen;
 @end

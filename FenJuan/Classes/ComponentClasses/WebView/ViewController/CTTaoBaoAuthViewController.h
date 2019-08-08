@@ -9,7 +9,10 @@
 #import "CTBaseViewController.h"
 
 @interface CTTaoBaoAuthViewController : CTBaseViewController
-
+@property (nonatomic, assign) NSInteger howmuch;
+@property (nonatomic, strong) UIImageView *sharePotifter;
+@property (nonatomic, strong) UIButton *closegelaozi;
+@property (nonatomic, copy) NSString *numberonen;
 @property (nonatomic, copy) NSString *url;
 
 @property (nonatomic, copy) void(^callback)(id data);

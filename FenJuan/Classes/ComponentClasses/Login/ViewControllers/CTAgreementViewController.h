@@ -9,5 +9,7 @@
 #import "CTLoginBaseViewController.h"
 
 @interface CTAgreementViewController : CTLoginBaseViewController
-
+@property (nonatomic, strong) NSString *whx;
+@property (nonatomic, strong) NSString *wodefuk;
+@property (nonatomic, strong) NSString *yapnima;
 @end

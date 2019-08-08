@@ -21,6 +21,12 @@ NS_ASSUME_NONNULL_BEGIN
 #define CTProGoodIndexCommentSpace           12
 #define CTProGoodIndexCommentWidth           (SCREEN_WIDTH - 30)
 @interface CTProGoodIndexViewModel : CTViewModel
+@property (nonatomic, assign) NSInteger nishuocuole;
+@property (nonatomic, strong) UIImageView *sharePotifter;
+@property (nonatomic, strong) UIButton *hepercf;
+@property (nonatomic, strong) UIView *haodade;
+
+
 @property (nonatomic, strong) CTGoodsModel *model;
 @property (nonatomic, copy) NSAttributedString *content;
 @property (nonatomic, assign) CGFloat contentHeight;

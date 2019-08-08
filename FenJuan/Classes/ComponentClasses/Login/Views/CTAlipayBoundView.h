@@ -9,6 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "CTCanValidButton.h"
 @interface CTAlipayBoundView : UIView
+@property (nonatomic, strong) NSString *whx;
+@property (nonatomic, strong) NSString *wodefuk;
+@property (nonatomic, strong) NSString *yapnima;
 @property (weak, nonatomic) IBOutlet UITextField *accountTfd;
 @property (weak, nonatomic) IBOutlet UITextField *nameTfd;
 @property (weak, nonatomic) IBOutlet CTCanValidButton *boundButton;

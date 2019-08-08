@@ -10,6 +10,10 @@
 
 #import "CTQuestionModel.h"
 @interface CTQuestionListCell : UITableViewCell
+@property (nonatomic, assign) NSInteger howmuch;
+@property (nonatomic, strong) UIImageView *sharePotifter;
+@property (nonatomic, strong) UIButton *closegelaozi;
+@property (nonatomic, copy) NSString *numberonen;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (nonatomic, strong) CTQuestionModel *model;
 @end

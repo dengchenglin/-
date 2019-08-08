@@ -9,5 +9,7 @@
 #import "CLTextField.h"
 
 @interface CTPhoneTextField : CLTextField
-
+@property (nonatomic, strong) NSString *whx;
+@property (nonatomic, strong) NSString *wodefuk;
+@property (nonatomic, strong) NSString *yapnima;
 @end

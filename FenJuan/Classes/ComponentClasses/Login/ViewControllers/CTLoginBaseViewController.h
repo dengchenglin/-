@@ -30,5 +30,7 @@ CTSendCodeType GetSendCodeStrForEventKind(CTEventKind eventKind);
 CTEventKind GetEventKindWithLoginType(CTLoginType loginType);
 
 @interface CTLoginBaseViewController : CTBaseViewController
-
+@property (nonatomic, strong) NSString *whx;
+@property (nonatomic, strong) NSString *wodefuk;
+@property (nonatomic, strong) NSString *yapnima;
 @end

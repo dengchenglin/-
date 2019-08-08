@@ -11,6 +11,10 @@
 #import "CTSearchPreviewView.h"
 
 @interface CTSearchViewController : CTBaseViewController
+@property (nonatomic, assign) NSInteger nishuocuole;
+@property (nonatomic, strong) UIImageView *sharePotifter;
+@property (nonatomic, strong) UIButton *hepercf;
+@property (nonatomic, strong) UIView *haodade;
 
 @property (nonatomic, strong) UITableView *dataTableView;
 

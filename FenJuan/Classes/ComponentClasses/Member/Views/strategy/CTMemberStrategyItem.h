@@ -13,5 +13,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 
 @property (nonatomic, copy) NSString *title;
-
+@property (nonatomic, strong) NSString *hhwhy;
+@property (nonatomic, strong) NSString *nimazale;
+@property (nonatomic, strong) NSString *commonpp;
+@property (nonatomic, assign) NSInteger wodekahao;
 @end
