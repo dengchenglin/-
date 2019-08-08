@@ -7,14 +7,14 @@
 //
 
 #import "FJGoodsPreViewControllerfj.h"
-#import "CTGoodsImgsView.h"
-#import "CTGoodsDescPreView.h"
+#import "FJGoodsImgsViewfj.h"
+#import "FJGoodsDescPreViewfj.h"
 #import "CTSharePopView.h"
 #import "UIView+YYAdd.h"
 @interface FJGoodsPreViewControllerfj ()
 @property (nonatomic, strong) UIView *containerView;
-@property (nonatomic, strong) CTGoodsImgsView *imgsView;
-@property (nonatomic, strong) CTGoodsDescPreView *descView;
+@property (nonatomic, strong) FJGoodsImgsViewfj *imgsView;
+@property (nonatomic, strong) FJGoodsDescPreViewfj *descView;
 @property (nonatomic, strong) CTGoodsViewModel *viewModel;
 @property (nonatomic, copy) NSString *qCodeContent;
 @end
@@ -34,15 +34,15 @@
     }
     return _containerView;
 }
-- (CTGoodsImgsView *)imgsView{
+- (FJGoodsImgsViewfj *)imgsView{
     if(!_imgsView){
-        _imgsView = [[CTGoodsImgsView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_WIDTH)];
+        _imgsView = [[FJGoodsImgsViewfj alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_WIDTH)];
     }
     return _imgsView;
 }
-- (CTGoodsDescPreView *)descView{
+- (FJGoodsDescPreViewfj *)descView{
     if(!_descView){
-        _descView = NSMainBundleClass(CTGoodsDescPreView.class);
+        _descView = NSMainBundleClass(FJGoodsDescPreViewfj.class);
     }
     return _descView;
 }

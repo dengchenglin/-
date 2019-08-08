@@ -90,32 +90,32 @@
 		324EC4E222FA74EC00CBC988 /* FJHandpickDetailViewControllerfj.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EC09022FA74EA00CBC988 /* FJHandpickDetailViewControllerfj.m */; };
 		324EC4E322FA74EC00CBC988 /* FJHandpickListCellfj.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EC09222FA74EA00CBC988 /* FJHandpickListCellfj.m */; };
 		324EC4E422FA74EC00CBC988 /* FJHandpickListCellfj.xib in Resources */ = {isa = PBXBuildFile; fileRef = 324EC09322FA74EA00CBC988 /* FJHandpickListCellfj.xib */; };
-		324EC4E522FA74EC00CBC988 /* CTHandpickListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EC09522FA74EA00CBC988 /* CTHandpickListViewController.m */; };
-		324EC4E622FA74EC00CBC988 /* CThotSalesListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EC09822FA74EA00CBC988 /* CThotSalesListViewController.m */; };
-		324EC4E722FA74EC00CBC988 /* CTHotSalesNoticeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EC09A22FA74EA00CBC988 /* CTHotSalesNoticeView.m */; };
-		324EC4E822FA74EC00CBC988 /* CTHotSalesNoticeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 324EC09B22FA74EA00CBC988 /* CTHotSalesNoticeView.xib */; };
-		324EC4E922FA74EC00CBC988 /* CTNineNineListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EC09E22FA74EA00CBC988 /* CTNineNineListViewController.m */; };
-		324EC4EA22FA74EC00CBC988 /* CTSpreeShopListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EC0A122FA74EA00CBC988 /* CTSpreeShopListViewController.m */; };
-		324EC4EB22FA74EC00CBC988 /* CTSpreeShopPageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EC0A322FA74EA00CBC988 /* CTSpreeShopPageController.m */; };
-		324EC4EC22FA74EC00CBC988 /* CTVideoGoodListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EC0A622FA74EA00CBC988 /* CTVideoGoodListCell.m */; };
-		324EC4ED22FA74EC00CBC988 /* CTVideoGoodListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 324EC0A722FA74EA00CBC988 /* CTVideoGoodListCell.xib */; };
-		324EC4EE22FA74EC00CBC988 /* CTVideoShopListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EC0A922FA74EA00CBC988 /* CTVideoShopListViewController.m */; };
-		324EC4EF22FA74EC00CBC988 /* CTVideoShopPageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EC0AB22FA74EA00CBC988 /* CTVideoShopPageController.m */; };
-		324EC4F022FA74EC00CBC988 /* CTGoodsBuyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EC0AE22FA74EA00CBC988 /* CTGoodsBuyView.m */; };
-		324EC4F122FA74EC00CBC988 /* CTGoodsBuyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 324EC0AF22FA74EA00CBC988 /* CTGoodsBuyView.xib */; };
-		324EC4F222FA74EC00CBC988 /* CTGoodsContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EC0B122FA74EA00CBC988 /* CTGoodsContentView.m */; };
-		324EC4F322FA74EC00CBC988 /* CTGoodsContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 324EC0B222FA74EA00CBC988 /* CTGoodsContentView.xib */; };
-		324EC4F422FA74EC00CBC988 /* CTGoodsCouponView.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EC0B422FA74EA00CBC988 /* CTGoodsCouponView.m */; };
-		324EC4F522FA74EC00CBC988 /* CTGoodsCouponView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 324EC0B522FA74EA00CBC988 /* CTGoodsCouponView.xib */; };
-		324EC4F622FA74EC00CBC988 /* CTGoodsDescPreView.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EC0B722FA74EA00CBC988 /* CTGoodsDescPreView.m */; };
-		324EC4F722FA74EC00CBC988 /* CTGoodsDescPreView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 324EC0B822FA74EA00CBC988 /* CTGoodsDescPreView.xib */; };
-		324EC4F822FA74EC00CBC988 /* CTGoodsDescView.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EC0BA22FA74EA00CBC988 /* CTGoodsDescView.m */; };
-		324EC4F922FA74EC00CBC988 /* CTGoodsDescView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 324EC0BB22FA74EA00CBC988 /* CTGoodsDescView.xib */; };
-		324EC4FA22FA74EC00CBC988 /* CTGoodsImgCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EC0BD22FA74EA00CBC988 /* CTGoodsImgCell.m */; };
-		324EC4FB22FA74EC00CBC988 /* CTGoodsImgCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 324EC0BE22FA74EA00CBC988 /* CTGoodsImgCell.xib */; };
-		324EC4FC22FA74EC00CBC988 /* CTGoodsImgsHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EC0C022FA74EA00CBC988 /* CTGoodsImgsHeadView.m */; };
-		324EC4FD22FA74EC00CBC988 /* CTGoodsImgsHeadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 324EC0C122FA74EA00CBC988 /* CTGoodsImgsHeadView.xib */; };
-		324EC4FE22FA74EC00CBC988 /* CTGoodsImgsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EC0C322FA74EA00CBC988 /* CTGoodsImgsView.m */; };
+		324EC4E522FA74EC00CBC988 /* FJHandpickListViewControllerfj.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EC09522FA74EA00CBC988 /* FJHandpickListViewControllerfj.m */; };
+		324EC4E622FA74EC00CBC988 /* FJHotSalesListViewControllerfj.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EC09822FA74EA00CBC988 /* FJHotSalesListViewControllerfj.m */; };
+		324EC4E722FA74EC00CBC988 /* FJHotSalesNoticeViewfj.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EC09A22FA74EA00CBC988 /* FJHotSalesNoticeViewfj.m */; };
+		324EC4E822FA74EC00CBC988 /* FJHotSalesNoticeViewfj.xib in Resources */ = {isa = PBXBuildFile; fileRef = 324EC09B22FA74EA00CBC988 /* FJHotSalesNoticeViewfj.xib */; };
+		324EC4E922FA74EC00CBC988 /* FJNineNineListViewControllerfj.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EC09E22FA74EA00CBC988 /* FJNineNineListViewControllerfj.m */; };
+		324EC4EA22FA74EC00CBC988 /* FJSpreeShopListViewControllerfj.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EC0A122FA74EA00CBC988 /* FJSpreeShopListViewControllerfj.m */; };
+		324EC4EB22FA74EC00CBC988 /* FJSpreeShopPageControllerfj.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EC0A322FA74EA00CBC988 /* FJSpreeShopPageControllerfj.m */; };
+		324EC4EC22FA74EC00CBC988 /* FJVideoGoodListCellfj.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EC0A622FA74EA00CBC988 /* FJVideoGoodListCellfj.m */; };
+		324EC4ED22FA74EC00CBC988 /* FJVideoGoodListCellfj.xib in Resources */ = {isa = PBXBuildFile; fileRef = 324EC0A722FA74EA00CBC988 /* FJVideoGoodListCellfj.xib */; };
+		324EC4EE22FA74EC00CBC988 /* FJVideoShopListViewControllerfj.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EC0A922FA74EA00CBC988 /* FJVideoShopListViewControllerfj.m */; };
+		324EC4EF22FA74EC00CBC988 /* FJVideoShopPageControllerfj.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EC0AB22FA74EA00CBC988 /* FJVideoShopPageControllerfj.m */; };
+		324EC4F022FA74EC00CBC988 /* FJGoodsBuyViewfj.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EC0AE22FA74EA00CBC988 /* FJGoodsBuyViewfj.m */; };
+		324EC4F122FA74EC00CBC988 /* FJGoodsBuyViewfj.xib in Resources */ = {isa = PBXBuildFile; fileRef = 324EC0AF22FA74EA00CBC988 /* FJGoodsBuyViewfj.xib */; };
+		324EC4F222FA74EC00CBC988 /* FJGoodsContentViewfj.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EC0B122FA74EA00CBC988 /* FJGoodsContentViewfj.m */; };
+		324EC4F322FA74EC00CBC988 /* FJGoodsContentViewfj.xib in Resources */ = {isa = PBXBuildFile; fileRef = 324EC0B222FA74EA00CBC988 /* FJGoodsContentViewfj.xib */; };
+		324EC4F422FA74EC00CBC988 /* FJGoodsCouponViewfj.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EC0B422FA74EA00CBC988 /* FJGoodsCouponViewfj.m */; };
+		324EC4F522FA74EC00CBC988 /* FJGoodsCouponViewfj.xib in Resources */ = {isa = PBXBuildFile; fileRef = 324EC0B522FA74EA00CBC988 /* FJGoodsCouponViewfj.xib */; };
+		324EC4F622FA74EC00CBC988 /* FJGoodsDescPreViewfj.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EC0B722FA74EA00CBC988 /* FJGoodsDescPreViewfj.m */; };
+		324EC4F722FA74EC00CBC988 /* FJGoodsDescPreViewfj.xib in Resources */ = {isa = PBXBuildFile; fileRef = 324EC0B822FA74EA00CBC988 /* FJGoodsDescPreViewfj.xib */; };
+		324EC4F822FA74EC00CBC988 /* FJGoodsDescViewfj.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EC0BA22FA74EA00CBC988 /* FJGoodsDescViewfj.m */; };
+		324EC4F922FA74EC00CBC988 /* FJGoodsDescViewfj.xib in Resources */ = {isa = PBXBuildFile; fileRef = 324EC0BB22FA74EA00CBC988 /* FJGoodsDescViewfj.xib */; };
+		324EC4FA22FA74EC00CBC988 /* FJGoodsImgCellfj.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EC0BD22FA74EA00CBC988 /* FJGoodsImgCellfj.m */; };
+		324EC4FB22FA74EC00CBC988 /* FJGoodsImgCellfj.xib in Resources */ = {isa = PBXBuildFile; fileRef = 324EC0BE22FA74EA00CBC988 /* FJGoodsImgCellfj.xib */; };
+		324EC4FC22FA74EC00CBC988 /* FJGoodsImgsHeadViewfj.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EC0C022FA74EA00CBC988 /* FJGoodsImgsHeadViewfj.m */; };
+		324EC4FD22FA74EC00CBC988 /* FJGoodsImgsHeadViewfj.xib in Resources */ = {isa = PBXBuildFile; fileRef = 324EC0C122FA74EA00CBC988 /* FJGoodsImgsHeadViewfj.xib */; };
+		324EC4FE22FA74EC00CBC988 /* FJGoodsImgsViewfj.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EC0C322FA74EA00CBC988 /* FJGoodsImgsViewfj.m */; };
 		324EC4FF22FA74EC00CBC988 /* CTHomeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EC0C722FA74EA00CBC988 /* CTHomeModel.m */; };
 		324EC50022FA74EC00CBC988 /* CTHomeService.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EC0CA22FA74EA00CBC988 /* CTHomeService.m */; };
 		324EC50122FA74EC00CBC988 /* CTHomeCatoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EC0CD22FA74EA00CBC988 /* CTHomeCatoryViewController.m */; };
@@ -766,49 +766,49 @@
 		324EC09122FA74EA00CBC988 /* FJHandpickListCellfj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FJHandpickListCellfj.h; sourceTree = "<group>"; };
 		324EC09222FA74EA00CBC988 /* FJHandpickListCellfj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FJHandpickListCellfj.m; sourceTree = "<group>"; };
 		324EC09322FA74EA00CBC988 /* FJHandpickListCellfj.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FJHandpickListCellfj.xib; sourceTree = "<group>"; };
-		324EC09422FA74EA00CBC988 /* CTHandpickListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTHandpickListViewController.h; sourceTree = "<group>"; };
-		324EC09522FA74EA00CBC988 /* CTHandpickListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTHandpickListViewController.m; sourceTree = "<group>"; };
-		324EC09722FA74EA00CBC988 /* CThotSalesListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CThotSalesListViewController.h; sourceTree = "<group>"; };
-		324EC09822FA74EA00CBC988 /* CThotSalesListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CThotSalesListViewController.m; sourceTree = "<group>"; };
-		324EC09922FA74EA00CBC988 /* CTHotSalesNoticeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTHotSalesNoticeView.h; sourceTree = "<group>"; };
-		324EC09A22FA74EA00CBC988 /* CTHotSalesNoticeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTHotSalesNoticeView.m; sourceTree = "<group>"; };
-		324EC09B22FA74EA00CBC988 /* CTHotSalesNoticeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CTHotSalesNoticeView.xib; sourceTree = "<group>"; };
-		324EC09D22FA74EA00CBC988 /* CTNineNineListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTNineNineListViewController.h; sourceTree = "<group>"; };
-		324EC09E22FA74EA00CBC988 /* CTNineNineListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTNineNineListViewController.m; sourceTree = "<group>"; };
-		324EC0A022FA74EA00CBC988 /* CTSpreeShopListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTSpreeShopListViewController.h; sourceTree = "<group>"; };
-		324EC0A122FA74EA00CBC988 /* CTSpreeShopListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTSpreeShopListViewController.m; sourceTree = "<group>"; };
-		324EC0A222FA74EA00CBC988 /* CTSpreeShopPageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTSpreeShopPageController.h; sourceTree = "<group>"; };
-		324EC0A322FA74EA00CBC988 /* CTSpreeShopPageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTSpreeShopPageController.m; sourceTree = "<group>"; };
-		324EC0A522FA74EA00CBC988 /* CTVideoGoodListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTVideoGoodListCell.h; sourceTree = "<group>"; };
-		324EC0A622FA74EA00CBC988 /* CTVideoGoodListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTVideoGoodListCell.m; sourceTree = "<group>"; };
-		324EC0A722FA74EA00CBC988 /* CTVideoGoodListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CTVideoGoodListCell.xib; sourceTree = "<group>"; };
-		324EC0A822FA74EA00CBC988 /* CTVideoShopListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTVideoShopListViewController.h; sourceTree = "<group>"; };
-		324EC0A922FA74EA00CBC988 /* CTVideoShopListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTVideoShopListViewController.m; sourceTree = "<group>"; };
-		324EC0AA22FA74EA00CBC988 /* CTVideoShopPageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTVideoShopPageController.h; sourceTree = "<group>"; };
-		324EC0AB22FA74EA00CBC988 /* CTVideoShopPageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTVideoShopPageController.m; sourceTree = "<group>"; };
-		324EC0AD22FA74EA00CBC988 /* CTGoodsBuyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTGoodsBuyView.h; sourceTree = "<group>"; };
-		324EC0AE22FA74EA00CBC988 /* CTGoodsBuyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTGoodsBuyView.m; sourceTree = "<group>"; };
-		324EC0AF22FA74EA00CBC988 /* CTGoodsBuyView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CTGoodsBuyView.xib; sourceTree = "<group>"; };
-		324EC0B022FA74EA00CBC988 /* CTGoodsContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTGoodsContentView.h; sourceTree = "<group>"; };
-		324EC0B122FA74EA00CBC988 /* CTGoodsContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTGoodsContentView.m; sourceTree = "<group>"; };
-		324EC0B222FA74EA00CBC988 /* CTGoodsContentView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CTGoodsContentView.xib; sourceTree = "<group>"; };
-		324EC0B322FA74EA00CBC988 /* CTGoodsCouponView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTGoodsCouponView.h; sourceTree = "<group>"; };
-		324EC0B422FA74EA00CBC988 /* CTGoodsCouponView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTGoodsCouponView.m; sourceTree = "<group>"; };
-		324EC0B522FA74EA00CBC988 /* CTGoodsCouponView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CTGoodsCouponView.xib; sourceTree = "<group>"; };
-		324EC0B622FA74EA00CBC988 /* CTGoodsDescPreView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTGoodsDescPreView.h; sourceTree = "<group>"; };
-		324EC0B722FA74EA00CBC988 /* CTGoodsDescPreView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTGoodsDescPreView.m; sourceTree = "<group>"; };
-		324EC0B822FA74EA00CBC988 /* CTGoodsDescPreView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CTGoodsDescPreView.xib; sourceTree = "<group>"; };
-		324EC0B922FA74EA00CBC988 /* CTGoodsDescView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTGoodsDescView.h; sourceTree = "<group>"; };
-		324EC0BA22FA74EA00CBC988 /* CTGoodsDescView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTGoodsDescView.m; sourceTree = "<group>"; };
-		324EC0BB22FA74EA00CBC988 /* CTGoodsDescView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CTGoodsDescView.xib; sourceTree = "<group>"; };
-		324EC0BC22FA74EA00CBC988 /* CTGoodsImgCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTGoodsImgCell.h; sourceTree = "<group>"; };
-		324EC0BD22FA74EA00CBC988 /* CTGoodsImgCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTGoodsImgCell.m; sourceTree = "<group>"; };
-		324EC0BE22FA74EA00CBC988 /* CTGoodsImgCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CTGoodsImgCell.xib; sourceTree = "<group>"; };
-		324EC0BF22FA74EA00CBC988 /* CTGoodsImgsHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTGoodsImgsHeadView.h; sourceTree = "<group>"; };
-		324EC0C022FA74EA00CBC988 /* CTGoodsImgsHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTGoodsImgsHeadView.m; sourceTree = "<group>"; };
-		324EC0C122FA74EA00CBC988 /* CTGoodsImgsHeadView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CTGoodsImgsHeadView.xib; sourceTree = "<group>"; };
-		324EC0C222FA74EA00CBC988 /* CTGoodsImgsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTGoodsImgsView.h; sourceTree = "<group>"; };
-		324EC0C322FA74EA00CBC988 /* CTGoodsImgsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTGoodsImgsView.m; sourceTree = "<group>"; };
+		324EC09422FA74EA00CBC988 /* FJHandpickListViewControllerfj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FJHandpickListViewControllerfj.h; sourceTree = "<group>"; };
+		324EC09522FA74EA00CBC988 /* FJHandpickListViewControllerfj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FJHandpickListViewControllerfj.m; sourceTree = "<group>"; };
+		324EC09722FA74EA00CBC988 /* FJHotSalesListViewControllerfj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FJHotSalesListViewControllerfj.h; sourceTree = "<group>"; };
+		324EC09822FA74EA00CBC988 /* FJHotSalesListViewControllerfj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FJHotSalesListViewControllerfj.m; sourceTree = "<group>"; };
+		324EC09922FA74EA00CBC988 /* FJHotSalesNoticeViewfj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FJHotSalesNoticeViewfj.h; sourceTree = "<group>"; };
+		324EC09A22FA74EA00CBC988 /* FJHotSalesNoticeViewfj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FJHotSalesNoticeViewfj.m; sourceTree = "<group>"; };
+		324EC09B22FA74EA00CBC988 /* FJHotSalesNoticeViewfj.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FJHotSalesNoticeViewfj.xib; sourceTree = "<group>"; };
+		324EC09D22FA74EA00CBC988 /* FJNineNineListViewControllerfj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FJNineNineListViewControllerfj.h; sourceTree = "<group>"; };
+		324EC09E22FA74EA00CBC988 /* FJNineNineListViewControllerfj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FJNineNineListViewControllerfj.m; sourceTree = "<group>"; };
+		324EC0A022FA74EA00CBC988 /* FJSpreeShopListViewControllerfj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FJSpreeShopListViewControllerfj.h; sourceTree = "<group>"; };
+		324EC0A122FA74EA00CBC988 /* FJSpreeShopListViewControllerfj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FJSpreeShopListViewControllerfj.m; sourceTree = "<group>"; };
+		324EC0A222FA74EA00CBC988 /* FJSpreeShopPageControllerfj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FJSpreeShopPageControllerfj.h; sourceTree = "<group>"; };
+		324EC0A322FA74EA00CBC988 /* FJSpreeShopPageControllerfj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FJSpreeShopPageControllerfj.m; sourceTree = "<group>"; };
+		324EC0A522FA74EA00CBC988 /* FJVideoGoodListCellfj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FJVideoGoodListCellfj.h; sourceTree = "<group>"; };
+		324EC0A622FA74EA00CBC988 /* FJVideoGoodListCellfj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FJVideoGoodListCellfj.m; sourceTree = "<group>"; };
+		324EC0A722FA74EA00CBC988 /* FJVideoGoodListCellfj.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FJVideoGoodListCellfj.xib; sourceTree = "<group>"; };
+		324EC0A822FA74EA00CBC988 /* FJVideoShopListViewControllerfj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FJVideoShopListViewControllerfj.h; sourceTree = "<group>"; };
+		324EC0A922FA74EA00CBC988 /* FJVideoShopListViewControllerfj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FJVideoShopListViewControllerfj.m; sourceTree = "<group>"; };
+		324EC0AA22FA74EA00CBC988 /* FJVideoShopPageControllerfj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FJVideoShopPageControllerfj.h; sourceTree = "<group>"; };
+		324EC0AB22FA74EA00CBC988 /* FJVideoShopPageControllerfj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FJVideoShopPageControllerfj.m; sourceTree = "<group>"; };
+		324EC0AD22FA74EA00CBC988 /* FJGoodsBuyViewfj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FJGoodsBuyViewfj.h; sourceTree = "<group>"; };
+		324EC0AE22FA74EA00CBC988 /* FJGoodsBuyViewfj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FJGoodsBuyViewfj.m; sourceTree = "<group>"; };
+		324EC0AF22FA74EA00CBC988 /* FJGoodsBuyViewfj.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FJGoodsBuyViewfj.xib; sourceTree = "<group>"; };
+		324EC0B022FA74EA00CBC988 /* FJGoodsContentViewfj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FJGoodsContentViewfj.h; sourceTree = "<group>"; };
+		324EC0B122FA74EA00CBC988 /* FJGoodsContentViewfj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FJGoodsContentViewfj.m; sourceTree = "<group>"; };
+		324EC0B222FA74EA00CBC988 /* FJGoodsContentViewfj.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FJGoodsContentViewfj.xib; sourceTree = "<group>"; };
+		324EC0B322FA74EA00CBC988 /* FJGoodsCouponViewfj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FJGoodsCouponViewfj.h; sourceTree = "<group>"; };
+		324EC0B422FA74EA00CBC988 /* FJGoodsCouponViewfj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FJGoodsCouponViewfj.m; sourceTree = "<group>"; };
+		324EC0B522FA74EA00CBC988 /* FJGoodsCouponViewfj.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FJGoodsCouponViewfj.xib; sourceTree = "<group>"; };
+		324EC0B622FA74EA00CBC988 /* FJGoodsDescPreViewfj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FJGoodsDescPreViewfj.h; sourceTree = "<group>"; };
+		324EC0B722FA74EA00CBC988 /* FJGoodsDescPreViewfj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FJGoodsDescPreViewfj.m; sourceTree = "<group>"; };
+		324EC0B822FA74EA00CBC988 /* FJGoodsDescPreViewfj.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FJGoodsDescPreViewfj.xib; sourceTree = "<group>"; };
+		324EC0B922FA74EA00CBC988 /* FJGoodsDescViewfj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FJGoodsDescViewfj.h; sourceTree = "<group>"; };
+		324EC0BA22FA74EA00CBC988 /* FJGoodsDescViewfj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FJGoodsDescViewfj.m; sourceTree = "<group>"; };
+		324EC0BB22FA74EA00CBC988 /* FJGoodsDescViewfj.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FJGoodsDescViewfj.xib; sourceTree = "<group>"; };
+		324EC0BC22FA74EA00CBC988 /* FJGoodsImgCellfj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FJGoodsImgCellfj.h; sourceTree = "<group>"; };
+		324EC0BD22FA74EA00CBC988 /* FJGoodsImgCellfj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FJGoodsImgCellfj.m; sourceTree = "<group>"; };
+		324EC0BE22FA74EA00CBC988 /* FJGoodsImgCellfj.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FJGoodsImgCellfj.xib; sourceTree = "<group>"; };
+		324EC0BF22FA74EA00CBC988 /* FJGoodsImgsHeadViewfj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FJGoodsImgsHeadViewfj.h; sourceTree = "<group>"; };
+		324EC0C022FA74EA00CBC988 /* FJGoodsImgsHeadViewfj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FJGoodsImgsHeadViewfj.m; sourceTree = "<group>"; };
+		324EC0C122FA74EA00CBC988 /* FJGoodsImgsHeadViewfj.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FJGoodsImgsHeadViewfj.xib; sourceTree = "<group>"; };
+		324EC0C222FA74EA00CBC988 /* FJGoodsImgsViewfj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FJGoodsImgsViewfj.h; sourceTree = "<group>"; };
+		324EC0C322FA74EA00CBC988 /* FJGoodsImgsViewfj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FJGoodsImgsViewfj.m; sourceTree = "<group>"; };
 		324EC0C622FA74EA00CBC988 /* CTHomeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTHomeModel.h; sourceTree = "<group>"; };
 		324EC0C722FA74EA00CBC988 /* CTHomeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTHomeModel.m; sourceTree = "<group>"; };
 		324EC0C922FA74EA00CBC988 /* CTHomeService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTHomeService.h; sourceTree = "<group>"; };
@@ -2168,8 +2168,8 @@
 				324EC09122FA74EA00CBC988 /* FJHandpickListCellfj.h */,
 				324EC09222FA74EA00CBC988 /* FJHandpickListCellfj.m */,
 				324EC09322FA74EA00CBC988 /* FJHandpickListCellfj.xib */,
-				324EC09422FA74EA00CBC988 /* CTHandpickListViewController.h */,
-				324EC09522FA74EA00CBC988 /* CTHandpickListViewController.m */,
+				324EC09422FA74EA00CBC988 /* FJHandpickListViewControllerfj.h */,
+				324EC09522FA74EA00CBC988 /* FJHandpickListViewControllerfj.m */,
 			);
 			path = Handpick;
 			sourceTree = "<group>";
@@ -2177,11 +2177,11 @@
 		324EC09622FA74EA00CBC988 /* HotSales */ = {
 			isa = PBXGroup;
 			children = (
-				324EC09722FA74EA00CBC988 /* CThotSalesListViewController.h */,
-				324EC09822FA74EA00CBC988 /* CThotSalesListViewController.m */,
-				324EC09922FA74EA00CBC988 /* CTHotSalesNoticeView.h */,
-				324EC09A22FA74EA00CBC988 /* CTHotSalesNoticeView.m */,
-				324EC09B22FA74EA00CBC988 /* CTHotSalesNoticeView.xib */,
+				324EC09722FA74EA00CBC988 /* FJHotSalesListViewControllerfj.h */,
+				324EC09822FA74EA00CBC988 /* FJHotSalesListViewControllerfj.m */,
+				324EC09922FA74EA00CBC988 /* FJHotSalesNoticeViewfj.h */,
+				324EC09A22FA74EA00CBC988 /* FJHotSalesNoticeViewfj.m */,
+				324EC09B22FA74EA00CBC988 /* FJHotSalesNoticeViewfj.xib */,
 			);
 			path = HotSales;
 			sourceTree = "<group>";
@@ -2189,8 +2189,8 @@
 		324EC09C22FA74EA00CBC988 /* NineNine */ = {
 			isa = PBXGroup;
 			children = (
-				324EC09D22FA74EA00CBC988 /* CTNineNineListViewController.h */,
-				324EC09E22FA74EA00CBC988 /* CTNineNineListViewController.m */,
+				324EC09D22FA74EA00CBC988 /* FJNineNineListViewControllerfj.h */,
+				324EC09E22FA74EA00CBC988 /* FJNineNineListViewControllerfj.m */,
 			);
 			path = NineNine;
 			sourceTree = "<group>";
@@ -2198,10 +2198,10 @@
 		324EC09F22FA74EA00CBC988 /* SpreeShop */ = {
 			isa = PBXGroup;
 			children = (
-				324EC0A022FA74EA00CBC988 /* CTSpreeShopListViewController.h */,
-				324EC0A122FA74EA00CBC988 /* CTSpreeShopListViewController.m */,
-				324EC0A222FA74EA00CBC988 /* CTSpreeShopPageController.h */,
-				324EC0A322FA74EA00CBC988 /* CTSpreeShopPageController.m */,
+				324EC0A022FA74EA00CBC988 /* FJSpreeShopListViewControllerfj.h */,
+				324EC0A122FA74EA00CBC988 /* FJSpreeShopListViewControllerfj.m */,
+				324EC0A222FA74EA00CBC988 /* FJSpreeShopPageControllerfj.h */,
+				324EC0A322FA74EA00CBC988 /* FJSpreeShopPageControllerfj.m */,
 			);
 			path = SpreeShop;
 			sourceTree = "<group>";
@@ -2209,13 +2209,13 @@
 		324EC0A422FA74EA00CBC988 /* VideoShop */ = {
 			isa = PBXGroup;
 			children = (
-				324EC0A522FA74EA00CBC988 /* CTVideoGoodListCell.h */,
-				324EC0A622FA74EA00CBC988 /* CTVideoGoodListCell.m */,
-				324EC0A722FA74EA00CBC988 /* CTVideoGoodListCell.xib */,
-				324EC0A822FA74EA00CBC988 /* CTVideoShopListViewController.h */,
-				324EC0A922FA74EA00CBC988 /* CTVideoShopListViewController.m */,
-				324EC0AA22FA74EA00CBC988 /* CTVideoShopPageController.h */,
-				324EC0AB22FA74EA00CBC988 /* CTVideoShopPageController.m */,
+				324EC0A522FA74EA00CBC988 /* FJVideoGoodListCellfj.h */,
+				324EC0A622FA74EA00CBC988 /* FJVideoGoodListCellfj.m */,
+				324EC0A722FA74EA00CBC988 /* FJVideoGoodListCellfj.xib */,
+				324EC0A822FA74EA00CBC988 /* FJVideoShopListViewControllerfj.h */,
+				324EC0A922FA74EA00CBC988 /* FJVideoShopListViewControllerfj.m */,
+				324EC0AA22FA74EA00CBC988 /* FJVideoShopPageControllerfj.h */,
+				324EC0AB22FA74EA00CBC988 /* FJVideoShopPageControllerfj.m */,
 			);
 			path = VideoShop;
 			sourceTree = "<group>";
@@ -2223,29 +2223,29 @@
 		324EC0AC22FA74EA00CBC988 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				324EC0AD22FA74EA00CBC988 /* CTGoodsBuyView.h */,
-				324EC0AE22FA74EA00CBC988 /* CTGoodsBuyView.m */,
-				324EC0AF22FA74EA00CBC988 /* CTGoodsBuyView.xib */,
-				324EC0B022FA74EA00CBC988 /* CTGoodsContentView.h */,
-				324EC0B122FA74EA00CBC988 /* CTGoodsContentView.m */,
-				324EC0B222FA74EA00CBC988 /* CTGoodsContentView.xib */,
-				324EC0B322FA74EA00CBC988 /* CTGoodsCouponView.h */,
-				324EC0B422FA74EA00CBC988 /* CTGoodsCouponView.m */,
-				324EC0B522FA74EA00CBC988 /* CTGoodsCouponView.xib */,
-				324EC0B622FA74EA00CBC988 /* CTGoodsDescPreView.h */,
-				324EC0B722FA74EA00CBC988 /* CTGoodsDescPreView.m */,
-				324EC0B822FA74EA00CBC988 /* CTGoodsDescPreView.xib */,
-				324EC0B922FA74EA00CBC988 /* CTGoodsDescView.h */,
-				324EC0BA22FA74EA00CBC988 /* CTGoodsDescView.m */,
-				324EC0BB22FA74EA00CBC988 /* CTGoodsDescView.xib */,
-				324EC0BC22FA74EA00CBC988 /* CTGoodsImgCell.h */,
-				324EC0BD22FA74EA00CBC988 /* CTGoodsImgCell.m */,
-				324EC0BE22FA74EA00CBC988 /* CTGoodsImgCell.xib */,
-				324EC0BF22FA74EA00CBC988 /* CTGoodsImgsHeadView.h */,
-				324EC0C022FA74EA00CBC988 /* CTGoodsImgsHeadView.m */,
-				324EC0C122FA74EA00CBC988 /* CTGoodsImgsHeadView.xib */,
-				324EC0C222FA74EA00CBC988 /* CTGoodsImgsView.h */,
-				324EC0C322FA74EA00CBC988 /* CTGoodsImgsView.m */,
+				324EC0AD22FA74EA00CBC988 /* FJGoodsBuyViewfj.h */,
+				324EC0AE22FA74EA00CBC988 /* FJGoodsBuyViewfj.m */,
+				324EC0AF22FA74EA00CBC988 /* FJGoodsBuyViewfj.xib */,
+				324EC0B022FA74EA00CBC988 /* FJGoodsContentViewfj.h */,
+				324EC0B122FA74EA00CBC988 /* FJGoodsContentViewfj.m */,
+				324EC0B222FA74EA00CBC988 /* FJGoodsContentViewfj.xib */,
+				324EC0B322FA74EA00CBC988 /* FJGoodsCouponViewfj.h */,
+				324EC0B422FA74EA00CBC988 /* FJGoodsCouponViewfj.m */,
+				324EC0B522FA74EA00CBC988 /* FJGoodsCouponViewfj.xib */,
+				324EC0B622FA74EA00CBC988 /* FJGoodsDescPreViewfj.h */,
+				324EC0B722FA74EA00CBC988 /* FJGoodsDescPreViewfj.m */,
+				324EC0B822FA74EA00CBC988 /* FJGoodsDescPreViewfj.xib */,
+				324EC0B922FA74EA00CBC988 /* FJGoodsDescViewfj.h */,
+				324EC0BA22FA74EA00CBC988 /* FJGoodsDescViewfj.m */,
+				324EC0BB22FA74EA00CBC988 /* FJGoodsDescViewfj.xib */,
+				324EC0BC22FA74EA00CBC988 /* FJGoodsImgCellfj.h */,
+				324EC0BD22FA74EA00CBC988 /* FJGoodsImgCellfj.m */,
+				324EC0BE22FA74EA00CBC988 /* FJGoodsImgCellfj.xib */,
+				324EC0BF22FA74EA00CBC988 /* FJGoodsImgsHeadViewfj.h */,
+				324EC0C022FA74EA00CBC988 /* FJGoodsImgsHeadViewfj.m */,
+				324EC0C122FA74EA00CBC988 /* FJGoodsImgsHeadViewfj.xib */,
+				324EC0C222FA74EA00CBC988 /* FJGoodsImgsViewfj.h */,
+				324EC0C322FA74EA00CBC988 /* FJGoodsImgsViewfj.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -4542,7 +4542,7 @@
 				324EC4A722FA74EB00CBC988 /* CTThirtyTrendView.xib in Resources */,
 				324EC4E422FA74EC00CBC988 /* FJHandpickListCellfj.xib in Resources */,
 				324EC4D122FA74EC00CBC988 /* CTSharePopupView.xib in Resources */,
-				324EC4F922FA74EC00CBC988 /* CTGoodsDescView.xib in Resources */,
+				324EC4F922FA74EC00CBC988 /* FJGoodsDescViewfj.xib in Resources */,
 				324EC53922FA74EC00CBC988 /* CTSetPasswordView_.xib in Resources */,
 				324EC5CC22FA74EC00CBC988 /* CTYourLikedHeadView.xib in Resources */,
 				324EC5D522FA74EC00CBC988 /* CTSetLogoutView.xib in Resources */,
@@ -4555,7 +4555,7 @@
 				324EC5E822FA74EC00CBC988 /* CTShareImgsItem.xib in Resources */,
 				324EC55722FA74EC00CBC988 /* CTMemberPrivilegeItem.xib in Resources */,
 				324EC51722FA74EC00CBC988 /* CTSalesItem.xib in Resources */,
-				324EC4FB22FA74EC00CBC988 /* CTGoodsImgCell.xib in Resources */,
+				324EC4FB22FA74EC00CBC988 /* FJGoodsImgCellfj.xib in Resources */,
 				324EC58322FA74EC00CBC988 /* CTEarnRankHeadView.xib in Resources */,
 				324EC60722FA74EC00CBC988 /* CTUserRemarkItem.xib in Resources */,
 				324EC51422FA74EC00CBC988 /* CTHomeSpreeShopView.xib in Resources */,
@@ -4566,7 +4566,7 @@
 				324EC5E122FA74EC00CBC988 /* CTInviteCodeButton.xib in Resources */,
 				324EC63A22FA74EC00CBC988 /* area.plist in Resources */,
 				324EC52E22FA74EC00CBC988 /* CTBindPhoneView.xib in Resources */,
-				324EC4F122FA74EC00CBC988 /* CTGoodsBuyView.xib in Resources */,
+				324EC4F122FA74EC00CBC988 /* FJGoodsBuyViewfj.xib in Resources */,
 				324EC5D322FA74EC00CBC988 /* CTSetListCell.xib in Resources */,
 				324EC4A522FA74EB00CBC988 /* CTThirtyProfitView.xib in Resources */,
 				324EC69122FA74EC00CBC988 /* NBResource.bundle in Resources */,
@@ -4609,24 +4609,24 @@
 				324EC59C22FA74EC00CBC988 /* CTRecListCell.xib in Resources */,
 				324EC5AC22FA74EC00CBC988 /* CTMultipleGoodsCell.xib in Resources */,
 				324EC70522FAB18B00CBC988 /* FJVideoGoodListCell.xib in Resources */,
-				324EC4FD22FA74EC00CBC988 /* CTGoodsImgsHeadView.xib in Resources */,
+				324EC4FD22FA74EC00CBC988 /* FJGoodsImgsHeadViewfj.xib in Resources */,
 				324EC60322FA74EC00CBC988 /* CTUserInfoItem.xib in Resources */,
 				324EC6E722FAAF6600CBC988 /* CTJdpListCell.xib in Resources */,
-				324EC4F322FA74EC00CBC988 /* CTGoodsContentView.xib in Resources */,
+				324EC4F322FA74EC00CBC988 /* FJGoodsContentViewfj.xib in Resources */,
 				324EC74B22FAB4D800CBC988 /* CTMrdkInfoView.xib in Resources */,
 				324EC5C622FA74EC00CBC988 /* CTHotCatoryView.xib in Resources */,
 				324EC64622FA74EC00CBC988 /* SGQRCodeFlashlightOpenImage.png in Resources */,
 				324EC5B022FA74EC00CBC988 /* CTProCommentItem.xib in Resources */,
-				324EC4F522FA74EC00CBC988 /* CTGoodsCouponView.xib in Resources */,
+				324EC4F522FA74EC00CBC988 /* FJGoodsCouponViewfj.xib in Resources */,
 				324EC5BE22FA74EC00CBC988 /* CTHotKeywordHeadView.xib in Resources */,
 				324EC4BE22FA74EC00CBC988 /* CTUpDownControl.xib in Resources */,
 				324EC4AC22FA74EB00CBC988 /* CTGoodIndexHorizontalCell.xib in Resources */,
-				324EC4E822FA74EC00CBC988 /* CTHotSalesNoticeView.xib in Resources */,
+				324EC4E822FA74EC00CBC988 /* FJHotSalesNoticeViewfj.xib in Resources */,
 				324EC54822FA74EC00CBC988 /* CTMemberHeadView.xib in Resources */,
 				324EC5CA22FA74EC00CBC988 /* CTSearchTikcetPasteView.xib in Resources */,
 				324EC61722FA74EC00CBC988 /* CTWithdrawInputPsdView.xib in Resources */,
 				324EC69222FA74EC00CBC988 /* LaunchScreen.storyboard in Resources */,
-				324EC4F722FA74EC00CBC988 /* CTGoodsDescPreView.xib in Resources */,
+				324EC4F722FA74EC00CBC988 /* FJGoodsDescPreViewfj.xib in Resources */,
 				324EC67E22FA74EC00CBC988 /* Assets.xcassets in Resources */,
 				324EC50C22FA74EC00CBC988 /* CTHomeNavView.xib in Resources */,
 				324EC5F922FA74EC00CBC988 /* CTSxyTypeView.xib in Resources */,
@@ -4651,7 +4651,7 @@
 				324EC75A22FAB4D800CBC988 /* CTMrdkShareView.xib in Resources */,
 				324EC49922FA74EB00CBC988 /* CTNoticeAlertView.xib in Resources */,
 				324EC58E22FA74EC00CBC988 /* CTMineEarnView.xib in Resources */,
-				324EC4ED22FA74EC00CBC988 /* CTVideoGoodListCell.xib in Resources */,
+				324EC4ED22FA74EC00CBC988 /* FJVideoGoodListCellfj.xib in Resources */,
 				324EC61522FA74EC00CBC988 /* CTWithdrawAlipayInfoView.xib in Resources */,
 				324EC56622FA74EC00CBC988 /* CTMessageTypeView.xib in Resources */,
 				324EC4C222FA74EC00CBC988 /* LMNetErrorView.xib in Resources */,
@@ -4807,9 +4807,9 @@
 				324EC5BF22FA74EC00CBC988 /* CTSearchBar.m in Sources */,
 				324EC5BD22FA74EC00CBC988 /* CTHotKeywordHeadView.m in Sources */,
 				324EC65E22FA74EC00CBC988 /* UITableView+Helper.m in Sources */,
-				324EC4FE22FA74EC00CBC988 /* CTGoodsImgsView.m in Sources */,
+				324EC4FE22FA74EC00CBC988 /* FJGoodsImgsViewfj.m in Sources */,
 				324EC56222FA74EC00CBC988 /* CTMessageViewController.m in Sources */,
-				324EC4E622FA74EC00CBC988 /* CThotSalesListViewController.m in Sources */,
+				324EC4E622FA74EC00CBC988 /* FJHotSalesListViewControllerfj.m in Sources */,
 				324EC74222FAB4D800CBC988 /* CTAlertHelper+MrdkShareSuccess.m in Sources */,
 				324EC51A22FA74EC00CBC988 /* CTLoginService.m in Sources */,
 				324EC57E22FA74EC00CBC988 /* CTEarnDescView.m in Sources */,
@@ -4819,7 +4819,7 @@
 				324EC67A22FA74EC00CBC988 /* YYCGUtilities.m in Sources */,
 				324EC66222FA74EC00CBC988 /* UIView+Helper.m in Sources */,
 				324EC56122FA74EC00CBC988 /* CTMessageListViewController.m in Sources */,
-				324EC4E522FA74EC00CBC988 /* CTHandpickListViewController.m in Sources */,
+				324EC4E522FA74EC00CBC988 /* FJHandpickListViewControllerfj.m in Sources */,
 				324EC5D022FA74EC00CBC988 /* CTSetHeadView.m in Sources */,
 				324EC5EA22FA74EC00CBC988 /* CTShareView.m in Sources */,
 				324EC52422FA74EC00CBC988 /* CTAlipayBoundViewModel.m in Sources */,
@@ -4841,7 +4841,7 @@
 				324EC55222FA74EC00CBC988 /* CTMemberEquityRowView.m in Sources */,
 				324EC57822FA74EC00CBC988 /* CTRecListViewController.m in Sources */,
 				324EC58822FA74EC00CBC988 /* CTEarnTrendCell.m in Sources */,
-				324EC4F422FA74EC00CBC988 /* CTGoodsCouponView.m in Sources */,
+				324EC4F422FA74EC00CBC988 /* FJGoodsCouponViewfj.m in Sources */,
 				324EC65722FA74EC00CBC988 /* UIActionSheet+Category.m in Sources */,
 				324EC67D22FA74EC00CBC988 /* main.m in Sources */,
 				324EC62922FA74EC00CBC988 /* CLRefreshFooter.m in Sources */,
@@ -4880,14 +4880,14 @@
 				324EC5CE22FA74EC00CBC988 /* CTAdviseViewController.m in Sources */,
 				324EC62B22FA74EC00CBC988 /* CLRefreshManager.m in Sources */,
 				324EC65922FA74EC00CBC988 /* UIButton+Helper.m in Sources */,
-				324EC4EE22FA74EC00CBC988 /* CTVideoShopListViewController.m in Sources */,
+				324EC4EE22FA74EC00CBC988 /* FJVideoShopListViewControllerfj.m in Sources */,
 				324EC64D22FA74EC00CBC988 /* SelPlayerConfiguration.m in Sources */,
 				324EC64122FA74EC00CBC988 /* LMSegmentedControl.m in Sources */,
 				324EC61822FA74EC00CBC988 /* CTWithDrawInputView.m in Sources */,
 				324EC57022FA74EC00CBC988 /* CTEarnRankViewController.m in Sources */,
 				324EC64B22FA74EC00CBC988 /* SolidLayout.m in Sources */,
 				324EC75C22FAB4D800CBC988 /* CTPayTypeItem.m in Sources */,
-				324EC4FA22FA74EC00CBC988 /* CTGoodsImgCell.m in Sources */,
+				324EC4FA22FA74EC00CBC988 /* FJGoodsImgCellfj.m in Sources */,
 				324EC66922FA74EC00CBC988 /* NSData+Category.m in Sources */,
 				324EC74522FAB4D800CBC988 /* CTMrdkMyRecordViewController.m in Sources */,
 				324EC64722FA74EC00CBC988 /* ScanSuccessJumpVC.m in Sources */,
@@ -4933,12 +4933,12 @@
 				324EC5FA22FA74EC00CBC988 /* CTXsjcCell.m in Sources */,
 				324EC4BB22FA74EB00CBC988 /* CTSortButton.m in Sources */,
 				324EC61022FA74EC00CBC988 /* CTAlertHelper+WithdrawPsd.m in Sources */,
-				324EC4F222FA74EC00CBC988 /* CTGoodsContentView.m in Sources */,
+				324EC4F222FA74EC00CBC988 /* FJGoodsContentViewfj.m in Sources */,
 				324EC62222FA74EC00CBC988 /* CLNetworkEngine.m in Sources */,
 				324EC67122FA74EC00CBC988 /* UIColor+HexString.m in Sources */,
 				324EC6BA22FA74EC00CBC988 /* AliTradeWebViewController.m in Sources */,
 				324EC5FF22FA74EC00CBC988 /* CTUserEditViewController.m in Sources */,
-				324EC4F822FA74EC00CBC988 /* CTGoodsDescView.m in Sources */,
+				324EC4F822FA74EC00CBC988 /* FJGoodsDescViewfj.m in Sources */,
 				324EC65822FA74EC00CBC988 /* UIAlertView+Helper.m in Sources */,
 				324EC50622FA74EC00CBC988 /* CTHomeViewModel.m in Sources */,
 				324EC63D22FA74EC00CBC988 /* CLTextField.m in Sources */,
@@ -4964,7 +4964,7 @@
 				324EC63E22FA74EC00CBC988 /* CLTextView.m in Sources */,
 				324EC67822FA74EC00CBC988 /* NSTimer+YYAdd.m in Sources */,
 				324EC70422FAB18B00CBC988 /* FJVideoGoodListCell.m in Sources */,
-				324EC4EF22FA74EC00CBC988 /* CTVideoShopPageController.m in Sources */,
+				324EC4EF22FA74EC00CBC988 /* FJVideoShopPageControllerfj.m in Sources */,
 				324EC54A22FA74EC00CBC988 /* CTMemberTitleView.m in Sources */,
 				324EC60022FA74EC00CBC988 /* CTEditInputView.m in Sources */,
 				324EC5B722FA74EC00CBC988 /* CTGoodSearchViewController.m in Sources */,
@@ -4987,7 +4987,7 @@
 				324EC62022FA74EC00CBC988 /* CLModuleManager.m in Sources */,
 				324EC66A22FA74EC00CBC988 /* NSDictionary+Category.m in Sources */,
 				324EC63122FA74EC00CBC988 /* ImagePicker.m in Sources */,
-				324EC4EA22FA74EC00CBC988 /* CTSpreeShopListViewController.m in Sources */,
+				324EC4EA22FA74EC00CBC988 /* FJSpreeShopListViewControllerfj.m in Sources */,
 				324EC6E122FAAF6600CBC988 /* CTJdpDetailViewController.m in Sources */,
 				324EC6C122FA74EC00CBC988 /* UIScrollView+CTPagePanGes.m in Sources */,
 				324EC6A322FA74EC00CBC988 /* CTView.m in Sources */,
@@ -5017,11 +5017,11 @@
 				324EC56022FA74EC00CBC988 /* CTMessageService.m in Sources */,
 				324EC5E522FA74EC00CBC988 /* CTIvCodeImgView.m in Sources */,
 				324EC66522FA74EC00CBC988 /* DateUtil.m in Sources */,
-				324EC4FC22FA74EC00CBC988 /* CTGoodsImgsHeadView.m in Sources */,
+				324EC4FC22FA74EC00CBC988 /* FJGoodsImgsHeadViewfj.m in Sources */,
 				324EC50D22FA74EC00CBC988 /* CTHomeNewestHeadView.m in Sources */,
 				324EC5C422FA74EC00CBC988 /* CTSearchTicketViewModel.m in Sources */,
 				324EC65F22FA74EC00CBC988 /* UITextField+Helper.m in Sources */,
-				324EC4E922FA74EC00CBC988 /* CTNineNineListViewController.m in Sources */,
+				324EC4E922FA74EC00CBC988 /* FJNineNineListViewControllerfj.m in Sources */,
 				324EC49722FA74EB00CBC988 /* CTAlertView.m in Sources */,
 				324EC6AC22FA74EC00CBC988 /* CTNetworkEngine+Common.m in Sources */,
 				324EC57622FA74EC00CBC988 /* CTOrderPageController.m in Sources */,
@@ -5045,7 +5045,7 @@
 				324EC65222FA74EC00CBC988 /* LMWebView.m in Sources */,
 				324EC5EC22FA74EC00CBC988 /* CTQuestionModel.m in Sources */,
 				324EC52322FA74EC00CBC988 /* CTThirdRegController.m in Sources */,
-				324EC4F022FA74EC00CBC988 /* CTGoodsBuyView.m in Sources */,
+				324EC4F022FA74EC00CBC988 /* FJGoodsBuyViewfj.m in Sources */,
 				324EC6AE22FA74EC00CBC988 /* CTNetworkEngine+H5Url.m in Sources */,
 				324EC69F22FA74EC00CBC988 /* CTLeftTextButton.m in Sources */,
 				324EC5F322FA74EC00CBC988 /* CTToolViewController.m in Sources */,
@@ -5081,12 +5081,12 @@
 				324EC57322FA74EC00CBC988 /* CTMyCollectListViewController.m in Sources */,
 				324EC4AF22FA74EB00CBC988 /* CTGoodListCell.m in Sources */,
 				324EC74722FAB4D800CBC988 /* CTMrdkViewController.m in Sources */,
-				324EC4F622FA74EC00CBC988 /* CTGoodsDescPreView.m in Sources */,
+				324EC4F622FA74EC00CBC988 /* FJGoodsDescPreViewfj.m in Sources */,
 				324EC53322FA74EC00CBC988 /* CTLoginView.m in Sources */,
 				324EC5F822FA74EC00CBC988 /* CTSxyTypeView.m in Sources */,
 				324EC66322FA74EC00CBC988 /* UIViewController+Helper.m in Sources */,
 				324EC4E322FA74EC00CBC988 /* FJHandpickListCellfj.m in Sources */,
-				324EC4E722FA74EC00CBC988 /* CTHotSalesNoticeView.m in Sources */,
+				324EC4E722FA74EC00CBC988 /* FJHotSalesNoticeViewfj.m in Sources */,
 				324EC54F22FA74EC00CBC988 /* CTMemberEquityItemView.m in Sources */,
 				324EC57722FA74EC00CBC988 /* CTProfitShareViewController.m in Sources */,
 				324EC5F622FA74EC00CBC988 /* CTSxyListCell.m in Sources */,
@@ -5135,7 +5135,7 @@
 				324EC61C22FA74EC00CBC988 /* CTWithdrawSuccessView.m in Sources */,
 				324EC66C22FA74EC00CBC988 /* NSString+Category.m in Sources */,
 				324EC74422FAB4D800CBC988 /* CTMrdkService.m in Sources */,
-				324EC4EB22FA74EC00CBC988 /* CTSpreeShopPageController.m in Sources */,
+				324EC4EB22FA74EC00CBC988 /* FJSpreeShopPageControllerfj.m in Sources */,
 				324EC5B622FA74EC00CBC988 /* CTGoodResultViewController.m in Sources */,
 				324EC60C22FA74EC00CBC988 /* CTWithdrawService.m in Sources */,
 				324EC64922FA74EC00CBC988 /* WCQRCodeVC.m in Sources */,
@@ -5176,7 +5176,7 @@
 				324EC75322FAB4D800CBC988 /* CTMrdkPaySuccessView.m in Sources */,
 				324EC6BE22FA74EC00CBC988 /* UMMobcClickManager.m in Sources */,
 				324EC54122FA74EC00CBC988 /* CTMemberService.m in Sources */,
-				324EC4EC22FA74EC00CBC988 /* CTVideoGoodListCell.m in Sources */,
+				324EC4EC22FA74EC00CBC988 /* FJVideoGoodListCellfj.m in Sources */,
 				324EC63C22FA74EC00CBC988 /* CLPayPasswordView.m in Sources */,
 				324EC5B122FA74EC00CBC988 /* CTProCommentView.m in Sources */,
 				324EC62522FA74EC00CBC988 /* CLTaskRequest.m in Sources */,

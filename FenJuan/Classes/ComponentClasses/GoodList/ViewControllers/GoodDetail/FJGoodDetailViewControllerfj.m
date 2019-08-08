@@ -7,18 +7,18 @@
 //
 
 #import "FJGoodDetailViewControllerfj.h"
-#import "CTGoodsImgsView.h"
-#import "CTGoodsDescView.h"
-#import "CTGoodsCouponView.h"
-#import "CTGoodsBuyView.h"
+#import "FJGoodsImgsViewfj.h"
+#import "FJGoodsDescViewfj.h"
+#import "FJGoodsCouponViewfj.h"
+#import "FJGoodsBuyViewfj.h"
 #import "CTNetworkEngine+Goods.h"
 #import "CTGoodsViewModel.h"
 #import "FJGoodsPreViewControllerfj.h"
 #import "CTGoodDetailNavbar.h"
 #import "CTSharePopView.h"
-#import "CTGoodsContentView.h"
-#import "CTGoodsImgsHeadView.h"
-#import "CTGoodsImgCell.h"
+#import "FJGoodsContentViewfj.h"
+#import "FJGoodsImgsHeadViewfj.h"
+#import "FJGoodsImgCellfj.h"
 @interface CTGoodsTableView:UITableView
 @property (nonatomic, assign) BOOL scrollViewAllowMultiGes;
 @end
@@ -35,12 +35,12 @@
 @property (nonatomic, strong) CTGoodsTableView *tableView;
 @property (nonatomic, strong) UIView *headView;
 @property (nonatomic, strong) CTGoodDetailNavbar *navBar;
-@property (nonatomic, strong) CTGoodsImgsView *imgsView;
-@property (nonatomic, strong) CTGoodsDescView *descView;
-@property (nonatomic, strong) CTGoodsCouponView *couponView;
-@property (nonatomic, strong) CTGoodsContentView *contentView;
-@property (nonatomic, strong) CTGoodsBuyView *buyView;
-@property (nonatomic, strong) CTGoodsImgsHeadView *imgsHeadView;
+@property (nonatomic, strong) FJGoodsImgsViewfj *imgsView;
+@property (nonatomic, strong) FJGoodsDescViewfj *descView;
+@property (nonatomic, strong) FJGoodsCouponViewfj *couponView;
+@property (nonatomic, strong) FJGoodsContentViewfj *contentView;
+@property (nonatomic, strong) FJGoodsBuyViewfj *buyView;
+@property (nonatomic, strong) FJGoodsImgsHeadViewfj *imgsHeadView;
 @property (nonatomic, copy) NSArray <CTGoodsImgModel *> *imgs;
 
 @end
@@ -54,7 +54,7 @@
         _tableView.delegate = self;
         _tableView.dataSource = self;
         _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-        [_tableView registerNib:[UINib nibWithNibName:NSStringFromClass(CTGoodsImgCell.class) bundle:nil] forCellReuseIdentifier:NSStringFromClass(CTGoodsImgCell.class)];
+        [_tableView registerNib:[UINib nibWithNibName:NSStringFromClass(FJGoodsImgCellfj.class) bundle:nil] forCellReuseIdentifier:NSStringFromClass(FJGoodsImgCellfj.class)];
         if (@available(iOS 11.0, *)) {
             _tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
         } 
@@ -69,39 +69,39 @@
     return _navBar;
 }
 
-- (CTGoodsImgsView *)imgsView{
+- (FJGoodsImgsViewfj *)imgsView{
     if(!_imgsView){
-        _imgsView = [[CTGoodsImgsView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_WIDTH)];
+        _imgsView = [[FJGoodsImgsViewfj alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_WIDTH)];
     }
     return _imgsView;
 }
-- (CTGoodsDescView *)descView{
+- (FJGoodsDescViewfj *)descView{
     if(!_descView){
-        _descView = NSMainBundleClass(CTGoodsDescView.class);
+        _descView = NSMainBundleClass(FJGoodsDescViewfj.class);
     }
     return _descView;
 }
-- (CTGoodsCouponView *)couponView{
+- (FJGoodsCouponViewfj *)couponView{
     if(!_couponView){
-        _couponView = NSMainBundleClass(CTGoodsCouponView.class);
+        _couponView = NSMainBundleClass(FJGoodsCouponViewfj.class);
     }
     return _couponView;
 }
-- (CTGoodsContentView *)contentView{
+- (FJGoodsContentViewfj *)contentView{
     if(!_contentView){
-        _contentView = NSMainBundleClass(CTGoodsContentView.class);
+        _contentView = NSMainBundleClass(FJGoodsContentViewfj.class);
     }
     return _contentView;
 }
-- (CTGoodsBuyView *)buyView{
+- (FJGoodsBuyViewfj *)buyView{
     if(!_buyView){
-        _buyView = NSMainBundleClass(CTGoodsBuyView.class);
+        _buyView = NSMainBundleClass(FJGoodsBuyViewfj.class);
     }
     return _buyView;
 }
-- (CTGoodsImgsHeadView *)imgsHeadView{
+- (FJGoodsImgsHeadViewfj *)imgsHeadView{
     if(!_imgsHeadView){
-        _imgsHeadView = NSMainBundleClass(CTGoodsImgsHeadView.class);
+        _imgsHeadView = NSMainBundleClass(FJGoodsImgsHeadViewfj.class);
     }
     return _imgsHeadView;
 }
@@ -202,10 +202,10 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     CTGoodsImgModel *model = self.imgs[indexPath.row];
     CGSize size = [model.size CGSizeValue];
-    return [CTGoodsImgCell heightForImgSize:size];
+    return [FJGoodsImgCellfj heightForImgSize:size];
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    CTGoodsImgCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(CTGoodsImgCell.class)];
+    FJGoodsImgCellfj *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(FJGoodsImgCellfj.class)];
     CTGoodsImgModel *model = self.imgs[indexPath.row];
     [cell.goodImageView sd_setImageWithURL:[NSURL URLWithString:model.img] completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
         [model checkAndAmendWithRealSize:image.size];

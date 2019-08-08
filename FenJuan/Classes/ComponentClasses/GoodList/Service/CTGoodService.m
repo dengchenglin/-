@@ -12,15 +12,15 @@
 
 #import "FJGoodDetailViewControllerfj.h"
 
-#import "CTNineNineListViewController.h"
+#import "FJNineNineListViewControllerfj.h"
 
-#import "CTHandpickListViewController.h"
+#import "FJHandpickListViewControllerfj.h"
 
-#import "CThotSalesListViewController.h"
+#import "FJHotSalesListViewControllerfj.h"
 
-#import "CTSpreeShopPageController.h"
+#import "FJSpreeShopPageControllerfj.h"
 
-#import "CTVideoShopPageController.h"
+#import "FJVideoShopPageControllerfj.h"
 
 @implementation CTGoodService
 
@@ -50,23 +50,23 @@ CL_EXPORT_MODULE(CTGoodListServiceProtocol)
 }
 
 - (UIViewController *)hotsalesViewController{
-    return [CThotSalesListViewController new];
+    return [FJHotSalesListViewControllerfj new];
 }
 
 - (UIViewController *)nineListViewController{
-    return [CTNineNineListViewController new];
+    return [FJNineNineListViewControllerfj new];
 }
 
 - (UIViewController *)handpickShopViewController{
-    return [CTHandpickListViewController new];
+    return [FJHandpickListViewControllerfj new];
 }
 
 - (UIViewController *)spreeShopViewController{
-    return [CTSpreeShopPageController new];
+    return [FJSpreeShopPageControllerfj new];
 }
 
 - (UIViewController *)videoShopViewController{
-    return [CTVideoShopPageController new];
+    return [FJVideoShopPageControllerfj new];
 }
 
 @end
