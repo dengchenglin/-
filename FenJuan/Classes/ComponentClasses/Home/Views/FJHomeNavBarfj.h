@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CTHomeNavBar : UIView
+@interface FJHomeNavBarfj : UIView
 @property (weak, nonatomic) IBOutlet UIView *lqView;
 @property (weak, nonatomic) IBOutlet UIView *sqglView;
 

@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface CTHomeSearchBar : UIView
+@interface FJHomeSearchBarfj : UIView
 @property (nonatomic, strong) NSString *whx;
 @property (nonatomic, strong) NSString *wodefuk;
 @property (nonatomic, strong) NSString *yapnima;

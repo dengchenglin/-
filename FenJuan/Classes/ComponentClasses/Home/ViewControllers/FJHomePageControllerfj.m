@@ -6,17 +6,17 @@
 //  Copyright © 2019年 Danke. All rights reserved.
 //
 
-#import "CTHomePageController.h"
+#import "FJHomePageControllerfj.h"
 
 #import "CTHomeTopView.h"
 
 #import "UIPageControlManager.h"
 
-#import "CTHomeViewModel.h"
+#import "FJHomeViewModelfj.h"
 
-#import "CTHomeViewController.h"
+#import "FJHomeViewControllerfj.h"
 
-#import "CTHomeCatoryViewController.h"
+#import "FJHomeCatoryViewControllerfj.h"
 
 #import "CTMainCategoryView.h"
 
@@ -24,7 +24,7 @@
 
 #import "CTNetworkEngine+H5Url.h"
 
-@interface CTHomePageController ()<UIPageControlManagerDataSoure,UIPageControlManagerDelegate>
+@interface FJHomePageControllerfj ()<UIPageControlManagerDataSoure,UIPageControlManagerDelegate>
 
 @property (nonatomic, strong) CTHomeTopView *topView;
 
@@ -33,11 +33,11 @@
 
 @property (nonatomic, strong) UIPageControlManager *pageControlManager;
 
-@property (nonatomic, strong) CTHomeViewModel *viewModel;
+@property (nonatomic, strong) FJHomeViewModelfj *viewModel;
 
 @end
 
-@implementation CTHomePageController
+@implementation FJHomePageControllerfj
 
 - (NSMutableArray <UIViewController *>*)viewControllers{
     if(!_viewControllers){
@@ -128,17 +128,17 @@
 - (void)reloadData:(id)data{
 
    FJHomeModelfj *model = [FJHomeModelfj yy_modelWithDictionary:data];
-    self.viewModel = [CTHomeViewModel bindModel:model];
+    self.viewModel = [FJHomeViewModelfj bindModel:model];
     [self.viewControllers removeAllObjects];
     for(int i = 0;i < self.viewModel.model.cate.count;i ++){
         UIViewController *vc;
         if(i == 0){
-            vc = [[CTHomeViewController alloc]init];
-            ((CTHomeViewController *)vc).viewModel = _viewModel;
+            vc = [[FJHomeViewControllerfj alloc]init];
+            ((FJHomeViewControllerfj *)vc).viewModel = _viewModel;
         }
         else{
-            vc = [[CTHomeCatoryViewController alloc]init];
-            ((CTHomeCatoryViewController *)vc).cateId = self.viewModel.model.cate[i].uid;
+            vc = [[FJHomeCatoryViewControllerfj alloc]init];
+            ((FJHomeCatoryViewControllerfj *)vc).cateId = self.viewModel.model.cate[i].uid;
         }
         ((id<CTPageControllerProtocol>)vc).bounds = CGRectMake(0, 0, self.pageControlManager.pageViewControllerFrame.size.width, self.pageControlManager.pageViewControllerFrame.size.height);
         [self.viewControllers addObject:vc];

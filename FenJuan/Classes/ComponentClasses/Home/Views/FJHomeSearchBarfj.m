@@ -6,7 +6,7 @@
 //  Copyright © 2019年 Danke. All rights reserved.
 //
 
-#import "CTHomeSearchBar.h"
+#import "FJHomeSearchBarfj.h"
 
 @interface CTHomeSearchTfd:UITextField
 @end
@@ -16,9 +16,9 @@
 
 
 @end
-@interface CTHomeSearchBar()<UITextFieldDelegate>
+@interface FJHomeSearchBarfj()<UITextFieldDelegate>
 @end
-@implementation CTHomeSearchBar
+@implementation FJHomeSearchBarfj
 
 - (void)awakeFromNib{
     [super awakeFromNib];

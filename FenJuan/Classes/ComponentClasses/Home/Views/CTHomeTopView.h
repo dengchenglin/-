@@ -8,9 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-#import "CTHomeNavBar.h"
+#import "FJHomeNavBarfj.h"
 
-#import "CTHomeSearchBar.h"
+#import "FJHomeSearchBarfj.h"
 
 #import "CTMainCategoryControl.h"
 
@@ -18,9 +18,9 @@
 @property (nonatomic, strong) NSString *whx;
 @property (nonatomic, strong) NSString *wodefuk;
 @property (nonatomic, strong) NSString *yapnima;
-@property (nonatomic, strong) CTHomeNavBar *navBar;
+@property (nonatomic, strong) FJHomeNavBarfj *navBar;
 
-@property (nonatomic, strong) CTHomeSearchBar *searchBar;
+@property (nonatomic, strong) FJHomeSearchBarfj *searchBar;
 
 @property (nonatomic, strong) CTMainCategoryControl *categoryControl;
 

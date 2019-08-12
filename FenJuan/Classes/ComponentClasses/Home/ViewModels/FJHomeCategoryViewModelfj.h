@@ -14,7 +14,7 @@
 
 #import "CTGoodsModel.h"
 
-@interface CTHomeCategoryViewModel : CTViewModel
+@interface FJHomeCategoryViewModelfj : CTViewModel
 
 //主分类Id
 @property (nonatomic, copy) NSString *main_category_id;

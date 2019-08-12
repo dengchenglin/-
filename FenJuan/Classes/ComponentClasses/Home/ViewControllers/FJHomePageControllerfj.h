@@ -1,20 +1,14 @@
 //
-//  CTHomeAdvertView.h
+//  CTHomePageController.h
 //  CouponTicket
 //
 //  Created by dengchenglin on 2019/1/19.
 //  Copyright © 2019年 Danke. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "CTBaseViewController.h"
 
-#import "CTActivityModel.h"
-
-@interface CTHomeAdvertView : UIView
-
-@property (nonatomic, strong) UIImageView *imageView;
-
-@property (nonatomic, strong) CTActivityModel *model;
+@interface FJHomePageControllerfj : CTBaseViewController
 @property (nonatomic, strong) NSString *whx;
 @property (nonatomic, strong) NSString *wodefuk;
 @property (nonatomic, strong) NSString *yapnima;

@@ -6,11 +6,11 @@
 //  Copyright © 2019年 Danke. All rights reserved.
 //
 
-#import "CTHomeCatoryViewController.h"
+#import "FJHomeCatoryViewControllerfj.h"
 
 #import "CTMainCategoryView.h"
 
-#import "CTHomeCategoryViewModel.h"
+#import "FJHomeCategoryViewModelfj.h"
 
 #import "CTGoodListCell.h"
 
@@ -18,7 +18,7 @@
 
 #import "CTNetworkEngine+Index.h"
 
-@interface CTHomeCatoryViewController ()<UITableViewDelegate,UITableViewDataSource>
+@interface FJHomeCatoryViewControllerfj ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic, strong) NSString *whx;
 @property (nonatomic, strong) NSString *wodefuk;
 @property (nonatomic, strong) NSString *yapnima;
@@ -30,7 +30,7 @@
 
 @property (nonatomic, strong) CTGoodSortView *sortView;
 
-@property (nonatomic, strong) CTHomeCategoryViewModel *viewModel;
+@property (nonatomic, strong) FJHomeCategoryViewModelfj *viewModel;
 
 @property (nonatomic, assign) NSUInteger pageIndex;
 
@@ -44,7 +44,7 @@
 
 @end
 
-@implementation CTHomeCatoryViewController
+@implementation FJHomeCatoryViewControllerfj
 
 @synthesize bounds = _bounds;
 
@@ -64,9 +64,9 @@
     return _sortView;
 }
 
-- (CTHomeCategoryViewModel *)viewModel{
+- (FJHomeCategoryViewModelfj *)viewModel{
     if(!_viewModel){
-        _viewModel = [CTHomeCategoryViewModel new];
+        _viewModel = [FJHomeCategoryViewModelfj new];
     }
     return _viewModel;
 }

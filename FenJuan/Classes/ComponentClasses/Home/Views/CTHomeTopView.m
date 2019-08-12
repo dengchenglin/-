@@ -172,10 +172,10 @@ ViewInstance(setUp)
     _containerView.layer.contents = (__bridge id)[UIImage imageNamed:@"p_nav_bg"].CGImage;
     [self addSubview:_containerView];
     
-    _navBar = NSMainBundleClass(CTHomeNavBar.class);
+    _navBar = NSMainBundleClass(FJHomeNavBarfj.class);
     [_containerView addSubview:_navBar];
     
-    _searchBar = NSMainBundleClass(CTHomeSearchBar.class);
+    _searchBar = NSMainBundleClass(FJHomeSearchBarfj.class);
     [_containerView addSubview:_searchBar];
     
     _categoryControl = [[CTMainCategoryControl alloc]init];

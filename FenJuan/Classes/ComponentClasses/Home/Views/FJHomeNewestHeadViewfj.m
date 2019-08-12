@@ -6,9 +6,9 @@
 //  Copyright © 2019 Danke. All rights reserved.
 //
 
-#import "CTHomeNewestHeadView.h"
+#import "FJHomeNewestHeadViewfj.h"
 
-@implementation CTHomeNewestHeadView
+@implementation FJHomeNewestHeadViewfj
 
 /*
 // Only override drawRect: if you perform custom drawing.

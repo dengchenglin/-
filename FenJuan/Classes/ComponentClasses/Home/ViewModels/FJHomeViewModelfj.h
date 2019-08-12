@@ -14,7 +14,7 @@
 
 #import "CTGoodsViewModel.h"
 
-@interface CTHomeViewModel : CTViewModel
+@interface FJHomeViewModelfj : CTViewModel
 
 @property (nonatomic, strong) FJHomeModelfj *model;
 

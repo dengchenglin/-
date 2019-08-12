@@ -33,13 +33,13 @@
     _model = model;
 
     self.earnButton.hidden = !([CTAppManager sharedInstance].showMember && [CTAppManager sharedInstance].showRanking);
-     _totalRebateLabel.text = [@"¥" stringByAppendingString:_model.all_money];
-    _priceLabel1.text = [@"¥" stringByAppendingString:_model.today_money];
-    _priceLabel2.text = [@"¥" stringByAppendingString:_model.month_money];
-    _priceLabel3.text = [@"¥" stringByAppendingString:_model.lm_money];
-    _priceLabel4.text = [@"¥" stringByAppendingString:_model.sl_today_money];
-    _priceLabel5.text = [@"¥" stringByAppendingString:_model.sl_month_money];
-    _priceLabel6.text = [@"¥" stringByAppendingString:_model.sl_lm_money];
+    _totalRebateLabel.text = [@"¥" stringByAppendingString:_model.all_money?:@""];
+    _priceLabel1.text = [@"¥" stringByAppendingString:_model.today_money?:@""];
+    _priceLabel2.text = [@"¥" stringByAppendingString:_model.month_money?:@""];
+    _priceLabel3.text = [@"¥" stringByAppendingString:_model.lm_money?:@""];
+    _priceLabel4.text = [@"¥" stringByAppendingString:_model.sl_today_money?:@""];
+    _priceLabel5.text = [@"¥" stringByAppendingString:_model.sl_month_money?:@""];
+    _priceLabel6.text = [@"¥" stringByAppendingString:_model.sl_lm_money?:@""];
     
 }
 

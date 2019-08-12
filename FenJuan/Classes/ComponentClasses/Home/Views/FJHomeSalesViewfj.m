@@ -6,11 +6,11 @@
 //  Copyright © 2019年 Danke. All rights reserved.
 //
 
-#import "CTHomeSalesView.h"
+#import "FJHomeSalesViewfj.h"
 
 #import "CTSalesItem.h"
 
-@implementation CTHomeSalesView
+@implementation FJHomeSalesViewfj
 {
     NSTimer *_timer;
 }

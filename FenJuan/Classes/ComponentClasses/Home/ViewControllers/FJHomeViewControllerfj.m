@@ -6,17 +6,17 @@
 //  Copyright © 2019年 Danke. All rights reserved.
 //
 
-#import "CTHomeViewController.h"
+#import "FJHomeViewControllerfj.h"
 
-#import "CTHomeBannerView.h"
+#import "FJHomeBannerViewfj.h"
 
-#import "CTHomeAdvertView.h"
+#import "FJHomeAdvertViewfj.h"
 
-#import "CTHomeNavView.h"
+#import "FJHomeNavViewfj.h"
 
-#import "CTHomeSalesView.h"
+#import "FJHomeSalesViewfj.h"
 
-#import "CTHomeNewestHeadView.h"
+#import "FJHomeNewestHeadViewfj.h"
 
 #import "CTGoodListCell.h"
 
@@ -24,27 +24,27 @@
 
 #import "CTNetworkEngine+Index.h"
 
-@interface CTHomeViewController ()<UITableViewDelegate,UITableViewDataSource>
+@interface FJHomeViewControllerfj ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic, strong) UITableView *tableView;
 
 @property (nonatomic, strong) UIView *headView;
 
-@property (nonatomic, strong) CTHomeBannerView *bannerView;
+@property (nonatomic, strong) FJHomeBannerViewfj *bannerView;
 
-@property (nonatomic, strong) CTHomeAdvertView *advertView;
+@property (nonatomic, strong) FJHomeAdvertViewfj *advertView;
 
-@property (nonatomic, strong) CTHomeNavView *navView;
+@property (nonatomic, strong) FJHomeNavViewfj *navView;
 
 @property (nonatomic, strong) CTHomeSpreeShopView *spreeShopView;
 
-@property (nonatomic, strong) CTHomeSalesView *salesView;
+@property (nonatomic, strong) FJHomeSalesViewfj *salesView;
 
-@property (nonatomic, strong) CTHomeNewestHeadView *newestHeadView;
+@property (nonatomic, strong) FJHomeNewestHeadViewfj *newestHeadView;
 
 @end
 
-@implementation CTHomeViewController
+@implementation FJHomeViewControllerfj
 
 @synthesize bounds = _bounds;
 
@@ -64,23 +64,23 @@
     return _tableView;
 }
 
-- (CTHomeBannerView *)bannerView{
+- (FJHomeBannerViewfj *)bannerView{
     if(!_bannerView){
-        _bannerView = [[CTHomeBannerView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 0.48 * SCREEN_WIDTH)];
+        _bannerView = [[FJHomeBannerViewfj alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 0.48 * SCREEN_WIDTH)];
     }
     return _bannerView;
 }
 
-- (CTHomeAdvertView *)advertView{
+- (FJHomeAdvertViewfj *)advertView{
     if(!_advertView){
-        _advertView = [[CTHomeAdvertView alloc]init];
+        _advertView = [[FJHomeAdvertViewfj alloc]init];
     }
     return _advertView;
 }
 
-- (CTHomeNavView *)navView{
+- (FJHomeNavViewfj *)navView{
     if(!_navView){
-        _navView = NSMainBundleClass(CTHomeNavView.class);
+        _navView = NSMainBundleClass(FJHomeNavViewfj.class);
     }
     return _navView;
 }
@@ -92,16 +92,16 @@
     return _spreeShopView;
 }
 
-- (CTHomeSalesView *)salesView{
+- (FJHomeSalesViewfj *)salesView{
     if(!_salesView){
-        _salesView = NSMainBundleClass(CTHomeSalesView.class);
+        _salesView = NSMainBundleClass(FJHomeSalesViewfj.class);
     }
     return _salesView;
 }
 
-- (CTHomeNewestHeadView *)newestHeadView{
+- (FJHomeNewestHeadViewfj *)newestHeadView{
     if(!_newestHeadView){
-        _newestHeadView = NSMainBundleClass(CTHomeNewestHeadView.class);
+        _newestHeadView = NSMainBundleClass(FJHomeNewestHeadViewfj.class);
     }
     return _newestHeadView;
 }
@@ -120,9 +120,9 @@
 }
 
 
-- (CTHomeViewModel *)viewModel{
+- (FJHomeViewModelfj *)viewModel{
     if(!_viewModel){
-        _viewModel = [CTHomeViewModel new];
+        _viewModel = [FJHomeViewModelfj new];
     }
     return _viewModel;
 }
@@ -203,7 +203,7 @@
 
 - (void)reloadData:(id)data{
     FJHomeModelfj *model = [FJHomeModelfj yy_modelWithDictionary:data];
-    self.viewModel = [CTHomeViewModel bindModel:model];
+    self.viewModel = [FJHomeViewModelfj bindModel:model];
     [self reloadView];
 }
 

@@ -10,7 +10,7 @@
 
 #import "CTHomeServiceProtocol.h"
 
-@interface CTHomeService : NSObject<CTHomeServiceProtocol>
+@interface FJHomeServicefj : NSObject<CTHomeServiceProtocol>
 
 
 

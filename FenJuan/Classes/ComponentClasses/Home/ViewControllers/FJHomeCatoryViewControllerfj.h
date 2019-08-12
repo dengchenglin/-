@@ -10,7 +10,7 @@
 
 #import "CTPageControllerProtocol.h"
 
-@interface CTHomeCatoryViewController : CTBaseViewController<CTPageControllerProtocol>
+@interface FJHomeCatoryViewControllerfj : CTBaseViewController<CTPageControllerProtocol>
 
 @property (nonatomic, copy) NSString *cateId;
 

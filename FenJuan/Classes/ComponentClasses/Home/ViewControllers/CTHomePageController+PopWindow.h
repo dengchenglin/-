@@ -6,8 +6,8 @@
 //  Copyright © 2019 Danke. All rights reserved.
 //
 
-#import "CTHomePageController.h"
+#import "FJHomePageControllerfj.h"
 
-@interface CTHomePageController (PopWindow)
+@interface FJHomePageControllerfj (PopWindow)
 
 @end

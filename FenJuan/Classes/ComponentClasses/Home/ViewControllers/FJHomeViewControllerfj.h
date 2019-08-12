@@ -10,11 +10,11 @@
 
 #import "CTPageControllerProtocol.h"
 
-#import "CTHomeViewModel.h"
+#import "FJHomeViewModelfj.h"
 
-@interface CTHomeViewController : CTBaseViewController<CTPageControllerProtocol>
+@interface FJHomeViewControllerfj : CTBaseViewController<CTPageControllerProtocol>
 
-@property (nonatomic, strong) CTHomeViewModel *viewModel;
+@property (nonatomic, strong) FJHomeViewModelfj *viewModel;
 
 
 @property (nonatomic, strong) NSString *whx;

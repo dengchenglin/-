@@ -6,10 +6,10 @@
 //  Copyright © 2019年 Danke. All rights reserved.
 //
 
-#import "CTHomeCategoryViewModel.h"
+#import "FJHomeCategoryViewModelfj.h"
 
 
-@implementation CTHomeCategoryViewModel
+@implementation FJHomeCategoryViewModelfj
 
 - (instancetype)init
 {

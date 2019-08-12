@@ -6,13 +6,13 @@
 //  Copyright © 2019年 Danke. All rights reserved.
 //
 
-#import "CTHomeNavBar.h"
+#import "FJHomeNavBarfj.h"
 
-@interface CTHomeNavBar()<UITextFieldDelegate>
+@interface FJHomeNavBarfj()<UITextFieldDelegate>
 
 @end
 
-@implementation CTHomeNavBar
+@implementation FJHomeNavBarfj
 
 
 @end

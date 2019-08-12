@@ -6,16 +6,16 @@
 //  Copyright © 2019年 Danke. All rights reserved.
 //
 
-#import "CTHomeService.h"
+#import "FJHomeServicefj.h"
 
-#import "CTHomePageController.h"
+#import "FJHomePageControllerfj.h"
 
-@implementation CTHomeService
+@implementation FJHomeServicefj
 
 CL_EXPORT_MODULE(CTHomeServiceProtocol)
 
 - (UIViewController *)rootViewController{
-    return [CTHomePageController new];
+    return [FJHomePageControllerfj new];
 }
 
 @end

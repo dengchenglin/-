@@ -6,12 +6,12 @@
 //  Copyright © 2019年 Danke. All rights reserved.
 //
 
-#import "CTHomeViewModel.h"
+#import "FJHomeViewModelfj.h"
 
-@implementation CTHomeViewModel
+@implementation FJHomeViewModelfj
 
 + (id)bindModel:(FJHomeModelfj *)model{
-    CTHomeViewModel *viewModel = [CTHomeViewModel new];
+    FJHomeViewModelfj *viewModel = [FJHomeViewModelfj new];
     viewModel.model = model;
     viewModel.now_goods = [CTGoodsViewModel bindModels:model.now_goods];
     if(model.cur_time_buy.goods.count){

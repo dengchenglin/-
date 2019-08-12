@@ -16,7 +16,7 @@
 
 #import "UIPasteboard+Helper.h"
 
-@implementation CTHomePageController (PopWindow)
+@implementation FJHomePageControllerfj (PopWindow)
 
 + (void)load{
     [self swizzleInstanceMethod:@selector(viewWillAppear:) with:@selector(ct_viewWillAppear:)];

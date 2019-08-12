@@ -10,7 +10,7 @@
 
 #import "FJHomeModelfj.h"
 
-@interface CTHomeSalesView : UIView
+@interface FJHomeSalesViewfj : UIView
 @property (weak, nonatomic) IBOutlet UIView *titleheadView;
 @property (weak, nonatomic) IBOutlet UIView *goodsView;
 @property (weak, nonatomic) IBOutlet UILabel *timeLabel;

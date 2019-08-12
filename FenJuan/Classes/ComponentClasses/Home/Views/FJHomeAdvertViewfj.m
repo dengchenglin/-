@@ -6,9 +6,9 @@
 //  Copyright © 2019年 Danke. All rights reserved.
 //
 
-#import "CTHomeAdvertView.h"
+#import "FJHomeAdvertViewfj.h"
 
-@implementation CTHomeAdvertView
+@implementation FJHomeAdvertViewfj
 
 ViewInstance(setUp)
 

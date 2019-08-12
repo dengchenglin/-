@@ -6,9 +6,9 @@
 //  Copyright © 2019年 Danke. All rights reserved.
 //
 
-#import "CTHomeNavView.h"
+#import "FJHomeNavViewfj.h"
 
-@interface CTHomeNavView ()
+@interface FJHomeNavViewfj ()
 
 @property (weak, nonatomic) IBOutlet UIButton *item1;
 @property (weak, nonatomic) IBOutlet UIButton *item2;
@@ -18,7 +18,7 @@
 
 @end
 
-@implementation CTHomeNavView
+@implementation FJHomeNavViewfj
 
 ViewInstance(setUp)
 

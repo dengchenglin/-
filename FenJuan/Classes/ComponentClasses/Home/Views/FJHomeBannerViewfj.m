@@ -6,17 +6,17 @@
 //  Copyright © 2019年 Danke. All rights reserved.
 //
 
-#import "CTHomeBannerView.h"
+#import "FJHomeBannerViewfj.h"
 
 #import "SDCycleScrollView.h"
 
 #import "UIView+YYAdd.h"
 
-@interface CTHomeBannerView()<SDCycleScrollViewDelegate>
+@interface FJHomeBannerViewfj()<SDCycleScrollViewDelegate>
 
 @end
 
-@implementation CTHomeBannerView{
+@implementation FJHomeBannerViewfj{
     SDCycleScrollView *_cycleScrollView;
 }
 

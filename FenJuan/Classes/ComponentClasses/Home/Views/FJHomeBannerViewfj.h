@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CTHomeBannerView : UIView
+@interface FJHomeBannerViewfj : UIView
 
 @property (nonatomic, copy) void (^clickItemBlock)(NSInteger index);
 
