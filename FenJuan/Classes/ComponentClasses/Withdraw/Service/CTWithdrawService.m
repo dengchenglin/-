@@ -29,7 +29,7 @@ CL_EXPORT_MODULE(CTWithdrawServiceProtocol)
             cashBlock();
         }
         else{
-            [[CTModuleManager loginService]pushWithdrawSetpsdFromViewController:viewController mobile:[CTAppManager user].phone completed:^{
+            [[CTModuleManager loginService]fj_pushWithdrawSetpsdFromViewController:viewController mobile:[CTAppManager user].phone completed:^{
                 [viewController.navigationController popToViewController:viewController animated:NO];
                 cashBlock();
             }];
@@ -39,7 +39,7 @@ CL_EXPORT_MODULE(CTWithdrawServiceProtocol)
         checkPaypwdBlock();
     }
     else{
-        [[CTModuleManager loginService] pushBoundAlipayFromViewController:viewController completed:^{
+        [[CTModuleManager loginService] fj_pushBoundAlipayFromViewController:viewController completed:^{
             [viewController.navigationController popToViewController:viewController animated:NO];
             checkPaypwdBlock();
         }];

@@ -12,15 +12,15 @@
 
 @protocol CTWebServiceProtocol <NSObject,CLModuleServiceProtocol>
 
-- (UIViewController *)pushWebFromViewController:(UIViewController *)viewController htmlString:(NSString *)htmlString;
+- (UIViewController *)fj_pushWebFromViewController:(UIViewController *)viewController htmlString:(NSString *)htmlString;
 
-- (UIViewController *)pushWebFromViewController:(UIViewController *)viewController url:(NSString *)url;
+- (UIViewController *)fj_pushWebFromViewController:(UIViewController *)viewController url:(NSString *)url;
 
-- (UIViewController *)showWebFromViewController:(UIViewController *)viewController htmlString:(NSString *)htmlString;
+- (UIViewController *)fj_showWebFromViewController:(UIViewController *)viewController htmlString:(NSString *)htmlString;
 
-- (UIViewController *)showWebFromViewController:(UIViewController *)viewController url:(NSString *)url;
+- (UIViewController *)fj_showWebFromViewController:(UIViewController *)viewController url:(NSString *)url;
 
-- (UIViewController *)tbAuthFromViewController:(UIViewController *)viewController url:(NSString *)url callback:(void(^)(id data))callback;
+- (UIViewController *)fj_tbAuthFromViewController:(UIViewController *)viewController url:(NSString *)url callback:(void(^)(id data))callback;
 
-- (void)tbAuthFromViewController:(UIViewController *)viewController completed:(void(^)(void))completed;
+- (void)fj_tbAuthFromViewController:(UIViewController *)viewController completed:(void(^)(void))completed;
 @end

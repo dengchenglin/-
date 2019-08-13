@@ -8,14 +8,14 @@
 
 #import "CTMineService.h"
 
-#import "CTMineViewController.h"
+#import "FJMineViewControllerfj.h"
 
 @implementation CTMineService
 
 CL_EXPORT_MODULE(CTMineServiceProtocol)
 
 - (UIViewController *)rootViewController{
-    return [CTMineViewController new];
+    return [FJMineViewControllerfj new];
 }
 
 @end

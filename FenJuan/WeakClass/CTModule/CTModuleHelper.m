@@ -18,17 +18,17 @@ static const int linkActions_assoc_key;
     
     if(!actions){
         actions = @{@(CTLinkWeb):^UIViewController *(CTActivityModel *info,UIViewController *pushingVc){
-            UIViewController *vc = [[CTModuleManager webService] pushWebFromViewController:pushingVc url:info.href];
+            UIViewController *vc = [[CTModuleManager webService] fj_pushWebFromViewController:pushingVc url:info.href];
             vc.title = info.title;
             return vc;
         },@(CTLinkGoodsDetail):^UIViewController *(CTActivityModel *info,UIViewController *pushingVc){
-            UIViewController *vc = [[CTModuleManager goodListService]goodDetailViewControllerWithGoodId:info.href];
+            UIViewController *vc = [[CTModuleManager goodListService]fj_goodDetailViewControllerWithGoodId:info.href];
             [pushingVc.navigationController pushViewController:vc animated:YES];
             return vc;
         },@(CTLinkRegister):^UIViewController *(CTActivityModel *info,UIViewController *pushingVc){
             [CTAppManager logout];
             UIViewController *vc = [UIUtil getCurrentViewController];
-            [[CTModuleManager loginService]showRegisterFromViewController:vc inviteCode:info.href callback:nil];
+            [[CTModuleManager loginService]fj_showRegisterFromViewController:vc inviteCode:info.href callback:nil];
             return nil;
         }};
         objc_setAssociatedObject(self, &linkActions_assoc_key, actions, OBJC_ASSOCIATION_RETAIN_NONATOMIC);

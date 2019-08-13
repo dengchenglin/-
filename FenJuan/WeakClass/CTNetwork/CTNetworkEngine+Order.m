@@ -12,7 +12,7 @@
 
 @implementation CTNetworkEngine (Order)
 
-- (CLRequest *)orderIndexWithPage:(NSInteger)page size:(NSInteger)size tkStatus:(CTOrderStatus)status callback:(CTResponseBlock)callback{
+- (CLRequest *)fj_orderIndexWithPage:(NSInteger)page size:(NSInteger)size tkStatus:(CTOrderStatus)status callback:(CTResponseBlock)callback{
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     [params setValue:@(page) forKey:@"page"];
     [params setValue:@(size) forKey:@"size"];

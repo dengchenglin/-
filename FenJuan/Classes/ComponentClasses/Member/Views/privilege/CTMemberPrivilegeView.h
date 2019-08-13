@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-#import "CTMemberTitleView.h"
+#import "FJMemberTitleView.h"
 
 #import "CTMemberPrivilegeItem.h"
 
@@ -16,7 +16,7 @@
 
 @interface CTMemberPrivilegeView : UIView
 
-@property (nonatomic, strong) CTMemberTitleView *titleView;
+@property (nonatomic, strong) FJMemberTitleView *titleView;
 
 @property (nonatomic, copy) NSArray <CTMemberGradePowerModel *>*models;
 @property (nonatomic, strong) NSString *hhwhy;

@@ -19,7 +19,7 @@
 ViewInstance(setUp)
 
 - (void)setUp{
-    _titleView = NSMainBundleClass(CTMemberTitleView.class);
+    _titleView = NSMainBundleClass(FJMemberTitleView.class);
     _titleView.titleLabel.text = @"我的特权";
     [self addSubview:_titleView];
     

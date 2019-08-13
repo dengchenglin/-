@@ -21,19 +21,19 @@
 - (CLRequest *)goodsDetailWithId:(NSString *)Id callback:(CTResponseBlock)callback;
 
 //获取商品链接（转链）
-- (CLRequest *)goodsUrlConvertWithTbGoodsInfo:(NSDictionary *)goodsInfo callback:(CTResponseBlock)callback;
+- (CLRequest *)fj_goodsUrlConvertWithTbGoodsInfo:(NSDictionary *)goodsInfo callback:(CTResponseBlock)callback;
 
 //搜索
-- (CLRequest *)goodsSearchWithKeyword:(NSString *)keyword page:(NSInteger)page size:(NSInteger)size order:(NSString *)order callback:(CTResponseBlock)callback;
+- (CLRequest *)fj_goodsSearchWithKeyword:(NSString *)keyword page:(NSInteger)page size:(NSInteger)size order:(NSString *)order callback:(CTResponseBlock)callback;
 //商品收藏
-- (CLRequest *)favoriteWithGoodsId:(NSString *)goodsId isFavorite:(BOOL)isFavorite callback:(CTResponseBlock)callback;
+- (CLRequest *)fj_favoriteWithGoodsId:(NSString *)goodsId isFavorite:(BOOL)isFavorite callback:(CTResponseBlock)callback;
 //热搜和搜索历史
-- (CLRequest *)searchHistoryWithCallback:(CTResponseBlock)callback;
+- (CLRequest *)fj_searchHistoryWithCallback:(CTResponseBlock)callback;
 //获取商品图片
-- (CLRequest *)goodsImgWithItemId:(NSString *)itemId callback:(CTResponseBlock)callback;
+- (CLRequest *)fj_goodsImgWithItemId:(NSString *)itemId callback:(CTResponseBlock)callback;
 
 //获取店铺信息
-- (CLRequest *)storeInfoWithItemId:(NSString *)itemId callback:(CTResponseBlock)callback;
+- (CLRequest *)fj_storeInfoWithItemId:(NSString *)itemId callback:(CTResponseBlock)callback;
 //商品分享编辑页面
 - (CLRequest *)goodsShareWithId:(NSString *)Id callback:(CTResponseBlock)callback;
 

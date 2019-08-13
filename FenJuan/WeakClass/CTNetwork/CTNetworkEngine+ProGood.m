@@ -12,7 +12,7 @@
 @implementation CTNetworkEngine (ProGood)
 
 //发圈
-- (CLRequest *)fqGoodsWithMinId:(NSString *)minId callback:(CTResponseBlock )callback{
+- (CLRequest *)fj_fqGoodsWithMinId:(NSString *)minId callback:(CTResponseBlock )callback{
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     [params setValue:@"1" forKey:@"cate_id"];
     [params setValue:minId forKey:@"min_id"];
@@ -20,7 +20,7 @@
 }
 
 //多品
-- (CLRequest *)fqMultipleGoodsWithMinId:(NSString *)minId callback:(CTResponseBlock )callback{
+- (CLRequest *)fj_fqMultipleGoodsWithMinId:(NSString *)minId callback:(CTResponseBlock )callback{
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     [params setValue:@"2" forKey:@"cate_id"];
     [params setValue:minId forKey:@"min_id"];
@@ -28,19 +28,19 @@
 }
 
 //宣传素材
-- (CLRequest *)fqMaterialGoodsWithMinId:(NSString *)minId callback:(CTResponseBlock )callback{
+- (CLRequest *)fj_fqMaterialGoodsWithMinId:(NSString *)minId callback:(CTResponseBlock )callback{
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     [params setValue:@"3" forKey:@"cate_id"];
     [params setValue:minId forKey:@"min_id"];
     return [self postWithPath:CTProGood(@"fq_goods") params:params showHud:minId?NO:YES callback:callback];
 }
 
-- (CLRequest *)fastbuyCateWithCallback:(CTResponseBlock)callback{
+- (CLRequest *)fj_fastbuyCateWithCallback:(CTResponseBlock)callback{
     return [self postWithPath:CTProGood(@"fastbuy_cate") params:nil callback:callback];
 }
 
 //快抢列表
-- (CLRequest *)fastbuyGoodsWithCateId:(NSString *)cateId page:(NSInteger)page callback:(CTResponseBlock)callback{
+- (CLRequest *)fj_fastbuyGoodsWithCateId:(NSString *)cateId page:(NSInteger)page callback:(CTResponseBlock)callback{
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     [params setValue:@(page) forKey:@"page"];
     [params setValue:cateId forKey:@"cate_id"];

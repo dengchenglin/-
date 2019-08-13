@@ -65,7 +65,7 @@
 }
 
 - (void)request{
-    [CTRequest oftenProblemWithPage:self.pageIndex size:self.pageSize name:self.searchBar.searchTfd.text callback:^(id data, CLRequest *request, CTNetError error) {
+    [CTRequest fj_oftenProblemWithPage:self.pageIndex size:self.pageSize name:self.searchBar.searchTfd.text callback:^(id data, CLRequest *request, CTNetError error) {
         if(!error){
             [self analysisAndReloadWithData:data error:error modelClass:CTQuestionModel.class viewModelClass:nil];
         }
@@ -87,7 +87,7 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    UIViewController *vc = [[CTModuleManager webService]pushWebFromViewController:self htmlString:self.dataSources[indexPath.row].content];
+    UIViewController *vc = [[CTModuleManager webService]fj_pushWebFromViewController:self htmlString:self.dataSources[indexPath.row].content];
     vc.title = self.dataSources[indexPath.row].name;
 }
 

@@ -12,7 +12,7 @@
 
 #import "CTPasteCheckPopView.h"
 
-#import "CTGoodResultViewController.h"
+#import "FJGoodResultViewControllerfj.h"
 
 #import "UIPasteboard+Helper.h"
 
@@ -47,7 +47,7 @@
     if(pasteString.length){
         [CTPasteCheckPopView showPopViewWithText:pasteString callback:^(NSInteger buttonIndex) {
             if(buttonIndex == 1){
-                UIViewController *vc = [[CTModuleManager searchService] goodResultViewControllerWithKeyword:pasteString];
+                UIViewController *vc = [[CTModuleManager searchService] fj_goodResultViewControllerWithKeyword:pasteString];
                 [self.navigationController pushViewController:vc animated:YES];
             }
         }];

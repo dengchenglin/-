@@ -114,7 +114,7 @@
                 <outlet property="imageView" destination="VoI-dU-4uN" id="S2x-uS-EKY"/>
                 <outlet property="titleLabel" destination="7VX-1D-txA" id="2U8-L6-bry"/>
             </connections>
-            <point key="canvasLocation" x="-50.5" y="-212"/>
+            <point key="canvasLocation" x="18" y="-212"/>
         </view>
     </objects>
 </document>

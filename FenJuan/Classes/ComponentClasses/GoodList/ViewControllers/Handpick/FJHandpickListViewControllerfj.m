@@ -33,7 +33,7 @@
 }
 
 - (void)request{
-    [CTRequest officialBuyWithPage:self.pageIndex size:self.pageSize callback:^(id data, CLRequest *request, CTNetError error) {
+    [CTRequest fj_officialBuyWithPage:self.pageIndex size:self.pageSize callback:^(id data, CLRequest *request, CTNetError error) {
         [self analysisAndReloadWithData:data error:error modelClass:CTGoodsModel.class viewModelClass:CTGoodsViewModel.class];
     }];
 }

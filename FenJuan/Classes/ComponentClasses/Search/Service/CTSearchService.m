@@ -10,20 +10,20 @@
 
 #import "CTSearchViewController.h"
 
-#import "CTGoodSearchViewController.h"
+#import "FJGoodSearchViewControllerfj.h"
 
-#import "CTGoodResultViewController.h"
+#import "FJGoodResultViewControllerfj.h"
 
 @implementation CTSearchService
 
 CL_EXPORT_MODULE(CTSearchServiceProtocol)
 
 - (UIViewController *)rootViewController{
-    return [CTGoodSearchViewController new];
+    return [FJGoodSearchViewControllerfj new];
 }
 
-- (UIViewController *)goodResultViewControllerWithKeyword:(NSString *)keyword{
-    CTGoodResultViewController *vc = [CTGoodResultViewController new];
+- (UIViewController *)fj_goodResultViewControllerWithKeyword:(NSString *)keyword{
+    FJGoodResultViewControllerfj *vc = [FJGoodResultViewControllerfj new];
     vc.keyword = keyword;
     vc.title = keyword;
     return vc;

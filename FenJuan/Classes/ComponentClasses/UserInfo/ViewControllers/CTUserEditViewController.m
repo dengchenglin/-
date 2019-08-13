@@ -114,7 +114,7 @@ NSString *GetInfoKey(CTUserEditType type){
             return ;
         }
         if(_type == CTUserEditRemark){
-            [CTRequest childRemarkSaveWithChildUid:_Id remark:self.infoTextView.textField.text callback:^(id data, CLRequest *request, CTNetError error) {
+            [CTRequest fj_childRemarkSaveWithChildUid:_Id remark:self.infoTextView.textField.text callback:^(id data, CLRequest *request, CTNetError error) {
                 if(!error){
                     [MBProgressHUD showMBProgressHudWithTitle:@"保存成功" hideAfterDelay:1.0 complited:^{
                         [self.navigationController popViewControllerAnimated:YES];
@@ -127,7 +127,7 @@ NSString *GetInfoKey(CTUserEditType type){
             }];
         }
         else{
-            [CTRequest userInfoSaveWithInfo:@{GetInfoKey(_type):self.infoTextView.textField.text} callback:^(id data, CLRequest *request, CTNetError error) {
+            [CTRequest fj_userInfoSaveWithInfo:@{GetInfoKey(_type):self.infoTextView.textField.text} callback:^(id data, CLRequest *request, CTNetError error) {
                 if(!error){
                     [MBProgressHUD showMBProgressHudWithTitle:@"保存成功" hideAfterDelay:1.0 complited:^{
                         [self.navigationController popViewControllerAnimated:YES];

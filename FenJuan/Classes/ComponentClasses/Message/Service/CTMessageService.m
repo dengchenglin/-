@@ -8,24 +8,24 @@
 
 #import "CTMessageService.h"
 
-#import "CTMessageViewController.h"
+#import "FJMessageViewControllerfj.h"
 
 @implementation CTMessageService
 
 CL_EXPORT_MODULE(CTMessageServiceProtocol)
 
 - (UIViewController *)rootViewController{
-    return [CTMessageViewController new];
+    return [FJMessageViewControllerfj new];
 }
 
 
 - (UIViewController *)pushMessageFromViewController:(UIViewController *)viewController{
-    CTMessageViewController *vc = [CTMessageViewController new];
+    FJMessageViewControllerfj *vc = [FJMessageViewControllerfj new];
     if([CTAppManager logined]){
         [viewController.navigationController pushViewController:vc animated:YES];
     }
     else{
-        [[CTModuleManager loginService] showLoginFromViewController:viewController success:^{
+        [[CTModuleManager loginService] fj_showLoginFromViewController:viewController success:^{
             [viewController.navigationController pushViewController:vc animated:YES];
         } failure:nil];
     }

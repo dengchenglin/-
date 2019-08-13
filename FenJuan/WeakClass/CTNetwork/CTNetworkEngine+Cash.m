@@ -13,7 +13,7 @@
 
 @implementation CTNetworkEngine (Cash)
 
-- (CLRequest *)accountSaveWithAccount:(NSString *)account username:(NSString *)username phone:(NSString *)phone smsCode:(NSString *)smsCode callback:(CTResponseBlock)callback{
+- (CLRequest *)fj_accountSaveWithAccount:(NSString *)account username:(NSString *)username phone:(NSString *)phone smsCode:(NSString *)smsCode callback:(CTResponseBlock)callback{
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     [params setValue:phone forKey:@"phone"];
     [params setValue:account forKey:@"account"];
@@ -22,17 +22,17 @@
     return [self postWithPath:CTCash(@"acount_save") params:params callback:callback];
 }
 //提现页面
-- (CLRequest *)cashIndexWithCallback:(CTResponseBlock)callback;{
+- (CLRequest *)fj_cashIndexWithCallback:(CTResponseBlock)callback;{
     return [self postWithPath:CTCash(@"index") params:nil callback:callback];
 }
-- (CLRequest *)cashSaveWithPaypwd:(NSString *)paypwd money:(NSString *)money callback:(CTResponseBlock)callback{
+- (CLRequest *)fj_cashSaveWithPaypwd:(NSString *)paypwd money:(NSString *)money callback:(CTResponseBlock)callback{
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     [params setValue:paypwd forKey:@"pay_pwd"];
     [params setValue:money forKey:@"money"];
     return [self postWithPath:CTCash(@"save") params:params callback:callback];
 }
 //提现记录
-- (CLRequest *)cashLogWithPageIndex:(NSInteger)pageIndex pageSize:(NSInteger)pageSize callback:(CTResponseBlock)callback{
+- (CLRequest *)fj_cashLogWithPageIndex:(NSInteger)pageIndex pageSize:(NSInteger)pageSize callback:(CTResponseBlock)callback{
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     [params setValue:@(pageIndex) forKey:@"page"];
     [params setValue:@(pageSize) forKey:@"size"];

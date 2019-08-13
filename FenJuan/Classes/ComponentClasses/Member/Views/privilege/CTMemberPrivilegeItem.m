@@ -10,7 +10,7 @@
 
 
 
-@implementation CTMemberPrivilegeItem
+@implementation  CTMemberPrivilegeItem
 
 
 

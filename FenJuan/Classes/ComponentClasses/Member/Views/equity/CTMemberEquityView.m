@@ -19,7 +19,7 @@
 ViewInstance(setUp)
 
 - (void)setUp{
-    _titleView = NSMainBundleClass(CTMemberTitleView.class);
+    _titleView = NSMainBundleClass(FJMemberTitleView.class);
     _titleView.titleLabel.text = @"我的权益";
     [self addSubview:_titleView];
     
@@ -39,7 +39,7 @@ ViewInstance(setUp)
     }];
 }
 
-- (void)setModels:(NSArray<CTMemberRebateModel *> *)models{
+- (void)setModels:(NSArray<FJMemberRebateModelfj *> *)models{
     _models = [models copy];
     [self reloadView];
 }
@@ -53,7 +53,7 @@ ViewInstance(setUp)
     CGFloat itemHeight = 80;
     NSInteger count = _models.count;
     for(int i = 0;i < count;i ++){
-        CTMemberEquityItem *item = NSMainBundleClass(CTMemberEquityItem.class);
+        FJMemberEquityItemfj *item = NSMainBundleClass(FJMemberEquityItemfj.class);
         item.valueLabel.text = _models[i].fx_scale;
         item.typeLabel.text = _models[i].fx_level;
         [_containerView addSubview:item];

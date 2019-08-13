@@ -54,7 +54,7 @@
 }
 
 - (void)request{
-    [CTRequest allTimeBuyWithCallback:^(id data, CLRequest *request, CTNetError error) {
+    [CTRequest fj_allTimeBuyWithCallback:^(id data, CLRequest *request, CTNetError error) {
         if(!error){
             [self reloadData:data];
             

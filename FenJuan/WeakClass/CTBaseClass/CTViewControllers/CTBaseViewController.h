@@ -22,6 +22,13 @@ typedef NS_ENUM(NSInteger,CTNavigationBarStyle) {
 @end
 
 @interface CTBaseViewController : UIViewController<CTBaseControllerProtocol>
+//hunxiao
+@property (nonatomic, copy) NSString *ls_qia_qia;
+@property (nonatomic, strong) UILabel *sx_cp_ll;
+@property (nonatomic, assign) NSInteger io_to_ro;
+@property (nonatomic, assign) CGFloat si_ni_io;
+@property (nonatomic, copy) NSString *is_lo_in;
+
 
 @property (nonatomic, strong, readonly) CTScrollView *scrollView;
 

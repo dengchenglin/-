@@ -86,7 +86,7 @@
 - (void)setSelectedIndex:(NSUInteger)selectedIndex{
     if(self.tabbar_models[selectedIndex].is_login){
         if(![CTAppManager logined]){
-            [[CTModuleManager loginService] showLoginFromViewController:self callback:^(BOOL logined) {
+            [[CTModuleManager loginService] fj_showLoginFromViewController:self callback:^(BOOL logined) {
                 if(logined){
                     [self setSelectedIndex:selectedIndex];
                 }

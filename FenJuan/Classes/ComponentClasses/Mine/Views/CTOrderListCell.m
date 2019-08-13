@@ -10,7 +10,7 @@
 
 @implementation CTOrderListCell
 
-- (void)setViewModel:(CTOrderViewModel *)viewModel{
+- (void)setViewModel:(FJOrderViewModelfj *)viewModel{
     _viewModel = viewModel;
     _orderLabel.text = _viewModel.model.trade_id;
     _mobileLabel.text = _viewModel.model.phone;

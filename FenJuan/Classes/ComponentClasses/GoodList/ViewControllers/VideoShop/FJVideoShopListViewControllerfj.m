@@ -73,7 +73,7 @@
 - (void)request{
     [[JPVideoPlayerManager sharedManager]stopPlay];
     _currentIndexPath = nil;
-    [CTRequest videoBuyGoodsWithPage:self.pageIndex size:self.pageSize cateId:self.cateId order:GetGoodsOrderStr(self.sortView.currentType) callback:^(id data, CLRequest *request, CTNetError error) {
+    [CTRequest fj_videoBuyGoodsWithPage:self.pageIndex size:self.pageSize cateId:self.cateId order:GetGoodsOrderStr(self.sortView.currentType) callback:^(id data, CLRequest *request, CTNetError error) {
         [self analysisAndReloadWithData:data error:error modelClass:CTGoodsModel.class viewModelClass:CTGoodsViewModel.class];
     }];
 }
@@ -103,7 +103,7 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    UIViewController *vc = [[CTModuleManager goodListService] goodDetailViewControllerWithGoodId:self.dataSources[indexPath.row].model.uid];
+    UIViewController *vc = [[CTModuleManager goodListService] fj_goodDetailViewControllerWithGoodId:self.dataSources[indexPath.row].model.uid];
     [self.navigationController pushViewController:vc animated:YES];
 }
 

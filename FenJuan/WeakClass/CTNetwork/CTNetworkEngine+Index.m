@@ -30,7 +30,7 @@
     }];
 }
 //当前整点抢购
-- (CLRequest *)curTimeBuyWithTime:(NSString *)time callback:(CTResponseBlock)callback{
+- (CLRequest *)fj_curTimeBuyWithTime:(NSString *)time callback:(CTResponseBlock)callback{
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     [params setValue:time forKey:@"phone"];
     return [self postWithPath:CTIndex(@"cur_time_buy") params:params callback:callback];
@@ -42,10 +42,10 @@
     return [self postWithPath:CTIndex(@"cate") params:params showHud:NO callback:callback];
 }
 //分类商品
-- (CLRequest *)cateGoodsWithPage:(NSInteger)page size:(NSInteger)size cateId:(NSString *)cateId order:(NSString *)order callback:(CTResponseBlock)callback{
-    return [self cateGoodsWithPage:page size:size cateId:cateId order:order showHud:YES callback:callback];
+- (CLRequest *)fj_cateGoodsWithPage:(NSInteger)page size:(NSInteger)size cateId:(NSString *)cateId order:(NSString *)order callback:(CTResponseBlock)callback{
+    return [self fj_cateGoodsWithPage:page size:size cateId:cateId order:order showHud:YES callback:callback];
 }
-- (CLRequest *)cateGoodsWithPage:(NSInteger)page size:(NSInteger)size cateId:(NSString *)cateId order:(NSString *)order showHud:(BOOL)showHud callback:(CTResponseBlock)callback{
+- (CLRequest *)fj_cateGoodsWithPage:(NSInteger)page size:(NSInteger)size cateId:(NSString *)cateId order:(NSString *)order showHud:(BOOL)showHud callback:(CTResponseBlock)callback{
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     [params setValue:@(page) forKey:@"page"];
     [params setValue:@(size) forKey:@"size"];

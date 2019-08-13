@@ -8,17 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
-#import "CTMemberTitleView.h"
+#import "FJMemberTitleView.h"
 
-#import "CTMemberEquityItem.h"
+#import "FJMemberEquityItemfj.h"
 
 #import "CTMemberInfoModel.h"
 
 @interface CTMemberEquityView : UIView
 
-@property (nonatomic, strong) CTMemberTitleView *titleView;
+@property (nonatomic, strong) FJMemberTitleView *titleView;
 
-@property (nonatomic, copy) NSArray <CTMemberRebateModel *>*models;
+@property (nonatomic, copy) NSArray <FJMemberRebateModelfj *>*models;
 
 
 @end

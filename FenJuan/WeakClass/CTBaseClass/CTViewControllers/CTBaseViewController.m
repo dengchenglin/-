@@ -156,9 +156,15 @@
     }
 }
 
-
 - (void)viewDidLoad{
     [super viewDidLoad];
+    {
+        self.ls_qia_qia = @"sss";
+        self.sx_cp_ll = [UILabel new];
+        self.io_to_ro = 10;
+        self.si_ni_io = 2;
+        self.is_lo_in = @"hehe";
+    }
     self.extendedLayoutIncludesOpaqueBars = YES;
     self.automaticallyAdjustsScrollViewInsets = NO;
     self.view.backgroundColor = [UIColor whiteColor];

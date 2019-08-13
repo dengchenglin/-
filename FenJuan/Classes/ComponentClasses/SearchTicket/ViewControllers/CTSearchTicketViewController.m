@@ -151,12 +151,12 @@
     }].hidden = YES;
     [self.pasteView setSearchBlock:^(NSString *keyword) {
         @strongify(self)
-        UIViewController *vc = [[CTModuleManager searchService] goodResultViewControllerWithKeyword:keyword];
+        UIViewController *vc = [[CTModuleManager searchService] fj_goodResultViewControllerWithKeyword:keyword];
         [self.navigationController pushViewController:vc animated:YES];
     }];
     [self.categoryView.categoryView setClickItemBlock:^(NSInteger index) {
         @strongify(self)
-        UIViewController *vc = [[CTModuleManager goodListService]goodListViewControllerWithCategoryId:self.viewModel.categoryModels[index].uid];
+        UIViewController *vc = [[CTModuleManager goodListService]fj_goodListViewControllerWithCategoryId:self.viewModel.categoryModels[index].uid];
         vc.title = self.viewModel.categoryModels[index].title;
         [self.navigationController pushViewController:vc animated:YES];
     }];
@@ -189,7 +189,7 @@
 }
 
 - (void)request{
-    [CTRequest hotGoodsCateWithCallback:^(id data, CLRequest *request, CTNetError error) {
+    [CTRequest fj_hotGoodsCateWithCallback:^(id data, CLRequest *request, CTNetError error) {
         [self.tableView endRefreshing];
         if(!error){
             [self reloadData:data];
@@ -233,7 +233,7 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    UIViewController *vc = [[CTModuleManager goodListService]goodDetailViewControllerWithGoodViewModel:self.viewModel.likes[indexPath.row]];
+    UIViewController *vc = [[CTModuleManager goodListService]fj_goodDetailViewControllerWithGoodViewModel:self.viewModel.likes[indexPath.row]];
     [self.navigationController pushViewController:vc animated:YES];
 }
 

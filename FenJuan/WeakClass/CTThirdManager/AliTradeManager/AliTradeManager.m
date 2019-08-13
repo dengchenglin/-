@@ -14,7 +14,7 @@
 
 #import "AliTradeWebViewController.h"
 
-#define CTTBBackScheme @"tbopen25632501"
+#define CTTBBackScheme @"tbopen27751631"
 
 @implementation AliTradeManager
 

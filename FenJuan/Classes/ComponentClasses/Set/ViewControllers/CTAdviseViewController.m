@@ -92,7 +92,7 @@
             [MBProgressHUD showMBProgressHudWithTitle:@"请输入文字内容"];
             return ;
         }
-        [CTRequest viewSaveWithDetail:self.contentInputView.textView.text img:self.updateImageView.photosView.imgs callback:^(id data, CLRequest *request, CTNetError error) {
+        [CTRequest fj_viewSaveWithDetail:self.contentInputView.textView.text img:self.updateImageView.photosView.imgs callback:^(id data, CLRequest *request, CTNetError error) {
             if(!error){
                 [MBProgressHUD showMBProgressHudWithTitle:@"意见反馈成功"];
                 [self.navigationController popViewControllerAnimated:YES];

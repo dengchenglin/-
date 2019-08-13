@@ -18,25 +18,25 @@ CL_EXPORT_MODULE(CTWebServiceProtocol)
     return [CTWebViewController new];
 }
 
-- (UIViewController *)pushWebFromViewController:(UIViewController *)viewController  htmlString:(NSString *)htmlString{
+- (UIViewController *)fj_pushWebFromViewController:(UIViewController *)viewController  htmlString:(NSString *)htmlString{
     return [CTWebViewController showWebFromViewController:viewController url:nil htmlString:htmlString isPush:YES];
 }
 
-- (UIViewController *)pushWebFromViewController:(UIViewController *)viewController url:(NSString *)url{
+- (UIViewController *)fj_pushWebFromViewController:(UIViewController *)viewController url:(NSString *)url{
     return [CTWebViewController showWebFromViewController:viewController url:url htmlString:nil isPush:YES];
 }
 
-- (UIViewController *)showWebFromViewController:(UIViewController *)viewController htmlString:(NSString *)htmlString{
+- (UIViewController *)fj_showWebFromViewController:(UIViewController *)viewController htmlString:(NSString *)htmlString{
      return [CTWebViewController showWebFromViewController:viewController url:nil htmlString:htmlString isPush:NO];
 }
 
-- (UIViewController *)showWebFromViewController:(UIViewController *)viewController url:(NSString *)url{
+- (UIViewController *)fj_showWebFromViewController:(UIViewController *)viewController url:(NSString *)url{
      return [CTWebViewController showWebFromViewController:viewController url:url htmlString:nil isPush:NO];
 }
-- (UIViewController *)tbAuthFromViewController:(UIViewController *)viewController url:(NSString *)url callback:(void (^)(id data))callback{
+- (UIViewController *)fj_tbAuthFromViewController:(UIViewController *)viewController url:(NSString *)url callback:(void (^)(id data))callback{
     return [CTTaoBaoAuthViewController tbAuthFromViewController:viewController url:url callback:callback];
 }
-- (void)tbAuthFromViewController:(UIViewController *)viewController completed:(void (^)(void))completed{
+- (void)fj_tbAuthFromViewController:(UIViewController *)viewController completed:(void (^)(void))completed{
     if([CTAppManager user].tbk_relation_id.length){
         if(completed){
             completed();

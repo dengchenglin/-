@@ -269,7 +269,7 @@
 
 - (void)requestGoodsImg{
     if(self.viewModel.model.goods_rich_url.length && !self.viewModel.model.goods_content.length){
-        [CTRequest goodsImgWithItemId:self.viewModel.model.item_id callback:^(id data, CLRequest *request, CTNetError error) {
+        [CTRequest fj_goodsImgWithItemId:self.viewModel.model.item_id callback:^(id data, CLRequest *request, CTNetError error) {
             self.imgs = [CTGoodsImgModel modelsWithDatas:data];
             [self.tableView reloadData];
         }];
@@ -283,7 +283,7 @@
     void(^collectBlock)(void) = ^{
          @strongify(self);
         self.buyView.collectButton.userInteractionEnabled = NO;
-        [CTRequest favoriteWithGoodsId:self.viewModel.model.item_id isFavorite:!self.viewModel.model.is_favorite callback:^(id data, CLRequest *request, CTNetError error) {
+        [CTRequest fj_favoriteWithGoodsId:self.viewModel.model.item_id isFavorite:!self.viewModel.model.is_favorite callback:^(id data, CLRequest *request, CTNetError error) {
             @strongify(self);
             self.buyView.collectButton.userInteractionEnabled = YES;
             if(!error){
@@ -302,7 +302,7 @@
         [params setValue:self.viewModel.model.goods_logo forKey:@"goods_logo"];
         [params setValue:self.viewModel.model.coupon_share_url forKey:@"coupon_share_url"];
         //判断当前用户是否绑定过渠道id
-        [CTRequest goodsUrlConvertWithTbGoodsInfo:params callback:^(id data, CLRequest *request, CTNetError error) {
+        [CTRequest fj_goodsUrlConvertWithTbGoodsInfo:params callback:^(id data, CLRequest *request, CTNetError error) {
             @strongify(self)
             if(!error){//绑定过渠道id 直接返回最终数据
                 //先百川授权
@@ -317,7 +317,7 @@
                 NSInteger status = [data[@"status"] integerValue];
                 if(status == 403){
                     NSString *tbAuthUrl = data[@"data"];
-                    [[CTModuleManager webService]tbAuthFromViewController:self url:tbAuthUrl callback:^(id data) {
+                    [[CTModuleManager webService]fj_tbAuthFromViewController:self url:tbAuthUrl callback:^(id data) {
                         if(getFinalData){
                             getFinalData(data);
                         }
@@ -349,7 +349,7 @@
             }
         }
         else {
-            [[CTModuleManager loginService]showLoginFromViewController:self callback:^(BOOL logined) {
+            [[CTModuleManager loginService]fj_showLoginFromViewController:self callback:^(BOOL logined) {
                 if(logined){
                     if(loginCompleted){
                         loginCompleted();

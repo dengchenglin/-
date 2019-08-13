@@ -8,7 +8,7 @@
 
 #import "CTOrderPageController.h"
 
-#import "CTOrderListViewController.h"
+#import "FJOrderListViewControllerfj.h"
 
 #import "LMSegmentedControl.h"
 
@@ -52,7 +52,7 @@
     });
     NSMutableArray *array = [NSMutableArray array];
     for(int i = 0;i < titles.count;i ++){
-        CTOrderListViewController *vc = [[CTOrderListViewController alloc]init];
+        FJOrderListViewControllerfj *vc = [[FJOrderListViewControllerfj alloc]init];
         vc.status = [status[i] integerValue];
         [array addObject:vc];
     }

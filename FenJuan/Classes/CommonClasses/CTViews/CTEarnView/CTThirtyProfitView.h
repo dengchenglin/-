@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "CTEarnTrendModel.h"
+#import "FJEarnTrendModelfj.h"
 #import "CTUserInfoModel.h"
 @interface CTThirtyProfitView : UIView
 @property (weak, nonatomic) IBOutlet UILabel *profitLabel;
-@property (nonatomic, strong) CTEarnTrendModel *model;
+@property (nonatomic, strong) FJEarnTrendModelfj *model;
 @property (nonatomic, strong) CTUserInfoModel *userInfo;
 @end

@@ -21,7 +21,7 @@
     [self.tableView registerNibWithClass:CTCashListCell.class];
 }
 - (void)request{
-    [CTRequest cashLogWithPageIndex:self.pageIndex pageSize:self.pageSize callback:^(id data, CLRequest *request, CTNetError error) {
+    [CTRequest fj_cashLogWithPageIndex:self.pageIndex pageSize:self.pageSize callback:^(id data, CLRequest *request, CTNetError error) {
         [self analysisAndReloadWithData:data error:error modelClass:CTCashModel.class viewModelClass:nil];
     }];
     

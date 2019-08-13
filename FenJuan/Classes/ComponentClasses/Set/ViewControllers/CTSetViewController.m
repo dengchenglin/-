@@ -110,7 +110,7 @@
         [alert.rac_buttonClickedSignal subscribeNext:^(NSNumber * _Nullable x) {
             if(x.integerValue == 1){
                 [CTAppManager logout];
-                [[CTModuleManager loginService] showLoginFromViewController:self callback:^(BOOL logined) {
+                [[CTModuleManager loginService] fj_showLoginFromViewController:self callback:^(BOOL logined) {
                     if(logined){
                         [self.navigationController popToRootViewControllerAnimated:YES];
                     }
@@ -127,7 +127,7 @@
             [DKUploadData uploadImages:[imageItems map:^id(NSInteger index, LMPhotoImageItem *element) {
                 return element.originalImage;
             }]  callback:^(NSArray<NSString *> *imgUrls) {
-                [CTRequest userInfoSaveWithInfo:@{@"headimg":imgUrls.firstObject} callback:^(id data, CLRequest *request, CTNetError error) {
+                [CTRequest fj_userInfoSaveWithInfo:@{@"headimg":imgUrls.firstObject} callback:^(id data, CLRequest *request, CTNetError error) {
                     if(!error){
                         [MBProgressHUD showMBProgressHudWithTitle:@"上传头像成功"];
                         dispatch_async(dispatch_get_main_queue(), ^{
@@ -185,7 +185,7 @@
         break;
         case 3:
         {
-            UIViewController *webVc = [[CTModuleManager webService] pushWebFromViewController:self url:CTH5UrlForType(CTH5UrlAbountUs)];
+            UIViewController *webVc = [[CTModuleManager webService] fj_pushWebFromViewController:self url:CTH5UrlForType(CTH5UrlAbountUs)];
             webVc.title = @"关于我们";
         }
         break;
@@ -201,7 +201,7 @@
         break;
         case 5:
         {
-            [[CTModuleManager loginService]pushWithdrawSetpsdFromViewController:self mobile:[CTAppManager user].phone completed:^{
+            [[CTModuleManager loginService]fj_pushWithdrawSetpsdFromViewController:self mobile:[CTAppManager user].phone completed:^{
                 [self.navigationController popToViewController:self animated:YES];
             }];
         }

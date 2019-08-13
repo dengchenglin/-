@@ -14,15 +14,15 @@
 
 @protocol CTShareServiceProtocol <NSObject,CLModuleServiceProtocol>
 
-- (UIViewController *)pushShareFromViewController:(UIViewController *)viewController;
+- (UIViewController *)fj_pushShareFromViewController:(UIViewController *)viewController;
 
-- (void)pushShareFromViewController:(UIViewController *)viewController goodId:(NSString *)goodId;
+- (void)fj_pushShareFromViewController:(UIViewController *)viewController goodId:(NSString *)goodId;
 
-- (void)pushShareFromViewController:(UIViewController *)viewController viewModel:(CTGoodsViewModel *)viewModel kind:(CTShopKind)kind;
+- (void)fj_pushShareFromViewController:(UIViewController *)viewController viewModel:(CTGoodsViewModel *)viewModel kind:(CTShopKind)kind;
 
-- (void)pushMyInviteCodeFromViewController:(UIViewController *)viewController;
+- (void)fj_pushMyInviteCodeFromViewController:(UIViewController *)viewController;
 
-- (void)createGoodsPreviewWithImages:(NSArray <UIImage *>*)images models:(NSArray <CTGoodsModel *> *)models completed:(void(^)(NSArray <UIImage *>* images))completed;
+- (void)fj_createGoodsPreviewWithImages:(NSArray <UIImage *>*)images models:(NSArray <CTGoodsModel *> *)models completed:(void(^)(NSArray <UIImage *>* images))completed;
 
 
 @end

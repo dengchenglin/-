@@ -27,7 +27,7 @@ SINGLETON_FOR_CLASS_IMP(CTAppManager)
 + (void)showLogin{
     UIViewController *vc = [UIUtil getCurrentViewController];
     if(vc.tabBarController){
-        [[CTModuleManager loginService] showLoginFromViewController:vc callback:nil];
+        [[CTModuleManager loginService] fj_showLoginFromViewController:vc callback:nil];
     }
 }
 

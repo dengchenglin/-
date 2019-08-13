@@ -132,7 +132,7 @@
     }];
     [self.categoryView setClickItemBlock:^(NSInteger index) {
         @strongify(self)
-        UIViewController *vc = [[CTModuleManager goodListService]goodListViewControllerWithCategoryId:self.subCategoryModels[index].uid];
+        UIViewController *vc = [[CTModuleManager goodListService]fj_goodListViewControllerWithCategoryId:self.subCategoryModels[index].uid];
         vc.title = self.subCategoryModels[index].title;
         [self.navigationController pushViewController:vc animated:YES];
     }];
@@ -171,7 +171,7 @@
 }
 - (void)loadlListData{
     //加载商品列表
-    [CTRequest cateGoodsWithPage:self.pageIndex size:self.pageSize cateId:self.cateId order:self.viewModel.order showHud:NO callback:^(NSArray *data, CLRequest *request, CTNetError error) {
+    [CTRequest fj_cateGoodsWithPage:self.pageIndex size:self.pageSize cateId:self.cateId order:self.viewModel.order showHud:NO callback:^(NSArray *data, CLRequest *request, CTNetError error) {
         if(!error){
             if(!self.isLoadMore){
                 [self.dataSources removeAllObjects];
@@ -243,7 +243,7 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    UIViewController *vc = [[CTModuleManager goodListService]goodDetailViewControllerWithGoodId:self.dataSources[indexPath.row].model.uid];
+    UIViewController *vc = [[CTModuleManager goodListService]fj_goodDetailViewControllerWithGoodId:self.dataSources[indexPath.row].model.uid];
     [self.navigationController pushViewController:vc animated:YES];
 }
 

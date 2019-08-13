@@ -12,13 +12,13 @@
 
 @protocol CTGoodListServiceProtocol <NSObject,CLModuleServiceProtocol>
 
-- (UIViewController *)goodListViewControllerWithCategoryId:(NSString *)categoryId;
+- (UIViewController *)fj_goodListViewControllerWithCategoryId:(NSString *)categoryId;
 
-- (UIViewController *)goodListViewControllerWithActivityId:(NSString *)activityId;
+- (UIViewController *)fj_goodListViewControllerWithActivityId:(NSString *)activityId;
 
-- (UIViewController *)goodDetailViewControllerWithGoodId:(NSString *)goodId;
+- (UIViewController *)fj_goodDetailViewControllerWithGoodId:(NSString *)goodId;
 
-- (UIViewController *)goodDetailViewControllerWithGoodViewModel:(id)viewModel;
+- (UIViewController *)fj_goodDetailViewControllerWithGoodViewModel:(id)viewModel;
 
 - (UIViewController *)hotsalesViewController;
 

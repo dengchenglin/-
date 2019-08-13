@@ -46,7 +46,7 @@
     return cell;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    UIViewController *vc = [[CTModuleManager webService]pushWebFromViewController:self htmlString:self.dataSources[indexPath.row].content];
+    UIViewController *vc = [[CTModuleManager webService]fj_pushWebFromViewController:self htmlString:self.dataSources[indexPath.row].content];
     vc.title = self.dataSources[indexPath.row].title;
 }
 @end

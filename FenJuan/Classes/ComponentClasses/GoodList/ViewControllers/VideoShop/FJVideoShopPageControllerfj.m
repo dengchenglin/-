@@ -53,7 +53,7 @@
 }
 
 - (void)request{
-    [CTRequest videoBuyCateWithCallback:^(id data, CLRequest *request, CTNetError error) {
+    [CTRequest fj_videoBuyCateWithCallback:^(id data, CLRequest *request, CTNetError error) {
         [LMDataResultView hideDataResultOnView:self.view];
         if(!error){
             [self reloadData:data];

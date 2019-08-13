@@ -16,7 +16,7 @@
 
 #import "CTThirtyTrendView.h"
 
-#import "CTEarnTrendCell.h"
+#import "FJEarnTrendCellfj.h"
 
 #import "CTNetworkEngine+Member.h"
 
@@ -49,7 +49,7 @@
         _tableView.delegate = self;
         _tableView.dataSource = self;
         _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-        [_tableView registerNibWithClass:CTEarnTrendCell.class];
+        [_tableView registerNibWithClass:FJEarnTrendCellfj.class];
         [self.view addSubview:_tableView];
     }
     return _tableView;
@@ -135,7 +135,7 @@
 }
 
 - (void)request{
-    [CTRequest teamUserDetailWithUid:_userId callback:^(id data, CLRequest *request, CTNetError error) {
+    [CTRequest fj_teamUserDetailWithUid:_userId callback:^(id data, CLRequest *request, CTNetError error) {
         if(!error){
             self.model = [CTUserInfoModel yy_modelWithDictionary:data];
             self.infoView.user = self.model.user;
@@ -170,7 +170,7 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    CTEarnTrendCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(CTEarnTrendCell.class)];
+    FJEarnTrendCellfj *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(FJEarnTrendCellfj.class)];
     cell.model = self.model.day30_lists[indexPath.row];
     return cell;
 }

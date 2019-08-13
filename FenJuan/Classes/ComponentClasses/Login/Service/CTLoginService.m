@@ -8,10 +8,10 @@
 
 #import "CTLoginService.h"
 
-#import "CTLoginViewController.h"
-#import "CTGetCodeViewController.h"
-#import "CTAlipayBoundViewController.h"
-#import "CTRegisterViewController.h"
+#import "FJLoginViewControllerfj.h"
+#import "FJGetCodeViewControllerfj.h"
+#import "FJAlipayBoundViewControllerfj.h"
+#import "FJRegisterViewControllerfj.h"
 
 @implementation CTLoginService
 
@@ -22,11 +22,11 @@ CL_EXPORT_MODULE(CTLoginServiceProtocol)
 }
 
 - (UIViewController *)rootViewController{
-    return [CTLoginViewController new];
+    return [FJLoginViewControllerfj new];
 }
 
-- (void)showLoginFromViewController:(UIViewController *)viewController success:(void(^)(void))success failure:(void(^)(void))failure{
-    [CTLoginViewController showLoginFormViewController:viewController callback:^(BOOL logined) {
+- (void)fj_showLoginFromViewController:(UIViewController *)viewController success:(void(^)(void))success failure:(void(^)(void))failure{
+    [FJLoginViewControllerfj showLoginFormViewController:viewController callback:^(BOOL logined) {
         if(logined){
             if(success)success();
         }
@@ -36,32 +36,32 @@ CL_EXPORT_MODULE(CTLoginServiceProtocol)
     }];
 }
 
-- (void)showLoginFromViewController:(UIViewController *)viewController callback:(void(^)(BOOL logined))callback{
-    [CTLoginViewController showLoginFormViewController:viewController callback:callback];
+- (void)fj_showLoginFromViewController:(UIViewController *)viewController callback:(void(^)(BOOL logined))callback{
+    [FJLoginViewControllerfj showLoginFormViewController:viewController callback:callback];
 }
 
-- (void)pushWithdrawSetpsdFromViewController:(UIViewController *)viewController mobile:(NSString *)mobile completed:(void(^)(void))completed{
-    CTGetCodeViewController *vc = [CTGetCodeViewController new];
+- (void)fj_pushWithdrawSetpsdFromViewController:(UIViewController *)viewController mobile:(NSString *)mobile completed:(void(^)(void))completed{
+    FJGetCodeViewControllerfj *vc = [FJGetCodeViewControllerfj new];
     vc.eventKind = CTEventKindWithDraw;
     vc.completed = completed;
     vc.mobile = mobile;
     [viewController.navigationController pushViewController:vc animated:YES];
 }
 
-- (void)pushBoundAlipayFromViewController:(UIViewController *)viewController completed:(void(^)(void))completed{
-    CTAlipayBoundViewController *vc = [CTAlipayBoundViewController new];
+- (void)fj_pushBoundAlipayFromViewController:(UIViewController *)viewController completed:(void(^)(void))completed{
+    FJAlipayBoundViewControllerfj *vc = [FJAlipayBoundViewControllerfj new];
     vc.completed = completed;
     [viewController.navigationController pushViewController:vc animated:YES];
 }
 
-- (void)judgeLoginWithViewController:(UIViewController *)viewController completed:(void(^)(void))completed{
+- (void)fj_judgeLoginWithViewController:(UIViewController *)viewController completed:(void(^)(void))completed{
     if([CTAppManager logined]){
         if(completed){
             completed();
         }
     }
     else {
-        [[CTModuleManager loginService]showLoginFromViewController:viewController callback:^(BOOL logined) {
+        [[CTModuleManager loginService]fj_showLoginFromViewController:viewController callback:^(BOOL logined) {
             if(logined){
                 if(completed){
                     completed();
@@ -72,8 +72,8 @@ CL_EXPORT_MODULE(CTLoginServiceProtocol)
 }
 
 
-- (void)showRegisterFromViewController:(UIViewController *)viewController  inviteCode:(NSString *)inviteCode callback:(void(^)(BOOL logined))callback{
-    CTRegisterViewController *vc = [CTRegisterViewController new];
+- (void)fj_showRegisterFromViewController:(UIViewController *)viewController  inviteCode:(NSString *)inviteCode callback:(void(^)(BOOL logined))callback{
+    FJRegisterViewControllerfj *vc = [FJRegisterViewControllerfj new];
     vc.eventKind = CTEventKindRegister;
     vc.inviteCode = inviteCode;
     if([viewController isKindOfClass:CTLoginBaseViewController.class]){

@@ -63,7 +63,7 @@
                     <subviews>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="搜索宝贝名称或粘贴淘宝标题" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bpi-JH-Pev" customClass="CTHomeSearchTfd">
                             <rect key="frame" x="19" y="36.5" width="343" height="32"/>
-                            <color key="backgroundColor" red="1" green="0.59607843140000005" blue="0.38823529410000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="32" id="RkX-NR-V0S"/>
                             </constraints>
@@ -114,7 +114,7 @@
                 <outlet property="messageButton" destination="rPZ-dp-8fY" id="KXT-oE-5zz"/>
                 <outlet property="searchTextField" destination="Bpi-JH-Pev" id="mH9-Eu-rCI"/>
             </connections>
-            <point key="canvasLocation" x="103" y="253"/>
+            <point key="canvasLocation" x="7" y="213"/>
         </view>
     </objects>
     <resources>

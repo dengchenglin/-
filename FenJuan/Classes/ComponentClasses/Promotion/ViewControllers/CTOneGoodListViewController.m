@@ -36,7 +36,7 @@
 }
 
 - (void)request{
-    [CTRequest fqGoodsWithMinId:self.minId callback:^(id data, CLRequest *request, CTNetError error) {
+    [CTRequest fj_fqGoodsWithMinId:self.minId callback:^(id data, CLRequest *request, CTNetError error) {
         [self analysisAndReloadWithData:data listKey:@"list" error:error modelClass:CTGoodsModel.class viewModelClass:CTProGoodIndexViewModel.class];
     }];
 }
@@ -55,7 +55,7 @@
     return cell;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    UIViewController *vc = [[CTModuleManager goodListService] goodDetailViewControllerWithGoodId:self.dataSources[indexPath.row].model.item_id];
+    UIViewController *vc = [[CTModuleManager goodListService] fj_goodDetailViewControllerWithGoodId:self.dataSources[indexPath.row].model.item_id];
     [self.navigationController pushViewController:vc animated:YES];
 }
 

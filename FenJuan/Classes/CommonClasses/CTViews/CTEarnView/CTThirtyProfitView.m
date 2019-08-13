@@ -10,7 +10,7 @@
 
 @implementation CTThirtyProfitView
 
-- (void)setModel:(CTEarnTrendModel *)model{
+- (void)setModel:(FJEarnTrendModelfj *)model{
     _model = model;
     _profitLabel.text = [NSString stringWithFormat:@"%@元",_model.day30_money];
 }

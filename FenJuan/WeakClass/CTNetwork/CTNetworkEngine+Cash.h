@@ -10,11 +10,11 @@
 
 @interface CTNetworkEngine (Cash)
 //绑定支付宝
-- (CLRequest *)accountSaveWithAccount:(NSString *)account username:(NSString *)username phone:(NSString *)phone smsCode:(NSString *)smsCode callback:(CTResponseBlock)callback;
+- (CLRequest *)fj_accountSaveWithAccount:(NSString *)account username:(NSString *)username phone:(NSString *)phone smsCode:(NSString *)smsCode callback:(CTResponseBlock)callback;
 //提现页面
-- (CLRequest *)cashIndexWithCallback:(CTResponseBlock)callback;
+- (CLRequest *)fj_cashIndexWithCallback:(CTResponseBlock)callback;
 //提现
-- (CLRequest *)cashSaveWithPaypwd:(NSString *)paypwd money:(NSString *)money callback:(CTResponseBlock)callback;
+- (CLRequest *)fj_cashSaveWithPaypwd:(NSString *)paypwd money:(NSString *)money callback:(CTResponseBlock)callback;
 //提现记录
-- (CLRequest *)cashLogWithPageIndex:(NSInteger)pageIndex pageSize:(NSInteger)pageSize callback:(CTResponseBlock)callback;
+- (CLRequest *)fj_cashLogWithPageIndex:(NSInteger)pageIndex pageSize:(NSInteger)pageSize callback:(CTResponseBlock)callback;
 @end

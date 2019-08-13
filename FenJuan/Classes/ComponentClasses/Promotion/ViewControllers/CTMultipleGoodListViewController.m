@@ -28,7 +28,7 @@
     
 }
 - (void)request{
-    [CTRequest fqMultipleGoodsWithMinId:self.minId callback:^(id data, CLRequest *request, CTNetError error) {
+    [CTRequest fj_fqMultipleGoodsWithMinId:self.minId callback:^(id data, CLRequest *request, CTNetError error) {
         [self analysisAndReloadWithData:data listKey:@"list" error:error modelClass:CTGoodsModel.class viewModelClass:CTProGoodIndexViewModel.class];
     }];
 }
@@ -56,16 +56,16 @@
   
     CTMultipleGoodsCell *cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:index inSection:0]];
     CTGoodsModel *model = self.dataSources[index].model;
-    [[CTModuleManager webService]tbAuthFromViewController:self completed:^{
+    [[CTModuleManager webService]fj_tbAuthFromViewController:self completed:^{
         [MBProgressHUD showMBProgressHudOnView:self.view hideAfterDelay:3.0];
-        [[CTModuleManager shareService]createGoodsPreviewWithImages:cell.picturesView.images models:model.item_data completed:^(NSArray<UIImage *> *images) {
+        [[CTModuleManager shareService]fj_createGoodsPreviewWithImages:cell.picturesView.images models:model.item_data completed:^(NSArray<UIImage *> *images) {
             [MBProgressHUD hideHUDForView:self.view animated:YES];
                [CTSharePopupView showSharePopupWithImages:images onView:nil];
         }];
     }];
 }
 - (void)didClickWithModel:(CTGoodsModel *)model{
-    UIViewController *vc = [[CTModuleManager goodListService] goodDetailViewControllerWithGoodId:model.item_id];
+    UIViewController *vc = [[CTModuleManager goodListService] fj_goodDetailViewControllerWithGoodId:model.item_id];
     [self.navigationController pushViewController:vc animated:YES];
 }
 

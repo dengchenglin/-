@@ -23,31 +23,31 @@ CL_EXPORT_MODULE(CTShareServiceProtocol)
     return [CTShareViewController new];
 }
 
-- (UIViewController *)pushShareFromViewController:(UIViewController *)viewController{
+- (UIViewController *)fj_pushShareFromViewController:(UIViewController *)viewController{
     CTShareViewController *vc = [CTShareViewController new];
     if([CTAppManager logined]){
         [viewController.navigationController pushViewController:vc animated:YES];
     }
     else{
-        [[CTModuleManager loginService] showLoginFromViewController:viewController success:^{
+        [[CTModuleManager loginService] fj_showLoginFromViewController:viewController success:^{
             [viewController.navigationController pushViewController:vc animated:YES];
         } failure:nil];
     }
     return vc;
 }
 
-- (void)pushShareFromViewController:(UIViewController *)viewController goodId:(NSString *)goodId{
+- (void)fj_pushShareFromViewController:(UIViewController *)viewController goodId:(NSString *)goodId{
     CTGoodsShareViewController *vc = [CTGoodsShareViewController new];
     vc.goodId = goodId;
     [viewController.navigationController pushViewController:vc animated:YES];
 }
 
-- (void)pushMyInviteCodeFromViewController:(UIViewController *)viewController{
+- (void)fj_pushMyInviteCodeFromViewController:(UIViewController *)viewController{
     CTInviteCodeViewController *vc = [CTInviteCodeViewController new];
     [viewController.navigationController pushViewController:vc animated:YES];
 }
 
-- (void)pushShareFromViewController:(UIViewController *)viewController viewModel:(CTGoodsViewModel *)viewModel kind:(CTShopKind)kind{
+- (void)fj_pushShareFromViewController:(UIViewController *)viewController viewModel:(CTGoodsViewModel *)viewModel kind:(CTShopKind)kind{
     CTGoodsShareViewController *vc = [CTGoodsShareViewController new];
     vc.viewModel = viewModel;
     vc.goodId = viewModel.model.item_id;
@@ -55,7 +55,7 @@ CL_EXPORT_MODULE(CTShareServiceProtocol)
     [viewController.navigationController pushViewController:vc animated:YES];
 }
 
-- (void)createGoodsPreviewWithImages:(NSArray <UIImage *>*)images models:(NSArray <CTGoodsModel *> *)models completed:(void(^)(NSArray <UIImage *>* images))completed{
+- (void)fj_createGoodsPreviewWithImages:(NSArray <UIImage *>*)images models:(NSArray <CTGoodsModel *> *)models completed:(void(^)(NSArray <UIImage *>* images))completed{
     NSMutableArray <CTGoodsModel *>*array = [NSMutableArray array];
     NSLock *lock = [NSLock new];
     static int imagekey;

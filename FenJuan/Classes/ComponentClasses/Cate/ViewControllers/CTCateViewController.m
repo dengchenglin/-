@@ -28,11 +28,10 @@
         _searchTextField = [[CTSearchTextfield alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH - 76, 32)];
         _searchTextField.layer.cornerRadius = 16;
         _searchTextField.clipsToBounds = YES;
-        _searchTextField.backgroundColor = [UIColor colorWithHexString:@"#FF9863"];
+        _searchTextField.backgroundColor = [UIColor whiteColor];
         _searchTextField.logoColor = [UIColor whiteColor];
-        NSMutableAttributedString *attribuedString = [[NSMutableAttributedString alloc]initWithString:@"粘贴宝贝标题，领券购物"];
-        [attribuedString addAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:13],NSForegroundColorAttributeName:[UIColor whiteColor]} range:NSMakeRange(0, attribuedString.length)];
-        _searchTextField.attributedPlaceholder = attribuedString;
+      
+        _searchTextField.placeholder = @"粘贴宝贝标题，领券购物";
 
     }
     return _searchTextField;
@@ -87,7 +86,7 @@
     }];
     [self.subListView setIndexChangedBlock:^(NSInteger index) {
         @strongify(self)
-        UIViewController *vc = [[CTModuleManager goodListService]goodListViewControllerWithCategoryId:self.subListView.datas[index].uid];
+        UIViewController *vc = [[CTModuleManager goodListService]fj_goodListViewControllerWithCategoryId:self.subListView.datas[index].uid];
         vc.title = self.subListView.datas[index].title;
         [self.navigationController pushViewController:vc animated:YES];
     }];

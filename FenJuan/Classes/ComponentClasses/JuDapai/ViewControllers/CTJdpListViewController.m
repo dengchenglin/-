@@ -49,7 +49,7 @@
     [self.navigationController pushViewController:vc animated:YES];
 }
 - (void)didClickItemWithModel:(CTGoodsModel *)model{
-    UIViewController *vc = [[CTModuleManager goodListService]goodDetailViewControllerWithGoodId:model.item_id];
+    UIViewController *vc = [[CTModuleManager goodListService]fj_goodDetailViewControllerWithGoodId:model.item_id];
     [self.navigationController pushViewController:vc animated:YES];
 }
 @end

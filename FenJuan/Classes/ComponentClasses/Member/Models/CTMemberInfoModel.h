@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "CTMemberRebateModel.h"
+#import "FJMemberRebateModelfj.h"
 @interface CTMemberGradePowerModel:NSObject
 @property (nonatomic, copy) NSString *Id;
 @property (nonatomic, copy) NSString *img;
@@ -20,7 +20,7 @@
 
 @interface CTMemberInfoModel : NSObject
 @property (nonatomic, strong) CTUser *user;
-@property (nonatomic, copy) NSArray <CTMemberRebateModel *> *user_rebate;
+@property (nonatomic, copy) NSArray <FJMemberRebateModelfj *> *user_rebate;
 @property (nonatomic, copy) NSArray <CTMemberGradePowerModel *> *grade_power;
 @property (nonatomic, strong) CTMemberUpgradeConditionModel *upgrade_condition;
 @property (nonatomic, copy) NSArray <CTActivityModel *> *advs;

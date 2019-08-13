@@ -8,7 +8,7 @@
 
 #import "FJHomeSalesViewfj.h"
 
-#import "CTSalesItem.h"
+#import "FJSalesItemfj.h"
 
 @implementation FJHomeSalesViewfj
 {
@@ -23,7 +23,7 @@
     UIView *leftView;
     NSInteger count = 3;
     for(int i = 0;i < count;i ++){
-        CTSalesItem *item = NSMainBundleClass(CTSalesItem.class);
+        FJSalesItemfj *item = NSMainBundleClass(FJSalesItemfj.class);
         item.tag = 100 + i;
         [self addSubview:item];
         [item mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -55,7 +55,7 @@
 - (void)setModel:(CTHomeHotGoodsModel *)model{
     _model = model;
     for(int i = 0;i < 3;i ++){
-        CTSalesItem *item = [self viewWithTag:100 + i];
+        FJSalesItemfj *item = [self viewWithTag:100 + i];
         item.model = [_model.goods safe_objectAtIndex:i];
         item.hidden = !item.model;
     }

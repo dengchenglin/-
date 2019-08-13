@@ -38,7 +38,7 @@
 
 
 - (void)request{
-    [CTRequest timeBuyGoodsWithPage:self.pageIndex size:self.pageSize markeId:self.model.Id callback:^(id data, CLRequest *request, CTNetError error) {
+    [CTRequest fj_timeBuyGoodsWithPage:self.pageIndex size:self.pageSize markeId:self.model.Id callback:^(id data, CLRequest *request, CTNetError error) {
         [self analysisAndReloadWithData:data error:error modelClass:CTGoodsModel.class viewModelClass:CTGoodsViewModel.class];
     }];
 }
@@ -65,7 +65,7 @@
       
    }
     else if (model.status == 2){
-        UIViewController *vc = [[CTModuleManager goodListService] goodDetailViewControllerWithGoodId:model.uid];
+        UIViewController *vc = [[CTModuleManager goodListService] fj_goodDetailViewControllerWithGoodId:model.uid];
         [self.navigationController pushViewController:vc animated:YES];
     }
    

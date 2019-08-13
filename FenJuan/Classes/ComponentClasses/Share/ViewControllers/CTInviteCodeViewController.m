@@ -72,7 +72,7 @@
 }
 
 - (void)request{
-    [CTRequest shareInfoWithCallback:^(id data, CLRequest *request, CTNetError error) {
+    [CTRequest fj_shareInfoWithCallback:^(id data, CLRequest *request, CTNetError error) {
         if(!error){
             self.model = [CTInviteCodeModel yy_modelWithDictionary:data];
             self.ivCodeView.ivCode = _model.iv_code;

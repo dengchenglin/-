@@ -24,14 +24,14 @@
     [super awakeFromNib];
     UIImageView *searchLogo = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 40, 30)];
     searchLogo.contentMode = UIViewContentModeCenter;
-    searchLogo.image = [UIImage imageNamed:@"i_home_search"];
+    searchLogo.image = [[UIImage imageNamed:@"i_home_search"] imageWithColor:RGBColor(150, 150, 150)];
     _searchTextField.leftView = searchLogo;
     _searchTextField.leftViewMode = UITextFieldViewModeAlways;
     
-    NSMutableAttributedString *att = [[NSMutableAttributedString alloc]initWithString:@"搜索宝贝名称或粘贴淘宝标题"];
-    [att setAttributes:@{NSForegroundColorAttributeName:HexColor(@"#FFFFFF")} range:NSMakeRange(0, att.string.length)];
-    
-    _searchTextField.attributedPlaceholder = att;
+//    NSMutableAttributedString *att = [[NSMutableAttributedString alloc]initWithString:@"搜索宝贝名称或粘贴淘宝标题"];
+//    [att setAttributes:@{NSForegroundColorAttributeName:HexColor(@"#666666")} range:NSMakeRange(0, att.string.length)];
+//
+//    _searchTextField.attributedPlaceholder = att;
     
 }
 

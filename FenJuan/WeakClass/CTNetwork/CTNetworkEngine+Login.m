@@ -32,7 +32,7 @@ NSString * GetSendCodeStr(CTSendCodeType type){
 
 @implementation CTNetworkEngine (Login)
 
-- (CLRequest *)registerWithPhone:(NSString *)phone pwd:(NSString *)pwd
+- (CLRequest *)fj_registerWithPhone:(NSString *)phone pwd:(NSString *)pwd
                          type:(CTLoginType)type ivCode:(NSString *)ivCode smsCode:(NSString *)smsCode openid:(NSString *)openid nickname:(NSString *)nickname headicon:(NSString *)headicon unionid:(NSString *)unionid callback:(CTResponseBlock)callback{
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     [params setValue:phone forKey:@"phone"];
@@ -56,7 +56,7 @@ NSString * GetSendCodeStr(CTSendCodeType type){
     return [self postWithPath:CTLogin(@"index") params:params callback:callback];
 }
 
-- (CLRequest *)smsSendWithPhone:(NSString *)phone type:(CTSendCodeType)type callback:(CTResponseBlock)callback{
+- (CLRequest *)fj_smsSendWithPhone:(NSString *)phone type:(CTSendCodeType)type callback:(CTResponseBlock)callback{
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     [params setValue:phone forKey:@"phone"];
     [params setValue:GetSendCodeStr(type) forKey:@"type"];
@@ -64,20 +64,20 @@ NSString * GetSendCodeStr(CTSendCodeType type){
 }
 
 //检查手机号是否注册
-- (CLRequest *)checkPhoneWithPhone:(NSString *)phone callback:(CTResponseBlock)callback{
+- (CLRequest *)fj_checkPhoneWithPhone:(NSString *)phone callback:(CTResponseBlock)callback{
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     [params setValue:phone forKey:@"phone"];
     return [self postWithPath:CTLogin(@"check_phone") params:params showHud:YES showErrorHud:NO callback:callback];
 }
 
-- (CLRequest *)checkPhoneWithPhone:(NSString *)phone showErrorHud:(BOOL)showErrorHud callback:(CTResponseBlock)callback{
+- (CLRequest *)fj_checkPhoneWithPhone:(NSString *)phone showErrorHud:(BOOL)showErrorHud callback:(CTResponseBlock)callback{
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     [params setValue:phone forKey:@"phone"];
     return [self postWithPath:CTLogin(@"check_phone") params:params showHud:YES showErrorHud:showErrorHud callback:callback];
 }
 
 //修改密码
-- (CLRequest *)resetPwdWithPhone:(NSString *)phone pwd:(NSString *)pwd smsCode:(NSString *)smsCode callback:(CTResponseBlock)callback{
+- (CLRequest *)fj_resetPwdWithPhone:(NSString *)phone pwd:(NSString *)pwd smsCode:(NSString *)smsCode callback:(CTResponseBlock)callback{
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     [params setValue:phone forKey:@"phone"];
     [params setValue:pwd forKey:@"pwd"];
@@ -85,7 +85,7 @@ NSString * GetSendCodeStr(CTSendCodeType type){
     return [self postWithPath:CTLogin(@"reset_pwd") params:params callback:callback];
 }
 
-- (CLRequest *)checkSmsCodeWithPhone:(NSString *)phone smsCode:(NSString *)smsCode callback:(CTResponseBlock)callback{
+- (CLRequest *)fj_checkSmsCodeWithPhone:(NSString *)phone smsCode:(NSString *)smsCode callback:(CTResponseBlock)callback{
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     [params setValue:phone forKey:@"phone"];
     [params setValue:smsCode forKey:@"sms_code"];
@@ -93,14 +93,14 @@ NSString * GetSendCodeStr(CTSendCodeType type){
 }
 
 //校验邀请码或者手机号
-- (CLRequest *)checkIvcodeOrPhoneWithIvCode:(NSString *)ivCode phone:(NSString *)phone callback:(CTResponseBlock)callback{
+- (CLRequest *)fj_checkIvcodeOrPhoneWithIvCode:(NSString *)ivCode phone:(NSString *)phone callback:(CTResponseBlock)callback{
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     [params setValue:phone forKey:@"phone"];
     [params setValue:ivCode forKey:@"iv_code"];
     return [self postWithPath:CTLogin(@"check_ivcode_or_phone") params:params callback:callback];
 }
 
-- (CLRequest *)bindPhoneWithPhone:(NSString *)phone 
+- (CLRequest *)fj_bindPhoneWithPhone:(NSString *)phone 
                              type:(CTLoginType)type ivCode:(NSString *)ivCode smsCode:(NSString *)smsCode openid:(NSString *)openid nickname:(NSString *)nickname headicon:(NSString *)headicon unionid:(NSString *)unionid callback:(CTResponseBlock)callback{
         NSMutableDictionary *params = [NSMutableDictionary dictionary];
         [params setValue:phone forKey:@"phone"];

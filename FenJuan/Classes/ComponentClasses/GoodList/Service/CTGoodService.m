@@ -26,24 +26,24 @@
 
 CL_EXPORT_MODULE(CTGoodListServiceProtocol)
 
-- (UIViewController *)goodListViewControllerWithCategoryId:(NSString *)categoryId{
+- (UIViewController *)fj_goodListViewControllerWithCategoryId:(NSString *)categoryId{
     FJGoodListViewControllerfj *vc = [FJGoodListViewControllerfj new];
     vc.category_id = categoryId;
     return vc;
 }
 
-- (UIViewController *)goodListViewControllerWithActivityId:(NSString *)activityId{
+- (UIViewController *)fj_goodListViewControllerWithActivityId:(NSString *)activityId{
     FJGoodListViewControllerfj *vc = [FJGoodListViewControllerfj new];
     vc.activity_id = activityId;
     return vc;
 }
 
-- (UIViewController *)goodDetailViewControllerWithGoodId:(NSString *)goodId{
+- (UIViewController *)fj_goodDetailViewControllerWithGoodId:(NSString *)goodId{
     FJGoodDetailViewControllerfj * vc = [FJGoodDetailViewControllerfj new];
     vc.goog_id = goodId;
     return vc;
 }
-- (UIViewController *)goodDetailViewControllerWithGoodViewModel:(id)viewModel{
+- (UIViewController *)fj_goodDetailViewControllerWithGoodViewModel:(id)viewModel{
     FJGoodDetailViewControllerfj * vc = [FJGoodDetailViewControllerfj new];
     vc.viewModel = viewModel;
     return vc;

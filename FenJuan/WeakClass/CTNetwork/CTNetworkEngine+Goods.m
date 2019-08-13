@@ -49,12 +49,12 @@
 }
 
 //获取商品链接（转链）
-- (CLRequest *)goodsUrlConvertWithTbGoodsInfo:(NSDictionary *)goodsInfo callback:(CTResponseBlock)callback{
+- (CLRequest *)fj_goodsUrlConvertWithTbGoodsInfo:(NSDictionary *)goodsInfo callback:(CTResponseBlock)callback{
     return [self postWithPath:CTGoods(@"goods_url_convert") params:goodsInfo callback:callback];
 }
 
 //搜索
-- (CLRequest *)goodsSearchWithKeyword:(NSString *)keyword page:(NSInteger)page size:(NSInteger)size order:(NSString *)order callback:(CTResponseBlock)callback{
+- (CLRequest *)fj_goodsSearchWithKeyword:(NSString *)keyword page:(NSInteger)page size:(NSInteger)size order:(NSString *)order callback:(CTResponseBlock)callback{
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     [params setValue:keyword forKey:@"keyword"];
     [params setValue:@(page) forKey:@"page"];
@@ -64,7 +64,7 @@
 }
 
 //商品收藏
-- (CLRequest *)favoriteWithGoodsId:(NSString *)goodsId isFavorite:(BOOL)isFavorite callback:(CTResponseBlock)callback{
+- (CLRequest *)fj_favoriteWithGoodsId:(NSString *)goodsId isFavorite:(BOOL)isFavorite callback:(CTResponseBlock)callback{
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     [params setValue:goodsId forKey:@"goods_id"];
     [params setValue:@(isFavorite) forKey:@"is_favorite"];
@@ -72,7 +72,7 @@
 }
 
 //热搜和搜索历史
-- (CLRequest *)searchHistoryWithCallback:(CTResponseBlock)callback{
+- (CLRequest *)fj_searchHistoryWithCallback:(CTResponseBlock)callback{
     NSString *path = CLDocumentPath(@"search_history");
     
     NSDictionary *data = [[NSDictionary alloc]initWithContentsOfFile:path];
@@ -92,7 +92,7 @@
 
 
 //获取商品图片
-- (CLRequest *)goodsImgWithItemId:(NSString *)itemId callback:(CTResponseBlock)callback{
+- (CLRequest *)fj_goodsImgWithItemId:(NSString *)itemId callback:(CTResponseBlock)callback{
     if(!itemId.length)return nil;
     NSString *jsonStr = [@{@"id":itemId,@"type":@"1"} yy_modelToJSONString];
     NSString *url = @"https://h5api.m.taobao.com/h5/mtop.taobao.detail.getdesc/6.0/?jsv=2.4.11&api=mtop.taobao.detail.getdesc&v=6.0&type=jsonp&dataType=jsonp";
@@ -135,7 +135,7 @@
 }
 
 //获取店铺信息
-- (CLRequest *)storeInfoWithItemId:(NSString *)itemId callback:(CTResponseBlock)callback{
+- (CLRequest *)fj_storeInfoWithItemId:(NSString *)itemId callback:(CTResponseBlock)callback{
     if(!itemId)return nil;
     NSString *url = [NSString stringWithFormat:@"http://h5api.m.taobao.com/h5/mtop.taobao.detail.getdetail/6.0?data=%@",EnCodingNSString([@{@"itemNumId":itemId} yy_modelToJSONString])];
     

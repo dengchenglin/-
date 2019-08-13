@@ -36,7 +36,7 @@
 }
 
 - (void)request{
-    [CTRequest fqMaterialGoodsWithMinId:self.minId callback:^(id data, CLRequest *request, CTNetError error) {
+    [CTRequest fj_fqMaterialGoodsWithMinId:self.minId callback:^(id data, CLRequest *request, CTNetError error) {
         [self analysisAndReloadWithData:data listKey:@"list" error:error modelClass:CTGoodsModel.class viewModelClass:CTProGoodIndexViewModel.class];
     }];
 }

@@ -50,7 +50,7 @@
     
     _statusImageView.image = [UIImage imageNamed:GetTypeImageStr(_model.status)];
     _upgradeView.hidden = !_model.upgrade_money.length;
-    _upgradeDescBtn.hidden = _upgradeView.hidden;
+    _upgradeDescBtn.hidden = YES;// _upgradeView.hidden;
     
     _statusImageView.hidden = !_model.status;
     _salesView.hidden = !_model.package_sale.length;

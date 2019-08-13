@@ -46,7 +46,7 @@
 }
 
 + (void)tbAuthFromViewController:(UIViewController *)viewController callback:(void (^)(id data))callback{
-    [CTRequest tbAuthWithCallback:^(id data, CLRequest *request, CTNetError error) {
+    [CTRequest fj_tbAuthWithCallback:^(id data, CLRequest *request, CTNetError error) {
         if(!error){
             [self tbAuthFromViewController:viewController url:data callback:^(id data) {
                 if(callback){

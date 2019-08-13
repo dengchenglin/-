@@ -20,7 +20,7 @@
 
 #import "CTGoodListCell.h"
 
-#import "CTHomeSpreeShopView.h"
+#import "FJHomeSpreeShopViewfj.h"
 
 #import "CTNetworkEngine+Index.h"
 
@@ -36,7 +36,7 @@
 
 @property (nonatomic, strong) FJHomeNavViewfj *navView;
 
-@property (nonatomic, strong) CTHomeSpreeShopView *spreeShopView;
+@property (nonatomic, strong) FJHomeSpreeShopViewfj *spreeShopView;
 
 @property (nonatomic, strong) FJHomeSalesViewfj *salesView;
 
@@ -85,9 +85,9 @@
     return _navView;
 }
 
-- (CTHomeSpreeShopView *)spreeShopView{
+- (FJHomeSpreeShopViewfj *)spreeShopView{
     if(!_spreeShopView){
-        _spreeShopView = NSMainBundleClass(CTHomeSpreeShopView.class);
+        _spreeShopView = NSMainBundleClass(FJHomeSpreeShopViewfj.class);
     }
     return _spreeShopView;
 }
@@ -226,14 +226,14 @@
     //活动数据
     [self.advertView addActionWithBlock:^(id target) {
         @strongify(self)
-        UIViewController *vc = [[CTModuleManager goodListService] goodListViewControllerWithActivityId:self.viewModel.model.activity_banner.uid];
+        UIViewController *vc = [[CTModuleManager goodListService] fj_goodListViewControllerWithActivityId:self.viewModel.model.activity_banner.uid];
         vc.title = self.viewModel.model.activity_banner.title;
         [self.navigationController pushViewController:vc animated:YES];
     }];
     //五个导航按钮
     [self.navView setClickItemBlock:^(CTActivityModel *model) {
         @strongify(self)
-        UIViewController *vc = [[CTModuleManager goodListService] goodListViewControllerWithActivityId:model.uid];
+        UIViewController *vc = [[CTModuleManager goodListService] fj_goodListViewControllerWithActivityId:model.uid];
         vc.title = model.title;
         [self.navigationController pushViewController:vc animated:YES];
     }];
@@ -247,7 +247,7 @@
     [self.spreeShopView setClickItemBlock:^(NSInteger index) {
         @strongify(self)
         if(![self.viewModel.model.cur_time_buy.goods safe_objectAtIndex:index])return ;
-        UIViewController *vc = [[CTModuleManager goodListService]goodDetailViewControllerWithGoodId:self.viewModel.model.cur_time_buy.goods[index].uid];
+        UIViewController *vc = [[CTModuleManager goodListService]fj_goodDetailViewControllerWithGoodId:self.viewModel.model.cur_time_buy.goods[index].uid];
         [self.navigationController pushViewController:vc animated:YES];
     }];
     //销量榜
@@ -260,7 +260,7 @@
     [self.salesView setClickItemBlock:^(NSInteger index) {
         @strongify(self)
          if(![self.viewModel.model.hot_goods.goods safe_objectAtIndex:index])return ;
-        UIViewController *vc = [[CTModuleManager goodListService]goodDetailViewControllerWithGoodId:self.viewModel.model.hot_goods.goods[index].uid];
+        UIViewController *vc = [[CTModuleManager goodListService]fj_goodDetailViewControllerWithGoodId:self.viewModel.model.hot_goods.goods[index].uid];
         [self.navigationController pushViewController:vc animated:YES];
     }];
 }
@@ -294,7 +294,7 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    UIViewController *vc = [[CTModuleManager goodListService]goodDetailViewControllerWithGoodId:self.viewModel.model.now_goods[indexPath.row].uid];
+    UIViewController *vc = [[CTModuleManager goodListService]fj_goodDetailViewControllerWithGoodId:self.viewModel.model.now_goods[indexPath.row].uid];
     [self.navigationController pushViewController:vc animated:YES];
 }
 

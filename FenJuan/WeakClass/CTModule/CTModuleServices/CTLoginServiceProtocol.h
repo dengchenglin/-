@@ -14,15 +14,15 @@
 
 - (Class)rootBaseClass;
 
-- (void)showLoginFromViewController:(UIViewController *)viewController success:(void(^)(void))success failure:(void(^)(void))failure;
+- (void)fj_showLoginFromViewController:(UIViewController *)viewController success:(void(^)(void))success failure:(void(^)(void))failure;
 
-- (void)showLoginFromViewController:(UIViewController *)viewController callback:(void(^)(BOOL logined))callback;
+- (void)fj_showLoginFromViewController:(UIViewController *)viewController callback:(void(^)(BOOL logined))callback;
 
-- (void)pushWithdrawSetpsdFromViewController:(UIViewController *)viewController mobile:(NSString *)mobile completed:(void(^)(void))completed;
+- (void)fj_pushWithdrawSetpsdFromViewController:(UIViewController *)viewController mobile:(NSString *)mobile completed:(void(^)(void))completed;
 
-- (void)pushBoundAlipayFromViewController:(UIViewController *)viewController completed:(void(^)(void))completed;
+- (void)fj_pushBoundAlipayFromViewController:(UIViewController *)viewController completed:(void(^)(void))completed;
 
-- (void)judgeLoginWithViewController:(UIViewController *)viewController completed:(void(^)(void))completed;
+- (void)fj_judgeLoginWithViewController:(UIViewController *)viewController completed:(void(^)(void))completed;
 
-- (void)showRegisterFromViewController:(UIViewController *)viewController  inviteCode:(NSString *)inviteCode callback:(void(^)(BOOL logined))callback;
+- (void)fj_showRegisterFromViewController:(UIViewController *)viewController  inviteCode:(NSString *)inviteCode callback:(void(^)(BOOL logined))callback;
 @end

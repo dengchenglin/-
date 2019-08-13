@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "CTOrderViewModel.h"
+#import "FJOrderViewModelfj.h"
 @interface CTOrderListCell : UITableViewCell
 @property (nonatomic, strong) UILabel *hhyuan;
 @property (nonatomic, strong) UIButton *logshah;
@@ -22,5 +22,5 @@
 @property (weak, nonatomic) IBOutlet UIImageView *userheadImageView;
 @property (weak, nonatomic) IBOutlet UILabel *mobileLabel;
 @property (weak, nonatomic) IBOutlet UILabel *rebateDescLabel;
-@property (nonatomic, strong) CTOrderViewModel *viewModel;
+@property (nonatomic, strong) FJOrderViewModelfj *viewModel;
 @end

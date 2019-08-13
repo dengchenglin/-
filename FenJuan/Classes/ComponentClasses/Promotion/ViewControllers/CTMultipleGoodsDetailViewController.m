@@ -48,7 +48,7 @@
 
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-    UIViewController *vc = [[CTModuleManager goodListService] goodDetailViewControllerWithGoodId:self.datas[indexPath.row].item_id];
+    UIViewController *vc = [[CTModuleManager goodListService] fj_goodDetailViewControllerWithGoodId:self.datas[indexPath.row].item_id];
     [self.navigationController pushViewController:vc animated:YES];
 }
 @end

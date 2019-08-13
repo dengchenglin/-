@@ -12,18 +12,18 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface CTNetworkEngine (ProGood)
 //发圈
-- (CLRequest *)fqGoodsWithMinId:(NSString *)minId callback:(CTResponseBlock )callback;
+- (CLRequest *)fj_fqGoodsWithMinId:(NSString *)minId callback:(CTResponseBlock )callback;
 
 //多品
-- (CLRequest *)fqMultipleGoodsWithMinId:(NSString *)minId callback:(CTResponseBlock )callback;
+- (CLRequest *)fj_fqMultipleGoodsWithMinId:(NSString *)minId callback:(CTResponseBlock )callback;
 
 //宣传素材
-- (CLRequest *)fqMaterialGoodsWithMinId:(NSString *)minId callback:(CTResponseBlock )callback;
+- (CLRequest *)fj_fqMaterialGoodsWithMinId:(NSString *)minId callback:(CTResponseBlock )callback;
 
 //快抢时间段
-- (CLRequest *)fastbuyCateWithCallback:(CTResponseBlock)callback;
+- (CLRequest *)fj_fastbuyCateWithCallback:(CTResponseBlock)callback;
 //快抢列表
-- (CLRequest *)fastbuyGoodsWithCateId:(NSString *)cateId page:(NSInteger)page callback:(CTResponseBlock)callback;
+- (CLRequest *)fj_fastbuyGoodsWithCateId:(NSString *)cateId page:(NSInteger)page callback:(CTResponseBlock)callback;
 @end
 
 NS_ASSUME_NONNULL_END

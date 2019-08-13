@@ -8,18 +8,18 @@
 
 #import "CTMemberService.h"
 
-#import "CTMemberViewController.h"
+#import "FJMemberViewControllerfj.h"
 
-#import "CTMemberEquityController.h"
+#import "FJMemberEquityControllerfj.h"
 
 @implementation CTMemberService
 
 CL_EXPORT_MODULE(CTMemberServiceProtocol)
 
 - (UIViewController *)rootViewController{
-    return [CTMemberViewController new];
+    return [FJMemberViewControllerfj new];
 }
 - (UIViewController *)memberEquityViewController{
-    return [CTMemberEquityController new];
+    return [FJMemberEquityControllerfj new];
 }
 @end

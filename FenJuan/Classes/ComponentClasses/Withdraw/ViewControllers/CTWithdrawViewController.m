@@ -161,7 +161,7 @@
 }
 
 - (void)request{
-    [CTRequest cashIndexWithCallback:^(id data, CLRequest *request, CTNetError error) {
+    [CTRequest fj_cashIndexWithCallback:^(id data, CLRequest *request, CTNetError error) {
         self.withdrawInfo = [CTUser yy_modelWithDictionary:data];
         [self reloadViewWithInfo:_withdrawInfo];
     }];
@@ -209,7 +209,7 @@
         [self.view endEditing:YES];
         [CTAlertHelper showPayPasswordViewWithCallback:^(NSString *password) {
             @strongify(self)
-            [CTRequest cashSaveWithPaypwd:password money:self.viewModel.money callback:^(id data, CLRequest *request, CTNetError error) {
+            [CTRequest fj_cashSaveWithPaypwd:password money:self.viewModel.money callback:^(id data, CLRequest *request, CTNetError error) {
                 if(!error){
                     [CTAlertHelper showWithdrawSuccessViewWithCallback:^(NSUInteger buttonIndex) {
                         @strongify(self)
@@ -221,7 +221,7 @@
                     [alt show];
                     [alt.rac_buttonClickedSignal subscribeNext:^(NSNumber * _Nullable x) {
                         if([x integerValue] == 0){
-                            [[CTModuleManager loginService]pushWithdrawSetpsdFromViewController:self mobile:[CTAppManager user].phone completed:^{
+                            [[CTModuleManager loginService]fj_pushWithdrawSetpsdFromViewController:self mobile:[CTAppManager user].phone completed:^{
                                 [self.navigationController popToViewController:self animated:YES];
                             }];
                         }
@@ -246,7 +246,7 @@
     [self.alipayInfoView addActionWithBlock:^(id target) {
         @strongify(self)
         [self.view endEditing:YES];
-        [[CTModuleManager loginService]pushBoundAlipayFromViewController:self completed:^{
+        [[CTModuleManager loginService]fj_pushBoundAlipayFromViewController:self completed:^{
             @strongify(self)
             [self.navigationController popToViewController:self animated:YES];
             [self request];
@@ -256,7 +256,7 @@
     [self.modifyView addActionWithBlock:^(id target) {
         @strongify(self)
         [self.view endEditing:YES];
-        [[CTModuleManager loginService]pushBoundAlipayFromViewController:self completed:^{
+        [[CTModuleManager loginService]fj_pushBoundAlipayFromViewController:self completed:^{
             @strongify(self)
             [self.navigationController popToViewController:self animated:YES];
             [self request];
@@ -268,7 +268,7 @@
     //查看提现说明
     [self.withdrawIntroButton touchUpInsideSubscribeNext:^(id x) {
         @strongify(self)
-        UIViewController *webVc = [[CTModuleManager webService] pushWebFromViewController:self url:CTH5UrlForType(CTH5UrlWithdrawIntro)];
+        UIViewController *webVc = [[CTModuleManager webService] fj_pushWebFromViewController:self url:CTH5UrlForType(CTH5UrlWithdrawIntro)];
         webVc.title = @"提现说明";
 
     }];

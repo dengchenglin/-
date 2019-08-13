@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CTMemberPrivilegeItem : UIView
+@interface  CTMemberPrivilegeItem: UIView
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;

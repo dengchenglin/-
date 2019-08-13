@@ -8,7 +8,7 @@
 
 #import "FJHomePageControllerfj.h"
 
-#import "CTHomeTopView.h"
+#import "FJHomeTopViewfj.h"
 
 #import "UIPageControlManager.h"
 
@@ -26,7 +26,7 @@
 
 @interface FJHomePageControllerfj ()<UIPageControlManagerDataSoure,UIPageControlManagerDelegate>
 
-@property (nonatomic, strong) CTHomeTopView *topView;
+@property (nonatomic, strong) FJHomeTopViewfj *topView;
 
 
 @property (nonatomic, strong) NSMutableArray <UIViewController *>*viewControllers;
@@ -46,9 +46,9 @@
     return _viewControllers;
 }
 
-- (CTHomeTopView *)topView{
+- (FJHomeTopViewfj *)topView{
     if(!_topView){
-        _topView = [[CTHomeTopView alloc]init];
+        _topView = [[FJHomeTopViewfj alloc]init];
 
     }
     return _topView;
@@ -81,7 +81,7 @@
     //二维码邀请页面
     [self.topView.navBar.scanButton touchUpInsideSubscribeNext:^(id x) {
         @strongify(self)
-        [[CTModuleManager shareService]pushShareFromViewController:self];
+        [[CTModuleManager shareService]fj_pushShareFromViewController:self];
     }];
     //搜索
     [self.topView.searchBar setClickSearchBarBlock:^{
@@ -98,13 +98,13 @@
     [self.topView.navBar.sqglView addActionWithBlock:^(id target) {
         @strongify(self)
    
-        UIViewController *webVc = [[CTModuleManager webService]pushWebFromViewController:self url:CTH5UrlForType(CTH5UrlSaveMoneyStrategy)];
+        UIViewController *webVc = [[CTModuleManager webService]fj_pushWebFromViewController:self url:CTH5UrlForType(CTH5UrlSaveMoneyStrategy)];
         webVc.title = @"省钱攻略";
     }];
     //领券
     [self.topView.navBar.lqView addActionWithBlock:^(id target) {
         @strongify(self)
-        UIViewController *webVc = [[CTModuleManager webService] pushWebFromViewController:self url:CTH5UrlForType(CTH5UrlGetTikcetAuide)];
+        UIViewController *webVc = [[CTModuleManager webService] fj_pushWebFromViewController:self url:CTH5UrlForType(CTH5UrlGetTikcetAuide)];
         webVc.title = @"领券指南";
     }];
 }

@@ -20,7 +20,7 @@
         [params setValue:viewModel.model.goods_logo forKey:@"goods_logo"];
         [params setValue:viewModel.model.coupon_share_url forKey:@"coupon_share_url"];
         //判断当前用户是否绑定过渠道id
-        [CTRequest goodsUrlConvertWithTbGoodsInfo:params callback:^(id data, CLRequest *request, CTNetError error) {
+        [CTRequest fj_goodsUrlConvertWithTbGoodsInfo:params callback:^(id data, CLRequest *request, CTNetError error) {
             if(!error){//绑定过渠道id 直接返回最终数据
                 //先百川授权
                 [AliTradeManager autoWithViewController:viewController successCallback:^(ALBBSession *session) {
@@ -33,7 +33,7 @@
                 NSInteger status = [data[@"status"] integerValue];
                 if(status == 403){
                     NSString *tbAuthUrl = data[@"data"];
-                    [[CTModuleManager webService]tbAuthFromViewController:viewController url:tbAuthUrl callback:^(id data) {
+                    [[CTModuleManager webService]fj_tbAuthFromViewController:viewController url:tbAuthUrl callback:^(id data) {
                         if(getFinalData){
                             getFinalData(data);
                         }
@@ -63,7 +63,7 @@
             }
         }
         else {
-            [[CTModuleManager loginService]showLoginFromViewController:viewController callback:^(BOOL logined) {
+            [[CTModuleManager loginService]fj_showLoginFromViewController:viewController callback:^(BOOL logined) {
                 if(logined){
                     if(loginCompleted){
                         loginCompleted();
@@ -87,7 +87,7 @@
         [params setValue:viewModel.model.goods_logo forKey:@"goods_logo"];
         [params setValue:viewModel.model.coupon_share_url forKey:@"coupon_share_url"];
         //判断当前用户是否绑定过渠道id
-        [CTRequest goodsUrlConvertWithTbGoodsInfo:params callback:^(id data, CLRequest *request, CTNetError error) {
+        [CTRequest fj_goodsUrlConvertWithTbGoodsInfo:params callback:^(id data, CLRequest *request, CTNetError error) {
             if(!error){//绑定过渠道id 直接返回最终数据
                 //先百川授权
                 [AliTradeManager autoWithViewController:viewController successCallback:^(ALBBSession *session) {
@@ -100,7 +100,7 @@
                 NSInteger status = [data[@"status"] integerValue];
                 if(status == 403){
                     NSString *tbAuthUrl = data[@"data"];
-                    [[CTModuleManager webService]tbAuthFromViewController:viewController url:tbAuthUrl callback:^(id data) {
+                    [[CTModuleManager webService]fj_tbAuthFromViewController:viewController url:tbAuthUrl callback:^(id data) {
                         if(getFinalData){
                             getFinalData(data);
                         }
@@ -121,7 +121,7 @@
             }
         }
         else {
-            [[CTModuleManager loginService]showLoginFromViewController:viewController callback:^(BOOL logined) {
+            [[CTModuleManager loginService]fj_showLoginFromViewController:viewController callback:^(BOOL logined) {
                 if(logined){
                     if(loginCompleted){
                         loginCompleted();
@@ -134,7 +134,7 @@
     judgeLoginBlock(^{
         goodsUrlConvertBlock(^(id data){
             
-            [[CTModuleManager shareService]pushShareFromViewController:viewController goodId:viewModel.model.item_id];
+            [[CTModuleManager shareService]fj_pushShareFromViewController:viewController goodId:viewModel.model.item_id];
         });
     });
 }

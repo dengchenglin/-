@@ -17,6 +17,6 @@ typedef NS_ENUM(NSInteger,CTOrderStatus){
 
 @interface CTNetworkEngine (Order)
 
-- (CLRequest *)orderIndexWithPage:(NSInteger)page size:(NSInteger)size tkStatus:(CTOrderStatus)status callback:(CTResponseBlock)callback;
+- (CLRequest *)fj_orderIndexWithPage:(NSInteger)page size:(NSInteger)size tkStatus:(CTOrderStatus)status callback:(CTResponseBlock)callback;
 
 @end

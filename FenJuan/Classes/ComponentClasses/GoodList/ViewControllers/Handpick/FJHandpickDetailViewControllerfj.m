@@ -73,7 +73,7 @@
 
 - (void)request{
     self.tableView.hidden = YES;
-    [CTRequest officialBuyDetailWithMarkeId:self.Id callback:^(id data, CLRequest *request, CTNetError error) {
+    [CTRequest fj_officialBuyDetailWithMarkeId:self.Id callback:^(id data, CLRequest *request, CTNetError error) {
         self.tableView.hidden = NO;
         [self.tableView endRefreshing];
         if(!error){
@@ -112,7 +112,7 @@
     return cell;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    UIViewController *vc = [[CTModuleManager goodListService] goodDetailViewControllerWithGoodId:self.viewModel.model.goods[indexPath.row].uid];
+    UIViewController *vc = [[CTModuleManager goodListService] fj_goodDetailViewControllerWithGoodId:self.viewModel.model.goods[indexPath.row].uid];
     [self.navigationController pushViewController:vc animated:YES];
 }
 @end
